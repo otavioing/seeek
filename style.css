@@ -1,0 +1,234 @@
+/*------------------------------------------------------------------------------*/
+/*-------------------------------- Explorar CSS --------------------------------*/
+/*------------------------------------------------------------------------------*/
+
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxoc: rgb(172, 161, 210);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid red;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brancoBase);
+}
+
+/* header>div,
+header>nav {
+    width: 20%;
+    height: 100%;
+} */
+
+
+header {
+    background-color: var(--preto);
+    padding: 1rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+header .logosite,
+header .navsite,
+header .pesquisasite,
+header .usersite {
+    display: flex;
+    align-items: center;
+}
+
+header .logosite {
+    width: 20%;
+    justify-content: center;
+}
+
+header .navsite {
+    width: 20%;
+    gap: 1rem;
+}
+
+header .pesquisasite {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header .pesquisasite input {
+    border: none;
+    height: 50%;
+    width: 80%;
+    border-radius: 0.8rem;
+}
+
+header .usersite {
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15%;
+}
+
+header .usersite img {
+    height: 45%;
+}
+
+header .logosite img {
+    height: 100%;
+}
+
+header .sobrenoss {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-left: 1px solid var(--brancoBase);
+    border-right: 1px solid var(--brancoBase);
+}
+
+header .hamburguer {
+    display: none;
+}
+
+header .botaoMenu{
+    display: none;
+}
+
+header .userhover {
+    display: none;
+    width: 5rem;
+}
+
+header .userhover img {
+    height: 80%;
+}
+
+header .botaoMenu{
+
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background-color: transparent;
+    border: none;
+}
+
+header .botaoMenu span{
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--azulBase);
+}
+
+@media screen and (max-width: 1100px) {
+
+    header .pesquisasite input {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        margin-left: 3rem;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+  header .navsite {
+    display: none;
+  }
+
+  header .pesquisasite {
+    display: none;
+  }
+
+  header .usersite {
+    display: none;
+  }
+
+ header .userhover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ header .botaoMenu{
+    display: flex;
+ }
+
+ header .hamburguer .botoesmenuhamburguer{
+
+    color: var(--cinza100);
+    padding: 1rem ;
+    cursor: pointer;
+    color: white;
+    
+}
+
+header .hamburguer .botoesmenuhamburguer:hover{
+    color: white;
+    background-color: #8C8C8C;
+}
+
+header .hamburguer{
+    display: flex;
+    position: fixed;
+    flex-direction: column;  
+    width: 30%;
+    top: 15.1%;
+    bottom: 49%;
+    right: 0;
+    background-color: black;
+    align-items: center;
+    gap: 0.5em;
+    transition: right 0.5s;
+
+
+}
+
+header .hamburguer .botoesmenuhamburguer{
+
+    color: var(--cinza100);
+    padding: 1rem ;
+    cursor: pointer;
+    color: white;
+    
+}
+
+header .hamburguer .botoesmenuhamburguer:hover{
+
+    color: white;
+    background-color: #8C8C8C;
+}
+
+header .userhover{
+
+    height: 100%;
+}
+
+
+}
