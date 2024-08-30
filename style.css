@@ -28,7 +28,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid red;
 }
 
 a {
@@ -42,6 +41,8 @@ header>nav {
     height: 100%;
 } */
 
+
+/*-------------------------------- Header inicio --------------------------------*/
 
 header {
     background-color: var(--preto);
@@ -63,6 +64,7 @@ header .usersite {
 header .logosite {
     width: 20%;
     justify-content: center;
+    height: 100%;
 }
 
 header .navsite {
@@ -72,6 +74,7 @@ header .navsite {
 
 header .pesquisasite {
     width: 30%;
+    height: 80%;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -82,6 +85,8 @@ header .pesquisasite input {
     height: 50%;
     width: 80%;
     border-radius: 0.8rem;
+    outline: none;
+    padding: 1rem;
 }
 
 header .usersite {
@@ -100,7 +105,7 @@ header .logosite img {
 }
 
 header .sobrenoss {
-    height: 100%;
+    height: 3rem;
     display: flex;
     align-items: center;
     padding: 5px;
@@ -140,7 +145,335 @@ header .botaoMenu span{
     background-color: var(--azulBase);
 }
 
-@media screen and (max-width: 1100px) {
+
+
+/*-------------------------------- Section fy --------------------------------*/
+
+.fy{
+    /* margin-bottom: 2rem; */
+    display: block;
+    height: 1rem;
+    padding: 2rem;
+    align-items: end;
+    background-color: var(--brancoBase);
+}
+
+.fy .fyy div{
+    display: flex;
+    width: 8.6rem;
+    margin-bottom: 0.4rem;
+    border-right: 1px solid var(--azulBase);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fy .fyy .pv a{
+    display: flex;
+    color: var(--azulBase);
+    border-bottom: 1px solid var(--azulBase);
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 0.3rem;
+}
+
+.fy .fyy .seguindo a{
+    display: flex;
+    color: var(--azulBase);
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 0.3rem;
+}
+
+.fy .fyy .seguindo{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.fy .fyy{
+    display: flex;
+    border-bottom: 1px solid var(--azulBase);
+    margin-bottom: 0.7rem;
+   
+}
+
+.filtro{
+    display: flex;
+    gap: 1rem;
+    width: 7%;
+    background-color: var(--cinzaBase);
+    border-radius: 0.8rem;
+    transition: 0.3s;
+    margin: 1.3rem 1.3rem;
+    padding: 0.4rem 3rem;
+    justify-content: center;
+   
+}
+
+
+.filtro img{
+    height: 2.3rem;
+    /* margin-left: 1rem; */
+}
+
+.filtro .filtrar{
+    color: var(--azulBase);
+    font-size: 2rem;
+}
+
+
+/*-------------------------------- Main prIndex --------------------------------*/
+
+.prIndex{
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+/*-------------------------------- Main Imagens --------------------------------*/
+.gride{
+    display: grid;
+    gap: 1rem;
+    margin: 0 5% 0 5%;
+    border-radius: 0.6rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 20rem 20rem 20rem;
+    grid-template-areas: "f1 f6 f3 f8"
+                         "f5 f6 f7 f8"
+                         "f5 f2 f7 f4";
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-wrap: wrap;
+}
+.gride > div{
+    position: relative;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+.gride > div .portHover{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding-left: 1rem;
+    height: 5rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    transition: all 0.5s;
+}
+.gride > div .portHover .like{
+    display: flex;
+    flex-direction: row;
+    padding-left: 85%;
+}
+
+.gride > div .portHover p img{
+    height: 60%;
+}
+.gride > div:hover .portHover{
+    top: 0;
+}
+.gride #filho1{
+     background-image: url(img/img_port/portIndx/1.jpg);
+    background-size: cover;
+    grid-area: f1;
+    border-radius: 1.8rem;
+}
+.gride #filho2{
+    background-image: url(img/img_port/portIndx/2.jpg);
+    background-size: cover;
+    grid-area: f2;
+    border-radius: 1.8rem;
+    
+}
+.gride #filho3{
+    background-image: url(img/img_port/portIndx/3.jpg);
+    background-size: cover;
+    grid-area: f3;
+    border-radius: 1.8rem;
+}
+.gride #filho4{
+    background-image: url(img/img_port/portIndx/4.jpg);
+    background-size: cover;
+    grid-area: f4;
+    border-radius: 1.8rem;
+}
+
+.gride #filho5{
+    background-image: url(img/img_port/portIndx/5.jpg);
+    background-size: cover;
+    grid-area: f5;
+    border-radius: 1.8rem;
+}
+.gride #filho6{
+    background-image: url(img/img_port/portIndx/6.jpg);
+    background-size: cover;
+    grid-area: f6;
+    border-radius: 1.8rem;
+}
+.gride #filho7{
+    background-image: url(img/img_port/portIndx/7.jpg);
+    background-size: cover;
+    grid-area: f7;
+    border-radius: 1.8rem;
+}
+
+.gride #filho8{
+    background-image: url(img/img_port/portIndx/8.jpg);
+    background-size: cover;
+    grid-area: f8;
+    border-radius: 1.8rem;
+}
+.prIndex .img3{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.img2 img{
+    width: 80%;
+}
+
+.selecionado{
+    height: 138%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #0E0E0E;
+}
+
+/*------------------------------Modal Portifolio-----------------------------*/
+
+#modalPort, .sign-up-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 8rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content, .sign-up-content{
+    position: relative;
+    background-color: var(--brancoBase);
+    margin: auto;
+    width: 80%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--preto);
+    color: var(--brancoBase);
+    padding: 1rem;
+    border: 0.365rem solid transparent ;
+    border-image: linear-gradient(-90deg, rgb(75, 15, 110)0%, rgb(45, 100, 240)100%) 1;
+}
+
+.botaoContratar{
+    width: 10rem;
+    border: none;
+    padding: 1rem;
+    color: var(--brancoBase);
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-image: linear-gradient(-90deg, rgb(75, 15, 110)0%, rgb(45, 100, 240)100%);
+}
+
+.botaoContratar:hover{
+    background-image: linear-gradient(-90deg, rgb(90, 30, 125)0%, rgb(60, 115, 255)100%);
+}
+
+.modal-body{
+    display: flex;
+    gap: 2rem;
+    padding: 0.5rem 1rem;
+    height: auto;
+}
+
+.modal-nav{
+    margin: 0rem;
+    gap: 0.5rem;
+}
+
+.modal-nav button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: var(--brancoBase);
+    width: 4rem;
+}
+
+.modal-button{
+    width: 3rem;
+    height: auto;
+    margin: 0.5rem;
+}
+
+#modalImage{
+    width: 80%;
+}
+
+.close{
+    position: absolute;
+    left: 101%;
+    top: 0.5%;
+    color: var(--brancoBase);
+    float: right;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus{
+    color: var(--cinzaBasec);
+    text-decoration: none;
+    cursor: pointer;
+}
+.perfilPort{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    
+}
+
+.perfilPort p{
+    font-weight: 400;
+    font-size: 0.5rem;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*-------------------------------- @media --------------------------------*/
+/*------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1200px) {
 
     header .pesquisasite input {
         width: 60%;
@@ -149,9 +482,37 @@ header .botaoMenu span{
         margin-left: 3rem;
     }
 
+    .close{
+        position: absolute;
+        left: 101%;
+        top: 0.5%;
+    }
+
+    .gride{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 15rem 15rem 15rem;
+        grid-template-areas: "f1 f6 f3 "
+                             "f5 f6 f7 "
+                             "f5 f2 f7 "
+                             "f4 f8 f1"
+                             "f3 f8 f2";
+        
+    }
 }
 
 @media screen and (max-width: 950px) {
+
+    .gride{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 20rem 20rem 20rem;
+        grid-template-areas: "f1 f6"
+                             "f5 f6"
+                             "f5 f2"
+                             "f3 f7"
+                             "f8 f7"
+                             "f8 f4";
+        
+    }
 
     header{
         display: flex;
@@ -196,17 +557,18 @@ header .hamburguer .botoesmenuhamburguer:hover{
 
 header .hamburguer{
     display: flex;
-    position: fixed;
+    height: 25%;
+    position: absolute;
     flex-direction: column;  
-    width: 30%;
-    top: 15.1%;
+    width: 25%;
+    top: 10.1%;
     bottom: 49%;
-    right: 0;
+    right: -100%;
     background-color: black;
     align-items: center;
     gap: 0.5em;
-    transition: right 0.5s;
-
+    transition: right 0.3s;
+    z-index: 1;
 
 }
 
@@ -231,4 +593,73 @@ header .userhover{
 }
 
 
+/*-------------------------------- Main --------------------------------*/
+
+.close{
+    position: absolute;
+    left: 101%;
+    top: 0.5%;
 }
+
+.prIndex .perfilPort h1{
+    font-size: 150%;
+}
+
+}
+
+
+@media screen and (max-width: 750px) {
+
+    .close{
+        position: absolute;
+        left: 101%;
+        top: 0.5%;
+    }
+
+    .perfilPort{
+        font-size: 70%;
+    }
+    .perfilPort p{
+        font-size: 60%;
+    }
+
+}
+
+
+@media screen and (max-width: 660px) {
+
+    .close{
+        position: absolute;
+        left: 101%;
+        top: 0.5%;
+    }
+
+    .perfilPort{
+        font-size: 60%;
+    }
+    .perfilPort p{
+        font-size: 60%;
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .close{
+        position: absolute;
+        left: 101%;
+        top: 0.5%;
+    }
+
+    .perfilPort{
+        font-size: 60%;
+        width: 100%;
+    }
+    .perfilPort p{
+        font-size: 50%;
+    }
+
+}
+
+
