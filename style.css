@@ -557,13 +557,13 @@ header .hamburguer .botoesmenuhamburguer:hover{
 
 header .hamburguer{
     display: flex;
-    height: 25%;
+    height: 31%;
     position: absolute;
     flex-direction: column;  
     width: 25%;
-    top: 10.1%;
+    top: 13.2%;
     bottom: 49%;
-    right: -100%;
+    right: -99%;
     background-color: black;
     align-items: center;
     gap: 0.5em;
