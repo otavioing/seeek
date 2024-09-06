@@ -1,0 +1,142 @@
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxoc: rgb(172, 161, 210);
+
+    --vermelhom: #EF0000;
+
+
+}
+.caminhonavegaçãovagas a{
+    color: black;
+}
+.caminhonavegaçãovagas{
+    margin: 2rem;
+}
+                                          /* Main */
+.prCursos{
+    height: 60rem;
+    display: flex;
+}
+
+.filtroflutuante{
+    background-color: var(--cinzaBase);
+    height: 55rem;
+    width: 20rem;
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--cinzaBasee);
+}
+
+.filtroflutuante h2{
+    color: var(--azulBase);
+}
+
+.filtroflutuante p{
+    color: var(--preto);    
+}
+
+/* .filtrop{
+    width: 60%;
+    padding: 1rem;
+    border-bottom: 1px solid var(--azulBase);
+    margin-bottom: 1rem;
+}
+
+.filtrop p{
+    padding: 0.3rem;
+} */
+
+/* .preco{
+    display: flex;
+    gap: 1rem;
+    width: 130%;
+    margin: 0.3rem;
+} */
+
+.imgfiltro{
+   height: 4rem;
+}
+.filtrar{
+    font-size: 3rem;
+    margin: -4rem 0 0 5rem;
+}
+p.filtrar {
+    color: blue;
+}
+.camposdcriacao{
+    display: flex;
+    margin: 2rem 0 0 0.6rem;
+}
+.categorias {
+    position: relative;
+    top: 3.2rem;
+    right: 13.5rem;   
+}
+.Habilidades{
+    position: relative;
+    top: 3.5rem;
+    left: 0.7rem;
+    margin-top: 1rem;
+}
+.margimtop{
+    margin-top: 1rem;
+}
+.campo{
+    position: relative;
+    top: 0.4rem;
+    margin-top: 1rem;
+}
+.duracao{
+    position: relative;
+    top: 3.5rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+}
+.indefi{
+    position: relative;
+    top: 3.8rem;
+    left: 0.7rem;
+    margin-top: 1rem;
+}
+.temmes{
+    position: relative;
+    top: 3.8rem;
+    left: 0.7rem;
+    margin-top: 1rem;
+}
+.preco{
+    display: flex;
+    gap: 1rem;
+    margin: 0.3rem;
+    position: relative;
+    top: 4.6rem;
+}
+.preco input{
+    width: 5rem;
+    height: 1.5rem;
+    border: 1px solid var(--vermelhom);
+    border-radius: 0.5rem;
+}
+
+
+
+
+
+                                        
