@@ -34,8 +34,8 @@
 }
 
 .filtroflutuante{
-    background-color: var(--cinzaBase);
-    height: 55rem;
+    background-color: white;
+    height: 49rem;
     width: 20rem;
     display: block;
     padding: 1rem;
@@ -78,12 +78,13 @@
     margin: -4rem 0 0 5rem;
 }
 p.filtrar {
-    color: blue;
+    color: var(--azulBase);
 }
 .camposdcriacao{
     display: flex;
     margin: 2rem 0 0 0.6rem;
 }
+
 .categorias {
     position: relative;
     top: 3.2rem;
@@ -94,6 +95,10 @@ p.filtrar {
     top: 3.5rem;
     left: 0.7rem;
     margin-top: 1rem;
+}
+.linhahabi{
+    border-bottom: 1.5px solid var(--azulBase);
+    width: 8.3rem;
 }
 .margimtop{
     margin-top: 1rem;
@@ -108,6 +113,8 @@ p.filtrar {
     top: 3.5rem;
     left: 0.6rem;
     margin-top: 1rem;
+    border-bottom: 1.5px solid var(--azulBase);
+    width: 6rem;
 }
 .indefi{
     position: relative;
@@ -122,7 +129,7 @@ p.filtrar {
     margin-top: 1rem;
 }
 .preco{
-    display: flex;
+    display: flex; /* deixar none para não aparecer */
     gap: 1rem;
     margin: 0.3rem;
     position: relative;
@@ -131,10 +138,65 @@ p.filtrar {
 .preco input{
     width: 5rem;
     height: 1.5rem;
-    border: 1px solid var(--vermelhom);
+    border: 1px solid white;
     border-radius: 0.5rem;
 }
-
+.loc{
+    position: relative;
+    top: 4.6rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+    border-bottom: 1.5px solid var(--azulBase);
+    width: 4rem;
+}
+.presen{
+    position: relative;
+    top: 4.9rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+}
+.homee{
+    position: relative;
+    top: 4.9rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+}
+.aplicar{
+    position: relative;
+    top: 6.2rem;
+    left: 5.6rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.aplicar a{
+    color: var(--azulBase);
+}
+.limparfiltro{
+    position: relative;
+    top: 5.6rem;
+    left: 4.6rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.limparfiltro a{
+    color: var(--preto);
+}
+.setaon{
+    display: flex;
+    height: 0.5rem;
+    position: relative;
+    top: 3.2rem;
+    left: 7.5rem;
+    cursor: pointer;
+}
+.setaoff{
+    display: none;
+    height: 0.5rem;
+    position: relative;
+    top: 3.2rem;
+    left: 7.5rem;
+    cursor: pointer;
+}
 
 
 

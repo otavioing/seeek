@@ -60,7 +60,7 @@
             <img class="imgfiltro" src="img/Filtrar2.svg" alt="filtrar">
             <p class="filtrar">Filtrar</p>
             <div class="camposdcriacao">
-                <h2>Campos de criação</h2>
+                <h2 class="linhacampos">Campos de criação</h2>
                 <div class="campos">
                     <p class="categorias">Design </p> <br>
                     <p class="categorias">Design</p>   <br>   
@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="Habilidades">
-                <h2>Habilidades</h2>
+                <h2 class="linhahabi">Habilidades</h2>
                 <div class="campo">
                     <p class="margimtop">Design</p> <br>
                     <p>Design</p>
@@ -77,11 +77,28 @@
             <div class="duracao"><h2>Duração</h2></div>
             <div class="filtrop">
             <p class="indefi">Indefinido</p>
-            <p class="temmes" >Tempo de mês</p>
-            <div class="preco">
+            <p class="temmes" >Tempo de mês</p> 
+            <img onclick="setaon()" id="setaon" class="setaon" src="img/setaparabaixo.svg" alt=""> 
+            <img onclick="setaoff()" id="setaoff" class="setaoff" src="img/setaparacima.svg" alt="">
+            <div id="preco" class="preco">
                 <input type="number" placeholder="min">
                 <p>-</p>
                 <input type="number" placeholder="max">
+            </div>
+            <div class="local">
+                <h2 class="loc">Local</h2>
+                <p class="presen">Presencial</p>
+                <p class="homee">Home office</p>
+            </div>
+
+            <div class="aplicar">
+                <a>Aplicar</a>
+            </div>
+
+            <div class="limparfiltro">
+
+                <a>Limpar Filtro</a>
+
             </div>
         </div>
                            
@@ -91,7 +108,8 @@
             
         </main>
         
-        
+        <script src="script/cake.js"></script>
+        <script src="script/lfy.js"></script>
     </body>
     </html>
     <!-- <input type="checkbox" name="campos" id="campos"> -->
