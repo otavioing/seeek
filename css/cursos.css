@@ -223,34 +223,37 @@ p.filtrar {
 
 }
 
-.caixas .nomedesigner{
+.caixas .nomeddocurso{
     font-size: 1.5rem;
     color: var(--preto);
     margin-top: 0.5rem;
 }
-.caixas .horario{
+.caixas .nomeautor{
     font-size: 1rem;
     margin-top: 0.5rem;
 }
-.caixas .enviarprop{
+.caixas .valordocurso{
     height: 2.5rem;
-    background-color: var(--azulBase);
-    color: var(--brancoBase);
+    background-color: transparent;
     border: none;
-    border-radius: 15px;
     padding: 0.5rem;
     cursor: pointer;
     position: relative;
-    bottom: 2.5rem;
-    left: 24.7rem;
+    bottom: 4.5rem;
+    left: 23.9rem;
+    font-size: 1.1rem;
 }
-.caixas .maisinfo{
-    /* não vai ter  */
+.caixas .duracãocurso{
+    display: inline;
     color: var(--azulBase);
     cursor: pointer;
     position: relative;
-    top: 0.1rem;
-    left: 5.3rem;
+    bottom: 6rem;
+    left: 25.9rem;
+    background-color: var(--azulBase);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 .nomepag{
     position: relative;
@@ -259,6 +262,38 @@ p.filtrar {
     color: var(--roxobase);
     font-size: 1.5rem;
    
+
+}
+.botaofavorito{
+    display: inline;
+    position: absolute;
+    top: 25.5%;
+    left: 68rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    width: 2rem;   
+}
+.botaofavorito2{
+    display: none;
+    position: absolute;
+    top: 18.5rem;
+    left: 68rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    width: 2rem;   
+}
+.botaofavoritob{
+
+    display: inline;
+    position: absolute;
+    top: 18.5rem;
+    left: 28rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    width: 2rem;   
 
 }
 
