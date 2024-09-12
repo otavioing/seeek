@@ -1,3 +1,4 @@
+/* filtro flutuante */
 :root {
     --cinzaBase: rgb(220, 220, 220);
 
@@ -22,6 +23,9 @@
     --vermelhom: #EF0000;
 
 
+}
+.migalhadepaocursos a{
+    color: var(--roxobase);
 }
 .caminhonavegaçãovagas a{
     color: black;
@@ -49,7 +53,7 @@ main{
 }
 
 .filtroflutuante h2{
-    color: var(--azulBase);
+    color: var(--roxobase);
 }
 
 .filtroflutuante p{
@@ -63,7 +67,7 @@ main{
     margin: -4rem 0 0 5rem;
 }
 p.filtrar {
-    color: var(--azulBase);
+    color: var(--roxobase);
 }
 .camposdcriacao{
     display: flex;
@@ -82,7 +86,7 @@ p.filtrar {
     margin-top: 1rem;
 }
 .linhahabi{
-    border-bottom: 1.5px solid var(--azulBase);
+    border-bottom: 1.5px solid var(--roxobase);
     width: 8.3rem;
 }
 .margimtop{
@@ -98,7 +102,7 @@ p.filtrar {
     top: 3.5rem;
     left: 0.6rem;
     margin-top: 1rem;
-    border-bottom: 1.5px solid var(--azulBase);
+    border-bottom: 1.5px solid var(--roxobase);
     width: 6rem;
 }
 .indefi{
@@ -131,7 +135,7 @@ p.filtrar {
     top: 4.6rem;
     left: 0.6rem;
     margin-top: 1rem;
-    border-bottom: 1.5px solid var(--azulBase);
+    border-bottom: 1.5px solid var(--roxobase);
     width: 4rem;
 }
 .presen{
@@ -155,7 +159,7 @@ p.filtrar {
 }
 .aplicar a{
     cursor: pointer;
-    color: var(--azulBase);
+    color: var(--roxobase);
 }
 .limparfiltro{
     position: relative;
@@ -241,6 +245,7 @@ p.filtrar {
     left: 24.7rem;
 }
 .caixas .maisinfo{
+    /* não vai ter  */
     color: var(--azulBase);
     cursor: pointer;
     position: relative;
@@ -251,7 +256,7 @@ p.filtrar {
     position: relative;
     bottom: 54rem;
     left: 25rem;
-    color: var(--azulBase);
+    color: var(--roxobase);
     font-size: 1.5rem;
    
 

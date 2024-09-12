@@ -19,7 +19,12 @@
 
     --azulBasec: rgb(116, 84, 233);
 
+    --roxobase: #942af1;
+
     --roxoc: rgb(172, 161, 210);
+
+    --vermelhom: #EF0000;
+
 
 }
 
@@ -290,7 +295,7 @@ header .botaoMenu span{
     top: 0;
 }
 .gride #filho1{
-     background-image: url(img/img_port/portIndx/1.jpg);
+     background-image: url(img/img_port/1.jpg);
     background-size: cover;
     grid-area: f1;
     border-radius: 1.8rem;
