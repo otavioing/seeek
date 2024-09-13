@@ -19,12 +19,7 @@
 
     --azulBasec: rgb(116, 84, 233);
 
-    --roxobase: #942af1;
-
     --roxoc: rgb(172, 161, 210);
-
-    --vermelhom: #EF0000;
-
 
 }
 
@@ -36,19 +31,16 @@
 
 }
 
-body{
-    overflow-x: hidden;
-}
-
 a {
     text-decoration: none;
     color: var(--brancoBase);
 }
 
-
-
-
-/*RESPONSIVIDADE DO SITE COMEÇA A BUGAR COM 430PX*/
+/* header>div,
+header>nav {
+    width: 20%;
+    height: 100%;
+} */
 
 
 /*-------------------------------- Header inicio --------------------------------*/
@@ -154,66 +146,86 @@ header .botaoMenu span{
     background-color: var(--azulBase);
 }
 
-
+body{
+    position: relative; 
+    height: 1vw;
+}
 
 /*-------------------------------- Section fy --------------------------------*/
 
-.explorar{
-    height: 3.5rem;
-    background-color: var(--cinzaBase);
+.fy{
+    /* margin-bottom: 2rem; */
+    display: block;
+    height: 1rem;
+    padding: 2rem;
+    align-items: end;
+    background-color: var(--brancoBase);
+}
+
+.fy .fyy div{
+    display: flex;
+    width: 8.6rem;
+    margin-bottom: 0.4rem;
+    border-right: 1px solid var(--azulBase);
     display: flex;
     align-items: center;
-    padding: 1.5rem;
-    gap: 1rem;
+    justify-content: center;
 }
 
-.explorar .explorarDiv{
-    padding: 0.5rem 1rem 0.5rem 0.5rem;
-    border-right: 1px solid var(--cinzaBasee);
-}
-
-.explorar a{
-    color: var(--preto);
-    font-size: 1.3rem;
-}
-
-.migalhaIndex{
-    padding: 2rem 0 0 2rem;
-    margin-top: 1rem;
-}
-
-.migalhaIndex h1{
-    font-size: 2rem;
-    color: var(--preto);
-}
-
-.filtroExplorar{
+.fy .fyy .pv a{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
-    padding: 0 3rem;
-    margin-top: 2.5rem;
-}
-
-.filtroExplorar .filtroButton{
-    display: flex;
-    gap: 1rem;
+    color: var(--azulBase);
+    border-bottom: 1px solid var(--azulBase);
     align-items: center;
-    flex-wrap: nowrap;
-    width: 15rem;
-    background-color: var(--cinzaBase);
-    border-radius: 10px;
-}
-
-.filtroButton .buttonFiltro{
-    background: none;
-    border: none;
-    outline: none;
-}
-
-.filtroExplorar .filtroButton img{
+    justify-content: center;
     width: 80%;
+    padding: 0.3rem;
+}
+
+.fy .fyy .seguindo a{
+    display: flex;
+    color: var(--azulBase);
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 0.3rem;
+}
+
+.fy .fyy .seguindo{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.fy .fyy{
+    display: flex;
+    border-bottom: 1px solid var(--azulBase);
+    margin-bottom: 0.7rem;
+   
+}
+
+.filtro{
+    display: flex;
+    gap: 1rem;
+    width: 7%;
+    background-color: var(--cinzaBase);
+    border-radius: 0.8rem;
+    transition: 0.3s;
+    margin: 1.3rem 1.3rem;
+    padding: 0.4rem 3rem;
+    justify-content: center;
+   
+}
+
+
+.filtro img{
+    height: 2.3rem;
+    /* margin-left: 1rem; */
+}
+
+.filtro .filtrar{
+    color: var(--azulBase);
+    font-size: 2rem;
 }
 
 
@@ -281,7 +293,7 @@ header .botaoMenu span{
     top: 0;
 }
 .gride #filho1{
-     background-image: url(img/img_port/1.jpg);
+     background-image: url(img/img_port/portIndx/1.jpg);
     background-size: cover;
     grid-area: f1;
     border-radius: 1.8rem;
@@ -482,7 +494,7 @@ header .botaoMenu span{
 
     .gride{
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 20rem 20rem 20rem 20rem 20rem;
+        grid-template-rows: 15rem 15rem 15rem;
         grid-template-areas: "f1 f6 f3 "
                              "f5 f6 f7 "
                              "f5 f2 f7 "
@@ -496,7 +508,7 @@ header .botaoMenu span{
 
     .gride{
         grid-template-columns: repeat(2,1fr);
-        grid-template-rows: 20rem 20rem 20rem 20rem 20rem 20rem;
+        grid-template-rows: repeat(6,20rem);
         grid-template-areas: "f1 f6"
                              "f5 f6"
                              "f5 f2"
@@ -553,14 +565,15 @@ header .hamburguer{
     position: absolute;
     flex-direction: column;  
     width: 25%;
-    top: 10%;
+    top: 13.2%;
     bottom: 49%;
-    left: -99%;
-    background-color: var(--preto);
+    right: -99%;
+    background-color: black;
     align-items: center;
     gap: 0.5em;
-    transition: left 0.3s;
+    transition: right 0.3s;
     z-index: 1;
+
 }
 
 header .hamburguer .botoesmenuhamburguer{
@@ -580,11 +593,7 @@ header .hamburguer .botoesmenuhamburguer:hover{
 
 header .userhover{
 
-    height: 70%;
-}
-
-.inicio .logosite img{
-    height: 80%;
+    height: 100%;
 }
 
 
@@ -635,19 +644,6 @@ header .userhover{
     .perfilPort p{
         font-size: 60%;
     }
-    
-    .filtroExplorar .filtroButton{
-        flex-wrap: nowrap;
-        width: 10rem;
-    }
-
-    .filtroExplorar .filtroButton img{
-        width: 80%;
-    }
-
-    .filtroExplorar .filtroButton p{
-        font-size: 0.8rem;
-    }
 
 }
 
@@ -668,39 +664,7 @@ header .userhover{
         font-size: 50%;
     }
 
-    .inicio .logosite img{
-        height: 60%;
-    }
-
-    .filtroExplorar .filtroButton{
-        flex-wrap: nowrap;
-        width: 8rem;
-    }
-
 }
-
-@media screen and (max-width: 500px) {
-
-   
-
-    .filtroExplorar .filtroButton{
-        width: 4rem;
-        display: flex;
-        justify-content: center;
-        height: 3rem;
-    }
-
-    .filtroExplorar .filtroButton p{
-        display: none;
-    }
-    
-    .filtroExplorar .filtroButton img{
-        width: 80%;
-        height: 80%;
-    }
-
-}
-
 
 
 /*------------------------------------ Footer -----------------------------------*/
