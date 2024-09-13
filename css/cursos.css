@@ -212,6 +212,7 @@ p.filtrar {
 }
 .container .caixas img{
     width: 90%;
+    height: 2rem;
 }
 .container .caixas .imgcont{
     display: flex;
@@ -231,11 +232,15 @@ p.filtrar {
     color: var(--preto);
     margin-top: 0.5rem;
 }
+.nomecureauto{
+    background-color: yellowgreen;
+    width: 25vh;
+}
 .caixas .nomeautor{
     font-size: 1rem;
     margin-top: 0.5rem;
 }
-.caixas .valordocurso{
+/* .caixas .valordocurso{
     height: 2.5rem;
     background-color: transparent;
     border: none;
@@ -245,7 +250,7 @@ p.filtrar {
     bottom: 4.5rem;
     left: 23.9rem;
     font-size: 1.1rem;
-}
+} */
 .caixas .duracãocurso{
     display: inline;
     color: var(--azulBase);
@@ -300,7 +305,59 @@ p.filtrar {
 
 }
 
+.valorebotaofav{
+    background-color: turquoise;
+    width: 20vh;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 4.5rem;
+    left: 18.5rem;
 
+}
+.caixas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+
+    
+}
+
+.infocurso{
+
+    
+    height: 8vh;
+    width: 25vh;
+}
+.infocurso1{
+
+    
+    display: flex;
+    justify-content: end;
+    height: 8vh;
+
+}
+.infocurso1 p{
+height: 1rem;
+position: absolute;
+margin-right: 1rem;
+margin-top: 0.5rem;
+}
+.infocurso1 .divcoracao .coracao {
+    cursor: pointer;    
+    border: none;
+    background-color: transparent;
+}
+.divcoracao{
+    display: inline; 
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    margin-top: 2.5rem;
+    margin-right: 2rem;
+
+  }
 
 
                                         

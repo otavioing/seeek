@@ -1,4 +1,3 @@
-window.addEventListener('load', paginacarregada); 
 
 function paginacarregada() {
 

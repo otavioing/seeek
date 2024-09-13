@@ -1,4 +1,3 @@
-window.addEventListener('load', paginacarregada); 
 
 function setaon() {
     var setaElement = document.getElementById("seta"); 
@@ -40,6 +39,7 @@ function setaoff() {
 
     document.getElementById('setaon').style.display = "flex";
 }
+
 
 
 

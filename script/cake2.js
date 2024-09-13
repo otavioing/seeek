@@ -1,13 +1,43 @@
-function botaofavo(){
-
-    document.getElementById('coracao').style.display = "none";
-    document.getElementById('coracao2').style.display = "inline";
-
+function a() {
+   if (coracao0.src.includes("img/heart.svg")) {
+       coracao0.src = "img/heartpre.svg";
+   } else if (coracao0.src.includes("img/heartpre.svg")) {
+       coracao0.src = "img/heart.svg";
+   }
+}
+function b() {
+   if (coracao1.src.includes("img/heart.svg")) {
+       coracao1.src = "img/heartpre.svg";
+   } else if (coracao1.src.includes("img/heartpre.svg")) {
+       coracao1.src = "img/heart.svg";
+   }
+}
+function c() {
+   if (coracao2.src.includes("img/heart.svg")) {
+       coracao2.src = "img/heartpre.svg";
+   } else if (coracao2.src.includes("img/heartpre.svg")) {
+       coracao2.src = "img/heart.svg";
+   }
+}
+function d() {
+   if (coracao3.src.includes("img/heart.svg")) {
+       coracao3.src = "img/heartpre.svg";
+   } else if (coracao3.src.includes("img/heartpre.svg")) {
+       coracao3.src = "img/heart.svg";
+   }
+}
+function e() {
+   if (coracao4.src.includes("img/heart.svg")) {
+       coracao4.src = "img/heartpre.svg";
+   } else if (coracao4.src.includes("img/heartpre.svg")) {
+       coracao4.src = "img/heart.svg";
+   }
+}
+function f() {
+   if (coracao5.src.includes("img/heart.svg")) {
+       coracao5.src = "img/heartpre.svg";
+   } else if (coracao5.src.includes("img/heartpre.svg")) {
+       coracao5.src = "img/heart.svg";
+   }
 }
 
-function botaofavo2(){
-
-    document.getElementById('coracao').style.display = "inline";
-    document.getElementById('coracao2').style.display = "none";
-
-}
