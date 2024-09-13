@@ -23,9 +23,34 @@
     --vermelhom: #EF0000;
 
 
+    --CinzaME: #444444;
+    --CinzaME2: #363636;
+
 }
 
+.modoEscuro {
+    color: white;
+    background-color: var(--CinzaME);
+}
 
+.modoEscuro .filtroflutuante{
+    color: white;
+    background-color: #4e4e4e;
+    
+    border: 1px solid rgb(27, 27, 27)
+}
+
+.modoEscuro a.migalhadepaocursos ,.modoEscuro .filtroflutuante h2, .modoEscuro .campo p , .modoEscuro .campos p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee ,.modoEscuro .limparfiltro a{
+    color: white; 
+}
+
+.modoEscuro .linhahabi , .modoEscuro .duracao , .modoEscuro .loc{
+    border-bottom: white 1px solid;
+}
+
+.modoEscuro .caminhonavegaçãovagas a {
+    color: rgb(255, 255, 255);
+}
 
 .migalhadepaocursos a{
     color: var(--roxobase);
