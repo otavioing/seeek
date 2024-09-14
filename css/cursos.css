@@ -98,20 +98,30 @@ p.filtrar {
     color: var(--roxobase);
 }
 .camposdcriacao{
-    display: flex;
-    margin: 2rem 0 0 0.6rem;
+    display: flex-column;
+    margin: 2rem 0 0 0.8rem;
+    height: 10rem;
+    overflow: hidden;
+    
 }
-
+h2.linhacampos{
+height: 2rem;
+border-bottom: 1px solid var(--roxobase);
+width: 13.8rem;
+}
+.campos{
+    height: 5rem;
+    display: flex-column;
+}
 .categorias {
-    position: relative;
-    top: 3.2rem;
-    right: 13.5rem;   
+    display: flex;
+    margin-top: 1rem;
 }
 .Habilidades{
     position: relative;
     top: 3.5rem;
     left: 0.7rem;
-    margin-top: 1rem;
+    margin-top: -3rem;
 }
 .linhahabi{
     border-bottom: 1.5px solid var(--roxobase);
@@ -383,6 +393,29 @@ margin-top: 0.5rem;
     margin-right: 2rem;
 
   }
+.temmess{
+    position: relative;
+    top: 3.8rem;
+    left: 0.7rem;
+    margin-top: -2rem;
+}
 
-
-                                        
+                                        /* teste do botão voltar ao topo */
+.btn-scroll-top {
+position: fixed;
+right: 2rem;
+bottom: 2rem;
+display: grid;
+place-items: center;
+outline: none;
+border-radius: 100%;                                       
+opacity: 0;                                         
+cursor: pointer;                                    
+pointer-events: none;
+transition: opacity 0.5s ease;
+z-index: 10;
+}                                         
+.show-btn-scroll-top {
+opacity: 1;
+pointer-events: all;
+}                                        
