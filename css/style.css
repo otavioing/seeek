@@ -281,52 +281,52 @@ header .botaoMenu span{
     top: 0;
 }
 .gride #filho1{
-     background-image: url(img/img_port/1.jpg);
+     background-image: url(../img/img_port/1.jpg);
     background-size: cover;
     grid-area: f1;
     border-radius: 1.8rem;
 }
 .gride #filho2{
-    background-image: url(img/img_port/portIndx/2.jpg);
+    background-image: url(../img/img_port/portIndx/2.jpg);
     background-size: cover;
     grid-area: f2;
     border-radius: 1.8rem;
     
 }
 .gride #filho3{
-    background-image: url(img/img_port/portIndx/3.jpg);
+    background-image: url(../img/img_port/portIndx/3.jpg);
     background-size: cover;
     grid-area: f3;
     border-radius: 1.8rem;
 }
 .gride #filho4{
-    background-image: url(img/img_port/portIndx/4.jpg);
+    background-image: url(../img/img_port/portIndx/4.jpg);
     background-size: cover;
     grid-area: f4;
     border-radius: 1.8rem;
 }
 
 .gride #filho5{
-    background-image: url(img/img_port/portIndx/5.jpg);
+    background-image: url(../img/img_port/portIndx/5.jpg);
     background-size: cover;
     grid-area: f5;
     border-radius: 1.8rem;
 }
 .gride #filho6{
-    background-image: url(img/img_port/portIndx/6.jpg);
+    background-image: url(../img/img_port/portIndx/6.jpg);
     background-size: cover;
     grid-area: f6;
     border-radius: 1.8rem;
 }
 .gride #filho7{
-    background-image: url(img/img_port/portIndx/7.jpg);
+    background-image: url(../img/img_port/portIndx/7.jpg);
     background-size: cover;
     grid-area: f7;
     border-radius: 1.8rem;
 }
 
 .gride #filho8{
-    background-image: url(img/img_port/portIndx/8.jpg);
+    background-image: url(../img/img_port/portIndx/8.jpg);
     background-size: cover;
     grid-area: f8;
     border-radius: 1.8rem;
