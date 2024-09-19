@@ -311,18 +311,18 @@ h1{
 
     .container{
 
-        grid-template-columns: 1fr;
-        left: 35rem;
+        grid-template-columns: 1fr 1fr;
+        left: 23rem;
     }
 
     .container .caixas{
-        width: 34rem;
+        width: 25rem;
     }
     .caixas .enviarprop{
-        left: 24.5rem;
+        left: 15.5rem;
     }
     .caixas .maisinfo{
-        left: 5.0rem;
+        left: 1.0rem;
     }
 
 }
@@ -330,6 +330,10 @@ h1{
 
     .filtroflutuante{
         display: none;
+    }
+
+    .container .caixas{
+        width: 32rem;
     }
     .container{
 

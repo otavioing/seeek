@@ -701,10 +701,70 @@ header .userhover{
 
 }
 
+.main.prIndex{
 
+    margin-bottom: 2rem;
+}
 
 /*------------------------------------ Footer -----------------------------------*/
 footer{
+
+    height: 10rem;
+    background-color: var(--preto);
+
+
+}
+.informacoes{
+    
+    /* border: #EF0000 1px solid; */
+    width: 30%;
+    height: 5rem;
+    position: relative;
+    top: 2rem;
+    left: 18rem;
+
+}
+.informacoes a{
+    /* border: #EF0000 1px solid; */
+    text-decoration: none;
+    color: var(--brancoBase);
+    font-size: 1.2rem;
+    margin: 0 2rem;
+    
+
+}
+
+.imglogofooter img{
+    width: 10rem;
+    position: relative;
+    bottom: 2.5rem;
+    left: 68rem;
+}
+.linguagemsite{
+    position: relative;
+    bottom: 8rem;
+    left: 5rem;
+}
+.linguagemsite select{
+    
+    background-color: var(--preto);
+    color: var(--brancoBase);
+    border: none;
+    font-size: 1.2rem;
+    /* padding: 0.5rem; */
+    /* border-radius: 0.5rem; */
+
+}
+
+.direitos{
+    position: relative;
+    bottom: 2.6rem;
+    left: 35rem;
+    color: var(--brancoBase);
+    font-size: 1.2rem;
+}
+
+/* footer{
     align-content: center;
     align-items: center;
     margin: 2rem 0 0 0;
@@ -781,7 +841,6 @@ footer{
 .logoFooter{
     width: 15%;
 }
-/* From Uiverse.io by wilsondesouza */ 
 ul {
     list-style: none;
   }
@@ -879,4 +938,4 @@ ul {
   }
 
 
-  
+   */
