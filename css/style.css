@@ -710,6 +710,7 @@ header .userhover{
 footer{
     height: 10rem;
     background-color: var(--preto);
+    margin-top: 2rem;
 }
 
 .linksfooter{
