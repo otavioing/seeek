@@ -1,62 +1,3 @@
-// Sistema de validação de senha
-var psw = document.getElementById("password");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
-
-// Função quando o usuário clica dentro do campo de senha
-psw.onfocus = function() {
-    document.getElementById("aviso").style.display = "block";
-}
-
-// Funçao quando o usuário clica fora do campo de senha
-psw.onblur = function() {
-    document.getElementById("aviso").style.display = "none";
-}
-
-// Função quando o usuário começa a digitar
-psw.onkeyup = function() {
-    // Validar letras minúsculas
-    var lowerCaseLetters = /[a-z]/g;
-    if(psw.value.match(lowerCaseLetters)) {  
-        letter.classList.remove("invalid");
-        letter.classList.add("valid");
-    } else {
-        letter.classList.remove("valid");
-        letter.classList.add("invalid");
-    }
-
-    // Validar letras maiúsculas
-    var upperCaseLetters = /[A-Z]/g;
-    if(psw.value.match(upperCaseLetters)) {  
-        capital.classList.remove("invalid");
-        capital.classList.add("valid");
-    } else {
-        capital.classList.remove("valid");
-        capital.classList.add("invalid");
-    }
-
-    // Validar números
-    var numbers = /[0-9]/g;
-    if(psw.value.match(numbers)) {  
-        number.classList.remove("invalid");
-        number.classList.add("valid");
-    } else {
-        number.classList.remove("valid");
-        number.classList.add("invalid");
-    }
-
-    // Validar número de caracteres
-    if(psw.value.length >= 8) {
-        length.classList.remove("invalid");
-        length.classList.add("valid");
-    } else {
-        length.classList.remove("valid");
-        length.classList.add("invalid");
-    }
-}
-
 // Banner da página de login
 let banners = ["img/banner1.jpg", "img/banner2.png", "img/banner3.jpg"];
 let indiceBanner = 0;
@@ -76,8 +17,81 @@ function trocarBanner() {
 trocarBanner();
 setInterval(trocarBanner, 8000);
 
-//Script para redirecionar para a página principal
+// Script para redirecionar para a página principal
 function login(event) {
     event.preventDefault();
     window.location.href = "index.html";
+}
+
+// Função de checar se a senha bate com os requisitos
+window.onload = function() {
+    let email = document.getElementById("email");
+    let psw = document.getElementById("password");
+    let pswRepeat = document.getElementById("pswRepeat");
+    let letter = document.getElementById("letter");
+    let capital = document.getElementById("capital");
+    let number = document.getElementById("number");
+    let length = document.getElementById("length");
+    let match = document.getElementById("match"); // Mensagem para verificar se as senha coincidem
+    let emailMessage = document.getElementById("matchEmail"); // Mensagem para e-mail
+
+    psw.onfocus = function(){
+        document.getElementById("aviso").style.display = "block";
+    }
+
+    psw.onblur = function(){
+        document.getElementById("aviso").style.display = "none";
+    }
+
+    psw.onkeyup = function(){
+        var lowerCaseLetters = /[a-z]/g;
+        letter.classList.toggle("valid", psw.value.match(lowerCaseLetters));
+        letter.classList.toggle("invalid", !psw.value.match(lowerCaseLetters));
+
+        var upperCaseLetters = /[A-Z]/g;
+        capital.classList.toggle("valid", psw.value.match(upperCaseLetters));
+        capital.classList.toggle("invalid", !psw.value.match(upperCaseLetters));
+
+        var numbers = /[0-9]/g;
+        number.classList.toggle("valid", psw.value.match(numbers));
+        number.classList.toggle("invalid", !psw.value.match(numbers));
+
+        length.classList.toggle("valid", psw.value.length >= 8);
+        length.classList.toggle("invalid", psw.value.length < 8);
+
+        checkMatch();
+    }
+
+    pswRepeat.onkeyup = function(){
+        checkMatch();
+    }
+
+    email.onkeyup = function(){
+        validateEmail();
+    }
+
+    // Sistema se o e-mail está inserido corretamente
+    function validateEmail(){
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(emailPattern.test(email.value)){
+            emailMessage.textContent = "E-mail válido";
+            emailMessage.style.color = "green";
+        }else{
+            emailMessage.textContent = "O e-mail deverá conter @";
+            emailMessage.style.color = "red";
+        }
+    }
+
+    // Sistema para verificar se as senhas coincidem
+    function checkMatch(){
+        if(psw.value === pswRepeat.value && pswRepeat.value !== ""){
+            match.classList.add("validRepeat");
+            match.classList.remove("invalidRepeat");
+            match.textContent = "As senhas coincidem";
+        }else{
+            match.classList.add("invalidRepeat");
+            match.classList.remove("validRepeat");
+            match.textContent = "As senhas não coincidem.";
+        }
+    }
 }
