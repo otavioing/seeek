@@ -27,6 +27,7 @@ main{
     --ModoEscuroBase: #1F1F1F;
     --ModoEscuroMesc: #656565;
     --ModoEscuroFilt: #131313;
+    --ModoEscuroDiv: #121212;
 
     --ModoEscuroFontV: #5AB3FF;
 
@@ -46,7 +47,8 @@ main{
     
 }
 
-.modoEscuro .campos .categorias, .modoEscuro .margimtop, .modoEscuro .campo p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee , .modoEscuro .limparfiltro a , .modoEscuro .caminhonavegaçãovagas a{
+.modoEscuro .campos .categorias, .modoEscuro .margimtop, .modoEscuro .campo p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee ,
+ .modoEscuro .limparfiltro a , .modoEscuro .caminhonavegaçãovagas a , .modoEscuro .caixas .nomedesigner{
     color: var(--brancoBase);
 }
 
@@ -62,6 +64,12 @@ main{
     border-bottom: var(--ModoEscuroFontV) 1px solid;
 }
 
+
+.modoEscuro .container .caixas{
+
+    background-color: var(--ModoEscuroDiv);
+}
+
 /*-------------------------------- Modo Escuro fim--------------------------------*/
 
 
@@ -73,7 +81,9 @@ main{
 .caminhonavegaçãovagas{
     margin: 2rem;
 }
-                                          /* Main */
+
+
+/*-------------------------------- Main--------------------------------*/
 .prCursos{
     height: 60rem;
     display: flex;
@@ -95,7 +105,6 @@ main{
 .filtroflutuante h2{
     color: var(--azulBase);
 }
-
 
 .filtroflutuante p{
     color: var(--preto);    
