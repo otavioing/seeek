@@ -739,7 +739,7 @@ footer{
     width: 23%;
     position: relative;
     left: 10%;
-    top: 15%;
+    top: 25%;
     gap: 5.5rem;
 
 
@@ -760,9 +760,8 @@ footer{
 .direitosautorais{
     color: var(--brancoBase);
     font-size: 1.1rem;
-    position: absolute;
-    left: 40%;
-    top: 194%;
+    background-color: var(--preto);
+    text-align: center;
 }
 .imglogofooter{
     width: 10rem;
