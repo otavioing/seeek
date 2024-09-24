@@ -22,30 +22,41 @@
 
     --vermelhom: #EF0000;
 
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroFilt: #131313;
 
-    --CinzaME: #444444;
-    --CinzaME2: #363636;
+    --ModoEscuroFontC: #E197FF;
 
+  
 }
 
+
+/*-------------------------------- Modo Escuro --------------------------------*/
+
 .modoEscuro {
-    color: white;
-    background-color: var(--CinzaME);
+    color: var(--brancoBase);
+    background-color:var(--ModoEscuroBase);
 }
 
 .modoEscuro .filtroflutuante{
-    color: white;
-    background-color: #4e4e4e;
-    
+   
+    background-color: var(--ModoEscuroFilt);
     border: 1px solid rgb(27, 27, 27)
+    
 }
 
-.modoEscuro a.migalhadepaocursos ,.modoEscuro .filtroflutuante h2, .modoEscuro .campo p , .modoEscuro .campos p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee ,.modoEscuro .limparfiltro a{
+.modoEscuro a.migalhadepaocursos ,.modoEscuro .campo p , .modoEscuro .campos p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee ,.modoEscuro .limparfiltro a{
     color: white; 
 }
 
-.modoEscuro .linhahabi , .modoEscuro .duracao , .modoEscuro .loc{
-    border-bottom: white 1px solid;
+.modoEscuro .filtroflutuante h2 , .modoEscuro p.filtrar, 
+.modoEscuro .aplicar a , .modoEscuro h1 {
+    color: var(--ModoEscuroFontC);
+}
+
+.modoEscuro .linhacampos, .modoEscuro .linhaPreco , .modoEscuro .linhahabi , .modoEscuro .duracao , .modoEscuro .loc {
+    border-bottom: var(--ModoEscuroFontC) 1px solid;
 }
 
 .modoEscuro .caminhonavegaçãovagas a {
@@ -104,6 +115,12 @@ p.filtrar {
     overflow: hidden;
     
 }
+
+.linhaPreco{
+    border-bottom: 1.5px solid var(--roxobase);
+    width: 4.5rem
+}
+
 h2.linhacampos{
 height: 2rem;
 border-bottom: 1px solid var(--roxobase);

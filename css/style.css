@@ -26,6 +26,12 @@
     --vermelhom: #EF0000;
 
 
+    
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+
+
+
 }
 
 * {
@@ -45,10 +51,25 @@ a {
     color: var(--brancoBase);
 }
 
-
-
-
 /*RESPONSIVIDADE DO SITE COMEÇA A BUGAR COM 430PX*/
+
+/*-------------------------------- Modo Escuro --------------------------------*/
+
+
+.modoEscuro {
+    color: white;
+    background-color: var(--ModoEscuroBase);
+}
+
+.modoEscuro .explorar , .modoEscuro .filtroExplorar .filtroButton {
+    background-color: var(--ModoEscuroMesc);
+    color: var(--brancoBase);
+}
+
+.modoEscuro .explorar a {
+    color: var(--brancoBase);
+}
+
 
 
 /*-------------------------------- Header inicio --------------------------------*/

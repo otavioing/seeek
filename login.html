@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/logintemp.css">
     <link type="image/png" href="img/logoSeekk.svg" rel="shortcut icon">
 </head>
-<body>
+<body id="todo">
 
     <main class="mainlogin">
 
@@ -22,7 +22,7 @@
         </div>
 
         <div class="form-container">
-            <p class="title"> Entrar</p>
+            <h3 class="title"> Entrar</h3>
             <form class="form" method="post">
                 <input type="email" name="email" class="input" placeholder="Email" required>
                 <input type="password" name="password" class="input" placeholder="Senha" required>
@@ -55,7 +55,14 @@
             <div class="sign-up-label">
                 <button onclick="document.getElementById('sign-up-modal').style.display='block'" class="sign-up-link">Cadastrar</button>
                 <a class="page-link-label" href="index.html">Esqueceu sua senha?</a>
+
             </div>
+
+            
+            <div>
+                <button onclick="ModoEscuro()">lua</button>
+                <button onclick="ModoClaro()">sol</button>
+                  </div>
 
             <div id="sign-up-modal" class="sign-up-modal">
                 <form class="sign-up-content" method="post" onsubmit="login(event)">
@@ -110,38 +117,12 @@
                 </form>
             </div>
         </div>
+      
+          
     </main>
 
-    <footer>
-        <div class="linksfooter">
-            <div class="selectlinguagem">
-                <select name="" id="">
-                    <option value="">  Português</option>
-                    <option value="">Inglês</option>
-                    <option value="">Espanhol</option>
-                </select>
-            </div>
-            
-            <div class="infofooter">
-                <a href="">Ajuda</a>
-                <a href="">Termos</a>
-            </div>
-            <div class="infofooter">
-                <a href="">Sobre nós</a>
-                <a href="">Atualizações</a>
-            </div>
-            <div class="infofooter">
-                <a href="">Avisos</a>
-                <a href="">Contato</a>
-            </div>
-            
-        </div>
-        <img class="imglogofooter" src="img/logoSeekk 3@2x.png" alt="">
-        
-        <div class="direitosautorais"><p>Todos os direitos reservados. ©Seek 2024.</p></div>
-            
-        
-    </footer>
+  
     <script src="script/script.js"></script>
+    <script src="script/cautela.js"></script>
 </body>
 </html>

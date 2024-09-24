@@ -24,8 +24,49 @@ main{
 
     --vermelhom: #EF0000;
 
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroFilt: #131313;
+
+    --ModoEscuroFontV: #5AB3FF;
 
 }
+
+/*-------------------------------- Modo Escuro --------------------------------*/
+
+.modoEscuro {
+    color: var(--brancoBase);
+    background-color:var(--ModoEscuroBase);
+}
+
+.modoEscuro .filtroflutuante{
+   
+    background-color: var(--ModoEscuroFilt);
+    border: 1px solid rgb(27, 27, 27)
+    
+}
+
+.modoEscuro .campos .categorias, .modoEscuro .margimtop, .modoEscuro .campo p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee , .modoEscuro .limparfiltro a , .modoEscuro .caminhonavegaçãovagas a{
+    color: var(--brancoBase);
+}
+
+.modoEscuro .filtrar1200px{
+    background-color: var(--ModoEscuroMesc);
+}
+
+.modoEscuro p.filtrar , .modoEscuro h1 , .modoEscuro .filtroflutuante h2, .modoEscuro .aplicar a , .modoEscuro .filtrar1200px{
+    color: var(--ModoEscuroFontV)
+}
+
+.modoEscuro .linhahabi , .modoEscuro .duracao , .modoEscuro .loc{
+    border-bottom: var(--ModoEscuroFontV) 1px solid;
+}
+
+/*-------------------------------- Modo Escuro fim--------------------------------*/
+
+
+
+
 .caminhonavegaçãovagas a{
     color: black;
 }
@@ -54,6 +95,7 @@ main{
 .filtroflutuante h2{
     color: var(--azulBase);
 }
+
 
 .filtroflutuante p{
     color: var(--preto);    
@@ -160,6 +202,7 @@ p.filtrar {
     cursor: pointer;
     color: var(--azulBase);
 }
+
 .limparfiltro{
     position: relative;
     top: 5.6rem;
