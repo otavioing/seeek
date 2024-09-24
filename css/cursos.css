@@ -25,7 +25,6 @@
     --ModoEscuroBase: #1F1F1F;
     --ModoEscuroMesc: #656565;
     --ModoEscuroFilt: #131313;
-    --ModoEscuroDiv: #121212;
 
     --ModoEscuroFontC: #E197FF;
 
@@ -47,7 +46,7 @@
     
 }
 
-.modoEscuro a.migalhadepaocursos ,.modoEscuro .campo p , .modoEscuro .campos p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee ,.modoEscuro .limparfiltro a , .modoEscuro .caixas .nomeddocurso{
+.modoEscuro a.migalhadepaocursos ,.modoEscuro .campo p , .modoEscuro .campos p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee ,.modoEscuro .limparfiltro a{
     color: white; 
 }
 
@@ -64,11 +63,6 @@
     color: rgb(255, 255, 255);
 }
 
-.modoEscuro .container .caixas{
-    background-color: var(--ModoEscuroDiv);
-}
-
-
 .migalhadepaocursos a{
     color: var(--roxobase);
 }
@@ -77,8 +71,6 @@
 }
 .caminhonavegaçãovagas{
     margin: 2rem;
-
-
 }
                                           /* Main */
 .prCursos{
@@ -262,10 +254,6 @@ width: 13.8rem;
     bottom: 51rem;
     left: 23rem;
     gap: 2rem 1rem;
-}
-
-.caixas img {
-    width: 100%;
 }
 .container .caixas{
     border-radius: 1rem;
