@@ -346,7 +346,8 @@ a{
     position: relative;
 }
 
-.valid{
+.valid, 
+.validRepeat{
     color: green;
 }
 
@@ -357,7 +358,8 @@ a{
 
 /* Adiciona um "✖" e troca a cor para vemrmelho se os requrimentos não estarem certos */
 
-.invalid{
+.invalid, 
+.invalidRepeat{
     color: red;
 }
 
