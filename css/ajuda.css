@@ -1,0 +1,112 @@
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxoc: rgb(172, 161, 210);
+
+}
+
+.h1ajuda{
+    font-size: 3.5rem;
+    margin-top: 3.5rem;
+    margin-left: 3.5rem;
+}
+.migalhadepao{
+    margin-left: 6rem;
+    margin-top: 1rem;
+}
+.migalhadepaosobrenoshome{
+    color: var(--cinzamigalha);
+}
+.migalhadepaosobrenos{
+    color: var(--azulBase);
+}
+.usuarioajuda{
+    margin-left: 3.5rem;
+    margin-top: 3.5rem;
+    font-size: 1.5rem;
+    display: flex;
+}
+.usuarioajuda img{
+    width: 30rem;
+    display: flex;
+    margin-left: 20rem;
+
+}
+.usuarioajuda h2{
+    color: var(--azulBase);
+}
+.usuarioajuda .textousuarioajuda{
+    margin-top: 2rem;
+}
+
+.portinfoeimg{
+    margin-left: 3.5rem;
+    margin-top: 3.5rem;
+    font-size: 1.5rem;
+    display: flex;
+}
+.portinfoeimg h2{
+    color: var(--azulBase);
+}
+.textousuarioportifolioajuda{
+    margin-top: 2rem;
+}
+.portinfoeimg img{
+    width: 30rem;
+    display: flex;
+    margin-left: 20rem;
+
+}
+.cursosvagasajuda{
+    margin-left: 3.5rem;
+    margin-top: 3.5rem;
+    font-size: 1.5rem;
+    display: flex;
+}
+.cursosvagasajuda img{
+    width: 30rem;
+    display: flex;
+    margin-left: 20rem;
+}
+.infocursosevagas h2{
+    color: var(--azulBase);
+}
+.textocursoevagasajuda{
+    margin-top: 2rem;
+}
+.cadastroajuda{
+    margin-left: 3.5rem;
+    margin-top: 3.5rem;
+    font-size: 1.5rem;
+    display: flex;
+}
+.infocadastroajuda h2{
+    color: var(--azulBase);
+}
+.textocadastroajuda{
+    margin-top: 2rem;
+}
+.cadastroajuda img{
+    width: 30rem;
+    display: flex;
+    margin-left: 25rem;
+}
+
+
+
+
+

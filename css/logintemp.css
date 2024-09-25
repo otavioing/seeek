@@ -591,3 +591,25 @@ a{
     font-size: 6rem;
     color: #2B63F0;
 }
+main .quemsomoslogin{
+
+    z-index: 1;
+    display: inline;
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--brancoBase);
+    color: var(--brancoBase);
+}
+.faclogin{
+
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+    font-size: 2rem;
+    color: var(--brancoBase);
+}
