@@ -1,229 +1,140 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt_br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Início - Seek</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seek - Explorar</title>
+    <link rel="stylesheet" href="style.css">
+    <link  type="imagex/png" href="img/logoSeekk.svg" rel="shortcut icon">
+    <script type="text/javascript" src="cake.js" async defer></script>
+
+
 </head>
+<body class="bodyIndex">
 
-<body id="todo">
+    <header class="inicio">
 
-  <header class="inicio">
-
-    
-    <button class="botaoMenu" id="botaoMenu">
-      <span class="linha1"></span>
-      <span class="linha2"></span>
-      <span class="linha3"></span>
-    </button>
-    
-    <div class="logosite">
-      <img src="img/logo.svg" alt="Logo Seek">
-    </div>
-    
-    <div class="userhover"><img src="img/user2.svg" alt=""></div>
-
-    <nav class="navsite">
-      <a href="index.html">Explorar</a>
-      <a href="cursos.html">Cursos</a>
-      <a href="vagas.html">Vagas</a>
-      <div class="sobrenoss"><a href="sobrenos.html">Sobre Nós</a></div>
-    </nav>
-
-    <div class="pesquisasite">
-      <input type="text" placeholder="Pesquisar">
-      <a href=""><img src="img/search2.svg" alt=""></a>
-    </div>
-
-    <div class="usersite">
-      <a href=""><img src="img/mail-1.svg" alt=""></a>
-      <a href=""><img src="img/bell2.svg" alt=""></a>
-      <a href="login.html"><img src="img/user2.svg" alt=""></a>
-    </div>
-
-    <nav class="hamburguer" id="menu">
-      <a class="botoesmenuhamburguer" href="index.html">Explorar</a>
-      <a class="botoesmenuhamburguer" href="cursos.html">Cursos</a>
-      <a class="botoesmenuhamburguer" href="vagas.html">Vagas</a>
-      <a class="botoesmenuhamburguer" href="sobre.html">Sobre Nós</a>
-    </nav>
-
-
-
-  </header>
-
-  <section class="explorar">
-
-    <div class="explorarDiv">
-      <a href="index.html">Explorar</a>
-    </div>
-    <a href="index.html">Tendências</a>
-
-    <div>
-  <button onclick="ModoEscuro()">lua</button>
-  <button onclick="ModoClaro()">sol</button>
-    </div>
-
-
-  </section>
-
-  <div class="filtroExplorar">
-    <div class="exp">
-      <h1>Explorar</h1>
-    </div>
-
-    <div class="filtroButton">
-      <button class="buttonFiltro"><img src="img/filtrar2.svg" alt=""></button>
-      <p>Personalizar a Galeria</p>
-    </div>
-
-  </div>
-
-  <main class="prIndex">
-
-    <div class="gride">
-      <div class="portImg" id="filho1">
-        <div class="portHover">
-          <H1>Portfólio teste</H1>
-          <p>Autor</p>
-          <p class="like">99%<img src="img/Vector.svg" alt="Like"></p>
-        </div>
-      </div>
-      <div class="portImg" id="filho2">
-        <div class="portHover">
-          <H1>Portfólio teste</H1>
-          <p>Autor</p>
-          <p class="like">99%<img src="img/Vector.svg" alt="Like"></p>
-        </div>
-      </div>
-      <div class="portImg" id="filho3">
-        <div class="portHover">
-          <H1>Portfólio teste</H1>
-          <p>Autor</p>
-          <p class="like">99%<img src="img/Vector.svg" alt="Like"></p>
-        </div>
-      </div>
-      <div class="portImg" id="filho4">
-        <div class="portHover">
-          <H1>Portfólio teste</H1>
-          <p>Autor</p>
-          <p class="like">99%<img src="img/Vector.svg" alt="Like"></p>
-        </div>
-      </div>
-      <div class="portImg" id="filho5">
-        <div class="portHover">
-          <H1>Portfólio teste</H1>
-          <p>Autor</p>
-          <p class="like">99%<img src="img/Vector.svg" alt="Like"></p>
-        </div>
-      </div>
-      <div class="portImg" id="filho6">
-        <div class="portHover">
-          <H1>Portfólio teste</H1>
-          <p>Autor</p>
-          <p class="like">99%<img src="img/Vector.svg" alt="Like"></p>
-        </div>
-      </div>
-      <div class="portImg" id="filho7">
-        <div class="portHover">
-          <H1>Portfólio teste</H1>
-          <p>Autor</p>
-          <p class="like">99%<img src="img/Vector.svg" alt="Like"></p>
-        </div>
-      </div>
-      <div class="portImg" id="filho8">
-        <div class="portHover">
-          <H1>Portfólio teste</H1>
-          <p>Autor</p>
-          <p class="like">99%<img src="img/Vector.svg" alt="Like"></p>
-        </div>
-      </div>
-    </div>
-
-    <!--Início modal-->
-    <div id="modalPort">
-      <div class="modal-content">
-
-        <header class="modal-header">
-          <div class="perfilPort">
-            <img src="img/iconeperfil.svg" alt="Foto/Ícone de perfil">
-            <h1>Protótipo de portifólio <br>
-              <p>Nome do criador • 0 seguidores</p>
-            </h1>
-          </div>
-          <input class="botaoContratar" type="submit" value="Contratar">
-          <span class="close">&times;</span>
-        </header>
-
-
-        <main class="modal-body">
-          <img id="modalImage" alt="Imagem do Portfólio">
-          <nav class="modal-nav">
-            <button type="button" id="Favoritar"><img class="modal-button" src="img/coracao.svg"
-                alt="Botão Favoritar">Favoritar</button>
-            <button type="button"><img class="modal-button" src="img/ferramenta.svg"
-                alt="Botão Ferramenta">Ferramentas</button>
-            <button type="button"><img class="modal-button" src="img/comentario.svg"
-                alt="Botão Comentários">Comentários</button>
-            <button type="button"><img class="modal-button" src="img/compartilhar.svg"
-                alt="Botão Compartilhar">Compartilhar</button>
-          </nav>
-        </main>
-
-      </div>
-    </div>
-    <!--Fim modal-->
-
-
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-
-  </main>
-
-  <footer>
-    <div class="linksfooter">
-        <div class="selectlinguagem">
-            <select name="" id="">
-                <option value="">  Português</option>
-                <option value="">Inglês</option>
-                <option value="">Espanhol</option>
-            </select>
+        <div class="logoo">
+            <img src="img/Logo.svg" alt="logo do site Seek, Sua aparencia é de um circulo feito de triangulos com cores frias como varios tons de azul e roxo, formando um olho similar a uma camera quando se retrai">
         </div>
         
-        <div class="infofooter">
-            <a href="">Ajuda</a>
-            <a href="">Termos</a>
-        </div>
-        <div class="infofooter">
-            <a href="">Sobre nós</a>
-            <a href="">Atualizações</a>
-        </div>
-        <div class="infofooter">
-            <a href="">Avisos</a>
-            <a href="">Contato</a>
-        </div>
+        <nav class="headerpag">
+            <a href="index.html">Explorar</a>
+                <a href="cursos.html">Cursos</a>
+            <a href="vagas.html">Vagas</a>
+            <div class="sobrenos"><a href="sobre.html">Sobre Nós</a></div>
+        </nav>
+
+        <nav  id="menu">
+           
+            <a class="botoesmenuhamburguer" href="index.html">Explorar</a>
+            <a class="botoesmenuhamburguer" href="cursos.html">Cursos</a>
+            <a class="botoesmenuhamburguer" href="vagas.html">Vagas</a>
+            <a class="botoesmenuhamburguer" href="sobre.html">Sobre Nós</a>  
         
+        </nav>
+
+        <div class="barrapesquisa">
+            <form method="post" action="">
+                <input type="text" name="busca" placeholder="Digite sua pesquisa">
+            </form>
+             <button type="submit"><img src="img/search2.svg" alt="icone de busca com aparencia de uma lupa branca"></button>
+        </div>
+
+        <nav class="headericon">
+        <a href=""><img src="img/mail-1.svg" alt=" botão de mensagens com aparência de um envelope fechado branco"></a>
+        <a href=""><img src="img/bell2.svg" alt="botão de notificações com aparência de um sino branco"></a>
+        <a href="login.html"><img src="img/user2.svg" alt=" botão para configurações de usuário ou registro"></a>
+        </nav>
+
+        <button class="botaoMenu" id="botaoMenu">
+            <span class="linha1"></span>
+            <span class="linha2"></span>
+            <span class="linha3"></span>
+        </button>
+
+    </header>
+
+    <section class="fy">
+
+    <div class="fyy">
+        <div class="pv">
+            <a href="">Para Você</a> 
+        </div>
+
+        <div class="seguindo">
+            <a href="">Seguindo</a>
+        </div>
     </div>
-    <img class="imglogofooter" src="img/logoSeekk 3@2x.png" alt="">
-    
-    <div class="direitosautorais"><p>Todos os direitos reservados. ©Seek 2024.</p></div>
+
+    </section>
+
+    <main class="prIndex">
         
+        <div class="gride">
+            <div class="portImg" id="filho1"><div class="portHover"><H1>Portfólio teste</H1><p>Autor</p><p class="like">99%<img src="img/Vector.svg" alt="Like"></p></div></div>
+            <div class="portImg" id="filho2"><div class="portHover"><H1>Portfólio teste</H1><p>Autor</p><p class="like">99%<img src="img/Vector.svg" alt="Like"></p></div></div>
+            <div class="portImg" id="filho3"><div class="portHover"><H1>Portfólio teste</H1><p>Autor</p><p class="like">99%<img src="img/Vector.svg" alt="Like"></p></div></div>
+            <div class="portImg" id="filho4"><div class="portHover"><H1>Portfólio teste</H1><p>Autor</p><p class="like">99%<img src="img/Vector.svg" alt="Like"></p></div></div>
+            <div class="portImg" id="filho5"><div class="portHover"><H1>Portfólio teste</H1><p>Autor</p><p class="like">99%<img src="img/Vector.svg" alt="Like"></p></div></div>
+            <div class="portImg" id="filho6"><div class="portHover"><H1>Portfólio teste</H1><p>Autor</p><p class="like">99%<img src="img/Vector.svg" alt="Like"></p></div></div>
+            <div class="portImg" id="filho7"><div class="portHover"><H1>Portfólio teste</H1><p>Autor</p><p class="like">99%<img src="img/Vector.svg" alt="Like"></p></div></div>
+            <div class="portImg" id="filho8"><div class="portHover"><H1>Portfólio teste</H1><p>Autor</p><p class="like">99%<img src="img/Vector.svg" alt="Like"></p></div></div>
+        </div>
+
+        <!--Início modal-->
+        <div id="modalPort">
+            <div class="modal-content">
+
+                <header class="modal-header">
+                    <div class="perfilPort">
+                        <img src="img/iconeperfil.svg" alt="Foto/Ícone de perfil">
+                        <h1>Protótipo de portifólio <br><p>Nome do criador • 0 seguidores</p></h1>
+                    </div>
+                    <input class="botaoContratar" type="submit" value="Contratar">
+                    <span class="close">&times;</span>
+                </header>
+                
+
+                <main class="modal-body">
+                    <img id="modalImage" alt="Imagem do Portfólio">
+                    <nav class="modal-nav">
+                        <button type="button" id="Favoritar"><img class="modal-button" src="img/coracao.svg" alt="Botão Favoritar">Favoritar</button>
+                        <button type="button"><img class="modal-button" src="img/ferramenta.svg" alt="Botão Ferramenta">Ferramentas</button>
+                        <button type="button"><img class="modal-button" src="img/comentario.svg" alt="Botão Comentários">Comentários</button>
+                        <button type="button"><img class="modal-button" src="img/compartilhar.svg" alt="Botão Compartilhar">Compartilhar</button>
+                    </nav>
+                </main>
+
+            </div>
+        </div>
+        <!--Fim modal-->
+
+    </main>
+
+    <footer>
+        <div class="PrinFooter">
+        <div class="logoFooter">
+        <img src="img/Logo.svg" alt="LogoSeek do rodapé, sua aparencia é de um circulo feito de triangulos com cores frias como varios tons de azul e roxo, formando um olho similar a uma camera quando se retrai">
+        </div>
+        <section class="Info">
+            <a href="">Contato <br><br> Avisos</a>
+            <a href="sobre.html">Sobre nós <br><br>Atualizações</a>
+            <a href="ajuda.html">Ajuda</a>
+        </section>
+        <section class="contatos">
+            <a><img src="img/Linkedin.svg" alt="Linkedin"></a>
+            <a><img src="img/whatsapp.svg" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/seek.oficial/"><img src="img/instagram.svg" alt="Botão do Instagram de Seek"></a>
+            <p>seek@gmail.com</p>
+        </section>
+        </div>
+        <div class="EndFooter">
+            <p>Todos os direitos reservados. ©Seek 2024</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
     
-</footer>
-
-
-  <script src="script/lfy.js"></script>
-  <script src="script/cautela.js"></script>
 </body>
-
 </html>
