@@ -13,45 +13,48 @@
 
     <header class="inicio">
 
-        <div class="userhover"><img src="img/user2.svg" alt=""></div>
-
-        <div class="logosite">
-            <img src="img/logo.svg" alt="Logo Seek">
-        </div>
-
-        <nav class="navsite">
-            <a href="index.html">Explorar</a>
-            <a href="cursos.html">Cursos</a>
-            <a href="vagas.html">Vagas</a>
-            <div class="sobrenoss"><a href="sobrenos.html">Sobre Nós</a></div>
-        </nav>
-
-        <div class="pesquisasite">
-            <input type="text" placeholder="Pesquisar">
-            <a href=""><img src="img/search2.svg" alt=""></a>
-        </div>
-
-        <div class="usersite">
-            <a href=""><img src="img/mail-1.svg" alt=""></a>
-            <a href=""><img src="img/bell2.svg" alt=""></a>
-            <a href=""><img src="img/user2.svg" alt=""></a>
-        </div>
-
-        <nav class="hamburguer" id="menu">
-            <a class="botoesmenuhamburguer" href="index.html">Explorar</a>
-            <a class="botoesmenuhamburguer" href="cursos.html">Cursos</a>
-            <a class="botoesmenuhamburguer" href="vagas.html">Vagas</a>
-            <a class="botoesmenuhamburguer" href="sobre.html">Sobre Nós</a>
-        </nav>
 
         <button class="botaoMenu" id="botaoMenu">
-            <span class="linha1"></span>
-            <span class="linha2"></span>
-            <span class="linha3"></span>
+          <span class="linha1"></span>
+          <span class="linha2"></span>
+          <span class="linha3"></span>
         </button>
-
-
-    </header>
+    
+        <div class="logosite">
+          <img src="img/logo.svg" alt="Logo Seek">
+        </div>
+    
+        <div class="userhover"><img src="img/user2.svg" alt=""></div>
+    
+        <nav class="navsite">
+          <div class="navSelecionado">
+            <a href="index.html" id="ExpA">Explorar</a>
+          </div>
+          <a href="cursos.html" id="CurA">Cursos</a>
+          <a href="vagas.html" id="VagA">Vagas</a>
+          <div class="sobrenoss"><a href="sobre.html" id="SobA">Sobre Nós</a></div>
+        </nav>
+    
+        <div class="pesquisasite">
+          <input type="text" placeholder="Pesquisar">
+          <a href=""><img src="img/search2.svg" alt=""></a>
+        </div>
+    
+        <div class="usersite">
+          <a href=""><img src="img/bell2.svg" alt=""></a>
+          <a href="login.html"><img src="img/user2.svg" alt=""></a>
+        </div>
+    
+        <nav class="hamburguer" id="menu">
+          <a class="botoesmenuhamburguer" href="index.html" id="ExpMenu">Explorar</a>
+          <a class="botoesmenuhamburguer" href="cursos.html" id="CurMenu">Cursos</a>
+          <a class="botoesmenuhamburguer" href="vagas.html" id="VagMenu">Vagas</a>
+          <a class="botoesmenuhamburguer" href="sobre.html" id="SobMenu">Sobre Nós</a>
+        </nav>
+    
+    
+    
+      </header>
     <section class="migalhadepao">
 
         <a class="migalhadepaosobrenoshome" href="">Home></a> <a class="migalhadepaosobrenos" href="">Ajuda</a>
@@ -127,37 +130,42 @@
         </div>
     </main>
     <footer>
+
         <div class="linksfooter">
-            <div class="selectlinguagem">
-                <select name="" id="">
-                    <option value=""> Português</option>
-                    <option value="">Inglês</option>
-                    <option value="">Espanhol</option>
-                </select>
-            </div>
-
-            <div class="infofooter">
-                <a href="">Ajuda</a>
-                <a href="">Termos</a>
-            </div>
-            <div class="infofooter">
-                <a href="">Sobre nós</a>
-                <a href="">Atualizações</a>
-            </div>
-            <div class="infofooter">
-                <a href="">Avisos</a>
-                <a href="">Contato</a>
-            </div>
-
+    
+          <div class="infofooter">
+            <a href="index.html" id="AjuF">Ajuda</a>
+            <a href="index.html" id="TerF">Termos</a>
+            <a href="index.html" id="AtuF">Atualizações</a>
+          </div>
+    
+          <div class="infofooter">
+            <a href="index.html" id="SobF">Sobre Nós</a>
+            <a href="index.html" id="ConT">Contato</a>
+            
+          </div>
+          <div class="infofooter">
+            <a href="index.html" id="AviF">Avisos</a>
+            
+            <select name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+              <option value="pt" >Português</option>
+              <option value="eng" >english</option>
+              <option value="es" >Español</option>
+            </select>
+          </div>
+    
+          <div class="infofooter">
+            <img src="img/logoSeekk 3@2x.png" alt="Logo Seek">
+          </div>
+    
         </div>
-        <img class="imglogofooter" src="img/logoSeekk 3@2x.png" alt="">
-
+    
         <div class="direitosautorais">
-            <p>Todos os direitos reservados. ©Seek 2024.</p>
+          <p id="DirF">Todos os direitos reservados. ©Seek 2024.</p>
         </div>
-
-
-    </footer>
+    
+    
+      </footer>
 
 </body>
 

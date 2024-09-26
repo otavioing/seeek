@@ -1,0 +1,133 @@
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --vermelhom: #EF0000;
+
+
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroMesc2: #555555;
+
+    --ModoEscuroFontV: #5AB3FF;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.avisos {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem;
+    height: 45vh;
+}
+.avisos h1{
+
+    font-size: 2.5rem;
+    color: var(--preto);
+    margin-bottom: 2rem;
+
+}
+.textoavisos{
+
+    margin-top: 1rem;
+    font-size: 1.5rem;
+
+}
+.atualizacoes{
+    display: flex;
+    flex-direction: column;
+    padding: 7rem;
+    height: 80vh;
+
+}
+.atualizacoes h2{
+
+    font-size: 2.5rem;
+    color: var(--preto);
+    margin-bottom: 2rem;
+
+}
+.caixaatualizacaoesavisos{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cinzaBasec);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    height: 30rem;
+}
+.servidor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    border: 2px solid var(--preto);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    height: 3rem;
+}
+.portifolios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    border: 2px solid var(--preto);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    height: 3rem;
+
+}
+.aparencia{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    border: 2px solid var(--preto);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    height: 3rem;
+
+}
+.responsividade{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    border: 2px solid var(--preto);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    height: 3rem;
+
+}
