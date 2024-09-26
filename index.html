@@ -27,11 +27,11 @@
 
     <nav class="navsite">
       <div class="navSelecionado">
-        <a href="index.html">Explorar</a>
+        <a href="index.html" id="ExpA">Explorar</a>
       </div>
-      <a href="cursos.html">Cursos</a>
-      <a href="vagas.html">Vagas</a>
-      <div class="sobrenoss"><a href="sobrenos.html">Sobre Nós</a></div>
+      <a href="cursos.html" id="CurA">Cursos</a>
+      <a href="vagas.html" id="VagA">Vagas</a>
+      <div class="sobrenoss"><a href="sobrenos.html" id="SobA">Sobre Nós</a></div>
     </nav>
 
     <div class="pesquisasite">
@@ -45,10 +45,10 @@
     </div>
 
     <nav class="hamburguer" id="menu">
-      <a class="botoesmenuhamburguer" href="index.html">Explorar</a>
-      <a class="botoesmenuhamburguer" href="cursos.html">Cursos</a>
-      <a class="botoesmenuhamburguer" href="vagas.html">Vagas</a>
-      <a class="botoesmenuhamburguer" href="sobre.html">Sobre Nós</a>
+      <a class="botoesmenuhamburguer" href="index.html" id="ExpMenu">Explorar</a>
+      <a class="botoesmenuhamburguer" href="cursos.html" id="CurMenu">Cursos</a>
+      <a class="botoesmenuhamburguer" href="vagas.html" id="VagMenu">Vagas</a>
+      <a class="botoesmenuhamburguer" href="sobre.html" id="SobMenu">Sobre Nós</a>
     </nav>
 
 
@@ -58,16 +58,20 @@
   <section class="explorar">
 
     <div class="explorarDiv">
-      <a href="index.html">Explorar</a>
+      <a href="index.html" id="ExpA2">Explorar</a>
     </div>
 
     <div class="tendencia">
-      <a href="index.html">Tendências</a>
+      <a href="index.html" id="TenA">Tendências</a>
     </div>
 
     <div>
       <button onclick="ModoEscuro()">lua</button>
       <button onclick="ModoClaro()">sol</button>
+
+      <button onclick="MudarLingua('eng')">Inglês</button>
+      <button onclick="MudarLingua('es')">Espanhol</button>
+      <button onclick="MudarLingua('pt')">Português</button>
     </div>
 
 
@@ -75,13 +79,13 @@
 
   <div class="filtroExplorar">
     <div class="exp">
-      <h1>Explorar</h1>
+      <h1 id="ExpH1">Explorar</h1>
     </div>
 
     <input type="text" placeholder="Pesquisar">
 
 
-    <button class="buttonFiltro"><img src="img/filtrar2.svg" alt="">Personalizar a Galeria</button>
+    <button class="buttonFiltro" ><img src="img/filtrar2.svg" alt=""> <span id="PerB"> Personalizar a Galeria </span></button>
 
   </div>
 
@@ -198,23 +202,23 @@
     <div class="linksfooter">
 
       <div class="infofooter">
-        <a href="index.html">Ajuda</a>
-        <a href="index.html">Termos</a>
-        <a href="index.html">Atualizações</a>
+        <a href="index.html" id="AjuF">Ajuda</a>
+        <a href="index.html" id="TerF">Termos</a>
+        <a href="index.html" id="AtuF">Atualizações</a>
       </div>
 
       <div class="infofooter">
-        <a href="index.html">Sobre Nós</a>
-        <a href="index.html">Contato</a>
+        <a href="index.html" id="SobF">Sobre Nós</a>
+        <a href="index.html" id="ConT">Contato</a>
         
       </div>
       <div class="infofooter">
-        <a href="index.html">Avisos</a>
+        <a href="index.html" id="AviF">Avisos</a>
         
         <select name="" id="">
-          <option value=""> Português</option>
-          <option value="">Inglês</option>
-          <option value="">Espanhol</option>
+          <option value="" >Português</option>
+          <option value="" >Inglês</option>
+          <option value="" >Espanhol</option>
         </select>
       </div>
 
@@ -225,7 +229,7 @@
     </div>
 
     <div class="direitosautorais">
-      <p>Todos os direitos reservados. ©Seek 2024.</p>
+      <p id="DirF">Todos os direitos reservados. ©Seek 2024.</p>
     </div>
 
 
