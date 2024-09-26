@@ -63,73 +63,97 @@
 
     <main>
 
-        <div class="filtroflutuante">
-            <img class="imgfiltro" src="img/Filtrar2roxo.svg" alt="filtrar">
-            <p class="filtrar">Filtrar</p>
-            <div class="camposdcriacao">
-                <h2 class="linhacampos">Campos de criação</h2>
-                <div class="campos">
-                    <p class="categorias">Design </p> 
-                    <p class="categorias">Ilustração</p>      
-                    <p class="categorias">Fotográfia</p>    
-                </div>
-            </div>
-            <div class="precoo">
-              <h2 class="linhaPreco">Preço</h2>
-              <div class="campo">
-
-                <p>Fixo</p>
-                <p>Mensal</p>
-                <p>Qualquer preço</p>
-                <p class="temmess" >Faixa de preço</p> 
-            <img onclick="setaon()" id="setaon" class="setaon" src="img/setaparabaixo.svg" alt=""> 
-            <img onclick="setaoff()" id="setaoff" class="setaoff" src="img/setaparacima.svg" alt="">
-            <div id="preco" class="preco">
-                <input type="number" placeholder="min">
-                <p>-</p>
-                <input type="number" placeholder="max">
-            </div>
-
-              </div>
-
-
-            </div>
-            <!-- <div class="Habilidades">
-                <h2 class="linhahabi">Habilidades</h2>
-                <div class="campo">
-                    <p>Design</p> <br>
-                    <p>Design</p>
-                </div>
-            </div> -->
-            <div class="duracao"><h2>Duração</h2></div>
-            <div class="filtrop">
-            <p class="indefi">Indefinido</p>
-            <p class="temmes" >Tempo de mês</p> 
-            <img onclick="setaon()" id="setaon" class="setaon" src="img/setaparabaixo.svg" alt=""> 
-            <img onclick="setaoff()" id="setaoff" class="setaoff" src="img/setaparacima.svg" alt="">
-            <div id="preco" class="preco">
-                <input type="number" placeholder="min">
-                <p>-</p>
-                <input type="number" placeholder="max">
-            </div>
-            <div class="local">
-                <h2 class="loc">Local</h2>
-                <p class="presen">Presencial</p>
-                <p class="homee">Home office</p>
-            </div>
-
-            <div class="aplicar">
-                <a>Aplicar</a>
-            </div>
-
-            <div class="limparfiltro">
-
-                <a>Limpar Filtro</a>
-
-            </div>
+      <div class="filtroflutuante">
+        <div class="titulofiltroflutuante">
+            <img src="img/Filtrar2roxo.svg" alt="">
+            <h2>Filtar</h2>
         </div>
-                           
+        <div class="tiposdecursoscursos">
+            <h2 class="titulosfiltroflutuante">Tipos de curso</h2>
+            <label for="">
+                Design <input type="radio" name="" id="radio1">
+            </label>
+            <label for="">
+                Ilustração <input type="radio" name="" id="radio2">
+            </label>
+            <label for="">
+                Fotográfia <input type="radio" name="" id="radio3">
+            </label>
         </div>
+
+        <div class="precocursos">
+            <h2 class="titulosfiltroflutuante">Preço</h2>
+
+            <label for="">
+                Fixo <input type="radio" name="" id="radio4">
+            </label>
+            <label for="">
+                Mensal <input type="radio" name="" id="radio5">
+            </label>
+            <div class="setaoneoffcursos">
+                <p>Faixa de preco</p>
+                <img id="setapreco" onclick="setapreco()" src="img/setaparabaixo.svg" alt="">
+            </div>
+            <div id="faixadeprecocursos" class="faixadeprecocursos">
+
+                <input class="precominmax" type="number" name="" id="" placeholder="min">
+                <p>-</p>
+                <input class="precominmax" type="number" name="" id="" placeholder="max">
+
+            </div>
+
+        </div>
+
+        <div class="duracaocursos">
+            <h2 class="titulosfiltroflutuante">Duração</h2>
+
+            <label for="">
+                Indefinida <input type="radio" name="" id="radio6">
+            </label>
+            <div class="setaoneoffcursos">
+                <p>Tempo em horas</p>
+                <img id="seta" onclick="seta()" src="img/setaparabaixo.svg" alt="">
+
+            </div>
+            <div id="divinputpreco" class="divinputpreco">
+                <input class="precominmax" type="number" name="" id="" placeholder="min">
+                <p>-</p>
+                <input class="precominmax" type="number" name="" id="" placeholder="max">
+            </div>
+
+        </div>
+
+        <div class="localcursos">
+            <h2 class="titulosfiltroflutuante">Local</h2>
+
+            <label for="">
+                Presencial <input type="radio" name="" id="radio7">
+            </label>
+            <label for="">
+                Home office <input type="radio" name="" id="radio8">
+            </label>
+
+        </div>
+
+
+        <div class="aplicarfiltrocursos">
+
+            <button>Aplicar</button>
+
+        </div>
+
+        <div class="limparfiltrocursos">
+
+            <button type="button" onclick="desmarcarRadio()">Limpar filtro</button>
+
+        </div>
+
+
+
+
+
+
+    </div>
 
         <div class="nomepag">
 
