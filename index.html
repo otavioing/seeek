@@ -68,10 +68,6 @@
     <div>
       <button onclick="ModoEscuro()">lua</button>
       <button onclick="ModoClaro()">sol</button>
-
-      <button onclick="MudarLingua('eng')">Inglês</button>
-      <button onclick="MudarLingua('es')">Espanhol</button>
-      <button onclick="MudarLingua('pt')">Português</button>
     </div>
 
 
@@ -215,10 +211,10 @@
       <div class="infofooter">
         <a href="index.html" id="AviF">Avisos</a>
         
-        <select name="" id="">
-          <option value="" >Português</option>
-          <option value="" >Inglês</option>
-          <option value="" >Espanhol</option>
+        <select name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+          <option value="pt" >Português</option>
+          <option value="eng" >english</option>
+          <option value="es" >Español</option>
         </select>
       </div>
 
