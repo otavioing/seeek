@@ -29,7 +29,9 @@
 
     --ModoEscuroBase: #1F1F1F;
     --ModoEscuroMesc: #656565;
+    --ModoEscuroMesc2: #555555;
 
+    --ModoEscuroFontV: #5AB3FF;
 
 
 }
@@ -62,9 +64,9 @@ a {
     background-color: var(--ModoEscuroBase);
 }
 
-.modoEscuro .explorar,
+.modoEscuro .explorar,.modoEscuro .filtroExplorar .buttonFiltro,
 .modoEscuro .filtroExplorar .filtroButton {
-    background-color: var(--ModoEscuroMesc);
+    background-color: var(--ModoEscuroMesc2);
     color: var(--brancoBase);
 }
 
@@ -72,6 +74,27 @@ a {
     color: var(--brancoBase);
 }
 
+.modoEscuro .explorar .explorarDiv a {
+    color: var(--ModoEscuroFontV);
+
+}
+
+.modoEscuro .explorar .explorarDiv{
+    border-bottom: 1px solid var(--ModoEscuroFontV);
+}
+
+.modoEscuro .navsite .navSelecionado {
+    border-bottom: 3px solid var(--ModoEscuroFontV);
+}
+
+.modoEscuro .filtroExplorar input{
+    background-color: var(--ModoEscuroMesc2);
+    color: var(--brancoBase);
+}
+
+.modoEscuro .filtroExplorar input::placeholder{
+    color: var(--brancoBase);
+}
 
 
 /*-------------------------------- Header inicio --------------------------------*/
@@ -711,6 +734,7 @@ footer {
         justify-content: center;
         text-align: center;
         font-size: 1.5rem;
+        outline: none;
     }
 
 }
