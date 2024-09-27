@@ -3,7 +3,7 @@
 /*------------------------------------------------------------------------------*/
 
 :root {
-    --cinzaBase: rgb(220, 220, 220);
+    --cinzaBase: rgb(237, 237, 237);
 
     --cinzaBasee: rgb(158, 158, 158);
 
@@ -237,6 +237,10 @@ header .botaoMenu span {
     border-left: 1px solid var(--cinzaBasee);
 }
 
+.explorar .tendencia a {
+    opacity: 60%;
+}
+
 .migalhaIndex {
     padding: 2rem 0 0 2rem;
     margin-top: 1rem;
@@ -258,7 +262,7 @@ header .botaoMenu span {
 
 .filtroExplorar .buttonFiltro {
     width: 20%;
-    background-color: var(--cinzaBasec);
+    background-color: var(--cinzaBase);
     border: none;
     border-radius: 0.8rem;
     outline: none;
@@ -268,6 +272,10 @@ header .botaoMenu span {
     font-size: 100%;
     gap: 0.8rem;
     padding: 0.4rem 0.3rem;
+}
+
+#PerB{
+    opacity: 90%;
 }
 
 .filtroExplorar .buttonFiltro img {
@@ -707,10 +715,6 @@ footer {
         height: 80%;
     }
 
-    .explorar {
-        display: none;
-    }
-
     .filtroExplorar .exp {
         display: none;
     }
@@ -725,7 +729,7 @@ footer {
     .filtroExplorar input,
     .filtroExplorar .buttonFiltro {
         width: 100%;
-        background-color: var(--cinzaBasec);
+        background-color: var(--cinzaBase);
         border: 1px solid var(--cinzaBasee);
         height: 3rem;
         border-radius: 3rem;

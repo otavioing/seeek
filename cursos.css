@@ -1,0 +1,440 @@
+/* filtro flutuante */
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --vermelhom: #EF0000;
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroFilt: #131313;
+
+    --ModoEscuroFontC: #E197FF;
+
+  
+}
+
+
+/*-------------------------------- Modo Escuro --------------------------------*/
+
+.modoEscuro {
+    color: var(--brancoBase);
+    background-color:var(--ModoEscuroBase);
+}
+
+.modoEscuro .filtroflutuante{
+   
+    background-color: var(--ModoEscuroFilt);
+    border: 1px solid rgb(27, 27, 27)
+    
+}
+
+.modoEscuro a.migalhadepaocursos ,.modoEscuro .campo p , .modoEscuro .campos p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee ,.modoEscuro .limparfiltro a{
+    color: white; 
+}
+
+.modoEscuro .filtroflutuante h2 , .modoEscuro p.filtrar, 
+.modoEscuro .aplicar a , .modoEscuro h1 {
+    color: var(--ModoEscuroFontC);
+}
+
+.modoEscuro .linhacampos, .modoEscuro .linhaPreco , .modoEscuro .linhahabi , .modoEscuro .duracao , .modoEscuro .loc {
+    border-bottom: var(--ModoEscuroFontC) 1px solid;
+}
+
+.modoEscuro .caminhonavegaçãovagas a {
+    color: rgb(255, 255, 255);
+}
+
+.migalhadepaocursos a{
+    color: var(--roxobase);
+}
+.caminhonavegaçãovagas a{
+    color: black;
+}
+.caminhonavegaçãovagas{
+    margin: 2rem;
+}
+                                          /* Main */
+.prCursos{
+    height: 60rem;
+    display: flex;
+}
+main{
+    height: 80rem;
+}
+.filtroflutuante{
+    background-color: white;
+    height: 49rem;
+    width: 20rem;
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--cinzaBasee);
+}
+
+.filtroflutuante h2{
+    color: var(--roxobase);
+}
+
+.filtroflutuante p{
+    color: var(--preto);    
+}
+.imgfiltro{
+   height: 4rem;
+}
+.filtrar{
+    font-size: 3rem;
+    margin: -4rem 0 0 5rem;
+}
+p.filtrar {
+    color: var(--roxobase);
+}
+.camposdcriacao{
+    display: flex-column;
+    margin: 2rem 0 0 0.8rem;
+    height: 10rem;
+    overflow: hidden;
+    
+}
+
+.linhaPreco{
+    border-bottom: 1.5px solid var(--roxobase);
+    width: 4.5rem
+}
+
+h2.linhacampos{
+height: 2rem;
+border-bottom: 1px solid var(--roxobase);
+width: 13.8rem;
+}
+.campos{
+    height: 5rem;
+    display: flex-column;
+}
+.categorias {
+    display: flex;
+    margin-top: 1rem;
+}
+.Habilidades{
+    position: relative;
+    top: 3.5rem;
+    left: 0.7rem;
+    margin-top: -3rem;
+}
+.linhahabi{
+    border-bottom: 1.5px solid var(--roxobase);
+    width: 8.3rem;
+}
+.margimtop{
+    margin-top: 1rem;
+}
+.campo{
+    position: relative;
+    top: 0.4rem;
+    margin-top: 1rem;
+}
+.duracao{
+    position: relative;
+    top: 3.5rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+    border-bottom: 1.5px solid var(--roxobase);
+    width: 6rem;
+}
+.indefi{
+    position: relative;
+    top: 3.8rem;
+    left: 0.7rem;
+    margin-top: 1rem;
+}
+.temmes{
+    position: relative;
+    top: 3.8rem;
+    left: 0.7rem;
+    margin-top: 1rem;
+}
+.preco{
+    display: flex; /* deixar none para não aparecer */
+    gap: 1rem;
+    margin: 0.3rem;
+    position: relative;
+    top: 4.6rem;
+}
+.preco input{
+    width: 5rem;
+    height: 1.5rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+}
+.loc{
+    position: relative;
+    top: 4.6rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+    border-bottom: 1.5px solid var(--roxobase);
+    width: 4rem;
+}
+.presen{
+    position: relative;
+    top: 4.9rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+}
+.homee{
+    position: relative;
+    top: 4.9rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+}
+.aplicar{
+    position: relative;
+    top: 6.2rem;
+    left: 5.6rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.aplicar a{
+    cursor: pointer;
+    color: var(--roxobase);
+}
+.limparfiltro{
+    position: relative;
+    top: 5.6rem;
+    left: 4.6rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.limparfiltro a{
+    cursor: pointer;
+    color: var(--preto);
+}
+.setaon{
+    display: flex;
+    height: 0.5rem;
+    position: relative;
+    top: 3.2rem;
+    left: 7.5rem;
+    cursor: pointer;
+}
+.setaoff{
+    display: none;
+    height: 0.5rem;
+    position: relative;
+    top: 3.2rem;
+    left: 7.5rem;
+    cursor: pointer;
+}
+.container{
+
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    width: 65%;
+    height: 70rem;
+    position: relative;
+    bottom: 51rem;
+    left: 23rem;
+    gap: 2rem 1rem;
+}
+.container .caixas{
+    border-radius: 1rem;
+   background-color: var(--cinzaBase);
+    padding: 20px;
+    height: 20rem;
+    width: 34rem;
+}
+.container .caixas img{
+    width: 90%;
+    height: 2rem;
+}
+.container .caixas .imgcont{
+    display: flex;
+    justify-content: center;
+    height: 13rem;
+}
+.container .caixas .imgcont img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.caixas .nomeddocurso{
+    font-size: 1.5rem;
+    color: var(--preto);
+    margin-top: 0.5rem;
+}
+.nomecureauto{
+    background-color: yellowgreen;
+    width: 25vh;
+}
+.caixas .nomeautor{
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+/* .caixas .valordocurso{
+    height: 2.5rem;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    bottom: 4.5rem;
+    left: 23.9rem;
+    font-size: 1.1rem;
+} */
+.caixas .duracãocurso{
+    display: inline;
+    color: var(--azulBase);
+    cursor: pointer;
+    position: relative;
+    bottom: 6rem;
+    left: 25.9rem;
+    background-color: var(--azulBase);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.nomepag{
+    position: relative;
+    bottom: 54rem;
+    left: 25rem;
+    color: var(--roxobase);
+    font-size: 1.5rem;
+   
+
+}
+.botaofavorito{
+    display: inline;
+    position: absolute;
+    top: 25.5%;
+    left: 68rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    width: 2rem;   
+}
+.botaofavorito2{
+    display: none;
+    position: absolute;
+    top: 18.5rem;
+    left: 68rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    width: 2rem;   
+}
+.botaofavoritob{
+
+    display: inline;
+    position: absolute;
+    top: 18.5rem;
+    left: 28rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    width: 2rem;   
+
+}
+
+.valorebotaofav{
+    background-color: turquoise;
+    width: 20vh;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 4.5rem;
+    left: 18.5rem;
+
+}
+.caixas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+
+    
+}
+
+.infocurso{
+
+    
+    height: 8vh;
+    width: 25vh;
+}
+.infocurso1{
+
+    
+    display: flex;
+    justify-content: end;
+    height: 8vh;
+
+}
+.infocurso1 p{
+height: 1rem;
+position: absolute;
+margin-right: 1rem;
+margin-top: 0.5rem;
+}
+.infocurso1 .divcoracao .coracao {
+    cursor: pointer;    
+    border: none;
+    background-color: transparent;
+}
+.divcoracao{
+    display: inline; 
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    margin-top: 2.5rem;
+    margin-right: 2rem;
+
+  }
+.temmess{
+    position: relative;
+    top: 3.8rem;
+    left: 0.7rem;
+    margin-top: -2rem;
+}
+
+                                        /* teste do botão voltar ao topo */
+.btn-scroll-top {
+position: fixed;
+right: 2rem;
+bottom: 2rem;
+display: grid;
+place-items: center;
+outline: none;
+border-radius: 100%;                                       
+opacity: 0;                                         
+cursor: pointer;                                    
+pointer-events: none;
+transition: opacity 0.5s ease;
+z-index: 10;
+}                                         
+.show-btn-scroll-top {
+opacity: 1;
+pointer-events: all;
+}                                        
+
+

@@ -1,0 +1,450 @@
+main{
+    overflow: hidden;
+}
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --vermelhom: #EF0000;
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroFilt: #131313;
+
+    --ModoEscuroFontV: #5AB3FF;
+
+}
+
+/*-------------------------------- Modo Escuro --------------------------------*/
+
+.modoEscuro {
+    color: var(--brancoBase);
+    background-color:var(--ModoEscuroBase);
+}
+
+.modoEscuro .filtroflutuante{
+   
+    background-color: var(--ModoEscuroFilt);
+    border: 1px solid rgb(27, 27, 27)
+    
+}
+
+.modoEscuro .campos .categorias, .modoEscuro .margimtop, .modoEscuro .campo p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee , .modoEscuro .limparfiltro a , .modoEscuro .caminhonavegaçãovagas a{
+    color: var(--brancoBase);
+}
+
+.caminhonavegaçãovagas{
+    display: flex;
+}
+
+.modoEscuro .filtrar1200px{
+    background-color: var(--ModoEscuroMesc);
+}
+
+.modoEscuro p.filtrar , .modoEscuro h1 , .modoEscuro .filtroflutuante h2, .modoEscuro .aplicar a , .modoEscuro .filtrar1200px{
+    color: var(--ModoEscuroFontV)
+}
+
+.modoEscuro .linhahabi , .modoEscuro .duracao , .modoEscuro .loc{
+    border-bottom: var(--ModoEscuroFontV) 1px solid;
+}
+
+/*-------------------------------- Modo Escuro fim--------------------------------*/
+
+
+
+
+.caminhonavegaçãovagas a{
+    color: black;
+}
+.caminhonavegaçãovagas{
+    margin: 2rem;
+}
+                                          /* Main */
+.prCursos{
+    height: 60rem;
+    display: flex;
+}
+main{
+    height: 80rem;
+}
+.filtroflutuante{
+    background-color: white;
+    height: 49rem;
+    width: 20rem;
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--cinzaBasee);
+}
+
+.filtroflutuante h2{
+    color: var(--azulBase);
+}
+
+
+.filtroflutuante p{
+    color: var(--preto);    
+}
+.imgfiltro{
+   height: 4rem;
+}
+.filtrar{
+    font-size: 3rem;
+    margin: -4rem 0 0 5rem;
+}
+p.filtrar {
+    color: var(--azulBase);
+}
+.camposdcriacao{
+    display: flex;
+    margin: 2rem 0 0 0.6rem;
+}
+
+.categorias {
+    position: relative;
+    top: 3.2rem;
+    right: 13.5rem;   
+}
+.Habilidades{
+    position: relative;
+    top: 3.5rem;
+    left: 0.7rem;
+    margin-top: 1rem;
+}
+.linhahabi{
+    border-bottom: 1.5px solid var(--azulBase);
+    width: 8.3rem;
+}
+.margimtop{
+    margin-top: 1rem;
+}
+.campo{
+    position: relative;
+    top: 0.4rem;
+    margin-top: 1rem;
+}
+.duracao{
+    position: relative;
+    top: 3.5rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+    border-bottom: 1.5px solid var(--azulBase);
+    width: 6rem;
+}
+.indefi{
+    position: relative;
+    top: 3.8rem;
+    left: 0.7rem;
+    margin-top: 1rem;
+}
+.temmes{
+    position: relative;
+    top: 3.8rem;
+    left: 0.7rem;
+    margin-top: 1rem;
+}
+.preco{
+    display: flex; /* deixar none para não aparecer */
+    gap: 1rem;
+    margin: 0.3rem;
+    position: relative;
+    top: 4.6rem;
+}
+.preco input{
+    width: 5rem;
+    height: 1.5rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+}
+.loc{
+    position: relative;
+    top: 4.6rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+    border-bottom: 1.5px solid var(--azulBase);
+    width: 4rem;
+}
+.presen{
+    position: relative;
+    top: 4.9rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+}
+.homee{
+    position: relative;
+    top: 4.9rem;
+    left: 0.6rem;
+    margin-top: 1rem;
+}
+.aplicar{
+    position: relative;
+    top: 6.2rem;
+    left: 5.6rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.aplicar a{
+    cursor: pointer;
+    color: var(--azulBase);
+}
+
+.limparfiltro{
+    position: relative;
+    top: 5.6rem;
+    left: 4.6rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.limparfiltro a{
+    cursor: pointer;
+    color: var(--preto);
+}
+.setaon{
+    display: flex;
+    height: 0.5rem;
+    position: relative;
+    top: 3.2rem;
+    left: 7.5rem;
+    cursor: pointer;
+}
+.setaoff{
+    display: none;
+    height: 0.5rem;
+    position: relative;
+    top: 3.2rem;
+    left: 7.5rem;
+    cursor: pointer;
+}
+.container{
+
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    width: 65%;
+    height: 70rem;
+    position: relative;
+    bottom: 51rem;
+    left: 23rem;
+    gap: 2rem 1rem;
+}
+.container .caixas{
+    border-radius: 1rem;
+   background-color: var(--cinzaBase);
+    padding: 20px;
+    height: 20rem;
+    width: 34rem;
+}
+.container .caixas img{
+    width: 90%;
+}
+.container .caixas .imgcont{
+    display: flex;
+    justify-content: center;
+    height: 13rem;
+}
+.container .caixas .imgcont img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.caixas .nomedesigner{
+    font-size: 1.5rem;
+    color: var(--preto);
+    margin-top: 0.5rem;
+}
+.caixas .horario{
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+.caixas .enviarprop{
+    height: 2.5rem;
+    background-color: var(--azulBase);
+    color: var(--brancoBase);
+    border: none;
+    border-radius: 15px;
+    padding: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    bottom: 2.5rem;
+    left: 24.7rem;
+}
+.caixas .maisinfo{
+    color: var(--azulBase);
+    cursor: pointer;
+    position: relative;
+    top: 0.1rem;
+    left: 5.3rem;
+}
+.nomepag{
+    position: relative;
+    bottom: 54rem;
+    left: 25rem;
+    color: var(--azulBase);
+    font-size: 1.5rem;
+   
+
+}
+h1{   
+     margin-top: 4rem;
+}
+.filtrar1200px{display: none;}
+
+.btn-scroll-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    display: grid;
+    place-items: center;
+    outline: none;
+    border-radius: 100%;                                       
+    opacity: 0;                                         
+    cursor: pointer;                                    
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+    }                                         
+.show-btn-scroll-top {
+    opacity: 1;
+    pointer-events: all;
+    }                            
+
+@media screen and (max-width: 1630px){
+
+    .container .caixas{
+        width: 30rem;
+    }
+    .caixas .enviarprop{
+        left: 20.5rem;
+    }
+    .caixas .maisinfo{
+        left: 2.6rem;
+    }
+}
+@media screen and (max-width: 1450px){
+
+    .container .caixas{
+        width: 28rem;
+    }
+    .caixas .enviarprop{
+        left: 18.0rem;
+    }
+    .caixas .maisinfo{
+        left: 2.0rem;
+    }
+}
+@media screen and (max-width: 1380px){
+
+    .container{
+
+        grid-template-columns: 1fr 1fr;
+        left: 23rem;
+    }
+
+    .container .caixas{
+        width: 25rem;
+    }
+    .caixas .enviarprop{
+        left: 15.5rem;
+    }
+    .caixas .maisinfo{
+        left: 1.0rem;
+    }
+
+}
+@media screen and (max-width: 1200px){
+
+    .filtroflutuante{
+        display: none;
+    }
+
+    .container .caixas{
+        width: 32rem;
+    }
+    .container{
+
+        grid-template-columns: 1fr 1fr;
+        bottom: -3rem;
+        left: 0rem;
+        width: 100%;
+    }
+    .filtrar1200px{
+        background-color: var(--cinzaBase);
+        height: 3rem;
+        width: 64rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        font-size: 2.3rem;
+        color: var(--azulBase);
+        gap: 0.5rem;
+        margin: 0 3rem 0 5rem;
+    }
+    .filtrar1200px img{
+        width: 3rem;
+        
+    }
+
+}
+@media screen and (max-width: 1100px){
+
+    .container .caixas{
+            
+    width: 30rem;
+
+    }
+
+    .caixas .enviarprop{
+        left: 20.5rem;
+    }
+    .caixas .maisinfo{
+        left: 3.0rem;
+    }
+    .filtrar1200px{
+        width: 60rem;
+        margin: 0 2rem 0 2.5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 950px){
+
+    .container{
+
+        grid-template-columns: 1fr;
+        bottom: -3rem;
+        left: 15rem;
+        width: 100%;
+    }
+
+    .filtrar1200px{
+        width: 50rem;
+        margin: 0 3rem 0 4rem;
+    }
+
+}
+
+                                        
