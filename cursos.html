@@ -9,50 +9,47 @@
 
 </head>
 <body id="todo">
-  <header class="inicio">
+    <header class="inicio">
+
+        <div class="userhover"><img src="img/user2.svg" alt=""></div>
+
+        <div class="logosite">
+        <img src="img/logo.svg" alt="Logo Seek">
+        </div>
+
+        <nav class="navsite">
+            <a href="index.html">Explorar</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="vagas.html">Vagas</a>
+            <div class="sobrenoss"><a href="sobrenos.html">Sobre Nós</a></div>
+        </nav>
+
+        <div class="pesquisasite">
+            <input type="text" placeholder="Pesquisar">
+            <a href=""><img src="img/search2.svg" alt=""></a>
+        </div>   
+
+        <div class="usersite">
+            <a href=""><img src="img/mail-1.svg" alt=""></a>
+            <a href=""><img src="img/bell2.svg" alt=""></a>
+            <a href=""><img src="img/user2.svg" alt=""></a>
+        </div>
+
+        <nav class="hamburguer" id="menu">       
+            <a class="botoesmenuhamburguer" href="index.html">Explorar</a>
+            <a class="botoesmenuhamburguer" href="cursos.html">Cursos</a>
+            <a class="botoesmenuhamburguer" href="vagas.html">Vagas</a>
+            <a class="botoesmenuhamburguer" href="sobre.html">Sobre Nós</a>  
+        </nav>
+
+        <button class="botaoMenu" id="botaoMenu">
+            <span class="linha1"></span>
+            <span class="linha2"></span>
+            <span class="linha3"></span>
+        </button>
 
 
-    <button class="botaoMenu" id="botaoMenu">
-      <span class="linha1"></span>
-      <span class="linha2"></span>
-      <span class="linha3"></span>
-    </button>
-
-    <div class="logosite">
-      <img src="img/logo.svg" alt="Logo Seek">
-    </div>
-
-    <div class="userhover"><img src="img/user2.svg" alt=""></div>
-
-    <nav class="navsite">
-      <div class="navSelecionado">
-        <a href="index.html" id="ExpA">Explorar</a>
-      </div>
-      <a href="cursos.html" id="CurA">Cursos</a>
-      <a href="vagas.html" id="VagA">Vagas</a>
-      <div class="sobrenoss"><a href="sobre.html" id="SobA">Sobre Nós</a></div>
-    </nav>
-
-    <div class="pesquisasite">
-      <input type="text" placeholder="Pesquisar">
-      <a href=""><img src="img/search2.svg" alt=""></a>
-    </div>
-
-    <div class="usersite">
-      <a href=""><img src="img/bell2.svg" alt=""></a>
-      <a href="login.html"><img src="img/user2.svg" alt=""></a>
-    </div>
-
-    <nav class="hamburguer" id="menu">
-      <a class="botoesmenuhamburguer" href="index.html" id="ExpMenu">Explorar</a>
-      <a class="botoesmenuhamburguer" href="cursos.html" id="CurMenu">Cursos</a>
-      <a class="botoesmenuhamburguer" href="vagas.html" id="VagMenu">Vagas</a>
-      <a class="botoesmenuhamburguer" href="sobre.html" id="SobMenu">Sobre Nós</a>
-    </nav>
-
-
-
-  </header>
+    </header>
 
     <div class="caminhonavegaçãovagas">
 <a href="index.html">Explorar ></a> <a class="migalhadepaocursos" href="">Cursos</a>
@@ -63,97 +60,73 @@
 
     <main>
 
-      <div class="filtroflutuante">
-        <div class="titulofiltroflutuante">
-            <img src="img/Filtrar2roxo.svg" alt="">
-            <h2>Filtar</h2>
-        </div>
-        <div class="tiposdecursoscursos">
-            <h2 class="titulosfiltroflutuante">Tipos de curso</h2>
-            <label for="">
-                Design <input type="radio" name="" id="radio1">
-            </label>
-            <label for="">
-                Ilustração <input type="radio" name="" id="radio2">
-            </label>
-            <label for="">
-                Fotográfia <input type="radio" name="" id="radio3">
-            </label>
-        </div>
-
-        <div class="precocursos">
-            <h2 class="titulosfiltroflutuante">Preço</h2>
-
-            <label for="">
-                Fixo <input type="radio" name="" id="radio4">
-            </label>
-            <label for="">
-                Mensal <input type="radio" name="" id="radio5">
-            </label>
-            <div class="setaoneoffcursos">
-                <p>Faixa de preco</p>
-                <img id="setapreco" onclick="setapreco()" src="img/setaparabaixo.svg" alt="">
+        <div class="filtroflutuante">
+            <img class="imgfiltro" src="img/Filtrar2roxo.svg" alt="filtrar">
+            <p class="filtrar">Filtrar</p>
+            <div class="camposdcriacao">
+                <h2 class="linhacampos">Campos de criação</h2>
+                <div class="campos">
+                    <p class="categorias">Design </p> 
+                    <p class="categorias">Ilustração</p>      
+                    <p class="categorias">Fotográfia</p>    
+                </div>
             </div>
-            <div id="faixadeprecocursos" class="faixadeprecocursos">
+            <div class="precoo">
+              <h2 class="linhaPreco">Preço</h2>
+              <div class="campo">
 
-                <input class="precominmax" type="number" name="" id="" placeholder="min">
+                <p>Fixo</p>
+                <p>Mensal</p>
+                <p>Qualquer preço</p>
+                <p class="temmess" >Faixa de preço</p> 
+            <img onclick="setaon()" id="setaon" class="setaon" src="img/setaparabaixo.svg" alt=""> 
+            <img onclick="setaoff()" id="setaoff" class="setaoff" src="img/setaparacima.svg" alt="">
+            <div id="preco" class="preco">
+                <input type="number" placeholder="min">
                 <p>-</p>
-                <input class="precominmax" type="number" name="" id="" placeholder="max">
-
+                <input type="number" placeholder="max">
             </div>
 
-        </div>
+              </div>
 
-        <div class="duracaocursos">
-            <h2 class="titulosfiltroflutuante">Duração</h2>
-
-            <label for="">
-                Indefinida <input type="radio" name="" id="radio6">
-            </label>
-            <div class="setaoneoffcursos">
-                <p>Tempo em horas</p>
-                <img id="seta" onclick="seta()" src="img/setaparabaixo.svg" alt="">
 
             </div>
-            <div id="divinputpreco" class="divinputpreco">
-                <input class="precominmax" type="number" name="" id="" placeholder="min">
+            <!-- <div class="Habilidades">
+                <h2 class="linhahabi">Habilidades</h2>
+                <div class="campo">
+                    <p>Design</p> <br>
+                    <p>Design</p>
+                </div>
+            </div> -->
+            <div class="duracao"><h2>Duração</h2></div>
+            <div class="filtrop">
+            <p class="indefi">Indefinido</p>
+            <p class="temmes" >Tempo de mês</p> 
+            <img onclick="setaon()" id="setaon" class="setaon" src="img/setaparabaixo.svg" alt=""> 
+            <img onclick="setaoff()" id="setaoff" class="setaoff" src="img/setaparacima.svg" alt="">
+            <div id="preco" class="preco">
+                <input type="number" placeholder="min">
                 <p>-</p>
-                <input class="precominmax" type="number" name="" id="" placeholder="max">
+                <input type="number" placeholder="max">
+            </div>
+            <div class="local">
+                <h2 class="loc">Local</h2>
+                <p class="presen">Presencial</p>
+                <p class="homee">Home office</p>
             </div>
 
+            <div class="aplicar">
+                <a>Aplicar</a>
+            </div>
+
+            <div class="limparfiltro">
+
+                <a>Limpar Filtro</a>
+
+            </div>
         </div>
-
-        <div class="localcursos">
-            <h2 class="titulosfiltroflutuante">Local</h2>
-
-            <label for="">
-                Presencial <input type="radio" name="" id="radio7">
-            </label>
-            <label for="">
-                Home office <input type="radio" name="" id="radio8">
-            </label>
-
+                           
         </div>
-
-
-        <div class="aplicarfiltrocursos">
-
-            <button>Aplicar</button>
-
-        </div>
-
-        <div class="limparfiltrocursos">
-
-            <button type="button" onclick="desmarcarRadio()">Limpar filtro</button>
-
-        </div>
-
-
-
-
-
-
-    </div>
 
         <div class="nomepag">
 
@@ -259,42 +232,35 @@
         </button>
 
         <footer>
-
           <div class="linksfooter">
-      
-            <div class="infofooter">
-              <a href="index.html" id="AjuF">Ajuda</a>
-              <a href="index.html" id="TerF">Termos</a>
-              <a href="index.html" id="AtuF">Atualizações</a>
-            </div>
-      
-            <div class="infofooter">
-              <a href="index.html" id="SobF">Sobre Nós</a>
-              <a href="index.html" id="ConT">Contato</a>
+              <div class="selectlinguagem">
+                  <select name="" id="">
+                      <option value="">  Português</option>
+                      <option value="">Inglês</option>
+                      <option value="">Espanhol</option>
+                  </select>
+              </div>
               
-            </div>
-            <div class="infofooter">
-              <a href="index.html" id="AviF">Avisos</a>
+              <div class="infofooter">
+                  <a href="">Ajuda</a>
+                  <a href="">Termos</a>
+              </div>
+              <div class="infofooter">
+                  <a href="">Sobre nós</a>
+                  <a href="">Atualizações</a>
+              </div>
+              <div class="infofooter">
+                  <a href="">Avisos</a>
+                  <a href="">Contato</a>
+              </div>
               
-              <select name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
-                <option value="pt" >Português</option>
-                <option value="eng" >english</option>
-                <option value="es" >Español</option>
-              </select>
-            </div>
-      
-            <div class="infofooter">
-              <img src="img/logoSeekk 3@2x.png" alt="Logo Seek">
-            </div>
-      
           </div>
-      
-          <div class="direitosautorais">
-            <p id="DirF">Todos os direitos reservados. ©Seek 2024.</p>
-          </div>
-      
-      
-        </footer>
+          <img class="imglogofooter" src="img/logoSeekk 3@2x.png" alt="">
+          
+          <div class="direitosautorais"><p>Todos os direitos reservados. ©Seek 2024.</p></div>
+              
+          
+      </footer>
         
         <script src="script/cake.js"></script>
         <script src="script/cake2.js"></script>

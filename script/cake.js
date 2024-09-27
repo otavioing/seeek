@@ -1,45 +1,45 @@
-function desmarcarRadio() {
-    const radios = document.querySelectorAll('input[type="radio"]');
-    radios.forEach(radio => radio.checked = false);
-}
 
-function seta() {
-    var preco = document.getElementById("divinputpreco");
-    
-    var setaonElement = document.getElementById("seta"); 
+function setaon() {
+    var setaElement = document.getElementById("seta"); 
+    var preco = document.getElementById("preco");
+    var setaonElement = document.getElementById("setaon"); 
 
-    if (preco.style.display == "none" || preco.style.display == "") {
-        preco.style.display = "flex";
-    } else {
+    if (preco.style.display == "flex" || preco.style.display == "") {
         preco.style.display = "none";
-    }
-
-    if (setaonElement.style.transform == "rotate(180deg)" || setaonElement.style.transform == "") {
-        setaonElement.style.transform = "rotate(0deg)";
     } else {
-        setaonElement.style.transform = "rotate(180deg)";
-    }
-}
-
-function setapreco(){
-
-    var preco = document.getElementById("faixadeprecocursos");
-    
-    var setaonElement = document.getElementById("setapreco"); 
-
-    if (preco.style.display == "none" || preco.style.display == "") {
         preco.style.display = "flex";
-    } else {
-        preco.style.display = "none";
     }
 
-    if (setaonElement.style.transform == "rotate(180deg)" || setaonElement.style.transform == "") {
-        setaonElement.style.transform = "rotate(0deg)";
+    if (setaonElement.style.display == "flex" || setaonElement.style.display == "") {
+        setaonElement.style.display = "none";
     } else {
-        setaonElement.style.transform = "rotate(180deg)";
+        setaonElement.style.display = "flex";
     }
 
-
-
-
+    document.getElementById('setaoff').style.display = "flex";
 }
+
+function setaoff() {
+    var setaElement = document.getElementById("seta");
+    var preco = document.getElementById("preco"); 
+    var setaonElement = document.getElementById("setaon"); 
+    var setaoffElement = document.getElementById("setaoff");
+
+    if (preco.style.display == "flex" || preco.style.display == "") {
+        preco.style.display = "none";
+    } else {
+        preco.style.display = "flex";
+    }
+
+    if (setaoffElement.style.display == "flex" || setaoffElement.style.display == "") {
+        setaoffElement.style.display = "none";
+    } else {
+        setaoffElement.style.display = "flex";
+    }
+
+    document.getElementById('setaon').style.display = "flex";
+}
+
+
+
+
