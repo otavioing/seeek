@@ -43,7 +43,7 @@
 .usuarioajuda img{
     width: 30rem;
     display: flex;
-    margin-left: 20rem;
+    margin-left: 17%;
 
 }
 .usuarioajuda h2{
@@ -68,8 +68,7 @@
 .portinfoeimg img{
     width: 30rem;
     display: flex;
-    margin-left: 20rem;
-
+    margin-left: 17%;
 }
 .cursosvagasajuda{
     margin-left: 3.5rem;
@@ -80,7 +79,7 @@
 .cursosvagasajuda img{
     width: 30rem;
     display: flex;
-    margin-left: 20rem;
+    margin-left: 17%;
 }
 .infocursosevagas h2{
     color: var(--azulBase);
@@ -103,8 +102,7 @@
 .cadastroajuda img{
     width: 30rem;
     display: flex;
-    margin-left: 25rem;
-}
+    margin-left: 21%;}
 
 
 

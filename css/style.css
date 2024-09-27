@@ -584,7 +584,26 @@ footer {
     color: var(--brancoBase);
 }
 
-
+/*seta para subir a guia */
+.btn-scroll-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    display: grid;
+    place-items: center;
+    outline: none;
+    border-radius: 100%;                                       
+    opacity: 0;                                         
+    cursor: pointer;                                    
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+    }                                         
+.show-btn-scroll-top {
+    opacity: 1;
+    pointer-events: all;
+    }     
+/*fim da seta */
 
 /*------------------------------------------------------------------------*/
 /*-------------------------------- @media --------------------------------*/

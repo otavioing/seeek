@@ -1,236 +1,327 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/vagas.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/vagas.css">
 </head>
+
 <body id="todo">
-    <header class="inicio">
-
-        <div class="userhover"><img src="img/user2.svg" alt=""></div>
-
-        <div class="logosite">
-        <img src="img/logo.svg" alt="Logo Seek">
-        </div>
-
-        <nav class="navsite">
-            <a href="index.html">Explorar</a>
-            <a href="cursos.html">Cursos</a>
-            <a href="vagas.html">Vagas</a>
-            <div class="sobrenoss"><a href="sobrenos.html">Sobre Nós</a></div>
-        </nav>
-
-        <div class="pesquisasite">
-            <input type="text" placeholder="Pesquisar">
-            <a href=""><img src="img/search2.svg" alt=""></a>
-        </div>   
-
-        <div class="usersite">
-            <a href=""><img src="img/mail-1.svg" alt=""></a>
-            <a href=""><img src="img/bell2.svg" alt=""></a>
-            <a href=""><img src="img/user2.svg" alt=""></a>
-        </div>
-
-        <nav class="hamburguer" id="menu">       
-            <a class="botoesmenuhamburguer" href="index.html">Explorar</a>
-            <a class="botoesmenuhamburguer" href="cursos.html">Cursos</a>
-            <a class="botoesmenuhamburguer" href="vagas.html">Vagas</a>
-            <a class="botoesmenuhamburguer" href="sobre.html">Sobre Nós</a>  
-        </nav>
-
-        <button class="botaoMenu" id="botaoMenu">
-            <span class="linha1"></span>
-            <span class="linha2"></span>
-            <span class="linha3"></span>
-        </button>
+  <header class="inicio">
 
 
-    </header>
+    <button class="botaoMenu" id="botaoMenu">
+      <span class="linha1"></span>
+      <span class="linha2"></span>
+      <span class="linha3"></span>
+    </button>
 
-    <div class="caminhonavegaçãovagas">
-        
-<a href="index.html">Explorar ></a> <a href="">Vagas</a>
+    <div class="logosite">
+      <img src="img/logo.svg" alt="Logo Seek">
+    </div>
+
+    <div class="userhover"><img src="img/user2.svg" alt=""></div>
+
+    <nav class="navsite">
+      <div class="navSelecionado">
+        <a href="index.html" id="ExpA">Explorar</a>
+      </div>
+      <a href="cursos.html" id="CurA">Cursos</a>
+      <a href="vagas.html" id="VagA">Vagas</a>
+      <div class="sobrenoss"><a href="sobre.html" id="SobA">Sobre Nós</a></div>
+    </nav>
+
+    <div class="pesquisasite">
+      <input type="text" placeholder="Pesquisar">
+      <a href=""><img src="img/search2.svg" alt=""></a>
+    </div>
+
+    <div class="usersite">
+      <a href=""><img src="img/bell2.svg" alt=""></a>
+      <a href="login.html"><img src="img/user2.svg" alt=""></a>
+    </div>
+
+    <nav class="hamburguer" id="menu">
+      <a class="botoesmenuhamburguer" href="index.html" id="ExpMenu">Explorar</a>
+      <a class="botoesmenuhamburguer" href="cursos.html" id="CurMenu">Cursos</a>
+      <a class="botoesmenuhamburguer" href="vagas.html" id="VagMenu">Vagas</a>
+      <a class="botoesmenuhamburguer" href="sobre.html" id="SobMenu">Sobre Nós</a>
+    </nav>
+
+
+
+  </header>
+
+  <div class="caminhonavegaçãovagas">
+
+    <a href="index.html">Explorar ></a> <a href="">Vagas</a>
 
 
     <div>
-    <button onclick="ModoEscuro()">lua</button>
-    <button onclick="ModoClaro()">sol</button>
-      </div>
-  
+      <button onclick="ModoEscuro()">lua</button>
+      <button onclick="ModoClaro()">sol</button>
     </div>
 
-    <main>
+  </div>
 
-        <div class="filtroflutuante">
-            <img class="imgfiltro" src="img/Filtrar2.svg" alt="filtrar">
-            <p class="filtrar">Filtrar</p>
-            <div class="camposdcriacao">
-                <h2 class="linhacampos">Campos de criação</h2>
-                <div class="campos">
-                    <p class="categorias">Design</p> <br>
-                    <p class="categorias">Design</p>   <br>   
-                    <p class="categorias">Design</p>    
-                </div>
-            </div>
-            <div class="Habilidades">
-                <h2 class="linhahabi">Habilidades</h2>
-                <div class="campo">
-                    <p class="margimtop">Design</p> <br>
-                    <p>Design</p>
-                </div>
-            </div>
-            <div class="duracao"><h2>Duração</h2></div>
-            <div class="filtrop">
-            <p class="indefi">Indefinido</p>
-            <p class="temmes" >Tempo de mês</p> 
-            <img onclick="setaon()" id="setaon" class="setaon" src="img/setaparabaixo.svg" alt=""> 
-            <img onclick="setaoff()" id="setaoff" class="setaoff" src="img/setaparacima.svg" alt="">
-            <div id="preco" class="preco">
-                <input type="number" placeholder="min">
-                <p>-</p>
-                <input type="number" placeholder="max">
-            </div>
-            <div class="local">
-                <h2 class="loc">Local</h2>
-                <p class="presen">Presencial</p>
-                <p class="homee">Home office</p>
-            </div>
+  <main>
+    <div class="mainvagas">
 
-            <div class="aplicar">
-                <a>Aplicar</a>
-            </div>
-
-            <div class="limparfiltro">
-
-                <a>Limpar Filtro</a>
-
-            </div>
+      <div class="filtroflutuante">
+        <div class="titulofiltroflutuante">
+          <img src="img/Filtrar2.svg" alt="">
+          <h2>Filtar</h2>
         </div>
-                           
+        <div class="camposdecriacaovagas">
+          <h2 class="titulosfiltroflutuante">Campos de criação</h2>
+          <label for="">
+            Design <input type="radio" name="" id="radio1">
+          </label>
+          <label for="">
+            Ilustração <input type="radio" name="" id="radio2">
+          </label>
+          <label for="">
+            Fotográfia <input type="radio" name="" id="radio3">
+          </label>
         </div>
 
-        <div class="nomepag">
+        <div class="habilidadesvagas">
+          <h2 class="titulosfiltroflutuante">Habilidades</h2>
 
-            <h1>Vagas</h1>
+          <label for="">
+            Ilustração <input type="radio" name="" id="radio4">
+          </label>
+          <label for="">
+            Design <input type="radio" name="" id="radio5">
+          </label>
+        </div>
+
+        <div class="duracaovagas">
+          <h2 class="titulosfiltroflutuante">Duração</h2>
+
+          <label for="">
+            Indefinida <input type="radio" name="" id="radio6">
+          </label>
+          <div class="setaoneoffvagas">
+            <p>Tempo em meses</p>
+            <img id="seta" onclick="seta()" src="img/setaparabaixo.svg" alt="">
+
+          </div>
+          <div id="divinputpreco" class="divinputpreco">
+            <input class="precominmax" type="number" name="" id="" placeholder="min">
+            <p>-</p>
+            <input class="precominmax" type="number" name="" id="" placeholder="max">
+          </div>
 
         </div>
 
-          <div class="filtrar1200px"> <img src="img/Filtrar2.svg" alt=""> <p>filtrar</p></div>
+        <div class="localvagas">
+          <h2 class="titulosfiltroflutuante">Local</h2>
 
-        <div class="container">
-
-            <div class="caixas">
-                <div class="imgcont"><img src="img/imagemtestevagas.png" alt=""></div>
-                <p class="nomedesigner">Designer</p>
-                <p class="horario">11 horas atrás</p>
-                <button class="enviarprop">Enviar proposta</button>
-                <a class="maisinfo" href=""> mais informações</a>
-            </div>
-            <div class="caixas">
-
-                <div class="imgcont"><img src="img/imagemtestevagas.png" alt=""></div>
-                <p class="nomedesigner">Designer</p>
-                <p class="horario">11 horas atrás</p>
-                <button class="enviarprop">Enviar proposta</button>
-                <a class="maisinfo" href=""> mais informações</a>
-
-            </div>
-            <div class="caixas">
-
-                <div class="imgcont"><img src="img/imagemtestevagas.png" alt=""></div>
-                <p class="nomedesigner">Designer</p>
-                <p class="horario">11 horas atrás</p>
-                <button class="enviarprop">Enviar proposta</button>
-                <a class="maisinfo" href=""> mais informações</a>
-
-            </div>
-            <div class="caixas">
-
-                <div class="imgcont"><img src="img/imagemtestevagas.png" alt=""></div>
-                <p class="nomedesigner">Designer</p>
-                <p class="horario">11 horas atrás</p>
-                <button class="enviarprop">Enviar proposta</button>
-                <a class="maisinfo" href=""> mais informações</a>
-
-            </div>
-            <div class="caixas">
-
-                <div class="imgcont"><img src="img/imagemtestevagas.png" alt=""></div>
-                <p class="nomedesigner">Designer</p>
-                <p class="horario">11 horas atrás</p>
-                <button class="enviarprop">Enviar proposta</button>
-                <a class="maisinfo" href=""> mais informações</a>
-
-            </div>
-            <div class="caixas">
-
-                <div class="imgcont"><img src="img/imagemtestevagas.png" alt=""></div>
-                <p class="nomedesigner">Designer</p>
-                <p class="horario">11 horas atrás</p>
-                <button class="enviarprop">Enviar proposta</button>
-                <a class="maisinfo" href=""> mais informações</a>
-
-            </div>
+          <label for="">
+            Presencial <input type="radio" name="" id="radio7">
+          </label>
+          <label for="">
+            Home office <input type="radio" name="" id="radio8">
+          </label>
 
         </div>
-            
-            
-            
-        </main>
 
-        <button class="btn-scroll-top" arial-label="Voltar ao topo">
-          <img
-            src="img/arrow-top.svg"
-            alt="Voltar ao topo"
-            width="50"
-            height="50"
-          />
-        </button>
 
-        <footer>
+        <div class="aplicarfiltrovagas">
 
-            <div class="linksfooter">
-        
-              <div class="infofooter">
-                <a href="index.html" id="AjuF">Ajuda</a>
-                <a href="index.html" id="TerF">Termos</a>
-                <a href="index.html" id="AtuF">Atualizações</a>
-              </div>
-        
-              <div class="infofooter">
-                <a href="index.html" id="SobF">Sobre Nós</a>
-                <a href="index.html" id="ConT">Contato</a>
-        
-              </div>
-              <div class="infofooter">
-                <a href="index.html" id="AviF">Avisos</a>
-        
-                <select name="" id="">
-                  <option value="">Português</option>
-                  <option value="">Inglês</option>
-                  <option value="">Espanhol</option>
-                </select>
-              </div>
-        
-              <div class="infofooter">
-                <a href="index.html"><img src="img/Logo.svg" alt="Logo Seek"></a>
-              </div>
-        
+          <button>Aplicar</button>
+
+        </div>
+
+        <div class="limparfiltrovagas">
+
+          <button type="button" onclick="desmarcarRadio()">Limpar filtro</button>
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <div class="containervagas">
+
+        <div class="vagas">
+          <img src="img/imagemtestevagas.png.png" alt="">
+          <div class="informacoesvagas">
+            <div class="nomevagaehoradapostagem">
+              <h2>Nome da vaga</h2>
+              <p>11 horas atrás</p>
             </div>
-        
-            <div class="direitosautorais">
-              <p id="DirF">Todos os direitos reservados. ©Seek 2024.</p>
+            <div class="mmoreinfo">
+              <a href="">Mais informações</a>
+            </div>       
+            <div class="botaoenviarproposta">
+              <button>Enviar proposta</button>
             </div>
-        
-          </footer>        
-        
-        <script src="script/cake.js"></script>
-        <script src="script/cake2.js"></script>
-        <script src="script/lfy.js"></script>
-        <script src="script/cautela.js"></script>
-    </body>
-    </html>
-    <!-- <input type="checkbox" name="campos" id="campos"> -->
+          </div>
+      </div>
+        <div class="vagas">
+          <img src="img/imagemtestevagas.png.png" alt="">
+          <div class="informacoesvagas">
+            <div class="nomevagaehoradapostagem">
+              <h2>Nome da vaga</h2>
+              <p>11 horas atrás</p>
+            </div>
+            <div class="mmoreinfo">
+              <a href="">Mais informações</a>
+            </div>       
+            <div class="botaoenviarproposta">
+              <button>Enviar proposta</button>
+            </div>
+          </div>
+      </div>
+        <div class="vagas">
+          <img src="img/imagemtestevagas.png.png" alt="">
+          <div class="informacoesvagas">
+            <div class="nomevagaehoradapostagem">
+              <h2>Nome da vaga</h2>
+              <p>11 horas atrás</p>
+            </div>
+            <div class="mmoreinfo">
+              <a href="">Mais informações</a>
+            </div>       
+            <div class="botaoenviarproposta">
+              <button>Enviar proposta</button>
+            </div>
+          </div>
+      </div>
+        <div class="vagas">
+          <img src="img/imagemtestevagas.png.png" alt="">
+          <div class="informacoesvagas">
+            <div class="nomevagaehoradapostagem">
+              <h2>Nome da vaga</h2>
+              <p>11 horas atrás</p>
+            </div>
+            <div class="mmoreinfo">
+              <a href="">Mais informações</a>
+            </div>       
+            <div class="botaoenviarproposta">
+              <button>Enviar proposta</button>
+            </div>
+          </div>
+      </div>
+        <div class="vagas">
+          <img src="img/imagemtestevagas.png.png" alt="">
+          <div class="informacoesvagas">
+            <div class="nomevagaehoradapostagem">
+              <h2>Nome da vaga</h2>
+              <p>11 horas atrás</p>
+            </div>
+            <div class="mmoreinfo">
+              <a href="">Mais informações</a>
+            </div>       
+            <div class="botaoenviarproposta">
+              <button>Enviar proposta</button>
+            </div>
+          </div>
+      </div>
+        <div class="vagas">
+          <img src="img/imagemtestevagas.png.png" alt="">
+          <div class="informacoesvagas">
+            <div class="nomevagaehoradapostagem">
+              <h2>Nome da vaga</h2>
+              <p>11 horas atrás</p>
+            </div>
+            <div class="mmoreinfo">
+              <a href="">Mais informações</a>
+            </div>       
+            <div class="botaoenviarproposta">
+              <button>Enviar proposta</button>
+            </div>
+          </div>
+      </div>
+        <div class="vagas">
+          <img src="img/imagemtestevagas.png.png" alt="">
+          <div class="informacoesvagas">
+            <div class="nomevagaehoradapostagem">
+              <h2>Nome da vaga</h2>
+              <p>11 horas atrás</p>
+            </div>
+            <div class="mmoreinfo">
+              <a href="">Mais informações</a>
+            </div>       
+            <div class="botaoenviarproposta">
+              <button>Enviar proposta</button>
+            </div>
+          </div>
+      </div>
+        <div class="vagas">
+          <img src="img/imagemtestevagas.png.png" alt="">
+          <div class="informacoesvagas">
+            <div class="nomevagaehoradapostagem">
+              <h2>Nome da vaga</h2>
+              <p>11 horas atrás</p>
+            </div>
+            <div class="mmoreinfo">
+              <a href="">Mais informações</a>
+            </div>       
+            <div class="botaoenviarproposta">
+              <button>Enviar proposta</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </main>
+
+  <button class="btn-scroll-top" arial-label="Voltar ao topo">
+    <img src="img/arrow-top.svg" alt="Voltar ao topo" width="50" height="50" />
+  </button>
+
+  <footer>
+
+    <div class="linksfooter">
+
+      <div class="infofooter">
+        <a href="index.html" id="AjuF">Ajuda</a>
+        <a href="index.html" id="TerF">Termos</a>
+        <a href="index.html" id="AtuF">Atualizações</a>
+      </div>
+
+      <div class="infofooter">
+        <a href="index.html" id="SobF">Sobre Nós</a>
+        <a href="index.html" id="ConT">Contato</a>
+
+      </div>
+      <div class="infofooter">
+        <a href="index.html" id="AviF">Avisos</a>
+
+        <select name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+          <option value="pt">Português</option>
+          <option value="eng">english</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+
+      <div class="infofooter">
+        <img src="img/logoSeekk 3@2x.png" alt="Logo Seek">
+      </div>
+
+    </div>
+
+    <div class="direitosautorais">
+      <p id="DirF">Todos os direitos reservados. ©Seek 2024.</p>
+    </div>
+
+
+  </footer>
+
+  <script src="script/cake.js"></script>
+  <script src="script/cake2.js"></script>
+  <script src="script/lfy.js"></script>
+  <script src="script/cautela.js"></script>
+</body>
+
+</html>
+<!-- <input type="checkbox" name="campos" id="campos"> -->

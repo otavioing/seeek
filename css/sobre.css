@@ -61,9 +61,9 @@ main{
 .infosobrenos img{
     width: 400px;
     display: inline-flex;
-    position: relative;
+    /* position: relative;
     left: 55rem;
-    bottom: 27rem;
+    bottom: 27rem; */
 }
 .h2sobrenos{
     font-size: 2rem;
@@ -117,6 +117,24 @@ main{
    display: flex;
     margin-top: 1rem;
     justify-content: center;
+}
+.paisobrenos{
+    display: flex;
+    justify-content: space-between;
+}
+.artepaginasobrenos img{
+    width: 25rem;
+    display: flex;
+}   
+
+@media screen (max-width: 1200px){
+
+    .paicontainersobrenos{
+
+    
+    
+    }
+
 }
 
 
