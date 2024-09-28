@@ -40,6 +40,5 @@ function setapreco(){
     }
 
 
-
-
 }
+
