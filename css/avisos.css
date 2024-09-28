@@ -28,7 +28,7 @@
     --ModoEscuroMesc2: #555555;
 
     --ModoEscuroFontV: #5AB3FF;
-
+    --ModoEscuroFontC: #E197FF;
 
 }
 
@@ -40,6 +40,22 @@
 
 }
 
+/*-------------------------------- Modo Escuro --------------------------------*/
+
+
+.modoEscuro {
+    color: white;
+    background-color: var(--ModoEscuroBase);
+}
+
+.modoEscuro .avisos h1 , .modoEscuro .atualizacoes h2 {
+    color: var(--brancoBase);
+}
+
+.modoEscuro .caixaatualizacaoesavisos {
+    background-color: var(--ModoEscuroMesc);
+}
+/*-------------------------------- Modo Escuro Fim --------------------------------*/
 
 .avisos {
     display: flex;

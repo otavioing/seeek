@@ -21,6 +21,15 @@
 
     --roxoc: rgb(172, 161, 210);
 
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroMesc2: #555555;
+
+    --ModoEscuroFontV: #5AB3FF;
+    --ModoEscuroFontC: #E197FF;
+
+
+
 }
 
 * {
