@@ -2,24 +2,37 @@
 /*-------------------------------- Modo Escuro --------------------------------*/
 
 function ModoEscuro() {
-    let corpo = document.getElementById("todo");
-    corpo.classList.add("modoEscuro");
-}
-function ModoClaro (){
-    let todo = document.getElementById("todo");
-    todo.classList.remove("modoEscuro")
+  let corpo = document.getElementById("todo");
+  corpo.classList.add("modoEscuro");
+  localStorage.setItem("modo", "escuro");
 }
 
+function ModoClaro() {
+  let corpo = document.getElementById("todo");
+  corpo.classList.remove("modoEscuro");
+  localStorage.setItem("modo", "claro");
+}
+
+function MudarModos() {
+  let corpo = document.getElementById("todo");
+  if (corpo.classList.contains("modoEscuro")) {
+    ModoClaro();
+  } else {
+    ModoEscuro();
+  }
+}
+
+function aplicarModo() {
+  if (localStorage.getItem("modo") === "escuro") {
+    ModoEscuro();
+  } else {
+    ModoClaro(); 
+  }
+}
 
 /*-------------------------------- Troca de lingua --------------------------------*/
-      
-function TrocaLinguagem(lang) {
-  localStorage.setItem('selectedLanguage', lang);
-  location.hash = lang;
-  location.reload();
-}
-
-window.onload = function() {
+// (não ta travando)
+function aplicarIdioma() {
   var idioma = {
     eng: { 
       explorarElementoH1: "Explore",
@@ -77,35 +90,48 @@ window.onload = function() {
   var selectedLanguage = localStorage.getItem('selectedLanguage') || 'pt';
   document.getElementById('idiomaSelect').value = selectedLanguage;
 
-  if (window.location.hash) {
-    var lang = window.location.hash.substring(1);
-    if (idioma[lang]) {
-      document.getElementById("ExpH1").innerHTML = idioma[lang].explorarElementoH1;
-      document.getElementById("ExpA").innerHTML = idioma[lang].explorarHeader;
-      document.getElementById("CurA").innerHTML = idioma[lang].cursosHeader;
-      document.getElementById("VagA").innerHTML = idioma[lang].vagasHeader;
-      document.getElementById("SobA").innerHTML = idioma[lang].sobreNosHeader;
+  // Atualiza o texto com base no idioma selecionado variando entre pt-br/eng/esp (não ta travando)
+  document.getElementById("ExpH1").innerHTML = idioma[selectedLanguage].explorarElementoH1;
+  document.getElementById("ExpA").innerHTML = idioma[selectedLanguage].explorarHeader;
+  document.getElementById("CurA").innerHTML = idioma[selectedLanguage].cursosHeader;
+  document.getElementById("VagA").innerHTML = idioma[selectedLanguage].vagasHeader;
+  document.getElementById("SobA").innerHTML = idioma[selectedLanguage].sobreNosHeader;
 
-      document.getElementById("ExpMenu").innerHTML = idioma[lang].explorarHeader;
-      document.getElementById("CurMenu").innerHTML = idioma[lang].cursosHeader;
-      document.getElementById("VagMenu").innerHTML = idioma[lang].vagasHeader;
-      document.getElementById("SobMenu").innerHTML = idioma[lang].sobreNosHeader;
+  document.getElementById("ExpMenu").innerHTML = idioma[selectedLanguage].explorarHeader;
+  document.getElementById("CurMenu").innerHTML = idioma[selectedLanguage].cursosHeader;
+  document.getElementById("VagMenu").innerHTML = idioma[selectedLanguage].vagasHeader;
+  document.getElementById("SobMenu").innerHTML = idioma[selectedLanguage].sobreNosHeader;
 
-      document.getElementById("ExpA2").innerHTML = idioma[lang].explorarMigalha;
-      document.getElementById("TenA").innerHTML = idioma[lang].tendenciaMigalha;
-      document.getElementById("PerB").innerHTML = idioma[lang].PersonalizarFiltro;
-      
-      document.getElementById("AjuF").innerHTML = idioma[lang].AjudaFooter;
-      document.getElementById("TerF").innerHTML = idioma[lang].TermosFooter;
-      document.getElementById("AtuF").innerHTML = idioma[lang].AtualizacaoFooter;
-      document.getElementById("SobF").innerHTML = idioma[lang].SobreNosFooter;
-      document.getElementById("ConT").innerHTML = idioma[lang].ContatoFooter;
-      document.getElementById("AviF").innerHTML = idioma[lang].AvisoFooter;
+  document.getElementById("ExpA2").innerHTML = idioma[selectedLanguage].explorarMigalha;
+  document.getElementById("TenA").innerHTML = idioma[selectedLanguage].tendenciaMigalha;
+  document.getElementById("PerB").innerHTML = idioma[selectedLanguage].PersonalizarFiltro;
 
+  document.getElementById("AjuF").innerHTML = idioma[selectedLanguage].AjudaFooter;
+  document.getElementById("TerF").innerHTML = idioma[selectedLanguage].TermosFooter;
+  document.getElementById("AtuF").innerHTML = idioma[selectedLanguage].AtualizacaoFooter;
+  document.getElementById("SobF").innerHTML = idioma[selectedLanguage].SobreNosFooter;
+  document.getElementById("ConT").innerHTML = idioma[selectedLanguage].ContatoFooter;
+  document.getElementById("AviF").innerHTML = idioma[selectedLanguage].AvisoFooter;
+  document.getElementById("DirF").innerHTML = idioma[selectedLanguage].DireitosFooter;
+}
 
-      document.getElementById("DirF").innerHTML = idioma[lang].DireitosFooter;
-    }
-  }
+//essa aqui não deixa perder as configurações de acordo com a escolha do usuario (ta travando)
+
+window.onload = function() {
+  aplicarModo();
+  aplicarIdioma();
 };
 
+// essa parte muda o dioma  (não ta travando)
+
+function TrocaLinguagem(lang) {
+  localStorage.setItem('selectedLanguage', lang);
+  aplicarIdioma(); 
+}
+
+
+
 /*-------------------------------- Troca de lingua Cursos --------------------------------*/
+
+
+
