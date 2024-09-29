@@ -42,3 +42,14 @@ function setapreco(){
 
 }
 
+
+function abrir() {
+    let caixa = document.getElementById("caixa");
+
+    if (caixa.style.display == "none" || caixa.style.display == "") {
+        caixa.style.display = "flex";
+    }
+
+}
+
+
