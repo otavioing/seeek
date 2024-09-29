@@ -1,4 +1,3 @@
-
 :root {
     --cinzaBase: rgb(220, 220, 220);
 
@@ -14,8 +13,7 @@
 
     --azulBase: #2B63F0;
 
-    --azulBasees: rgb(6, 49, 158);
-
+    --azulBasee: #00008b;
 
     --azulBasec: rgb(116, 84, 233);
 
@@ -23,7 +21,11 @@
 
     --roxoc: rgb(172, 161, 210);
 
+    --branco: #f3f3f3;
+
     --vermelhom: #EF0000;
+
+
 
     --ModoEscuroBase: #1F1F1F;
     --ModoEscuroMesc: #656565;
@@ -31,7 +33,6 @@
 
     --ModoEscuroFontV: #5AB3FF;
     --ModoEscuroFontC: #E197FF;
-
 
 
 }
