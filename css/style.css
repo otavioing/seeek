@@ -588,6 +588,10 @@ footer {
 .direitosautorais{
     color: var(--brancoBase);
 }
+.borda{
+    border-bottom: 1px solid red;
+    /*não apagar isso é so pra testar */
+}
 
 /*seta para subir a guia */
 .btn-scroll-top {
