@@ -41,59 +41,84 @@
 
 .modoEscuro {
     color: var(--brancoBase);
-    background-color:var(--ModoEscuroBase);
+    background-color: var(--ModoEscuroBase);
 }
 
-.modoEscuro .filtroflutuante{
-   
+.modoEscuro .filtroflutuante {
     background-color: var(--ModoEscuroFilt);
     border: 1px solid rgb(27, 27, 27)
-    
 }
 
-.modoEscuro .campos .categorias, .modoEscuro .margimtop, .modoEscuro .campo p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee , .modoEscuro .limparfiltro a , .modoEscuro .caminhonavegaçãovagas a{
+.modoEscuro .campos .categorias,
+.modoEscuro .margimtop,
+.modoEscuro .campo p,
+.modoEscuro .indefi,
+.modoEscuro .temmes,
+.modoEscuro .presen,
+.modoEscuro .homee,
+.modoEscuro .limparfiltro a,
+.modoEscuro .caminhonavegaçãovagas a {
     color: var(--brancoBase);
 }
 
-.modoEscuro .filtrar1200px{
+.modoEscuro .filtrar1200px {
     background-color: var(--ModoEscuroMesc);
 }
 
-.modoEscuro p.filtrar , .modoEscuro h1 , .modoEscuro .filtroflutuante h2, .modoEscuro .aplicar a , .modoEscuro .filtrar1200px{
+.modoEscuro p.filtrar,
+.modoEscuro h1,
+.modoEscuro .filtroflutuante h2,
+.modoEscuro .aplicar a,
+.modoEscuro .filtrar1200px {
     color: var(--ModoEscuroFontV)
 }
 
-.modoEscuro .linhahabi , .modoEscuro .duracao , .modoEscuro .loc{
+.modoEscuro .linhahabi,
+.modoEscuro .duracao,
+.modoEscuro .loc {
     border-bottom: var(--ModoEscuroFontV) 1px solid;
 }
 
 /*-------------------------------- Modo Escuro fim--------------------------------*/
 
 
+.modosclaroescuro{
+    position: absolute;
+    right: 2%;
+}
 
-
-.caminhonavegaçãovagas a{
+.caminhonavegaçãovagas a {
     color: black;
 }
-.caminhonavegaçãovagas{
-    margin: 2rem;
+
+.caminhonavegaçãovagas {
+    margin: 2rem 2rem 0.5rem 2rem;
+    display: flex;
 }
-                                          /* Main */
-.prCursos{
+
+.caminhonavegaçãovagas h1{
+    margin-left: 16%;
+    color: var(--azulBase);
+}
+
+/* Main */
+.prCursos {
     height: 60rem;
     display: flex;
 }
-.filtroflutuante{
 
-    background-color: transparent;
+.filtroflutuante {
+    background-color: var(--cinzaBase);
     border: 1px solid var(--cinzaBasee);
-    margin-top: 5rem;
+    margin-top: 16px;
+    margin-left: 1rem;
     height: 80vh;
     width: 20%;
     border-radius: 10px;
     padding: 3rem;
 }
-.camposdecriacaovagas{
+
+.camposdecriacaovagas {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -101,7 +126,8 @@
     margin-top: 2rem;
     gap: 1rem;
 }
-.habilidadesvagas{
+
+.habilidadesvagas {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -109,18 +135,21 @@
     margin-top: 1rem;
     gap: 1rem;
 }
-.precominmax{
+
+.precominmax {
     display: flex;
     border: none;
     width: 20%;
 }
-.divinputpreco{
+
+.divinputpreco {
     display: none;
     justify-content: start;
     align-items: start;
     gap: 0.5rem;
 }
-.duracaovagas{
+
+.duracaovagas {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -128,7 +157,8 @@
     margin-top: 1rem;
     gap: 1rem;
 }
-.localvagas{
+
+.localvagas {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -136,31 +166,37 @@
     margin-top: 1rem;
     gap: 1rem;
 }
-.titulosfiltroflutuante{
+
+.titulosfiltroflutuante {
     color: var(--azulBase);
     border-bottom: 1.5px solid var(--azulBase);
 }
-.filtroflutuante img{
+
+.filtroflutuante img {
     width: 50px;
 }
-.titulofiltroflutuante{
+
+.titulofiltroflutuante {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 0.5rem;
 }
-.titulofiltroflutuante h2{
+
+.titulofiltroflutuante h2 {
     font-size: 2.5rem;
     color: var(--azulBase);
 }
-.aplicarfiltrovagas{
+
+.aplicarfiltrovagas {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
     margin-top: 2rem;
 }
-.aplicarfiltrovagas button{
+
+.aplicarfiltrovagas button {
     background-color: transparent;
     color: var(--azulBase);
     border: none;
@@ -169,31 +205,34 @@
     font-size: 2rem;
     cursor: pointer;
 }
-.limparfiltrovagas{
+
+.limparfiltrovagas {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
 }
-.limparfiltrovagas button{
 
+.limparfiltrovagas button {
     border: none;
     background-color: transparent;
     font-size: 1.5rem;
     cursor: pointer;
-    
 }
-.setaoneoffvagas img{
+
+.setaoneoffvagas img {
     width: 15px;
 }
-.setaoneoffvagas{
+
+.setaoneoffvagas {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
 }
+
 /*fim do filtar e começo do container*/
-.vagasvagas{
+.vagasvagas {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -201,68 +240,85 @@
     gap: 2rem;
     margin-left: 2rem;
 }
-.mainvagas{
-    display: flex;
 
+.mainvagas {
+    display: flex;
 }
-.containervagas{
+
+.containervagas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 70%;
+    margin-top: 1rem;
     margin-left: 2rem;
     padding: 1rem;
     gap: 1rem;
 }
-.vagas{
-    height: 20rem; /* se colocar em 23rem não buga em 1500px*/
+
+.vagas {
+    height: 20rem;
+    /* se colocar em 23rem não buga em 1500px*/
     padding: 1rem;
     background-color: var(--cinzaBasec);
-
+    border-radius: 0.6rem;
 }
-.vagas img{
+
+.vagas img {
     width: 100%;
     height: 70%;
     object-fit: cover;
     border-radius: 10px;
 }
-.nomevagaehoradapostagem{
-    margin: 0.5rem;
-    
 
-
-}
-.nomevagaehoradapostagem p{
-    gap: 1.5rem;
-    margin: 0.7rem 0;
-}
-.informacoesvagas{
+.informacoesvagas {
     display: flex;
+    align-items: start;
     justify-content: space-between;
-    align-items: end;
-    height: 6rem;
+    height: 30%;
+    flex-wrap: wrap;
 }
-.botaoenviarproposta{
+
+.nomevagaehoradapostagem {
+    width: 50%;
+    height: 60%;
+}
+
+.mmoreinfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoenviarproposta {
     border: none;
     display: flex;
-    align-items: end;
+    align-items: ¨start;
     justify-content: end;
-
+    margin-top: 1rem;
+    width: 50%;
+    height: 60%;
 }
-.botaoenviarproposta button{
+
+.botaoenviarproposta button {
     background-color: var(--azulBase);
     color: var(--brancoBase);
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     border: none;
-    margin-bottom: 1.5rem;
+    height: 2.7rem;
+    width: 70%;
 }
-.botaoenviarproposta button:hover{
+
+.botaoenviarproposta button:hover {
     background-color: var(--azulBasees);
 }
-.mmoreinfo a{
+
+.mmoreinfo a {
     color: var(--azulBase);
 }
+
 /* css para a caixa flutuante */
 
 .caixaflutuante {
@@ -321,11 +377,13 @@
     font-size: 1.5rem;
     color: var(--azulBase);
 }
+
 .horariodapostagemmoreinfoenviarprop {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
 }
+
 .horariodapostagemmoreinfoenviarprop button {
     background-color: var(--azulBase);
     color: var(--branco);
@@ -334,60 +392,84 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 .horariodapostagemmoreinfoenviarprop button:hover {
     background-color: var(--azulBasee);
 }
+
 .horariodapostagemmoreinfoenviarprop a {
     color: var(--azulBase);
     text-decoration: none;
     cursor: pointer;
-    
 }
-.mmoreinfo button{
 
+.mmoreinfo button {
     border: none;
     background-color: transparent;
     cursor: pointer;
     font-size: 1rem;
     color: var(--azulBase);
-
 }
-.botaofiltrarvagasmedia{
+
+.botaofiltrarvagasmedia {
     display: none;
 }
-.botaofiltrarvagasmedia img{
+
+.botaofiltrarvagasmedia img {
     width: 40px;
 }
-.alinharadiv{
+
+.alinharadiv {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    padding: 16px;
 }
-@media screen and (max-width: 1200px){
 
-    .filtroflutuante{
+.btn-scroll-top{
+    border: 1px solid var(--cinzaBasee);
+}
+
+.btn-scroll-top img{
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .caminhonavegaçãovagas h1{
         display: none;
     }
-    .mainvagas{
+
+    .filtroflutuante {
+        display: none;
+    }
+
+    .mainvagas {
         display: block;
     }
-    .containervagas{
+
+    .containervagas {
         width: 100%;
         margin-left: 0;
     }
-    .botaofiltrarvagasmedia{
+
+    .botaofiltrarvagasmedia {
+        width: 95%;
+        background-color: var(--cinzaBasec);
+        border: 1px solid var(--cinzaBasee);
+        height: 3rem;
+        border-radius: 3rem;
+        padding: 0.5rem;
         display: flex;
         justify-content: center;
-        background-color: var(--cinzaBase);
-        padding: 0.5rem;
-        border-radius: 10px;
-        width: 90%;
-
-        
+        text-align: center;
+        font-size: 1.5rem;
+        outline: none;
     }
-    .botaofiltrarvagasmedia button{
 
+    .botaofiltrarvagasmedia button {
         border: none;
         background-color: transparent;
         cursor: pointer;
@@ -396,6 +478,154 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+
+    .informacoesvagas,
+    .botaoenviarproposta button {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .botaoenviarproposta button {
+        height: 2.3rem;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .containervagas {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+
+    .informacoesvagas,
+    .botaoenviarproposta button {
+        font-size: 0.7rem;
+    }
+
+    .botaoenviarproposta {
+        margin-top: 0.5rem;
+    }
+    
+    .btn-scroll-top img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .containervagas{
+        margin-top: none;
+    }
+
+}
+
+@media screen and (max-width: 230px) {
+
+    .informacoesvagas,
+    .botaoenviarproposta button {
+        font-size: 0.5rem;
+    }
+
+
+    .mmoreinfo button {
+        font-size: 0.7rem;
+    }
+
+    .vagas {
+        height: 15rem;
+        /* se colocar em 23rem não buga em 1500px*/
+        padding: 1rem;
+        background-color: var(--cinzaBasec);
+    }
+
+    .nomevagaehoradapostagem {
+        height: 80%;
+    }
+
+    .botaoenviarproposta {
+        height: 80%;
+    }
+
+    .btn-scroll-top img{
+        width: 35px;
+        height: 35px;
+    }
+
+    header .logosite{
+        display: none;
+    }
+
+    .vagas {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 8rem);
+        grid-template-areas: "f1"
+                             "f5"
+                             "f5"
+                             "f2"
+                             "f6"
+                             "f6";
+
+    }
+
+    #menu{
+        width: 7rem;
+        height: 8rem;
+        position: absolute;
+        left: 0;
+        top: 5.9rem;
+    }
+
+    #menu .botoesmenuhamburguer{
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+    footer{
+        height: 20rem;
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+
+    footer .linksfooter{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .linksfooter select{
+        width: 80%;
+    }
+
+    .vlibrass{
+        display: none;
+    }
+
+    .filtroExplorar .buttonFiltro{
+        font-size: 0.8rem;
+    }
+
+    .filtroExplorar .buttonFiltro img{
+        height: 2rem;
+    }
+
+    .caminhonavegaçãovagas{
+        padding: 0.3rem;
+    }
+
+    .btn-scroll-top img{
+        width: 30px;
+        height: 30px;
     }
 
 }
