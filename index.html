@@ -196,6 +196,28 @@
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
+<!--------------------------------- Caixa de Seleção de Usuário --------->
+<div class="welcome-container" id="user-selection">
+  <h2>BEM-VINDO(A)</h2>
+  <p>Por favor, selecione a opção que mais se encaixa com você</p>
+  <div class="user-options">
+      <button onclick="selectUserType('Padrão')">Usuário Padrão</button>
+      <button onclick="selectUserType('Empresarial')">Usuário Empresarial</button>
+  </div>
+</div>
+
+<!-- Caixa de Confirmação -->
+<div class="confirmation-container" id="confirmation-box" style="display: none;">
+  <p>Ao clicar em seguir, você irá seguir como <span id="user-type"></span></p>
+  <div class="confirm-options">
+      <button onclick="goBack()">Cancelar</button>
+      <button onclick="confirmSelection()">Confirmar</button>
+  </div>
+</div>
+
+
+
+
   </main>
 
   <button class="btn-scroll-top" arial-label="Voltar ao topo">
