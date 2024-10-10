@@ -52,4 +52,32 @@ function abrir() {
 
 }
 
+//script para alterar o ano atual
+let anoatual = document.querySelectorAll(".anoatual");
+if (anoatual.length > 0) {
+    let dataatual = new Date();
+    let ano = dataatual.getFullYear();
+    for (let i = 0; i < anoatual.length; i++) {
+        anoatual[i].innerHTML = ano;
+    }
+}
+
+//script para abrir o menu do perfil 
+let botaomenuperfil = document.getElementById("abrirmenuperfil");
+botaomenuperfil.addEventListener("click", abrirMenu);
+
+function abrirMenu() {
+    if(menuperfil.style.left == "125rem" || menuperfil.style.left == "") {
+        menuperfil.style.left = "107rem";
+       
+    }
+    else {
+       if(menuperfil.style.left = "107rem" || menuperfil.style.left == "") {
+        menuperfil.style.left = "125rem";
+       }
+    }
+
+    
+}
+
 

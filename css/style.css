@@ -27,6 +27,9 @@
 
     --branco: #f3f3f3;
 
+    --brancomenuperfil : #E6E6E6;
+    ;
+
     --vermelhom: #EF0000;
 
 
@@ -613,6 +616,39 @@ footer {
     pointer-events: all;
     }     
 /*fim da seta */
+/* inicio meno perfil*/
+
+#menuperfil{
+    position: absolute;
+    /* left: 107rem; */
+    left: 125rem;
+    background-color: var(--brancomenuperfil);
+    width: 13rem;
+    height: 15rem;
+    z-index: 1;
+    padding: 1rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.5s;
+    /* display: none; */
+}
+#menuperfil a{
+    color: var(--preto);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+#sairdomenuperfil{
+    color: var(--vermelhom);
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 /*------------------------------------------------------------------------*/
 /*-------------------------------- @media --------------------------------*/
