@@ -634,7 +634,7 @@ footer {
     align-items: center;
     gap: 1.5rem;
     transition: all 0.5s;
-    /* display: none; */
+    display: none;
 }
 #menuperfil a{
     color: var(--preto);
