@@ -62,6 +62,9 @@ a {
     color: var(--brancoBase);
 }
 
+
+
+
 /*RESPONSIVIDADE DO SITE COMEÇA A BUGAR COM 430PX*/
 
 /*-------------------------------- Modo Escuro --------------------------------*/
@@ -73,7 +76,7 @@ a {
 }
 
 .modoEscuro header .botaoMenu span {
-    background-color: var(--brancoBase);   
+    background-color: var(--brancoBase);
 }
 
 
@@ -185,8 +188,6 @@ header .sobrenoss {
     display: flex;
     align-items: center;
     padding: 5px;
-    border-left: 1px solid var(--brancoBase);
-    border-right: 1px solid var(--brancoBase);
 }
 
 header .hamburguer {
@@ -662,6 +663,101 @@ footer {
     cursor: pointer;
 }
 
+/*------------------------------------ cadastro tipo usuário -----------------------------------*/
+
+
+.container1 {
+    background-color: var(--branco);
+    width: 40%;
+    height: 30rem;
+    position: fixed;
+    top: 25%;
+    left: 30%;
+    border-radius: 1.5rem;
+}
+
+.titulocadastro1 {
+    background-color: var(--azulBase);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.container1p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    color: var(--cinzaBasee);
+}
+
+.user-options-pai {
+    display: flex;
+    flex-direction: column;
+    height: 23rem;
+    padding: 4rem 1rem 1rem 1rem;
+    justify-content: space-between;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.tiposusuario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    width: 50%;
+}
+
+.tiposusuario button {
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--cinzaBasee);
+    border-radius: 50%;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+
+.tiposusuario button img {
+    width: 50%;
+}
+
+.setaCorfirmar {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.setaCorfirmar img {
+    height: 50%;
+    transform: rotate(90deg);
+}
+
+.confirmation-container {
+    height: 5rem;
+    width: rem;
+    background-color: #1F1F1F;
+}
+
+
+
+
 /*------------------------------------------------------------------------*/
 /*-------------------------------- @media --------------------------------*/
 /*------------------------------------------------------------------------*/
@@ -696,11 +792,6 @@ footer {
     #filho8 {
         display: none;
     }
-
-
-}
-
-@media screen and (max-width: 1200px) {
 
     header {
         display: flex;
@@ -813,7 +904,13 @@ footer {
         outline: none;
     }
 
+    .container1 {
+        width: 50%;
+        left: 25%;
+    }
+
 }
+
 
 @media screen and (max-width: 950px) {
 
@@ -825,6 +922,11 @@ footer {
 
     .prIndex .perfilPort h1 {
         font-size: 140%;
+    }
+
+    .container1 {
+        width: 75%;
+        left: 12.5%;
     }
 
 }
@@ -844,6 +946,11 @@ footer {
 
     .perfilPort p {
         font-size: 60%;
+    }
+
+    .container1 {
+        width: 85%;
+        left: 7.5%;
     }
 
 }
@@ -873,13 +980,26 @@ footer {
         display: none;
     }
 
+    .container1 {
+        width: 95%;
+        left: 2.5%;
+    }
+    
+    .tiposusuario button {
+        height: 8rem;
+        width: 8rem;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
 
     .main.prIndex {
-
         margin-bottom: 2rem;
+    }
+
+    .container1{
+        font-size: 0.8rem;
     }
 
 }

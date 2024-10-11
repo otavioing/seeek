@@ -49,7 +49,7 @@
 
       <button id="abrirmenuperfil">teste menu perfil</button>
 
-      
+
 
     </div>
 
@@ -86,7 +86,7 @@
 
     <div>
       <button onclick="MudarModos()">Sol/lua</button>
-      
+
     </div>
 
 
@@ -211,37 +211,54 @@
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-<!--------------------------------- Caixa de Seleção de Usuário --------->
-<div class="welcome-container" id="user-selection">
-  <h2>BEM-VINDO(A)</h2>
-  <p>Por favor, selecione a opção que mais se encaixa com você</p>
-  <div class="user-options">
-      <button onclick="selectUserType('Padrão')">Usuário Padrão</button>
-      <button onclick="selectUserType('Empresarial')">Usuário Empresarial</button>
-  </div>
-</div>
+    <!--------------------------------- Caixa de Seleção de Usuário --------->
 
-<!-- Caixa de Confirmação -->
-<div class="confirmation-container" id="confirmation-box" style="display: none;">
-  <p>Ao clicar em seguir, você irá seguir como <span id="user-type"></span></p>
-  <div class="confirm-options">
-      <button onclick="goBack()">Cancelar</button>
-      <button onclick="confirmSelection()">Confirmar</button>
-  </div>
-</div>
+    <div class="container1">
+      <div class="welcome-container" id="user-selection">
+        <div class="titulocadastro1">
+          <h2>BEM-VINDO(A)</h2>
+        </div>
+        <div class="container1p">
+          <p>Por favor, selecione a opção que mais se encaixa com você</p>
+        </div>
 
+        <div class="user-options-pai">
+
+          <div class="user-options">
+            <div class="tiposusuario">
+              <button><img src="img/user2.svg" alt=""></button>
+              <p>Usuário(a) Padrão</p>
+            </div>
+
+            <div class="tiposusuario">
+              <button onclick="selectUserType('Empresarial')"><img src="img/user2.svg" alt=""></button>
+              <p>Usuário(a) Empresarial</p>
+            </div>
+          </div>
+
+            <div class="setaCorfirmar" onclick="selectUserType('Padrão')">
+              <img src="/img/setaparacima.svg" alt="seta">
+            </div>
+
+        </div>
+      </div>
+
+      <!-- Caixa de Confirmação -->
+      <div class="confirmation-container" id="confirmation-box" style="display: none;">
+        <p>Ao clicar em seguir, você irá seguir como <span id="user-type"></span></p>
+        <div class="confirm-options">
+          <button onclick="goBack()">Cancelar</button>
+          <button onclick="confirmSelection()">Confirmar</button>
+        </div>
+      </div>
+    </div>
 
 
 
   </main>
 
   <button class="btn-scroll-top" arial-label="Voltar ao topo">
-    <img
-      src="img/arrow-top.svg"
-      alt="Voltar ao topo"
-      width="50"
-      height="50"
-    />
+    <img src="img/arrow-top.svg" alt="Voltar ao topo" width="50" height="50" />
   </button>
 
   <footer>
