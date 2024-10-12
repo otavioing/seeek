@@ -49,7 +49,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 body {
@@ -145,6 +144,24 @@ header .navsite {
     gap: 1rem;
 }
 
+.classSobrenos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 5rem;
+}
+
+header .navsite a {
+    color: var(--brancoBase);
+    transition: 0.3s;
+}
+
+header .navsite a:hover {
+    color: var(--azulBase);
+    transform: translateY(-0.2rem);
+}
+
 .navsite .navSelecionado {
     height: 100%;
     border-bottom: 3px solid var(--azulBase);
@@ -181,13 +198,6 @@ header .usersite img {
 
 header .logosite img {
     height: 100%;
-}
-
-header .sobrenoss {
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    padding: 5px;
 }
 
 header .hamburguer {
@@ -762,6 +772,15 @@ footer {
 /*-------------------------------- @media --------------------------------*/
 /*------------------------------------------------------------------------*/
 
+
+@media screen and (max-width:1300px){
+
+    header .pesquisasite{
+        justify-content: center;
+    }
+
+}
+
 @media screen and (max-width: 1200px) {
 
     header .pesquisasite input {
@@ -1123,3 +1142,4 @@ footer {
     }
 
 }
+
