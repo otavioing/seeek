@@ -40,14 +40,14 @@
 
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--brancoBase);
 }
@@ -55,7 +55,7 @@ a{
 /*-------------------------------- Modo Escuro --------------------------------*/
 
 
-.modoEscuro .form-container{
+.modoEscuro .form-container {
     color: var(--brancoBase);
     background-color: var(--ModoEscuroLog);
 }
@@ -64,7 +64,7 @@ a{
     color: var(--brancoBase);
 }
 
-.modoEscuro .sign-up-label button{
+.modoEscuro .sign-up-label button {
     background-color: var(--ModoEscuroLog);
 }
 
@@ -75,7 +75,8 @@ a{
 
 /*------------------------------Modal Portifolio-----------------------------*/
 
-#modalPort, .sign-up-modal{
+#modalPort,
+.sign-up-modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -85,31 +86,32 @@ a{
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal-content, .sign-up-content{
+.modal-content,
+.sign-up-content {
     position: relative;
     background-color: var(--brancoBase);
     margin: auto;
     width: 80%;
     height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.modal-header{
+.modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--preto);
     color: var(--brancoBase);
     padding: 1rem;
-    border: 0.365rem solid transparent ;
+    border: 0.365rem solid transparent;
     border-image: linear-gradient(-90deg, rgb(75, 15, 110)0%, rgb(45, 100, 240)100%) 1;
 }
 
-.botaoContratar{
+.botaoContratar {
     width: 10rem;
     border: none;
     padding: 1rem;
@@ -120,23 +122,23 @@ a{
     background-image: linear-gradient(-90deg, rgb(75, 15, 110)0%, rgb(45, 100, 240)100%);
 }
 
-.botaoContratar:hover{
+.botaoContratar:hover {
     background-image: linear-gradient(-90deg, rgb(90, 30, 125)0%, rgb(60, 115, 255)100%);
 }
 
-.modal-body{
+.modal-body {
     display: flex;
     gap: 2rem;
     padding: 0.5rem 1rem;
     height: auto;
 }
 
-.modal-nav{
+.modal-nav {
     margin: 0rem;
     gap: 0.5rem;
 }
 
-.modal-nav button{
+.modal-nav button {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,17 +149,17 @@ a{
     width: 4rem;
 }
 
-.modal-button{
+.modal-button {
     width: 3rem;
     height: auto;
     margin: 0.5rem;
 }
 
-#modalImage{
+#modalImage {
     width: 80%;
 }
 
-.close{
+.close {
     position: absolute;
     left: 98%;
     top: 0.5%;
@@ -167,15 +169,18 @@ a{
     font-weight: bold;
 }
 
-.close:hover, .close:focus{
+.close:hover,
+.close:focus {
     color: var(--cinzaBasec);
     text-decoration: none;
     cursor: pointer;
 }
-.perfilPort{
+
+.perfilPort {
     display: flex;
 }
-.perfilPort p{
+
+.perfilPort p {
     font-weight: 400;
     font-size: 1rem;
 }
@@ -184,10 +189,9 @@ a{
 /*-------------------------------- Login CSS --------------------------------*/
 /*---------------------------------------------------------------------------*/
 
-.mainlogin{
+.mainlogin {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -202,64 +206,75 @@ a{
     left: 0;
     background-size: cover;
     background-position: center;
+    object-fit: cover;
     width: 100%;
     height: 100%;
     opacity: 1;
-    transition: opacity 1s; /* Duração da transição */
+    transition: opacity 1s;
+    /* Duração da transição */
 }
 
 /*------------------------------------------------*/
 
-.logologin{
-    position: absolute;
-    left: 13%;
-    top: 35%;
+.logologin {
+    height: 100%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-end;
+    justify-content: center;
     color: var(--brancoBase);
-    height: 30%;
-    width: 63%;
-    gap: 1rem;
+    z-index: 0;
 }
 
-.logologin img{
+.logologin img {
     object-fit: cover;
     overflow: hidden;
-    height: 80%;
+    width: 80%;
 }
 
-.logologin h1{
-    position: absolute;
-    top: 70%;
-    left: 24%;
+.logologin h1 {
     font-size: 1.5rem;
     text-shadow: 4px 4px 5px #000;
 }
 
+.cardlogin {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 0;
+}
+
 .form-container{
     width: 20rem;
-    height: 36rem;
+    height: 30rem;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
     box-sizing: border-box;
     padding: 1rem 2rem;
-    position: absolute;
-    right: 10%;
 }
 
-.title{
+.form-containertablet {
+    background-color: var(--brancoBase);
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+}
+
+.title {
     text-align: center;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+        "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
     margin: 10px 0 30px 0;
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--preto);
 }
 
-.form{
+.form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -267,7 +282,8 @@ a{
     margin-bottom: 1rem;
 }
 
-.input, .contaBotao{
+.input,
+.contaBotao {
     border-radius: 20px;
     border: 1px solid #c0c0c0;
     outline: 0 !important;
@@ -275,12 +291,13 @@ a{
     padding: 12px 15px;
 }
 
-.sign-up-content{
+.sign-up-content {
     display: flex;
     flex-direction: column;
 }
 
-.sign-up-container, .type-container{
+.sign-up-container,
+.type-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -290,26 +307,27 @@ a{
     justify-content: center;
 }
 
-.sign-up-container input{
+.sign-up-container input {
     width: 100%;
 }
 
-.type-container{
+.type-container {
     flex-direction: row;
 }
 
-.sign-up-content h1, .sign-up-content h2{
+.sign-up-content h1,
+.sign-up-content h2 {
     color: var(--azulBase);
 }
 
-.contaBotao{
+.contaBotao {
     background-color: var(--azulBase);
     color: var(--brancoBase);
     border: none;
     cursor: pointer;
 }
 
-.sign-up-content{
+.sign-up-content {
     display: flex;
     align-items: center;
     width: 20%;
@@ -317,7 +335,7 @@ a{
     border-radius: 20px;
 }
 
-.sign-up-content .close{
+.sign-up-content .close {
     position: absolute;
     top: 0%;
     left: 87%;
@@ -325,17 +343,17 @@ a{
     font-size: 3rem;
 }
 
-.page-link{
+.page-link {
     text-decoration: underline;
     text-align: end;
     color: #747474;
     text-decoration-color: #747474;
 }
 
-.form-btn{
+.form-btn {
     padding: 0.75rem 1rem;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+        "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
     border-radius: 20px;
     border: 0 !important;
     outline: 0 !important;
@@ -345,55 +363,55 @@ a{
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 
-.form-btn a{
+.form-btn a {
     color: var(--brancoBase);
     text-decoration: none;
 }
 
 /*------Sistema de validação da senha------*/
 
-#aviso{
+#aviso {
     display: none;
     position: relative;
 }
 
-.valid{
+.valid {
     color: green;
 }
 
-.valid:before{
+.valid:before {
     position: relative;
     content: "✔";
 }
 
 /* Adiciona um "✖" e troca a cor para vemrmelho se os requrimentos não estarem certos */
 
-.invalid{
+.invalid {
     color: red;
 }
 
-.invalid:before{
+.invalid:before {
     position: relative;
     content: "✖";
 }
 
 /*-----------------------------------------*/
 
-.form-btn:active{
+.form-btn:active {
     box-shadow: none;
 }
 
-.sign-up-label{
+.sign-up-label {
     display: flex;
     justify-content: center;
     color: #747474;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+        "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
     gap: 0.5rem;
     margin: 1rem;
 }
 
-.sign-up-link{
+.sign-up-link {
     font-size: 0.75rem;
     text-decoration: underline;
     text-decoration-color: var(--azulBase);
@@ -401,7 +419,7 @@ a{
     cursor: pointer;
     font-weight: 800;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+        "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
 }
 
 .page-link-label {
@@ -409,7 +427,7 @@ a{
     justify-content: center;
     cursor: pointer;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+        "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--azulBase);
@@ -417,7 +435,7 @@ a{
 
 .page-link-label:hover {
     color: #000;
-} 
+}
 
 .buttons-container {
     width: 100%;
@@ -428,18 +446,19 @@ a{
     gap: 1rem;
 }
 
-.apple-login-button, .google-login-button{
+.apple-login-button,
+.google-login-button {
     border-radius: 1.5rem;
     box-sizing: border-box;
     padding: 0.75rem 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+        "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
     font-size: 11px;
     gap: 5px;
 }
@@ -454,173 +473,352 @@ a{
     border: 2px solid #747474;
 }
 
-.apple-icon, .google-icon {
+.apple-icon,
+.google-icon {
     font-size: 1rem;
 }
 
-.entrargoogle{
-      color:var(--preto);
+.entrargoogle {
+    color: var(--preto);
 }
+
 /*---------------------------------- Ajuda ----------------------------------*/
-.migalha-de-pao{
+.migalha-de-pao {
     margin: 1rem;
 }
-.AIndex{
-    color:#747474;
+
+.AIndex {
+    color: #747474;
     margin: 1rem;
 }
-.Ultimo{
+
+.Ultimo {
     color: #2B63F0;
 }
-.tituloA{
+
+.tituloA {
     margin-top: 9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.tituloA h1{
+
+.tituloA h1 {
     font-weight: 900;
     font-size: 7rem;
     color: #2B63F0;
 }
-.tituloA h2{
+
+.tituloA h2 {
     font-size: 2rem;
     color: #818181;
     margin: 1rem 0 3.5rem 0;
 }
-.Ausuario{
+
+.Ausuario {
     position: relative;
     display: flex;
     flex-direction: column;
     margin: 2rem;
 }
-.InfoUA{
+
+.InfoUA {
     margin-top: 9rem;
 }
-.InfoPA{
+
+.InfoPA {
     margin-top: 9rem;
     display: flex;
     align-items: end;
     flex-direction: column;
 }
-.InfoUA h1{
+
+.InfoUA h1 {
     font-size: 4rem;
     color: #2B63F0;
     margin-bottom: 1rem;
 }
-.InfoUA p{
+
+.InfoUA p {
     font-size: 2rem;
 }
-.Arte2{
+
+.Arte2 {
     position: absolute;
     left: 68%;
     top: 05%;
 }
-.InfoPA h1{
+
+.InfoPA h1 {
     font-size: 4rem;
     color: #2B63F0;
     margin-bottom: 1rem;
 }
-.InfoPA p{
+
+.InfoPA p {
     font-size: 2rem;
     text-align: end;
 }
-.Arte3{
+
+.Arte3 {
     position: absolute;
     top: 25%;
 }
-.InfoCursoVaga{
+
+.InfoCursoVaga {
     margin-top: 9rem;
 }
-.InfoCursoVaga h1{
+
+.InfoCursoVaga h1 {
     font-size: 4rem;
     color: #2B63F0;
     margin-bottom: 1rem;
 }
-.InfoCursoVaga{
+
+.InfoCursoVaga {
     font-size: 2rem;
 }
-.Arte4{
+
+.Arte4 {
     position: absolute;
     left: 62%;
     top: 51%;
 }
-.InfoCA{
+
+.InfoCA {
     margin-top: 9rem;
     margin-bottom: 10rem;
     display: flex;
     align-items: end;
     flex-direction: column;
 }
-.InfoCA h1{
+
+.InfoCA h1 {
     font-size: 4rem;
     color: #2B63F0;
     margin-bottom: 1rem;
 }
-.InfoCA p{
+
+.InfoCA p {
     font-size: 2rem;
     text-align: end;
 }
-.Arte5{
+
+.Arte5 {
     position: absolute;
     top: 75%;
 }
-.Arte5 img{
+
+.Arte5 img {
     width: 77%;
 }
-.migalha-de-pao{
+
+.migalha-de-pao {
     position: absolute;
     top: 13%;
 }
+
 /*-------------------------------- Sobre nós --------------------------------*/
-.PrSobreNos{
+.PrSobreNos {
     display: flex;
     margin: 10rem 2rem 10rem 2rem;
     justify-content: center;
     align-items: center;
     gap: 4rem;
 }
-.sobreNos p{
+
+.sobreNos p {
     font-size: 2rem;
     line-height: 3.5rem;
 }
-.Arte{
+
+.Arte {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80%;
 }
-.sobreNos h2{
+
+.sobreNos h2 {
     font-size: 2rem;
     color: #818181;
     margin: 1rem 0 3.5rem 0;
 
 }
-.sobreNos h1{
+
+.sobreNos h1 {
     font-size: 6rem;
     color: #2B63F0;
 }
-main .quemsomoslogin{
 
+main .quemsomoslogin {
     z-index: 1;
     display: inline;
     position: absolute;
     bottom: 2rem;
-    left: 1rem;
+    left: 3rem;
     font-size: 2rem;
     border-bottom: 2px solid var(--brancoBase);
     color: var(--brancoBase);
 }
-.faclogin{
 
+.faclogin {
+    height: 3rem;
+    width: 8rem;
+    background-color: var(--cinzaBase);
+    border: none;
     z-index: 1;
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 2rem;
     right: 3rem;
     font-size: 2rem;
     color: var(--brancoBase);
+    border-radius: 1.2rem;
+    gap: 0.2rem;
+    padding: 0.5rem;
+    color: var(--preto);
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.faclogin img {
+    height: 90%;
+}
+
+.faclogin p {
+    font-size: 1.5rem;
+}
+
+.logintablet{
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+
+.logologinseek{
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    padding: 0 8rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.logologinseek img{
+    height: 60%;
+}
+
+.cadastrarlogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.formcadastro{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.formcadastro input{
+    width: 65%;
+    height: 6rem;
+    border: 3px solid var(--cinzaBasee);
+    outline: none;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.formcadastro button{
+    width: 30%;
+    height: 5rem;
+    background-color: var(--azulBase);
+    color: var(--brancoBase);
+    font-size: 2rem;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    margin: 3rem 0;
+}
+
+.iflogar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+    gap: 0.3rem;
+    border-top: 3px solid var(--cinzaBasee);
+}
+
+.iflogar a{
+    color: var(--azulBase);
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*-------------------------------- @media --------------------------------*/
+/*------------------------------------------------------------------------*/
+
+@media screen and (max-width:1600px){
+
+    .logologin h1{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width:1200px){
+
+    .logintablet{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logologin{
+        display: none;
+    }
+
+    .cardlogin{
+        display: none;
+    }
+
+    .slideshow{
+        display: none;
+    }
+
+    .google-login-button, .apple-login-button{
+        width: 65%;
+        height: 5rem;
+    }
+
+    .buttons-container{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .entrargoogle{
+        font-size: 1.5rem;
+    }
+
+    .entrarapple{
+        font-size: 1.5rem;
+    }
+
 }
