@@ -412,14 +412,20 @@ a {
 }
 
 .sign-up-link {
+    border: none;
+    border-right: 1px solid #747474;
+    padding-right: 0.5rem;
+}
+
+.sign-up-link p {
     font-size: 0.75rem;
-    text-decoration: underline;
-    text-decoration-color: var(--azulBase);
     color: var(--azulBase);
-    cursor: pointer;
+    border-bottom: 1px solid var(--azulBase);
     font-weight: 800;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+    "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+    padding-bottom: 0.1rem;
+
 }
 
 .page-link-label {
