@@ -1031,10 +1031,6 @@ main .quemsomoslogin {
         font-size: 1.5rem;
     }
 
-    .quemsomoslogin a {
-        font-size: 1.1rem;
-    }
-
     .faclogin {
         height: 2rem;
         width: 5rem;
@@ -1088,10 +1084,6 @@ main .quemsomoslogin {
         padding: 1rem 0 0 0;
     }
 
-    .quemsomoslogin a {
-        font-size: 1.3rem;
-    }
-
     .faclogin {
         height: 2.5rem;
         width: 6rem;
@@ -1143,10 +1135,6 @@ main .quemsomoslogin {
     .iflogar {
         font-size: 1.5rem;
         padding: 1rem 0 0 0;
-    }
-
-    .quemsomoslogin a {
-        font-size: 1.3rem;
     }
 
     .faclogin {
