@@ -47,92 +47,374 @@
 
 /*-------------------------------- Modo Escuro fim--------------------------------*/
 
-.h1ajuda{
+.h1ajuda {
     font-size: 3.5rem;
     margin-top: 3.5rem;
     margin-left: 3.5rem;
 }
-.migalhadepao{
+
+.migalhadepao {
     margin-left: 6rem;
     margin-top: 1rem;
 }
-.migalhadepaosobrenoshome{
+
+.migalhadepaosobrenoshome {
     color: var(--cinzamigalha);
 }
-.migalhadepaosobrenos{
+
+.migalhadepaosobrenos {
     color: var(--azulBase);
 }
-.usuarioajuda{
+
+.usuarioajuda {
     margin-left: 3.5rem;
     margin-top: 3.5rem;
     font-size: 1.5rem;
     display: flex;
+    justify-content: space-between;
 }
-.usuarioajuda img{
-    width: 30rem;
+
+.usuarioajuda img {
+    width: 500px;
     display: flex;
-    margin-left: 17%;
+    margin-right: 5rem;
 
 }
-.usuarioajuda h2{
+
+.usuarioajuda h2 {
     color: var(--azulBase);
 }
-.usuarioajuda .textousuarioajuda{
-    margin-top: 2rem;
-}
 
-.portinfoeimg{
+.portajuda {
     margin-left: 3.5rem;
     margin-top: 3.5rem;
     font-size: 1.5rem;
     display: flex;
+    justify-content: space-between;
 }
-.portinfoeimg h2{
+
+.portajuda h2 {
     color: var(--azulBase);
 }
-.textousuarioportifolioajuda{
+
+.usuarioajuda .textousuarioajuda {
     margin-top: 2rem;
 }
-.portinfoeimg img{
-    width: 30rem;
-    display: flex;
-    margin-left: 17%;
+
+.textousuarioportifolioajuda {
+    margin-top: 2rem;
 }
-.cursosvagasajuda{
+
+.portinfoeimg {
+    display: flex;
+    align-items: center;
+}
+
+.portinfoeimg img {
+    width: 500px;
+    display: flex;
+    margin-right: 5rem;
+}
+
+.cursosvagasajuda {
     margin-left: 3.5rem;
     margin-top: 3.5rem;
     font-size: 1.5rem;
     display: flex;
+    justify-content: space-between;
 }
-.cursosvagasajuda img{
-    width: 30rem;
+
+.cursosvagasajuda img {
+    width: 500px;
     display: flex;
-    margin-left: 17%;
+    margin-right: 5rem;
 }
-.infocursosevagas h2{
+
+.infocursosevagas h2 {
     color: var(--azulBase);
 }
-.textocursoevagasajuda{
+
+.textocursoevagasajuda {
     margin-top: 2rem;
 }
-.cadastroajuda{
+
+.cadastroajuda {
     margin-left: 3.5rem;
     margin-top: 3.5rem;
     font-size: 1.5rem;
     display: flex;
+    justify-content: space-between;
 }
-.infocadastroajuda h2{
+
+.infocadastroajuda h2 {
     color: var(--azulBase);
 }
-.textocadastroajuda{
+
+.textocadastroajuda {
     margin-top: 2rem;
 }
-.cadastroajuda img{
-    width: 30rem;
+
+.imagemcadastro img {
+    width: 500px;
     display: flex;
-    margin-left: 21%;}
+    margin-right: 5rem;
+}
+
+.imagemcamera {
+    display: flex;
+    align-items: center;
+}
+
+.imagemcurvagas {
+    display: flex;
+    align-items: center;
+}
+
+.imagemcadastro {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:1300px) {
+
+    .imagemcadastro img {
+        width: 400px;
+    }
+
+    .cursosvagasajuda img {
+        width: 400px;
+    }
+
+    .portinfoeimg img {
+        width: 400px;
+    }
+
+    .usuarioajuda img {
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+
+    .imagemcadastro img {
+        width: 300px;
+    }
+
+    .cursosvagasajuda img {
+        width: 300px;
+    }
+
+    .portinfoeimg img {
+        width: 300px;
+    }
+
+    .usuarioajuda img {
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width:1100px) {
+
+    .imagemcadastro img {
+        width: 200px;
+    }
+
+    .cursosvagasajuda img {
+        width: 200px;
+    }
+
+    .portinfoeimg img {
+        width: 200px;
+    }
+
+    .usuarioajuda img {
+        width: 200px;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+
+    .imagemcadastro img {
+        width: 150px;
+    }
+
+    .cursosvagasajuda img {
+        width: 150px;
+    }
+
+    .portinfoeimg img {
+        width: 150px;
+    }
+
+    .usuarioajuda img {
+        width: 150px;
+    }
+
+}
+
+@media screen and (max-width:950px) {
+
+    .imagemcadastro {
+        display: none;
+    }
+
+    .imagemcurvagas {
+        display: none;
+    }
+
+    .portinfoeimg {
+        display: none;
+    }
+
+    .imagemcamera {
+        display: none;
+    }
+
+    .usuarioajuda {
+        width: 100%;
+    }
+
+    .portajuda {
+        width: 100%;
+    }
+
+    .cursosvagasajuda {
+        width: 100%;
+    }
+
+    .cadastroajuda {
+        width: 100%;
+    }
+
+    .h2usuario {
+        display: flex;
+        justify-content: center;
+    }
+
+    .textousuarioajuda {
+        display: flex;
+        justify-content: center;
+    }
+
+    .h2portifolio {
+        display: flex;
+        justify-content: center;
+    }
+
+    .textousuarioportifolioajuda {
+        display: flex;
+        justify-content: center;
+    }
+
+    .h2curevagasajuda {
+        display: flex;
+        justify-content: center;
+    }
+
+    .textocursoevagasajuda {
+        display: flex;
+        justify-content: center;
+    }
+
+    .h2cadastoajuda {
+        display: flex;
+        justify-content: center;
+    }
+
+    .textocadastroajuda {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+
+    .cadastroajuda {
+        margin-left: 0rem;
+        display: block;
+        justify-content: space-between;
+    }
+
+    .cursosvagasajuda {
+        margin-left: 0rem;
+        display: block;
+        justify-content: space-between;
+    }
+
+    .portajuda {
+        margin-left: 0rem;
+        display: block;
+        justify-content: space-between;
+    }
+
+    .usuarioajuda {
+        margin-left: 0rem;
+        display: block;
+        justify-content: space-between;
+    }
+
+}
 
 
+@media screen and (max-width:700px) {
+
+    .cadastroajuda {
+        font-size: 1.2rem;
+    }
+
+    .cursosvagasajuda {
+        font-size: 1.2rem;
+    }
+
+    .portajuda {
+        font-size: 1.2rem;
+    }
+
+    .usuarioajuda {
+        font-size: 1.2rem;
+    }
+
+}
+@media screen and (max-width:530px){
+
+    .cadastroajuda {
+        font-size: 1rem;
+    }
+
+    .cursosvagasajuda {
+        font-size: 1rem;
+    }
+
+    .portajuda {
+        font-size: 1rem;
+    }
+
+    .usuarioajuda {
+        font-size: 1rem;
+    }
 
 
+}
 
+@media screen and (max-width:430px){
+
+    .cadastroajuda {
+        font-size: 0.8rem;
+    }
+
+    .cursosvagasajuda {
+        font-size: 0.8rem;
+    }
+
+    .portajuda {
+        font-size: 0.8rem;
+    }
+
+    .usuarioajuda {
+        font-size: 0.8rem;
+    }
+}
