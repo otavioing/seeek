@@ -826,9 +826,9 @@ main .quemsomoslogin {
         align-items: center;
     }
 
-    .quemsomoslogin a {
-        color: var(--preto);
-        border-bottom: 2px solid var(--preto);
+    .quemsomoslogin {
+        display: none;
+
     }
 
 }
