@@ -273,33 +273,8 @@
         display: none;
     }
 
-    .usuarioajuda {
-        width: 100%;
-    }
-
-    .portajuda {
-        width: 100%;
-    }
-
-    .cursosvagasajuda {
-        width: 100%;
-    }
-
-    .cadastroajuda {
-        width: 100%;
-    }
-
-    .h2usuario {
-        display: flex;
-        justify-content: center;
-    }
 
     .textousuarioajuda {
-        display: flex;
-        justify-content: center;
-    }
-
-    .h2portifolio {
         display: flex;
         justify-content: center;
     }
@@ -309,17 +284,8 @@
         justify-content: center;
     }
 
-    .h2curevagasajuda {
-        display: flex;
-        justify-content: center;
-    }
 
     .textocursoevagasajuda {
-        display: flex;
-        justify-content: center;
-    }
-
-    .h2cadastoajuda {
         display: flex;
         justify-content: center;
     }
@@ -327,6 +293,13 @@
     .textocadastroajuda {
         display: flex;
         justify-content: center;
+    }
+
+    .migalhadepao{
+        margin-left: 1rem;
+    }
+    .h1ajuda{
+        margin-left: 1rem;
     }
 
 }

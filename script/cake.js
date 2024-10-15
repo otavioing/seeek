@@ -63,8 +63,8 @@ if (anoatual.length > 0) {
 }
 
 //script para abrir o menu do perfil 
-let botaomenuperfil = document.getElementById("abrirmenuperfil");
 botaomenuperfil.addEventListener("click", abrirMenu);
+let botaomenuperfil = document.getElementById("abrirmenuperfil");
 
 function abrirMenu() {
     if(menuperfil.style.left == "125rem" || menuperfil.style.left == "") {
@@ -79,5 +79,26 @@ function abrirMenu() {
 
     
 }
+
+//script para abrir e fechar a caixa flutuante cursos
+
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".botaocaixacursos");
+    buttons.forEach(button => {
+        button.addEventListener("click", abrircaixaflutuantecursos);
+    });
+});
+
+function abrircaixaflutuantecursos() {
+    var caixaflutuante = document.querySelector(".caixaflutuante");
+
+    if (caixaflutuante.style.display === "none" || caixaflutuante.style.display === "") {
+        caixaflutuante.style.display = "flex";
+    } else {
+        caixaflutuante.style.display = "none";
+    }
+}
+
+
 
 
