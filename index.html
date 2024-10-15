@@ -225,35 +225,67 @@
         <div class="user-options-pai">
 
           <div class="user-options">
+
             <div class="tiposusuario">
-              <button><img src="img/user2.svg" alt=""></button>
+              <button onclick="selectUserType('Padrão')"><img src="img/user2.svg" alt=""></button>
               <p>Usuário(a) Padrão</p>
             </div>
 
             <div class="tiposusuario">
-              <button onclick="selectUserType('Empresarial')"><img src="img/user2.svg" alt=""></button>
+              <button><img src="img/user2.svg" alt=""></button>
               <p>Usuário(a) Empresarial</p>
             </div>
           </div>
 
-            <div class="setaCorfirmar" onclick="selectUserType('Padrão')">
+            <div class="setaCorfirmar">
               <img src="/img/setaparacima.svg" alt="seta">
             </div>
 
         </div>
       </div>
-
-      <!-- Caixa de Confirmação -->
+      
+      
+      
+      <!-- Caixa  do tipo de usuario-->
       <div class="confirmation-container" id="confirmation-box" style="display: none;">
-        <p>Ao clicar em seguir, você irá seguir como <span id="user-type"></span></p>
-        <div class="confirm-options">
-          <button onclick="goBack()">Cancelar</button>
-          <button onclick="confirmSelection()">Confirmar</button>
+       <div class="seco">BEM-VINDO(A) </div>
+       <p class="pp">Antes de prossseguir, preencha os dados abaixo</p>
+        
+        <div class="form">
+          <div class="left-section">
+            <div class="profile-photo">
+              <div class="photo-placeholder">
+                <span>Adicionar foto de perfil</span>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="username">OBRIGATÓRIO<span class="required">*</span></label>
+              <input type="text" id="username" placeholder="Nome de Usuário">
+            </div>
+            <div class="input-group">
+              <label for="profession"></label>
+              <input type="text" id="profession" placeholder="Sua Profissão">
+            </div>
+          </div>
+    
+          <div class="right-section">
+            <div class="input-group">
+              <label class="Descricao1" for="description">Descrição</label>
+              <textarea id="description" rows="5" placeholder=></textarea>
+            </div>
+            <div class="certificates">
+              <label>Certificados</label>
+              <button class="add-section-btn">Adicionar seção ao perfil</button>
+            </div>
+            <button class="add-icon">+</button>
+          </div>
         </div>
+    
+      
       </div>
-    </div>
-
-
+    
+      </div> <!--div do container -->
+      
 
   </main>
 
