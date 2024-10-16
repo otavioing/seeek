@@ -1,0 +1,115 @@
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasee: #00008b;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --branco: #f3f3f3;
+
+    --vermelhom: #EF0000;
+
+
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroMesc2: #555555;
+
+    --ModoEscuroFontV: #5AB3FF;
+    --ModoEscuroFontC: #E197FF;
+
+
+}
+
+main{
+    padding: 2rem;
+
+}
+h1{
+    padding: 4rem 2rem;
+}
+
+
+.menuconfigoracoes{
+
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--cinzaBase);
+    width: 20%;
+    height: 70vh;
+    gap: 1rem;
+}
+.menuconfigoracoes button{
+
+    background-color: transparent;
+    border: none;
+    display: flex;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+.menuconfigoracoes li{
+    list-style: none;
+    margin-top: 1rem;
+}
+#selecionado{
+    border-left: 3px solid var(--azulBase);
+}
+.divconfigmain{
+    display: flex;
+    gap: 5rem;
+}
+.fontetexto{
+    font-size: 1.5rem;
+}
+.privacidadeconfig{
+    padding: 2rem;
+    background-color: var(--cinzaBase);
+    height: 28.5rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 20px;
+}
+.gapentreopcoesepergunta{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.opcaoprivacidade form{
+    display: flex;
+    gap: 0.5rem;
+}
+.containerconfig{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.notificacoesconfig{
+    padding: 2rem;
+    background-color: var(--cinzaBase);
+    height: 35rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 20px;
+}

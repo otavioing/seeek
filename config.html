@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/config.css">
+</head>
+
+<body>
+    <header class="inicio">
+
+
+        <button class="botaoMenu" id="botaoMenu">
+            <span class="linha1"></span>
+            <span class="linha2"></span>
+            <span class="linha3"></span>
+        </button>
+
+        <div class="logosite">
+            <img src="img/logo.svg" alt="Logo Seek">
+        </div>
+
+        <div class="userhover"><img src="img/user2.svg" alt=""></div>
+
+        <nav class="navsite">
+            <div id="headerexplurar" class="navSelecionado">
+                <a href="index.html" id="ExpA">Explorar</a>
+            </div>
+            <div id="headercursos" class="">
+                <a href="cursos.html" id="CurA">Cursos</a>
+            </div>
+            <div id="headervagas" class="">
+                <a href="vagas.html" id="VagA">Vagas</a>
+            </div>
+            <div class="sobrenoss"><a href="sobre.html" id="SobA">Sobre Nós</a></div>
+        </nav>
+
+        <div class="pesquisasite">
+            <input type="text" placeholder="Pesquisar">
+            <a href=""><img src="img/search2.svg" alt=""></a>
+        </div>
+
+        <div class="usersite">
+            <a href=""><img src="img/bell2.svg" alt=""></a>
+            <a href="login.html"><img src="img/user2.svg" alt=""></a>
+
+            <button id="abrirmenuperfil">teste menu perfil</button>
+
+
+
+        </div>
+
+        <nav class="hamburguer" id="menu">
+            <a class="botoesmenuhamburguer" href="index.html" id="ExpMenu">Explorar</a>
+            <a class="botoesmenuhamburguer" href="cursos.html" id="CurMenu">Cursos</a>
+            <a class="botoesmenuhamburguer" href="vagas.html" id="VagMenu">Vagas</a>
+            <a class="botoesmenuhamburguer" href="sobre.html" id="SobMenu">Sobre Nós</a>
+        </nav>
+
+
+
+    </header>
+
+    <main>
+        <h1>Configurações</h1>
+        <div class="divconfigmain">
+            <div class="menuconfigoracoes">
+                <ul id="listaconfig">
+                    <li><button id="selecionado">Privacidede</button></li>
+                    <li><button>Notificações</button></li>
+                    <li><button>Informações Usuário</button></li>
+                    <li><button>Email/Senha</button></li>
+                </ul>
+
+            </div>
+
+            <div class="containerconfig">
+            <div class="privacidadeconfig">
+
+                <h2>Privacidade</h2>
+
+                <div class="visibilidadedoperfil fontetexto gapentreopcoesepergunta">
+                    <div class="pergunta">
+                        <p>Deseja que todos possam ver seu perfil na área de busca ?</p>
+                    </div>
+                    <div class="opcaoprivacidade">
+                        <form action="">
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="visivel">
+                            <p>Sim</p>
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="invisivel">
+                            <p>Não</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="visibilidadedosprejetos fontetexto gapentreopcoesepergunta">
+                    <div class="pergunta">
+                        <p>Deseja que todos possam ver seus projetos na área de busca ?</p>
+                    </div>
+                    <div class="opcaoprivacidade">
+                        <form action="">
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="visivel">
+                            <p>Sim</p>
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="invisivel">
+                            <p>Não</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="visibilidadedoscursos fontetexto gapentreopcoesepergunta">
+                    <div class="pergunta">
+                        <p>Deseja que todos possam ver seus cursos na área de busca ?</p>
+                    </div>
+                    <div class="opcaoprivacidade">
+                        <form action="">
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="visivel">
+                            <p>Sim</p>
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="invisivel">
+                            <p>Não</p>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="visibilidadedoemaildousuario fontetexto gapentreopcoesepergunta">
+                    <div class="pergunta">
+                        <p>Deseja que todos possam ver seu email ?</p>
+                    </div>
+                    <div class="opcaoprivacidade">
+                        <form action="">
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="visivel">
+                            <p>Sim</p>
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="invisivel">
+                            <p>Não</p>
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <div class="notificacoesconfig">
+
+                <h2>Notificações</h2>
+
+                <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
+
+                    <p>Deseja receber um resumo das suas notificações por e-mail?</p>
+                    <div class="opcaoprivacidade">
+                        <form action="">
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="visivel">
+                            <p>Sim</p>
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="invisivel">
+                            <p>Não</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
+
+                    <p>Deseja receber uma notificação imediata de solicitação de contrato?</p>
+                    <div class="opcaoprivacidade">
+                        <form action="">
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="visivel">
+                            <p>Sim</p>
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="invisivel">
+                            <p>Não</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
+
+                    <p>Deseja receber uma notificação imediata quando solicitarem para participar de uma equipe ?</p>
+                    <div class="opcaoprivacidade">
+                        <form action="">
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="visivel">
+                            <p>Sim</p>
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="invisivel">
+                            <p>Não</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
+
+                    <p>Deseja receber notificação quando ouver ofertas/descontos?</p>
+                    <div class="opcaoprivacidade">
+                        <form action="">
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="visivel">
+                            <p>Sim</p>
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="invisivel">
+                            <p>Não</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
+
+                    <p>Deseja receber notificação quando ouver ofertas/descontos?</p>
+                    <div class="opcaoprivacidade">
+                        <form action="">
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="visivel">
+                            <p>Sim</p>
+                            <input type="radio" name="visibilidade" id="visibilidadeperfil" value="invisivel">
+                            <p>Não</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="informacoesousuario"></div>
+
+        </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="linksfooter">
+
+            <div class="infofooter">
+                <a href="ajuda.html" id="AjuF">Ajuda</a>
+                <a href="index.html" id="TerF">Termos</a>
+                <a href="index.html" id="AtuF">Atualizações</a>
+            </div>
+
+            <div class="infofooter">
+                <a href="index.html" id="SobF">Sobre Nós</a>
+                <a href="index.html" id="ConT">Contato</a>
+
+            </div>
+            <div class="infofooter">
+                <a href="avisos.html" id="AviF">Avisos</a>
+
+                <select name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+                    <option value="pt">Português</option>
+                    <option value="eng">english</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+
+            <div class="infofooter">
+                <img src="img/logoSeekk 3@2x.png" alt="Logo Seek">
+            </div>
+
+        </div>
+
+        <div class="direitosautorais">
+            <p id="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
+        </div>
+
+
+    </footer>
+
+    <script src="script/cake.js"></script>
+</body>
+
+</html>

@@ -62,72 +62,6 @@ if (anoatual.length > 0) {
     }
 }
 
-//script para abrir o menu do perfil 
-botaomenuperfil.addEventListener("click", abrirMenu);
-let botaomenuperfil = document.getElementById("abrirmenuperfil");
-
-function abrirMenu() {
-    if(menuperfil.style.left == "125rem" || menuperfil.style.left == "") {
-        menuperfil.style.left = "107rem";
-       
-    }
-    else {
-       if(menuperfil.style.left = "107rem" || menuperfil.style.left == "") {
-        menuperfil.style.left = "125rem";
-       }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-}
 
 //script para abrir e fechar a caixa flutuante cursos
 
@@ -140,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function abrircaixaflutuantecursos() {
     var caixaflutuante = document.querySelector(".caixaflutuante");
-
+    
     if (caixaflutuante.style.display === "none" || caixaflutuante.style.display === "") {
         caixaflutuante.style.display = "flex";
     } else {
@@ -148,6 +82,38 @@ function abrircaixaflutuantecursos() {
     }
 }
 
+//script para trocar o id do botão de acordo com o clique
 
+let listaconfig = document.getElementById("listaconfig");
+if (listaconfig) {
+    let botoeslist = listaconfig.querySelectorAll("button");
+    let quantitotal = botoeslist.length;
+    for (let g = 0; g < quantitotal; g++) {
+        botoeslist[g].addEventListener("click", alterarcategoria);
+    }
+    function alterarcategoria() {
+        for (let i = 0; i < quantitotal; i++) {
+            botoeslist[i].id = "";
+        }
+        this.id = "selecionado";
+    }
+}
+
+//script para abrir o menu do perfil 
+// botaomenuperfil.addEventListener("click", abrirMenu);
+// let botaomenuperfil = document.getElementById("abrirmenuperfil");
+
+// function abrirMenu() {
+//     if(menuperfil.style.left == "125rem" || menuperfil.style.left == "") {
+//         menuperfil.style.left = "107rem";
+       
+//     }
+//     else {
+//        if(menuperfil.style.left = "107rem" || menuperfil.style.left == "") {
+//         menuperfil.style.left = "125rem";
+//        }
+//     }
+
+// }
 
 
