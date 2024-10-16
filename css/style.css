@@ -678,11 +678,11 @@ footer {
 
 .container1 {
     background-color: var(--branco);
-    width: 40%;
-    height: 30rem;
+    width: 45%;
+    height: 35rem;
     position: fixed;
-    top: 25%;
-    left: 30%;
+    top: 15%;
+    left: 27.5%;
     border-radius: 1.5rem;
 }
 
@@ -785,7 +785,7 @@ footer {
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 1rem;
+padding: 1.5rem 1rem;
 }
 
 /* separacao de usuario */
@@ -811,6 +811,10 @@ padding: 1rem;
   .left-section, .right-section {
     flex: 1;
   }
+
+  .left-section{
+    padding: 0 1rem;
+  }
   
   .profile-photo {
     display: flex;
@@ -834,10 +838,13 @@ padding: 1rem;
   }
   
   .input-group{
-    margin-bottom: 15px;
+    padding-right: 1rem;
+    margin-bottom: 20px;
     color: red;
     font-size: 80%;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
   }
   
   .input-group label {
@@ -845,6 +852,7 @@ padding: 1rem;
     margin-bottom: 5px;
     font-weight: bold;
   }
+
 
   .Descricao1{
     color: black;
@@ -859,6 +867,10 @@ padding: 1rem;
     resize: none;
     background-color:var(--cinzaBase);
   }
+
+  .input-group textarea{
+    height: 5rem;
+  }
   
   .required {
     color: red;
@@ -867,9 +879,19 @@ padding: 1rem;
   
   .certificates {
     display: flex;
-    margin-top: 10px;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .certficatess{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
   }
   
   .add-section-btn {
@@ -896,8 +918,9 @@ padding: 1rem;
     cursor: pointer;
     background-color: var(--cinzaBase);
     border-radius: 50%;
-    height: 10%;
-    width: 15%;
+    border: 1px solid var(--cinzaBasee);
+    height: 2rem;
+    width: 2rem;
   }
   
 
@@ -1142,6 +1165,10 @@ padding: 1rem;
         width: 8rem;
     }
 
+    .container1 {
+        height: 30rem;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -1152,6 +1179,41 @@ padding: 1rem;
 
     .container1{
         font-size: 0.8rem;
+    }
+
+    .certificates>div{
+        width: 100%;
+    }
+
+    .add-section-btn{
+        font-size: 0.7rem;
+    }
+
+    .form{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .container1{
+        height: auto;
+        width: 90%;
+        left: 5%;
+        top: 10%;
+        padding-bottom: 1rem;
+    }
+
+    .input-group{
+        padding: 1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .left-section{
+        padding: 0;
+    }
+
+    .certficateslabel{
+        width: 100%;
+        padding-left: 1rem;
     }
 
 }
@@ -1214,6 +1276,11 @@ padding: 1rem;
     #menu {
         width: 10rem;
     }
+
+    .container1{
+        top: 5%;
+    }
+
 }
 
 @media screen and (max-width: 230px) {
@@ -1274,5 +1341,40 @@ padding: 1rem;
         height: 2rem;
     }
 
+    .photo-placeholder{
+        height: 90px;
+        width: 90px;
+        font-size: 0.8rem;
+    }
+
+    .pp{
+        font-size: 0.6rem;
+    }
+
+    .seco{
+        font-size: 1rem;
+    }
+
+    .input-group input{
+        font-size: 0.6rem;
+    }
+
+    .input-group textarea{
+        height: 3rem;
+    }
+
+    .add-section-btn{
+        font-size: 0.6rem;
+    }
+
+}
+
+@media screen and (max-height: 640px) {
+
+
+    .input-group{
+        padding: 0.4rem;
+    }
+    
 }
 
