@@ -686,6 +686,7 @@ footer {
     border-radius: 1.5rem;
 }
 
+
 .titulocadastro1 {
     background-color: var(--azulBase);
     color: white;
@@ -739,6 +740,7 @@ footer {
     align-items: center;
     justify-content: center;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -752,21 +754,152 @@ footer {
     display: flex;
     align-items: center;
     justify-content: end;
+    cursor: pointer;
+   
 }
 
 .setaCorfirmar img {
     height: 50%;
-    transform: rotate(90deg);
+    transform: rotate(1deg);
+    
+
 }
 
 .confirmation-container {
-    height: 5rem;
-    width: rem;
-    background-color: #1F1F1F;
+    height: 100%;
+   
+}
+.seco{
+    background-color: var(--azulBase);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    height: 15%;
+    font-size: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+.pp{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 1rem;
 }
 
+/* separacao de usuario */
 
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    
+  }
+  
+ 
+  .form {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    
+  }
+  
+  .left-section, .right-section {
+    flex: 1;
+  }
+  
+  .profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .photo-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--cinzaBasec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+   
 
+  }
+  
+  .input-group{
+    margin-bottom: 15px;
+    color: red;
+    font-size: 80%;
+    padding: 1rem;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .Descricao1{
+    color: black;
+  }
+  
+  .input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cinzaBase);
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    background-color:var(--cinzaBase);
+  }
+  
+  .required {
+    color: red;
+    margin-left: 5px;
+  }
+  
+  .certificates {
+    display: flex;
+    margin-top: 10px;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .add-section-btn {
+    padding: 10px;
+    border: none;
+    background-color: var(--cinzaBase);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3;
+    
+    
+    
+    
+
+  }
+  
+  .add-section-btn:hover {
+    background-color: #bbb;
+  }
+  
+  .add-icon {
+    font-size: 24px;
+    color: #1e63e9;
+    cursor: pointer;
+    background-color: var(--cinzaBase);
+    border-radius: 50%;
+    height: 10%;
+    width: 15%;
+  }
+  
 
 /*------------------------------------------------------------------------*/
 /*-------------------------------- @media --------------------------------*/

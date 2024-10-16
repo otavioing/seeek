@@ -26,3 +26,16 @@ window.onclick = function(event) {
         body.style.overflow = "auto";
     }
 }
+// Função para selecionar o tipo de usuário, caixinha de usuario pra escolher conta empresarial ou padrao.
+function selectUserType(type) {
+    // Exibe a caixa de confirmação
+    document.getElementById("user-selection").style.display = "none";
+    document.getElementById("confirmation-box").style.display = "block";
+
+    
+
+
+    // Define o tipo de usuário selecionado
+    document.getElementById("user-type").textContent = type;
+}
+
