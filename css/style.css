@@ -710,7 +710,7 @@ footer {
 .user-options-pai {
     display: flex;
     flex-direction: column;
-    height: 23rem;
+    height: 27rem;
     padding: 4rem 1rem 1rem 1rem;
     justify-content: space-between;
 }
@@ -728,6 +728,7 @@ footer {
     gap: 0.5rem;
     align-items: center;
     width: 50%;
+    text-align: center;
 }
 
 .tiposusuario button {
@@ -760,7 +761,7 @@ footer {
 
 .setaCorfirmar img {
     height: 50%;
-    transform: rotate(1deg);
+    transform: rotate(90deg);
     
 
 }
@@ -1281,6 +1282,19 @@ padding: 1.5rem 1rem;
         top: 5%;
     }
 
+    .tiposusuario button {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .tiposusuario {
+        gap: 0.2rem;
+    }
+
+    .tiposusuario p{
+        font-size: 0.7rem;
+    }
+
 }
 
 @media screen and (max-width: 230px) {
@@ -1365,6 +1379,11 @@ padding: 1.5rem 1rem;
 
     .add-section-btn{
         font-size: 0.6rem;
+    }
+
+    .tiposusuario button {
+        height: 3rem;
+        width: 3rem;
     }
 
 }
