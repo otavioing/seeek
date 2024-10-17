@@ -28,14 +28,56 @@
 
 
     --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroFilt: #131313;
     --ModoEscuroMesc: #656565;
     --ModoEscuroMesc2: #555555;
+    --ModoEscuroInput: #e2e2e2;
 
     --ModoEscuroFontV: #5AB3FF;
     --ModoEscuroFontC: #E197FF;
 
 
 }
+
+/*-------------------------------- Modo Escuro --------------------------------*/
+
+
+.modoEscuro {
+    color: white;
+    background-color: var(--ModoEscuroBase);
+}
+
+.modoEscuro .menuconfigoracoes, .modoEscuro .privacidadeconfig, .modoEscuro .notificacoesconfig, .modoEscuro .informacoesousuario {
+    background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro .menuconfigoracoes button {
+    color: var(--brancoBase);
+}
+
+.modoEscuro #divsalvarconfig{
+    background-color: var(--ModoEscuroMesc2);
+    border: 2px solid rgb(43, 43, 43);
+    
+
+}
+
+.modoEscuro #divsalvarconfig button{
+    color:var(--ModoEscuroFontV);
+    border-bottom: 2px solid var(--ModoEscuroFontV)
+
+}
+
+.modoEscuro .form-control {
+    background-color: var(--ModoEscuroInput);
+}
+
+
+/*-------------------------------- Modo Escuro Fim --------------------------------*/
+
+
+
+
 
 main{
     padding: 2rem;
