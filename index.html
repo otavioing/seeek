@@ -47,7 +47,7 @@
       <a href=""><img src="img/bell2.svg" alt=""></a>
       <a href="login.html"><img src="img/user2.svg" alt=""></a>
 
-      <button id="abrirmenuperfil">teste menu perfil</button>
+      <button id="abrirmenuperfil" onclick="abrirMenu()">teste menu perfil</button>
 
 
 
@@ -66,9 +66,16 @@
 
   <div id="menuperfil" class="menuperfil">
 
-    <a href="">Perfil</a>
-    <a href="">Configurações</a>
-    <button>Tema</button>
+    <a href="">Meu Perfil</a>
+    <a href="config.html">Configurações</a>
+    <p>Tema</p>
+<label class="switch">
+    <input onclick="MudarModos()" type="checkbox">
+    <span class="slider"></span>
+</label>
+    <!-- <div>
+      <button onclick="MudarModos()">Sol/lua</button>
+    </div> -->
     <button id="sairdomenuperfil">Sair</button>
 
 
@@ -84,10 +91,6 @@
       <a href="index.html" id="TenA">Tendências</a>
     </div>
 
-    <div>
-      <button onclick="MudarModos()">Sol/lua</button>
-
-    </div>
 
 
   </section>

@@ -100,21 +100,21 @@ if (listaconfig) {
 }
 
 //script para abrir o menu do perfil 
-// botaomenuperfil.addEventListener("click", abrirMenu);
-// let botaomenuperfil = document.getElementById("abrirmenuperfil");
+botaomenuperfil.addEventListener("click", abrirMenu);
+let botaomenuperfil = document.getElementById("abrirmenuperfil");
 
-// function abrirMenu() {
-//     if(menuperfil.style.left == "125rem" || menuperfil.style.left == "") {
-//         menuperfil.style.left = "107rem";
-       
-//     }
-//     else {
-//        if(menuperfil.style.left = "107rem" || menuperfil.style.left == "") {
-//         menuperfil.style.left = "125rem";
-//        }
-//     }
+function abrirMenu() {
+    if(menuperfil.style.left == "125rem" || menuperfil.style.left == "") {
+        menuperfil.style.left = "107rem";
+    }
+    else {
+       if(menuperfil.style.left = "107rem" || menuperfil.style.left == "") {
+        menuperfil.style.left = "125rem";
+       }
 
-// }
+    }
+
+}
 
 //script para fazer a barra lateral da aba de configurações funcinar
 function privacidade() {
