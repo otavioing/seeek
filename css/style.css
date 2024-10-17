@@ -679,7 +679,7 @@ footer {
 .container1 {
     background-color: var(--branco);
     width: 45%;
-    height: 35rem;
+    height: auto;
     position: fixed;
     top: 15%;
     left: 27.5%;
@@ -1167,7 +1167,11 @@ padding: 1.5rem 1rem;
     }
 
     .container1 {
-        height: 30rem;
+        height: auto;
+    }
+
+    .user-options-pai {
+        height: 23rem;
     }
 
 }
