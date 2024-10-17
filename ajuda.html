@@ -27,11 +27,15 @@
     <div class="userhover"><img src="img/user2.svg" alt=""></div>
 
     <nav class="navsite">
-      <div class="navSelecionado">
+      <div id="headerexplurar" class="navSelecionado">
         <a href="index.html" id="ExpA">Explorar</a>
       </div>
-      <a href="cursos.html" id="CurA">Cursos</a>
-      <a href="vagas.html" id="VagA">Vagas</a>
+      <div id="headercursos" class="">
+        <a href="cursos.html" id="CurA">Cursos</a>
+      </div>
+      <div id="headervagas" class="">
+        <a href="vagas.html" id="VagA">Vagas</a>
+      </div>
       <div class="sobrenoss"><a href="sobre.html" id="SobA">Sobre Nós</a></div>
     </nav>
 
@@ -43,8 +47,12 @@
     <div class="usersite">
       <a href=""><img src="img/bell2.svg" alt=""></a>
       <a href="login.html"><img src="img/user2.svg" alt=""></a>
-    </div>
 
+      <button id="abrirmenuperfil" onclick="abrirMenu()">teste menu perfil</button>
+
+
+
+    </div>
     <nav class="hamburguer" id="menu">
       <a class="botoesmenuhamburguer" href="index.html" id="ExpMenu">Explorar</a>
       <a class="botoesmenuhamburguer" href="cursos.html" id="CurMenu">Cursos</a>
@@ -54,7 +62,25 @@
 
 
 
+
+    <div id="menuperfil" class="menuperfil">
+  
+      <a href="">Meu Perfil</a>
+      <a href="config.html">Configurações</a>
+      <p>Tema</p>
+  <label class="switch">
+      <input onclick="MudarModos()" type="checkbox">
+      <span class="slider"></span>
+  </label>
+      <!-- <div>
+        <button onclick="MudarModos()">Sol/lua</button>
+      </div> -->
+      <button id="sairdomenuperfil">Sair</button>
+  
+  
+    </div>
   </header>
+
   <section class="migalhadepao">
 
     <a class="migalhadepaosobrenoshome" href="">Home></a> <a class="migalhadepaosobrenos" href="">Ajuda</a>
@@ -180,6 +206,7 @@
 
   <script src="script/lfy.js"></script>
   <script src="script/cautela.js"></script>
+  <script src="script/cake.js"></script>
 
 </body>
 

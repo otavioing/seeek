@@ -15,47 +15,71 @@
 
 
         <button class="botaoMenu" id="botaoMenu">
-            <span class="linha1"></span>
-            <span class="linha2"></span>
-            <span class="linha3"></span>
+          <span class="linha1"></span>
+          <span class="linha2"></span>
+          <span class="linha3"></span>
         </button>
-
+    
         <div class="logosite">
-            <img src="img/logo.svg" alt="Logo Seek">
+          <img src="img/logo.svg" alt="Logo Seek">
         </div>
-
+    
         <div class="userhover"><img src="img/user2.svg" alt=""></div>
-
+    
         <nav class="navsite">
-
+          <div id="headerexplurar" class="navSelecionado">
             <a href="index.html" id="ExpA">Explorar</a>
+          </div>
+          <div id="headercursos" class="">
             <a href="cursos.html" id="CurA">Cursos</a>
+          </div>
+          <div id="headervagas" class="">
             <a href="vagas.html" id="VagA">Vagas</a>
-            <div class="navSelecionado">
-               <div class="classSobrenos"><a href="sobre.html" id="SobA">Sobre Nós</a></div> 
-            </div>
+          </div>
+          <div class="sobrenoss"><a href="sobre.html" id="SobA">Sobre Nós</a></div>
         </nav>
-
+    
         <div class="pesquisasite">
-            <input type="text" placeholder="Pesquisar">
-            <a href=""><img src="img/search2.svg" alt=""></a>
+          <input type="text" placeholder="Pesquisar">
+          <a href=""><img src="img/search2.svg" alt=""></a>
         </div>
-
+    
         <div class="usersite">
-            <a href=""><img src="img/bell2.svg" alt=""></a>
-            <a href="login.html"><img src="img/user2.svg" alt=""></a>
+          <a href=""><img src="img/bell2.svg" alt=""></a>
+          <a href="login.html"><img src="img/user2.svg" alt=""></a>
+    
+          <button id="abrirmenuperfil" onclick="abrirMenu()">teste menu perfil</button>
+    
+    
+    
         </div>
-
         <nav class="hamburguer" id="menu">
-            <a class="botoesmenuhamburguer" href="index.html" id="ExpMenu">Explorar</a>
-            <a class="botoesmenuhamburguer" href="cursos.html" id="CurMenu">Cursos</a>
-            <a class="botoesmenuhamburguer" href="vagas.html" id="VagMenu">Vagas</a>
-            <a class="botoesmenuhamburguer" href="sobre.html" id="SobMenu">Sobre Nós</a>
+          <a class="botoesmenuhamburguer" href="index.html" id="ExpMenu">Explorar</a>
+          <a class="botoesmenuhamburguer" href="cursos.html" id="CurMenu">Cursos</a>
+          <a class="botoesmenuhamburguer" href="vagas.html" id="VagMenu">Vagas</a>
+          <a class="botoesmenuhamburguer" href="sobre.html" id="SobMenu">Sobre Nós</a>
         </nav>
-
-
-
-    </header>
+    
+    
+    
+    
+        <div id="menuperfil" class="menuperfil">
+      
+          <a href="">Meu Perfil</a>
+          <a href="config.html">Configurações</a>
+          <p>Tema</p>
+      <label class="switch">
+          <input onclick="MudarModos()" type="checkbox">
+          <span class="slider"></span>
+      </label>
+          <!-- <div>
+            <button onclick="MudarModos()">Sol/lua</button>
+          </div> -->
+          <button id="sairdomenuperfil">Sair</button>
+      
+      
+        </div>
+      </header>
 
     <section class="migalhadepao">
 
