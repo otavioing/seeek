@@ -68,7 +68,6 @@ a {
 
 /*-------------------------------- Modo Escuro --------------------------------*/
 
-
 .modoEscuro {
     color: white;
     background-color: var(--ModoEscuroBase);
@@ -113,6 +112,10 @@ a {
     color: var(--brancoBase);
 }
 
+.modoEscuro .modal-body , .modoEscuro .modal-button, .modoEscuro .modal-nav button{
+    background-color: var(--ModoEscuroBase);
+    color: white;
+}
 
 /*-------------------------------- Header inicio --------------------------------*/
 

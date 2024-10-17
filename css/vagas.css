@@ -28,6 +28,7 @@
 
 
     --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroFilt: #131313;
     --ModoEscuroMesc: #656565;
     --ModoEscuroMesc2: #555555;
 
@@ -69,7 +70,8 @@
 .modoEscuro h1,
 .modoEscuro .filtroflutuante h2,
 .modoEscuro .aplicar a,
-.modoEscuro .filtrar1200px {
+.modoEscuro .filtrar1200px 
+{
     color: var(--ModoEscuroFontV)
 }
 
@@ -79,6 +81,26 @@
     border-bottom: var(--ModoEscuroFontV) 1px solid;
 }
 
+
+.modoEscuro .botaoenviarproposta button{
+    background-color: var(--ModoEscuroFontV);
+}
+
+.modoEscuro .mmoreinfo button , .modoEscuro .aplicarfiltrovagas button,  .modoEscuro .caminhonavegaçãovagas h1{
+    color: var(--ModoEscuroFontV);
+} 
+
+.modoEscuro .vagas  {
+    background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro .titulosfiltroflutuante, .modoEscuro {
+    border-bottom: 1.5px solid var(--ModoEscuroFontV);
+}
+
+.modoEscuro .limparfiltrovagas button{
+    color: var(--branco);
+}
 /*-------------------------------- Modo Escuro fim--------------------------------*/
 
 

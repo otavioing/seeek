@@ -29,6 +29,7 @@
 
 
     --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroFilt: #131313;
     --ModoEscuroMesc: #656565;
     --ModoEscuroMesc2: #555555;
 
@@ -53,12 +54,14 @@
     
 }
 
-.modoEscuro a.migalhadepaocursos ,.modoEscuro .campo p , .modoEscuro .campos p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee ,.modoEscuro .limparfiltro a{
+.modoEscuro a.migalhadepaocursos ,.modoEscuro .campo p , .modoEscuro .campos p , .modoEscuro .indefi , .modoEscuro .temmes , .modoEscuro .presen , .modoEscuro .homee ,.modoEscuro .limparfiltro a , 
+.modoEscuro .limparfiltrocursos button, .modoEscuro .cursos h1, .modoEscuro .nomedocursoedoautor{
     color: white; 
+
 }
 
-.modoEscuro .filtroflutuante h2 , .modoEscuro p.filtrar, 
-.modoEscuro .aplicar a , .modoEscuro h1 {
+.modoEscuro .filtroflutuante h2 , .modoEscuro p.filtrar, .modoEscuro .aplicar a , 
+.modoEscuro h1, .modoEscuro .aplicarfiltrocursos button, .modoEscuro .valordocursoebotaofavorito p{
     color: var(--ModoEscuroFontC);
 }
 
@@ -69,6 +72,18 @@
 .modoEscuro .caminhonavegaçãocursos a {
     color: rgb(255, 255, 255);
 }
+
+.modoEscuro .titulosfiltroflutuante {
+    border-bottom: 1.5px solid var(--ModoEscuroFontC);
+}
+
+.modoEscuro .cursos{
+    background-color: var(--ModoEscuroFilt);
+}
+
+
+
+
 
 .migalhadepaocursos a{
     color: var(--roxobase);

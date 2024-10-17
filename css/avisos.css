@@ -28,6 +28,7 @@
 
 
     --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroFilt: #131313;
     --ModoEscuroMesc: #656565;
     --ModoEscuroMesc2: #555555;
 
@@ -58,7 +59,11 @@
 }
 
 .modoEscuro .caixaatualizacaoesavisos {
-    background-color: var(--ModoEscuroMesc);
+    background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro .servidor , .modoEscuro .portifolios,.modoEscuro .aparencia , .modoEscuro .responsividade{
+    border: 2px solid var(--brancoBase);
 }
 /*-------------------------------- Modo Escuro Fim --------------------------------*/
 
