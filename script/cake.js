@@ -116,4 +116,33 @@ if (listaconfig) {
 
 // }
 
+//script para fazer a barra lateral da aba de configurações funcinar
+function privacidade() {
+    let privacidade = document.getElementById("privacidadeconfig");
+    let notificacao = document.getElementById("notificacoesconfig");
+    let infouser = document.getElementById("informacoesousuario");
 
+    notificacao.style.display = "none";
+    infouser.style.display = "none";
+    privacidade.style.display = "flex";
+}
+
+function notificaacoes() {
+    let privacidade = document.getElementById("privacidadeconfig");
+    let notificacao = document.getElementById("notificacoesconfig");
+    let infouser = document.getElementById("informacoesousuario");
+
+    privacidade.style.display = "none";
+    infouser.style.display = "none";
+    notificacao.style.display = "flex";
+}
+
+function informacoesuser() {
+    let privacidade = document.getElementById("privacidadeconfig");
+    let notificacao = document.getElementById("notificacoesconfig");
+    let infouser = document.getElementById("informacoesousuario");
+
+    privacidade.style.display = "none";
+    notificacao.style.display = "none";
+    infouser.style.display = "flex";
+}
