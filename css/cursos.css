@@ -107,7 +107,7 @@ main{
     background-color: transparent;
     border: 1px solid var(--cinzaBasee);
     margin-top: 5rem;
-    height: 85vh;
+    height: 50rem;
     width: 20%;
     border-radius: 10px;
     padding: 3rem;
@@ -308,6 +308,11 @@ main{
 .botaocaixacursos{
     cursor: pointer;
     border: none;
+}
+.containercursos button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 /*inicio caixa flutuante*/

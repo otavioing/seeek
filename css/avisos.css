@@ -185,6 +185,13 @@
     .textoavisos p{
         font-size: 1.3rem;
     }
+    .avisos {
+        padding: 4rem 3rem;
+    }
+    
+    .atualizacoes{
+        padding: 4rem 3rem ;
+    }
 }
 @media screen and (max-width: 750px){
 
@@ -202,6 +209,13 @@
     }
     .servidor{
         font-size: 1.3rem;
+    }
+    .avisos {
+        padding: 4rem 2rem;
+    }
+    
+    .atualizacoes{
+        padding: 4rem 2rem ;
     }
 }
 @media screen and (max-width: 660px){
@@ -238,5 +252,12 @@
     }
     .servidor{
         font-size: 0.8rem;
+    }
+    .avisos {
+        padding: 4rem 1rem;
+    }
+    
+    .atualizacoes{
+        padding: 4rem 1rem ;
     }
 }
