@@ -644,8 +644,9 @@ footer {
 
 #menuperfil {
     position: absolute;
-    left: 107rem;
-    /* left: 125rem; */
+    top: 6.5rem;
+    /* left: 107rem; */
+    left: 125rem;
     background-color: var(--brancomenuperfil);
     width: 13rem;
     height: 15rem;
