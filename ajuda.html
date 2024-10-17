@@ -28,15 +28,15 @@
 
     <nav class="navsite">
       <div id="headerexplurar" class="navSelecionado">
-        <a href="index.html" id="ExpA">Explorar</a>
+        <a href="index.html" class="ExpA">Explorar</a>
       </div>
       <div id="headercursos" class="">
-        <a href="cursos.html" id="CurA">Cursos</a>
+        <a href="cursos.html" class="CurA">Cursos</a>
       </div>
       <div id="headervagas" class="">
-        <a href="vagas.html" id="VagA">Vagas</a>
+        <a href="vagas.html" class="VagA">Vagas</a>
       </div>
-      <div class="sobrenoss"><a href="sobre.html" id="SobA">Sobre Nós</a></div>
+      <div class="sobrenoss"><a href="sobre.html" class="SobA">Sobre Nós</a></div>
     </nav>
 
     <div class="pesquisasite">
@@ -54,10 +54,10 @@
 
     </div>
     <nav class="hamburguer" id="menu">
-      <a class="botoesmenuhamburguer" href="index.html" id="ExpMenu">Explorar</a>
-      <a class="botoesmenuhamburguer" href="cursos.html" id="CurMenu">Cursos</a>
-      <a class="botoesmenuhamburguer" href="vagas.html" id="VagMenu">Vagas</a>
-      <a class="botoesmenuhamburguer" href="sobre.html" id="SobMenu">Sobre Nós</a>
+      <a class="botoesmenuhamburguer" href="index.html" class="ExpA">Explorar</a>
+      <a class="botoesmenuhamburguer" href="cursos.html" class="CurA">Cursos</a>
+      <a class="botoesmenuhamburguer" href="vagas.html" class="VagA">Vagas</a>
+      <a class="botoesmenuhamburguer" href="sobre.html" class="SobA">Sobre Nós</a>
     </nav>
 
 
@@ -65,9 +65,9 @@
 
     <div id="menuperfil" class="menuperfil">
   
-      <a href="">Meu Perfil</a>
-      <a href="config.html">Configurações</a>
-      <p>Tema</p>
+      <a href="" class="Perf">Meu Perfil</a>
+      <a href="config.html" class="Conf">Configurações</a>
+      <p class="tema">Tema</p>
   <label class="switch">
       <input onclick="MudarModos()" type="checkbox">
       <span class="slider"></span>
@@ -75,7 +75,7 @@
       <!-- <div>
         <button onclick="MudarModos()">Sol/lua</button>
       </div> -->
-      <button id="sairdomenuperfil">Sair</button>
+      <button id="sairdomenuperfil" class="sairP">Sair</button>
   
   
     </div>
@@ -171,18 +171,18 @@
     <div class="linksfooter">
 
       <div class="infofooter">
-        <a href="ajuda.html" id="AjuF">Ajuda</a>
-        <a href="index.html" id="TerF">Termos</a>
-        <a href="index.html" id="AtuF">Atualizações</a>
+        <a href="ajuda.html" class="AjuF">Ajuda</a>
+        <a href="index.html" class="TerF">Termos</a>
+        <a href="index.html" class="AtuF">Atualizações</a>
       </div>
 
       <div class="infofooter">
-        <a href="sobre.html" id="SobF">Sobre Nós</a>
-        <a href="index.html" id="ConT">Contato</a>
+        <a href="index.html" class="SobA">Sobre Nós</a>
+        <a href="index.html" class="ConT">Contato</a>
 
       </div>
       <div class="infofooter">
-        <a href="avisos.html" id="AviF">Avisos</a>
+        <a href="avisos.html" class="AviF">Avisos</a>
 
         <select name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
           <option value="pt">Português</option>
@@ -198,11 +198,12 @@
     </div>
 
     <div class="direitosautorais">
-      <p id="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
+      <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
     </div>
 
 
   </footer>
+
 
   <script src="script/lfy.js"></script>
   <script src="script/cautela.js"></script>
