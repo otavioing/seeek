@@ -1,0 +1,634 @@
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasee: #00008b;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --branco: #f3f3f3;
+
+    --vermelhom: #EF0000;
+
+
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroMesc2: #555555;
+
+    --ModoEscuroFontV: #5AB3FF;
+    --ModoEscuroFontC: #E197FF;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*-------------------------------- Modo Escuro --------------------------------*/
+
+
+.modoEscuro {
+    color: white;
+    background-color: var(--ModoEscuroBase);
+}
+
+.modoEscuro .contatosobrenos2 a {
+    color: var(--brancoBase);
+}
+
+/*-------------------------------- Modo Escuro Fim --------------------------------*/
+
+
+.migalhadepao {
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+
+.migalhadepaosobrenoshome {
+    color: var(--cinzamigalha);
+}
+
+.migalhadepaosobrenos {
+    color: var(--azulBase);
+}
+
+main {
+    padding: 3rem 6rem;
+    width: 100%;
+}
+
+.h1sobrenos {
+    height: auto;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.textosobrenos {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.textosobrenos2 {
+    font-size: 1.5rem;
+}
+
+.infosobrenos {
+    height: 28rem;
+}
+
+.infosobrenos img {
+    width: 400px;
+    display: inline-flex;
+    /* position: relative;
+    left: 55rem;
+    bottom: 27rem; */
+}
+
+.h2sobrenos {
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.containersobrenos {
+    display: inline;
+    height: 10rem;
+
+}
+
+.sobrenodnome img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.sobrenodnome {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+
+}
+
+.infocartaosobrenos2 h4,
+.infocartaosobrenos2 p {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.paicontainersobrenos {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15rem 15rem 15rem;
+    gap: 3rem;
+}
+
+.contatosobrenos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.h2contatoedesc h2 {
+    font-size: 2rem;
+}
+
+.h2contatoedesc p {
+    font-size: 1.5rem;
+}
+
+.redessociais {
+    display: flex;
+    align-items: center;
+    gap: 8%;
+}
+
+#fotosobrenos {
+    width: 100%;
+    height: auto;
+}
+
+#fotosobrenos img {
+    height: 80%;
+    width: auto;
+}
+
+.contatosobrenos2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    font-size: 1.5rem;
+}
+
+.contatosobrenos2 div {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    gap: 0.3rem;
+}
+
+.contatosobrenos2 a {
+    color: var(--preto);
+}
+
+.contatosobrenos2 div img {
+    width: 30px;
+}
+
+.paisobrenos {
+    display: inline-flex;
+    justify-content: space-between;
+    height: 40rem;
+    width: 100%;
+}
+
+.people {
+    width: 100%;
+}
+
+.infosobrenos {
+    width: 45%;
+}
+
+.artepaginasobrenos {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.artepaginasobrenos img {
+    height: 80%;
+    width: 100%;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*-------------------------------- @media --------------------------------*/
+/*------------------------- Buga abaixo de 175px -------------------------*/
+
+@media screen and (max-width: 1200px) {
+
+    main {
+        padding: 4rem;
+    }
+
+    .artepaginasobrenos img {
+        height: auto;
+    }
+
+    .migalhadepao {
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
+    #fotosobrenos{
+        height: 18rem;
+    }
+    .redessociais {
+        gap: 6%;
+    }
+
+    .infosobrenos img {
+        width: 300px;
+        display: inline-flex;
+    }
+
+    .h1sobrenos {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .textosobrenos {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+
+    }
+
+    .textosobrenos2 {
+        font-size: 1.5rem;
+    }
+
+    .infosobrenos {
+        height: 28rem;
+    }
+
+    .infosobrenos img {
+        display: inline-flex;
+    }
+
+    .h2sobrenos {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .containersobrenos {
+        display: inline;
+        height: 10rem;
+
+    }
+
+    .sobrenodnome img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .sobrenodnome h4,
+    .sobrenodnome p {
+        font-size: 1.3rem;
+    }
+
+    .paicontainersobrenos {
+        grid-template-rows: 10rem 10rem 10rem;
+    }
+
+    #fotosobrenos {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+
+    .h1sobrenos {
+        font-size: 1.7rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .h2sobrenos {
+        font-size: 1.7rem;
+    }
+
+    .textosobrenos {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+
+    }
+    .contatosobrenos2{
+        font-size: 1.3rem;
+    }
+    .textosobrenos2 {
+        font-size: 1.3rem;
+    }
+
+    .paisobrenos {
+        height: 25rem;
+    }
+
+    .infosobrenos {
+        width: 55%;
+    }
+
+    .artepaginasobrenos {
+        width: 40%;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    .sobrenodnome h4,
+    .sobrenodnome p {
+        font-size: 1.1rem;
+    }
+
+    .sobrenodnome img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .h2contatoedesc p {
+        font-size: 1.3rem;
+    }
+
+    #fotosobrenos {
+        width: 100%;
+        height: 14rem;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    .h1sobrenos {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .textosobrenos {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+
+    }
+
+    .textosobrenos2 {
+        font-size: 1.1rem;
+    }
+
+    .paisobrenos {
+        height: 22rem;
+    }
+    .contatosobrenos2{
+        font-size: 1rem;
+    }
+    .sobrenodnome h4,
+    .sobrenodnome p {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    .paisobrenos {
+        display: inline-block;
+        height: auto;
+        position: relative;
+    }
+
+    .infosobrenos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .h1sobrenos {
+        width: 100%;
+        height: 10%;
+    }
+
+    .textosobrenosnos {
+        width: 100%;
+    }
+
+
+    .textosobrenos,
+    .textosobrenos2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .artepaginasobrenos {
+        height: 100%;
+        width: 100%;
+        opacity: 0.2;
+        position: absolute;
+        top: 0%;
+        display: flex;
+        justify-content: center;
+        padding-top: 3rem;
+    }
+
+    .artepaginasobrenos img {
+        height: 90%;
+    }
+
+    .paicontainersobrenos {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 7rem);
+    }
+
+    .sobrenodnome h4,
+    .sobrenodnome p {
+        font-size: 1.2rem;
+    }
+    .contatosobrenos2{
+        font-size: 1.2rem;
+    }
+    #fotosobrenos {
+        width: 100%;
+        height: 8rem;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+
+    .textosobrenos,
+    .textosobrenos2 {
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .sobrenodnome h4,
+    .sobrenodnome p {
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .h2contatoedesc p {
+        font-size: 1.1rem;
+    }
+    #fotosobrenos {
+        height: 6rem;
+    }
+    .contatosobrenos2{
+        gap: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .h1sobrenos {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .textosobrenos,
+    .textosobrenos2 {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+
+    }
+
+    .sobrenodnome h4,
+    .sobrenodnome p {
+        font-size: 1rem;
+    }
+    .contatosobrenos2{
+        font-size: 0.8rem;
+    }
+
+    .sobrenodnome img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .paicontainersobrenos {
+        grid-template-rows: 7rem 7rem 7rem;
+    }
+
+    #fotosobrenos {
+        width: 100%;
+        height: 4rem;
+    }
+
+}
+
+@media screen and (max-width:330px) {
+
+    .sobrenodnome img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .sobrenodnome p {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width:275px) {
+
+    .migalhadepao {
+        margin-left: 1rem;
+    }
+
+    .sobrenodnome p {
+        display: none;
+    }
+
+    .paicontainersobrenos {
+        height: 36rem;
+        gap: 0;
+        grid-template-rows: repeat(6, 6rem);
+    }
+
+    .sobrenodnome {
+        height: auto;
+    }
+
+    .sobrenodnome img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .h2sobrenos {
+        font-size: 1rem;
+    }
+
+    .textosobrenos,
+    .textosobrenos2 {
+        font-size: 0.8rem;
+    }
+    .contatosobrenos2{
+        font-size: 0.8rem;
+    }
+    .h1sobrenos {
+        height: auto;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .infosobrenos {
+        height: 20rem;
+    }
+
+    .h2contatoedesc h2 {
+        font-size: 1rem;
+    }
+
+    .h2sobrenos h4 {
+        font-size: 1rem;
+    }
+
+    .h2contatoedesc p {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width:230px) {
+
+    .sobrenodnome img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .contatosobrenos2 {
+        gap: 0.1rem;
+    }
+
+    .contatosobrenos2 div a {
+        font-size: 0.7rem;
+    }
+
+    .contatosobrenos2 div img {
+        width: 20px;
+    }
+
+}
