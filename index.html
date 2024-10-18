@@ -63,20 +63,25 @@
 
 
     <div id="menuperfil" class="menuperfil">
-  
-      <a href="" class="Perf">Meu Perfil</a>
-      <a href="config.html" class="Conf">Configurações</a>
+      <div class="divmeuperfil">
+        <a href="" class="Perf">Meu Perfil</a>
+      </div>
+      <div class="divconfiguracoes">
+        <a href="config.html" class="Conf">Configurações</a>
+      </div>
+    <div class="divmodoescuro">
       <p class="tema">Tema</p>
-  <label class="switch">
-      <input onclick="MudarModos()" type="checkbox">
-      <span class="slider"></span>
-  </label>
+      <label class="switch">
+        <input onclick="MudarModos()" type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
       <!-- <div>
         <button onclick="MudarModos()">Sol/lua</button>
       </div> -->
       <button id="sairdomenuperfil" class="sairP">Sair</button>
-  
-  
+
+
     </div>
   </header>
 
@@ -190,12 +195,12 @@
           <nav class="modal-nav">
             <button type="button" id="Favoritar"><img class="modal-button" src="img/coracao.svg"
                 alt="Botão Favoritar"><span class="modalFa">Favoritar</span></button>
-            <button type="button"><img class="modal-button" src="img/ferramenta.svg"
-                alt="Botão Ferramenta"><span class="modalFe">Ferramentas</span></button>
-            <button type="button"><img class="modal-button" src="img/comentario.svg"
-                alt="Botão Comentários"><span class="modalCome">Comentários</span></button>
-            <button type="button"><img class="modal-button" src="img/compartilhar.svg"
-                alt="Botão Compartilhar"><span class="modalComp">Compartilhar</span></button>
+            <button type="button"><img class="modal-button" src="img/ferramenta.svg" alt="Botão Ferramenta"><span
+                class="modalFe">Ferramentas</span></button>
+            <button type="button"><img class="modal-button" src="img/comentario.svg" alt="Botão Comentários"><span
+                class="modalCome">Comentários</span></button>
+            <button type="button"><img class="modal-button" src="img/compartilhar.svg" alt="Botão Compartilhar"><span
+                class="modalComp">Compartilhar</span></button>
           </nav>
         </main>
 
@@ -249,8 +254,8 @@
 
 
 
-      <!-- Caixa  do tipo de usuario-->
-      <!-- <div class="confirmation-container" id="confirmation-box" style="display: none;">
+    <!-- Caixa  do tipo de usuario-->
+    <!-- <div class="confirmation-container" id="confirmation-box" style="display: none;">
         <div class="seco">BEM-VINDO(A) </div>
         <p class="pp">Antes de prossseguir, preencha os dados abaixo</p>
 

@@ -105,10 +105,10 @@ let botaomenuperfil = document.getElementById("abrirmenuperfil");
 
 function abrirMenu() {
     if(menuperfil.style.left == "125rem" || menuperfil.style.left == "") {
-        menuperfil.style.left = "107rem";
+        menuperfil.style.left = "106rem";
     }
     else {
-       if(menuperfil.style.left = "107rem" || menuperfil.style.left == "") {
+       if(menuperfil.style.left = "106rem" || menuperfil.style.left == "") {
         menuperfil.style.left = "125rem";
        }
 
