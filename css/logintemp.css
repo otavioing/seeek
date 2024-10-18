@@ -16,6 +16,8 @@
 
     --azulBase: #2B63F0;
 
+    --azulDesq: #322BF0;
+
     --azulBasee: #00008b;
 
     --azulBasec: rgb(116, 84, 233);
@@ -357,7 +359,7 @@ a {
     border-radius: 20px;
     border: 0 !important;
     outline: 0 !important;
-    background: var(--azulBase);
+    background: var(--azulDesq);
     color: white;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
@@ -419,13 +421,16 @@ a {
 
 .sign-up-link p {
     font-size: 0.75rem;
-    color: var(--azulBase);
-    border-bottom: 1px solid var(--azulBase);
+    text-decoration: underline;
     font-weight: 800;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
     padding-bottom: 0.1rem;
 
+}
+.sign-up-link p, .page-link-label{
+    color: var(--azulDesq);
+    transition: color 0.5s;
 }
 
 .page-link-label {
@@ -435,14 +440,11 @@ a {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
     font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--azulBase);
+    font-weight: 700;  
 }
-
-.page-link-label:hover {
-    color: #000;
+.sign-up-link p:hover, .page-link-label:hover{
+    color: black
 }
-
 .buttons-container {
     width: 100%;
     display: flex;
@@ -972,8 +974,8 @@ main .quemsomoslogin {
 
     .google-login-button,
     .apple-login-button {
-        height: 4rem;
-        border-radius: 1rem;
+        height: 2.563rem;
+        border-radius: 1.5rem;
     }
 
     .formcadastro button {

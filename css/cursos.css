@@ -282,10 +282,10 @@ main{
     flex-wrap: wrap;
 }
 .informacoescursos .nomedocursoedoautor {
-
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    align-items: start;
 }
 .valordocursoebotaofavorito img{
     width: 37px;
@@ -296,14 +296,14 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: end;
+    margin-right: 1rem;
     gap: 0.5rem;
 
 }
 .valordocursoebotaofavorito p{
     color: var(--roxobase);
     font-size: 1.5rem;
-    margin-right: 1rem;
 }
 .botaocaixacursos{
     cursor: pointer;
