@@ -660,7 +660,7 @@ footer {
     align-items: center;
     gap: 1.5rem;
     transition: all 0.5s;
-    display: none;
+    /* display: none; */
     border-radius: 1rem;
 }
 
@@ -1491,6 +1491,10 @@ padding: 1.5rem 1rem;
        .checkbox-con input[type="checkbox"]:checked {
         border: 2px solid var(--cinzaBasee);  /* muda a cor da borda  */
         background: var(--cinzaescurofundodomudartema); /* muda a cor do fundo enquanto a bolinha esta para a direita */
+       }
+
+       .active{
+        border-bottom: 1px solid var(--azulBase);
        }
 
 
