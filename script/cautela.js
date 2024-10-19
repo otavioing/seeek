@@ -227,7 +227,23 @@ function aplicarIdioma() {
       EmailSeu:"Your email",
       Senha:"Password",
       NomeUsuario:"Username",
-      SalvarConf:"Save Changes"
+      SalvarConf:"Save Changes",
+
+      FiltarGeral: "Filter",
+      TiposCurso: "Types of courses",
+      DesignCursos: "Design",
+      IlustracaoCursos: "Illustration",
+      FotografiaCursos: "Photography",
+      PrecoCursos: "Price",
+      FixoCursos: "Fixed",
+      MensalCursos: "Monthly",
+      Faixadepreco: "Price Range",
+      DuracaoCursos: "Duration",
+      IndefinidaCursos: "Undefined",
+      TempoEmHorasCursos: "Time in hours",
+      LocalCursos: "Location",
+      PresencialCursos: "In-person",
+      Homeoffice: "Home office",
 
     },
     es: { 
@@ -288,7 +304,23 @@ function aplicarIdioma() {
       EmailSeu: "Su correo electrónico",
       Senha: "Contraseña",
       NomeUsuario: "Nombre de Usuario",
-      SalvarConf: "Guardar Cambios"
+      SalvarConf: "Guardar Cambios",
+
+      FiltarGeral: "Filtrar",
+      TiposCurso: "Tipos de cursos",
+      DesignCursos: "Diseño",
+      IlustracaoCursos: "Ilustración",
+      FotografiaCursos: "Fotografía",
+      PrecoCursos: "Precio",
+      FixoCursos: "Fijo",
+      MensalCursos: "Mensual",
+      Faixadepreco: "Rango de Precio",
+      DuracaoCursos: "Duración",
+      IndefinidaCursos: "Indefinida",
+      TempoEmHorasCursos: "Tiempo en horas",
+      LocalCursos: "Ubicación",
+      PresencialCursos: "Presencial",
+      Homeoffice: "Home office",
 
     },
 
@@ -349,7 +381,26 @@ function aplicarIdioma() {
         EmailSeu: "あなたのメール",
         Senha: "パスワード",
         NomeUsuario: "ユーザー名",
-        SalvarConf: "変更を保存"        
+        SalvarConf: "変更を保存",
+        
+        
+        FiltarGeral: "フィルター",
+        TiposCurso: "コースの種類",
+        DesignCursos: "デザイン",
+        IlustracaoCursos: "イラストレーション",
+        FotografiaCursos: "写真",
+        PrecoCursos: "価格",
+        FixoCursos: "固定",
+        MensalCursos: "毎月",
+        Faixadepreco: "価格範囲",
+        DuracaoCursos: "期間",
+        IndefinidaCursos: "未定",
+        TempoEmHorasCursos: "時間",
+        LocalCursos: "場所",
+        PresencialCursos: "対面",
+        Homeoffice: "在宅勤務"
+        
+        
 
     },
 
@@ -412,7 +463,26 @@ function aplicarIdioma() {
       EmailSeu:"Seu e-mail",
       Senha:"Senha",
       NomeUsuario:"Nome de Usuário",
-      SalvarConf:"Salvar Alterações"
+      SalvarConf:"Salvar Alterações",
+
+      FiltarGeral:"Filtrar",
+      TiposCurso:"Tipos de cursos",
+      DesignCursos:"Design",
+      IlustracaoCursos:"Ilustração",
+      FotografiaCursos:"Fotografia",
+      PrecoCursos:"Preço",
+      FixoCursos:"Fixo",
+      MensalCursos:"Mensal",
+      Faixadepreco: "Faixa de Preço",
+      DuracaoCursos: "Duração",
+      IndefinidaCursos: "Indefinida",
+      TempoEmHorasCursos: "Tempo em horas",
+      LocalCursos:"Local",
+      PresencialCursos:"Presencial",
+      Homeoffice:"Home office",
+
+
+
     }
   };
 
@@ -677,7 +747,6 @@ function aplicarIdioma() {
     Confi[i].innerHTML = idioma[selectedLanguage].configuracoes;
   }
 
-  // 
   var Cidadeperf  = document.getElementsByClassName("CidP");
   for (var i = 0; i < Cidadeperf.length; i++) {
     Cidadeperf[i].innerHTML = idioma[selectedLanguage].CidadeConf;
@@ -713,6 +782,83 @@ function aplicarIdioma() {
     Salvarasconf[i].innerHTML = idioma[selectedLanguage].SalvarConf;
   }
 
+  //Conteudo das páginas
+  // Cursos
+
+  var FiltrarCursos = document.getElementsByClassName("FilC");
+  for (var i = 0; i < FiltrarCursos.length; i++) {
+    FiltrarCursos[i].innerHTML = idioma[selectedLanguage].FiltarGeral;
+  }
+
+  var  TiposDoCurso = document.getElementsByClassName("TDCC");
+  for (var i = 0; i < TiposDoCurso.length; i++) {
+    TiposDoCurso[i].innerHTML = idioma[selectedLanguage].TiposCurso;
+  }
+
+  var DesignDoCursos= document.getElementsByClassName("DisC");
+  for (var i = 0; i < DesignDoCursos.length; i++) {
+    DesignDoCursos[i].innerHTML = idioma[selectedLanguage].DesignCursos;
+  }
+
+  var  IlustracaoDoCursos = document.getElementsByClassName("IluC");
+  for (var i = 0; i < IlustracaoDoCursos.length; i++) {
+    IlustracaoDoCursos[i].innerHTML = idioma[selectedLanguage].IlustracaoCursos;
+  }
+
+  var FotografiaDoCursos = document.getElementsByClassName("FotC");
+  for (var i = 0; i < FotografiaDoCursos.length; i++) {
+    FotografiaDoCursos[i].innerHTML = idioma[selectedLanguage].FotografiaCursos;
+  }
+
+  var  PrecoDoCursos = document.getElementsByClassName("PreC");
+  for (var i = 0; i < PrecoDoCursos.length; i++) {
+    PrecoDoCursos[i].innerHTML = idioma[selectedLanguage].PrecoCursos;
+  }
+
+  var FixoDoCursos = document.getElementsByClassName("FixC");
+  for (var i = 0; i < FixoDoCursos.length; i++) {
+    FixoDoCursos[i].innerHTML = idioma[selectedLanguage].FixoCursos;
+  }
+
+  var MensalDoCursos  = document.getElementsByClassName("MenC");
+  for (var i = 0; i < MensalDoCursos.length; i++) {
+    MensalDoCursos[i].innerHTML = idioma[selectedLanguage].MensalCursos;
+  }
+
+  var FaixadeprecoCursos = document.getElementsByClassName("FaiC");
+  for (var i = 0; i < FaixadeprecoCursos.length; i++) {
+    FaixadeprecoCursos[i].innerHTML = idioma[selectedLanguage].Faixadepreco;
+  }
+
+  var DuracaoDoCursos = document.getElementsByClassName("DurC");
+  for (var i = 0; i < DuracaoDoCursos.length; i++) {
+    DuracaoDoCursos[i].innerHTML = idioma[selectedLanguage].DuracaoCursos;
+  }
+
+  var IndefinidaDoCursos = document.getElementsByClassName("IndC");
+  for (var i = 0; i < IndefinidaDoCursos.length; i++) {
+    IndefinidaDoCursos[i].innerHTML = idioma[selectedLanguage].IndefinidaCursos;
+  }
+
+  var TempoEmHorasDoCursos = document.getElementsByClassName("TEMC");
+  for (var i = 0; i < TempoEmHorasDoCursos.length; i++) {
+    TempoEmHorasDoCursos[i].innerHTML = idioma[selectedLanguage].TempoEmHorasCursos;
+  }
+
+  var LocalDoCursos  = document.getElementsByClassName("LocC");
+  for (var i = 0; i < LocalDoCursos.length; i++) {
+    LocalDoCursos[i].innerHTML = idioma[selectedLanguage].LocalCursos;
+  }
+
+  var  PresencialDoCursos = document.getElementsByClassName("PresC");
+  for (var i = 0; i < PresencialDoCursos.length; i++) {
+    PresencialDoCursos[i].innerHTML = idioma[selectedLanguage].PresencialCursos;
+  }
+
+  var HomeofficeCursos= document.getElementsByClassName("HOC");
+  for (var i = 0; i < HomeofficeCursos.length; i++) {
+    HomeofficeCursos[i].innerHTML = idioma[selectedLanguage].Homeoffice;
+  }
 
 }
 //essa aqui não deixa perder as configurações de acordo com a escolha do usuario (ta travando)

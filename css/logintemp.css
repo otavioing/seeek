@@ -54,26 +54,6 @@ a {
     color: var(--brancoBase);
 }
 
-/*-------------------------------- Modo Escuro --------------------------------*/
-
-
-.modoEscuro .form-container {
-    color: var(--brancoBase);
-    background-color: var(--ModoEscuroLog);
-}
-
-.modoEscuro .title {
-    color: var(--brancoBase);
-}
-
-.modoEscuro .sign-up-label button {
-    background-color: var(--ModoEscuroLog);
-}
-
-.modoEscuro .google-login-button {
-    background-color: var(--brancoBase);
-}
-
 
 /*------------------------------Modal Portifolio-----------------------------*/
 
