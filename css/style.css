@@ -158,7 +158,7 @@ header .navsite {
 
 header .navsite a {
     color: var(--brancoBase);
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
 header .navsite a:hover {
@@ -166,11 +166,11 @@ header .navsite a:hover {
     transform: translateY(-0.2rem);
 }
 
-.navsite .navSelecionado {
+/* .navsite .navSelecionado {
     height: 100%;
     border-bottom: 3px solid var(--azulBase);
     padding: 2rem 0.4rem 2rem 0.4rem;
-}
+} */
 
 header .pesquisasite {
     width: 30%;
@@ -960,6 +960,68 @@ padding: 1.5rem 1rem;
     height: 2rem;
     width: 2rem;
   }
+
+  .botaomodoescuro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .botaomodoescuro img{
+        width: 20px;
+        height: 20px;
+    }
+    .checkbox-con {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        color: white;
+       }
+       
+       .checkbox-con input[type="checkbox"] {
+        appearance: none; /* remove o estilo padrão do checkbox */
+        width: 68px; /* muda o tamanho do checkbox */
+        height: 27px; /* muda o tamanho do checkbox */
+        border: 2px solid var(--cinzaBasee);
+        border-radius: 20px;  /* muda o formato do checkbox */
+        background: var(--cinzaescurofundodomudartema); /* muda a cor do fundo em quanto a bolinha esta para a esquerda  */
+        position: relative;
+        box-sizing: border-box; 
+       }
+       
+       .checkbox-con input[type="checkbox"]::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: var(--branco); /* muda a cor da bolinha da eaquerda*/
+        border: 2px solid var(--branco); /* muda a cor da borda da bolinha da esquerda */
+        border-radius: 50%; /* muda o formato da bolinha */
+        position: absolute;
+        top: 0;
+        left: 1.1rem; 
+        transform: translate(-85%, 14%); /* muda a posição da bolinha */
+        transition: all 0.3s ease-in-out; /* muda a velocidade da animação da bolinha indo da direita para a esquerda  */
+       }
+       
+       .checkbox-con input[type="checkbox"]:checked::before {
+        background: var(--branco); /* muda a cor da bolinha */
+        border: 2px solid var(--branco); /* muda a cor da borda da bolinha da direita*/
+        transform: translate(133%, 13%); /* muda a posição da bolinha da direita*/
+        transition: all 0.3s ease-in-out; /* muda a velocidade da animação da bolinha indo da esquerda para a direita  */
+       }
+    
+       .checkbox-con input[type="checkbox"]:checked {
+        border: 2px solid var(--cinzaBasee);  /* muda a cor da borda  */
+        background: var(--cinzaescurofundodomudartema); /* muda a cor do fundo enquanto a bolinha esta para a direita */
+       }
+
+       .paginaselecionada{
+        height: 100%;
+        border-bottom: 3px solid var(--azulBase);
+        padding: 2rem 0.4rem 2rem 0.4rem;
+       }
+
+
+
   
 
 /*------------------------------------------------------------------------*/
@@ -1438,63 +1500,6 @@ padding: 1.5rem 1rem;
     
 }
 
-/*teste */
 
-.botaomodoescuro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    .botaomodoescuro img{
-        width: 20px;
-        height: 20px;
-    }
-    .checkbox-con {
-        margin: 10px;
-        display: flex;
-        align-items: center;
-        color: white;
-       }
-       
-       .checkbox-con input[type="checkbox"] {
-        appearance: none; /* remove o estilo padrão do checkbox */
-        width: 68px; /* muda o tamanho do checkbox */
-        height: 27px; /* muda o tamanho do checkbox */
-        border: 2px solid var(--cinzaBasee);
-        border-radius: 20px;  /* muda o formato do checkbox */
-        background: var(--cinzaescurofundodomudartema); /* muda a cor do fundo em quanto a bolinha esta para a esquerda  */
-        position: relative;
-        box-sizing: border-box; 
-       }
-       
-       .checkbox-con input[type="checkbox"]::before {
-        content: "";
-        width: 14px;
-        height: 14px;
-        background: var(--branco); /* muda a cor da bolinha da eaquerda*/
-        border: 2px solid var(--branco); /* muda a cor da borda da bolinha da esquerda */
-        border-radius: 50%; /* muda o formato da bolinha */
-        position: absolute;
-        top: 0;
-        left: 1.1rem; 
-        transform: translate(-85%, 14%); /* muda a posição da bolinha */
-        transition: all 0.3s ease-in-out; /* muda a velocidade da animação da bolinha indo da direita para a esquerda  */
-       }
-       
-       .checkbox-con input[type="checkbox"]:checked::before {
-        background: var(--branco); /* muda a cor da bolinha */
-        border: 2px solid var(--branco); /* muda a cor da borda da bolinha da direita*/
-        transform: translate(133%, 13%); /* muda a posição da bolinha da direita*/
-        transition: all 0.3s ease-in-out; /* muda a velocidade da animação da bolinha indo da esquerda para a direita  */
-       }
-    
-       .checkbox-con input[type="checkbox"]:checked {
-        border: 2px solid var(--cinzaBasee);  /* muda a cor da borda  */
-        background: var(--cinzaescurofundodomudartema); /* muda a cor do fundo enquanto a bolinha esta para a direita */
-       }
-
-       .active{
-        border-bottom: 1px solid var(--azulBase);
-       }
 
 

@@ -5,8 +5,8 @@ function desmarcarRadio() {
 
 function seta() {
     var preco = document.getElementById("divinputpreco");
-    
-    var setaonElement = document.getElementById("seta"); 
+
+    var setaonElement = document.getElementById("seta");
 
     if (preco.style.display == "none" || preco.style.display == "") {
         preco.style.display = "flex";
@@ -21,11 +21,11 @@ function seta() {
     }
 }
 
-function setapreco(){
+function setapreco() {
 
     var preco = document.getElementById("faixadeprecocursos");
-    
-    var setaonElement = document.getElementById("setapreco"); 
+
+    var setaonElement = document.getElementById("setapreco");
 
     if (preco.style.display == "none" || preco.style.display == "") {
         preco.style.display = "flex";
@@ -103,16 +103,25 @@ if (listaconfig) {
 let botaomenuperfil = document.getElementById("abrirmenuperfil");
 
 function abrirMenu() {
-    if(menuperfil.style.right == "-100%" || menuperfil.style.right == "") {
+    if (menuperfil.style.right == "-100%" || menuperfil.style.right == "") {
         menuperfil.style.right = "0%";
+        function displayflexmenu() {
+            let menuperfil = document.getElementById("menuperfil");
+            menuperfil.style.display = "flex";
+        }
     }
     else {
-       if(menuperfil.style.right = "0%" || menuperfil.style.right == "") {
-        menuperfil.style.right = "-100%";
-       }
+        if (menuperfil.style.right = "0%" || menuperfil.style.right == "") {
+            menuperfil.style.right = "-100%";
+            function displaynonemenu() {
+                let menuperfil = document.getElementById("menuperfil");
+                menuperfil.style.display = "none";
+            }
+        }
 
     }
-
+    setTimeout(displaynonemenu, 100);
+    setTimeout(displayflexmenu, 10);
 }
 
 //script para fazer a barra lateral da aba de configurações funcinar
@@ -144,4 +153,41 @@ function informacoesuser() {
     privacidade.style.display = "none";
     notificacao.style.display = "none";
     infouser.style.display = "flex";
+}
+
+//script para desmarcar os radios ao clicar neles
+const radios = document.querySelectorAll('input[type="radio"]');
+
+radios.forEach(radio => {
+    radio.addEventListener('click', function () {
+        if (this.checked) {
+            const wasChecked = this.dataset.checked === "true";
+            if (wasChecked) {
+                this.checked = false;
+                this.dataset.checked = "false";
+            } else {
+                radios.forEach(r => r.dataset.checked = "false");
+                this.dataset.checked = "true";
+            }
+        }
+    });
+});
+
+//script para abrir e fechar o filtro futuante da aba cursos
+
+
+function abrirfiltro() {
+
+let filtro = document.getElementById("filtroflutuante");
+
+if (filtro.style.display == "block") {
+    filtro.style.display = "none";
+}
+else {
+    if (filtro.style.display = "none" || filtro.style.display == "") {
+        filtro.style.display = "block";
+    }
+
+}
+
 }

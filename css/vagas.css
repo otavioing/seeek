@@ -130,7 +130,7 @@
 }
 
 .filtroflutuante {
-    background-color: var(--cinzaBase);
+    background-color: white;
     border: 1px solid var(--cinzaBasee);
     margin-top: 16px;
     margin-left: 1rem;
