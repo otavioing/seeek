@@ -647,7 +647,6 @@ footer {
     position: absolute;
     top: 6.5rem;
     right: -100%;
-    /* right: 0%; */
     background-color: var(--brancomenuperfil);
     width: 13rem;
     height: 17rem;
@@ -656,11 +655,9 @@ footer {
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     gap: 1.5rem;
     transition: all 0.5s;
-    /* display: none; */
     border-radius: 1rem;
 }
 
@@ -707,6 +704,7 @@ footer {
     padding: 0.5rem;
     cursor: pointer;
 }
+
 
 
 

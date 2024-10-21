@@ -107,10 +107,12 @@
 
 .caminhonavegaçãocursos a {
     color: black;
+    
 }
 
 .caminhonavegaçãocursos {
     margin: 2rem;
+    display: flex;
 }
 
 /* Main */

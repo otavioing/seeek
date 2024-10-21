@@ -244,6 +244,11 @@ function aplicarIdioma() {
       LocalCursos: "Location",
       PresencialCursos: "In-person",
       Homeoffice: "Home office",
+      AplicarGeral: "Apply",
+      LimparGeral: "Clear Filter",
+      NomeCurso: "Course Name",
+      PrecodecadaCurso: "$16.00/month",
+      
 
     },
     es: { 
@@ -321,6 +326,12 @@ function aplicarIdioma() {
       LocalCursos: "Ubicación",
       PresencialCursos: "Presencial",
       Homeoffice: "Home office",
+      AplicarGeral: "Aplicar",
+      LimparGeral: "Limpiar Filtro",
+      NomeCurso: "Nombre del Curso",
+      PrecodecadaCurso: "€12,00/mes"
+    
+      
 
     },
 
@@ -398,7 +409,11 @@ function aplicarIdioma() {
         TempoEmHorasCursos: "時間",
         LocalCursos: "場所",
         PresencialCursos: "対面",
-        Homeoffice: "在宅勤務"
+        Homeoffice: "在宅勤務",
+        AplicarGeral: "適用",
+        LimparGeral: "フィルターをクリア",
+        NomeCurso: "コース名",
+        PrecodecadaCurso: "¥30.00/月"
         
         
 
@@ -480,6 +495,11 @@ function aplicarIdioma() {
       LocalCursos:"Local",
       PresencialCursos:"Presencial",
       Homeoffice:"Home office",
+      AplicarGeral:"Aplicar",
+      LimparGeral:"Limpar Filto",
+      NomeCurso:"Nome do Curso",
+      PrecodecadaCurso:"R$23,00/mês",
+
 
 
 
@@ -858,6 +878,26 @@ function aplicarIdioma() {
   var HomeofficeCursos= document.getElementsByClassName("HOC");
   for (var i = 0; i < HomeofficeCursos.length; i++) {
     HomeofficeCursos[i].innerHTML = idioma[selectedLanguage].Homeoffice;
+  }
+
+  var  AplicarNoGeral = document.getElementsByClassName("AplG");
+  for (var i = 0; i < AplicarNoGeral.length; i++) {
+    AplicarNoGeral[i].innerHTML = idioma[selectedLanguage].AplicarGeral;
+  }
+
+  var LimparNoGeral= document.getElementsByClassName("LCG");
+  for (var i = 0; i < LimparNoGeral.length; i++) {
+    LimparNoGeral[i].innerHTML = idioma[selectedLanguage].LimparGeral;
+  }
+
+  var  NomeDoCurso = document.getElementsByClassName("NomC");
+  for (var i = 0; i < NomeDoCurso.length; i++) {
+    NomeDoCurso[i].innerHTML = idioma[selectedLanguage].NomeCurso;
+  }
+
+  var PrecodecadaCursoDoCurso= document.getElementsByClassName("precoC");
+  for (var i = 0; i < PrecodecadaCursoDoCurso.length; i++) {
+    PrecodecadaCursoDoCurso[i].innerHTML = idioma[selectedLanguage].PrecodecadaCurso;
   }
 
 }
