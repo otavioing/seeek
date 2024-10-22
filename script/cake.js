@@ -103,25 +103,17 @@ if (listaconfig) {
 let botaomenuperfil = document.getElementById("abrirmenuperfil");
 
 function abrirMenu() {
-    if (menuperfil.style.right == "-100%" || menuperfil.style.right == "") {
+    if (menuperfil.style.right == "-50%" || menuperfil.style.right == "") {
         menuperfil.style.right = "0%";
-        function displayflexmenu() {
-            let menuperfil = document.getElementById("menuperfil");
-            menuperfil.style.display = "flex";
-        }
+        menuperfil.style.display = "flex";
     }
     else {
         if (menuperfil.style.right = "0%" || menuperfil.style.right == "") {
-            menuperfil.style.right = "-100%";
-            function displaynonemenu() {
-                let menuperfil = document.getElementById("menuperfil");
-                menuperfil.style.display = "none";
-            }
+            menuperfil.style.right = "-50%";
+            menuperfil.style.display = "none";
         }
 
     }
-    setTimeout(displaynonemenu, 100);
-    setTimeout(displayflexmenu, 10);
 }
 
 //script para fazer a barra lateral da aba de configurações funcinar
