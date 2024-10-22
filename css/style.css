@@ -318,18 +318,12 @@ header .botaoMenu span {
 
 /*-------------------------------- Main Imagens --------------------------------*/
 .gride {
-    display: grid;
-    gap: 1rem;
-    margin: 0 2% 0 2%;
-    border-radius: 0.6rem;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 20rem 20rem 20rem;
-    grid-template-areas: "f1 f6 f3 f8"
-        "f5 f6 f7 f8"
-        "f5 f2 f7 f4";
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    flex-wrap: wrap;
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    column-count: 4;
+    break-inside: avoid-column;
+    column-gap: 1rem;
 }
 
 .gride>div {
@@ -373,61 +367,76 @@ header .botaoMenu span {
     top: 0;
 }
 
-.gride #filho1 {
-    background-image: url(../img/img_port/1.jpg);
-    background-size: cover;
-    grid-area: f1;
-    border-radius: 0.8rem;
+.gride #filho1{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.gride #filho2 {
-    background-image: url(../img/img_port/portIndx/2.jpg);
-    background-size: cover;
-    grid-area: f2;
-    border-radius: 0.8rem;
-
+.gride #filho1 img{
+    width: 100%;
 }
 
-.gride #filho3 {
-    background-image: url(../img/img_port/portIndx/3.jpg);
-    background-size: cover;
-    grid-area: f3;
-    border-radius: 0.8rem;
+.gride #filho2{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.gride #filho4 {
-    background-image: url(../img/img_port/portIndx/4.jpg);
-    background-size: cover;
-    grid-area: f4;
-    border-radius: 0.8rem;
+.gride #filho2 img{
+    width: 100%;
 }
 
-.gride #filho5 {
-    background-image: url(../img/img_port/portIndx/5.jpg);
-    background-size: cover;
-    grid-area: f5;
-    border-radius: 0.8rem;
+.gride #filho3{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.gride #filho6 {
-    background-image: url(../img/img_port/portIndx/6.jpg);
-    background-size: cover;
-    grid-area: f6;
-    border-radius: 0.8rem;
+.gride #filho3 img{
+    width: 100%;
 }
 
-.gride #filho7 {
-    background-image: url(../img/img_port/portIndx/7.jpg);
-    background-size: cover;
-    grid-area: f7;
-    border-radius: 0.8rem;
+.gride #filho4{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.gride #filho8 {
-    background-image: url(../img/img_port/portIndx/8.jpg);
-    background-size: cover;
-    grid-area: f8;
-    border-radius: 0.8rem;
+.gride #filho4 img{
+    width: 100%;
+}
+
+.gride #filho5{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho5 img{
+    width: 100%;
+}
+
+.gride #filho6{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho6 img{
+    width: 100%;
+}
+
+.gride #filho7{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho7 img{
+    width: 100%;
+}
+
+.gride #filho8{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho8 img{
+    width: 100%;
 }
 
 .prIndex .img3 {
@@ -500,13 +509,16 @@ header .botaoMenu span {
 
 .modal-body {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     padding: 0.5rem 1rem;
     height: auto;
 }
 
 .modal-nav {
+    width: 30%;
     margin: 0rem;
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
 }
 
@@ -528,7 +540,7 @@ header .botaoMenu span {
 }
 
 #modalImage {
-    width: 80%;
+    width: 70%;
 }
 
 .contratar-btn-span{
@@ -1057,22 +1069,6 @@ padding: 1.5rem 1rem;
         margin-left: 3rem;
     }
 
-    .gride {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 15rem 15rem 15rem;
-        grid-template-areas: "f1 f6 f3 "
-            "f5 f6 f7 "
-            "f5 f2 f7 ";
-    }
-
-    #filho4 {
-        display: none;
-    }
-
-    #filho8 {
-        display: none;
-    }
-
     header {
         display: flex;
         justify-content: space-between;
@@ -1189,6 +1185,10 @@ padding: 1.5rem 1rem;
         left: 25%;
     }
 
+    .gride {
+        column-count: 3;
+    }
+
 }
 
 
@@ -1261,11 +1261,7 @@ padding: 1.5rem 1rem;
     }
 
     .gride {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 15rem 15rem 15rem;
-        grid-template-areas: "f1 f6 f3 "
-            "f5 f6 f7 "
-            "f5 f2 f7 ";
+        column-count: 2;
     }
 
 }
@@ -1320,20 +1316,8 @@ padding: 1.5rem 1rem;
 
 @media screen and (max-width: 450px) {
 
-    .prIndex {
-        padding: 1rem;
-    }
-
     .gride {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 15rem);
-        grid-template-areas: "f1"
-            "f5"
-            "f5"
-            "f2"
-            "f6"
-            "f6";
-
+        column-count: 1;
     }
 
     .perfilPort {
@@ -1357,13 +1341,6 @@ padding: 1.5rem 1rem;
     .filtroExplorar .buttonFiltro {
         width: 100%;
         font-size: 1.1rem;
-    }
-
-    #filho3,
-    #filho4,
-    #filho7,
-    #filho8 {
-        display: none;
     }
 
     #menu {
@@ -1396,15 +1373,7 @@ padding: 1.5rem 1rem;
     }
 
     .gride {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 10rem);
-        grid-template-areas: "f1"
-            "f5"
-            "f5"
-            "f2"
-            "f6"
-            "f6";
-
+        column-count: 1;
     }
 
     #menu {
