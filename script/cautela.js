@@ -253,6 +253,30 @@ function aplicarIdioma() {
       LimparGeral: "Clear Filter",
       NomeCurso: "Course Name",
       PrecodecadaCurso: "$16.00/month",
+
+    
+      CampoDeCriaçãoVagas: "Creation Fields",
+      HabilidadesVagas: "Skills",
+      NomeDasVagas: "Job Title",
+      HorasAtrasVagas: "11 hours ago",
+      EnviarPropostaVagas: "Submit Proposal",
+      MaisInformaçõesVagas: "More Information",
+
+      AvisosTextoPrincipal: "The site is still under development, the page notices on Seek will not change until we can deliver a great experience to everyone, and achieve our goal of making Seek a place everyone can use without worries and enjoy its functionalities, and that meets the teaching expectations, and visibility for those who don't have it. We are in the second version of Seek for the second semester of IT, so there will be big changes in the coming semesters.",
+      AvisosServidores: "Seek servers working",
+      AvisosPortifolios: "Portfolios in modal windows",
+      AvisosAparência: "New site appearance",
+      AvisoResponsivo: "Responsive site for mobiles and tablets",
+
+      AjudaPortifolio: "Portfolios",
+      AjudaUsuario: "User",
+      AjudaCursoseVagas: "Courses/Jobs",
+      CadastroGeral: "Registration",
+      AjudaTextoUsuario: "Starting with the user part, you can configure your account as you like and even change its type, choosing an account type for teachers, or the default (artists), or company.",
+      AjudaTextoPortifolio: "Starting with the user part, you can configure your account as you like and even change its type, choosing an account type for teachers, or the default (artists), or company.",
+      AjudaCursoseVagasTexto: "Similar to the portfolio, you can access the course or job by clicking on its cover, and if you want more information, just click on 'more information' to see better the job or course specifications, as well as being able to access the courses you want via the search bar or menu by going to 'courses' or 'jobs'.",
+      AjudaCadastroGeral: "On the login/registration page, use your main or preferred email to access the site if you want, otherwise just click on the arrow in the top right corner to access the site as anonymous."
+      
       
 
     },
@@ -339,9 +363,33 @@ function aplicarIdioma() {
       AplicarGeral: "Aplicar",
       LimparGeral: "Limpiar Filtro",
       NomeCurso: "Nombre del Curso",
-      PrecodecadaCurso: "€12,00/mes"
+      PrecodecadaCurso: "€12,00/mes",
+
     
+      CampoDeCriaçãoVagas: "Campos de Creación",
+      HabilidadesVagas: "Habilidades",
+      NomeDasVagas: "Nombre de la vacante",
+      HorasAtrasVagas: "Hace 11 horas",
+      EnviarPropostaVagas: "Enviar propuesta",
+      MaisInformaçõesVagas: "Más información",
+
+      AvisosTextoPrincipal: "El sitio todavía está en desarrollo, los avisos de las páginas de Seek no cambiarán hasta que podamos entregar una excelente experiencia a todos, y lograr nuestro objetivo de hacer de Seek un lugar que todos puedan usar sin preocupaciones y disfrutar de sus funcionalidades, y que cumpla con las expectativas de enseñanza, y visibilidad para aquellos que no la tienen. Estamos en la segunda versión de Seek para el segundo semestre de TI, por lo que habrá grandes cambios en los próximos semestres.",
+      AvisosServidores: "Servidores de Seek funcionando",
+      AvisosPortifolios: "Portafolios en ventanas modales",
+      AvisosAparência: "Nueva apariencia del sitio",
+      AvisoResponsivo: "Sitio responsivo para móviles y tabletas",
+
+      AjudaPortifolio: "Portafolios",
+      AjudaUsuario: "Usuario",
+      AjudaCursoseVagas: "Cursos/Vacantes",
+      CadastroGeral: "Registro",
+      AjudaTextoUsuario: "Comenzando por la parte del usuario, puedes configurar tu cuenta como desees e incluso cambiar su tipo, eligiendo un tipo de cuenta para profesores, o la predeterminada (artistas), o empresa.",
+      AjudaTextoPortifolio: "Comenzando por la parte del usuario, puedes configurar tu cuenta como desees e incluso cambiar su tipo, eligiendo un tipo de cuenta para profesores, o la predeterminada (artistas), o empresa.",
+      AjudaCursoseVagasTexto: "Similar al portafolio, puedes acceder al curso o vacante haciendo clic en su portada, y si quieres más información, simplemente haz clic en 'más información' para ver mejor las especificaciones de la vacante o del curso, además de poder acceder a los cursos que desees a través de la barra de búsqueda o del menú yendo a 'cursos' o 'vacantes'.",
+      AjudaCadastroGeral: "En la página de inicio/sesión, usa tu correo principal o de preferencia para acceder al sitio si deseas, de lo contrario simplemente haz clic en la flecha en la esquina superior derecha para acceder al sitio como anónimo."
       
+      
+
 
     },
 
@@ -428,7 +476,33 @@ function aplicarIdioma() {
         AplicarGeral: "適用",
         LimparGeral: "フィルターをクリア",
         NomeCurso: "コース名",
-        PrecodecadaCurso: "¥30.00/月"
+        PrecodecadaCurso: "¥30.00/月",
+
+    
+        
+        CampoDeCriaçãoVagas: "作成フィールド",
+        HabilidadesVagas: "スキル",
+        NomeDasVagas: "求人名",
+        HorasAtrasVagas: "11時間前",
+        EnviarPropostaVagas: "提案を送信する",
+        MaisInformaçõesVagas: "詳細情報",
+
+        AvisosTextoPrincipal: "サイトはまだ開発中です。Seekのページの通知は、素晴らしい体験を提供し、Seekが誰もが心配なく使用でき、機能を楽しむことができる場所であることを目指しているため、すべてのユーザーに対応できるまで変更されません。第二学期のITの第二バージョンのSeekにいるので、次の学期には大きな変更があるでしょう。",
+        AvisosServidores: "Seekサーバーが稼働中",
+        AvisosPortifolios: "モーダルウィンドウ内のポートフォリオ",
+        AvisosAparência: "新しいサイトの外観",
+        AvisoResponsivo: "携帯電話やタブレットに対応したレスポンシブサイト",
+
+        AjudaPortifolio: "ポートフォリオ",
+        AjudaUsuario: "ユーザー",
+        AjudaCursoseVagas: "コース/求人",
+        CadastroGeral: "登録",
+        AjudaTextoUsuario: "ユーザーの部分から始めますが、アカウントを好きなように設定し、種類を変更することもできます。教師向けアカウントの種類や、デフォルト（アーティスト）、または企業アカウントを選択できます。",
+        AjudaTextoPortifolio: "ユーザーの部分から始めますが、アカウントを好きなように設定し、種類を変更することもできます。教師向けアカウントの種類や、デフォルト（アーティスト）、または企業アカウントを選択できます。",
+        AjudaCursoseVagasTexto: "ポートフォリオと同様に、カバーをクリックしてコースまたは求人にアクセスできます。さらに情報が必要な場合は、「詳細情報」をクリックして求人またはコースの仕様を詳しく確認できます。検索バーまたはメニューで「コース」または「求人」に移動して、希望するコースにもアクセスできます。",
+        AjudaCadastroGeral: "ログイン/登録ページでは、メインまたは好みのメールアドレスを使用してサイトにアクセスできます。そうでない場合は、右上の矢印をクリックして匿名としてサイトにアクセスしてください。"
+        
+        
         
         
 
@@ -453,7 +527,7 @@ function aplicarIdioma() {
       ModalFerramentas:"Ferramentas",
       ModalComentarios:"Comentários",
       ModalCompartilhar:"Compartilhar",
-      PortifolioTeste:"Test portfolio",
+      PortifolioTeste:"Teste portfolio",
       PortifolioAutor:"Author",
       ModalPortifolio:"Protótipo de portifólio",
       ModalAutor:"Nome do criador • 0 seguidores",
@@ -520,7 +594,28 @@ function aplicarIdioma() {
       NomeCurso:"Nome do Curso",
       PrecodecadaCurso:"R$23,00/mês",
 
+      CampoDeCriaçãoVagas:"Campos de Criação",
+      HabilidadesVagas:"Habilidades",
 
+      NomeDasVagas:"Nome da vaga",
+      HorasAtrasVagas: "11 horas atrás",
+      EnviarPropostaVagas: "Enviar proposta",
+      MaisInformaçõesVagas: "Mais informações",
+
+      AvisosTextoPrincipal:"O site ainda está em desenvolvimento, os avisos das páginas do Seek não mudara até que consiguemos entregar a todos uma ótima experiência, e que possamos atingir o nosso objetivo de que o seek seja um lugar para que todos possam usar sem preocupações e desfrutar das suas funcionalidades, e que atenda as expectativas de ensino, e visibilidade para aqueles que não possuem. Estamos na segunda versão do Seek para o segundo semestre de SI então háveram grandes mudanças nos póximos semestres.",
+      AvisosServidores:"Servidores do seek funcionando",
+      AvisosPortifolios:"portifolios em janelas modal",
+      AvisosAparência:"Nova aparência do site",
+      AvisoResponsivo:"Site responsivo para celulares e tablets",
+
+      AjudaPortifolio:"Portfólios",
+      AjudaUsuario:"Usuário",
+      AjudaCursoseVagas:"Cursos/vagas",
+      CadastroGeral:"Cadastro",
+      AjudaTextoUsuario:"Começando pela parte do usuário, você pode configurar sua conta da forma como quiser e até podendo alterar o tipo dela, podendo selecionar um tipo de conta para professores,ou a padrão(artistas), ou empresa.",
+      AjudaTextoPortifolio:"Começando pela parte do usuário, você pode configurar sua conta da forma como quiser e até podendo alterar o tipo dela, podendo selecionar um tipo de conta para professores,ou a padrão(artistas), ou empresa.",
+      AjudaCursoseVagasTexto:"Semelhante ao portfólio, você pode acesar o curso ou vaga ao clicar na sua capa, e caso queira mais informações, é só clicar em “mais informações” para poder ver melhor as especificações da vaga, ou do curso, além também poder acesar os cursos que você queira pela barra de pesquisa ou pelo menu inddo em “cursos” ou “vagas”",
+      AjudaCadastroGeral:"Na página de entra/cadastro, você utiliza seu e-mail principal ou de preferência para poder acesar o site caso queira, do contrário é só clicar na seta no canto superior direito para acessar o site como anônimo",
 
 
     }
@@ -945,6 +1040,118 @@ function aplicarIdioma() {
   for (var i = 0; i < PrecodecadaCursoDoCurso.length; i++) {
     PrecodecadaCursoDoCurso[i].innerHTML = idioma[selectedLanguage].PrecodecadaCurso;
   }
+
+  //Conteúdo das Páginas
+  //Vagas
+
+  var NomeDasVagasVagas= document.getElementsByClassName("NomV");
+  for (var i = 0; i < NomeDasVagasVagas.length; i++) {
+    NomeDasVagasVagas[i].innerHTML = idioma[selectedLanguage].NomeDasVagas;
+  }
+
+
+  
+  var HorasAtrasVagasVagas= document.getElementsByClassName("HAV");
+  for (var i = 0; i < HorasAtrasVagasVagas.length; i++) {
+    HorasAtrasVagasVagas[i].innerHTML = idioma[selectedLanguage].HorasAtrasVagas;
+  }
+
+  var EnviarPropostaVagasVagas= document.getElementsByClassName("EPV");
+  for (var i = 0; i < EnviarPropostaVagasVagas.length; i++) {
+    EnviarPropostaVagasVagas[i].innerHTML = idioma[selectedLanguage].EnviarPropostaVagas;
+  }
+
+  var MaisInformaçõesVagasVagas= document.getElementsByClassName("MaIV");
+  for (var i = 0; i < MaisInformaçõesVagasVagas.length; i++) {
+    MaisInformaçõesVagasVagas[i].innerHTML = idioma[selectedLanguage].MaisInformaçõesVagas;
+  }
+
+  
+  var CampoDeCriaçãoVagasVagas= document.getElementsByClassName("CDCV");
+  for (var i = 0; i < CampoDeCriaçãoVagasVagas.length; i++) {
+    CampoDeCriaçãoVagasVagas[i].innerHTML = idioma[selectedLanguage].CampoDeCriaçãoVagas;
+  }
+
+  var HabilidadesVagasVagas= document.getElementsByClassName("HabV");
+  for (var i = 0; i < HabilidadesVagasVagas.length; i++) {
+    HabilidadesVagasVagas[i].innerHTML = idioma[selectedLanguage].HabilidadesVagas;
+  }
+
+  //Conteúdo das Páginas
+  //Avisos
+
+
+
+  var AvisosTextoPrincipalAvisos= document.getElementsByClassName("TextA1");
+  for (var i = 0; i < AvisosTextoPrincipalAvisos.length; i++) {
+    AvisosTextoPrincipalAvisos[i].innerHTML = idioma[selectedLanguage].AvisosTextoPrincipal;
+  }
+
+  var AvisosServidoresAvisos= document.getElementsByClassName("AtuA1");
+  for (var i = 0; i < AvisosServidoresAvisos.length; i++) {
+    AvisosServidoresAvisos[i].innerHTML = idioma[selectedLanguage].AvisosServidores;
+  }
+
+  var AvisosPortifoliosAvisos= document.getElementsByClassName("AtuA2");
+  for (var i = 0; i < AvisosPortifoliosAvisos.length; i++) {
+    AvisosPortifoliosAvisos[i].innerHTML = idioma[selectedLanguage].AvisosPortifolios;
+  }
+
+  
+  var AvisosAparênciaAvisos= document.getElementsByClassName("AtuA3");
+  for (var i = 0; i < AvisosAparênciaAvisos.length; i++) {
+    AvisosAparênciaAvisos[i].innerHTML = idioma[selectedLanguage].AvisosAparência;
+  }
+
+  var AvisoResponsivoAvisos= document.getElementsByClassName("AtuA4");
+  for (var i = 0; i < AvisoResponsivoAvisos.length; i++) {
+    AvisoResponsivoAvisos[i].innerHTML = idioma[selectedLanguage].AvisoResponsivo;
+  }
+
+  // Conteudo das paginas
+  // Ajuda
+
+  var AjudaUsuarioAjuda= document.getElementsByClassName("UsuA");
+  for (var i = 0; i < AjudaUsuarioAjuda.length; i++) {
+    AjudaUsuarioAjuda[i].innerHTML = idioma[selectedLanguage].AjudaUsuario;
+  }
+
+
+  var AjudaPortifolioAjuda = document.getElementsByClassName("PortAj");
+  for (var i = 0; i < AjudaPortifolioAjuda.length; i++) {
+    AjudaPortifolioAjuda[i].innerHTML = idioma[selectedLanguage].AjudaPortifolio;
+  }
+
+  var AjudaCursoseVagasAjuda = document.getElementsByClassName("CeVA");
+  for (var i = 0; i < AjudaCursoseVagasAjuda.length; i++) {
+    AjudaCursoseVagasAjuda[i].innerHTML = idioma[selectedLanguage].AjudaCursoseVagas;
+  }
+
+  var CadastroGeralGeral= document.getElementsByClassName("CadA");
+  for (var i = 0; i < CadastroGeralGeral.length; i++) {
+    CadastroGeralGeral[i].innerHTML = idioma[selectedLanguage].CadastroGeral;
+  }
+
+  var AjudaTextoUsuarioAjuda= document.getElementsByClassName("TexUA");
+  for (var i = 0; i < AjudaTextoUsuarioAjuda.length; i++) {
+    AjudaTextoUsuarioAjuda[i].innerHTML = idioma[selectedLanguage].AjudaTextoUsuario;
+  }
+
+  var AjudaTextoPortifolioAjuda= document.getElementsByClassName("TexPA");
+  for (var i = 0; i < AjudaTextoPortifolioAjuda.length; i++) {
+    AjudaTextoPortifolioAjuda[i].innerHTML = idioma[selectedLanguage].AjudaTextoPortifolio;
+  }
+
+  var AjudaCursoseVagasTextoAjuda= document.getElementsByClassName("TexCeVA");
+  for (var i = 0; i < AjudaCursoseVagasTextoAjuda.length; i++) {
+    AjudaCursoseVagasTextoAjuda[i].innerHTML = idioma[selectedLanguage].AjudaCursoseVagasTexto;
+  }
+
+  var AjudaCadastroGeralAjuda= document.getElementsByClassName("CadAT");
+  for (var i = 0; i < AjudaCadastroGeralAjuda.length; i++) {
+    AjudaCadastroGeralAjuda[i].innerHTML = idioma[selectedLanguage].AjudaCadastroGeral;
+  }
+
 
 }
 //essa aqui não deixa perder as configurações de acordo com a escolha do usuario (ta travando)
