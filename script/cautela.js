@@ -198,6 +198,11 @@ function aplicarIdioma() {
       AvisoFooter: "Alerts",
       DireitosFooter: "All rights reserved. ©Seek 2024.",
 
+      PesquisarPlace:"Search",
+      CidadePlace:"Enter the city name",
+      CargoPlace:"User's role",
+      NomePlace:"UserName",
+
       SobrePrincipaltexto: "Our intention with Seek is to give visibility and greater opportunities to visual artists, as well as to provide increased contact with companieslooking for professionals with their skills.",
       SobreSubPrincipalTexto: "We also offer access to an education platform, allowing artists and other professionals to improve and stand out in the job market.",
       EquipeSob:"Team",
@@ -279,6 +284,11 @@ function aplicarIdioma() {
       ContatoFooter: "Contactos",
       AvisoFooter: "Avisos",
       DireitosFooter: "Todos los derechos reservados. ©Seek 2024.",
+
+      PesquisarPlace:"Buscar",
+      CidadePlace:"Escribe el nombre de la ciudad",
+      CargoPlace:"Cargodelusuario",
+      NomePlace:"Nombre del Usuario",
 
       SobrePrincipaltexto: "Nuestra intención con Seek es dar visibilidad y mayores oportunidades a los artistas visuales, además de proporcionar un mayor contacto con empresas que buscan profesionales con sus capacidades",
       SobreSubPrincipalTexto: "También ofrecemos acceso a una plataforma de educación, permitiendo que artistas y otros profesionales puedan mejorar y destacarse en el mercado laboral.",
@@ -362,6 +372,11 @@ function aplicarIdioma() {
         ContatoFooter: "連絡先",
         AvisoFooter: "通知",
         DireitosFooter: "全著作権所有. ©Seek 2024.",
+
+        PesquisarPlace:"検索",
+        CidadePlace:"市の名前を入力してください",
+        CargoPlace:"ユーザーの役職",
+        NomePlace:" ユーザー名",
 
         SobrePrincipaltexto: "Seekの意図は、視覚芸術家に視認性と大きな機会を与えることだけでなく、彼らの能力を必要とする企業とより多くの接触を提供することです。",
         SobreSubPrincipalTexto: "また、アーティストや他の専門家がスキルアップし、労働市場で目立つようにするための教育プラットフォームへのアクセスも提供しています。",
@@ -449,6 +464,11 @@ function aplicarIdioma() {
       AvisoFooter: "Avisos",
       DireitosFooter: "Todos os direitos reservados. ©Seek 2024.",
 
+      PesquisarPlace:"Pesquisar",
+      CidadePlace:"Digite o nome da sua cidade ",
+      CargoPlace:"CargodoUsuario",
+      NomePlace:"Nome do Usuario",
+
       SobrePrincipaltexto: "Nossa intenção com o Seek é dar visibilidade e maiores oportunidades aos artistas visuais, além de proporcionar um maior contato com empresas que buscam profissionais com suas capacidades",
       SobreSubPrincipalTexto: "Também oferecemos acesso a uma plataforma de educação, permitindo que artistas e outros profissionais possam se aprimorar e se destacar no mercado de trabalho.",
       EquipeSob:"Equipe",
@@ -515,6 +535,32 @@ function aplicarIdioma() {
 
 
 // Header e Footer
+
+//PlaceholderComeço
+
+  var PesquisarPlaceholder = document.getElementsByClassName("Pesquisar")
+  for (var i = 0; i < PesquisarPlaceholder.length; i++) {
+    PesquisarPlaceholder[i].placeholder = idioma[selectedLanguage].PesquisarPlace;
+  }
+
+  var CidadePlaceholder = document.getElementsByClassName("CidadeForm")
+  for (var i = 0; i < CidadePlaceholder.length; i++) {
+    CidadePlaceholder[i].placeholder = idioma[selectedLanguage].CidadePlace;
+  }
+
+  var  CargoPlaceholder= document.getElementsByClassName("CargoForm")
+  for (var i = 0; i < CargoPlaceholder.length; i++) {
+    CargoPlaceholder[i].placeholder = idioma[selectedLanguage].CargoPlace;
+  }
+
+  var NomePlaceholder= document.getElementsByClassName("NomeForm")
+  for (var i = 0; i <NomePlaceholder .length; i++) {
+    NomePlaceholder[i].placeholder = idioma[selectedLanguage].NomePlace;
+  }
+
+
+//Placeholder Fim
+  
   var HeaderExplorar = document.getElementsByClassName("ExpA");
   for (var i = 0; i < HeaderExplorar.length; i++) {
     HeaderExplorar[i].innerHTML = idioma[selectedLanguage].explorarHeader;
@@ -917,4 +963,4 @@ function TrocaLinguagem(lang) {
 
 
 
-//-------------------------------- Troca de lingua Cursos --------------------------------/
+//-------------------------------- Troca de lingua Cursos --------------------------------//
