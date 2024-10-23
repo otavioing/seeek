@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <p>jnosfis</p>
+
+    <div class="container borda">
+
+        <div class="caixa">1</div>
+        <div class="caixa">2</div>
+        <div class="caixa">3</div>
+
+
+    </div>
+
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .caixa{
+
+            border: 2px solid red;
+        }
+        .borda {
+            border: 3px solid yellowgreen;
+            height: 30rem;
+        }
+        p {
+            color: red;
+        }
+
+        @media screen and (max-width: 1200px) {
+            p {
+                color: blue;
+
+            }
+
+            .container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+            
+        }
+    </style>
+
+</body>
+
+</html>

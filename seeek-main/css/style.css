@@ -1,0 +1,1496 @@
+/*------------------------------------------------------------------------------*/
+/*-------------------------------- Explorar CSS --------------------------------*/
+/*------------------------------------------------------------------------------*/
+
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasee: #00008b;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --branco: #f3f3f3;
+
+    --brancomenuperfil: #E6E6E6;
+    
+    --cinzaescurofundodomudartema : #3A3A3A;
+
+    --vermelhom: #EF0000;
+
+
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroMesc2: #555555;
+
+    --ModoEscuroFontV: #5AB3FF;
+    --ModoEscuroFontC: #E197FF;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brancoBase);
+}
+
+
+
+
+/*RESPONSIVIDADE DO SITE COMEÇA A BUGAR COM 430PX*/
+
+/*-------------------------------- Modo Escuro --------------------------------*/
+
+.modoEscuro {
+    color: white;
+    background-color: var(--ModoEscuroBase);
+}
+
+.modoEscuro header .botaoMenu span {
+    background-color: var(--brancoBase);
+}
+
+
+
+.modoEscuro .explorar,
+.modoEscuro .filtroExplorar .buttonFiltro,
+.modoEscuro .filtroExplorar .filtroButton {
+    background-color: var(--ModoEscuroMesc2);
+    color: var(--brancoBase);
+}
+
+.modoEscuro .explorar a {
+    color: var(--brancoBase);
+}
+
+.modoEscuro .explorar .explorarDiv a {
+    color: var(--ModoEscuroFontV);
+
+}
+
+.modoEscuro .explorar .explorarDiv {
+    border-bottom: 1px solid var(--ModoEscuroFontV);
+}
+
+.modoEscuro .navsite .navSelecionado {
+    border-bottom: 3px solid var(--ModoEscuroFontV);
+}
+
+.modoEscuro .filtroExplorar input {
+    background-color: var(--ModoEscuroMesc2);
+    color: var(--brancoBase);
+}
+
+.modoEscuro .filtroExplorar input::placeholder {
+    color: var(--brancoBase);
+}
+
+.modoEscuro .modal-body , .modoEscuro .modal-button, .modoEscuro .modal-nav button{
+    background-color: var(--ModoEscuroBase);
+    color: white;
+}
+
+/*-------------------------------- Header inicio --------------------------------*/
+
+header {
+    background-color: var(--preto);
+    padding: 1rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+header .logosite,
+header .navsite,
+header .pesquisasite,
+header .usersite {
+    display: flex;
+    align-items: center;
+}
+
+header .logosite {
+    width: 20%;
+    justify-content: center;
+    height: 100%;
+}
+
+header .navsite {
+    width: 20%;
+    gap: 1rem;
+}
+
+.classSobrenos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 5rem;
+}
+
+header .navsite a {
+    color: var(--brancoBase);
+    /* transition: 0.3s; */
+}
+
+header .navsite a:hover {
+    color: var(--azulBase);
+    transform: translateY(-0.2rem);
+}
+
+/* .navsite .navSelecionado {
+    height: 100%;
+    border-bottom: 3px solid var(--azulBase);
+    padding: 2rem 0.4rem 2rem 0.4rem;
+} */
+
+header .pesquisasite {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header .pesquisasite input {
+    border: none;
+    height: 50%;
+    width: 80%;
+    border-radius: 0.8rem;
+    outline: none;
+    padding: 1rem;
+}
+
+header .usersite {
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15%;
+}
+
+header .usersite img {
+    height: 2rem;
+}
+
+header .logosite img {
+    height: 100%;
+}
+
+header .hamburguer {
+    display: none;
+}
+
+header .botaoMenu {
+    display: none;
+}
+
+header .userhover {
+    display: none;
+    width: 5rem;
+}
+
+header .userhover img {
+    height: 80%;
+}
+
+header .botaoMenu {
+
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background-color: transparent;
+    border: none;
+}
+
+header .botaoMenu span {
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--azulBase);
+}
+
+
+
+/*-------------------------------- Section fy --------------------------------*/
+
+.explorar {
+    height: 3.5rem;
+    background-color: var(--cinzaBase);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.explorar a {
+    color: var(--preto);
+    font-size: 1.3rem;
+}
+
+.explorar .explorarDiv {
+    border-bottom: 1px solid var(--azulBase);
+}
+
+.explorar .explorarDiv a {
+    color: var(--azulBase);
+}
+
+.explorar .tendencia {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-left: 1px solid var(--cinzaBasee);
+}
+
+.migalhaIndex {
+    padding: 2rem 0 0 2rem;
+    margin-top: 1rem;
+}
+
+.migalhaIndex h1 {
+    font-size: 2rem;
+    color: var(--preto);
+}
+
+.filtroExplorar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding: 0 2%;
+    margin-top: 2.5rem;
+}
+
+.filtroExplorar .buttonFiltro {
+    width: 20%;
+    background-color: var(--cinzaBasec);
+    border: none;
+    border-radius: 0.8rem;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+    gap: 0.8rem;
+    padding: 0.4rem 0.3rem;
+}
+
+.filtroExplorar .buttonFiltro img {
+    height: 2.5rem;
+}
+
+
+/*-------------------------------- Main prIndex --------------------------------*/
+
+.prIndex {
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+/*-------------------------------- Main Imagens --------------------------------*/
+.gride {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    column-count: 4;
+    break-inside: avoid-column;
+    column-gap: 1rem;
+}
+
+.gride>div {
+    position: relative;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gride>div .portHover {
+    position: absolute;
+    top:-105%;
+    left: 0%;
+    width: 100%;
+    padding-left: 1rem;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    transition: all 0.5s;
+    gap: 85%;
+}
+
+.portHover .PotG{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    gap: 5rem;
+
+}
+
+.portHover .PotS{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    align-items: center;
+    background-color: var(--azulBase);
+    padding: 0.3rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    gap: 0.3rem;
+}
+.portHover .PotS img{
+    height: 70%;
+}
+.gride>div .portHover .like {
+    display: flex;
+    flex-direction: row;
+}
+
+.gride>div .portHover p img {
+    height: 60%;
+}
+
+.gride>div:hover .portHover {
+    top: 0;
+}
+
+.gride #filho1{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho1 img{
+    width: 100%;
+}
+
+.gride #filho2{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho2 img{
+    width: 100%;
+}
+
+.gride #filho3{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho3 img{
+    width: 100%;
+}
+
+.gride #filho4{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho4 img{
+    width: 100%;
+}
+
+.gride #filho5{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho5 img{
+    width: 100%;
+}
+
+.gride #filho6{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho6 img{
+    width: 100%;
+}
+
+.gride #filho7{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho7 img{
+    width: 100%;
+}
+
+.gride #filho8{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gride #filho8 img{
+    width: 100%;
+}
+
+.prIndex .img3 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.img2 img {
+    width: 80%;
+}
+
+.selecionado {
+    height: 138%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #0E0E0E;
+}
+.portHover .PotH{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+   
+}
+.portHover .PotH p{
+    margin-right: 1rem;
+}
+/*------------------------------Modal Portifolio-----------------------------*/
+
+#modalPort{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content{
+    position: relative;
+    top: 5%;
+    background-color: var(--brancoBase);
+    margin: auto;
+    width: 50%;
+    height: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--preto);
+    color: var(--brancoBase);
+    padding: 1rem;
+    border: 0.365rem solid transparent;
+    border-image: linear-gradient(-90deg, rgb(75, 15, 110)0%, rgb(45, 100, 240)100%) 1;
+}
+
+.botaoContratar {
+    width: 10rem;
+    border: none;
+    padding: 1rem;
+    color: var(--brancoBase);
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-image: linear-gradient(-90deg, rgb(75, 15, 110)0%, rgb(45, 100, 240)100%);
+}
+
+.botaoContratar:hover {
+    background-image: linear-gradient(-90deg, rgb(90, 30, 125)0%, rgb(60, 115, 255)100%);
+}
+
+.modal-body {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    height: auto;
+}
+
+.modal-nav {
+    width: 30%;
+    margin: 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: var(--brancoBase);
+    width: 4rem;
+}
+
+.modal-button {
+    width: 3rem;
+    height: auto;
+    margin: 0.5rem;
+}
+
+#modalImage {
+    width: 70%;
+}
+
+.contratar-btn-span{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5rem;
+    height: 5rem;
+    gap: 0.5rem;
+}
+
+.contratar-btn-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+    gap: 0.5rem;
+}
+
+.close {
+    color: var(--brancoBase);
+    float: right;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--cinzaBasec);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.perfilPort {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+}
+
+.perfilPort p {
+    font-weight: 400;
+    font-size: 0.5rem;
+}
+
+.filtroExplorar input {
+    display: none;
+}
+
+
+
+/*------------------------------------ Footer -----------------------------------*/
+
+footer {
+    height: 12rem;
+    background-color: var(--preto);
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    justify-content: space-between;
+}
+
+.linksfooter {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.linksfooter .infofooter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+}
+
+.linksfooter .infofooter img {
+    height: 5rem;
+}
+
+.linksfooter .infofooter select {
+    color: var(--brancoBase);
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.linksfooter .infofooter select option {
+    background-color: var(--preto);
+}
+
+.direitosautorais {
+    color: var(--brancoBase);
+}
+
+.borda {
+    border-bottom: 1px solid red;
+    /*não apagar isso é so pra testar */
+}
+
+/*seta para subir a guia */
+.btn-scroll-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    display: grid;
+    place-items: center;
+    outline: none;
+    border-radius: 100%;
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+}
+
+.show-btn-scroll-top {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*fim da seta */
+/* inicio meno perfil*/
+
+#menuperfil {
+    position: absolute;
+    top: 6.5rem;
+    right: -50%;
+    background-color: var(--brancomenuperfil);
+    width: 13rem;
+    height: 17rem;
+    z-index: 1;
+    padding: 1rem;
+    gap: 0.5rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.5s;
+    border-radius: 1rem;
+}
+
+#menuperfil a {
+    color: var(--preto);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#sairdomenuperfil {
+    color: var(--vermelhom);
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.divmeuperfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.divconfiguracoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.divmeuperfil:hover, .divconfiguracoes:hover{
+    background-color: var(--brancoBase);
+    border-radius: 1rem;
+}
+.divmodoescuro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+
+/*------------------------------------ cadastro tipo usuário -----------------------------------*/
+
+
+.container1 {
+    background-color: var(--branco);
+    width: 45%;
+    height: auto;
+    position: fixed;
+    top: 15%;
+    left: 27.5%;
+    border-radius: 1.5rem;
+}
+
+
+.titulocadastro1 {
+    background-color: var(--azulBase);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.container1p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    color: var(--cinzaBasee);
+}
+
+.user-options-pai {
+    display: flex;
+    flex-direction: column;
+    height: 27rem;
+    padding: 4rem 1rem 1rem 1rem;
+    justify-content: space-between;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.tiposusuario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+.tiposusuario button {
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--cinzaBasee);
+    border-radius: 50%;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+.tiposusuario button img {
+    width: 50%;
+}
+
+.setaCorfirmar {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+   
+}
+
+.setaCorfirmar img {
+    height: 50%;
+    transform: rotate(90deg);
+    
+
+}
+
+.confirmation-container {
+    height: 100%;
+   
+}
+.seco{
+    background-color: var(--azulBase);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    height: 15%;
+    font-size: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+.pp{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 1.5rem 1rem;
+}
+
+/* separacao de usuario */
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    
+  }
+  
+ 
+  .form {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    
+  }
+  
+  .left-section, .right-section {
+    flex: 1;
+  }
+
+  .left-section{
+    padding: 0 1rem;
+  }
+  
+  .profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .photo-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--cinzaBasec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+   
+
+  }
+  
+  .input-group{
+    padding-right: 1rem;
+    margin-bottom: 20px;
+    color: red;
+    font-size: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+
+  .Descricao1{
+    color: black;
+  }
+  
+  .input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cinzaBase);
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    background-color:var(--cinzaBase);
+  }
+
+  .input-group textarea{
+    height: 5rem;
+  }
+  
+  .required {
+    color: red;
+    margin-left: 5px;
+  }
+  
+  .certificates {
+    display: flex;
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .certficatess{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .add-section-btn {
+    padding: 10px;
+    border: none;
+    background-color: var(--cinzaBase);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3;
+    
+    
+    
+    
+
+  }
+  
+  .add-section-btn:hover {
+    background-color: #bbb;
+  }
+  
+  .add-icon {
+    font-size: 24px;
+    color: #1e63e9;
+    cursor: pointer;
+    background-color: var(--cinzaBase);
+    border-radius: 50%;
+    border: 1px solid var(--cinzaBasee);
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .botaomodoescuro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .botaomodoescuro img{
+        width: 20px;
+        height: 20px;
+    }
+    .checkbox-con {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        color: white;
+       }
+       
+       .checkbox-con input[type="checkbox"] {
+        appearance: none; /* remove o estilo padrão do checkbox */
+        width: 68px; /* muda o tamanho do checkbox */
+        height: 27px; /* muda o tamanho do checkbox */
+        border: 2px solid var(--cinzaBasee);
+        border-radius: 20px;  /* muda o formato do checkbox */
+        background: var(--cinzaescurofundodomudartema); /* muda a cor do fundo em quanto a bolinha esta para a esquerda  */
+        position: relative;
+        box-sizing: border-box; 
+       }
+       
+       .checkbox-con input[type="checkbox"]::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: var(--branco); /* muda a cor da bolinha da eaquerda*/
+        border: 2px solid var(--branco); /* muda a cor da borda da bolinha da esquerda */
+        border-radius: 50%; /* muda o formato da bolinha */
+        position: absolute;
+        top: 0;
+        left: 1.1rem; 
+        transform: translate(-85%, 14%); /* muda a posição da bolinha */
+        transition: all 0.3s ease-in-out; /* muda a velocidade da animação da bolinha indo da direita para a esquerda  */
+       }
+       
+       .checkbox-con input[type="checkbox"]:checked::before {
+        background: var(--branco); /* muda a cor da bolinha */
+        border: 2px solid var(--branco); /* muda a cor da borda da bolinha da direita*/
+        transform: translate(133%, 13%); /* muda a posição da bolinha da direita*/
+        transition: all 0.3s ease-in-out; /* muda a velocidade da animação da bolinha indo da esquerda para a direita  */
+       }
+    
+       .checkbox-con input[type="checkbox"]:checked {
+        border: 2px solid var(--cinzaBasee);  /* muda a cor da borda  */
+        background: var(--cinzaescurofundodomudartema); /* muda a cor do fundo enquanto a bolinha esta para a direita */
+       }
+
+       .paginaselecionada{
+        height: 100%;
+        border-bottom: 3px solid var(--azulBase);
+        padding: 2rem 0.4rem 2rem 0.4rem;
+       }
+
+
+
+  
+
+/*------------------------------------------------------------------------*/
+/*-------------------------------- @media --------------------------------*/
+/*------------------------------------------------------------------------*/
+
+
+@media screen and (max-width:1300px){
+
+    header .pesquisasite{
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    header .pesquisasite input {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        margin-left: 3rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .navsite {
+        display: none;
+    }
+
+    header .pesquisasite {
+        display: none;
+    }
+
+    header .usersite {
+        display: none;
+    }
+
+    header .userhover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .botaoMenu {
+        display: flex;
+    }
+
+    header .hamburguer .botoesmenuhamburguer {
+
+        color: var(--cinza100);
+        padding: 1rem;
+        cursor: pointer;
+        color: white;
+
+    }
+
+    header .hamburguer .botoesmenuhamburguer:hover {
+        color: white;
+        background-color: #8C8C8C;
+    }
+
+    header .hamburguer {
+        display: flex;
+        height: 31%;
+        position: absolute;
+        flex-direction: column;
+        width: 25%;
+        top: 10%;
+        bottom: 49%;
+        left: -99%;
+        background-color: var(--preto);
+        align-items: center;
+        gap: 0.5em;
+        transition: left 0.3s;
+        z-index: 1;
+    }
+
+    header .hamburguer .botoesmenuhamburguer {
+
+        color: var(--cinza100);
+        padding: 1rem;
+        cursor: pointer;
+        color: white;
+
+    }
+
+    header .hamburguer .botoesmenuhamburguer:hover {
+
+        color: white;
+        background-color: #8C8C8C;
+    }
+
+    header .userhover {
+
+        height: 70%;
+    }
+
+    .inicio .logosite img {
+        height: 80%;
+    }
+
+    .explorar {
+        display: none;
+    }
+
+    .filtroExplorar .exp {
+        display: none;
+    }
+
+    .filtroExplorar {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+    }
+
+    .filtroExplorar input,
+    .filtroExplorar .buttonFiltro {
+        width: 100%;
+        background-color: var(--cinzaBasec);
+        border: 1px solid var(--cinzaBasee);
+        height: 3rem;
+        border-radius: 3rem;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+        outline: none;
+    }
+
+    .container1 {
+        width: 50%;
+        left: 25%;
+    }
+
+    .gride {
+        column-count: 3;
+    }
+
+}
+
+
+@media screen and (max-width: 950px) {
+
+    .prIndex .perfilPort h1 {
+        font-size: 140%;
+    }
+
+    .container1 {
+        width: 75%;
+        left: 12.5%;
+    }
+
+}
+
+
+@media screen and (max-width: 750px) {
+
+    .perfilPort {
+        font-size: 70%;
+    }
+
+    .perfilPort p {
+        font-size: 60%;
+    }
+
+    .container1 {
+        width: 85%;
+        left: 7.5%;
+    }
+
+}
+
+
+@media screen and (max-width: 660px) {
+
+    .perfilPort {
+        font-size: 60%;
+    }
+
+    .perfilPort p {
+        font-size: 60%;
+    }
+
+    .linksfooter {
+        width: 100%;
+    }
+
+    .infofooter img {
+        display: none;
+    }
+
+    .container1 {
+        width: 95%;
+        left: 2.5%;
+    }
+    
+    .tiposusuario button {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .container1 {
+        height: auto;
+    }
+
+    .user-options-pai {
+        height: 23rem;
+    }
+
+    .gride {
+        column-count: 2;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .main.prIndex {
+        margin-bottom: 2rem;
+    }
+
+    .container1{
+        font-size: 0.8rem;
+    }
+
+    .certificates>div{
+        width: 100%;
+    }
+
+    .add-section-btn{
+        font-size: 0.7rem;
+    }
+
+    .form{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .container1{
+        height: auto;
+        width: 90%;
+        left: 5%;
+        top: 10%;
+        padding-bottom: 1rem;
+    }
+
+    .input-group{
+        padding: 1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .left-section{
+        padding: 0;
+    }
+
+    .certficateslabel{
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .gride {
+        column-count: 1;
+    }
+
+    .perfilPort {
+        font-size: 60%;
+        width: 100%;
+    }
+
+    .perfilPort p {
+        font-size: 50%;
+    }
+
+    .inicio .logosite img {
+        height: 60%;
+    }
+
+    .filtroExplorar {
+        width: 100%;
+    }
+
+    .filtroExplorar input,
+    .filtroExplorar .buttonFiltro {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    #menu {
+        width: 10rem;
+    }
+
+    .container1{
+        top: 5%;
+    }
+
+    .tiposusuario button {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .tiposusuario {
+        gap: 0.2rem;
+    }
+
+    .tiposusuario p{
+        font-size: 0.7rem;
+    }
+
+}
+
+@media screen and (max-width: 230px) {
+
+    header .logosite {
+        display: none;
+    }
+
+    .gride {
+        column-count: 1;
+    }
+
+    #menu {
+        width: 7rem;
+        height: 8rem;
+        position: absolute;
+        left: 0;
+        top: 5.9rem;
+    }
+
+    #menu .botoesmenuhamburguer {
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+    footer {
+        height: 20rem;
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+
+    footer .linksfooter {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .linksfooter select {
+        width: 80%;
+    }
+
+    .vlibrass {
+        display: none;
+    }
+
+    .filtroExplorar .buttonFiltro {
+        font-size: 0.8rem;
+    }
+
+    .filtroExplorar .buttonFiltro img {
+        height: 2rem;
+    }
+
+    .photo-placeholder{
+        height: 90px;
+        width: 90px;
+        font-size: 0.8rem;
+    }
+
+    .pp{
+        font-size: 0.6rem;
+    }
+
+    .seco{
+        font-size: 1rem;
+    }
+
+    .input-group input{
+        font-size: 0.6rem;
+    }
+
+    .input-group textarea{
+        height: 3rem;
+    }
+
+    .add-section-btn{
+        font-size: 0.6rem;
+    }
+
+    .tiposusuario button {
+        height: 3rem;
+        width: 3rem;
+    }
+
+}
+
+@media screen and (max-height: 640px) {
+
+
+    .input-group{
+        padding: 0.4rem;
+    }
+    
+}
+
+
+
+

@@ -1,0 +1,139 @@
+.borda {
+    border: 1px solid #000;
+}
+
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasee: #00008b;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --branco: #f3f3f3;
+
+    --vermelhom: #EF0000;
+
+
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroMesc2: #555555;
+
+    --ModoEscuroFontV: #5AB3FF;
+    --ModoEscuroFontC: #E197FF;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.caixaflutuante {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--branco);
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--preto);
+    z-index: 9999;
+    width: 45rem;
+    height: 37rem;
+    gap: 1rem;
+}
+.caixaflutuante img{
+    width: 100%;
+    height: 17rem;
+    
+
+}
+.caixaflutuante h2{
+    color: var(--azulBase);
+    font-size: 1.5rem;
+}
+.informacoescaixaflutuantecursos{
+    display: flex;
+    justify-content: space-between;
+}
+#descricaodacaixaflutuantecursos{
+    font-size: 1.5rem;
+}
+.informacoessobreocursocaixaflutuante{
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+}
+.infocursoscaixaflutuante{
+    display: flex;
+
+}
+.iconscaixaflutuantecursos img{
+    height: 15px;
+}
+.iconscaixaflutuantecursos{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+#botaoinscrever{
+    background-color: transparent;
+    border: none;
+    color: var(--azulBase);
+    font-size: 1rem;
+    cursor: pointer;
+}
+.botaomaisinfocursoscaixaflutuante{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 15rem;
+}
+#idassinarcursocaixaflutuante{
+    background-color: transparent;
+    border: none;
+    background-color: var(--azulBase);
+    width: 8rem;
+    height: 3rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.assinarcursocaixaflutuante{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 15rem;
+    height: 7rem;
+    gap: 1rem;
+}
+#idassinarcursocaixaflutuante:hover{
+    background-color: var(--azulBasee);
+    color: var(--branco);
+}
