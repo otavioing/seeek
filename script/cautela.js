@@ -188,6 +188,7 @@ function aplicarIdioma() {
       ModalComentarios:"Comments",
       ModalCompartilhar:"Share",
       PortifolioTeste:"Test portfolio",
+      portSalvar:"save",
       PortifolioAutor:"Author",
       ModalPortifolio:"Portfolio prototype",
       ModalAutor:"Creators name • 0 followers",
@@ -299,6 +300,7 @@ function aplicarIdioma() {
       ModalComentarios:"Comentarios",
       ModalCompartilhar:"Compartir",
       PortifolioTeste:" Portafolio Experimento",
+      portSalvar:"ahorrar",
       PortifolioAutor:"Autor",
       ModalPortifolio:" Prototipo del portafolio",
       ModalAutor:"Nombre del creador • 0 seguidores",
@@ -411,6 +413,7 @@ function aplicarIdioma() {
         ModalComentarios: "コメント",
         ModalCompartilhar: "共有",
         PortifolioTeste: "テストポートフォリオ",
+        portSalvar:"保存",
         PortifolioAutor: "著者",
         ModalPortifolio: "ポートフォリオプロトタイプ",
         ModalAutor: "クリエイター名 • 0フォロワー",
@@ -528,6 +531,7 @@ function aplicarIdioma() {
       ModalComentarios:"Comentários",
       ModalCompartilhar:"Compartilhar",
       PortifolioTeste:"Teste portfolio",
+      portSalvar:"salvar",
       PortifolioAutor:"Author",
       ModalPortifolio:"Protótipo de portifólio",
       ModalAutor:"Nome do criador • 0 seguidores",
@@ -777,6 +781,12 @@ function aplicarIdioma() {
   var PortifolioGrid = document.getElementsByClassName("PotG");
   for (var i = 0; i < PortifolioGrid.length; i++) {
     PortifolioGrid[i].innerHTML = idioma[selectedLanguage].PortifolioTeste;
+  }
+
+  
+  var PortifolioSalvar = document.getElementsByClassName("PotS");
+  for (var i = 0; i < PortifolioSalvar.length; i++) {
+    PortifolioSalvar[i].innerHTML = idioma[selectedLanguage].portSalvar;
   }
 
   var AutorGrid  = document.getElementsByClassName("AutG");

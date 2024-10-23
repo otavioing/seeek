@@ -355,7 +355,7 @@ header .botaoMenu span {
     padding: 0 1rem 1rem 1rem;
 }
 
-.portHover .PotG{
+.portHover .portHoverInt{
     display: flex;
     align-items: center;
     font-size: 2rem;
@@ -365,7 +365,7 @@ header .botaoMenu span {
 
 }
 
-.portHover .PotS{
+.portHover .SalvarPort{
     display: flex;
     justify-content: center;
     height: 60%;
@@ -377,7 +377,7 @@ header .botaoMenu span {
     font-weight: normal;
     gap: 0.3rem;
 }
-.portHover .PotS img{
+.portHover .SalvarPort img{
     height: 70%;
 }
 .gride>div .portHover .like {
@@ -505,7 +505,7 @@ header .botaoMenu span {
 .portHover .PotH .PLike img{
     height: 100%;
 }
-.portHover .AutP{
+.portHover .AutorP{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
