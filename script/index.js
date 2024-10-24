@@ -1,16 +1,17 @@
 // Script para a janela modal
 var modal = document.getElementById("modalPort");
 var imgs = document.querySelectorAll(".portImg");
+var divPort = document.querySelectorAll(".divPortifolio");
 var modalImage = document.getElementById("modalImage");
 var span = document.getElementsByClassName("close")[0];
 var body = document.body;
 
-for (let i = 0; i < imgs.length; i++) {
-    imgs[i].onclick = function() {
+for (let i = 0; i < divPort.length; i++) {
+    divPort[i].addEventListener("click", () => {
         modalImage.src = this.src;
         modal.style.display = "block";
         body.style.overflow = "hidden";
-    }
+    });
 }
 
 span.onclick = function() {
