@@ -28,8 +28,8 @@
     --branco: #f3f3f3;
 
     --brancomenuperfil: #E6E6E6;
-    
-    --cinzaescurofundodomudartema : #3A3A3A;
+
+    --cinzaescurofundodomudartema: #3A3A3A;
 
     --vermelhom: #EF0000;
 
@@ -107,13 +107,16 @@ a {
 .modoEscuro .filtroExplorar input {
     background-color: var(--ModoEscuroMesc2);
     color: var(--brancoBase);
+
 }
 
 .modoEscuro .filtroExplorar input::placeholder {
     color: var(--brancoBase);
 }
 
-.modoEscuro .modal-body , .modoEscuro .modal-button, .modoEscuro .modal-nav button{
+.modoEscuro .modal-body,
+.modoEscuro .modal-button,
+.modoEscuro .modal-nav button {
     background-color: var(--ModoEscuroBase);
     color: white;
 }
@@ -247,6 +250,7 @@ header .botaoMenu span {
     align-items: center;
     padding: 1.5rem;
     gap: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .explorar a {
@@ -286,7 +290,8 @@ header .botaoMenu span {
     margin-top: 2.5rem;
 }
 
-.filtroExplorar .buttonFiltro {
+.filtroExplorar .buttonFiltro,
+.Ipesquisarindex {
     width: 20%;
     background-color: var(--cinzaBasec);
     border: none;
@@ -298,6 +303,7 @@ header .botaoMenu span {
     font-size: 100%;
     gap: 0.8rem;
     padding: 0.4rem 0.3rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .filtroExplorar .buttonFiltro img {
@@ -342,7 +348,7 @@ header .botaoMenu span {
 
 .gride>div .portHover {
     position: absolute;
-    top:-100%;
+    top: -100%;
     left: 0%;
     width: 100%;
     /* padding-left: 1rem; */
@@ -359,20 +365,21 @@ header .botaoMenu span {
     padding: 0 1rem 1rem 1rem;
 }
 
-.portHover .portHoverInt{
+.portHover .portHoverInt {
     display: flex;
     align-items: center;
     font-size: 2rem;
     width: 100%;
     font-weight: bold;
     justify-content: space-between;
-
+    font-size: 1.5rem;
+    padding: 1rem 0;
 }
 
-.portHover .SalvarPort{
+.portHover .SalvarPort button {
     display: flex;
     justify-content: center;
-    height: 60%;
+    height: 2rem;
     align-items: center;
     background-color: var(--azulBase);
     padding: 0.3rem;
@@ -380,29 +387,41 @@ header .botaoMenu span {
     font-size: 1.2rem;
     font-weight: normal;
     gap: 0.3rem;
+    border: none;
+    cursor: pointer;
+    color: var(--branco);
+    padding: 0.3rem;
 }
-.portHover .SalvarPort img{
-    height: 70%;
-}
+
 .gride>div .portHover .like {
+    height: auto;
     display: flex;
     flex-direction: row;
 }
-.portHover .PotH{
+
+.portHover .PotH {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
-   
+    align-items: flex-end;
+
 }
-.portHover .PotH .AutG{
-  font-size: 2rem;
+
+.portHover .PotH .AutG {
+    font-size: 2rem;
 }
-.portHover .PotH .PerfAv{
-    height: 40%;
-}
-.portHover .PotH .PerfAv img{
+
+.portHover .PotH .PerfAv {
     height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.4rem;
+}
+
+.portHover .PotH .PerfAv img {
+    height: 50%;
 }
 
 .gride>div .portHover p img {
@@ -413,75 +432,28 @@ header .botaoMenu span {
     top: 0;
 }
 
-.gride #filho1{
+.gride #filho1,
+.gride #filho2,
+.gride #filho3,
+.gride #filho4,
+.gride #filho5,
+.gride #filho6,
+.gride #filho7,
+.gride #filho8 {
     border-radius: 0.5rem;
     margin-bottom: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
-.gride #filho1 img{
-    width: 100%;
-}
-
-.gride #filho2{
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.gride #filho2 img{
-    width: 100%;
-}
-
-.gride #filho3{
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.gride #filho3 img{
-    width: 100%;
-}
-
-.gride #filho4{
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.gride #filho4 img{
-    width: 100%;
-}
-
-.gride #filho5{
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.gride #filho5 img{
-    width: 100%;
-}
-
-.gride #filho6{
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.gride #filho6 img{
-    width: 100%;
-}
-
-.gride #filho7{
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.gride #filho7 img{
-    width: 100%;
-}
-
-.gride #filho8{
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.gride #filho8 img{
+.gride #filho1 img,
+.gride #filho2 img,
+.gride #filho3 img,
+.gride #filho4 img,
+.gride #filho5 img,
+.gride #filho6 img,
+.gride #filho7 img,
+.gride #filho8 img {
     width: 100%;
 }
 
@@ -501,22 +473,25 @@ header .botaoMenu span {
     align-items: center;
     border-bottom: 1px solid #0E0E0E;
 }
-.portHover .PotH .PLike{
+
+.portHover .PotH .PLike {
     display: flex;
-    height: 50%
+    height: auto;
 }
 
-.portHover .PotH .PLike img{
-    height: 100%;
+.portHover .PotH .PLike img {
+    height: 1rem;
 }
-.portHover .AutorP{
+
+.portHover .AutorP {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 /*------------------------------Modal Portifolio-----------------------------*/
 
-#modalPort{
+#modalPort {
     display: none;
     position: fixed;
     z-index: 1;
@@ -529,7 +504,7 @@ header .botaoMenu span {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal-content{
+.modal-content {
     position: relative;
     top: 5%;
     background-color: var(--brancoBase);
@@ -540,22 +515,22 @@ header .botaoMenu span {
     padding-bottom: 1rem;
 }
 
-.modal-header{
+.modal-header {
     display: flex;
 }
 
-.perfilPort{
+.perfilPort {
     display: flex;
     color: var(--branco);
     width: 100%;
 }
 
-.modal-body{
+.modal-body {
     padding: 2% 2% 2% 5%;
     display: flex;
 }
 
-.modal-nav{
+.modal-nav {
     display: inline-flex;
     flex-direction: column;
     padding: 0 1rem;
@@ -564,7 +539,7 @@ header .botaoMenu span {
     height: 100%;
 }
 
-.modal-nav button{
+.modal-nav button {
     background: none;
     border: none;
     outline: none;
@@ -578,12 +553,12 @@ header .botaoMenu span {
     height: 10%;
 }
 
-.modal-nav button img{
+.modal-nav button img {
     width: 70%;
     height: 70%;
 }
 
-#modalImage{
+#modalImage {
     width: 85%;
     height: auto;
 }
@@ -695,7 +670,8 @@ footer {
     background-color: transparent;
     cursor: pointer;
 }
-.divmeuperfil{
+
+.divmeuperfil {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -703,7 +679,8 @@ footer {
     padding: 0.5rem;
     cursor: pointer;
 }
-.divconfiguracoes{
+
+.divconfiguracoes {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -711,11 +688,14 @@ footer {
     padding: 0.5rem;
     cursor: pointer;
 }
-.divmeuperfil:hover, .divconfiguracoes:hover{
+
+.divmeuperfil:hover,
+.divconfiguracoes:hover {
     background-color: var(--brancoBase);
     border-radius: 1rem;
 }
-.divmodoescuro{
+
+.divmodoescuro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -811,21 +791,22 @@ footer {
     align-items: center;
     justify-content: end;
     cursor: pointer;
-   
+
 }
 
 .setaCorfirmar img {
     height: 50%;
     transform: rotate(90deg);
-    
+
 
 }
 
 .confirmation-container {
     height: 100%;
-   
+
 }
-.seco{
+
+.seco {
     background-color: var(--azulBase);
     color: white;
     padding: 1rem;
@@ -837,11 +818,12 @@ footer {
     font-size: 1.5rem;
     border-radius: 1.5rem 1.5rem 0 0;
 }
-.pp{
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 1.5rem 1rem;
+
+.pp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
 }
 
 /* separacao de usuario */
@@ -853,32 +835,33 @@ padding: 1.5rem 1rem;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    
-  }
-  
- 
-  .form {
+
+}
+
+
+.form {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    
-  }
-  
-  .left-section, .right-section {
-    flex: 1;
-  }
 
-  .left-section{
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+}
+
+.left-section {
     padding: 0 1rem;
-  }
-  
-  .profile-photo {
+}
+
+.profile-photo {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-  }
-  
-  .photo-placeholder {
+}
+
+.photo-placeholder {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -889,11 +872,11 @@ padding: 1.5rem 1rem;
     color: #333;
     font-size: 14px;
     cursor: pointer;
-   
 
-  }
-  
-  .input-group{
+
+}
+
+.input-group {
     padding-right: 1rem;
     margin-bottom: 20px;
     color: red;
@@ -901,74 +884,75 @@ padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-  }
-  
-  .input-group label {
+}
+
+.input-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-  }
+}
 
 
-  .Descricao1{
+.Descricao1 {
     color: black;
-  }
-  
-  .input-group input, .input-group textarea {
+}
+
+.input-group input,
+.input-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid var(--cinzaBase);
     border-radius: 5px;
     outline: none;
     resize: none;
-    background-color:var(--cinzaBase);
-  }
+    background-color: var(--cinzaBase);
+}
 
-  .input-group textarea{
+.input-group textarea {
     height: 5rem;
-  }
-  
-  .required {
+}
+
+.required {
     color: red;
     margin-left: 5px;
-  }
-  
-  .certificates {
+}
+
+.certificates {
     display: flex;
     padding: 0.5rem 1rem;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
     justify-content: center;
-  }
+}
 
-  .certficatess{
+.certficatess {
     width: 60%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
-  }
-  
-  .add-section-btn {
+}
+
+.add-section-btn {
     padding: 10px;
     border: none;
     background-color: var(--cinzaBase);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3;
-    
-    
-    
-    
 
-  }
-  
-  .add-section-btn:hover {
+
+
+
+
+}
+
+.add-section-btn:hover {
     background-color: #bbb;
-  }
-  
-  .add-icon {
+}
+
+.add-icon {
     font-size: 24px;
     color: #1e63e9;
     cursor: pointer;
@@ -977,79 +961,97 @@ padding: 1.5rem 1rem;
     border: 1px solid var(--cinzaBasee);
     height: 2rem;
     width: 2rem;
-  }
+}
 
-  .botaomodoescuro{
+.botaomodoescuro {
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-    .botaomodoescuro img{
-        width: 20px;
-        height: 20px;
-    }
-    .checkbox-con {
-        margin: 10px;
-        display: flex;
-        align-items: center;
-        color: white;
-       }
-       
-       .checkbox-con input[type="checkbox"] {
-        appearance: none; /* remove o estilo padrão do checkbox */
-        width: 68px; /* muda o tamanho do checkbox */
-        height: 27px; /* muda o tamanho do checkbox */
-        border: 2px solid var(--cinzaBasee);
-        border-radius: 20px;  /* muda o formato do checkbox */
-        background: var(--cinzaescurofundodomudartema); /* muda a cor do fundo em quanto a bolinha esta para a esquerda  */
-        position: relative;
-        box-sizing: border-box; 
-       }
-       
-       .checkbox-con input[type="checkbox"]::before {
-        content: "";
-        width: 14px;
-        height: 14px;
-        background: var(--branco); /* muda a cor da bolinha da eaquerda*/
-        border: 2px solid var(--branco); /* muda a cor da borda da bolinha da esquerda */
-        border-radius: 50%; /* muda o formato da bolinha */
-        position: absolute;
-        top: 0;
-        left: 1.1rem; 
-        transform: translate(-85%, 14%); /* muda a posição da bolinha */
-        transition: all 0.3s ease-in-out; /* muda a velocidade da animação da bolinha indo da direita para a esquerda  */
-       }
-       
-       .checkbox-con input[type="checkbox"]:checked::before {
-        background: var(--branco); /* muda a cor da bolinha */
-        border: 2px solid var(--branco); /* muda a cor da borda da bolinha da direita*/
-        transform: translate(133%, 13%); /* muda a posição da bolinha da direita*/
-        transition: all 0.3s ease-in-out; /* muda a velocidade da animação da bolinha indo da esquerda para a direita  */
-       }
-    
-       .checkbox-con input[type="checkbox"]:checked {
-        border: 2px solid var(--cinzaBasee);  /* muda a cor da borda  */
-        background: var(--cinzaescurofundodomudartema); /* muda a cor do fundo enquanto a bolinha esta para a direita */
-       }
+}
 
-       .paginaselecionada{
-        height: 100%;
-        border-bottom: 3px solid var(--azulBase);
-        padding: 2rem 0.4rem 2rem 0.4rem;
-       }
+.botaomodoescuro img {
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-con {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.checkbox-con input[type="checkbox"] {
+    appearance: none;
+    /* remove o estilo padrão do checkbox */
+    width: 68px;
+    /* muda o tamanho do checkbox */
+    height: 27px;
+    /* muda o tamanho do checkbox */
+    border: 2px solid var(--cinzaBasee);
+    border-radius: 20px;
+    /* muda o formato do checkbox */
+    background: var(--cinzaescurofundodomudartema);
+    /* muda a cor do fundo em quanto a bolinha esta para a esquerda  */
+    position: relative;
+    box-sizing: border-box;
+}
+
+.checkbox-con input[type="checkbox"]::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: var(--branco);
+    /* muda a cor da bolinha da eaquerda*/
+    border: 2px solid var(--branco);
+    /* muda a cor da borda da bolinha da esquerda */
+    border-radius: 50%;
+    /* muda o formato da bolinha */
+    position: absolute;
+    top: 0;
+    left: 1.1rem;
+    transform: translate(-85%, 14%);
+    /* muda a posição da bolinha */
+    transition: all 0.3s ease-in-out;
+    /* muda a velocidade da animação da bolinha indo da direita para a esquerda  */
+}
+
+.checkbox-con input[type="checkbox"]:checked::before {
+    background: var(--branco);
+    /* muda a cor da bolinha */
+    border: 2px solid var(--branco);
+    /* muda a cor da borda da bolinha da direita*/
+    transform: translate(133%, 13%);
+    /* muda a posição da bolinha da direita*/
+    transition: all 0.3s ease-in-out;
+    /* muda a velocidade da animação da bolinha indo da esquerda para a direita  */
+}
+
+.checkbox-con input[type="checkbox"]:checked {
+    border: 2px solid var(--cinzaBasee);
+    /* muda a cor da borda  */
+    background: var(--cinzaescurofundodomudartema);
+    /* muda a cor do fundo enquanto a bolinha esta para a direita */
+}
+
+.paginaselecionada {
+    height: 100%;
+    border-bottom: 3px solid var(--azulBase);
+    padding: 2rem 0.4rem 2rem 0.4rem;
+}
 
 
 
-  
+
 
 /*------------------------------------------------------------------------*/
 /*-------------------------------- @media --------------------------------*/
 /*------------------------------------------------------------------------*/
 
 
-@media screen and (max-width:1300px){
+@media screen and (max-width:1300px) {
 
-    header .pesquisasite{
+    header .pesquisasite {
         justify-content: center;
     }
 
@@ -1241,7 +1243,7 @@ padding: 1.5rem 1rem;
         width: 95%;
         left: 2.5%;
     }
-    
+
     .tiposusuario button {
         height: 8rem;
         width: 8rem;
@@ -1267,24 +1269,24 @@ padding: 1.5rem 1rem;
         margin-bottom: 2rem;
     }
 
-    .container1{
+    .container1 {
         font-size: 0.8rem;
     }
 
-    .certificates>div{
+    .certificates>div {
         width: 100%;
     }
 
-    .add-section-btn{
+    .add-section-btn {
         font-size: 0.7rem;
     }
 
-    .form{
+    .form {
         flex-direction: column;
         gap: 0;
     }
 
-    .container1{
+    .container1 {
         height: auto;
         width: 90%;
         left: 5%;
@@ -1292,16 +1294,16 @@ padding: 1.5rem 1rem;
         padding-bottom: 1rem;
     }
 
-    .input-group{
+    .input-group {
         padding: 1rem;
         margin-bottom: 0.2rem;
     }
 
-    .left-section{
+    .left-section {
         padding: 0;
     }
 
-    .certficateslabel{
+    .certficateslabel {
         width: 100%;
         padding-left: 1rem;
     }
@@ -1342,7 +1344,7 @@ padding: 1.5rem 1rem;
         width: 10rem;
     }
 
-    .container1{
+    .container1 {
         top: 5%;
     }
 
@@ -1355,7 +1357,7 @@ padding: 1.5rem 1rem;
         gap: 0.2rem;
     }
 
-    .tiposusuario p{
+    .tiposusuario p {
         font-size: 0.7rem;
     }
 
@@ -1411,29 +1413,29 @@ padding: 1.5rem 1rem;
         height: 2rem;
     }
 
-    .photo-placeholder{
+    .photo-placeholder {
         height: 90px;
         width: 90px;
         font-size: 0.8rem;
     }
 
-    .pp{
+    .pp {
         font-size: 0.6rem;
     }
 
-    .seco{
+    .seco {
         font-size: 1rem;
     }
 
-    .input-group input{
+    .input-group input {
         font-size: 0.6rem;
     }
 
-    .input-group textarea{
+    .input-group textarea {
         height: 3rem;
     }
 
-    .add-section-btn{
+    .add-section-btn {
         font-size: 0.6rem;
     }
 
@@ -1447,12 +1449,8 @@ padding: 1.5rem 1rem;
 @media screen and (max-height: 640px) {
 
 
-    .input-group{
+    .input-group {
         padding: 0.4rem;
     }
-    
+
 }
-
-
-
-
