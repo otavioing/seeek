@@ -12,57 +12,44 @@
 <body id="todo">
 
   <header class="inicio">
-
-
     <button class="botaoMenu" id="botaoMenu">
       <span class="linha1"></span>
       <span class="linha2"></span>
       <span class="linha3"></span>
     </button>
-
     <div class="logosite">
       <img src="img/logo.svg" alt="Logo Seek">
     </div>
-
     <div class="userhover"><img src="img/user2.svg" alt=""></div>
-
     <nav class="navsite">
       <div id="headerexplurar" class="navSelecionado">
-        <a href="index.html" class="ExpA">Explorar</a>
+        <a href="index.html" class="nav-link ExpA">Explorar</a>
       </div>
-      <div id="headercursos" class="">
-        <a href="cursos.html" class="CurA">Cursos</a>
+      <div id="headercursos">
+        <a href="cursos.html" class="nav-link CurA">Cursos</a>
       </div>
-      <div id="headervagas" class="">
-        <a href="vagas.html" class="VagA">Vagas</a>
+      <div id="headervagas">
+        <a href="vagas.html" class="nav-link VagA">Vagas</a>
       </div>
-      <div class="sobrenoss"><a href="sobre.html" class="SobA">Sobre Nós</a></div>
+      <div class="sobrenoss">
+        <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
+      </div>
     </nav>
-
     <div class="pesquisasite">
-      <input type="text" placeholder="Pesquisar">
+      <input type="text" placeholder="Pesquisar" class="Pesquisar">
       <a href=""><img src="img/search2.svg" alt=""></a>
     </div>
-
     <div class="usersite">
       <a href=""><img src="img/bell2.svg" alt=""></a>
       <a href="login.html"><img src="img/user2.svg" alt=""></a>
-
       <button id="abrirmenuperfil" onclick="abrirMenu()">teste menu perfil</button>
-
-
-
     </div>
     <nav class="hamburguer" id="menu">
-      <a class="botoesmenuhamburguer" href="index.html" class="ExpA">Explorar</a>
-      <a class="botoesmenuhamburguer" href="cursos.html" class="CurA">Cursos</a>
-      <a class="botoesmenuhamburguer" href="vagas.html" class="VagA">Vagas</a>
-      <a class="botoesmenuhamburguer" href="sobre.html" class="SobA">Sobre Nós</a>
+      <a class="botoesmenuhamburguer nav-link" href="index.html" class="ExpA">Explorar</a>
+      <a class="botoesmenuhamburguer nav-link" href="cursos.html" class="CurA">Cursos</a>
+      <a class="botoesmenuhamburguer nav-link" href="vagas.html" class="VagA">Vagas</a>
+      <a class="botoesmenuhamburguer nav-link" href="sobre.html" class="SobA">Sobre Nós</a>
     </nav>
-
-
-
-
     <div id="menuperfil" class="menuperfil">
       <div class="divmeuperfil">
         <a href="" class="Perf">Meu Perfil</a>
@@ -73,32 +60,32 @@
       <div class="botaomodoescuro">
         <label for=""><img src="img/lua.png" alt=""></label>
         <div class="checkbox-con">
-            <input onclick="MudarModos()" id="checkbox" type="checkbox" checked>
+          <input onclick="MudarModos()" id="checkbox" type="checkbox" checked>
         </div>
         <label for=""><img src="img/sol.png" alt=""></label>
-    </div>
+      </div>
       <button id="sairdomenuperfil" class="sairP">Sair</button>
     </div>
   </header>
 
   <section class="migalhadepao">
 
-    <a class="migalhadepaosobrenoshome" href="">Home></a> <a class="migalhadepaosobrenos" href="">Ajuda</a>
+    <a class="migalhadepaosobrenoshome" href=""> <span class="ExpA">Explorar</span></a> <p> > </p> <a class="migalhadepaosobrenos" href=""> <span class="AjuF"> Ajuda </span></a>
 
   </section>
   <main class="mainajuda">
-    <h1 class="h1ajuda">Ajuda</h1>
+    <h1 class="h1ajuda"> <span class="AjuF">Ajuda </span></h1>
 
 
     <div class="usuarioajuda">
 
       <div class="usuariosinfoeimg">
-        <h2 class="h2usuario">Usuário</h2>
+        <h2 class="h2usuario"> <span class="UsuA">Usuário</span></h2>
 
-        <p class="textousuarioajuda">Começando pela parte do usuário, você pode configurar sua <br>
+        <p class="textousuarioajuda"> <span class="TexUA">Começando pela parte do usuário, você pode configurar sua <br>
           conta da forma como quiser e até podendo alterar o tipo <br>
           dela, podendo selecionar um tipo de conta para professores, <br>
-          ou a padrão(artistas), ou empresa. </p>
+          ou a padrão(artistas), ou empresa.</span> </p>
       </div>
       <div class="imagemcamera">
         <img src="img/Group 311 camera.svg" alt="">
@@ -109,9 +96,9 @@
 
 
       <div class="portiajudaimg">
-        <h2 class="h2portifolio">Portfólios</h2>
+        <h2 class="h2portifolio"> <span class="PortAj">Portfólios</span></h2>
 
-        <p class="textousuarioportifolioajuda">A parte de portfólio, além de você poder atualizar o seu indo
+        <p class="textousuarioportifolioajuda"> <span class="TexPA">A parte de portfólio, além de você poder atualizar o seu indo
           <br>
           na secção de portfólio e adicionar ou editar.E para acesar os <br>
           porfólios de outras pessoas você pode fazer de duas <br>
@@ -121,7 +108,7 @@
           indo na barra de pesquisa e buscar por um estilo ou ator que <br>
           te interessa,podendo filtrar após a pesquisa.E ao clicar na <br>
           capa do portfólio ele abrirá na sua tela uma janela onde <br>
-          estará o porfólio completo.
+          estará o porfólio completo.</span>
         </p>
       </div>
       <div class="portinfoeimg">
@@ -133,14 +120,14 @@
 
       <div class="infocursosevagas">
 
-        <h2 class="h2curevagasajuda">Cursos/vagas</h2>
+        <h2 class="h2curevagasajuda"> <span class="CeVA">Cursos/vagas </span></h2>
 
-        <p class="textocursoevagasajuda">Semelhante ao portfólio, você pode acesar o curso ou vaga <br>
+        <p class="textocursoevagasajuda"> <span class="TexCeVA">Semelhante ao portfólio, você pode acesar o curso ou vaga <br>
           ao clicar na sua capa, e caso queira mais informações, é só <br>
           clicar em “mais informações” para poder ver melhor as <br>
           especificações da vaga, ou do curso, além também poder <br>
           acesar os cursos que você queira pela barra de pesquisa ou <br>
-          pelo menu inddo em “cursos” ou “vagas”</p>
+          pelo menu inddo em “cursos” ou “vagas”</span></p>
       </div>
       <div class="imagemcurvagas">
         <img src="img/Group 342 mesa.svg" alt="">
@@ -150,12 +137,12 @@
     <div class="cadastroajuda">
 
       <div class="infocadastroajuda">
-        <h2 class="h2cadastoajuda">Cadastro</h2>
+        <h2 class="h2cadastoajuda"> <span class="CadA">Cadastro</span></h2>
 
-        <p class="textocadastroajuda">Na página de entra/cadastro, você utiliza seu e-mail <br>
+        <p class="textocadastroajuda"> <span class="CadAT">Na página de entra/cadastro, você utiliza seu e-mail <br>
           principal ou de preferência para poder acesar o site <br>
           caso queira, do contrário é só clicar na seta no canto <br>
-          superior direito para acessar o site como anônimo </p>
+          superior direito para acessar o site como anônimo </span> </p>
       </div>
       <div class="imagemcadastro">
         <img src="img/Group 314 cnh.svg" alt="">
