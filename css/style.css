@@ -29,6 +29,9 @@
 
     --brancomenuperfil: #E6E6E6;
 
+    --brancohovermenuham: rgba(217, 217, 217, 1);
+
+
     --cinzaescurofundodomudartema: #3A3A3A;
 
     --vermelhom: #EF0000;
@@ -197,6 +200,15 @@ header .usersite {
     display: flex;
     justify-content: flex-start;
     gap: 15%;
+
+}
+header .usersite button {
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15%;
+    border: none;
+    background-color: transparent;
 }
 
 header .usersite img {
@@ -1092,50 +1104,56 @@ footer {
     header .botaoMenu {
         display: flex;
     }
-
-    header .hamburguer .botoesmenuhamburguer {
-
-        color: var(--cinza100);
-        padding: 1rem;
-        cursor: pointer;
-        color: white;
-
+    .bordasuperior {
+        border-top: 1px solid var(--cinzaBasee);
+        width: 80%;
     }
 
-    header .hamburguer .botoesmenuhamburguer:hover {
-        color: white;
-        background-color: #8C8C8C;
+    .itemsdomenu select{
+
+        background-color: transparent;
+        border: none;
+        font-size: 1.1rem;
+
+    }
+    .direitosautoraismenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
     }
 
     header .hamburguer {
         display: flex;
-        height: 31%;
+        height: 40rem;
         position: absolute;
         flex-direction: column;
-        width: 25%;
+        width: 20%;
         top: 10%;
         bottom: 49%;
         left: -99%;
-        background-color: var(--preto);
+        background-color: var(--brancomenuperfil);
         align-items: center;
         gap: 0.5em;
         transition: left 0.3s;
         z-index: 1;
+        
     }
 
-    header .hamburguer .botoesmenuhamburguer {
-
+    header .hamburguer .itemsdomenu {
         color: var(--cinza100);
         padding: 1rem;
         cursor: pointer;
-        color: white;
-
+        width: 100%;
+        text-align: center;
+    }
+    .itemsdomenu a{
+        color: var(--preto);
     }
 
-    header .hamburguer .botoesmenuhamburguer:hover {
+    header .hamburguer .itemsdomenu:hover {
 
-        color: white;
-        background-color: #8C8C8C;
+        background-color: var(--brancohovermenuham);
     }
 
     header .userhover {
