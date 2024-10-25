@@ -182,4 +182,6 @@ else {
 
 }
 
+
+console.log(filtro);
 }

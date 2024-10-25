@@ -133,7 +133,6 @@
     background-color: white;
     border: 1px solid var(--cinzaBasee);
     margin-top: 16px;
-    margin-left: 1rem;
     height: 50rem;
     width: 20%;
     border-radius: 10px;
@@ -502,6 +501,14 @@
         align-items: center;
     }
 
+    .filtroflutuante {
+        display: none;
+        position: absolute;
+        background-color: white;
+        width: 25rem;
+        border-radius: 0;
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -527,6 +534,10 @@
 
     .containervagas {
         grid-template-columns: 1fr;
+    }
+
+    .filtroflutuante {
+        width: 17rem;
     }
 
 }

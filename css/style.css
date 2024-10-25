@@ -235,6 +235,13 @@ header .userhover {
 header .userhover img {
     height: 80%;
 }
+.userhover button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 80%;
+
+}
 
 header .botaoMenu {
 
@@ -1472,3 +1479,5 @@ footer {
     }
 
 }
+
+/* From Uiverse.io by Cevorob */ 
