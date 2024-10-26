@@ -1,0 +1,73 @@
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasee: #00008b;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --branco: #f3f3f3;
+
+    --brancomenuperfil: #E6E6E6;
+
+    --brancohovermenuham: rgba(217, 217, 217, 1);
+
+
+    --cinzaescurofundodomudartema: #3A3A3A;
+
+    --vermelhom: #EF0000;
+
+
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroMesc2: #555555;
+
+    --ModoEscuroFontV: #5AB3FF;
+    --ModoEscuroFontC: #E197FF;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.barradeacessibilidade{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: var(--cinzaBase);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-top-left-radius: 10px;
+}
+
+.barradeacessibilidade button{
+    background-color: transparent;
+    border: none;
+}
+.barradeacessibilidade img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
