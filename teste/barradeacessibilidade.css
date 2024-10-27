@@ -60,6 +60,7 @@
     flex-direction: column;
     padding: 10px;
     border-top-left-radius: 10px;
+    height: 10rem;
 }
 
 .barradeacessibilidade button{
@@ -71,3 +72,20 @@
     height: 30px;
     cursor: pointer;
 }
+
+/* Estilo para posicionar o ícone do VLibras */
+[vw] {
+    position: fixed !important;
+    bottom: 10px !important; /* Ajuste conforme necessário */
+    right: 10px !important;  /* Ajuste conforme necessário */
+    z-index: 9999 !important; /* Garante que o widget fique acima de outros elementos */
+}
+
+/* Adiciona um ajuste adicional ao botão de acesso do VLibras */
+[vw-access-button] {
+    position: fixed !important;
+    bottom: -247px !important; /* Ajuste conforme necessário */
+    right: -15px !important;  /* Ajuste conforme necessário */
+    z-index: 9999 !important; /* Garante que o widget fique acima de outros elementos */
+}
+
