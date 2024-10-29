@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seek - Usuário</title>
+    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="inicio">
+        <button class="botaoMenu" id="botaoMenu">
+            <span class="linha1"></span>
+            <span class="linha2"></span>
+            <span class="linha3"></span>
+        </button>
+        <div class="logosite">
+            <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek"></a>
+        </div>
+        <div class="userhover">
+            <button><img onclick="abrirMenu()" src="img/user2.svg" alt=""></button>
+        </div>
+        <nav class="navsite">
+            <div id="headerexplurar">
+                <a href="index.html" class="nav-link ExpA">Explorar</a>
+            </div>
+            <div id="headercursos">
+                <a href="cursos.html" class="nav-link CurA">Cursos</a>
+            </div>
+            <div id="headervagas">
+                <a href="vagas.html" class="nav-link VagA">Vagas</a>
+            </div>
+            <div class="sobrenoss">
+                <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
+            </div>
+        </nav>
+        <div class="pesquisasite">
+            <input type="text" placeholder="Pesquisar" class="Pesquisar">
+            <a href=""><img src="img/search2.svg" alt=""></a>
+        </div>
+        <div class="usersite">
+
+            <a href=""><img src="img/bell2.svg" alt=""></a>
+            <button onclick="abrirMenu()"><img src="img/user2.svg" alt=""></button>
+        </div>
+        <nav class="hamburguer" id="menu">
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="index.html" class="ExpA">Explorar</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="cursos.html" class="CurA">Cursos</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="vagas.html" class="VagA">Vagas</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="sobre.html" class="SobA">Sobre Nós</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer" href="ajuda.html" class="SobA">Ajuda</a>
+            </div>
+            <div class="bordasuperior"></div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer " href="avisos.html" class="SobA">Avisos</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer " href="avisos.html" class="SobA">Atualizações</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer " href="sobre.html#contatosobre" class="SobA">Contato</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer " href=".html" class="SobA">Termos de uso</a>
+            </div>
+            <div class="itemsdomenu">
+                <select name="" id="">
+                    <option value="pt">Português</option>
+                    <option value="eng">English</option>
+                    <option value="es">Español</option>
+                    <option value="jp">日本語</option>
+                </select>
+            </div>
+
+            <div class="direitosautoraismenu">
+                <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
+            </div>
+        </nav>
+        <div id="menuperfil" class="menuperfil">
+            <div class="divmeuperfil">
+                <a href="login.html" class="Perf">Meu Perfil</a>
+            </div>
+            <div class="divconfiguracoes">
+                <a href="config.html" class="Conf">Configurações</a>
+            </div>
+            <div class="botaomodoescuro">
+                <label for=""><img src="img/lua.png" alt=""></label>
+                <div class="checkbox-con">
+                    <input onclick="MudarModos()" id="checkbox" type="checkbox" checked>
+                </div>
+                <label for=""><img src="img/sol.png" alt=""></label>
+            </div>
+            <button id="sairdomenuperfil" class="sairP">Sair</button>
+        </div>
+    </header>
+
+    <section class="banneruser">
+        <button class="voltarbutton"><img src="img/arrow-top.svg" alt=""></button>
+        <img src="img/bannerusuario.png" alt="banner do usuário">
+    </section>
+
+    <div class="infoeseguir">
+        <div class="informacoesperfil">
+            <img src="img/iconeperfil.svg" alt="logo do usuário">
+        </div>
+
+        <div class="projetosecursos">
+            <button class="seguiruser">Seguir</button>
+            <button>Projetos</button>
+            <button>Cursos</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="script/lfy.js"></script>
+</body>
+
+</html>
