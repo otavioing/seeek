@@ -182,6 +182,29 @@ else {
 
 }
 
+// funçao para abrir os comentários do madal
 
-console.log(filtro);
+// function abrirComentarios() {
+
+//     let comentarios = document.getElementById("comentariomodal");
+//     let barradivisoria = document.getElementById("barradivisoriamodal");
+    
+//     if (comentarios.style.display == "none") {
+//         comentarios.style.display = "flex";
+//     }else {
+//         if (comentarios.style.display == "flex" || comentarios.style.display == "") {
+//             comentarios.style.display = "none";
+//         }
+//     }
+
+//     if (barradivisoria.style.display == "none") {
+//         barradivisoria.style.display = "flex";
+//     }else {
+//         if (barradivisoria.style.display == "flex" || barradivisoria.style.display == "") {
+//             barradivisoria.style.display = "none";
+//         }
+//     }
+// }
+
+
 }

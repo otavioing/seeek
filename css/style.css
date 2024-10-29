@@ -162,6 +162,10 @@ header .navsite {
     width: 5rem;
 }
 
+.sobrenoss{
+    width: 10rem;
+}
+
 header .navsite a {
     color: var(--brancoBase);
     /* transition: 0.3s; */
@@ -172,11 +176,11 @@ header .navsite a:hover {
     transform: translateY(-0.2rem);
 }
 
-/* .navsite .navSelecionado {
+.navsite .navSelecionado {
     height: 100%;
     border-bottom: 3px solid var(--azulBase);
     padding: 2rem 0.4rem 2rem 0.4rem;
-} */
+}
 
 header .pesquisasite {
     width: 30%;
@@ -209,6 +213,7 @@ header .usersite button {
     gap: 15%;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 header .usersite img {
@@ -307,6 +312,7 @@ header .botaoMenu span {
     width: 100%;
     padding: 0 2%;
     margin-top: 2.5rem;
+    margin-bottom: 3rem;
 }
 
 .filtroExplorar .buttonFiltro,
@@ -323,6 +329,7 @@ header .botaoMenu span {
     gap: 0.8rem;
     padding: 0.4rem 0.3rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .filtroExplorar .buttonFiltro img {
@@ -334,10 +341,10 @@ header .botaoMenu span {
 
 .prIndex {
     height: auto;
-    display: block;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
 }
 
 .filtroExplorar input {
@@ -387,12 +394,15 @@ header .botaoMenu span {
 .portHover .portHoverInt {
     display: flex;
     align-items: center;
-    font-size: 2rem;
     width: 100%;
     font-weight: bold;
     justify-content: space-between;
     font-size: 1.5rem;
     padding: 1rem 0;
+}
+
+.portHover .portHoverInt h3 {
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
 }
 
 .portHover .SalvarPort button {
@@ -403,7 +413,7 @@ header .botaoMenu span {
     background-color: var(--azulBase);
     padding: 0.3rem;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
     font-weight: normal;
     gap: 0.3rem;
     border: none;
@@ -424,10 +434,6 @@ header .botaoMenu span {
     justify-content: space-between;
     align-items: flex-end;
 
-}
-
-.portHover .PotH .AutG {
-    font-size: 2rem;
 }
 
 .portHover .PotH .PerfAv {
@@ -502,10 +508,11 @@ header .botaoMenu span {
     height: 1rem;
 }
 
-.portHover .AutorP {
+.portHover .AutorP{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
 }
 
 /*------------------------------Modal Portifolio-----------------------------*/
@@ -526,36 +533,111 @@ header .botaoMenu span {
 .modal-content {
     position: relative;
     top: 5%;
-    background-color: var(--brancoBase);
+    background-color: var(--cinzaBasec);
     margin: auto;
     width: 50%;
     height: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-bottom: 1rem;
+    border-radius: 0.5rem;
 }
 
 .modal-header {
     display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    padding: 0;
+    width: 100%;
+    gap: 0.5rem;
 }
 
 .perfilPort {
     display: flex;
     color: var(--branco);
-    width: 100%;
+    height: 100%;
+    width: 60%;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.nomedousuariomodal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: clamp(0.6rem, 1vw, 1.3rem);
+    width: 80%;
+}
+
+.imagemusuariomodal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagemusuariomodal img{
+    height: 4rem;
+}
+
+.contratar-btn-span{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding: 0.3rem 1rem;
+}
+
+.contratar-btn-btn{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.botaoContratar{
+    background-color: var(--roxobase);
+    color: var(--brancoBase);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 5rem;
+}
+
+.close{
+    display: flex;
+    color: var(--branco);
+    font-size: clamp(0.2rem, 2vw, 1.3rem);
+    cursor: pointer;
 }
 
 .modal-body {
     padding: 2% 2% 2% 5%;
     display: flex;
+    gap: 1rem;
+}
+
+.imgmodal {
+    width: 85%;
+    height: auto;
+}
+
+.imgmodal > img{
+    width: 100%;
+    height: auto;
+    border-radius: 0.4rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
 }
 
 .modal-nav {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    padding: 0 1rem;
     gap: 1rem;
-    width: 100%;
+    width: 15%;
     height: 100%;
+    
 }
 
 .modal-nav button {
@@ -570,17 +652,99 @@ header .botaoMenu span {
     color: var(--azulBase);
     width: 100%;
     height: 10%;
+    cursor: pointer;
 }
 
 .modal-nav button img {
-    width: 70%;
-    height: 70%;
+    width: 40%;
+    height: 40%;
+    box-shadow: none;
 }
 
-#modalImage {
-    width: 85%;
-    height: auto;
+.barradivisoriamodal{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid var(--cinzaBasee);
 }
+
+.comentariomodal{
+    width: 100%;
+    display: flex;
+    padding: 0 1rem;
+    gap: 0.5rem;
+}
+
+.comentariomodalLeft {
+    display: flex;
+    gap: 0.5rem;
+    width: 70%;
+    height: auto;
+    background-color: var(--branco);
+    margin: 1rem 0;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nomeecompartilhar{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.compartilharcomentario{
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    height: 1rem;
+    top: 0;
+    right: 5;
+}
+
+.compartilharcomentario button{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.compartilharcomentario button img{
+    height: 1rem;
+}
+
+.comentariomodalRight {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 30%;
+    background-color: var(--branco);
+    margin: 1rem 0;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logocomentarioLeft{
+    display: flex;
+    justify-content: center;
+}
+
+.logocomentario img{
+    height: 3rem;
+}
+
+.nomeusuariocomentario{
+    margin-bottom: 0.3rem;
+}
+
+.userecomentarioLeft, .userecomentarioRight{
+    font-size: clamp(0.6rem, 1vw, 1.3rem);
+}
+
 
 
 /*------------------------------------ Footer -----------------------------------*/
@@ -959,11 +1123,7 @@ footer {
     background-color: var(--cinzaBase);
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3;
-
-
-
-
+    transition: background-color 0.3s;
 
 }
 
@@ -1059,7 +1219,7 @@ footer {
     padding: 2rem 0.4rem 2rem 0.4rem;
 }
 
-
+/*---------------------------- main tendências ---------------------------*/
 
 
 
@@ -1135,7 +1295,7 @@ footer {
         height: 40rem;
         position: absolute;
         flex-direction: column;
-        width: 20%;
+        width: auto;
         top: 10%;
         bottom: 49%;
         left: -99%;
@@ -1144,6 +1304,7 @@ footer {
         gap: 0.5em;
         transition: left 0.3s;
         z-index: 1;
+        padding: 1rem;
         
     }
 
@@ -1200,6 +1361,7 @@ footer {
         text-align: center;
         font-size: 1.5rem;
         outline: none;
+        cursor: pointer;
     }
 
     .container1 {
@@ -1211,18 +1373,27 @@ footer {
         column-count: 3;
     }
 
+    .modal-content {
+        width: 70%;
+    }
+
 }
 
 
 @media screen and (max-width: 950px) {
 
-    .prIndex .perfilPort h1 {
-        font-size: 140%;
-    }
-
     .container1 {
         width: 75%;
         left: 12.5%;
+    }
+
+    .modal-nav button span{
+        font-size: 0.7rem;
+    }
+
+    .modal-nav button img {
+        width: 40%;
+        height: 40%;
     }
 
 }
@@ -1230,31 +1401,19 @@ footer {
 
 @media screen and (max-width: 750px) {
 
-    .perfilPort {
-        font-size: 70%;
-    }
-
-    .perfilPort p {
-        font-size: 60%;
-    }
-
     .container1 {
         width: 85%;
         left: 7.5%;
+    }
+
+    .modal-content {
+        width: 80%;
     }
 
 }
 
 
 @media screen and (max-width: 660px) {
-
-    .perfilPort {
-        font-size: 60%;
-    }
-
-    .perfilPort p {
-        font-size: 60%;
-    }
 
     .linksfooter {
         width: 100%;
@@ -1284,6 +1443,14 @@ footer {
 
     .gride {
         column-count: 2;
+    }
+
+    .contratar-btn-span{
+        padding: 0.3rem;
+    }
+
+    .close{
+        font-size: 1.5rem;
     }
 
 }
@@ -1333,6 +1500,43 @@ footer {
         padding-left: 1rem;
     }
 
+    .modal-content {
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+
+    .botaoContratar{
+        width: 3rem;
+        font-size: 0.5rem;
+    }
+
+    .perfilPort {
+        gap: 0.5rem;
+        width: 70%;
+        padding: 0.4rem;
+    }
+
+    .imagemusuariomodal img{
+        height: 3rem;
+    }
+
+    .modal-header{
+        gap: 0.5rem;
+    }
+
+    .contratar-btn-span{
+        width: 30%;
+    }
+
+    .modal-body{
+        padding: 1rem;
+    }
+
+    .modal-nav button span{
+        font-size: 0.5rem;
+    }
+
 }
 
 
@@ -1340,15 +1544,6 @@ footer {
 
     .gride {
         column-count: 1;
-    }
-
-    .perfilPort {
-        font-size: 60%;
-        width: 100%;
-    }
-
-    .perfilPort p {
-        font-size: 50%;
     }
 
     .inicio .logosite img {
@@ -1400,7 +1595,7 @@ footer {
 
     #menu {
         width: 7rem;
-        height: 8rem;
+        height: auto;
         position: absolute;
         left: 0;
         top: 5.9rem;
@@ -1409,6 +1604,7 @@ footer {
     #menu .botoesmenuhamburguer {
         font-size: 1rem;
         padding: 0.2rem;
+        height: auto;
     }
 
     footer {
