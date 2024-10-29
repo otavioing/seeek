@@ -170,41 +170,41 @@ radios.forEach(radio => {
 
 function abrirfiltro() {
 
-let filtro = document.getElementById("filtroflutuante");
-
-if (filtro.style.display == "block") {
-    filtro.style.display = "none";
-}
-else {
-    if (filtro.style.display = "none" || filtro.style.display == "") {
-        filtro.style.display = "block";
+    let filtro = document.getElementById("filtroflutuante");
+    
+    if (filtro.style.display == "block") {
+        filtro.style.display = "none";
     }
-
+    else {
+        if (filtro.style.display = "none" || filtro.style.display == "") {
+            filtro.style.display = "block";
+        }
+        
+    }
 }
 
 // funçao para abrir os comentários do madal
 
-// function abrirComentarios() {
+function abrirComentarios() {
 
-//     let comentarios = document.getElementById("comentariomodal");
-//     let barradivisoria = document.getElementById("barradivisoriamodal");
+    let comentarios = document.getElementById("comentariomodal");
+    let barradivisoria = document.getElementById("barradivisoriamodal");
     
-//     if (comentarios.style.display == "none") {
-//         comentarios.style.display = "flex";
-//     }else {
-//         if (comentarios.style.display == "flex" || comentarios.style.display == "") {
-//             comentarios.style.display = "none";
-//         }
-//     }
+    if (comentarios.style.display == "none") {
+        comentarios.style.display = "flex";
+    }else {
+        if (comentarios.style.display == "flex" || comentarios.style.display == "") {
+            comentarios.style.display = "none";
+        }
+    }
 
-//     if (barradivisoria.style.display == "none") {
-//         barradivisoria.style.display = "flex";
-//     }else {
-//         if (barradivisoria.style.display == "flex" || barradivisoria.style.display == "") {
-//             barradivisoria.style.display = "none";
-//         }
-//     }
-// }
-
-
+    if (barradivisoria.style.display == "none") {
+        barradivisoria.style.display = "flex";
+    }else {
+        if (barradivisoria.style.display == "flex" || barradivisoria.style.display == "") {
+            barradivisoria.style.display = "none";
+        }
+    }
 }
+
+

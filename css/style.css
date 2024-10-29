@@ -662,7 +662,7 @@ header .botaoMenu span {
 }
 
 .barradivisoriamodal{
-    display: flex;
+    display: none;
     width: 80%;
     margin: auto;
     border-bottom: 1px solid var(--cinzaBasee);
@@ -670,7 +670,7 @@ header .botaoMenu span {
 
 .comentariomodal{
     width: 100%;
-    display: flex;
+    display: none;
     padding: 0 1rem;
     gap: 0.5rem;
 }
