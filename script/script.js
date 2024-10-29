@@ -31,6 +31,9 @@ let capital = document.getElementById("capital");
 let number = document.getElementById("number");
 let length = document.getElementById("length");
 
+psw.disabled = true;
+pswRepeat.disabled = true;
+
 psw.onfocus = function(){
     document.getElementById("aviso").style.display = "block";
 }
@@ -75,9 +78,13 @@ function validateEmail(){
     if(emailPattern.test(email.value)){
         emailMessage.textContent = "E-mail válido";
         emailMessage.style.color = "green";
+        psw.disabled = false;
+        pswRepeat.disabled = false;
     }else{
         emailMessage.textContent = "O e-mail deverá conter @";
         emailMessage.style.color = "red";
+        psw.disabled = true;
+        pswRepeat.disabled = true;
     }
 }
 

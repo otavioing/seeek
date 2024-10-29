@@ -84,10 +84,10 @@
         <div class="cardlogin">
             <div class="form-container">
 
-                <h3 class="title"> Entrar</h3>
+                <h2 class="title"> Entrar</h2>
                 <form class="form" method="post">
-                    <input type="email" name="email" class="input" placeholder="Email" required>
-                    <input type="password" name="password" class="input" placeholder="Senha" required>
+                    <input type="email" name="email" class="modalInput" placeholder="Email" required>
+                    <input type="password" name="password" class="modalInput" placeholder="Senha" required>
                     <button onclick="login(event)" class="form-btn">Entrar</button>
                 </form>
 
@@ -130,12 +130,12 @@
                 <div id="sign-up-modal" class="sign-up-modal">
                     <form class="sign-up-content" method="post" onsubmit="login(event)">
                         <span onclick="document.getElementById('sign-up-modal').style.display='none'" class="close" title="Fechar">&times;</span>
-                        <h3 class="title">Cadastrar</h3>
+                        <h2 class="title">Cadastrar</h2>
                         <div class="sign-up-container" id="cadForm">
                             <p id="matchEmail"></p>
-                            <input type="email" id="email" name="email" class="input" placeholder="Email" required>
+                            <input type="email" id="email" name="email" class="modalInput" placeholder="Email" required>
 
-                            <input type="password" id="password" name="password" class="input" placeholder="Senha"
+                            <input type="password" id="password" name="password" class="modalInput" placeholder="Senha"
                                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 title="Deve conter pelo menos uma letra minúscula, uma letra maiúscula, um número e deve ter pelo menos 8 (OITO) caracteres."
                                 required>
@@ -147,20 +147,20 @@
                                 <p id="length" class="invalid">Mínimo de <b>8 (oito) caracteres</b></p>
                             </div>
 
-                            <input type="password" id="pswRepeat" name="pswRepeat" class="input"
+                            <input type="password" id="pswRepeat" name="pswRepeat" class="modalInput"
                                 placeholder="Repitir Senha" required>
                             <p id="match" class="invalidRepeat"></p>
                         </div>
 
                         <h2>Tipo de conta</h2>
-                        <div class="type-container">
-                            <button class="form-btn" type="submit">Professor</button>
-                            <button class="form-btn" type="submit">Padrão</button>
-                            <button class="form-btn" type="submit">Empresa</button>
+                        <div class="type-container" id="type-container">
+                            <input class="form-btn" type="submit" value="Professor">
+                            <input class="form-btn" type="submit" value="Padrão">
+                            <input class="form-btn" type="submit" value="Empresa">
                         </div>
 
                         <div class="buttons-container">
-                            <button onclick="login(event)" class="form-btn">Entrar</button>
+                            <input onclick="login(event)" class="form-btn" type="submit" value="Entrar">
                             <div class="google-login-button">
                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px"
                                     y="0px" class="google-icon" viewBox="0 0 48 48" height="1em" width="1em"
