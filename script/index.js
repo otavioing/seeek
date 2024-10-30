@@ -39,3 +39,35 @@ function selectUserType(type) {
     document.getElementById("user-type").textContent = type;
 }
 
+
+// AQUI BRUNAO -------
+// // X para fechar a aba de usuario 
+// document.getElementById('closeBtn').addEventListener('click', function() {
+//     // A caixa de usuário some
+//     document.getElementById('userBox').style.display = 'none';
+// });
+
+
+// function mostrarPadrao() {
+//     // Mostrar a caixa de Usuário Padrão e ocultar a de Empresarial
+//     document.getElementById("usuario-padrao").style.display = "block";
+//     document.getElementById("usuario-empresarial").style.display = "none";
+// }
+
+// function mostrarEmpresarial() {
+//     // Mostrar a caixa de Usuário Empresarial e ocultar a de Padrão
+//     document.getElementById("usuario-empresarial").style.display = "block";
+//     document.getElementById("usuario-padrao").style.display = "none";
+// }
+
+// DO X BRUNAO--------
+
+// function fechar(){
+
+//     let fecharcaixa = document.getElementById("userbox");
+
+//     console.log('fechar')
+//     fecharcaixa.style.display = "none";
+// }
+
+
