@@ -108,10 +108,10 @@
         <div class="divconfigmain">
             <div class="menuconfigoracoes">
                 <ul id="listaconfig">
-                    <li><button onclick="privacidade()" id="selecionado" class="PriM">Privacidede</button></li>
-                    <li><button onclick="notificaacoes()" class="NotM">Notificações</button></li>
-                    <li><button onclick="informacoesuser()" class="InfM">Informações Usuário</button></li>
-                    <li><button class="EmaM">Email/Senha</button></li>
+                    <li class="lidivconfig"><button onclick="privacidade()" id="selecionado" class="PriM textoli">Privacidede</button></li>
+                    <li class="lidivconfig"><button onclick="notificaacoes()" class="NotM textoli">Notificações</button></li>
+                    <li class="lidivconfig"><button onclick="informacoesuser()" class="InfM textoli">Informações Usuário</button></li>
+                    <li class="lidivconfig"><button class="EmaM textoli">Email/Senha</button></li>
                 </ul>
 
             </div>
@@ -218,7 +218,7 @@
                     </div>
                     <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
 
-                        <p class="Pper7">Deseja receber uma notificação imediata quando solicitarem para participar de uma equipe ?
+                        <p class="Pper7">Deseja ser notificado quando solicitarem sua participação em uma equipe?
                         </p>
                         <div class="opcaoprivacidade">
                             <form action="">
@@ -268,30 +268,39 @@
                         <div class="form-group">
                             <label for="Cidade" class="CidP">Cidade/País</label>
                             <input type="text" class="form-control CidadeForm" id="CidadeForm"
-                                placeholder="Digite o nome da sua cidade">
+                            placeholder="Digite o nome da sua cidade">
+                            <p class="erroinputconf">Este campo é obrigatório. Por favor, informe o nome da sua cidade.</p>
+                                
                         </div>
                         <div class="form-group">
                             <label for="Cargo" class="Carg">Cargo</label>
-                            <input type="text" class="form-control CargoForm" id="CargoForm" placeholder="cargodousuario">
+                            <input type="text" class="form-control CargoForm" id="CargoForm" 
+                            placeholder="cargodousuario">
+                            <p class="erroinputconf">Este campo é obrigatório. Por favor, informe seu cargo.</p>
                         </div>
                         <div class="form-group">
                             <label for="Perfil" class="Url">URL do perfil</label>
                             <input type="text" class="form-control" id="URLForm"
                                 placeholder="https://www.seek.com/perfil-usuário">
+                                <p class="erroinputconf">Este campo é obrigatório. Por favor, informe a URL do seu perfil.</p>
                         </div>
                         <div class="form-group">
                             <label for="email" class="SEma">Seu e-mail</label>
                             <input type="email" class="form-control" id="EmailForm" placeholder="teste@gmail.com">
+                            <p class="erroinputconf">Este campo é obrigatório. Por favor, informe um e-mail válido.</p>
                         </div>
                         <div class="form-group">
                             <label for="Senha" class="Senh">Senha</label>
                             <input type="password" class="form-control" id="SenhaForm" placeholder="********">
+                            <p class="erroinputconf">Este campo é obrigatório. Por favor, informe uma senha.</p>
                         </div>
                         <div class="form-group">
                             <label for="NomeDeUsuario" class="Nome ">Nome de Usuário</label>
                             <input type="text" class="form-control NomeForm" id="NomeForm" placeholder="Nome do Usuário">
-                        </div>
+                            <p class="erroinputconf">Este campo é obrigatório. Por favor, informe um nome de usuário.</p>
+                          </div>
 
+                      </form>
 
                         <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
 
@@ -321,7 +330,6 @@
                         </div>
 
 
-                    </form>
 
                     <div id="alinhar">
                         <div id="divsalvarconfig">
@@ -376,7 +384,7 @@
     
       </footer>
     
-    <script src="script/cautela.js"></script>  
+    <!-- <script src="script/cautela.js"></script>   -->
     <script src="script/cake.js"></script>
 </body>
 

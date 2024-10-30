@@ -130,7 +130,7 @@ h1{
     flex-direction: column;
     gap: 1.5rem;
     border-radius: 20px;
-    width: 140%;
+
 }
 .gapentreopcoesepergunta{
     display: flex;
@@ -209,6 +209,19 @@ h1{
     width: 100%;
     padding: 0.5rem;
 }
+
+
+
+.erroinputconf{
+    color: var(--vermelhom);
+    font-size: 1rem;
+    display: none;
+}
+.form-group input:user-invalid+.erroinputconf, .form-group textarea:user-invalid+.erroinputconf{
+    display: block;
+}
+
+
 /*------------------------------------------------------------------------*/
 /*-------------------------------- @media --------------------------------*/
 /*------------------------------------------------------------------------*/
@@ -219,22 +232,61 @@ h1{
     .menuconfigoracoes{
         width: 25%;
     }
-    .privacidadeconfig{
-        width: 125%;
-    }
+
 }
 @media screen and (max-width:1350px){
 
     .menuconfigoracoes{
         width: 30%;
     }
-    .privacidadeconfig{
-        width: 110%;
-    }
+
 }
 @media screen and (max-width:1250px){
 
     .menuconfigoracoes{
         width: 35%;
     }
+
+    .fontetexto, .form-group{
+        font-size: 1.2rem;
+    }
+
+    
+
+
+}
+
+@media screen and (max-width:1100px){
+
+    .lidivconfig button{
+        font-size: 1.3rem;
+    }
+
+}
+
+
+
+@media screen and (max-width:900px){
+
+    .lidivconfig button{
+        font-size: 1rem ;
+    }
+
+    .fontetexto, .form-group{
+        font-size: 1rem;
+    }
+
+    .divconfigmain{
+        gap: 3rem;
+    }
+
+}
+
+@media screen and (max-width:500px){
+
+
+    .divconfigmain{
+        gap: 0.5rem;
+    }
+
 }
