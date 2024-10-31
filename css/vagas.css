@@ -86,7 +86,9 @@
     background-color: var(--ModoEscuroFontV);
 }
 
-.modoEscuro .mmoreinfo button , .modoEscuro .aplicarfiltrovagas button,  .modoEscuro .caminhonavegaçãovagas h1{
+.modoEscuro .mmoreinfo button , 
+.modoEscuro .aplicarfiltrovagas button,
+.modoEscuro .caminhonavegaçãovagas h1{
     color: var(--ModoEscuroFontV);
 } 
 
@@ -94,12 +96,16 @@
     background-color: var(--ModoEscuroFilt);
 }
 
-.modoEscuro .titulosfiltroflutuante, .modoEscuro {
+.modoEscuro .titulosfiltroflutuante {
     border-bottom: 1.5px solid var(--ModoEscuroFontV);
 }
 
 .modoEscuro .limparfiltrovagas button{
     color: var(--branco);
+}
+
+.modoEscuro .caixaflutuante{
+    background-color: var(--ModoEscuroFilt);
 }
 /*-------------------------------- Modo Escuro fim--------------------------------*/
 

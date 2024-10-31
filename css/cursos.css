@@ -93,8 +93,17 @@
     border-bottom: 1.5px solid var(--ModoEscuroFontC);
 }
 
-.modoEscuro .cursos {
+.modoEscuro .cursos, 
+.modoEscuro .caixaflutuante {
     background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro .caixaflutuante h2{
+    color: var(--ModoEscuroFontC);
+}
+
+.modoEscuro #idassinarcursocaixaflutuante{
+    background-color: var(--ModoEscuroFontC);
 }
 
 
