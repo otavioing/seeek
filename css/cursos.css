@@ -288,6 +288,7 @@ main {
 
 .maincursos {
     display: flex;
+    transition: all 0.5s;
 
 }
 
@@ -482,6 +483,30 @@ main {
     background-color: var(--azulBasee);
     color: var(--branco);
 }
+.botaofiltrarcursosmedia {
+    width: 95%;
+    background-color: var(--cinzaBasec);
+    border: 1px solid var(--cinzaBasee);
+    height: 3rem;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    display: none;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+.botaofiltrarcursosmedia button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--azulBase);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
 
 /*fim da caixa flutuante*/
 @media screen and (max-width: 1200px) {
@@ -509,28 +534,11 @@ main {
     }
 
     .botaofiltrarcursosmedia {
-        width: 95%;
-        background-color: var(--cinzaBasec);
-        border: 1px solid var(--cinzaBasee);
-        height: 3rem;
-        border-radius: 3rem;
-        padding: 0.5rem;
         display: flex;
-        justify-content: center;
-        text-align: center;
-        font-size: 1.5rem;
-        outline: none;
     }
 
     .botaofiltrarcursosmedia button {
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        font-size: 1.5rem;
-        color: var(--azulBase);
         display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
 }
@@ -600,7 +608,13 @@ main {
     }
 
     .filtroflutuante{
-        width: 17rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -100% !important;
+        font-size: 2rem;
     }
 
 }
