@@ -1236,6 +1236,20 @@ footer {
     padding: 2rem 0.4rem 2rem 0.4rem;
 }
 
+.divredessociais {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.divredessociais button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+.divredessociais img{
+    height: 2rem;
+}
 /*---------------------------- main tendências ---------------------------*/
 
 
