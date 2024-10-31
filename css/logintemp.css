@@ -278,8 +278,7 @@ a {
     flex-direction: column;
 }
 
-.sign-up-container,
-.type-container {
+.sign-up-container{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -291,10 +290,6 @@ a {
 
 .sign-up-container input {
     width: 100%;
-}
-
-.type-container {
-    flex-direction: row;
 }
 
 .sign-up-content h1,
