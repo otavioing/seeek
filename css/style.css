@@ -35,12 +35,15 @@
     --cinzaescurofundodomudartema: #3A3A3A;
 
     --vermelhom: #EF0000;
+    --ModoEscuroVermelho:#fd4848;
 
 
 
     --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroFilt: #131313;
     --ModoEscuroMesc: #656565;
     --ModoEscuroMesc2: #555555;
+
 
     --ModoEscuroFontV: #5AB3FF;
     --ModoEscuroFontC: #E197FF;
@@ -90,7 +93,7 @@ a {
     color: var(--brancoBase);
 }
 
-.modoEscuro .explorar a {
+.modoEscuro .explorar a , .modoEscuro #menu a , .modoEscuro #menu select, .modoEscuro #menuperfil a {
     color: var(--brancoBase);
 }
 
@@ -122,6 +125,24 @@ a {
 .modoEscuro .modal-nav button {
     background-color: var(--ModoEscuroBase);
     color: white;
+}
+
+.modoEscuro #menu{
+    background-color: var(--ModoEscuroFilt);
+}
+
+
+.modoEscuro #menu select, .modoEscuro #menuperfil{
+    color: var(--brancoBase);
+    background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro header .hamburguer .itemsdomenu:hover {
+    background-color: var(--ModoEscuroBase);
+}
+
+.modoEscuro #sairdomenuperfil{
+    color: var(--ModoEscuroVermelho);
 }
 
 /*-------------------------------- Header inicio --------------------------------*/
