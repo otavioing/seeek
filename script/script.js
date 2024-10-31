@@ -17,6 +17,24 @@ function trocarBanner() {
 trocarBanner();
 setInterval(trocarBanner, 7500);
 
+// Script para trocar entre o login e o cadastro
+
+let logintablet = document.getElementById("logintablet");
+let cadastrartablet = document.getElementById("cadastrartablet");
+let trocarParaCadastro = document.getElementById("trocarParaCadastro");
+
+trocarParaCadastro.addEventListener("click", () => {
+    logintablet.style.display = "none";
+    cadastrartablet.style.display = "flex";
+});
+
+let trocarParaLogin = document.getElementById("trocarParaLogin");
+
+trocarParaLogin.addEventListener("click", () => {
+    logintablet.style.display = "flex";
+    cadastrartablet.style.display = "none";
+});
+
 // Script para redirecionar para a página principal
 function login(event) {
     event.preventDefault();

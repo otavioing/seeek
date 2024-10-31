@@ -649,8 +649,11 @@ main .quemsomoslogin {
     bottom: 2rem;
     left: 3rem;
     font-size: 2rem;
-    border-bottom: 2px solid var(--brancoBase);
-    color: var(--brancoBase);
+}
+
+main .quemsomoslogin a{
+    color: var(--preto);
+    border-bottom: 2px solid var(--preto);
 }
 
 .faclogin {
@@ -686,10 +689,11 @@ main .quemsomoslogin {
 /*-------------------------------- form tablet --------------------------------*/
 
 .logintablet {
-    height: 100%;
-    width: 100%;
     display: none;
-    flex-direction: column;
+}
+
+.cadastrartablet{
+    display: none;
 }
 
 .logologinseek {
@@ -756,9 +760,12 @@ main .quemsomoslogin {
     margin-left: 20%;
 }
 
-.iflogar a {
+.iflogar button {
+    background: none;
+    border: none;
+    outline: none;
     color: var(--azulBase);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: underline;
 }
 
@@ -781,6 +788,13 @@ main .quemsomoslogin {
         height: 100%;
         width: 100%;
         display: flex;
+        flex-direction: column;
+    }
+
+    .cadastrartablet{
+        height: 100%;
+        width: 100%;
+        display: none;
         flex-direction: column;
     }
 
@@ -948,7 +962,6 @@ main .quemsomoslogin {
 
     .google-login-button,
     .apple-login-button {
-        height: 2.563rem;
         border-radius: 1.5rem;
     }
 
@@ -989,7 +1002,7 @@ main .quemsomoslogin {
 
     .google-login-button,
     .apple-login-button {
-        height: 3rem;
+        height: 3.5rem;
     }
 
     .formcadastro button {

@@ -53,4 +53,7 @@ function confirmSelection() {
 
     // Aqui no futuro vou  adicionar outras ações, como redirecionar o usuário ou finalizar o cadastro.
 }
+
+
+
 }
