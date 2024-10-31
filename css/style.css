@@ -1377,6 +1377,20 @@ footer {
         width: 70%;
     }
 
+    .comentariomodal{
+        flex-direction: column;
+    }
+    
+    .comentariomodalLeft{
+        width: 100%;
+        margin: 0;
+    }
+
+    .comentariomodalRight{
+        width: 100%;
+        margin: 0;
+    }
+
 }
 
 
