@@ -221,10 +221,10 @@ header .pesquisasite input {
 }
 
 header .usersite {
-    width: 15%;
+    width: 20%;
     display: flex;
-    justify-content: flex-start;
-    gap: 15%;
+    justify-content: flex-end;
+    gap: 7%;
 
 }
 header .usersite button {
@@ -848,16 +848,14 @@ footer {
     right: -50%;
     background-color: var(--brancomenuperfil);
     width: 13rem;
-    height: 17rem;
+    height: 18rem;
     z-index: 1;
-    padding: 1rem;
+    padding: 1rem 0;
     gap: 0.5rem;
     display: none;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    transition: all 0.5s;
-    border-radius: 1rem;
 }
 
 #menuperfil a {
@@ -875,12 +873,12 @@ footer {
     cursor: pointer;
 }
 
-.divmeuperfil {
+.divmenuperfil {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
     cursor: pointer;
 }
 
@@ -893,10 +891,8 @@ footer {
     cursor: pointer;
 }
 
-.divmeuperfil:hover,
-.divconfiguracoes:hover {
+.divmenuperfil:hover {
     background-color: var(--brancoBase);
-    border-radius: 1rem;
 }
 
 .divmodoescuro {
@@ -1317,7 +1313,7 @@ footer {
         position: absolute;
         flex-direction: column;
         width: auto;
-        top: 10%;
+        top: 6.5rem;
         bottom: 49%;
         left: -99%;
         background-color: var(--brancomenuperfil);
@@ -1325,8 +1321,7 @@ footer {
         gap: 0.5em;
         transition: left 0.3s;
         z-index: 1;
-        padding: 1rem;
-        
+        padding: 1rem 0;
     }
 
     header .hamburguer .itemsdomenu {
