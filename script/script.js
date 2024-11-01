@@ -17,40 +17,6 @@ function trocarBanner() {
 trocarBanner();
 setInterval(trocarBanner, 7500);
 
-// Script para trocar entre o login e o cadastro
-
-let logintablet = document.getElementById("logintablet");
-let cadastrartablet = document.getElementById("cadastrartablet");
-let trocarParaCadastro = document.getElementById("trocarParaCadastro");
-let trocarParaLogin = document.getElementById("trocarParaLogin");
-
-// Função para controlar a visibilidade
-function atualizarVisibilidade() {
-    if (window.innerWidth >= 1200) {
-        logintablet.style.display = "none";
-        cadastrartablet.style.display = "none";
-    } else {
-        logintablet.style.display = "flex";
-    }
-}
-
-// Event listeners para trocar entre login e cadastro
-trocarParaCadastro.addEventListener("click", () => {
-    logintablet.style.display = "none";
-    cadastrartablet.style.display = "flex";
-});
-
-trocarParaLogin.addEventListener("click", () => {
-    logintablet.style.display = "flex";
-    cadastrartablet.style.display = "none";
-});
-
-// Listener para a mudança de tamanho da janela
-window.addEventListener("resize", atualizarVisibilidade);
-
-// Chamar a função uma vez no carregamento para garantir o estado correto
-atualizarVisibilidade();
-
 // Script para redirecionar para a página principal
 function login(event) {
     event.preventDefault();
@@ -64,11 +30,11 @@ let letter = document.getElementById("letter");
 let capital = document.getElementById("capital");
 let number = document.getElementById("number");
 let length = document.getElementById("length");
-let entrarButton = document.querySelector('input[type="submit"][value="Entrar"]');
+let signInBtn = document.getElementById("signInBtn");
 
 psw.disabled = true;
 pswRepeat.disabled = true;
-entrarButton.disabled = true;
+signInBtn.disabled = true;
 
 psw.onfocus = function(){
     document.getElementById("aviso").style.display = "block";
@@ -131,10 +97,10 @@ function checkMatch(){
     if(psw.value == pswRepeat.value && pswRepeat.value != ""){
         matchPsw.textContent = "As senhas coincidem";
         matchPsw.style.color = "green";
-        entrarButton.disabled = false;
+        signInBtn.disabled = false;
     }else{
         matchPsw.textContent = "As senhas não coincidem.";
         matchPsw.style.color = "red";
-        entrarButton.disabled = true;
+        signInBtn.disabled = true;
     }
 }
