@@ -22,18 +22,34 @@ setInterval(trocarBanner, 7500);
 let logintablet = document.getElementById("logintablet");
 let cadastrartablet = document.getElementById("cadastrartablet");
 let trocarParaCadastro = document.getElementById("trocarParaCadastro");
+let trocarParaLogin = document.getElementById("trocarParaLogin");
 
+// Função para controlar a visibilidade
+function atualizarVisibilidade() {
+    if (window.innerWidth >= 1200) {
+        logintablet.style.display = "none";
+        cadastrartablet.style.display = "none";
+    } else {
+        logintablet.style.display = "flex";
+    }
+}
+
+// Event listeners para trocar entre login e cadastro
 trocarParaCadastro.addEventListener("click", () => {
     logintablet.style.display = "none";
     cadastrartablet.style.display = "flex";
 });
 
-let trocarParaLogin = document.getElementById("trocarParaLogin");
-
 trocarParaLogin.addEventListener("click", () => {
     logintablet.style.display = "flex";
     cadastrartablet.style.display = "none";
 });
+
+// Listener para a mudança de tamanho da janela
+window.addEventListener("resize", atualizarVisibilidade);
+
+// Chamar a função uma vez no carregamento para garantir o estado correto
+atualizarVisibilidade();
 
 // Script para redirecionar para a página principal
 function login(event) {
@@ -48,9 +64,11 @@ let letter = document.getElementById("letter");
 let capital = document.getElementById("capital");
 let number = document.getElementById("number");
 let length = document.getElementById("length");
+let entrarButton = document.querySelector('input[type="submit"][value="Entrar"]');
 
 psw.disabled = true;
 pswRepeat.disabled = true;
+entrarButton.disabled = true;
 
 psw.onfocus = function(){
     document.getElementById("aviso").style.display = "block";
@@ -106,19 +124,17 @@ function validateEmail(){
     }
 }
 
-let match = document.getElementById("match"); // Mensagem para verificar se as senha coincidem
+let matchPsw = document.getElementById("matchPsw"); // Mensagem para verificar se as senha coincidem
 
 // Sistema para verificar se as senhas coincidem
 function checkMatch(){
     if(psw.value == pswRepeat.value && pswRepeat.value != ""){
-        match.classList.add("validRepeat");
-        match.classList.remove("invalidRepeat");
-        match.textContent = "As senhas coincidem";
-        match.style.color = "green";
+        matchPsw.textContent = "As senhas coincidem";
+        matchPsw.style.color = "green";
+        entrarButton.disabled = false;
     }else{
-        match.classList.add("invalidRepeat");
-        match.classList.remove("validRepeat");
-        match.textContent = "As senhas não coincidem.";
-        match.style.color = "red";
+        matchPsw.textContent = "As senhas não coincidem.";
+        matchPsw.style.color = "red";
+        entrarButton.disabled = true;
     }
 }

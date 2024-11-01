@@ -24,14 +24,13 @@
             </div>
 
             <div class="cadastrarlogin">
-                <h3>Login</h3>
+                <h2>Login</h2>
             </div>
 
             <form class="formcadastro" action="" method="post">
 
                 <input type="email" name="email" required placeholder="Email">
-                <input type="password" name="senha" required placeholder="Senha">
-                <!-- <input type="password" name="senha" required placeholder="Repetir Senha"> -->
+                <input type="password" name="password" required placeholder="Senha">
                 <button class="confirmarcadastro">Confirmar</button>
 
             </form>
@@ -80,15 +79,23 @@
             </div>
 
             <div class="cadastrarlogin">
-                <h3>Cadastrar</h3>
+                <h2>Cadastrar</h2>
             </div>
 
             <form class="formcadastro" action="" method="post">
 
-                <input type="email" name="email" required placeholder="Email">
-                <input type="password" name="senha" required placeholder="Senha">
-                <input type="password" name="senha" required placeholder="Repetir Senha">
-                <button class="confirmarcadastro">Confirmar</button>
+                <p id="matchEmailTablet"></p>
+                <input type="email" id="emailMobile" name="email" required placeholder="Email">
+                <input type="password" id="pswTablet" name="password" required placeholder="Senha">
+                <div id="avisoTablet">
+                    <p id="lttrTblt" class="invalid">Uma ou mais letra(s) <b>minúscula(s)</b></p>
+                    <p id="cptlTblt" class="invalid">Uma ou mais letras(s) <b>maiúscula(s)</b></p>
+                    <p id="nmbrTblt" class="invalid">Um ou mais <b>número(s)</b></p>
+                    <p id="lngthTblt" class="invalid">Mínimo de <b>8 (oito) caracteres</b></p>
+                </div>
+                <input type="password" id="pswRptTablet" name="pswRepeat" required placeholder="Repetir Senha">
+                <p id="matchPswTablet"></p>
+                <button class="confirmarcadastro" id="tabletConfirm">Confirmar</button>
 
             </form>
 
@@ -191,10 +198,7 @@
                             <p id="matchEmail"></p>
                             <input type="email" id="email" name="email" class="modalInput" placeholder="Email" required>
 
-                            <input type="password" id="password" name="password" class="modalInput" placeholder="Senha"
-                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                                title="Deve conter pelo menos uma letra minúscula, uma letra maiúscula, um número e deve ter pelo menos 8 (OITO) caracteres."
-                                required>
+                            <input type="password" id="password" name="password" class="modalInput" placeholder="Senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
 
                             <div id="aviso">
                                 <p id="letter" class="invalid">Uma ou mais letra(s) <b>minúscula(s)</b></p>
@@ -205,7 +209,7 @@
 
                             <input type="password" id="pswRepeat" name="pswRepeat" class="modalInput"
                                 placeholder="Repitir Senha" required>
-                            <p id="match" class="invalidRepeat"></p>
+                            <p id="matchPsw"></p>
                         </div>
 
                         <div class="buttons-container">
