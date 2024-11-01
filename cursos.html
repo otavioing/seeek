@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -39,7 +38,7 @@
       <input type="text" placeholder="Pesquisar" class="Pesquisar">
       <a href=""><img src="img/search2.svg" alt=""></a>
     </div>
-    <div  class="usersite">
+    <div class="usersite">
       <a href=""><img src="img/bell2.svg" alt=""></a>
       <a href="login.html"><img src="img/user2.svg" alt=""></a>
     </div>
@@ -102,7 +101,8 @@
   </header>
 
   <div class="caminhonavegaçãocursos">
-    <a href="index.html" class="ExpA">Explorar </a> <p>></p> <a class="migalhadepaocursos" href="cursos.html"><span class="CurA">Cursos</span></a>
+    <a href="index.html" class="ExpA">Explorar </a>
+    <p>></p> <a class="migalhadepaocursos" href="cursos.html">Cursos</a>
   </div>
 
   <main>
@@ -111,29 +111,36 @@
         <div class="titulofiltroflutuante">
           <img src="img/Filtrar2roxo.svg" alt="">
           <h2 class="FilC">Filtar</h2>
+
+          <button class="botaotestparafecharofiltro" onclick="abrirfiltro()">fechar</button>
         </div>
         <div class="tiposdecursoscursos">
           <h2 class="titulosfiltroflutuante TDCC">Tipos de curso</h2>
-          <label for="">
-           <span  class="DisC"> Design </span> <input type="radio" name="" id="radio1">
-          </label>
-          <label for="" >
-          <span class="IluC"> Ilustração </span><input type="radio" name="" id="radio2">
-          </label>
-          <label for="">
-             <span class="FotC">Fotográfia </span> <input type="radio" name="" id="radio3">
-          </label>
+          <div class="divparadarogapentrealabeleoinput">
+            <label for=""> <span class="DisC"> Design </span> </label>
+            <input type="radio" name="" id="radio1">
+          </div>
+          <div class="divparadarogapentrealabeleoinput">
+          <label for=""> <span class="IluC"> Ilustração </span> </label>
+          <input type="radio" name="" id="radio2">
+          </div>
+          <div class="divparadarogapentrealabeleoinput">
+          <label for=""> <span class="FotC">Fotográfia </span> </label>
+          <input type="radio" name="" id="radio3">
+          </div>
         </div>
 
         <div class="precocursos">
           <h2 class="titulosfiltroflutuante PreC">Preço</h2>
+          <div class="divparadarogapentrealabeleoinput">
 
-          <label for="" >
-           <span class="FixC"> Fixo </span> <input type="radio" name="" id="radio4">
-          </label>
-          <label for="" >
-            <span class="MenC">Mensal</span> <input type="radio" name="" id="radio5">
-          </label>
+          <label for=""> <span class="FixC"> Fixo </span> </label>
+          <input type="radio" name="" id="radio4">
+          </div>
+          <div class="divparadarogapentrealabeleoinput">
+          <label for=""> <span class="MenC">Mensal</span> </label>
+          <input type="radio" name="" id="radio5">
+          </div>
           <div class="setaoneoffcursos">
             <p class="FaiC">Faixa de preco</p>
             <img id="setapreco" onclick="setapreco()" src="img/setaparabaixo.svg" alt="">
@@ -150,10 +157,11 @@
 
         <div class="duracaocursos">
           <h2 class="titulosfiltroflutuante DurC">Duração</h2>
+          <div class="divparadarogapentrealabeleoinput">
 
-          <label for="">
-             <span class="IndC">Indefinida</span> <input type="radio" name="" id="radio6">
-          </label>
+          <label for=""> <span class="IndC">Indefinida</span> </label>
+          <input type="radio" name="" id="radio6">
+          </div>
           <div class="setaoneoffcursos">
             <p class="TEMC">Tempo em horas</p>
             <img id="seta" onclick="seta()" src="img/setaparabaixo.svg" alt="">
@@ -168,15 +176,15 @@
         </div>
 
         <div class="localcursos">
-          <h2 class="titulosfiltroflutuante LocC" >Local</h2>
-
-          <label for="" >
-            <span class="PresC">Presencial</span> <input type="radio" name="" id="radio7">
-          </label>
-          <label for="" >
-            <span class="HOC">Home office </span> <input type="radio" name="" id="radio8">
-          </label>
-
+          <h2 class="titulosfiltroflutuante LocC">Local</h2>
+          <div class="divparadarogapentrealabeleoinput">
+          <label for=""> <span class="PresC">Presencial</span> </label>
+          <input type="radio" name="" id="radio7">
+          </div>
+          <div class="divparadarogapentrealabeleoinput">
+          <label for=""> <span class="HOC">Home office </span> </label>
+          <input type="radio" name="" id="radio8">
+          </div>
         </div>
 
 
@@ -202,93 +210,112 @@
       <div class="alinharadiv">
         <div onclick="abrirfiltro()" class="botaofiltrarcursosmedia">
 
-          <button onclick="abrirfiltro()"> <img src="img/Filtrar2.svg" alt=""> <span class="FilC"> Filtrar </span> </button>
+          <button onclick="abrirfiltro()"> <img src="img/Filtrar2.svg" alt=""> <span class="FilC"> Filtrar </span>
+          </button>
+
+        </div>
+        <div onclick="abrirfiltro1200()" class="botaofiltrarcursosmedia1200px">
+
+          <button onclick="abrirfiltro1200()"> <img src="img/Filtrar2.svg" alt=""> <span class="FilC"> Filtrar </span>
+          </button>
 
         </div>
       </div>
 
       <div class="containercursos">
 
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos"><div class="cursos">
-          <img src="img/imagemtestecurso.png" alt="">
-          <div class="informacoescursos">
-            <div class="nomedocursoedoautor">
-              <h2 class="NomC">Nome do curso</h2>
-              <p >José Antonio</p>
-            </div>
-            <div class="valordocursoebotaofavorito">             
-              <p class="precoC">R$ 23,00/mês</p>
-              <img src="img/heart.svg" alt="">
-            </div>
-          </div>
-        </div></button>
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos"><div class="cursos">
-          <img src="img/imagemtestecurso.png" alt="">
-          <div class="informacoescursos">
-            <div class="nomedocursoedoautor">
-              <h2 class="NomC">Nome do curso</h2>
-              <p>José Antonio</p>
-            </div>
-            <div class="valordocursoebotaofavorito">             
-              <p class="precoC">R$ 23,00/mês</p>
-              <img src="img/heart.svg" alt="">
+        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
+          <div class="cursos">
+            <img src="img/imagemtestecurso.png" alt="">
+            <div class="informacoescursos">
+              <div class="nomedocursoedoautor">
+                <h2 class="NomC">Nome do curso</h2>
+                <p>José Antonio</p>
+              </div>
+              <div class="valordocursoebotaofavorito">
+                <p class="precoC">R$ 23,00/mês</p>
+                <img src="img/heart.svg" alt="">
+              </div>
             </div>
           </div>
-        </div></button>
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos"><div class="cursos">
-          <img src="img/imagemtestecurso.png" alt="">
-          <div class="informacoescursos">
-            <div class="nomedocursoedoautor">
-              <h2 class="NomC">Nome do curso</h2>
-              <p>José Antonio</p>
-            </div>
-            <div class="valordocursoebotaofavorito">             
-              <p class="precoC">R$ 23,00/mês</p>
-              <img src="img/heart.svg" alt="">
-            </div>
-          </div>
-        </div></button>
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos"><div class="cursos">
-          <img src="img/imagemtestecurso.png" alt="">
-          <div class="informacoescursos">
-            <div class="nomedocursoedoautor">
-              <h2 class="NomC">Nome do curso</h2>
-              <p >José Antonio</p>
-            </div>
-            <div class="valordocursoebotaofavorito">             
-              <p class="precoC">R$ 23,00/mês</p>
-              <img src="img/heart.svg" alt="">
+        </button>
+        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
+          <div class="cursos">
+            <img src="img/imagemtestecurso.png" alt="">
+            <div class="informacoescursos">
+              <div class="nomedocursoedoautor">
+                <h2 class="NomC">Nome do curso</h2>
+                <p>José Antonio</p>
+              </div>
+              <div class="valordocursoebotaofavorito">
+                <p class="precoC">R$ 23,00/mês</p>
+                <img src="img/heart.svg" alt="">
+              </div>
             </div>
           </div>
-        </div></button>
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos"><div class="cursos">
-          <img src="img/imagemtestecurso.png" alt="">
-          <div class="informacoescursos">
-            <div class="nomedocursoedoautor">
-              <h2 class="NomC">Nome do curso</h2>
-              <p>José Antonio</p>
-            </div>
-            <div class="valordocursoebotaofavorito">             
-              <p class="precoC">R$ 23,00/mês</p>
-              <img src="img/heart.svg" alt="">
-            </div>
-          </div>
-        </div></button>
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos"><div class="cursos">
-          <img src="img/imagemtestecurso.png" alt="">
-          <div class="informacoescursos">
-            <div class="nomedocursoedoautor">
-              <h2 class="NomC">Nome do curso</h2>
-              <p >José Antonio</p>
-            </div>
-            <div class="valordocursoebotaofavorito">             
-              <p class="precoC">R$ 23,00/mês</p>
-              <img src="img/heart.svg" alt="">
+        </button>
+        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
+          <div class="cursos">
+            <img src="img/imagemtestecurso.png" alt="">
+            <div class="informacoescursos">
+              <div class="nomedocursoedoautor">
+                <h2 class="NomC">Nome do curso</h2>
+                <p>José Antonio</p>
+              </div>
+              <div class="valordocursoebotaofavorito">
+                <p class="precoC">R$ 23,00/mês</p>
+                <img src="img/heart.svg" alt="">
+              </div>
             </div>
           </div>
-        </div></button>
-        
-        
+        </button>
+        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
+          <div class="cursos">
+            <img src="img/imagemtestecurso.png" alt="">
+            <div class="informacoescursos">
+              <div class="nomedocursoedoautor">
+                <h2 class="NomC">Nome do curso</h2>
+                <p>José Antonio</p>
+              </div>
+              <div class="valordocursoebotaofavorito">
+                <p class="precoC">R$ 23,00/mês</p>
+                <img src="img/heart.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </button>
+        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
+          <div class="cursos">
+            <img src="img/imagemtestecurso.png" alt="">
+            <div class="informacoescursos">
+              <div class="nomedocursoedoautor">
+                <h2 class="NomC">Nome do curso</h2>
+                <p>José Antonio</p>
+              </div>
+              <div class="valordocursoebotaofavorito">
+                <p class="precoC">R$ 23,00/mês</p>
+                <img src="img/heart.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </button>
+        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
+          <div class="cursos">
+            <img src="img/imagemtestecurso.png" alt="">
+            <div class="informacoescursos">
+              <div class="nomedocursoedoautor">
+                <h2 class="NomC">Nome do curso</h2>
+                <p>José Antonio</p>
+              </div>
+              <div class="valordocursoebotaofavorito">
+                <p class="precoC">R$ 23,00/mês</p>
+                <img src="img/heart.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </button>
+
+
 
 
 
@@ -318,50 +345,50 @@
       <img src="../img/imagemtestecurso.png" alt="">
 
       <div class="informacoescaixaflutuantecursos">
-          <div class="nomedocursoedoautor">
-              <h2 class="NomC">Curso de design</h2>
-              <p>Um curso feito por José Antonio</p>
-          </div>
-          <div class="valordocursoetempo">
+        <div class="nomedocursoedoautor">
+          <h2 class="NomC">Curso de design</h2>
+          <p>Um curso feito por José Antonio</p>
+        </div>
+        <div class="valordocursoetempo">
 
-              <h2 class="precoC">R$23,00/mês</h2>
-              <p>Tempo: 48horas</p>
+          <h2 class="precoC">R$23,00/mês</h2>
+          <p>Tempo: 48horas</p>
 
-          </div>
+        </div>
 
       </div>
       <p id="descricaodacaixaflutuantecursos">Breve descrição do curso</p>
       <div class="infocursoscaixaflutuante">
-          <div class="iconscaixaflutuantecursos">
-              <img src="../img/estrela.svg" alt="">
-              <img src="../img/cinema.svg" alt="">
-              <img src="../img/perfilcursos.svg" alt="">
-              <img src="../img/like.svg" alt="">
-              <img src="../img/som.svg" alt="">
-              <img src="../img/legenda.svg" alt="">
+        <div class="iconscaixaflutuantecursos">
+          <img src="../img/estrela.svg" alt="">
+          <img src="../img/cinema.svg" alt="">
+          <img src="../img/perfilcursos.svg" alt="">
+          <img src="../img/like.svg" alt="">
+          <img src="../img/som.svg" alt="">
+          <img src="../img/legenda.svg" alt="">
 
 
-          </div>
-          <div class="informacoessobreocursocaixaflutuante">
+        </div>
+        <div class="informacoessobreocursocaixaflutuante">
 
-              <p>Level: iniciante</p>
-              <p>15 módulos(50min)</p>
-              <p>20.000 estudantes</p>
-              <p>89% reviews positivas</p>
-              <p>Audio: Português</p>
-              <p>CC: inglês,espanhol</p>
+          <p>Level: iniciante</p>
+          <p>15 módulos(50min)</p>
+          <p>20.000 estudantes</p>
+          <p>89% reviews positivas</p>
+          <p>Audio: Português</p>
+          <p>CC: inglês,espanhol</p>
 
-          </div>
-          <div class="botaomaisinfocursoscaixaflutuante">
-              <button id="botaoinscrever">Mais informações</button>
-          </div>
-          <div class="assinarcursocaixaflutuante">
+        </div>
+        <div class="botaomaisinfocursoscaixaflutuante">
+          <button id="botaoinscrever">Mais informações</button>
+        </div>
+        <div class="assinarcursocaixaflutuante">
 
-              <button id="idassinarcursocaixaflutuante">Assinar</button>
+          <button id="idassinarcursocaixaflutuante">Assinar</button>
 
-          </div>
+        </div>
       </div>
-  </div>
+    </div>
   </main>
 
   <button class="btn-scroll-top" arial-label="Voltar ao topo">

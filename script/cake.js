@@ -168,36 +168,33 @@ radios.forEach(radio => {
 //script para abrir e fechar o filtro futuante da aba cursos
 
 function abrirfiltro() {
-
     let filtro = document.getElementById("filtroflutuante");
-    
-    if (filtro.style.top == "0%" || filtro.style.display == "") {
+
+    if (filtro.style.top == "0%") {
         filtro.style.top = "-100%";
         console.log("ação do if feita");
-    }
-    else {
-        if (filtro.style.top = "-100%" || filtro.style.display == "") {
+    } else {
+        if (filtro.style.top == "-100%" || filtro.style.display == "") {
             filtro.style.top = "0%";
             console.log("ação do else feita");
         }
+    }
+}
 
+function abrirfiltro1200() {
+
+    let filtro = document.getElementById("filtroflutuante");
+    
+    if (filtro.style.display == "block") {
+        filtro.style.display = "none";
+    }
+    else {
+        if (filtro.style.display = "none" || filtro.style.display == "") {
+            filtro.style.display = "block";
+        }
         
     }
 }
-// function abrirfiltro() {
-
-//     let filtro = document.getElementById("filtroflutuante");
-    
-//     if (filtro.style.display == "block") {
-//         filtro.style.display = "none";
-//     }
-//     else {
-//         if (filtro.style.display = "none" || filtro.style.display == "") {
-//             filtro.style.display = "block";
-//         }
-        
-//     }
-// }
 
 // funçao para abrir os comentários do madal
 
