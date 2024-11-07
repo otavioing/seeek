@@ -11,6 +11,18 @@
 
 <body id="todo">
 
+  <div class="divativacaobarradeacessibilidade">
+    <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg" alt=""></button>
+</div>
+
+<div id="barra" class="divbarradeacessibilidade">
+    <button onclick="desativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg" alt=""></button>
+    <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade"><img src="img/barra/lupa-.svg" alt=""></button>
+    <button onclick="zoommais()" class="funcaoesbarradeacessibilidade"><img src="img/barra/lupa+.svg" alt=""></button>
+    <button class="funcaoesbarradeacessibilidade"><img src="img/barra/luabarra.svg" alt=""></button>
+    <button class="funcaoesbarradeacessibilidade"><img src="img/barra/solbarra.svg" alt=""></button>
+</div>
+
   <header class="inicio">
     <button class="botaoMenu" id="botaoMenu">
       <span class="linha1"></span>
@@ -20,9 +32,11 @@
     <div class="logosite">
       <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek"></a>
     </div>
-    <div class="userhover"><img src="img/user2.svg" alt="perfil menu"></div>
+    <div class="userhover">
+      <button><img onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu"></button>
+    </div>
     <nav class="navsite">
-      <div id="headerexplurar">
+      <div id="headerexplurar" class="navSelecionado">
         <a href="index.html" class="nav-link ExpA">Explorar</a>
       </div>
       <div id="headercursos">
@@ -40,55 +54,64 @@
       <a href=""><img src="img/search2.svg" alt=""></a>
     </div>
     <div class="usersite">
+
       <a href=""><img src="img/bell2.svg" alt=""></a>
-      <a href="login.html"><img src="img/user2.svg" alt=""></a>
-      <button id="abrirmenuperfil" onclick="abrirMenu()">teste menu perfil</button>
+      <button onclick="abrirMenu()"><img src="img/user2.svg" alt=""></button>
     </div>
     <nav class="hamburguer" id="menu">
       <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="index.html" class="ExpA">Explorar</a>
+        <a class="botoesmenuhamburguer nav-link" href="index.html"> <span class="ExpA">Explorar </span></a>
       </div>
       <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="cursos.html" class="CurA">Cursos</a>
+        <a class="botoesmenuhamburguer nav-link" href="cursos.html"> <span class="CurA">Cursos </span></a>
       </div>
       <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="vagas.html" class="VagA">Vagas</a>
+        <a class="botoesmenuhamburguer nav-link" href="vagas.html"> <span class="VagA">Vagas</span></a>
       </div>
       <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="sobre.html" class="SobA">Sobre Nós</a>
+        <a class="botoesmenuhamburguer nav-link" href="sobre.html"><Span class="sobA">Sobre Nós</Span></a>
       </div>
       <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer" href="ajuda.html" class="SobA">Ajuda</a>
+        <a class="botoesmenuhamburguer" href="ajuda.html"> <span class="AjuF">Ajuda</span> </a>
       </div>
       <div class="bordasuperior"></div>
       <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer " href="avisos.html" class="SobA">Avisos</a>
+        <a class="botoesmenuhamburguer " href="avisos.html" class="SobA"><span class="AviF">Avisos</span></a>
       </div>
       <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer " href="avisos.html" class="SobA">Atualizações</a>
+        <a class="botoesmenuhamburguer " href="avisos.html"> <span class="AtuF">Atualizações </span></a>
       </div>
       <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer " href="sobre.html#contatosobre" class="SobA">Contato</a>
+        <a class="botoesmenuhamburguer " href="sobre.html#contatosobre"> <span class="Conf">Contato </span></a>
       </div>
 
       <div class="itemsdomenu">
-        <select name="" id="">
+        <select name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
           <option value="pt">Português</option>
           <option value="eng">English</option>
           <option value="es">Español</option>
           <option value="jp">日本語</option>
         </select>
       </div>
+      <div class="bordasuperior"></div>
+
+      <div class="divredessociais">
+        <button><img src="img/Linkedin.svg" alt=""></button>
+        <button><img src="img/whatsapp.svg" alt=""></button>
+        <button><img src="img/instagram.svg" alt=""></button>
+      </div>
+      <div class="bordasuperior"></div>
+
 
       <div class="direitosautoraismenu">
         <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
       </div>
     </nav>
     <div id="menuperfil" class="menuperfil">
-      <div class="divmeuperfil">
-        <a href="" class="Perf">Meu Perfil</a>
+      <div class="divmenuperfil">
+        <a href="usuario.html" class="Perf">Meu Perfil</a>
       </div>
-      <div class="divconfiguracoes">
+      <div class="divmenuperfil">
         <a href="config.html" class="Conf">Configurações</a>
       </div>
       <div class="botaomodoescuro">

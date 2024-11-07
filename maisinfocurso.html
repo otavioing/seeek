@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/maisinfocurso.css">
+</head>
+
+<body>
+    <header class="inicio">
+        <button class="botaoMenu" id="botaoMenu">
+            <span class="linha1"></span>
+            <span class="linha2"></span>
+            <span class="linha3"></span>
+        </button>
+        <div class="logosite">
+            <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek"></a>
+        </div>
+        <div class="userhover">
+            <button><img onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu"></button>
+        </div>
+        <nav class="navsite">
+            <div id="headerexplurar" class="navSelecionado">
+                <a href="index.html" class="nav-link ExpA">Explorar</a>
+            </div>
+            <div id="headercursos">
+                <a href="cursos.html" class="nav-link CurA">Cursos</a>
+            </div>
+            <div id="headervagas">
+                <a href="vagas.html" class="nav-link VagA">Vagas</a>
+            </div>
+            <div class="sobrenoss">
+                <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
+            </div>
+        </nav>
+        <div class="pesquisasite">
+            <input type="text" placeholder="Pesquisar" class="Pesquisar">
+            <a href=""><img src="img/search2.svg" alt=""></a>
+        </div>
+        <div class="usersite">
+
+            <a href=""><img src="img/bell2.svg" alt=""></a>
+            <button onclick="abrirMenu()"><img src="img/user2.svg" alt=""></button>
+        </div>
+        <nav class="hamburguer" id="menu">
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="index.html"> <span class="ExpA">Explorar </span></a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="cursos.html"> <span class="CurA">Cursos </span></a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="vagas.html"> <span class="VagA">Vagas</span></a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="sobre.html"><Span class="sobA">Sobre Nós</Span></a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer" href="ajuda.html"> <span class="AjuF">Ajuda</span> </a>
+            </div>
+            <div class="bordasuperior"></div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer " href="avisos.html" class="SobA"><span class="AviF">Avisos</span></a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer " href="avisos.html"> <span class="AtuF">Atualizações </span></a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer " href="sobre.html#contatosobre"> <span class="Conf">Contato </span></a>
+            </div>
+
+            <div class="itemsdomenu">
+                <select name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+                    <option value="pt">Português</option>
+                    <option value="eng">English</option>
+                    <option value="es">Español</option>
+                    <option value="jp">日本語</option>
+                </select>
+            </div>
+            <div class="bordasuperior"></div>
+
+            <div class="divredessociais">
+                <button><img src="img/Linkedin.svg" alt=""></button>
+                <button><img src="img/whatsapp.svg" alt=""></button>
+                <button><img src="img/instagram.svg" alt=""></button>
+            </div>
+            <div class="bordasuperior"></div>
+
+
+            <div class="direitosautoraismenu">
+                <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
+            </div>
+        </nav>
+        <div id="menuperfil" class="menuperfil">
+            <div class="divmenuperfil">
+                <a href="usuario.html" class="Perf">Meu Perfil</a>
+            </div>
+            <div class="divmenuperfil">
+                <a href="config.html" class="Conf">Configurações</a>
+            </div>
+            <div class="botaomodoescuro">
+                <label for=""><img src="img/lua.png" alt=""></label>
+                <div class="checkbox-con">
+                    <input onclick="MudarModos()" id="checkbox" type="checkbox" checked>
+                </div>
+                <label for=""><img src="img/sol.png" alt=""></label>
+            </div>
+            <button id="sairdomenuperfil" class="sairP">Sair</button>
+        </div>
+    </header>
+
+    <div class="caminhonavegaçãocursos">
+        <a href="index.html" class="ExpA">Explorar </a>
+        <p>></p>
+        <a class="migalhadepaocursos" href="cursos.html">Cursos</a>
+        <p>></p>
+        <a id="abaatualmigalhadepao" class="migalhadepaocursos" href="paginadoscursos.html">Cursos de Design</a>
+    </div>
+    <main class="maincurso">
+
+        <section class="informacoessobreocurso">
+            <div class="infodonodocurso">
+                <div class="infosobreocriadordocurso">
+                    <div class="fotoCriadorCurso">
+                        <img src="img/fotousuario.svg" alt="Foto de perfil do criador do curso">
+                    </div>
+                    <div class="infosobreocriador">
+                        <p id="opacidade">cidade/país</p>
+                        <div class="nomedocriadoreseguidores">
+                            <a href="index.html">Nome do criador</a>
+                            <p>0 seguidores</p>
+                        </div>
+                        <div class="alinhar">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/bolacomum+.png" alt="">
+                </div>
+            </div>
+
+            <div class="infocurso">
+                <h2>Curso de Design</h2>
+                <div class="videoapresentacaodocurso">
+                    <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <p>Descrição do curso</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur mollitia facilis dolor repellat
+                    fugiat sapiente, temporibus, dolores cumque perspiciatis incidunt eos, iusto dolorum quia ratione
+                    quibusdam nam quae similique enim?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati doloremque similique nostrum
+                    quasi asperiores, tenetur deleniti dolorem ducimus. Ad, voluptas magni explicabo ducimus qui fugiat
+                    maxime perspiciatis magnam culpa aut!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, facilis quidem perspiciatis ut
+                    dignissimos explicabo fugit quam, nobis rerum magni minima expedita eligendi maxime itaque suscipit.
+                    Architecto impedit culpa corrupti?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore sed accusantium debitis omnis
+                    quibusdam vero reiciendis architecto, voluptatum, accusamus mollitia tenetur, quam impedit nobis
+                    temporibus velit vitae molestiae deleniti rem!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores laudantium voluptatum labore culpa
+                    minus veniam, rerum iusto, enim nobis facilis illum sapiente, tenetur nesciunt repudiandae
+                    consectetur aliquid ab soluta minima.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sit eum voluptas, animi,
+                    necessitatibus tempora nihil nobis non quod placeat illo et, exercitationem optio. Quaerat aliquam
+                    doloremque consequuntur tempora ducimus!
+                </p>
+
+                <div class="containeraulasdocurso">
+
+
+                    <div class="videoaulacurso">
+                        <div class="containerpararesponsividadedoiframe">
+                            <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="infovidesdocurso ">
+                            <p>introdução</p>
+                            <p>45min</p>
+                        </div>
+                    </div>
+                    <div class="videoaulacurso">
+                        <div class="containerpararesponsividadedoiframe">
+                            <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="infovidesdocurso ">
+                            <p>introdução</p>
+                            <p>45min</p>
+                        </div>
+                    </div>
+                    <div class="videoaulacurso">
+                        <div class="containerpararesponsividadedoiframe">
+                            <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="infovidesdocurso ">
+                            <p>introdução</p>
+                            <p>45min</p>
+                        </div>
+                    </div>
+                    <div class="videoaulacurso">
+                        <div class="containerpararesponsividadedoiframe">
+                            <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="infovidesdocurso ">
+                            <p>introdução</p>
+                            <p>45min</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+        <section class="divoutrasinfodocurso">
+
+
+            <div class="divparaogap">
+                <div class="valordocurso">
+                    <p>R$ 23, 00 /mês</p>
+                </div>
+                <div class="botaoassinar">
+                    <button>Assinar</button>
+                </div>
+            </div>
+            <div class="infosobreocurso">
+                <div class="iconscaixaflutuantecursos">
+                    <img src="img/estrela.svg" alt="">
+                    <img src="img/cinema.svg" alt="">
+                    <img src="img/perfilcursos.svg" alt="">
+                    <img src="img/like.svg" alt="">
+                    <img src="img/som.svg" alt="">
+                    <img src="img/legenda.svg" alt="">
+                </div>
+                <div class="informacoessobreocursocaixaflutuante">
+                    <p>Level: iniciante</p>
+                    <p>15 módulos(50min)</p>
+                    <p>20.000 estudantes</p>
+                    <p>89% reviews positivas</p>
+                    <p>Audio: Português</p>
+                    <p>CC: inglês,espanhol</p>
+                </div>
+            </div>
+
+            <div class="divtags">
+
+                <p>Tags</p>
+
+                <div class="containertags">
+
+                    <div class="tagsdocurso"><img src="img/tag.svg" alt=""></div>
+                    <div class="tagsdocurso"><img src="img/tag.svg" alt=""></div>
+                    <div class="tagsdocurso"><img src="img/tag.svg" alt=""></div>
+                    <div class="tagsdocurso"><img src="img/tag.svg" alt=""></div>
+                    <div class="tagsdocurso"><img src="img/tag.svg" alt=""></div>
+                    <div class="tagsdocurso"><img src="img/tag.svg" alt=""></div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <div class="linksfooter">
+
+            <div class="infofooter">
+                <a href="ajuda.html" class="AjuF">Ajuda</a>
+                <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
+            </div>
+
+            <div class="infofooter">
+                <a href="sobre.html" class="SobA">Sobre Nós</a>
+                <a href="sobre.html#contatosobre" class="ConT">Contato</a>
+
+            </div>
+            <div class="infofooter">
+                <a href="avisos.html" class="AviF">Avisos</a>
+
+                <select name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+                    <option value="pt">Português</option>
+                    <option value="eng">English</option>
+                    <option value="es">Español</option>
+                    <option value="jp">日本語</option>
+                </select>
+            </div>
+
+            <div class="infofooter">
+                <img src="img/logoSeekk 3@2x.png" alt="Logo Seek">
+            </div>
+
+        </div>
+
+        <div class="direitosautorais">
+            <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
+        </div>
+
+
+    </footer>
+
+</body>
+
+</html>

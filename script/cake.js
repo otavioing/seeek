@@ -171,10 +171,10 @@ function abrirfiltro() {
     let filtro = document.getElementById("filtroflutuante");
 
     if (filtro.style.top == "0%") {
-        filtro.style.top = "-100%";
+        filtro.style.top = "-200%";
         console.log("ação do if feita");
     } else {
-        if (filtro.style.top == "-100%" || filtro.style.display == "") {
+        if (filtro.style.top == "-200%" || filtro.style.display == "") {
             filtro.style.top = "0%";
             console.log("ação do else feita");
         }
@@ -216,6 +216,47 @@ function abrirComentarios(){
     } else {
         barradivisoria.style.display = "none";
     }
+}
+
+//script da barra de acessibilidade
+
+let zoomLevel = 1;
+
+function zoommais() {
+    zoomLevel += 0.1;
+    const mainElement = document.querySelector('main');
+    if (mainElement) {
+        mainElement.style.transform = `scale(${zoomLevel})`;
+        mainElement.style.transformOrigin = '0 0';
+    }
+}
+function zoommenos() {
+    zoomLevel -= 0.1;
+    const mainElement = document.querySelector('main');
+    if (mainElement) {
+        mainElement.style.transform = `scale(${zoomLevel})`;
+        mainElement.style.transformOrigin = '0 0';
+    }
+}
+
+function ativarbarra(){
+
+    let barra = document.getElementById("barra");
+    let botaobarra = document.getElementById("botaobarra");
+
+    botaobarra.style.display = "none";
+    barra.style.display = "flex";
+
+}
+
+function desativarbarra(){
+
+    let barra = document.getElementById("barra");
+    let botaobarra = document.getElementById("botaobarra");
+
+    botaobarra.style.display = "flex";
+    barra.style.display = "none";
+
 }
 
 

@@ -597,7 +597,7 @@
         width: 100%;
         height: 70rem;
         position: absolute;
-        top: -100%;
+        top: -200%;
         /* top: 0%; */
         font-size: 2rem;
     }
