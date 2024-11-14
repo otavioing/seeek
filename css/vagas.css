@@ -409,7 +409,9 @@
 .horariodapostagemmoreinfoenviarprop {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .horariodapostagemmoreinfoenviarprop button {
@@ -569,6 +571,10 @@
         font-size: 0.9rem;
     }
 
+    .caixaflutuante{
+        width: 40rem;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -577,6 +583,9 @@
         height: 2.3rem;
         font-size: 0.7rem;
         padding: 0.5rem;
+    }
+    .caixaflutuante{
+        width: 32rem;
     }
 
 }
@@ -618,6 +627,18 @@
         display: none;
     }
 
+    .caixaflutuante{
+        width: 100%;
+    }
+    .horariodapostagemmoreinfoenviarprop{
+        margin-top: 2rem;
+    }
+
+}
+@media screen and (max-width: 425px){
+    .horariodapostagemmoreinfoenviarprop button {
+        padding: 0.3rem 0.5rem;
+    }
 }
 
 @media screen and (max-width: 300px) {

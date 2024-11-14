@@ -379,7 +379,7 @@
 
 /*inicio caixa flutuante*/
 .caixaflutuante {
-    display: none;
+    display: flex;
     /* abre e fecha a caixa flutuante */
     flex-direction: column;
     position: fixed;
@@ -392,8 +392,8 @@
     border-radius: 10px;
     box-shadow: 0 0 10px var(--preto);
     z-index: 9999;
-    width: 45rem;
-    height: 37rem;
+    width: 40%;
+    /* height: 60%; */
     gap: 1rem;
 }
 
@@ -405,7 +405,7 @@
 }
 
 .caixaflutuante h2 {
-    color: var(--azulBase);
+    color: var(--roxobase);
     font-size: 1.5rem;
 }
 
@@ -421,17 +421,18 @@
 .informacoessobreocursocaixaflutuante {
 
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 0.3rem;
 
 }
 
 .infocursoscaixaflutuante {
     display: flex;
+    justify-content: space-between;
 
 }
 
-.iconscaixaflutuantecursos img {
+.informacoessobreocursocaixaflutuante img {
     height: 15px;
 }
 
@@ -441,27 +442,26 @@
     gap: 0.5rem;
 }
 
-#botaoinscrever {
-    background-color: transparent;
-    border: none;
-    color: var(--azulBase);
-    font-size: 1rem;
-    cursor: pointer;
-}
+
 
 .botaomaisinfocursoscaixaflutuante {
     display: flex;
-    align-items: end;
-    justify-content: end;
-    width: 15rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.botaomaisinfocursoscaixaflutuante a{
+    text-decoration: none;
+    color: var(--roxobase);
+    cursor: pointer;
 }
 
 #idassinarcursocaixaflutuante {
     background-color: transparent;
     border: none;
-    background-color: var(--azulBase);
-    width: 8rem;
-    height: 3rem;
+    background-color: var(--roxobase);
+    width: 75%;
+    height: 40%;
     border-radius: 50px;
     font-size: 1rem;
     cursor: pointer;
@@ -477,9 +477,93 @@
 }
 
 #idassinarcursocaixaflutuante:hover {
-    background-color: var(--azulBasee);
+    background-color: var(--azulBasec);
     color: var(--branco);
 }
+.infosobreocurso{
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+.infosobreocurso .iconssobresocurso img{
+    width: 15px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.infosobreocurso .iconssobresocurso{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.infosobreocursolegendas{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.borda{
+    border: 1px solid red;
+}
+.valordocursoetempo{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+
+/* @media screen and (max-width:1310px){
+
+    .teste{
+        width: 200%;
+    }
+
+} */
+@media screen and (max-width:1230px){
+    .infosobreocursolegendas{
+        font-size: 0.8rem;
+    }
+    .infosobreocurso .iconssobresocurso img{
+        width: 12px;
+        height: 12px;
+    }
+    #botaoinscrever{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:1170px){
+    .informacoescaixaflutuantecursos p{
+        font-size: 0.8rem;
+    }
+    .informacoescaixaflutuantecursos h2{
+        font-size: 1.2rem;
+    }
+    #descricaodacaixaflutuantecursos{
+        font-size: 1.1rem;
+    }
+    .caixaflutuante{
+        width: 60%;
+    }
+}
+@media screen and (max-width:900px){
+    .informacoescaixaflutuantecursos p{
+        font-size: 0.6rem;
+    }
+    .informacoescaixaflutuantecursos h2{
+        font-size: 1rem;
+    }
+    .caixaflutuante{
+        width: 70%;
+    }
+}
+@media screen and (max-width:550px){
+    .caixaflutuante{
+        width: 100%;
+    }
+}
+
+
 /*fim da caixa flutuante*/
 .botaofiltrarcursosmedia, .botaofiltrarcursosmedia1200px {
     width: 95%;
