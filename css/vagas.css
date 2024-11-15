@@ -369,7 +369,20 @@
 
 .localdavaga {
     display: flex;
-    justify-content: end;
+    align-items: center;
+    justify-content: space-between;
+}
+.localdavaga button{
+    background-color: transparent;
+    color: var(--preto);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+}
+.localdavaga button img{
+    width: 15px;
 }
 
 .imagemdavaga {

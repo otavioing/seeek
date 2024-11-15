@@ -510,15 +510,19 @@
     flex-direction: column;
     align-items: end;
 }
-
-
-/* @media screen and (max-width:1310px){
-
-    .teste{
-        width: 200%;
-    }
-
-} */
+#botaofecharcaixaflutuantecursos{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#botaofecharcaixaflutuantecursos img{
+    width: 20px;
+}
 @media screen and (max-width:1230px){
     .infosobreocursolegendas{
         font-size: 0.8rem;

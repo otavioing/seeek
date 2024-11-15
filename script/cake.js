@@ -42,14 +42,24 @@ function setapreco() {
 
 }
 
-
-function abrir() {
+// script para abrir a caixaflutuante da aba vagas
+function abrircaixaflutuantevagas() {
     let caixa = document.getElementById("caixa");
 
     if (caixa.style.display == "none" || caixa.style.display == "") {
         caixa.style.display = "block";
     }
 
+}
+
+// script para fechar a caixaflutuante da aba vagas
+
+function fecharcaixaflutuantevagas() {
+    let caixa = document.getElementById("caixa");
+
+    if (caixa.style.display == "block") {
+        caixa.style.display = "none";
+    }
 }
 
 //script para alterar o ano atual
@@ -80,6 +90,7 @@ function abrircaixaflutuantecursos() {
         html.style.overflow = "auto";
     }
 }
+
 
 //script para trocar o id do botão de acordo com o clique
 
@@ -165,18 +176,16 @@ radios.forEach(radio => {
     });
 });
 
-//script para abrir e fechar o filtro futuante da aba cursos
+//script para abrir e fechar o filtro futuante da aba cursos/vagas
 
 function abrirfiltro() {
     let filtro = document.getElementById("filtroflutuante");
 
     if (filtro.style.top == "0%") {
         filtro.style.top = "-200%";
-        console.log("ação do if feita");
     } else {
         if (filtro.style.top == "-200%" || filtro.style.display == "") {
             filtro.style.top = "0%";
-            console.log("ação do else feita");
         }
     }
 }
