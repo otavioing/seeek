@@ -20,7 +20,7 @@ setInterval(trocarBanner, 7500);
 // Script para redirecionar para a página principal
 function login(event) {
     event.preventDefault();
-    window.location.href = "index.html";
+    window.location.href = "index.html?login=true";
 }
 
 let email = document.getElementById("email");
