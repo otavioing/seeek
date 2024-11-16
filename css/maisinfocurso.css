@@ -1,22 +1,26 @@
-.caminhonavegaçãocursos{
+.caminhonavegaçãocursos {
     display: flex;
     align-items: center;
     gap: 5px;
     color: var(--preto);
     padding: 1rem 2rem;
 }
-.caminhonavegaçãocursos a{
+
+.caminhonavegaçãocursos a {
     color: var(--preto);
 }
-#abaatualmigalhadepao{
+
+#abaatualmigalhadepao {
     color: var(--azulBase);
 }
-.maincurso{
+
+.maincurso {
     display: flex;
-    padding: 0 2rem; 
+    padding: 0 2rem;
     gap: 0.5rem;
 }
-.informacoessobreocurso{
+
+.informacoessobreocurso {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -24,110 +28,132 @@
     background-color: var(--cinzaBase);
     padding: 1.5rem;
 }
-.infodonodocurso{
+
+.infodonodocurso {
     display: flex;
     justify-content: space-between;
     width: 100%;
 
 }
-.infosobreocriadordocurso{
+
+.infosobreocriadordocurso {
     display: flex;
     gap: 1.5rem;
 }
-#opacidade{
+
+#opacidade {
     opacity: 0.5;
 }
-.fotoCriadorCurso img{
+
+.fotoCriadorCurso img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
-.infosobreocriador{
+
+.infosobreocriador {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 5px;
 }
-.infosobreocriador a{
+
+.infosobreocriador a {
     color: var(--preto);
     font-size: 1.5rem;
 }
-.informacoessobreocurso h2{
+
+.informacoessobreocurso h1 {
     color: var(--preto);
     font-size: 2.5rem;
 }
-.infocurso{
+
+.infocurso {
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
-.containeraulasdocurso{
+
+.containeraulasdocurso {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
-.videoaulacurso .infovidesdocurso p{
+
+.videoaulacurso .infovidesdocurso p {
     color: var(--preto);
     font-size: 1.5rem;
 }
-.videoaulacurso .infovidesdocurso{
+
+.videoaulacurso .infovidesdocurso {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 25%;
 }
-.videoaulacurso iframe{
+
+.videoaulacurso iframe {
     width: 460px;
     height: 315px;
 }
-.videoapresentacaodocurso iframe{
+
+.videoapresentacaodocurso iframe {
     width: 660px;
     height: 315px;
 }
-.divparaogap{
+
+.divparaogap {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 1.5rem;
 }
-.divoutrasinfodocurso{
+
+.divoutrasinfodocurso {
     height: 40rem;
-    width: 17%;
+    width: 17rem;
     background-color: var(--cinzaBase);
     background-color: lightgray;
-    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5); /* sombra à esquerda */    
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5);
+    /* sombra à esquerda */
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4.5rem;
 }
-.valordocurso{
+
+.valordocurso {
     display: flex;
     align-items: start;
     width: 100%;
 }
-.botaoassinar{
+
+.botaoassinar {
     display: flex;
     justify-content: center;
 }
-.botaoassinar button{
+
+.botaoassinar button {
     background-color: var(--roxobase);
     color: var(--brancoBase);
-    padding: 1rem 3rem;
+    padding: 0.8rem 3rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 1.5rem;
 }
-.botaoassinar button:hover{
+
+.botaoassinar button:hover {
     background-color: var(--roxobasee);
 }
-.infosobreocurso{
+
+.infosobreocurso {
     display: flex;
     gap: 0.5rem;
 }
+
 .iconscaixaflutuantecursos img {
     height: 15px;
 }
@@ -144,38 +170,43 @@
     gap: 0.3rem;
 }
 
-.divtags{
+.divtags {
     display: flex;
     flex-direction: column;
     justify-content: start;
     width: 100%;
     gap: 1rem;
 }
-.containertags{
+
+.containertags {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
+
 }
-.videoapresentacaodocurso{
+
+.videoapresentacaodocurso {
     position: relative;
     margin: 2rem 0;
     padding-top: 36.25%;
     width: 85%;
 }
-.videoapresentacaodocurso iframe{
+
+.videoapresentacaodocurso iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 85%;
     height: 100%;
 }
-.containerpararesponsividadedoiframe{
+
+.containerpararesponsividadedoiframe {
     position: relative;
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
     padding-top: 40.25%;
     width: 90%;
 }
-.containerpararesponsividadedoiframe iframe{
+
+.containerpararesponsividadedoiframe iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -183,27 +214,112 @@
     height: 100%;
 }
 
-
-
-@media screen and (max-width: 1424px){
-
-    .iconscaixaflutuantecursos{
-        gap: 0.74rem;
-    }
-
+.descricaodocurso {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-@media screen and (max-width: 1210px){
-
-    .botaoassinar button{
-        padding: 0.7rem 2rem;  
-    }
+.infocursomedia {
+    display: none;
 }
 
-@media screen and (max-width: 1150px){
+.espacoentreoselementos {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+}
+
+.espacoentreoselementos2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#descpequena {
+    display: none;
+}
+
+.assisnarmedia {
+    margin: 1rem 0;
+    display: none;
+}
 
 
-    .valordocurso p {
-        font-size: 0.8rem;
+
+@media screen and (max-width: 750px) {
+
+    .divoutrasinfodocurso {
+        display: none;
+    }
+
+    .informacoessobreocurso {
+        width: 100%;
+    }
+
+    .infocurso {
+        gap: 0rem;
+    }
+
+    .infocursomedia {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    #descpequena {
+        display: block;
+    }
+
+    #descgrande {
+        display: none;
+    }
+
+    .containeraulasdocurso {
+        grid-template-columns: 1fr;
+    }
+
+    .videoapresentacaodocurso {
+        position: relative;
+        margin: 1rem 0;
+        padding-top: 50.25%;
+        width: 100%;
+    }
+
+    .videoapresentacaodocurso iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .containerpararesponsividadedoiframe {
+        position: relative;
+        margin: 1rem 0;
+        padding-top: 50.25%;
+        width: 100%;
+    }
+
+    .containerpararesponsividadedoiframe iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .assisnarmedia {
+        display: block;
+    }
+
+    .valordocurso {
+        width: 90%;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 550px){
+    .infocurso{
+        padding: 0 0rem;
     }
 }
