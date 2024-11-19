@@ -1,8 +1,10 @@
+//script para fazer os inputs type radio serem desmarcados ao clicar neles
 function desmarcarRadio() {
     const radios = document.querySelectorAll('input[type="radio"]');
     radios.forEach(radio => radio.checked = false);
 }
 
+//script para fazer aparecer a caixa para inserir o preço do curso
 function seta() {
     var preco = document.getElementById("divinputpreco");
 
@@ -109,8 +111,7 @@ if (listaconfig) {
     }
 }
 
-//script para abrir o menu do perfil 
-// botaomenuperfil.addEventListener("click", abrirMenu);   não apagar essa linha de código 
+//script para abrir e fechar o menu do perfil 
 let botaomenuperfil = document.getElementById("abrirmenuperfil");
 
 function abrirMenu() {

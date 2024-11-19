@@ -1,8 +1,7 @@
 window.addEventListener("load", paginacarregada);
 
+// Função para abrir e fechar o menu de hamburguer
 function paginacarregada() {
-
-
 
     let botaomenu = document.getElementById("botaoMenu");
     botaomenu.addEventListener("click", abrirMenu);

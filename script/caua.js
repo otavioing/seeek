@@ -167,7 +167,7 @@ function aplicarModo() {
 }
 
 //-------------------------------- Troca de lingua --------------------------------/
-// (não ta travando)
+// sript para trocar a lingua do site
 function aplicarIdioma() {
   var idioma = {
     eng: { 
