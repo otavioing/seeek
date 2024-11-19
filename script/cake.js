@@ -268,4 +268,18 @@ function desativarbarra(){
 
 }
 
+function desativaeativavlibras(){
+    let vlibras = document.getElementById("ativaredasativarvlibras");
+
+    if (vlibras.style.display == "block") {
+        vlibras.style.display = "none";
+    }
+    else {
+        // Verifica se o estilo de exibição é "none" ou está vazio, e então define para "block"
+        if (vlibras.style.display == "none" || vlibras.style.display == "") {
+            vlibras.style.display = "block";
+        }
+    }
+}
+
 

@@ -39,6 +39,9 @@
     <button class="funcaoesbarradeacessibilidade">
       <img src="img/barra/solbarra.svg" alt="Sol" />
     </button>
+    <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/iconvlibras.svg" alt="Sol" />
+    </button>
   </div>
 
 <header class="inicio">
@@ -414,6 +417,18 @@
             </div>
         </div>
 
+        <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
+          <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+          </div>
     </main>
 
     <footer>

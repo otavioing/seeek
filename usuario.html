@@ -18,12 +18,25 @@
     </div>
     
     <div id="barra" class="divbarradeacessibilidade">
-        <button onclick="desativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg" alt="símbolo da onu"></button>
-        <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade"><img src="img/barra/lupa-.svg" alt="lupa com um - no centro"></button>
-        <button onclick="zoommais()" class="funcaoesbarradeacessibilidade"><img src="img/barra/lupa+.svg" alt="lupa com um + no centro"></button>
-        <button class="funcaoesbarradeacessibilidade"><img src="img/barra/luabarra.svg" alt="lua"></button>
-        <button class="funcaoesbarradeacessibilidade"><img src="img/barra/solbarra.svg" alt="sol"></button>
-    </div>
+        <button onclick="desativarbarra()" class="botaoativacaobarra">
+          <img src="img/barra/icon.svg" alt="símbolo da onu" />
+        </button>
+        <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
+          <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+        </button>
+        <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
+          <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+        </button>
+        <button class="funcaoesbarradeacessibilidade">
+          <img src="img/barra/luabarra.svg" alt="Lua" />
+        </button>
+        <button class="funcaoesbarradeacessibilidade">
+          <img src="img/barra/solbarra.svg" alt="Sol" />
+        </button>
+        <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
+          <img src="img/barra/iconvlibras.svg" alt="Sol" />
+        </button>
+      </div>
 
     <header class="inicio">
         <button class="botaoMenu" id="botaoMenu">
@@ -147,6 +160,19 @@
             <button>Cursos</button>
         </div>
 
+
+        <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
+            <div vw class="enabled">
+              <div vw-access-button class="active"></div>
+              <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+              </div>
+            </div>
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <script>
+              new window.VLibras.Widget('https://vlibras.gov.br/app');
+            </script>
+            </div>
 
     </main>
 
