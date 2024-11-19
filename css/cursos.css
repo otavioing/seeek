@@ -379,7 +379,7 @@
 
 /*inicio caixa flutuante*/
 .caixaflutuante {
-    display: flex;
+    display: none;
     /* abre e fecha a caixa flutuante */
     flex-direction: column;
     position: fixed;

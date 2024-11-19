@@ -204,11 +204,6 @@ header .navsite a:hover {
     transform: translateY(-0.2rem);
 }
 
-/* .navsite .navSelecionado {
-    height: 100%;
-    border-bottom: 3px solid var(--azulBase);
-    padding: 2rem 0.4rem 2rem 0.4rem;
-} */
 
 header .pesquisasite {
     width: 30%;
