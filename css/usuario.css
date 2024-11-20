@@ -150,6 +150,10 @@ button {
     width: 2rem;
 }
 
+.redessociais a .nomeUseuario{
+    display: none;
+}
+
 .dadosdouser{
     width: 100%;
 }
@@ -307,6 +311,39 @@ footer{
     margin: auto 0;
 }
 
+/*----------- Aparecem só na responsividade de celular -----------*/
+
+.infoProjetosCursos{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: start;
+    border-bottom: 1px solid var(--cinzaBaseee);
+    margin: 1.5rem 0;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.infoProjetosCursos button{
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.infoProjetosCursos div{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    height: 100%;
+}
+
+.infoProjetosCursos .opccaoSelecionada{
+    border-bottom: 3px solid var(--azulBase);
+}
+
 
 /*------------------------------------------------------------------------*/
 /*-------------------------------- @media --------------------------------*/
@@ -340,6 +377,61 @@ footer{
 
     .seguirUser2{
         display: flex
+    }
+
+}
+
+@media screen and (max-width: 660px){
+
+    .mainUser{
+        padding: 0;
+    } 
+
+    .informacoesperfil{
+        transform: translateY(-1rem);
+        border-radius: 0.7rem;
+        padding: 0.5rem;
+    }
+
+    .mainUser{
+        flex-direction: column;
+    }
+
+    .seguirCursosProjetos{
+        display: none;
+    }
+
+    .informacoesperfil{
+        width: 100%;
+        height: auto;
+    }
+
+    .redessociais{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        border: 1px solid var(--cinzaBaseee);
+        border-radius: 1rem;
+        gap: 0;
+    }
+
+    .redessociais a{
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        border-bottom: 1px solid var(--cinzaBaseee);
+        gap: 5%;
+    }
+
+    .redessociais .tirarBorderB{
+        border-bottom: 1px solid;
+    }
+
+    .redessociais a .nomeUseuario{
+        display: flex;
+        color: var(--preto);
     }
 
 }
