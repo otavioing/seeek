@@ -1,38 +1,27 @@
 :root {
     --cinzaBase: rgb(220, 220, 220);
-
     --cinzaBasee: rgb(158, 158, 158);
-
     --cinzaBasec: rgb(215, 214, 214);
+    --cinzaBaseee: rgb(97, 97, 97);
 
     --laranjaBase: rgb(228, 95, 16);
-
-    --brancoBase: rgb(255, 255, 255);
+    --vermelhom: #EF0000;
 
     --preto: #0E0E0E;
 
     --azulBase: #2B63F0;
-
     --azulBasee: #00008b;
-
     --azulBasec: rgb(116, 84, 233);
 
     --roxobase: #942af1;
-
     --roxoc: rgb(172, 161, 210);
 
+    --brancoBase: rgb(255, 255, 255);
     --branco: #f3f3f3;
-
     --brancomenuperfil: #E6E6E6;
-
     --brancohovermenuham: rgba(217, 217, 217, 1);
 
-
     --cinzaescurofundodomudartema: #3A3A3A;
-
-    --vermelhom: #EF0000;
-
-
 
     --ModoEscuroBase: #1F1F1F;
     --ModoEscuroMesc: #656565;
@@ -64,6 +53,10 @@ a {
     color: var(--brancoBase);
 }
 
+button {
+    cursor: pointer;
+}
+
 /*-------------------- Banner Usuário --------------------*/
 
 .banneruser {
@@ -88,6 +81,7 @@ a {
     position: absolute;
     top: 0.3rem;
     left: 0.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .voltarbutton img {
@@ -100,15 +94,12 @@ a {
 
 .mainUser {
     width: 100%;
-    height: 100vsh;
-    background-color: #555555;
+    height: auto;
+    background-color: var(--branco);
     display: flex;
     padding: 0 2rem;
     justify-content: space-between;
-}
-
-.seguiruser {
-    width: 100%;
+    position: relative;
 }
 
 .informacoesperfil {
@@ -116,7 +107,33 @@ a {
     flex-direction: column;
     align-items: center;
     width: 30%;
+    height: 50rem;
     background-color: var(--branco);
+    border-radius: 2rem;
+    transform: translateY(-2rem);
+    padding: 0 2rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.informacoesperfiltudo{
+    transform: translateY(-5rem);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.imgdousereNome {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.imgdousereNome img{
+    width: 8rem;
+    height: 8rem;
 }
 
 .redessociais {
@@ -124,9 +141,205 @@ a {
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .redessociais a img {
     height: 2rem;
     width: 2rem;
+}
+
+.dadosdouser{
+    width: 100%;
+}
+
+.infoUserContratar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    margin-top: 0.5rem;
+}
+
+.cidadeepais{
+    margin-bottom: 0.5rem;
+    font-size: small;
+    color: var(--cinzaBasee);
+}
+
+.infoUserContratar button {
+    width: 50%;
+    height: 2rem;
+    background-color: var(--azulBase);
+    color: var(--branco);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bio{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bioUserProjetos, .bioUserClassificacao, .bioUserSobre{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem 0.3rem;
+    border-bottom: 1px solid var(--cinzaBasee);
+    margin-bottom: 0.8rem;
+}
+
+.bioUserClassificacao img{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.bioUserSobre{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    padding: 0.1rem 0.3rem 0.5rem 0.3rem;
+}
+
+.sobreUser{
+    color: var(--cinzaBaseee);
+}
+
+.bioUserCertificados{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.userCertificados{
+    color: var(--azulBase);
+}
+
+.bloquearUser{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--vermelhom);
+}
+
+/*--------- Imagens ---------*/
+
+.mainImagensUser{
+    display: block;
+    width: 65%;
+    column-count: 2;
+    column-gap: 1rem;
+    margin: 4rem 0 1rem auto;
+}
+
+.imgsUser{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.imgsUser img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*-------------------- Seguir --------------------*/
+
+.seguirCursosProjetos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    transform: translateY(2.5rem);
+    z-index: 1;
+}
+
+.cursosProjetos{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.seguirUser button, .cursosProjetos button, .seguirUser2 button{
+    width: 5rem;
+    height: 2rem;
+    background-color: var(--cinzaBaseee);
+    color: var(--branco);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cursosProjetos .botaoSelecionado, .seguirUser2 .botaoSelecionadoUser{
+    background-color: var(--azulBase);
+}
+
+.seguirUser2 .botaoSelecionadoUser{
+    margin-bottom: 0.5rem;
+    width: 50%;
+}
+
+.seguirUser2{
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
+
+/*-------------------- Footer --------------------*/
+
+footer{
+    margin: auto 0;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*-------------------------------- @media --------------------------------*/
+/*------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1900px){
+    
+        .informacoesperfil{
+            height: 56rem;
+        }
+
+}
+
+@media screen and (max-width: 1200px){
+
+    .seguirCursosProjetos{
+        width: 40%;
+    }
+
+    .seguirUser button{
+        display: none;
+    }
+
+    .cursosProjetos{
+        width: 100%;
+    }
+
+    .cursosProjetos button{
+        width: 50%;
+    }
+
+    .seguirUser2{
+        display: flex
+    }
+
 }

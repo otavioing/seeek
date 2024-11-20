@@ -14,29 +14,30 @@
 <body>
 
     <div class="divativacaobarradeacessibilidade">
-        <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg" alt="símbolo da onu"></button>
+        <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg"
+                alt="símbolo da onu"></button>
     </div>
-    
+
     <div id="barra" class="divbarradeacessibilidade">
         <button onclick="desativarbarra()" class="botaoativacaobarra">
-          <img src="img/barra/icon.svg" alt="símbolo da onu" />
+            <img src="img/barra/icon.svg" alt="símbolo da onu" />
         </button>
         <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+            <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
         </button>
         <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+            <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
         </button>
         <button class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/luabarra.svg" alt="Lua" />
+            <img src="img/barra/luabarra.svg" alt="Lua" />
         </button>
         <button class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/solbarra.svg" alt="Sol" />
+            <img src="img/barra/solbarra.svg" alt="Sol" />
         </button>
         <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/iconvlibras.svg" alt="Sol" />
+            <img src="img/barra/iconvlibras.svg" alt="Sol" />
         </button>
-      </div>
+    </div>
 
     <header class="inicio">
         <button class="botaoMenu" id="botaoMenu">
@@ -134,52 +135,142 @@
     <section class="banneruser">
         <button class="voltarbutton"><img src="img/arrow-top.svg" alt="Seta para cima"></button>
         <img src="img/bannerusuario.png" alt="banner do usuário">
+        <div class="seguirCursosProjetos">
+            <div class="seguirUser">
+                <button>Seguir</button>
+            </div>
+            <div class="cursosProjetos">
+                <button class="botaoSelecionado">Projetos</button>
+                <button>Cursos</button>
+            </div>
+        </div>
     </section>
 
-    
     <main class="mainUser">
+
         <section class="informacoesperfil">
-            <div class="imgdouser">
-                <img src="img/iconeperfil.svg" alt="logo do usuário">
-            </div>
-    
-            <div class="dadosdouser">
-                <h1>Nome do Usuário</h1>
-                <p>@usuario</p>
-                <p>Localização</p>
-    
-                <div class="redessociais">
-                    <a href="https://x.com/__x"><img src="img/instagram.svg" alt="twitter"></a>
-                    <a href="https://www.instagram.com/"><img src="img/instagram.svg" alt="instagram"></a>
-                    <a href="https://br.linkedin.com/"><img src="img/linkedin.svg" alt="linkedin"></a>
+            <div class="informacoesperfiltudo">
+                <div class="imgdousereNome">
+                    <img src="img/iconeperfil.svg" alt="logo do usuário">
                 </div>
+
+                <div class="dadosdouser">
+                    <div class="infoUserContratar">
+                        <h1>Nome do Usuário</h1>
+                        <p>@usuario</p>
+                        <p class="cidadeepais">cidade e país</p>
+                        <div class="seguirUser2">
+                            <button class="botaoSelecionadoUser">Seguir</button>
+                        </div>
+                        <button>Editar</button>
+                    </div>
+
+                    <div class="redessociais">
+                        <a href="https://x.com/__x"><img src="img/instagram.svg" alt="twitter"></a>
+                        <a href="https://www.instagram.com/"><img src="img/instagram.svg" alt="instagram"></a>
+                        <a href="https://br.linkedin.com/"><img src="img/linkedin.svg" alt="linkedin"></a>
+                    </div>
+
+                    <div class="bio">
+                        <div class="bioUserProjetos">
+                            <p>Projetos feitos</p>
+                            <p>7</p>
+                        </div>
+                        <div class="bioUserClassificacao">
+                            <p>Classificação</p>
+                            <img src="img/heartpre.svg" alt="Logo classificação">
+                        </div>
+                        <div class="bioUserSobre">
+                            <p>Sobre o Usuário</p>
+                            <p class="sobreUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta debitis
+                                deleniti nostrum nesciunt recusandae doloremque quo quos perferendis, minus, corporis
+                                molestiae illo ad aspernatur deserunt, praesentium ex nihil impedit dolor!</p>
+                        </div>
+                        <div class="bioUserCertificados">
+                            <p class="userCertificados">Certificados</p>
+                            <p>Lorem ipsum dolor - 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="bloquearUser">
+                        <p>Bloquear/Denunciar</p>
+                    </div>
+
+                </div>
+            </div>
         </section>
-        <div class="projetosecursos">
-            <button class="seguiruser">Seguir</button>
-            <button>Projetos</button>
-            <button>Cursos</button>
-        </div>
+
+        <section class="mainImagensUser">
+           
+
+            <div class="imgsUser"><img src="img/img_port/1mini.jpg" alt="Imagem 1"></div>
+            <div class="imgsUser"><img src="img/img_port/2mini.jpg" alt="Imagem 2"></div>
+            <div class="imgsUser"><img src="img/img_port/3mini.jpg" alt="Imagem 3"></div>
+            <div class="imgsUser"><img src="img/img_port/4mini.jpg" alt="Imagem 4"></div>
+            <div class="imgsUser"><img src="img/img_port/6mini.jpg" alt="imagem 5"></div>
+            <div class="imgsUser"><img src="img/img_port/5mini.jpg" alt="imagem 6"></div>
+            <div class="imgsUser"><img src="img/img_port/8mini.jpg" alt="imagem 7"></div>
+            <div class="imgsUser"><img src="img/img_port/7mini.jpg" alt="imagem 8"></div>
+        </section>
 
 
-        <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
-            <div vw class="enabled">
-              <div vw-access-button class="active"></div>
-              <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-              </div>
-            </div>
-            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-            <script>
-              new window.VLibras.Widget('https://vlibras.gov.br/app');
-            </script>
-            </div>
+
 
     </main>
 
+    <button class="btn-scroll-top" arial-label="Voltar ao topo">
+        <img src="img/arrow-top.svg" alt="Voltar ao topo" width="50" height="50" />
+    </button>
 
+    <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+    </div>
 
+    <footer>
+        <div class="linksfooter">
+            <div class="infofooter">
+                <a href="ajuda.html" class="AjuF">Ajuda</a>
+                <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
+            </div>
+
+            <div class="infofooter">
+                <a href="sobre.html" class="SobA">Sobre Nós</a>
+                <a href="sobre.html#contatosobre" class="ConT">Contato</a>
+            </div>
+            <div class="infofooter">
+                <a href="avisos.html" class="AviF">Avisos</a>
+
+                <select name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+                    <option value="pt">Português</option>
+                    <option value="eng">English</option>
+                    <option value="es">Español</option>
+                    <option value="jp">日本語</option>
+                </select>
+            </div>
+
+            <div class="infofooter">
+                <img src="img/logoSeekk 3@2x.png" alt="Logo Seek" />
+            </div>
+        </div>
+
+        <div class="direitosautorais">
+            <p class="DirF">
+                Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+            </p>
+        </div>
+    </footer>
 
     <script src="script/lfy.js"></script>
+    <script src="script/cake2.js"></script>
 </body>
 
 </html>
