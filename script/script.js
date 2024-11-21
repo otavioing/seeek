@@ -23,6 +23,8 @@ function login(event) {
     window.location.href = "index.html?login=true";
 }
 
+let loginEmail = document.getElementById("loginEmail");
+let loginPsw = document.getElementById("loginPsw");
 let email = document.getElementById("email");
 let psw = document.getElementById("password");
 let pswRepeat = document.getElementById("pswRepeat");
@@ -30,11 +32,19 @@ let letter = document.getElementById("letter");
 let capital = document.getElementById("capital");
 let number = document.getElementById("number");
 let length = document.getElementById("length");
+let logInBtn = document.getElementById("logInBtn");
 let signInBtn = document.getElementById("signInBtn");
 
 psw.disabled = true;
 pswRepeat.disabled = true;
+logInBtn.disabled = true;
 signInBtn.disabled = true;
+
+function checkLogin(){
+    if(loginEmail.value != "" && loginPsw.value != ""){
+        logInBtn.disabled = false;
+    }
+}
 
 psw.onfocus = function(){
     document.getElementById("aviso").style.display = "block";
