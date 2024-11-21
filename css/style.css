@@ -949,7 +949,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'monospace';
     font-size: 24px;
     color: white;
     border: none;
@@ -1097,6 +1096,59 @@ footer {
 
 
 }
+
+.profile-photo1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-left: 4rem;
+}
+
+
+.photo-placeholder2{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--cinzaBasec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+.men{
+    height: 15rem;
+    width: 45%;
+    padding: 10px;
+    border: 1px solid var(--cinzaBase);
+    border-radius: 5px;  
+    resize: none;
+    background-color: var(--cinzaBase);
+    margin: 1rem;
+    
+}
+
+.input-group2{
+    padding-right: 1rem;
+    margin-bottom: 20px;
+    color: red;
+    font-size: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.input-group2, input{
+  width: 60%;
+  height: 6rem;
+  border-radius: 0.2rem ;
+}
+
+
 
 .input-group {
     padding-right: 1rem;
