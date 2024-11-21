@@ -140,15 +140,15 @@
                 <button>Seguir</button>
             </div>
             <div class="cursosProjetos">
-                <button class="botaoSelecionado">Projetos</button>
-                <button>Cursos</button>
+                <button class="botaoSelecionado" id="projetosUser1">Projetos</button>
+                <button id="cursosUser1">Cursos</button>
             </div>
         </div>
     </section>
 
     <main class="mainUser">
 
-        <section class="informacoesperfil">
+        <section class="informacoesperfil" id="informacoesperfil">
             <div class="informacoesperfiltudo">
                 <div class="imgdousereNome">
                     <img src="img/iconeperfil.svg" alt="logo do usuário">
@@ -160,55 +160,63 @@
                         <p>@usuario</p>
                         <p class="cidadeepais">cidade e país</p>
                         <div class="seguirUser2">
-                            <button class="botaoSelecionadoUser">Seguir</button>
+                            <button class="botaoSelecionadoUser" id="editarUserPerfil">Editar</button>
                         </div>
-                        <button>Editar</button>
+                        <button id="trocarUserPerfil">Trocar de Usuário</button>
                     </div>
 
                     <div class="infoProjetosCursos">
-                        <div class="opccaoSelecionada"><button>Info</button></div>
-                        <div><button>Projetos</button></div>
-                        <div><button>Cursos</button></div>
+                        <div class="opccaoSelecionada" id="InfoUser"><button>Info</button></div>
+                        <div><button id="ProjetosUser">Projetos</button></div>
+                        <div><button id="CursosUser">Cursos</button></div>
                     </div>
 
-                    <div class="redessociais">
-                        <a href="https://x.com/__x"><img src="img/instagram.svg" alt="twitter"> <p class="nomeUseuario">@usuario</p></a>
-                        <a href="https://www.instagram.com/"><img src="img/instagram.svg" alt="instagram"> <p class="nomeUseuario">@usuario</p></a>
-                        <a class="tirarBorderB" href="https://br.linkedin.com/"><img src="img/linkedin.svg" alt="linkedin"><p class="nomeUseuario">@usuario</p></a>
-                    </div>
+                    <div id="desaparecerInfoUser">
+                        <div class="redessociais">
+                            <a href="https://x.com/__x"><img src="img/instagram.svg" alt="twitter">
+                                <p class="nomeUseuario">@usuario</p>
+                            </a>
+                            <a href="https://www.instagram.com/"><img src="img/instagram.svg" alt="instagram">
+                                <p class="nomeUseuario">@usuario</p>
+                            </a>
+                            <a class="tirarBorderB" href="https://br.linkedin.com/"><img src="img/linkedin.svg"
+                                    alt="linkedin">
+                                <p class="nomeUseuario">@usuario</p>
+                            </a>
+                        </div>
 
-                    <div class="bio">
-                        <div class="bioUserProjetos">
-                            <p>Projetos feitos</p>
-                            <p>7</p>
+                        <div class="bio">
+                            <div class="bioUserProjetos">
+                                <p>Projetos feitos</p>
+                                <p>7</p>
+                            </div>
+                            <div class="bioUserClassificacao">
+                                <p>Classificação</p>
+                                <img src="img/heartpre.svg" alt="Logo classificação">
+                            </div>
+                            <div class="bioUserSobre">
+                                <p>Sobre o Usuário</p>
+                                <p class="sobreUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
+                                    debitis
+                                    deleniti nostrum nesciunt recusandae doloremque quo quos perferendis, minus,
+                                    corporis
+                                    molestiae illo ad aspernatur deserunt, praesentium ex nihil impedit dolor!</p>
+                            </div>
+                            <div class="bioUserCertificados">
+                                <p class="userCertificados">Certificados</p>
+                                <p>Lorem ipsum dolor - 2023</p>
+                            </div>
                         </div>
-                        <div class="bioUserClassificacao">
-                            <p>Classificação</p>
-                            <img src="img/heartpre.svg" alt="Logo classificação">
-                        </div>
-                        <div class="bioUserSobre">
-                            <p>Sobre o Usuário</p>
-                            <p class="sobreUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta debitis
-                                deleniti nostrum nesciunt recusandae doloremque quo quos perferendis, minus, corporis
-                                molestiae illo ad aspernatur deserunt, praesentium ex nihil impedit dolor!</p>
-                        </div>
-                        <div class="bioUserCertificados">
-                            <p class="userCertificados">Certificados</p>
-                            <p>Lorem ipsum dolor - 2023</p>
+
+                        <div class="bloquearUser">
+                            <button>Bloquear/Denunciar</button>
                         </div>
                     </div>
-
-                    <div class="bloquearUser">
-                        <p>Bloquear/Denunciar</p>
-                    </div>
-
                 </div>
             </div>
         </section>
 
-        <section class="mainImagensUser">
-           
-
+        <section id="mainImagensUser" class="mainImagensUser">
             <div class="imgsUser"><img src="img/img_port/1mini.jpg" alt="Imagem 1"></div>
             <div class="imgsUser"><img src="img/img_port/2mini.jpg" alt="Imagem 2"></div>
             <div class="imgsUser"><img src="img/img_port/3mini.jpg" alt="Imagem 3"></div>
@@ -219,7 +227,94 @@
             <div class="imgsUser"><img src="img/img_port/7mini.jpg" alt="imagem 8"></div>
         </section>
 
+        <section class="mainCursosUser" id="mainCursosUser">
+            <div class="cursosDoUser">
+                <h2>Cursos de design</h2>
+                <div class="imgDescPreco">
+                    <img src="img/imagemtestecurso.png" alt="Imagem do curso">
+                    <div class="descPreco">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odio vero tempora
+                            doloribus et omnis enim aut natus exercitationem! Facere, sint ipsa. Corporis doloremque
+                            nesciunt asperiores voluptas soluta similique?</p>
+                        <div class="precoCursoUser">
+                            <h3>R$23,00/mês</h3>
+                            <h4>48horas</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="pessoasLike">
+                    <div class="likePessoas">
+                        <div class="likeepessoas1">
+                            <div class="likeUser"><img src="img/like.svg" alt="likes do curso">
+                                <p>89%</p>
+                            </div>
+                            <div class="pessoasUser"><img src="img/circle.svg" alt="pessoas do curso">
+                                <p>1000</p>
+                            </div>
+                        </div>
+                        <img src="img/heart.svg" alt="">
+                    </div>
+                </div>
+            </div>
 
+            <div class="cursosDoUser">
+                <h2>Cursos de design</h2>
+                <div class="imgDescPreco">
+                    <img src="img/imagemtestecurso.png" alt="Imagem do curso">
+                    <div class="descPreco">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odio vero tempora
+                            doloribus et omnis enim aut natus exercitationem! Facere, sint ipsa. Corporis doloremque
+                            nesciunt asperiores voluptas soluta similique?</p>
+                        <div class="precoCursoUser">
+                            <h3>R$23,00/mês</h3>
+                            <h4>48horas</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="pessoasLike">
+                    <div class="likePessoas">
+                        <div class="likeepessoas1">
+                            <div class="likeUser"><img src="img/like.svg" alt="likes do curso">
+                                <p>89%</p>
+                            </div>
+                            <div class="pessoasUser"><img src="img/circle.svg" alt="pessoas do curso">
+                                <p>1000</p>
+                            </div>
+                        </div>
+                        <img src="img/heart.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cursosDoUser">
+                <h2>Cursos de design</h2>
+                <div class="imgDescPreco">
+                    <img src="img/imagemtestecurso.png" alt="Imagem do curso">
+                    <div class="descPreco">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odio vero tempora
+                            doloribus et omnis enim aut natus exercitationem! Facere, sint ipsa. Corporis doloremque
+                            nesciunt asperiores voluptas soluta similique?</p>
+                        <div class="precoCursoUser">
+                            <h3>R$23,00/mês</h3>
+                            <h4>48horas</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="pessoasLike">
+                    <div class="likePessoas">
+                        <div class="likeepessoas1">
+                            <div class="likeUser"><img src="img/like.svg" alt="likes do curso">
+                                <p>89%</p>
+                            </div>
+                            <div class="pessoasUser"><img src="img/circle.svg" alt="pessoas do curso">
+                                <p>1000</p>
+                            </div>
+                        </div>
+                        <img src="img/heart.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
     </main>

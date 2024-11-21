@@ -115,7 +115,7 @@ button {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.informacoesperfiltudo{
+.informacoesperfiltudo {
     transform: translateY(-5rem);
     display: flex;
     flex-direction: column;
@@ -131,7 +131,7 @@ button {
     gap: 1rem;
 }
 
-.imgdousereNome img{
+.imgdousereNome img {
     width: 8rem;
     height: 8rem;
 }
@@ -150,11 +150,11 @@ button {
     width: 2rem;
 }
 
-.redessociais a .nomeUseuario{
+.redessociais a .nomeUseuario {
     display: none;
 }
 
-.dadosdouser{
+.dadosdouser {
     width: 100%;
 }
 
@@ -166,7 +166,7 @@ button {
     margin-top: 0.5rem;
 }
 
-.cidadeepais{
+.cidadeepais {
     margin-bottom: 0.5rem;
     font-size: small;
     color: var(--cinzaBasee);
@@ -183,14 +183,16 @@ button {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.bio{
+.bio {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.bioUserProjetos, .bioUserClassificacao, .bioUserSobre{
+.bioUserProjetos,
+.bioUserClassificacao,
+.bioUserSobre {
     width: 100%;
     display: flex;
     align-items: center;
@@ -200,23 +202,23 @@ button {
     margin-bottom: 0.8rem;
 }
 
-.bioUserClassificacao img{
+.bioUserClassificacao img {
     height: 1.5rem;
     width: 1.5rem;
 }
 
-.bioUserSobre{
+.bioUserSobre {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.3rem;
     padding: 0.1rem 0.3rem 0.5rem 0.3rem;
 }
 
-.sobreUser{
+.sobreUser {
     color: var(--cinzaBaseee);
 }
 
-.bioUserCertificados{
+.bioUserCertificados {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -225,21 +227,29 @@ button {
     margin-bottom: 2rem;
 }
 
-.userCertificados{
+.userCertificados {
     color: var(--azulBase);
 }
 
-.bloquearUser{
+.bloquearUser {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.bloquearUser button {
+    width: 100%;
+    height: 2rem;
+    background: none;
     color: var(--vermelhom);
+    border: none;
+    cursor: pointer;
 }
 
 /*--------- Imagens ---------*/
 
-.mainImagensUser{
+.mainImagensUser {
     display: block;
     width: 65%;
     column-count: 2;
@@ -247,12 +257,12 @@ button {
     margin: 4rem 0 1rem auto;
 }
 
-.imgsUser{
+.imgsUser {
     width: 100%;
     margin-bottom: 1rem;
 }
 
-.imgsUser img{
+.imgsUser img {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
@@ -261,7 +271,7 @@ button {
 
 /*-------------------- Seguir --------------------*/
 
-.seguirCursosProjetos{
+.seguirCursosProjetos {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -274,12 +284,14 @@ button {
     z-index: 1;
 }
 
-.cursosProjetos{
+.cursosProjetos {
     display: flex;
     gap: 0.5rem;
 }
 
-.seguirUser button, .cursosProjetos button, .seguirUser2 button{
+.seguirUser button,
+.cursosProjetos button,
+.seguirUser2 button {
     width: 5rem;
     height: 2rem;
     background-color: var(--cinzaBaseee);
@@ -290,33 +302,117 @@ button {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.cursosProjetos .botaoSelecionado, .seguirUser2 .botaoSelecionadoUser{
+.cursosProjetos .botaoSelecionado,
+.seguirUser2 .botaoSelecionadoUser {
     background-color: var(--azulBase);
 }
 
-.seguirUser2 .botaoSelecionadoUser{
+.seguirUser2 .botaoSelecionadoUser {
     margin-bottom: 0.5rem;
     width: 50%;
 }
 
-.seguirUser2{
+.seguirUser2 {
     width: 100%;
-    display: none;
+    display: flex;
     justify-content: center;
+}
+
+/*-------------------- Main Cursos --------------------*/
+
+.mainCursosUser {
+    display: none;
+    width: 70%;
+}
+
+.cursosDoUser {
+    display: block;
+    background-color: var(--cinzaBase);
+    width: 80%;
+    margin: 4rem 0 1rem 5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cursosDoUser h2 {
+    color: var(--roxobase);
+    margin-bottom: 1rem;
+    font-size: clamp(1.7rem, 2.5vh, 3rem);
+}
+
+.imgDescPreco {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.imgDescPreco img {
+    width: 50%;
+    border-radius: 1rem;
+    object-fit: cover;
+    box-shadow: 0.2px 0.2px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.descPreco {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descPreco p{
+    margin-bottom: 1rem;
+}
+
+.precoCursoUser {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.precoCursoUser h3{
+    color: var(--roxobase);
+    font-size: clamp(1rem, 1.8vh, 3rem);
+}
+
+.pessoasLike{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.likePessoas{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.likePessoas, .likeUser, .pessoasUser, .likeepessoas1{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.likePessoas img, .likeUser img, .pessoasUser img{
+    width: 1.3rem;
+    height: 1.3rem;
 }
 
 /*-------------------- Footer --------------------*/
 
-footer{
+footer {
     margin: auto 0;
 }
 
 /*----------- Aparecem só na responsividade de celular -----------*/
 
-.infoProjetosCursos{
+.infoProjetosCursos {
     width: 100%;
     height: 3rem;
-    display: flex;
+    display: none;
     justify-content: start;
     border-bottom: 1px solid var(--cinzaBaseee);
     margin: 1.5rem 0;
@@ -324,7 +420,7 @@ footer{
     padding: 0 1rem;
 }
 
-.infoProjetosCursos button{
+.infoProjetosCursos button {
     display: flex;
     justify-content: center;
     background: none;
@@ -333,14 +429,14 @@ footer{
     font-size: 1.2rem;
 }
 
-.infoProjetosCursos div{
+.infoProjetosCursos div {
     display: flex;
     width: 20%;
     justify-content: center;
     height: 100%;
 }
 
-.infoProjetosCursos .opccaoSelecionada{
+.infoProjetosCursos .opccaoSelecionada {
     border-bottom: 3px solid var(--azulBase);
 }
 
@@ -349,64 +445,73 @@ footer{
 /*-------------------------------- @media --------------------------------*/
 /*------------------------------------------------------------------------*/
 
-@media screen and (min-width: 1900px){
-    
-        .informacoesperfil{
-            height: 56rem;
-        }
+@media screen and (min-width: 1900px) {
+
+    .informacoesperfil {
+        height: 56rem;
+    }
 
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
 
-    .seguirCursosProjetos{
+    .seguirCursosProjetos {
         width: 40%;
     }
 
-    .seguirUser button{
+    .seguirUser button {
         display: none;
     }
 
-    .cursosProjetos{
+    .cursosProjetos {
         width: 100%;
     }
 
-    .cursosProjetos button{
+    .cursosProjetos button {
         width: 50%;
     }
 
-    .seguirUser2{
-        display: flex
-    }
+
 
 }
 
-@media screen and (max-width: 660px){
+@media screen and (max-width: 660px) {
 
-    .mainUser{
+    .mainUser {
         padding: 0;
-    } 
+    }
 
-    .informacoesperfil{
+    .mainImagensUser {
+        display: none;
+        width: 85%;
+        column-count: 1;
+        margin: 4rem auto 1rem auto;
+    }
+
+    .informacoesperfil {
         transform: translateY(-1rem);
         border-radius: 0.7rem;
         padding: 0.5rem;
     }
 
-    .mainUser{
+    .mainUser {
         flex-direction: column;
     }
 
-    .seguirCursosProjetos{
+    .seguirCursosProjetos {
         display: none;
     }
 
-    .informacoesperfil{
+    .informacoesperfil {
         width: 100%;
         height: auto;
     }
 
-    .redessociais{
+    .infoProjetosCursos {
+        display: flex;
+    }
+
+    .redessociais {
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -416,7 +521,7 @@ footer{
         gap: 0;
     }
 
-    .redessociais a{
+    .redessociais a {
         display: flex;
         align-items: center;
         padding: 1rem;
@@ -425,13 +530,70 @@ footer{
         gap: 5%;
     }
 
-    .redessociais .tirarBorderB{
+    .redessociais .tirarBorderB {
         border-bottom: 1px solid;
     }
 
-    .redessociais a .nomeUseuario{
+    .redessociais a .nomeUseuario {
         display: flex;
         color: var(--preto);
+    }
+
+    .bioUserProjetos,
+    .bioUserClassificacao,
+    .bioUserSobre {
+        padding: 0 0.5rem 0.5rem 0.5rem;
+        margin-bottom: 1.5rem;
+        justify-content: flex-start;
+        gap: 10%;
+    }
+
+    .bioUserSobre {
+        gap: 0.3rem;
+    }
+
+    .bioUserProjetos p,
+    .bioUserClassificacao p,
+    .bioUserSobre p {
+        font-size: clamp(1rem, 1.8vh, 3rem);
+    }
+
+    .bloquearUser button {
+        font-size: clamp(1rem, 1.8vh, 3rem);
+    }
+
+    /*--- cursos ---*/
+
+    .mainCursosUser{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cursosDoUser {
+        width: 100%;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .imgDescPreco{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .imgDescPreco img{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+
+    .imgdousereNome img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .informacoesperfiltudo{
+        transform: translateY(-3rem);
     }
 
 }
