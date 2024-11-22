@@ -120,9 +120,8 @@
 }
 
 .caminhonavegaçãocursos {
-    /* margin: 2rem; */
-    padding: 1.5rem 2rem;
-    display: flex;
+    margin: 2rem 2rem 0.5rem 2rem;
+    display: flex
 }
 
 /* Main */
@@ -136,7 +135,7 @@
 
     background-color: white;
     border: 1px solid var(--cinzaBasee);
-    margin-top: 5rem;
+    margin-top: 16px;
     height: 50rem;
     width: 20%;
     border-radius: 10px;
@@ -288,8 +287,6 @@
 
 .maincursos {
     display: flex;
-    transition: all 0.5s;
-
 }
 
 
@@ -336,6 +333,10 @@
     justify-content: space-between;
     height: 30%;
     flex-wrap: wrap;
+}
+.caminhonavegaçãocursos h1{
+    margin-left: 16%;
+    color: var(--azulBase);
 }
 
 .informacoescursos .nomedocursoedoautor {
