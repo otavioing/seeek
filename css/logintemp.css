@@ -455,12 +455,19 @@ main .quemsomoslogin a{
     .form-container,
     .sign-up-content{
         position: static;
-        width: 30rem;
+        width: 85%;
         height: 100svh;
         box-shadow: none;
         align-items: center;
     }
 
+    .logoMobile{
+        align-self: start;
+    }
+    .title{
+        font-size: 156%;
+        font-weight: 900;
+    }
     .sign-up-content{
         justify-content: flex-start;
     }
@@ -473,24 +480,25 @@ main .quemsomoslogin a{
 
 @media screen and (max-width: 900px) {
 
-    *{
-        font-size: 1rem;
+  *{
+        font-size: 1.14rem;
     }
-
     .cardlogin,
     .form-container,
     .sign-up-content{
         width: 85%;
     }
-
+   
 }
 
 @media screen and (max-width: 550px) {
-
+    *{
+        font-size: 1rem;
+    }
     .cardlogin,
     .form-container,
     .sign-up-content{
-        width: 95%;
+        width: 96%;
     }
 
     main .quemsomoslogin {
