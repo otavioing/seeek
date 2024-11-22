@@ -1271,16 +1271,15 @@ function aplicarIdioma() {
 }
 //essa aqui não deixa perder as configurações de acordo com a escolha do usuario (ta travando)
 
-// window.onload = function() {
-//   aplicarModo();
-//   aplicarIdioma();
-// };
+window.addEventListener('load', function() 
+{ aplicarModo()
+  aplicarIdioma() })
 
 // essa parte muda o dioma  (não ta travando)
 
 function TrocaLinguagem(lang) {
-  localStorage.setItem('selectedLanguage', lang);
-  aplicarIdioma(); 
+  localStorage.setItem('selectedLanguage', lang)
+  aplicarIdioma()
 }
 
 
