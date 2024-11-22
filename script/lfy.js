@@ -58,6 +58,7 @@ function paginacarregada() {
         document.getElementById("desaparecerInfoUser").style.display = "none";
         document.getElementById("mainImagensUser").style.display = "block";
         document.getElementById("mainImagensUser").style.marginTop = "1.5rem";
+        document.getElementById("mainCursosUser").style.display = "none";
         document.getElementById("ProjetosUser").className = "opccaoSelecionada";
         document.getElementById("InfoUser").className = "";
         document.getElementById("informacoesperfil").style.height = "18rem";
@@ -70,6 +71,7 @@ function paginacarregada() {
     document.getElementById("InfoUser").addEventListener("click", function () {
         document.getElementById("desaparecerInfoUser").style.display = "block";
         document.getElementById("mainImagensUser").style.display = "none";
+        document.getElementById("mainCursosUser").style.display = "none";
         document.getElementById("ProjetosUser").className = "";
         document.getElementById("InfoUser").className = "opccaoSelecionada";
         document.getElementById("informacoesperfil").style.height = "auto";
