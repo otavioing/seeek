@@ -46,6 +46,7 @@ function aplicarIdioma() {
       PerfilConfiguracoes:"Settings",
       PerfilTema:"Theme",
       PerfilSair:" Log out",
+      seguidoresIndex: "Followers",
       ModalContratar:"Hire",
       ModalFavoritar: "Favorite",
       ModalFerramentas:"Tools",
@@ -72,6 +73,13 @@ function aplicarIdioma() {
       SobreSubPrincipalTexto: "We also offer access to an education platform, allowing artists and other professionals to improve and stand out in the job market.",
       EquipeSob:"Team",
       ContatoEquipe:"If you need any further information about us or the website, please contact us through our social media channels.",
+      SobreAllan: "Hello! My name is Allan and I am 18 years old. I am one of the collaborators responsible for developing JavaScript functionalities on the Seek website. I am committed to constantly improving myself and contributing to the growth and success of Seek. I am always looking for innovative ways to improve user experience and accessibility.",
+      SobreCaua: "Hello, nice to meet you! My name is Cauã Eduardo. I am the Scrum Master of the Seek project. Along with the other team members, I was assigned to lead and coordinate the project, ensuring that everything runs as smoothly as possible. My main responsibility is to ensure the smooth progress of the project, but I am also always willing to help in all areas as needed.",
+      SobreMiguel: "I am part of the Seek design team, my name is Miguel Galhardo Lima, and by exploring more modern concepts, we developed the Seek interface with the aim of reaching not only our target audience but also being accessible to everyone. Unlocking elements and exploring contrasts and standardizations for better user understanding.",
+      SobreBruno: "Nice to meet you, my name is Bruno. Among the collaborators for the creation of the Seek website, I am responsible for JavaScript programming. My goal is to maintain the site's functionalities and make it as dynamic as possible.",
+      SobreOtavio: "I am one of the main creators of Seek. I was born in 2006, in a small town in the interior of São Paulo. As the front-end responsible, I actively participate in almost all areas of the site's creation. My main function is to ensure that the site is functional for users, using technologies such as HTML5 and CSS.",
+      SobreJoao: "My name is João Felipe and I was born in 2006. I am one of the collaborators in the creation of the Seek website, with a main focus on CSS implementation. I ensure that our aesthetics are visually pleasing and accessible on various platforms.",
+
 
       OpçãoSim:"Yes",
       OpçãoNão:"No",
@@ -168,6 +176,7 @@ function aplicarIdioma() {
       PortifolioAutor:"Autor",
       ModalPortifolio:" Prototipo del portafolio",
       ModalAutor:"Nombre del creador • 0 seguidores",
+      seguidoresIndex: "Seguidores",
       AjudaFooter: "Ajuda",
       TermosFooter: "Termo",
       AtualizacaoFooter: "Actualización",
@@ -184,6 +193,12 @@ function aplicarIdioma() {
       SobreSubPrincipalTexto: "También ofrecemos acceso a una plataforma de educación, permitiendo que artistas y otros profesionales puedan mejorar y destacarse en el mercado laboral.",
       EquipeSob: "Equipo",
       ContatoEquipe: "Si necesita más información sobre nosotros o sobre el sitio, contáctenos a través de nuestras redes sociales.",
+      SobreAllan: "¡Hola! Mi nombre es Allan y tengo 18 años. Soy uno de los colaboradores responsables del desarrollo de funcionalidades en JavaScript en el sitio Seek. Estoy comprometido a mejorar constantemente y contribuir al crecimiento y éxito de Seek. Siempre estoy buscando formas innovadoras de mejorar la experiencia del usuario y la accesibilidad.", 
+      SobreCaua: "¡Hola, mucho gusto! Mi nombre es Cauã Eduardo. Soy el Scrum Master del proyecto Seek. Junto con los otros miembros del equipo, fui asignado para liderar y coordinar el proyecto, asegurando que todo funcione de la mejor manera posible. Mi principal responsabilidad es asegurar el buen progreso del proyecto, pero también estoy siempre dispuesto a ayudar en todas las áreas según sea necesario.", 
+      SobreMiguel: "Soy parte del equipo de diseño de Seek, mi nombre es Miguel Galhardo Lima, y explorando conceptos más modernos, desarrollamos la interfaz de Seek con el objetivo de alcanzar no solo a nuestro público objetivo, sino también ser accesible para todos. Desbloqueando elementos y explorando contrastes y estandarizaciones para una mejor comprensión del usuario.", 
+      SobreBruno: "Mucho gusto, mi nombre es Bruno. Entre los colaboradores para la creación del sitio Seek, soy el responsable de la programación en JavaScript. Mi objetivo es mantener las funcionalidades del sitio y hacerlo lo más dinámico posible.", 
+      SobreOtavio: "Soy uno de los principales creadores de Seek. Nací en 2006, en una pequeña ciudad del interior de São Paulo. Como responsable del front-end, participo activamente en casi todas las áreas de la creación del sitio. Mi función principal es asegurar que el sitio sea funcional para los usuarios, utilizando tecnologías como HTML5 y CSS.", 
+      SobreJoao: "Mi nombre es João Felipe y nací en 2006. Soy uno de los colaboradores en la creación del sitio Seek, con un enfoque principal en la implementación de CSS. Aseguro que nuestra estética sea visualmente agradable y accesible en diversas plataformas.",
 
       OpçãoSim: "Sí",
       OpçãoNão: "No",
@@ -281,6 +296,7 @@ function aplicarIdioma() {
       PortifolioAutor: "Autore",
       ModalPortifolio: "Prototipo di portfolio",
       ModalAutor: "Nome del creatore • 0 follower",
+      seguidoresIndex:"Seguaci",
       AjudaFooter: "Aiuto",
       TermosFooter: "Termini",
       AtualizacaoFooter: "Aggiornamento",
@@ -297,6 +313,13 @@ function aplicarIdioma() {
       SobreSubPrincipalTexto: "Offriamo anche accesso a una piattaforma educativa, consentendo ad artisti e altri professionisti di migliorarsi e distinguersi nel mercato del lavoro.",
       EquipeSob: "Squadra",
       ContatoEquipe: "Se hai bisogno di ulteriori informazioni su di noi o sul sito, contattaci attraverso i nostri social media.",
+      SobreAllan: "Ciao! Mi chiamo Allan e ho 18 anni. Sono uno dei collaboratori responsabili dello sviluppo delle funzionalità JavaScript sul sito Seek. Sono impegnato a migliorarmi costantemente e a contribuire alla crescita e al successo di Seek. Cerco sempre modi innovativi per migliorare l'esperienza utente e l'accessibilità.", 
+      SobreCaua: "Ciao, piacere! Mi chiamo Cauã Eduardo. Sono il Scrum Master del progetto Seek. Insieme agli altri membri del team, sono stato incaricato di guidare e coordinare il progetto, assicurando che tutto proceda nel miglior modo possibile. La mia principale responsabilità è garantire il buon andamento del progetto, ma sono anche sempre disposto ad aiutare in tutte le aree secondo necessità." ,
+      SobreMiguel: "Faccio parte del team di design di Seek, mi chiamo Miguel Galhardo Lima, e esplorando concetti più moderni abbiamo sviluppato l'interfaccia di Seek con l'obiettivo di raggiungere non solo il nostro pubblico di riferimento, ma anche di essere accessibile a tutti. Sbloccare elementi ed esplorare contrasti e standardizzazioni per una migliore comprensione dell'utente.",
+      SobreBruno: "Piacere, mi chiamo Bruno. Tra i collaboratori per la creazione del sito Seek, sono responsabile della programmazione in JavaScript. Il mio obiettivo è mantenere le funzionalità del sito e renderlo il più dinamico possibile.", 
+      SobreOtavio: "Sono uno dei principali creatori di Seek. Sono nato nel 2006, in una piccola città dell'interno di São Paulo. Come responsabile del front-end, partecipo attivamente a quasi tutte le aree della creazione del sito. La mia funzione principale è garantire che il sito sia funzionale per gli utenti, utilizzando tecnologie come HTML5 e CSS.", 
+      SobreJoao:"Mi chiamo João Felipe e sono nato nel 2006. Sono uno dei collaboratori nella creazione del sito Seek, con un focus principale sull'implementazione del CSS. Garantisco che la nostra estetica sia visivamente piacevole e accessibile su varie piattaforme.",
+
 
       OpçãoSim: "Sì",
       OpçãoNão: "No",
@@ -392,6 +415,7 @@ function aplicarIdioma() {
       PortifolioAutor: "Auteur",
       ModalPortifolio: "Prototype de portfolio",
       ModalAutor: "Nom du créateur • 0 abonnés",
+      seguidoresIndex:"Abonnés",
       AjudaFooter: "Aide",
       TermosFooter: "Termes",
       AtualizacaoFooter: "Mise à jour",
@@ -408,6 +432,12 @@ function aplicarIdioma() {
       SobreSubPrincipalTexto: "Nous offrons également l'accès à une plateforme éducative, permettant aux artistes et autres professionnels de s'améliorer et de se démarquer sur le marché du travail.",
       EquipeSob: "Équipe",
       ContatoEquipe: "Si vous avez besoin de plus d'informations sur nous ou sur le site, contactez-nous via nos réseaux sociaux.",
+      SobreAllan:"Bonjour! Je m'appelle Allan et j'ai 18 ans. Je suis l'un des collaborateurs responsables du développement des fonctionnalités JavaScript sur le site Seek. Je m'engage à m'améliorer constamment et à contribuer à la croissance et au succès de Seek. Je cherche toujours des moyens innovants d'améliorer l'expérience utilisateur et l'accessibilité.",
+      SobreCaua:"Bonjour, enchanté! Je m'appelle Cauã Eduardo. Je suis le Scrum Master du projet Seek. Avec les autres membres de l'équipe, j'ai été chargé de diriger et de coordonner le projet, en veillant à ce que tout se passe le mieux possible. Ma principale responsabilité est d'assurer le bon déroulement du projet, mais je suis également toujours prêt à aider dans tous les domaines selon les besoins.",
+      SobreMiguel:"Je fais partie de l'équipe de design de Seek, je m'appelle Miguel Galhardo Lima, et en explorant des concepts plus modernes, nous avons développé l'interface de Seek dans le but d'atteindre non seulement notre public cible, mais aussi d'être accessible à tous. Déverrouiller des éléments et explorer des contrastes et des standardisations pour une meilleure compréhension de l'utilisateur.",
+      SobreBruno:"Enchanté, je m'appelle Bruno. Parmi les collaborateurs pour la création du site Seek, je suis responsable de la programmation en JavaScript. Mon objectif est de maintenir les fonctionnalités du site et de le rendre aussi dynamique que possible.",
+      SobreJoao:"Je m'appelle João Felipe et je suis né en 2006. Je suis l'un des collaborateurs de la création du site Seek, avec un focus principal sur la mise en œuvre du CSS. Je veille à ce que notre esthétique soit visuellement agréable et accessible sur diverses plateformes.",
+      SobreOtavio:"Je suis l'un des principaux créateurs de Seek. Je suis né en 2006, dans une petite ville de l'intérieur de São Paulo. En tant que responsable du front-end, je participe activement à presque tous les domaines de la création du site. Ma fonction principale est de garantir que le site soit fonctionnel pour les utilisateurs, en utilisant des technologies telles que HTML5 et CSS.",
 
       OpçãoSim: "Oui",
       OpçãoNão: "Non",
@@ -502,6 +532,8 @@ function aplicarIdioma() {
       PortifolioTeste:"Teste portfolio",
       portSalvar:"salvar",
       PortifolioAutor:"Author",
+      seguidoresIndex:"Seguidores", 
+      SalvarimgIndex:"Salvar",
       ModalPortifolio:"Protótipo de portifólio",
       ModalAutor:"Nome do criador • 0 seguidores",
       AjudaFooter: "Ajuda",
@@ -520,6 +552,12 @@ function aplicarIdioma() {
       SobreSubPrincipalTexto: "Também oferecemos acesso a uma plataforma de educação, permitindo que artistas e outros profissionais possam se aprimorar e se destacar no mercado de trabalho.",
       EquipeSob:"Equipe",
       ContatoEquipe:"Caso precise de mais alguma informação sobre nós ou sobre o site, entre em contato conosco através das nossas redes sociais.",
+      SobreAllan:"Olá! Meu nome é Allan e tenho 18 anos. Sou um dos colaboradores responsáveis pelo desenvolvimento das funcionalidades em JavaScript no site Seek, estou comprometido em me aprimorar constantemente e contribuir para o crescimento e sucesso da Seek. Estou sempre buscando maneiras inovadoras de melhorar a experiência dos usuários e a acessibilidade.",
+      SobreCaua:" Olá, prazer! Meu nome é Cauã Eduardo. Sou o Scrum Master do projeto Seek. Junto aos outros membros da equipe, fui designado para liderar e coordenar o projeto, garantindo que tudo ocorra da melhor forma possível. Minha principal responsabilidade é assegurar o bom andamento do projeto, mas também estou sempre disposto a ajudar em todas as áreas, conforme necessário.",
+      SobreMiguel:"Faço parte da equipe de design do Seek, me chamo Miguel Galhardo Lima, e explorando conceitos mais modernos desenvolvemos a interface do Seek pensando em atingir não só nosso público alvo, mas ser acessível a todos. Destrancando elementos e explorando contrastes e padronizações para melhor entendimento do usuário",
+      SobreBruno:"Prazer, meu nome é Bruno, dentre os calaboradores para criação do site Seek eu sou o responsavel pela programação em JavaScript, meu objetivo é manter as funcionalidades do Site e deixar o mais dinâmico possivel",
+      SobreOtavio:"Eu sou um dos principais criadores do Seek. Nasci em 2006, em uma pequena cidade no interior de São Paulo. Como responsável pelo front-end, participo ativamente em quase todas as áreas da criação do site. Minha função principal é garantir que o site seja funcional para os usuários, utilizando tecnologias como HTML5 e CSS.",
+      SobreJoao:"Meu nome é João Felipe e nasci em 2006. Sou um dos colaboradores da criação do site Seek, com foco principal na implementação de CSS. Eu garanto que nossa estética seja visualmente agradável e acessível em diversas plataformas.",
 
       OpçãoSim:"Sim",
       OpçãoNão:"Não",
@@ -773,6 +811,16 @@ function aplicarIdioma() {
     AutorModal[i].innerHTML = idioma[selectedLanguage].ModalAutor;
   }
 
+  var Seguidores = document.getElementsByClassName("SegG");
+  for (var i = 0; i < Seguidores.length; i++) {
+    Seguidores[i].innerHTML = idioma[selectedLanguage].seguidoresIndex;
+  }
+
+
+  var SalvarModal  = document.getElementsByClassName("SalM");
+  for (var i = 0; i < SalvarModal.length; i++) {
+    SalvarModal[i].innerHTML = idioma[selectedLanguage].portSalvar;
+  }
   //Conteudo das páginas
   // Sobre Nós
 
@@ -796,7 +844,41 @@ function aplicarIdioma() {
   for (var i = 0; i < ContatoSobre.length; i++) {
     ContatoSobre[i].innerHTML = idioma[selectedLanguage].ContatoEquipe;
   }
+// 
+  
+  var SobredoAllan  = document.getElementsByClassName("SobAllan");
+  for (var i = 0; i < SobredoAllan.length; i++) {
+    SobredoAllan[i].innerHTML = idioma[selectedLanguage].SobreAllan;
+  }
 
+  var SobredoBruno  = document.getElementsByClassName("SobBruno");
+  for (var i = 0; i < SobredoBruno.length; i++) {
+    SobredoBruno[i].innerHTML = idioma[selectedLanguage].SobreBruno;
+  }
+
+  var SobredoCaua  = document.getElementsByClassName("SobCaua");
+  for (var i = 0; i < SobredoCaua.length; i++) {
+    SobredoCaua[i].innerHTML = idioma[selectedLanguage].SobreCaua;
+  }
+
+  var SobredoJoao  = document.getElementsByClassName("SobJoao");
+  for (var i = 0; i < SobredoJoao.length; i++) {
+    SobredoJoao[i].innerHTML = idioma[selectedLanguage].SobreJoao;
+  }
+
+  var SobredoMiguel  = document.getElementsByClassName("SobMiguel");
+  for (var i = 0; i < SobredoMiguel.length; i++) {
+    SobredoMiguel[i].innerHTML = idioma[selectedLanguage].SobreMiguel;
+  }
+
+  var SobredoOtavio  = document.getElementsByClassName("SobOtav");
+  for (var i = 0; i < SobredoOtavio.length; i++) {
+    SobredoOtavio[i].innerHTML = idioma[selectedLanguage].SobreOtavio;
+  }
+
+
+  //Conteudo das páginas
+  // Configurações
   var SimOP  = document.getElementsByClassName("OS");
   for (var i = 0; i < SimOP.length; i++) {
     SimOP[i].innerHTML = idioma[selectedLanguage].OpçãoSim;
