@@ -152,6 +152,24 @@ a {
     color: var(--ModoEscuroVermelho);
 }
 
+.modoEscuro .filtroExplorar .buttonFiltro svg{
+    fill-opacity: 0;
+    stroke: var(--ModoEscuroFontV);
+}
+
+.modoEscuro .userecomentarioLeft, .userecomentarioRight p, .modoEscuro .nomeusuariocomentario {
+  color: black;
+}
+
+.modoEscuro .comentariomodal {
+    background-color: var(--ModoEscuroMesc);
+}
+
+.modoEscuro .modal-content{
+    background-color: var(--ModoEscuroBase);
+}
+
+
 /*-------------------------------- Header inicio --------------------------------*/
 
 header {
@@ -355,8 +373,13 @@ header .botaoMenu span {
     cursor: pointer;
 }
 
-.filtroExplorar .buttonFiltro img {
+.filtroExplorar .buttonFiltro svg {
     height: 2.5rem;
+    stroke-width:3.57528;
+    stroke-linecap:round;
+    stroke: var(--azulBase);
+    fill-opacity: 0;
+
 }
 
 
@@ -1799,7 +1822,7 @@ footer {
         font-size: 0.8rem;
     }
 
-    .filtroExplorar .buttonFiltro img {
+    .filtroExplorar .buttonFiltro svg {
         height: 2rem;
     }
 

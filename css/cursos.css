@@ -107,7 +107,25 @@
 }
 
 
+.modoEscuro .caminhonavegaçãocursos h1{
+    color: var(--ModoEscuroFontC);
+}
 
+.modoEscuro .filtroflutuante svg , .modoEscuro .botaofiltrarcursosmedia svg, .modoEscuro .botaofiltrarcursosmedia1200px svg {
+    fill-opacity: 0;
+    stroke: var(--ModoEscuroFontC);
+    
+}
+
+.modoEscuro .botaofiltrarcursosmedia1200px , .modoEscuro .botaofiltrarcursosmedia, .botaofiltrarcursosmedia1200px {
+    background-color: var(--ModoEscuroMesc);
+    border: 1px solid var(--ModoEscuroMesc2);
+}
+
+.modoEscuro .botaofiltrarcursosmedia1200px button, .modoEscuro .botaofiltrarcursosmedia button, .botaofiltrarcursosmedia1200px button {
+    color: var(--ModoEscuroFontC);
+}
+/*-------------------------------- Modo Escuro Fim --------------------------------*/
 
 
 .migalhadepaocursos a {
@@ -201,8 +219,12 @@
     border-bottom: 1.5px solid var(--roxobase);
 }
 
-.filtroflutuante img {
-    width: 50px;
+.filtroflutuante svg  {
+    height: 50px;
+    fill-opacity: 0;
+    stroke: var(--roxobase);
+    stroke-width:3.57528;
+    stroke-linecap:round;
 }
 
 .titulofiltroflutuante {
@@ -290,8 +312,12 @@
 }
 
 
-.botaofiltrarcursosmedia img, .botaofiltrarcursosmedia1200px img {
+.botaofiltrarcursosmedia svg, .botaofiltrarcursosmedia1200px svg {
     width: 40px;
+    fill-opacity: 0;
+    stroke: var(--roxobase);
+    stroke-width:3.57528;
+    stroke-linecap:round;
 }
 
 .alinharadiv {
@@ -336,7 +362,7 @@
 }
 .caminhonavegaçãocursos h1{
     margin-left: 16%;
-    color: var(--azulBase);
+    color: var(--roxobase);
 }
 
 .informacoescursos .nomedocursoedoautor {
@@ -589,7 +615,7 @@
     background-color: transparent;
     cursor: pointer;
     font-size: 1.5rem;
-    color: var(--azulBase);
+    color: var(--roxobase);
     display: none;
     justify-content: center;
     align-items: center;

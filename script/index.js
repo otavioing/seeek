@@ -4,8 +4,8 @@ var modalImage = document.getElementById("modalImage");
 var span = document.getElementsByClassName("close")[0];
 var body = document.body;
 
-window.onload = function () {
-    const queryString = window.location.search;
+window.addEventListener('load', function() 
+{const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const isLogin = urlParams.get('login');
 
@@ -14,7 +14,7 @@ window.onload = function () {
     if (isLogin) {
         document.getElementById('user-box').style.display = 'block';
     }
-}()
+})
 
 for (let i = 0; i < divPort.length; i++) {
     divPort[i].addEventListener("click", function () {
@@ -65,6 +65,5 @@ function onRegisterEnterprise() {
     // codigo para registrar usuario empresarial
     onCloseDialog();
 }
-
 
 
