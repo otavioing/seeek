@@ -137,7 +137,7 @@
 
 .filtroflutuante {
     background-color: white;
-    border: 1px solid var(--cinzaBasee);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     margin-top: 16px;
     height: 50rem;
     width: 20%;
@@ -284,10 +284,10 @@
 
 .vagas {
     height: 20rem;
-    /* se colocar em 23rem não buga em 1500px*/
     padding: 1rem;
     background-color: var(--cinzaBasec);
     border-radius: 0.6rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .vagas img {
@@ -621,6 +621,7 @@
         top: -200%;
         /* top: 0%; */
         font-size: 1.5rem;
+        transition: top 0.5s;
     }
 
     .botaofiltrarcursosmedia {

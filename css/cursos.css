@@ -152,7 +152,7 @@
 .filtroflutuante {
 
     background-color: white;
-    border: 1px solid var(--cinzaBasee);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     margin-top: 16px;
     height: 50rem;
     width: 20%;
@@ -342,6 +342,7 @@
     padding: 1rem;
     background-color: var(--cinzaBasec);
     border-radius: 0.6rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .cursos img {
@@ -746,6 +747,7 @@
         top: -200%;
         /* top: 0%; */
         font-size: 1.5rem;
+        transition: top 0.5s;
     }
 
     .botaofiltrarcursosmedia {
