@@ -24,11 +24,13 @@
     --cinzaescurofundodomudartema: #3A3A3A;
 
     --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroFilt: #131313;
     --ModoEscuroMesc: #656565;
     --ModoEscuroMesc2: #555555;
 
     --ModoEscuroFontV: #5AB3FF;
     --ModoEscuroFontC: #E197FF;
+    --modoEscuroFontSubBranco: #cacaca;
 
 
 }
@@ -54,6 +56,40 @@ a {
 
 button {
     cursor: pointer;
+}
+/*-------------------- Modo Escuro --------------------*/
+
+.modoEscuro{
+    color: var(--brancoBase);
+    background-color: var(--ModoEscuroBase);
+}
+
+.modoEscuro .mainUser{
+    background-color: var(--ModoEscuroBase);
+}
+
+.modoEscuro .informacoesperfil {
+    background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro .sobreUser , .modoEscuro .cidadeepais {
+    color: var(--modoEscuroFontSubBranco);
+}
+
+.modoEscuro .userCertificados{
+    color: var(--ModoEscuroFontV);
+}
+
+.modoEscuro button , .modoEscuro .redessociais a .nomeUseuario{
+    color: var(--brancoBase);
+}
+
+.modoEscuro .cursosDoUser{
+    background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro .cursosDoUser h2 , .modoEscuro .precoCursoUser h3 {
+    color: var(--ModoEscuroFontC);
 }
 
 /*-------------------- Banner Usuário --------------------*/
