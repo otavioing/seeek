@@ -117,9 +117,10 @@ function paginacarregada() {
     });
 
 
+    //função para pular o tipo usuário
+    document.getElementById("pularTipoUser").addEventListener("click", function () {
+        document.getElementById("cancelarTipoUser").style.display = "flex";
+    });
 
-
-
-
-
+    
 }

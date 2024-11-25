@@ -152,6 +152,7 @@
         </p>
       </div>
     </nav>
+
     <div id="menuperfil" class="menuperfil">
       <div class="divmenuperfil">
         <a href="usuario.html" class="Perf">Meu Perfil</a>
@@ -182,7 +183,7 @@
 
   <main class="prIndex">
 
-        <!---------- Caixa de Seleção de Usuário ------- -->
+    <!---------- Caixa de Seleção de Usuário ------- -->
 
     <div class="container1" id="user-box">
       <div class="welcome-container" id="user-selection">
@@ -214,11 +215,20 @@
           </div>
 
           <div class="setaCorfirmar">
-            <button>
+            <button id="pularTipoUser">
               <p>Pular</p><img src="/img/setaparacima.svg" alt="seta" />
             </button>
           </div>
         </div>
+
+        <div class="cancelarTipoUser" id="cancelarTipoUser">
+          <p>Ao clicar em pular, irá seguir como usuário(a) padrão.</p>
+          <div class="cancelarOuConfirmar">
+            <button id="cancelarTipoUser">Cancelar</button>
+            <button id="confirmarTipoUser">Confirmar</button>
+          </div>
+        </div>
+
       </div>
       <!-- Caixa  do tipo de usuario-->
       <div class="confirmation-container" id="confirmation-box" style="display: none">

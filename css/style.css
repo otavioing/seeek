@@ -267,6 +267,7 @@ header .logosite img {
 
 header .hamburguer {
     display: none;
+    height: auto;
 }
 
 header .botaoMenu {
@@ -948,8 +949,54 @@ footer {
     top: 15%;
     left: 27.5%;
     border-radius: 1.5rem;
-    display: none;
+    display: flex;
     z-index: 1;
+}
+
+.cancelarTipoUser{
+    display: none;
+    flex-direction: column;
+    justify-content: space-beetween;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    padding: 2rem;
+    background-color: var(--cinzaBase);
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.cancelarTipoUser p{
+    font-size: clamp(0.6rem, 2vh, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.cancelarOuConfirmar{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.cancelarOuConfirmar button{
+    width: 40%;
+    height: 2rem;
+    background: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: clamp(1rem, 1.8vh, 3rem);
+}
+
+#cancelarTipoUser{
+    color: var(--vermelhom);
+}
+
+#confirmarTipoUser{
+    color: var(--azulBase);
 }
 
 .welcome-container {
@@ -1581,7 +1628,7 @@ footer {
 
     header .hamburguer {
         display: flex;
-        height: 40rem;
+        height: auto;
         position: absolute;
         flex-direction: column;
         width: auto;
@@ -1909,6 +1956,13 @@ footer {
         font-size: 0.7rem;
     }
 
+    .cancelarTipoUser{
+        width: 90%;
+        left: 5%;
+        padding: 0.5rem;
+    }
+
+
 }
 
 @media screen and (max-width: 230px) {
@@ -1991,6 +2045,10 @@ footer {
     .tiposusuario button {
         height: 3rem;
         width: 3rem;
+    }
+
+    .cancelarTipoUser p, .cancelarOuConfirmar button{
+        font-size: 0.8rem;
     }
 
 }
