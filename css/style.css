@@ -948,7 +948,7 @@ footer {
     top: 15%;
     left: 27.5%;
     border-radius: 1.5rem;
-    display: flex;
+    display: none;
     z-index: 1;
 }
 
