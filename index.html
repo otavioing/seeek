@@ -1,705 +1,691 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Início - Seek</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
-  </head>
 
-  <!-- Google tag (gtag.js) -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Início - Seek</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
+</head>
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-SLCTJL00KV');
 </script>
-  
-  <body id="todo">
-    <div class="divativacaobarradeacessibilidade">
-      <button
-        id="botaobarra"
-        onclick="ativarbarra()"
-        class="botaoativacaobarra"
-      >
-        <img src="img/barra/icon.svg" alt="símbolo da onu" />
+
+<body id="todo">
+  <div class="divativacaobarradeacessibilidade">
+    <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra">
+      <img src="img/barra/icon.svg" alt="símbolo da onu" />
+    </button>
+  </div>
+
+  <div id="barra" class="divbarradeacessibilidade">
+    <button onclick="desativarbarra()" class="botaoativacaobarra">
+      <img src="img/barra/icon.svg" alt="símbolo da onu" />
+    </button>
+
+    <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+    </button>
+
+    <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+    </button>
+
+    <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/luabarra.svg" alt="Lua" />
+    </button>
+
+    <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/solbarra.svg" alt="Sol" />
+    </button>
+
+    <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+    </button>
+
+    <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
+  </div>
+
+  <header class="inicio">
+    <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
+      <span class="linha1"></span>
+      <span class="linha2"></span>
+      <span class="linha3"></span>
+    </button>
+    <div class="logosite">
+      <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek" /></a>
+    </div>
+    <div class="userhover">
+      <button>
+        <img onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu" />
       </button>
     </div>
-
-    <div id="barra" class="divbarradeacessibilidade">
-      <button onclick="desativarbarra()" class="botaoativacaobarra">
-        <img src="img/barra/icon.svg" alt="símbolo da onu" />
+    <nav class="navsite">
+      <div id="headerexplurar">
+        <a href="index.html" class="nav-link ExpA">Explorar</a>
+      </div>
+      <div id="headercursos">
+        <a href="cursos.html" class="nav-link CurA">Cursos</a>
+      </div>
+      <div id="headervagas">
+        <a href="vagas.html" class="nav-link VagA">Vagas</a>
+      </div>
+      <div class="sobrenoss">
+        <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
+      </div>
+    </nav>
+    <div class="pesquisasite">
+      <input type="text" placeholder="Pesquisar" class="Pesquisar" />
+      <a href=""><img src="img/search2.svg" alt="Lupa" /></a>
+    </div>
+    <div class="usersite">
+      <a href=""><img src="img/bell2.svg" alt="Sino" /></a>
+      <button onclick="abrirMenu()">
+        <img src="img/user2.svg" alt="User" />
       </button>
+    </div>
+    <nav class="hamburguer" id="menu">
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="index.html">
+          <span class="ExpA">Explorar </span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="cursos.html">
+          <span class="CurA">Cursos </span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="vagas.html">
+          <span class="VagA">Vagas</span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="sobre.html"><span class="sobA">Sobre Nós</span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="ajuda.html">
+          <span class="AjuF">Ajuda</span>
+        </a>
+      </div>
+      <div class="bordasuperior"></div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"><span class="AviF">Avisos</span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="avisos.html">
+          <span class="AtuF">Atualizações </span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="sobre.html#contatosobre">
+          <span class="Conf">Contato </span></a>
+      </div>
 
-      <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
-        <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
-      </button>
+      <div class="itemsdomenu">
+        <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+          <option value="pt">Português</option>
+          <option value="eng">English</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+      <div class="bordasuperior"></div>
 
-      <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
-        <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
-      </button>
+      <div class="divredessociais">
+        <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"><img src="img/Linkedin.svg"
+            alt="Logo Linkedin" /></a>
+        <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
+        <a href="https://www.instagram.com/seek.oficial/"><img src="img/instagram.svg" alt="Logo instagram" /></a>
+      </div>
+      <div class="bordasuperior"></div>
 
-        <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
-        <img src="img/barra/luabarra.svg" alt="Lua" />
-      </button>
+      <div class="direitosautoraismenu">
+        <p class="DirF">
+          Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+        </p>
+      </div>
+    </nav>
+    <div id="menuperfil" class="menuperfil">
+      <div class="divmenuperfil">
+        <a href="usuario.html" class="Perf">Meu Perfil</a>
+      </div>
+      <div class="divmenuperfil">
+        <a href="config.html" class="Conf">Configurações</a>
+      </div>
+      <div class="botaomodoescuro">
+        <label for=""><img src="img/lua.png" alt="Lua" /></label>
+        <div class="checkbox-con">
+          <input onclick="MudarModos()" id="checkbox" type="checkbox" checked />
+        </div>
+        <label for=""><img src="img/sol.png" alt="Sol" /></label>
+      </div>
+      <button id="sairdomenuperfil" class="sairP">Sair</button>
+    </div>
+  </header>
 
-        <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
-        <img src="img/barra/solbarra.svg" alt="Sol" />
-      </button>
-
-      <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
-        <img src="img/barra/iconvlibras.svg" alt="vlibras" />
-      </button>
-
-      <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
+  <section class="explorar">
+    <div class="explorarDiv">
+      <a href="index.html" class="ExpA">Explorar</a>
     </div>
 
-    <header class="inicio">
-      <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
-        <span class="linha1"></span>
-        <span class="linha2"></span>
-        <span class="linha3"></span>
-      </button>
-      <div class="logosite">
-        <a class="logosite" href="index.html"
-          ><img src="img/logo.svg" alt="Logo Seek"
-        /></a>
-      </div>
-      <div class="userhover">
-        <button>
-          <img onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu" />
-        </button>
-      </div>
-      <nav class="navsite">
-        <div id="headerexplurar">
-            <a href="index.html" class="nav-link ExpA">Explorar</a>
+    <div class="tendencia">
+      <a href="index.html" class="TenA">Tendências</a>
+    </div>
+  </section>
+
+  <main class="prIndex">
+
+        <!---------- Caixa de Seleção de Usuário ------- -->
+
+    <div class="container1" id="user-box">
+      <div class="welcome-container" id="user-selection">
+        <div class="titulocadastro1">
+          <h2>BEM-VINDO(A)</h2>
+          <button class="close_dialog_register" onclick="onCloseDialog()">
+            X
+          </button>
         </div>
-        <div id="headercursos">
-            <a href="cursos.html" class="nav-link CurA">Cursos</a>
-        </div>
-        <div id="headervagas">
-            <a href="vagas.html" class="nav-link VagA">Vagas</a>
-        </div>
-        <div class="sobrenoss">
-            <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
-        </div>
-    </nav>    
-      <div class="pesquisasite">
-        <input type="text" placeholder="Pesquisar" class="Pesquisar" />
-        <a href=""><img src="img/search2.svg" alt="Lupa" /></a>
-      </div>
-      <div class="usersite">
-        <a href=""><img src="img/bell2.svg" alt="Sino" /></a>
-        <button onclick="abrirMenu()">
-          <img src="img/user2.svg" alt="User" />
-        </button>
-      </div>
-      <nav class="hamburguer" id="menu">
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer nav-link" href="index.html">
-            <span class="ExpA">Explorar </span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer nav-link" href="cursos.html">
-            <span class="CurA">Cursos </span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer nav-link" href="vagas.html">
-            <span class="VagA">Vagas</span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer nav-link" href="sobre.html"
-            ><span class="sobA">Sobre Nós</span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer" href="ajuda.html">
-            <span class="AjuF">Ajuda</span>
-          </a>
-        </div>
-        <div class="bordasuperior"></div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"
-            ><span class="AviF">Avisos</span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer" href="avisos.html">
-            <span class="AtuF">Atualizações </span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer" href="sobre.html#contatosobre">
-            <span class="Conf">Contato </span></a
-          >
+        <div class="container1p">
+          <p>Por favor, selecione a opção que mais se encaixa com você</p>
         </div>
 
-        <div class="itemsdomenu">
-          <select
-          aria-label="Idioma"
-            name="Idioma"
-            id="idiomaSelect"
-            onchange="TrocaLinguagem(this.value)"
-          >
-            <option value="pt">Português</option>
-            <option value="eng">English</option>
-            <option value="es">Español</option>
-            <option value="it">Italiano</option>
-            <option value="fr">Français</option>
-          </select>
-        </div>
-        <div class="bordasuperior"></div>
-
-        <div class="divredessociais">
-          <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"><img src="img/Linkedin.svg" alt="Logo Linkedin" /></a>
-          <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
-          <a href="https://www.instagram.com/seek.oficial/"><img src="img/instagram.svg" alt="Logo instagram" /></a>
-        </div>
-        <div class="bordasuperior"></div>
-
-        <div class="direitosautoraismenu">
-          <p class="DirF">
-            Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
-          </p>
-        </div>
-      </nav>
-      <div id="menuperfil" class="menuperfil">
-        <div class="divmenuperfil">
-          <a href="usuario.html" class="Perf">Meu Perfil</a>
-        </div>
-        <div class="divmenuperfil">
-          <a href="config.html" class="Conf">Configurações</a>
-        </div>
-        <div class="botaomodoescuro">
-          <label for=""><img src="img/lua.png" alt="Lua" /></label>
-          <div class="checkbox-con">
-            <input
-              onclick="MudarModos()"
-              id="checkbox"
-              type="checkbox"
-              checked
-            />
-          </div>
-          <label for=""><img src="img/sol.png" alt="Sol" /></label>
-        </div>
-        <button id="sairdomenuperfil" class="sairP">Sair</button>
-      </div>
-    </header>
-
-    <section class="explorar">
-      <div class="explorarDiv">
-        <a href="index.html" class="ExpA">Explorar</a>
-      </div>
-
-      <div class="tendencia">
-        <a href="index.html" class="TenA">Tendências</a>
-      </div>
-    </section>
-
-    <main class="prIndex">
-      <div class="filtroExplorar">
-        <div class="exp">
-          <h1 class="ExpA">Explorar</h1>
-        </div>
-
-        <input
-          type="text"
-          placeholder="Pesquisar"
-          class="pesquisarindex"
-          onclick=""
-        />
-
-        <button class="buttonFiltro">
-
-          <svg viewBox="0 0 68 64" class="modoEscuroImagem1">
-            <path d="M11.3219 13.2295H45.2871"  />
-            <path d="M11.3219 31.7505H28.3045" />
-            <path d="M39.6262 31.7505H56.6088" />
-            <path d="M22.6437 50.2715H56.6089"/>
-            <path d="M50.948 18.5216C54.0744 18.5216 56.6088 16.1523 56.6088 13.2298C56.6088 10.3072 54.0744 7.93799 50.948 7.93799C47.8216 7.93799 45.2871 10.3072 45.2871 13.2298C45.2871 16.1523 47.8216 18.5216 50.948 18.5216Z" />
-            <path d="M33.9653 37.0426C37.0917 37.0426 39.6262 34.6733 39.6262 31.7508C39.6262 28.8282 37.0917 26.459 33.9653 26.459C30.8389 26.459 28.3044 28.8282 28.3044 31.7508C28.3044 34.6733 30.8389 37.0426 33.9653 37.0426Z" />
-            <path d="M16.9828 55.564C20.1092 55.564 22.6436 53.1948 22.6436 50.2723C22.6436 47.3497 20.1092 44.9805 16.9828 44.9805C13.8564 44.9805 11.3219 47.3497 11.3219 50.2723C11.3219 53.1948 13.8564 55.564 16.9828 55.564Z" stroke-width="3.57528" stroke-linecap="round"/>
-            </svg>
-
-          <span class="PerB"> Personalizar a Galeria </span>
-        </button>
-      </div>
-
-      <div class="gride">
-        <div class="divPortifolio" id="filho1">
-          <div class="portHover">
-            <div class="portHoverInt">
-              <h3 class="PotG">Portfólio teste</h3>
-              <div class="SalvarPort">
-                <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
-              </div>
+        <div class="user-options-pai">
+          <div class="user-options">
+            <div class="tiposusuario">
+              <button onclick="selectUserType('default')">
+                <img src="img/user2.svg" alt="User" />
+              </button>
+              <p>Usuário(a) Padrão</p>
             </div>
-            <div class="PotH">
-              <div class="AutorP">
-                <h3 class="AutG">Autor</h3>
-                <p>9.900  <span class="SegG">seguidores</span></p>
-              </div>
-              <div class="PerfAv">
-                <img src="img/PerfilHoverPort.svg" alt="Perfil" />
-                <div class="PLike">
-                  <p class="like">99%</p>
-                  <img src="img/Vector.svg" alt="Like" />
-                </div>
-              </div>
+
+            <div class="tiposusuario">
+              <button onclick="selectUserType('enterprise')">
+                <img src="img/user2.svg" alt="User" />
+              </button>
+              <p>Usuário(a) Empresarial</p>
             </div>
           </div>
-          <img class="portImg" src="img/img_port/1mini.jpg" alt="Imagem teste do index" />
-        </div>
 
-        <div class="divPortifolio" id="filho2">
-          <div class="portHover">
-            <div class="portHoverInt">
-              <h3 class="PotG">Portfólio teste</h3>
-              <div class="SalvarPort">
-                <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
-              </div>
-            </div>
-            <div class="PotH">
-              <div class="AutorP">
-                <p class="AutG">Autor</p>
-                <p>9.900  <span class="SegG">seguidores</span></p>
-              </div>
-              <div class="PerfAv">
-                <img src="img/PerfilHoverPort.svg" alt="Perfil" />
-                <div class="PLike">
-                  <p class="like">99%</p>
-                  <img src="img/Vector.svg" alt="Like" />
-                </div>
-              </div>
-            </div>
+          <div class="setaCorfirmar">
+            <button>
+              <p>Pular</p><img src="/img/setaparacima.svg" alt="seta" />
+            </button>
           </div>
-          <img class="portImg" src="img/img_port/2mini.jpg" alt="Imagem teste do index" />
-        </div>
-
-        <div class="divPortifolio" id="filho3">
-          <div class="portHover">
-            <div class="portHoverInt">
-              <h3 class="PotG">Portfólio teste</h3>
-              <div class="SalvarPort">
-                <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
-              </div>
-            </div>
-            <div class="PotH">
-              <div class="AutorP">
-                <p class="AutG">Autor</p>
-                <p>9.900  <span class="SegG">seguidores</span></p>
-              </div>
-              <div class="PerfAv">
-                <img src="img/PerfilHoverPort.svg" alt="Perfil" />
-                <div class="PLike">
-                  <p class="like">99%</p>
-                  <img src="img/Vector.svg" alt="Like" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <img class="portImg" src="img/img_port/3mini.jpg" alt="Imagem teste do index" />
-        </div>
-
-        <div class="divPortifolio" id="filho4">
-          <div class="portHover">
-            <div class="portHoverInt">
-              <h3 class="PotG">Portfólio teste</h3>
-              <div class="SalvarPort">
-                <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
-              </div>
-            </div>
-            <div class="PotH">
-              <div class="AutorP">
-                <p class="AutG">Autor</p>
-                <p>9.900  <span class="SegG">seguidores</span></p>
-              </div>
-              <div class="PerfAv">
-                <img src="img/PerfilHoverPort.svg" alt="Perfil" />
-                <div class="PLike">
-                  <p class="like">99%</p>
-                  <img src="img/Vector.svg" alt="Like" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <img class="portImg" src="img/img_port/4mini.jpg" alt="Imagem teste do index" />
-        </div>
-
-        <div class="divPortifolio" id="filho5">
-          <div class="portHover">
-            <div class="portHoverInt">
-              <h3 class="PotG">Portfólio teste</h3>
-              <div class="SalvarPort">
-                <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
-              </div>
-            </div>
-            <div class="PotH">
-              <div class="AutorP">
-                <p class="AutG">Autor</p>
-                <p>9.900  <span class="SegG">seguidores</span></p>
-              </div>
-              <div class="PerfAv">
-                <img src="img/PerfilHoverPort.svg" alt="Perfil" />
-                <div class="PLike">
-                  <p class="like">99%</p>
-                  <img src="img/Vector.svg" alt="Like" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <img class="portImg" src="img/img_port/5mini.jpg" alt="Imagem teste do index" />
-        </div>
-
-        <div class="divPortifolio" id="filho6">
-          <div class="portHover">
-            <div class="portHoverInt">
-              <h3 class="PotG">Portfólio teste</h3>
-              <div class="SalvarPort">
-                <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
-              </div>
-            </div>
-            <div class="PotH">
-              <div class="AutorP">
-                <p class="AutG">Autor</p>
-                <p>9.900  <span class="SegG">seguidores</span></p>
-              </div>
-              <div class="PerfAv">
-                <img src="img/PerfilHoverPort.svg" alt="Perfil" />
-                <div class="PLike">
-                  <p class="like">99%</p>
-                  <img src="img/Vector.svg" alt="Like" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <img class="portImg" src="img/img_port/6mini.jpg" alt="Imagem teste do index" />
-        </div>
-
-        <div class="divPortifolio" id="filho7">
-          <div class="portHover">
-            <div class="portHoverInt">
-              <h3 class="PotG">Portfólio teste</h3>
-              <div class="SalvarPort">
-                <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
-              </div>
-            </div>
-            <div class="PotH">
-              <div class="AutorP">
-                <p class="AutG">Autor</p>
-                <p>9.900  <span class="SegG">seguidores</span></p>
-              </div>
-              <div class="PerfAv">
-                <img src="img/PerfilHoverPort.svg" alt="Perfil" />
-                <div class="PLike">
-                  <p class="like">99%</p>
-                  <img src="img/Vector.svg" alt="Like" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <img class="portImg" src="img/img_port/7mini.jpg" alt="Imagem teste do index" />
-        </div>
-
-        <div class="divPortifolio" id="filho8">
-          <div class="portHover">
-            <div class="portHoverInt">
-              <h3 class="PotG">Portfólio teste</h3>
-              <div class="SalvarPort">
-                <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
-              </div>
-            </div>
-            <div class="PotH">
-              <div class="AutorP">
-                <p class="AutG">Autor</p>
-                <p>9.900 <span class="SegG">seguidores</span></p>
-              </div>
-              <div class="PerfAv">
-                <img src="img/PerfilHoverPort.svg" alt="Perfil" />
-                <div class="PLike">
-                  <p class="like">99%</p>
-                  <img src="img/Vector.svg" alt="Like" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <img class="portImg" src="img/img_port/8mini.jpg" alt="Imagem teste do index" />
         </div>
       </div>
+      <!-- Caixa  do tipo de usuario-->
+      <div class="confirmation-container" id="confirmation-box" style="display: none">
+        <div class="titulocadastro1">
+          <h2>BEM-VINDO(A)</h2>
+          <button class="close_dialog_register" onclick="onCloseDialog()">
+            X
+          </button>
+        </div>
+        <p class="pp">Antes de prossseguir, preencha os dados abaixo</p>
 
-      <!--Início modal-->
-      <div id="modalPort">
-        <div class="modal-content">
-          <header class="modal-header">
-            <div class="perfilPort">
-              <div class="imagemusuariomodal">
-                <img src="img/iconeperfil.svg" alt="Foto/Ícone de perfil" />
-              </div>
-
-              <div class="nomedousuariomodal">
-                <h2 class="PotMG">Protótipo de portifólio</h2>
-                <p class="nomecridormodal"><span class="AutMG">Nome do criador • 0 seguidores</span></p>
+        <div class="form">
+          <div class="left-section">
+            <div class="profile-photo">
+              <div class="photo-placeholder">
+                <button>Adicionar foto de perfil</button>
               </div>
             </div>
+            <div class="input-group">
+              <label for="username">OBRIGATÓRIO<span class="required">*</span></label>
+              <input type="text" id="username" placeholder="Nome de Usuário" />
+              <label for="profession"></label>
+              <input type="text" id="profession" placeholder="Sua Profissão" />
+            </div>
+          </div>
 
-            <div class="contratar-btn-span">
-              <div class="contratar-btn-btn">
-                <button
-                  class="botaoContratar BotC"
-                  type="submit"
-                  value="Contratar"
-                >
-                  Contratar
+          <div class="right-section">
+            <div class="input-group">
+              <label class="Descricao1" for="description">Descrição</label>
+              <textarea id="description" placeholder="Descrição"></textarea>
+            </div>
+            <div class="certficateslabel">
+              <label>Certificados</label>
+            </div>
+            <div class="certificates">
+              <div class="certficatess">
+                <button class="add-section-btn">
+                  Adicionar seção ao perfil
                 </button>
+                <button class="add-icon">+</button>
               </div>
-              <span class="close">&times;</span>
             </div>
-          </header>
+          </div>
+        </div>
 
-          <section class="modal-body">
-            <div class="imgmodal">
-              <img id="modalImage" src="" alt="Imagem do Portfólio" />
+        <div class="setaCorfirmar">
+          <button><img src="/img/setaparacima.svg" alt="seta" />
+            <p>Voltar</p>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Caixa Empresarial -->
+      <div class="confirmation-container2" id="enterprise-confirmation-box" style="display: none">
+        <div class="titulocadastro1">
+          <h2>BEM-VINDO(A) Empresa</h2>
+          <button class="close_dialog_register" onclick="onCloseDialog()">
+            X
+          </button>
+        </div>
+        <p class="pp">Antes de prossseguir, preencha os dados abaixo</p>
+
+
+        <div class="empresarialDiv">
+
+          <div class="imgPerfilEmpresa">
+            <div class="fotoPerfilDesc">
+              <button>Adicionar foto de perfil</button>
+              <textarea class="men" name="mensagem" id="mensagem1" placeholder="Descrição"></textarea>
             </div>
-            <nav class="modal-nav">
-              <button type="button" id="Favoritar">
-                <img
-                  class="modal-button"
-                  src="img/coracao.svg"
-                  alt="Botão Favoritar"
-                /><span class="modalFa">Favoritar</span>
+          </div>
+
+          <!-----------------inputs----------------- -->
+          <div class="inputsEmpresarial">
+            <p class="InfoEmp">Informações</p>
+            <div class="input-group2">
+
+              <div class="inputsEmp">
+                <label for="username"><span class="required">OBRIGATÓRIO*</span></label>
+                <input type="text" id="username" name="username" placeholder="Nome da Empresa" />
+
+                <label for="profession"><span class="required">OBRIGATÓRIO*</span></label>
+                <input type="tell" id="tell" name="profession" placeholder="Telefone" />
+
+                <button>Adicionar Endereço</button>
+              </div>
+
+              <div class="inputsEmp">
+                <label for="categoria"><span class="required">OBRIGATÓRIO*</span></label>
+                <input type="text" id="categoria" name="categoria" placeholder="Categoria do negócio" />
+
+                <label for="funcionarios"><span class="required">OBRIGATÓRIO*</span></label>
+                <input type="tell" id="tell" name="funcionarios" placeholder="Número de funcionarios">
+
+                <button>Data de fundação</button>
+              </div>
+
+            </div>
+
+            <p class="complementarEmp">Complementar</p>
+            <div class="adcSecEmp">
+              <button class="add-section-btn">
+                Adicionar seção ao perfil
               </button>
-              <button type="button">
-                <img
-                  class="modal-button"
-                  src="img/ferramenta.svg"
-                  alt="Botão Ferramenta"
-                /><span class="modalFe">Ferramentas</span>
+              <button class="add-icon">+</button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="setaCorfirmar">
+          <button><img src="/img/setaparacima.svg" alt="seta" />
+            <p>Voltar</p>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="filtroExplorar">
+      <div class="exp">
+        <h1 class="ExpA">Explorar</h1>
+      </div>
+
+      <input type="text" placeholder="Pesquisar" class="pesquisarindex" onclick="" />
+
+      <button class="buttonFiltro">
+
+        <svg viewBox="0 0 68 64" class="modoEscuroImagem1">
+          <path d="M11.3219 13.2295H45.2871" />
+          <path d="M11.3219 31.7505H28.3045" />
+          <path d="M39.6262 31.7505H56.6088" />
+          <path d="M22.6437 50.2715H56.6089" />
+          <path
+            d="M50.948 18.5216C54.0744 18.5216 56.6088 16.1523 56.6088 13.2298C56.6088 10.3072 54.0744 7.93799 50.948 7.93799C47.8216 7.93799 45.2871 10.3072 45.2871 13.2298C45.2871 16.1523 47.8216 18.5216 50.948 18.5216Z" />
+          <path
+            d="M33.9653 37.0426C37.0917 37.0426 39.6262 34.6733 39.6262 31.7508C39.6262 28.8282 37.0917 26.459 33.9653 26.459C30.8389 26.459 28.3044 28.8282 28.3044 31.7508C28.3044 34.6733 30.8389 37.0426 33.9653 37.0426Z" />
+          <path
+            d="M16.9828 55.564C20.1092 55.564 22.6436 53.1948 22.6436 50.2723C22.6436 47.3497 20.1092 44.9805 16.9828 44.9805C13.8564 44.9805 11.3219 47.3497 11.3219 50.2723C11.3219 53.1948 13.8564 55.564 16.9828 55.564Z"
+            stroke-width="3.57528" stroke-linecap="round" />
+        </svg>
+
+        <span class="PerB"> Personalizar a Galeria </span>
+      </button>
+    </div>
+
+    <div class="gride">
+      <div class="divPortifolio" id="filho1">
+        <div class="portHover">
+          <div class="portHoverInt">
+            <h3 class="PotG">Portfólio teste</h3>
+            <div class="SalvarPort">
+              <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
+            </div>
+          </div>
+          <div class="PotH">
+            <div class="AutorP">
+              <h3 class="AutG">Autor</h3>
+              <p>9.900 <span class="SegG">seguidores</span></p>
+            </div>
+            <div class="PerfAv">
+              <img src="img/PerfilHoverPort.svg" alt="Perfil" />
+              <div class="PLike">
+                <p class="like">99%</p>
+                <img src="img/Vector.svg" alt="Like" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="portImg" src="img/img_port/1mini.jpg" alt="Imagem teste do index" />
+      </div>
+
+      <div class="divPortifolio" id="filho2">
+        <div class="portHover">
+          <div class="portHoverInt">
+            <h3 class="PotG">Portfólio teste</h3>
+            <div class="SalvarPort">
+              <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
+            </div>
+          </div>
+          <div class="PotH">
+            <div class="AutorP">
+              <p class="AutG">Autor</p>
+              <p>9.900 <span class="SegG">seguidores</span></p>
+            </div>
+            <div class="PerfAv">
+              <img src="img/PerfilHoverPort.svg" alt="Perfil" />
+              <div class="PLike">
+                <p class="like">99%</p>
+                <img src="img/Vector.svg" alt="Like" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="portImg" src="img/img_port/2mini.jpg" alt="Imagem teste do index" />
+      </div>
+
+      <div class="divPortifolio" id="filho3">
+        <div class="portHover">
+          <div class="portHoverInt">
+            <h3 class="PotG">Portfólio teste</h3>
+            <div class="SalvarPort">
+              <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
+            </div>
+          </div>
+          <div class="PotH">
+            <div class="AutorP">
+              <p class="AutG">Autor</p>
+              <p>9.900 <span class="SegG">seguidores</span></p>
+            </div>
+            <div class="PerfAv">
+              <img src="img/PerfilHoverPort.svg" alt="Perfil" />
+              <div class="PLike">
+                <p class="like">99%</p>
+                <img src="img/Vector.svg" alt="Like" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="portImg" src="img/img_port/3mini.jpg" alt="Imagem teste do index" />
+      </div>
+
+      <div class="divPortifolio" id="filho4">
+        <div class="portHover">
+          <div class="portHoverInt">
+            <h3 class="PotG">Portfólio teste</h3>
+            <div class="SalvarPort">
+              <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
+            </div>
+          </div>
+          <div class="PotH">
+            <div class="AutorP">
+              <p class="AutG">Autor</p>
+              <p>9.900 <span class="SegG">seguidores</span></p>
+            </div>
+            <div class="PerfAv">
+              <img src="img/PerfilHoverPort.svg" alt="Perfil" />
+              <div class="PLike">
+                <p class="like">99%</p>
+                <img src="img/Vector.svg" alt="Like" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="portImg" src="img/img_port/4mini.jpg" alt="Imagem teste do index" />
+      </div>
+
+      <div class="divPortifolio" id="filho5">
+        <div class="portHover">
+          <div class="portHoverInt">
+            <h3 class="PotG">Portfólio teste</h3>
+            <div class="SalvarPort">
+              <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
+            </div>
+          </div>
+          <div class="PotH">
+            <div class="AutorP">
+              <p class="AutG">Autor</p>
+              <p>9.900 <span class="SegG">seguidores</span></p>
+            </div>
+            <div class="PerfAv">
+              <img src="img/PerfilHoverPort.svg" alt="Perfil" />
+              <div class="PLike">
+                <p class="like">99%</p>
+                <img src="img/Vector.svg" alt="Like" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="portImg" src="img/img_port/5mini.jpg" alt="Imagem teste do index" />
+      </div>
+
+      <div class="divPortifolio" id="filho6">
+        <div class="portHover">
+          <div class="portHoverInt">
+            <h3 class="PotG">Portfólio teste</h3>
+            <div class="SalvarPort">
+              <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
+            </div>
+          </div>
+          <div class="PotH">
+            <div class="AutorP">
+              <p class="AutG">Autor</p>
+              <p>9.900 <span class="SegG">seguidores</span></p>
+            </div>
+            <div class="PerfAv">
+              <img src="img/PerfilHoverPort.svg" alt="Perfil" />
+              <div class="PLike">
+                <p class="like">99%</p>
+                <img src="img/Vector.svg" alt="Like" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="portImg" src="img/img_port/6mini.jpg" alt="Imagem teste do index" />
+      </div>
+
+      <div class="divPortifolio" id="filho7">
+        <div class="portHover">
+          <div class="portHoverInt">
+            <h3 class="PotG">Portfólio teste</h3>
+            <div class="SalvarPort">
+              <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
+            </div>
+          </div>
+          <div class="PotH">
+            <div class="AutorP">
+              <p class="AutG">Autor</p>
+              <p>9.900 <span class="SegG">seguidores</span></p>
+            </div>
+            <div class="PerfAv">
+              <img src="img/PerfilHoverPort.svg" alt="Perfil" />
+              <div class="PLike">
+                <p class="like">99%</p>
+                <img src="img/Vector.svg" alt="Like" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="portImg" src="img/img_port/7mini.jpg" alt="Imagem teste do index" />
+      </div>
+
+      <div class="divPortifolio" id="filho8">
+        <div class="portHover">
+          <div class="portHoverInt">
+            <h3 class="PotG">Portfólio teste</h3>
+            <div class="SalvarPort">
+              <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
+            </div>
+          </div>
+          <div class="PotH">
+            <div class="AutorP">
+              <p class="AutG">Autor</p>
+              <p>9.900 <span class="SegG">seguidores</span></p>
+            </div>
+            <div class="PerfAv">
+              <img src="img/PerfilHoverPort.svg" alt="Perfil" />
+              <div class="PLike">
+                <p class="like">99%</p>
+                <img src="img/Vector.svg" alt="Like" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="portImg" src="img/img_port/8mini.jpg" alt="Imagem teste do index" />
+      </div>
+    </div>
+
+    <!--Início modal-->
+    <div id="modalPort">
+      <div class="modal-content">
+        <header class="modal-header">
+          <div class="perfilPort">
+            <div class="imagemusuariomodal">
+              <img src="img/iconeperfil.svg" alt="Foto/Ícone de perfil" />
+            </div>
+
+            <div class="nomedousuariomodal">
+              <h2 class="PotMG">Protótipo de portifólio</h2>
+              <p class="nomecridormodal"><span class="AutMG">Nome do criador • 0 seguidores</span></p>
+            </div>
+          </div>
+
+          <div class="contratar-btn-span">
+            <div class="contratar-btn-btn">
+              <button class="botaoContratar BotC" type="submit" value="Contratar">
+                Contratar
               </button>
-              <a href="index.html#comentariomodal"><button type="button" onclick="abrirComentarios()" >
-               
-                <img
-                  class="modal-button"
-                  src="img/comentario.svg"
-                  alt="Botão Comentários"
-                /><span class="modalCome">Comentários</span>
+            </div>
+            <span class="close">&times;</span>
+          </div>
+        </header>
+
+        <section class="modal-body">
+          <div class="imgmodal">
+            <img id="modalImage" src="" alt="Imagem do Portfólio" />
+          </div>
+          <nav class="modal-nav">
+            <button type="button" id="Favoritar">
+              <img class="modal-button" src="img/coracao.svg" alt="Botão Favoritar" /><span
+                class="modalFa">Favoritar</span>
+            </button>
+            <button type="button">
+              <img class="modal-button" src="img/ferramenta.svg" alt="Botão Ferramenta" /><span
+                class="modalFe">Ferramentas</span>
+            </button>
+            <a href="index.html#comentariomodal"><button type="button" onclick="abrirComentarios()">
+
+                <img class="modal-button" src="img/comentario.svg" alt="Botão Comentários" /><span
+                  class="modalCome">Comentários</span>
               </button></a>
-              <button type="button">
-                <img
-                  class="modal-button"
-                  src="img/compartilhar.svg"
-                  alt="Botão Compartilhar"
-                /><span class="modalComp">Compartilhar</span>
-              </button>
-            </nav>
-          </section>
+            <button type="button">
+              <img class="modal-button" src="img/compartilhar.svg" alt="Botão Compartilhar" /><span
+                class="modalComp">Compartilhar</span>
+            </button>
+          </nav>
+        </section>
 
-          <div class="barradivisoriamodal" id="barradivisoriamodal"></div>
+        <div class="barradivisoriamodal" id="barradivisoriamodal"></div>
 
-          <div class="comentariomodal" id="comentariomodal">
-            <div class="comentariomodalLeft">
-              <div class="logocomentario">
-                <img src="img/iconeperfil.svg" alt="Logo do Usuário" />
-              </div>
-
-              <div class="userecomentarioLeft">
-                <div class="nomeecompartilhar">
-                  <div>
-                    <h2 class="nomeusuariocomentario"><span class="Nome">Nome do Usuário</span></h2>
-                  </div>
-                  <div class="compartilharcomentario">
-                    <button>
-                      <img src="img/compartilhar.svg" alt="Compartilhar" />
-                    </button>
-                    <button><img src="img/compartilhar.svg" alt="compartilhar" /></button>
-                  </div>
-                </div>
-                <p class="comentario">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nesciunt quisquam eaque sunt fugiat quaerat, maxime iste
-                  mollitia at tenetur necessitatibus odio, deserunt dolore
-                  minima a perferendis voluptates omnis sint laboriosam! Lorem
-                  ipsum dolor sit, amet consectetur adipisicing elit. Soluta cum
-                  dolores consectetur, inventore nisi rem officia, distinctio
-                  dolorem libero consequatur iure deserunt ducimus impedit, at
-                  corrupti reprehenderit nobis nemo. Nam?
-                </p>
-              </div>
+        <div class="comentariomodal" id="comentariomodal">
+          <div class="comentariomodalLeft">
+            <div class="logocomentario">
+              <img src="img/iconeperfil.svg" alt="Logo do Usuário" />
             </div>
 
-            <div class="comentariomodalRight">
-              <div class="userecomentarioRight">
-                <h2 class="nomeusuariocomentario">Lorem ipsum</h2>
-                <p class="comentario">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nesciunt quisquam eaque sunt fugiat quaerat, maxime iste
-                  mollitia at tenetur necessitatibus odio, deserunt dolore
-                  minima a perferendis voluptates omnis sint laboriosam! Lorem
-                  ipsum dolor sit, amet consectetur adipisicing elit. Soluta cum
-                  dolores consectetur, inventore nisi rem officia, distinctio
-                  dolorem libero consequatur iure deserunt ducimus impedit, at
-                  corrupti reprehenderit nobis nemo. Nam?
-                </p>
+            <div class="userecomentarioLeft">
+              <div class="nomeecompartilhar">
+                <div>
+                  <h2 class="nomeusuariocomentario"><span class="Nome">Nome do Usuário</span></h2>
+                </div>
+                <div class="compartilharcomentario">
+                  <button>
+                    <img src="img/compartilhar.svg" alt="Compartilhar" />
+                  </button>
+                  <button><img src="img/compartilhar.svg" alt="compartilhar" /></button>
+                </div>
               </div>
+              <p class="comentario">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt quisquam eaque sunt fugiat quaerat, maxime iste
+                mollitia at tenetur necessitatibus odio, deserunt dolore
+                minima a perferendis voluptates omnis sint laboriosam! Lorem
+                ipsum dolor sit, amet consectetur adipisicing elit. Soluta cum
+                dolores consectetur, inventore nisi rem officia, distinctio
+                dolorem libero consequatur iure deserunt ducimus impedit, at
+                corrupti reprehenderit nobis nemo. Nam?
+              </p>
+            </div>
+          </div>
+
+          <div class="comentariomodalRight">
+            <div class="userecomentarioRight">
+              <h2 class="nomeusuariocomentario">Lorem ipsum</h2>
+              <p class="comentario">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt quisquam eaque sunt fugiat quaerat, maxime iste
+                mollitia at tenetur necessitatibus odio, deserunt dolore
+                minima a perferendis voluptates omnis sint laboriosam! Lorem
+                ipsum dolor sit, amet consectetur adipisicing elit. Soluta cum
+                dolores consectetur, inventore nisi rem officia, distinctio
+                dolorem libero consequatur iure deserunt ducimus impedit, at
+                corrupti reprehenderit nobis nemo. Nam?
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <!--Fim modal-->
-      <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
-        <div vw class="enabled">
-          <div vw-access-button class="active"></div>
-          <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-          </div>
+    </div>
+    <!--Fim modal-->
+    <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
         </div>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-          new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
-        </div>
-      <!--------------------------------- Caixa de Seleção de Usuário --------->
-      <div class="container1" id="user-box">
-        <div class="welcome-container" id="user-selection">
-          <div class="titulocadastro1">
-            <h2>BEM-VINDO(A)</h2>
-            <button class="close_dialog_register" onclick="onCloseDialog()">
-              X
-            </button>
-          </div>
-          <div class="container1p">
-            <p>Por favor, selecione a opção que mais se encaixa com você</p>
-          </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    </div>
 
-          <div class="user-options-pai">
-            <div class="user-options">
-              <div class="tiposusuario">
-                <button onclick="selectUserType('default')">
-                  <img src="img/user2.svg" alt="User" />
-                </button>
-                <p>Usuário(a) Padrão</p>
-              </div>
-
-              <div class="tiposusuario">
-                <button onclick="selectUserType('enterprise')">
-                  <img src="img/user2.svg" alt="User" />
-                </button>
-                <p>Usuário(a) Empresarial</p>
-              </div>
-            </div>
-
-            <div class="setaCorfirmar">
-              <img src="/img/setaparacima.svg" alt="seta" />
-            </div>
-          </div>
-        </div>
-        <!-- Caixa  do tipo de usuario-->
-        <div
-          class="confirmation-container"
-          id="confirmation-box"
-          style="display: none"
-        >
-          <div class="titulocadastro1">
-            <h2>BEM-VINDO(A)</h2>
-            <button class="close_dialog_register" onclick="onCloseDialog()">
-              X
-            </button>
-          </div>
-          <p class="pp">Antes de prossseguir, preencha os dados abaixo</p>
-
-          <div class="form">
-            <div class="left-section">
-              <div class="profile-photo">
-                <div class="photo-placeholder">
-                  <span>Adicionar foto de perfil</span>
-                </div>
-              </div>
-              <div class="input-group">
-                <label for="username"
-                  >OBRIGATÓRIO<span class="required">*</span></label
-                >
-                <input
-                  type="text"
-                  id="username"
-                  placeholder="Nome de Usuário"
-                />
-                <label for="profession"></label>
-                <input
-                  type="text"
-                  id="profession"
-                  placeholder="Sua Profissão"
-                />
-              </div>
-            </div>
-
-            <div class="right-section">
-              <div class="input-group">
-                <label class="Descricao1" for="description">Descrição</label>
-                <textarea id="description" placeholder=""></textarea>
-              </div>
-              <div class="certficateslabel">
-                <label>Certificados</label>
-              </div>
-              <div class="certificates">
-                <div class="certficatess">
-                  <button class="add-section-btn">
-                    Adicionar seção ao perfil
-                  </button>
-                  <button class="add-icon">+</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Caixa Empresarial -->
-        <div
-          class="confirmation-container"
-          id="enterprise-confirmation-box"
-          style="display: none"
-        >
-          <div class="titulocadastro1">
-            <h2>BEM-VINDO(A) Empresa</h2>
-            <button class="close_dialog_register" onclick="onCloseDialog()">
-              X
-            </button>
-          </div>
-          <p class="pp">Antes de prossseguir, preencha os dados abaixo</p>
-          
-             <div class="profile-photo1">
-              <div class="photo-placeholder2">
-                <span>Adicionar foto de perfil</span>
-              </div>
-                </div>
-
-<!-----------------inputs----------------- -->
-                <div class="input-group2">
-                  <label for="username"><span class="required">*</span></label>
-                  <input
-                    type="text"
-                    id="username"
-                    placeholder="Nome da Empresa"/>
-                  <label for="profession"><span class="required">*</span></label>
-                  <input
-                    type="tell"
-                    id="tell"
-                    placeholder="Telefone"/>
-
-                </div>
-
-                <textarea class="men" name="mensagem" id="mensagem1" placeholder="Descrição"></textarea>
-              </div> 
-              
-              
-
-
-    </div> 
+    </div>
     <div class="ativaredasativarvlibras">
       <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -711,65 +697,56 @@
       <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
       </script>
-      </div>
-    </main>
+    </div>
+  </main>
 
-    <!--main tendências-->
+  <!--main tendências-->
 
-    <main class="mainTendencias"></main>
+  <main class="mainTendencias"></main>
 
-    <button class="btn-scroll-top" arial-label="Voltar ao topo">
-      <img
-        src="img/arrow-top.svg"
-        alt="Voltar ao topo"
-        width="50"
-        height="50"
-      />
-    </button>
+  <button class="btn-scroll-top" arial-label="Voltar ao topo">
+    <img src="img/arrow-top.svg" alt="Voltar ao topo" width="50" height="50" />
+  </button>
 
-    <footer>
-      <div class="linksfooter">
-        <div class="infofooter">
-          <a href="ajuda.html" class="AjuF">Ajuda</a>
-          <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
-        </div>
-
-        <div class="infofooter">
-          <a href="sobre.html" class="SobA">Sobre Nós</a>
-          <a href="sobre.html#contatosobre" class="ConT">Contato</a>
-        </div>
-        <div class="infofooter">
-          <a href="avisos.html" class="AviF">Avisos</a>
-
-          <select
-            aria-label="Idioma"
-            name="Idioma"
-            id="idiomaSelect"
-            onchange="TrocaLinguagem(this.value)"
-          >
-            <option value="pt">Português</option>
-            <option value="eng">English</option>
-            <option value="es">Español</option>
-            <option value="it">Italiano</option>
-            <option value="fr">Français</option>
-          </select>
-        </div>
-
-        <div class="infofooter">
-          <img src="img/logoSeekk 3@2x.png" alt="Logo Seek" />
-        </div>
+  <footer>
+    <div class="linksfooter">
+      <div class="infofooter">
+        <a href="ajuda.html" class="AjuF">Ajuda</a>
+        <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
       </div>
 
-      <div class="direitosautorais">
-        <p class="DirF">
-          Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
-        </p>
+      <div class="infofooter">
+        <a href="sobre.html" class="SobA">Sobre Nós</a>
+        <a href="sobre.html#contatosobre" class="ConT">Contato</a>
       </div>
-    </footer>
-    <script src="script/border.js"></script>
-    <script src="script/index.js"></script>
-    <script src="script/lfy.js"></script>
-    <script src="script/caua.js"></script>
-    <script src="script/cake.js"></script>
-  </body>
+      <div class="infofooter">
+        <a href="avisos.html" class="AviF">Avisos</a>
+
+        <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+          <option value="pt">Português</option>
+          <option value="eng">English</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+
+      <div class="infofooter">
+        <img src="img/logoSeekk 3@2x.png" alt="Logo Seek" />
+      </div>
+    </div>
+
+    <div class="direitosautorais">
+      <p class="DirF">
+        Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+      </p>
+    </div>
+  </footer>
+  <script src="script/border.js"></script>
+  <script src="script/index.js"></script>
+  <script src="script/lfy.js"></script>
+  <script src="script/caua.js"></script>
+  <script src="script/cake.js"></script>
+</body>
+
 </html>
