@@ -504,7 +504,9 @@ main {
 }
 
 @media screen and (max-width: 500px) {
-
+    #imgemailsobrenos{
+        font-size: 0.7;
+    }
     .contatosobrenos2{
         font-size: 0.9rem;
 }
@@ -524,7 +526,7 @@ main {
         margin-bottom: 2.5rem;
 
     }
-
+   
     .sobrenodnome h4,
     .sobrenodnome p {
         font-size: 1rem;
@@ -548,7 +550,12 @@ main {
     }
 
 }
-
+@media screen and (max-width:350px) {
+    .contatosobrenos2{
+        font-size: 0.45rem;
+    }
+}
+ 
 @media screen and (max-width:330px) {
 
     .sobrenodnome img {
