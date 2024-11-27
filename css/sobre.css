@@ -56,6 +56,9 @@
 .modoEscuro .contatosobrenos2 a {
     color: var(--brancoBase);
 }
+.modoEscuro .st8 {
+    fill: white;
+  }
 
 /*-------------------------------- Modo Escuro Fim --------------------------------*/
 
@@ -500,6 +503,14 @@ main {
 
 }
 
+@media screen and (max-width: 500px) {
+
+    .contatosobrenos2{
+        font-size: 0.9rem;
+}
+
+}
+
 @media screen and (max-width: 450px) {
 
     .h1sobrenos {
@@ -631,3 +642,4 @@ main {
     }
 
 }
+

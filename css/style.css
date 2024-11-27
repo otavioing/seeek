@@ -168,7 +168,10 @@ a {
 .modoEscuro .modal-content{
     background-color: var(--ModoEscuroBase);
 }
-
+svg .st8{
+    fill: #0E0E0E;
+    }
+    
 
 /*-------------------------------- Header inicio --------------------------------*/
 
@@ -356,6 +359,7 @@ header .botaoMenu span {
     margin-top: 2.5rem;
     margin-bottom: 3rem;
 }
+
 
 .filtroExplorar .buttonFiltro,
 .Ipesquisarindex {
@@ -874,7 +878,7 @@ footer {
 
 #menuperfil {
     position: absolute;
-    top: 6.5rem;
+    top: 6rem;
     right: -50%;
     background-color: var(--brancomenuperfil);
     width: 13rem;
@@ -1632,8 +1636,8 @@ footer {
         position: absolute;
         flex-direction: column;
         width: auto;
-        top: 6.5rem;
-        bottom: 49%;
+        top: 6rem;
+        bottom: auto;
         left: -99%;
         background-color: var(--brancomenuperfil);
         align-items: center;

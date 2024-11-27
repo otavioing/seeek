@@ -3,18 +3,26 @@
 
 function ModoEscuro() {
   let corpo = document.getElementById("todo");
-  let logosobre = document.getElementById("logoseeksobrenosmodoescuro");
+  let imgemailsobrenos = document.getElementById("imgemailsobrenos");
+  let imglinkdinsobrenos = document.getElementById("imglinkdinsobrenos");
+  let imginstagramsobrenos = document.getElementById("imginstagramsobrenos");
   corpo.classList.add("modoEscuro");
   localStorage.setItem("modo", "escuro");
-  logosobre.src = "img/teste/Group 776modoescuro.svg";
+  imgemailsobrenos.src = "img/emailsobrenoss modoescuro.svg";
+  imglinkdinsobrenos.src = "img/logo linkedinsobrenos modoescuro.svg";
+  imginstagramsobrenos.src = "img/teste/Vectorawdawmodoescuro.svg";
 }
 
 function ModoClaro() {
   let corpo = document.getElementById("todo");
-  let logosobre = document.getElementById("logoseeksobrenosmodoescuro");
+  let imgemailsobrenos = document.getElementById("imgemailsobrenos");
+  let imglinkdinsobrenos = document.getElementById("imglinkdinsobrenos");
+  let imginstagramsobrenos = document.getElementById("imginstagramsobrenos");
   corpo.classList.remove("modoEscuro");
   localStorage.setItem("modo", "claro");
-  logosobre.src = "img/Group 776.svg";
+  imgemailsobrenos.src = "img/emailsobrenoss.svg";
+  imglinkdinsobrenos.src = "img/logo linkedinsobrenos.svg";
+  imginstagramsobrenos.src = "img/Vectorawdaw.svg";
 }
 
 function MudarModos() {
