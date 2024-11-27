@@ -231,23 +231,81 @@ function abrirComentarios(){
 //script da barra de acessibilidade
 
 let zoomLevel = 1;
+const maxZoomLevel = 1.5;  // Defina o nível máximo de zoom
+const minZoomLevel = 1;  // Defina o nível mínimo de zoom
 
 function zoommais() {
-    zoomLevel += 0.1;
-    const mainElement = document.querySelector('main');
-    if (mainElement) {
-        mainElement.style.transform = `scale(${zoomLevel})`;
-        mainElement.style.transformOrigin = '0 0';
+    if (zoomLevel < maxZoomLevel) {
+        zoomLevel += 0.1;
     }
+    applyZoom();
 }
+
 function zoommenos() {
-    zoomLevel -= 0.1;
-    const mainElement = document.querySelector('main');
+    if (zoomLevel > minZoomLevel) {
+        zoomLevel -= 0.1;
+    }
+    applyZoom();
+}
+
+function applyZoom() {
+    const mainElement = document.querySelector('html');
+    // const headerElement = document.querySelector('header');
+    // const footerElement = document.querySelector('footer');
+    // const sectionElement = document.querySelector('section');
     if (mainElement) {
         mainElement.style.transform = `scale(${zoomLevel})`;
         mainElement.style.transformOrigin = '0 0';
+
+        headerElement.style.transform = `scale(${zoomLevel})`;
+        headerElement.style.transformOrigin = '0 0';
+
+        footerElement.style.transform = `scale(${zoomLevel})`;
+        footerElement.style.transformOrigin = '0 0';
+
+        sectionElement.style.transform = `scale(${zoomLevel})`;
+        sectionElement.style.transformOrigin = '0 0';
     }
 }
+
+// let zoomLevel = 1;
+// const maxZoomLevel = 2;  // Defina o nível máximo de zoom
+// const minZoomLevel = 0.5;  // Defina o nível mínimo de zoom
+
+// function zoommais() {
+//     if (zoomLevel < maxZoomLevel) {
+//         zoomLevel += 0.1;
+//     }
+//     applyZoom();
+// }
+
+// function zoommenos() {
+//     if (zoomLevel > minZoomLevel) {
+//         zoomLevel -= 0.1;
+//     }
+//     applyZoom();
+// }
+
+// function applyZoom() {
+//     const mainElement = document.querySelector('main');
+//     const headerElement = document.querySelector('header');
+//     const footerElement = document.querySelector('footer');
+//     const sectionElement = document.querySelector('section');
+//     if (mainElement) {
+//         mainElement.style.transform = `scale(${zoomLevel})`;
+//         mainElement.style.transformOrigin = '0 0';
+
+//         headerElement.style.transform = `scale(${zoomLevel})`;
+//         headerElement.style.transformOrigin = '0 0';
+
+//         footerElement.style.transform = `scale(${zoomLevel})`;
+//         footerElement.style.transformOrigin = '0 0';
+
+//         sectionElement.style.transform = `scale(${zoomLevel})`;
+//         sectionElement.style.transformOrigin = '0 0';
+//     }
+// }
+
 
 function ativarbarra(){
 

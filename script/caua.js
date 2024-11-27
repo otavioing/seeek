@@ -3,14 +3,18 @@
 
 function ModoEscuro() {
   let corpo = document.getElementById("todo");
+  let logosobre = document.getElementById("logoseeksobrenosmodoescuro");
   corpo.classList.add("modoEscuro");
   localStorage.setItem("modo", "escuro");
+  logosobre.src = "img/teste/Group 776modoescuro.svg";
 }
 
 function ModoClaro() {
   let corpo = document.getElementById("todo");
+  let logosobre = document.getElementById("logoseeksobrenosmodoescuro");
   corpo.classList.remove("modoEscuro");
   localStorage.setItem("modo", "claro");
+  logosobre.src = "img/Group 776.svg";
 }
 
 function MudarModos() {

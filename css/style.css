@@ -1001,7 +1001,7 @@ footer {
 
 .welcome-container {
     width: 100%;
-
+    display: none;
 }
 
 .titulocadastro1 {
