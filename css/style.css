@@ -1531,11 +1531,12 @@ footer {
     border: none;
     padding: 5px;
     cursor: pointer;
-    border-radius: 1rem;
+    border-radius: 25px;
     transition: 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .divativacaobarradeacessibilidade button:hover{
     background-color: var(--branco);
@@ -1548,13 +1549,14 @@ footer {
 }
 .divbarradeacessibilidade{
     background-color: var(--branco);
-    border-radius: 1rem;
+    border-radius: 28px;
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5px;
-    gap: 6px;
+    padding: 5px 0 22px 0;
+    gap: 8px;
+    box-shadow: 0rem 0rem 1rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 #logodafatecdabarradeacessibilidade{
     width: 2.5rem;
