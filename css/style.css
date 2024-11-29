@@ -172,7 +172,10 @@ svg .st8{
     fill: #0E0E0E;
     }
     
-
+.modoEscuro .divmenuperfil:hover {
+    background-color: var(--ModoEscuroMesc2);
+    
+}
 /*-------------------------------- Header inicio --------------------------------*/
 
 header {
@@ -916,6 +919,8 @@ footer {
     cursor: pointer;
 }
 
+
+
 .divconfiguracoes {
     display: flex;
     align-items: center;
@@ -927,6 +932,7 @@ footer {
 
 .divmenuperfil:hover {
     background-color: var(--brancoBase);
+    
 }
 
 .divmodoescuro {
