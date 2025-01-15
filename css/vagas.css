@@ -88,7 +88,7 @@
 
 .modoEscuro .mmoreinfo button , 
 .modoEscuro .aplicarfiltrovagas button,
-.modoEscuro .caminhonavegaçãovagas h1{
+.modoEscuro .caminhonavegaçãovagas h1,.modoEscuro .botaofiltrarcursosmedia1200px button{
     color: var(--ModoEscuroFontV);
 } 
 
@@ -106,6 +106,20 @@
 
 .modoEscuro .caixaflutuante{
     background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro .botaofiltrarcursosmedia, .modoEscuro .botaofiltrarcursosmedia1200px{
+    background-color: var(--ModoEscuroMesc);
+    border: 1px solid var(--ModoEscuroMesc2);
+}
+
+.modoEscuro .botaofiltrarcursosmedia button,
+.modoEscuro .botaofiltrarcursosmedia1200px button{
+    color: var(--ModoEscuroFontV);
+}
+
+.modoEscuro svg {
+    stroke: var(--ModoEscuroFontV);
 }
 /*-------------------------------- Modo Escuro fim--------------------------------*/
 
@@ -199,8 +213,10 @@
     border-bottom: 1.5px solid var(--azulBase);
 }
 
-.filtroflutuante img {
-    width: 50px;
+.filtroflutuante .SvgPrincipal {
+    width: 70px;
+    stroke-width: 3.57528;
+    stroke-linecap: round;
 }
 
 .titulofiltroflutuante {
@@ -221,6 +237,11 @@
     align-items: center;
     gap: 0.5rem;
     margin-top: 2rem;
+}
+
+svg {
+    fill-opacity: 0;
+    stroke: var(--azulBase);  
 }
 
 .aplicarfiltrovagas button {
@@ -506,9 +527,12 @@
     display: none;
 }
 
-.botaofiltrarcursosmedia img, .botaofiltrarcursosmedia1200px img {
+.botaofiltrarcursosmedia svg, .botaofiltrarcursosmedia1200px svg {
     width: 40px;
+    stroke-width: 3.57528;
+    stroke-linecap: round;
 }
+
 .divparadarogapentrealabeleoinput{
     display: flex;
     justify-content: space-between;

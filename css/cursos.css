@@ -73,7 +73,8 @@
 .modoEscuro .aplicar a,
 .modoEscuro h1,
 .modoEscuro .aplicarfiltrocursos button,
-.modoEscuro .valordocursoebotaofavorito p {
+.modoEscuro .valordocursoebotaofavorito p,
+.modoEscuro .botaomaisinfocursoscaixaflutuante a {
     color: var(--ModoEscuroFontC);
 }
 
@@ -81,7 +82,7 @@
 .modoEscuro .linhaPreco,
 .modoEscuro .linhahabi,
 .modoEscuro .duracao,
-.modoEscuro .loc {
+.modoEscuro .loc{
     border-bottom: var(--ModoEscuroFontC) 1px solid;
 }
 
