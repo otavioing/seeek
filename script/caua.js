@@ -613,7 +613,7 @@ function aplicarIdioma() {
       PresencialCursos:"Presencial",
       Homeoffice:"Home office",
       AplicarGeral:"Aplicar",
-      LimparGeral:"Limpar Filto",
+      LimparGeral:"Limpar Filtro",
       NomeCurso:"Nome do Curso",
       PrecodecadaCurso:"R$23,00/mês",
 
