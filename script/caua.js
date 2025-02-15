@@ -3,26 +3,14 @@
 
 function ModoEscuro() {
   let corpo = document.getElementById("todo");
-  let imgemailsobrenos = document.getElementById("imgemailsobrenos");
-  let imglinkdinsobrenos = document.getElementById("imglinkdinsobrenos");
-  let imginstagramsobrenos = document.getElementById("imginstagramsobrenos");
   corpo.classList.add("modoEscuro");
   localStorage.setItem("modo", "escuro");
-  imgemailsobrenos.src = "img/emailsobrenoss modoescuro.svg";
-  imglinkdinsobrenos.src = "img/logo linkedinsobrenos modoescuro.svg";
-  imginstagramsobrenos.src = "img/teste/Vectorawdawmodoescuro.svg";
 }
 
 function ModoClaro() {
   let corpo = document.getElementById("todo");
-  let imgemailsobrenos = document.getElementById("imgemailsobrenos");
-  let imglinkdinsobrenos = document.getElementById("imglinkdinsobrenos");
-  let imginstagramsobrenos = document.getElementById("imginstagramsobrenos");
   corpo.classList.remove("modoEscuro");
   localStorage.setItem("modo", "claro");
-  imgemailsobrenos.src = "img/emailsobrenoss.svg";
-  imglinkdinsobrenos.src = "img/logo linkedinsobrenos.svg";
-  imginstagramsobrenos.src = "img/Vectorawdaw.svg";
 }
 
 function MudarModos() {
@@ -543,7 +531,7 @@ function aplicarIdioma() {
       ModalCompartilhar:"Compartilhar",
       PortifolioTeste:"Teste portfolio",
       portSalvar:"salvar",
-      PortifolioAutor:"Author",
+      PortifolioAutor:"Autor",
       seguidoresIndex:"Seguidores", 
       SalvarimgIndex:"Salvar",
       ModalPortifolio:"Protótipo de portifólio",
@@ -639,6 +627,17 @@ function aplicarIdioma() {
       AjudaTextoPortifolio:"Começando pela parte do usuário, você pode configurar sua conta da forma como quiser e até podendo alterar o tipo dela, podendo selecionar um tipo de conta para professores,ou a padrão(artistas), ou empresa.",
       AjudaCursoseVagasTexto:"Semelhante ao portfólio, você pode acesar o curso ou vaga ao clicar na sua capa, e caso queira mais informações, é só clicar em “mais informações” para poder ver melhor as especificações da vaga, ou do curso, além também poder acesar os cursos que você queira pela barra de pesquisa ou pelo menu inddo em “cursos” ou “vagas”",
       AjudaCadastroGeral:"Na página de entra/cadastro, você utiliza seu e-mail principal ou de preferência para poder acesar o site caso queira, do contrário é só clicar na seta no canto superior direito para acessar o site como anônimo",
+
+      PerfilSeguir:"Seguir",
+      PerfilProjetos:"Projetos",
+      PerfilEditar:"Editar",
+      PerfilTrocarDeUsuario:"Trocar De Usuário",
+      PerfilProjetosfeitos:"Projetos Feitos",
+      PerfilClassificação:"Classificação",
+      PerfilSobreUsuario:"Sobre o Usuário",
+      PerfilCertificados: "Certificados",
+      PerfilBloquearouDenunciar: "Bloquear/Denunciar",
+
 
 
     }
@@ -1223,6 +1222,16 @@ function aplicarIdioma() {
   var AjudaCadastroGeralAjuda= document.getElementsByClassName("CadAT");
   for (var i = 0; i < AjudaCadastroGeralAjuda.length; i++) {
     AjudaCadastroGeralAjuda[i].innerHTML = idioma[selectedLanguage].AjudaCadastroGeral;
+  }
+
+  var SeguirPerfilUso= document.getElementsByClassName("SegUso");
+  for (var i = 0; i < SeguirPerfilUso.length; i++){
+    SeguirPerfilUso[i].innerHTML = idioma[selectedLanguage].PerfilSeguir
+  }
+
+  var ProjetoPerfilUso= document.getElementsByClassName("ProUso");
+  for (var i = 0; i < ProjetoPerfilUso.length; i++){
+    ProjetoPerfilUso[i].innerHTML = idioma[selectedLanguage].PerfilProjetos
   }
 
 

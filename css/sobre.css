@@ -60,6 +60,12 @@
     fill: white;
   }
 
+  
+.modoEscuro .contatosobrenos2{
+    fill: white;
+
+}
+
 /*-------------------------------- Modo Escuro Fim --------------------------------*/
 
 
@@ -642,10 +648,6 @@ main {
 
     .contatosobrenos2 div a {
         font-size: 0.7rem;
-    }
-
-    .contatosobrenos2 div img {
-        width: 20px;
     }
 
 }
