@@ -56,7 +56,8 @@ h1{
     margin: 2rem 1rem;
 }
 
-.carrocel1-tend{
+.carrossel-tendencias{
+    position: relative;
     background-color: var(--cinzaBasec);
     padding: 1rem;
     display: flex;
@@ -69,24 +70,55 @@ h1{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.carrocel-tend{
+.carrossel-tend{
     display: flex;
     align-items: center;
     gap: 3rem;
     flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 1rem;
+    scrollbar-width: none;
+    width: 100%;
+    -ms-overflow-style: none;  /* Para o IE/Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
-.carrocel-tend-item{
+.carrossel-tend::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem */
+}
+
+.carrossel-tend-item{
     height: 15rem;
     width: 20rem;
-    object-fit: cover;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    margin-right: 1rem;
+    flex: 0 0 auto;
 }
 
-.carrocel-tend-item img{
+.carrossel-tend-item img {
+    width: 100%;
     height: 100%;
     border-radius: 1rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.seta-direita, .seta-esquerda {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    color: var(--brancoBase);
+    cursor: pointer;
+    background-color: var(--azulBase);
+    padding: 0.5rem;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.seta-esquerda {
+    left: 10px;
+}
+
+.seta-direita {
+    right: 10px;
 }
