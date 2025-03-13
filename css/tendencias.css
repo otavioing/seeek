@@ -105,6 +105,8 @@ h1{
 }
 
 .seta-direita, .seta-esquerda {
+    height: 3rem;
+    width: 3rem;
     position: absolute;
     top: 50%;
     font-size: 2rem;
@@ -114,12 +116,21 @@ h1{
     padding: 0.5rem;
     border-radius: 50%;
     z-index: 1;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .seta-esquerda {
     left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .seta-direita {
     right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
