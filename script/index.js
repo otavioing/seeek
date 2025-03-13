@@ -1,8 +1,3 @@
-var modal = document.getElementById("modalPort");
-var divPort = document.querySelectorAll(".divPortifolio");
-var modalImage = document.getElementById("modalImage");
-var span = document.getElementsByClassName("close")[0];
-var body = document.body;
 
 window.addEventListener('load', function() 
 {const queryString = window.location.search;
@@ -15,6 +10,15 @@ window.addEventListener('load', function()
         document.getElementById('user-box').style.display = 'block';
     }
 })
+
+
+
+// Função para abrir o modal com a imagem do portifólio
+var modal = document.getElementById("modalPort");
+var divPort = document.querySelectorAll(".divPortifolio");
+var modalImage = document.getElementById("modalImage");
+var span = document.getElementsByClassName("close")[0];
+var body = document.body;
 
 for (let i = 0; i < divPort.length; i++) {
     divPort[i].addEventListener("click", function () {
@@ -40,30 +44,30 @@ window.onclick = function (event) {
 }
 
 
+
 // Função para mover o scroll horizontalmente a página de tendências
-const carrossel = document.querySelectorAll('.carrossel-tend');
-const setaEsquerda = document.querySelectorAll('.seta-esquerda');
-const setaDireita = document.querySelectorAll('.seta-direita');
+function moverDir(button) {
+    // Encontrar o carrossel relacionado ao botão clicado
+    var carrossel = button.parentElement.querySelector('.carrossel-tend');
+    
+    // Definir uma fração da largura do carrossel para mover (exemplo: 1/3 da largura)
+    var parte = carrossel.clientWidth / 3;
+    
+    // Mover para a direita, rolando para a próxima parte
+    carrossel.scrollBy({ left: parte, behavior: 'smooth' });
+}
 
-// Calculando a largura de um item do carrossel
-const itemCarrossel = document.querySelectorAll('.carrossel-tend-item');
-const larguraItem = itemCarrossel ? itemCarrossel.offsetWidth : 300; // Valor padrão de 300px se não encontrado
+function moverEsq(button) {
+    // Encontrar o carrossel relacionado ao botão clicado
+    var carrossel = button.parentElement.querySelector('.carrossel-tend');
+    
+    // Definir uma fração da largura do carrossel para mover (exemplo: 1/3 da largura)
+    var parte = carrossel.clientWidth / 3;
+    
+    // Mover para a esquerda, rolando para a parte anterior
+    carrossel.scrollBy({ left: -parte, behavior: 'smooth' });
+}
 
-// Função para mover o scroll para a esquerda
-setaEsquerda.addEventListener('click', () => {
-    carrossel.scrollBy({
-        left: -larguraItem, // Move para a esquerda um item por vez
-    });
-});
-
-// Função para mover o scroll para a direita
-setaDireita.addEventListener('click', () => {
-    carrossel.scrollBy({
-        left: larguraItem, // Move para a direita um item por vez
-    });
-});
-
-//TODO: Arrumar o scroll horizontal da página de tendências
 
 
 // Função para selecionar o tipo de usuário, caixinha de usuario pra escolher conta empresarial ou padrao.
