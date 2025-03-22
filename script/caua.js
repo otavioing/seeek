@@ -148,8 +148,20 @@ function aplicarIdioma() {
       AjudaTextoUsuario: "Starting with the user part, you can configure your account as you like and even change its type, choosing an account type for teachers, or the default (artists), or company.",
       AjudaTextoPortifolio: "Starting with the user part, you can configure your account as you like and even change its type, choosing an account type for teachers, or the default (artists), or company.",
       AjudaCursoseVagasTexto: "Similar to the portfolio, you can access the course or job by clicking on its cover, and if you want more information, just click on 'more information' to see better the job or course specifications, as well as being able to access the courses you want via the search bar or menu by going to 'courses' or 'jobs'.",
-      AjudaCadastroGeral: "On the login/registration page, use your main or preferred email to access the site if you want, otherwise just click on the arrow in the top right corner to access the site as anonymous."
+      AjudaCadastroGeral: "On the login/registration page, use your main or preferred email to access the site if you want, otherwise just click on the arrow in the top right corner to access the site as anonymous.",
       
+      PerfilSeguir: "Follow",
+      PerfilCidadesPaises: "City and Country",
+      PerfilProjetos: "Projects",
+      PerfilEditar: "Edit",
+      PerfilTrocarDeUsuario: "Switch User",
+      PerfilProjetosfeitos: "Completed Projects",
+      PerfilClassificação: "Rating",
+      PerfilSobreUsuario: "About the User",
+      PerfilCertificados: "Certificates",
+      PerfilBloquearouDenunciar: "Block/Report",
+      PerfilHoras: "Hours",
+      ProjetosTendencias: "thousand Projects",
       
 
     },
@@ -267,11 +279,20 @@ function aplicarIdioma() {
       AjudaTextoUsuario: "Comenzando por la parte del usuario, puedes configurar tu cuenta como desees e incluso cambiar su tipo, eligiendo un tipo de cuenta para profesores, o la predeterminada (artistas), o empresa.",
       AjudaTextoPortifolio: "Comenzando por la parte del usuario, puedes configurar tu cuenta como desees e incluso cambiar su tipo, eligiendo un tipo de cuenta para profesores, o la predeterminada (artistas), o empresa.",
       AjudaCursoseVagasTexto: "Similar al portafolio, puedes acceder al curso o vacante haciendo clic en su portada, y si quieres más información, simplemente haz clic en 'más información' para ver mejor las especificaciones de la vacante o del curso, además de poder acceder a los cursos que desees a través de la barra de búsqueda o del menú yendo a 'cursos' o 'vacantes'.",
-      AjudaCadastroGeral: "En la página de inicio/sesión, usa tu correo principal o de preferencia para acceder al sitio si deseas, de lo contrario simplemente haz clic en la flecha en la esquina superior derecha para acceder al sitio como anónimo."
-      
-      
+      AjudaCadastroGeral: "En la página de inicio/sesión, usa tu correo principal o de preferencia para acceder al sitio si deseas, de lo contrario simplemente haz clic en la flecha en la esquina superior derecha para acceder al sitio como anónimo.",
 
-
+      PerfilSeguir: "Seguir",
+      PerfilCidadesPaises: "Ciudad y País",
+      PerfilProjetos: "Proyectos",
+      PerfilEditar: "Editar",
+      PerfilTrocarDeUsuario: "Cambiar de Usuario",
+      PerfilProjetosfeitos: "Proyectos Hechos",
+      PerfilClassificação: "Clasificación",
+      PerfilSobreUsuario: "Sobre el Usuario",
+      PerfilCertificados: "Certificados",
+      PerfilBloquearouDenunciar: "Bloquear/Denunciar",
+      PerfilHoras: "Horas",
+      
     },
 
       it: {
@@ -388,7 +409,20 @@ function aplicarIdioma() {
       AjudaTextoUsuario: "A partire dalla parte utente, puoi configurare il tuo account come preferisci e anche modificare il tipo, scegliendo tra un account per insegnanti, l'account standard (artisti) o aziendale.",
       AjudaTextoPortifolio: "A partire dalla parte utente, puoi configurare il tuo account come preferisci e anche modificare il tipo, scegliendo tra un account per insegnanti, l'account standard (artisti) o aziendale.",
       AjudaCursoseVagasTexto: "Simile al portfolio, puoi accedere al corso o all'offerta di lavoro facendo clic sulla copertina, e se desideri ulteriori informazioni, basta fare clic su 'maggiori informazioni' per vedere meglio le specifiche dell'offerta o del corso. Inoltre, puoi anche accedere ai corsi che desideri attraverso la barra di ricerca o il menu andando su 'corsi' o 'offerte di lavoro'.",
-      AjudaCadastroGeral: "Nella pagina di accesso/registrazione, utilizza la tua email principale o preferita per poter accedere al sito se lo desideri, altrimenti basta fare clic sulla freccia in alto a destra per accedere al sito come anonimo."
+      AjudaCadastroGeral: "Nella pagina di accesso/registrazione, utilizza la tua email principale o preferita per poter accedere al sito se lo desideri, altrimenti basta fare clic sulla freccia in alto a destra per accedere al sito come anonimo.",
+
+      PerfilSeguir: "Segui",
+      PerfilCidadesPaises: "Città e Paese",
+      PerfilProjetos: "Progetti",
+      PerfilEditar: "Modifica",
+      PerfilTrocarDeUsuario: "Cambia Utente",
+      PerfilProjetosfeitos: "Progetti Completati",
+      PerfilClassificação: "Classificazione",
+      PerfilSobreUsuario: "Informazioni sull'Utente",
+      PerfilCertificados: "Certificati",
+      PerfilBloquearouDenunciar: "Blocca/Segnala",
+      PerfilHoras: "Ore",
+      ProjetosTendencias: "mille Progetti",
 
    
     },
@@ -506,7 +540,20 @@ function aplicarIdioma() {
       AjudaTextoUsuario: "En commençant par la partie utilisateur, vous pouvez configurer votre compte comme vous le souhaitez et même en modifier le type, en choisissant un type de compte pour enseignants, ou le type standard (artistes), ou entreprise.",
       AjudaTextoPortifolio: "En commençant par la partie utilisateur, vous pouvez configurer votre compte comme vous le souhaitez et même en modifier le type, en choisissant un type de compte pour enseignants, ou le type standard (artistes), ou entreprise.",
       AjudaCursoseVagasTexto: "Comme pour le portfolio, vous pouvez accéder au cours ou à l'offre en cliquant sur sa couverture, et si vous souhaitez plus d'informations, il suffit de cliquer sur 'plus d'informations' pour mieux voir les spécifications de l'offre ou du cours. Vous pouvez également accéder aux cours que vous souhaitez via la barre de recherche ou le menu en allant sur 'cours' ou 'offres d'emploi'.",
-      AjudaCadastroGeral: "Sur la page de connexion/inscription, utilisez votre email principal ou préféré pour pouvoir accéder au site si vous le souhaitez, sinon il suffit de cliquer sur la flèche en haut à droite pour accéder au site en tant qu'anonyme."
+      AjudaCadastroGeral: "Sur la page de connexion/inscription, utilisez votre email principal ou préféré pour pouvoir accéder au site si vous le souhaitez, sinon il suffit de cliquer sur la flèche en haut à droite pour accéder au site en tant qu'anonyme.",
+
+      PerfilSeguir: "Suivre",
+      PerfilCidadesPaises: "Ville et Pays",
+      PerfilProjetos: "Projets",
+      PerfilEditar: "Éditer",
+      PerfilTrocarDeUsuario: "Changer d'Utilisateur",
+      PerfilProjetosfeitos: "Projets Réalisés",
+      PerfilClassificação: "Classement",
+      PerfilSobreUsuario: "À Propos de l'Utilisateur",
+      PerfilCertificados: "Certificats",
+      PerfilBloquearouDenunciar: "Bloquer/Signaler",
+      PerfilHoras: "Heures",
+      ProjetosTendencias: "mille Projets",
 
     },
 
@@ -629,6 +676,7 @@ function aplicarIdioma() {
       AjudaCadastroGeral:"Na página de entra/cadastro, você utiliza seu e-mail principal ou de preferência para poder acesar o site caso queira, do contrário é só clicar na seta no canto superior direito para acessar o site como anônimo",
 
       PerfilSeguir:"Seguir",
+      PerfilCidadesPaises: "Cidade e País",
       PerfilProjetos:"Projetos",
       PerfilEditar:"Editar",
       PerfilTrocarDeUsuario:"Trocar De Usuário",
@@ -637,6 +685,10 @@ function aplicarIdioma() {
       PerfilSobreUsuario:"Sobre o Usuário",
       PerfilCertificados: "Certificados",
       PerfilBloquearouDenunciar: "Bloquear/Denunciar",
+      PerfilHoras:"Horas",
+
+      ProjetosTendencias: "mil Projetos",
+
 
 
 
@@ -649,6 +701,66 @@ function aplicarIdioma() {
   // Atualiza o texto com base no idioma selecionado variando entre pt-br/eng/esp (não ta travando)
 
 }
+
+// Têndencias
+
+var TendenciasProjetos = document.getElementsByClassName("Tmproj")
+for (var i = 0; i < TendenciasProjetos.length; i++) {
+  TendenciasProjetos[i].innerHTML = idioma[selectedLanguage].ProjetosTendencias;
+}
+
+// Usuarios
+
+var HorasPerfil = document.getElementsByClassName("UsoH")
+for (var i = 0; i < HorasPerfil.length; i++) {
+  HorasPerfil[i].innerHTML =idioma[selectedLanguage].PerfilHoras
+}
+
+var TrocarDeUsuarioPerfil = document.getElementsByClassName("UsoTU")
+for (var i = 0; i < TrocarDeUsuarioPerfil.length; i++) {
+  TrocarDeUsuarioPerfil[i].innerHTML = idioma[selectedLanguage].PerfilTrocarDeUsuario;
+}
+
+var CidadesPaisesPerfil = document.getElementsByClassName("UsoCP")
+for (var i = 0; i < CidadesPaisesPerfil.length; i++) {
+  CidadesPaisesPerfil[i].innerHTML = idioma[selectedLanguage].PerfilCidadesPaises;
+}
+
+var EditarPerfil = document.getElementsByClassName("UsoE")
+for (var i = 0; i < EditarPerfil.length; i++) {
+  EditarPerfil[i].innerHTML = idioma[selectedLanguage].PerfilEditar;
+}
+
+var ProjetosPerfil = document.getElementsByClassName("UsoP")
+for (var i = 0; i < ProjetosPerfil.length; i++) {
+  ProjetosPerfil[i].innerHTML = idioma[selectedLanguage].PerfilProjetos;
+}
+
+var ProjetosFeitosPerfil = document.getElementsByClassName("UsoPF")
+for (var i = 0; i < ProjetosFeitosPerfil.length; i++) {
+  ProjetosFeitosPerfil[i].innerHTML = idioma[selectedLanguage].PerfilProjetosfeitos;
+}
+
+var TendenciasProjetos = document.getElementsByClassName("UsoC")
+for (var i = 0; i < TendenciasProjetos.length; i++) {
+  TendenciasProjetos[i].innerHTML = idioma[selectedLanguage].PerfilClassificação;
+}
+
+var SobreUsuarioPerfil = document.getElementsByClassName("UsoSU")
+for (var i = 0; i < SobreUsuarioPerfil.length; i++) {
+  SobreUsuarioPerfil[i].innerHTML = idioma[selectedLanguage]. PerfilSobreUsuario;
+}
+
+var CertificadosPerfil = document.getElementsByClassName("UsoCE")
+for (var i = 0; i < CertificadosPerfil.length; i++) {
+  CertificadosPerfil[i].innerHTML = idioma[selectedLanguage].PerfilCertificados;
+}
+
+var BloquearEDenunciarPerfil = document.getElementsByClassName("UsoBD")
+for (var i = 0; i < BloquearEDenunciarPerfil.length; i++) {
+  BloquearEDenunciarPerfil[i].innerHTML = idioma[selectedLanguage].PerfilBloquearouDenunciar;
+}
+
 
 
 // Header e Footer
