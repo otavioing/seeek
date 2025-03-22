@@ -47,6 +47,16 @@
 
 }
 
+/*-------------------- Modo Escuro --------------------*/
+.modoEscuro .carrossel-tendencias {
+    background-color: var(--ModoEscuroMesc2);
+}
+
+
+/*-------------------- Modo Escuro --------------------*/
+
+
+
 body{
     overflow-x: hidden;
     width: 100vw;
