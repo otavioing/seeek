@@ -1,0 +1,359 @@
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasee: #00008b;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --branco: #f3f3f3;
+
+    --brancomenuperfil: #E6E6E6;
+
+    --brancohovermenuham: rgba(217, 217, 217, 1);
+
+
+    --cinzaescurofundodomudartema: #3A3A3A;
+
+    --vermelhom: #EF0000;
+    --ModoEscuroVermelho:#fd4848;
+
+
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroFilt: #131313;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroMesc2: #555555;
+
+
+    --ModoEscuroFontV: #5AB3FF;
+    --ModoEscuroFontC: #E197FF;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* body {
+    overflow-x: hidden;
+    width: 100%;
+
+} */
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brancoBase);
+}
+
+/*----------------------------------------------------------*/
+
+.mainInfoCursos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+}
+
+.containerr{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.2rem;
+    background-color: var(--brancoBase);
+    border-radius: 1rem;
+}
+
+.cursoInfo, .assinarCurso{
+    width: 80%;
+    background-color: var(--cinzaBasec);
+    border: 1px solid var(--cinzaBasee);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.cursoInfo .headerCurso{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.logoNome{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nomeSeguidores{
+    transform: translateY(-0.2rem);
+}
+
+.nomeSeguidores p{
+    margin-bottom: 0.2rem;
+}
+
+.btnSeguir{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--roxobase);
+    border: none;
+    color: var(--brancoBase);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.mainCurso h4{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.videoCurso{
+    margin-bottom: 1.5rem;
+}
+
+.videoCurso img{
+    width: 85%;
+}
+
+.descCurso{
+    width: 85%;
+    text-align: justify;
+}
+
+.descCurso h5{
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+}
+
+.aulasCursos{
+    margin-top: 1.5rem;
+    column-count: 2;
+    column-gap: 1.5rem;
+}
+
+.aulasCursos div{
+    margin-bottom: 1rem;
+}
+
+.aulasCursos div img{
+    width: 75%;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.assinarCurso{
+    width: 20%;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.assinarCurso h4{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.assinarCurso button{
+    padding: 0.3rem 0.5rem;
+    width: 80%;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--roxobase);
+    color: var(--brancoBase);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.assinarCurso .divs div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tags{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tag{
+    width: 100%;
+    margin-top: 0.5rem;
+    column-count: 3;
+    break-inside: avoid-column;
+}
+
+.tag button{
+    padding: 0.3rem 0.3rem;
+    height: 1.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: var(--azulBase);
+    color: var(--brancoBase);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1400px){
+    .tag{
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .containerr{
+        flex-direction: column;
+    }
+
+    .cursoInfo{
+        width: 100%;
+    }
+
+    .assinarCurso{
+        width: 100%;
+        height: 30rem;
+    }
+    
+    .tag{
+        column-count: 3;
+    }
+
+
+}
+
+@media screen and (max-width: 950px){
+    .containerr{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .mainInfoCursos{
+        padding: 1rem;
+    }
+
+    .mainCurso h4{
+        font-size: 1.5rem;
+    }
+
+    .videoCurso img{
+        width: 100%;
+    }
+
+    .aulasCursos div img{
+        width: 90%;
+    }
+
+    .descCurso{
+        width: 90%;
+    }
+
+    .btnSeguir p{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+
+    .mainInfoCursos{
+        padding: 0.2rem;
+    }
+
+    .nomeSeguidores h2{
+        font-size: 1rem;
+    }
+
+    .nomeSeguidores{
+        width: 100%;
+    }
+
+    .nomeSeguidores p{
+        font-size: 0.8rem;
+    }
+
+    .logoNome{
+        width: 90%;
+    }
+
+    .logoNome img{
+        width: 3rem;
+    }
+
+    .btnSeguir{
+        height: 2rem;
+    }
+
+    .aulasCursos div img{
+        width: 100%;
+    }
+
+    .descCurso p{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 300px){
+
+    .mainCurso h4{
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .descCurso h5{
+        font-size: 1rem;    
+    }
+
+    .aulasCursos{
+        column-count: 1;
+    }
+
+    .aulasCursos div img{
+        width: 85%;
+    }   
+
+    .aulasCursos div p{
+        font-size: 0.8rem;
+    }
+
+}

@@ -391,6 +391,7 @@ svg {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 .localdavaga button{
     background-color: transparent;
@@ -421,7 +422,8 @@ svg {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    height: 5rem;
+    height: 3rem;
+    margin-top: 0.5rem;
 }
 
 .discriçãodavaga {

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Início - Seek</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/infocursos.css">
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-SLCTJL00KV');
+</script>
+
+<body id="todo">
+  <div class="divativacaobarradeacessibilidade">
+    <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra">
+      <img src="img/barra/icon.svg" alt="símbolo da onu" />
+    </button>
+  </div>
+
+  <div id="barra" class="divbarradeacessibilidade">
+    <button onclick="desativarbarra()" class="botaoativacaobarra">
+      <img src="img/barra/icon.svg" alt="símbolo da onu" />
+    </button>
+
+    <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+    </button>
+
+    <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+    </button>
+
+    <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/luabarra.svg" alt="Lua" />
+    </button>
+
+    <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/solbarra.svg" alt="Sol" />
+    </button>
+
+    <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+    </button>
+
+    <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
+  </div>
+
+  <header class="inicio">
+    <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
+      <span class="linha1"></span>
+      <span class="linha2"></span>
+      <span class="linha3"></span>
+    </button>
+    <div class="logosite">
+      <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek" /></a>
+    </div>
+    <div class="userhover">
+      <button>
+        <img onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu" />
+      </button>
+    </div>
+    <nav class="navsite">
+      <div id="headerexplurar">
+        <a href="index.html" class="nav-link ExpA">Explorar</a>
+      </div>
+      <div id="headercursos">
+        <a href="cursos.html" class="nav-link CurA">Cursos</a>
+      </div>
+      <div id="headervagas">
+        <a href="vagas.html" class="nav-link VagA">Vagas</a>
+      </div>
+      <div class="sobrenoss">
+        <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
+      </div>
+    </nav>
+    <div class="pesquisasite">
+      <input type="text" placeholder="Pesquisar" class="Pesquisar" />
+      <a href=""><img src="img/search2.svg" alt="Lupa" /></a>
+    </div>
+    <div class="usersite">
+      <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
+      <button onclick="abrirMenu()">
+        <img src="img/user2.svg" alt="User" />
+      </button>
+    </div>
+    <nav class="hamburguer" id="menu">
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="index.html">
+          <span class="ExpA">Explorar </span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="cursos.html">
+          <span class="CurA">Cursos </span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="vagas.html">
+          <span class="VagA">Vagas</span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="sobre.html"><span class="SobA">Sobre Nós</span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="ajuda.html">
+          <span class="AjuF">Ajuda</span>
+        </a>
+      </div>
+      <div class="bordasuperior"></div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"><span class="AviF">Avisos</span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="avisos.html">
+          <span class="AtuF">Atualizações </span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="sobre.html#contatosobre">
+          <span class="Conf">Contato </span></a>
+      </div>
+
+      <div class="itemsdomenu">
+        <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+          <option value="pt">Português</option>
+          <option value="eng">English</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+      <div class="bordasuperior"></div>
+
+      <div class="divredessociais">
+        <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"><img src="img/Linkedin.svg"
+            alt="Logo Linkedin" /></a>
+        <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
+        <a href="https://www.instagram.com/seek.oficial/"><img src="img/instagram.svg" alt="Logo instagram" /></a>
+      </div>
+      <div class="bordasuperior"></div>
+
+      <div class="direitosautoraismenu">
+        <p class="DirF">
+          Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+        </p>
+      </div>
+    </nav>
+
+    <div id="menuperfil" class="menuperfil">
+      <div class="divmenuperfil">
+        <a href="usuario.html" class="Perf">Meu Perfil</a>
+      </div>
+      <!-- <div class="divmenuperfil">
+        <a href="index.html" class="Conf">Configurações</a>
+      </div> -->
+      <div class="botaomodoescuro">
+        <label for=""><img src="img/lua.png" alt="Lua" /></label>
+        <div class="checkbox-con">
+          <input onclick="MudarModos()" id="checkbox" type="checkbox" checked />
+        </div>
+        <label for=""><img src="img/sol.png" alt="Sol" /></label>
+      </div>
+      <button id="sairdomenuperfil" class="sairP"><a href="login.html" style="color: red;">Sair</a></button>
+    </div>
+  </header>
+
+  <main class="mainInfoCursos">
+
+    <div class="containerr">
+
+        <div class="cursoInfo">
+            <div class="headerCurso">
+                <div class="logoNome">
+                    <img src="img/iconeperfil.svg" alt="">
+                    <div class="nomeSeguidores">
+                        <h2>Nome do criador</h2>
+                        <p>0 seguidores</p>
+                        <p>São Paulo/Brasil</p>
+                    </div>
+                </div>
+                <button class="btnSeguir"><p>Seguir</p><img src="img/circle.svg" alt=""></button>
+            </div>
+
+            <div class="mainCurso">
+                <h4>Curso de Design</h4>
+
+                <div class="videoCurso">
+                    <img src="img/imagemtestecurso.png" alt="">
+                </div>
+                <div class="descCurso">
+                    <h5>Descrição completa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod a illo, tempore vitae ipsum quos cum est culpa possimus, cumque ipsam consequatur. Cupiditate, rerum non dolores esse sunt libero magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magni sequi ducimus totam vel delectus minus voluptates rerum quos cupiditate odio, non enim at, iusto tenetur? Quam vel necessitatibus possimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis modi corrupti doloremque esse facere repudiandae dolor consequatur suscipit, quae obcaecati sapiente delectus enim ipsa natus sed error perspiciatis, dignissimos rerum!</p>
+                </div>
+
+                <div class="videosCurso">
+                    <div class="aulasCursos">
+                        <div>
+                            <img src="img/banner-designer-grafico.png" alt="">
+                            <p>Introdução</p>
+                            <p>45min</p>
+                        </div>
+                        <div>
+                            <img src="img/banner-designer-grafico.png" alt="">
+                            <p>Introdução</p>
+                            <p>45min</p>
+                        </div>
+                        <div>
+                            <img src="img/banner-designer-grafico.png" alt="">
+                            <p>Introdução</p>
+                            <p>45min</p>
+                        </div>
+                        <div>
+                            <img src="img/banner-designer-grafico.png" alt="">
+                            <p>Introdução</p>
+                            <p>45min</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="assinarCurso">
+            <h4>R$ 23,00/mês</h4>
+            <button>Assinar</button>
+
+            <div class="divs">
+                <div>
+                    <img src="img/estrela.svg" alt="">
+                    <p>Level: iniciante</p>
+                </div>
+                <div>
+                    <img src="img/estrela.svg" alt="">
+                    <p>Módulos: 15 (50min)</p>
+                </div>
+                <div>
+                    <img src="img/estrela.svg" alt="">
+                    <p>Estudantes: 20.000</p>
+                </div>
+                <div>
+                    <img src="img/estrela.svg" alt="">
+                    <p>Likes: 89%</p>
+                </div>
+                <div>
+                    <img src="img/estrela.svg" alt="">
+                    <p>Áudio: português</p>
+                </div>
+                <div>
+                    <img src="img/estrela.svg" alt="">
+                    <p>CC: inglês, espanhol</p>
+                </div>
+            </div>
+
+            <div class="tags">
+                <p>Tags</p>
+                <div class="tag">
+                    <button><p>Tags</p></button>
+                    <button><p>Tags</p></button>
+                    <button><p>Tags</p></button>
+                    <button><p>Tags</p></button>
+                    <button><p>Tags</p></button>
+                    <button><p>Tags</p></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  </main>
+
+  <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    </div>
+
+
+  </div>
+  <div class="ativaredasativarvlibras">
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+  </div>
+
+<footer>
+    <div class="linksfooter">
+      <div class="infofooter">
+        <a href="ajuda.html" class="AjuF">Ajuda</a>
+        <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
+      </div>
+
+      <div class="infofooter">
+        <a href="sobre.html" class="SobA">Sobre Nós</a>
+        <a href="sobre.html#contatosobre" class="ConT">Contato</a>
+      </div>
+      <div class="infofooter">
+        <a href="avisos.html" class="AviF">Avisos</a>
+
+        <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+          <option value="pt">Português</option>
+          <option value="eng">English</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+
+      <div class="infofooter">
+        <img src="img/logoSeekk 3@2x.png" alt="Logo Seek" />
+      </div>
+    </div>
+
+    <div class="direitosautorais">
+      <p class="DirF">
+        Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+      </p>
+    </div>
+  </footer>
+  <script src="script/border.js"></script>
+  <script src="script/index.js"></script>
+  <script src="script/lfy.js"></script>
+  <script src="script/caua.js"></script>
+  <script src="script/cake.js"></script>
