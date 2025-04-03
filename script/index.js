@@ -43,7 +43,24 @@ window.onclick = function (event) {
     }
 }
 
+// Função para mostrar a área de pesquisa
+document.addEventListener("DOMContentLoaded", function () {
+    const buttonFiltro = document.querySelector(".buttonFiltro");
+    const areaDePesquisa = document.querySelector(".areaDePesquisa");
 
+    buttonFiltro.addEventListener("click", () => {
+        areaDePesquisa.classList.toggle("active");
+        body.style.overflow = "hidden";
+    });
+
+    // Fecha ao clicar fora da área de pesquisa
+    document.addEventListener("click", (event) => {
+        if (!areaDePesquisa.contains(event.target) && !buttonFiltro.contains(event.target)) {
+            areaDePesquisa.classList.remove("active");
+            body.style.overflow = "auto";
+        }
+    });
+});
 
 // Função para mover o scroll horizontalmente a página de tendências
 function moverDir(button) {
@@ -67,7 +84,6 @@ function moverEsq(button) {
     // Mover para a esquerda, rolando para a parte anterior
     carrossel.scrollBy({ left: -parte, behavior: 'smooth' });
 }
-
 
 
 // Função para selecionar o tipo de usuário, caixinha de usuario pra escolher conta empresarial ou padrao.
