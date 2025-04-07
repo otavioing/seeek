@@ -58,12 +58,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* body {
-    overflow-x: hidden;
-    width: 100%;
-
-} */
-
 body{
     min-height: 100vh;
     display: flex;
@@ -75,8 +69,6 @@ a {
     text-decoration: none;
     color: var(--brancoBase);
 }
-
-
 
 
 /*RESPONSIVIDADE DO SITE COMEÇA A BUGAR COM 430PX*/
@@ -401,14 +393,23 @@ header .botaoMenu span {
     width: 25rem;
     height: 100vh;
     background: var(--brancoBase);
-    padding: 20px;
+    padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.5rem;
     transform: translateX(100%); /* Começa fora da tela */
     transition: transform 0.4s ease-in-out;
     z-index: 1;
+}
+
+.areaDePesquisa .closeSearchArea {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--preto);
 }
 
 .areaDePesquisa.active {
@@ -417,7 +418,7 @@ header .botaoMenu span {
 
 .pesquisarindex {
     width: 100%;
-    padding: 10px;
+    padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 16px;
     font-size: 16px;
@@ -1666,6 +1667,7 @@ footer {
     header .botaoMenu {
         display: flex;
     }
+
     .bordasuperior {
         border-top: 1px solid var(--cinzaBasee);
         width: 80%;
@@ -1816,6 +1818,10 @@ footer {
 
     .modal-content {
         width: 80%;
+    }
+
+    .areaDePesquisa {
+        width: 100vw;
     }
 
 }

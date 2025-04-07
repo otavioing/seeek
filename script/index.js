@@ -33,7 +33,7 @@ for (let i = 0; i < divPort.length; i++) {
 
 span.onclick = function () {
     modal.style.display = "none";
-    body.style.overflow = "auto";
+    body.style.overflowY = "auto";
 }
 
 window.onclick = function (event) {
@@ -47,6 +47,7 @@ window.onclick = function (event) {
 document.addEventListener("DOMContentLoaded", function () {
     const buttonFiltro = document.querySelector(".buttonFiltro");
     const areaDePesquisa = document.querySelector(".areaDePesquisa");
+    const closeSearchArea = document.querySelector(".closeSearchArea");
 
     buttonFiltro.addEventListener("click", () => {
         areaDePesquisa.classList.toggle("active");
@@ -57,8 +58,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", (event) => {
         if (!areaDePesquisa.contains(event.target) && !buttonFiltro.contains(event.target)) {
             areaDePesquisa.classList.remove("active");
-            body.style.overflow = "auto";
+            body.style.overflowY = "auto";
         }
+    });
+
+    // Fecha a área de pesquisa ao clicar no botão de fechar
+    closeSearchArea.addEventListener("click", () => {
+        areaDePesquisa.classList.remove("active");
+        body.style.overflowY = "auto";
     });
 });
 
