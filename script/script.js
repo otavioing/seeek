@@ -17,17 +17,13 @@ function trocarBanner() {
 trocarBanner();
 setInterval(trocarBanner, 7500);
 
-// Script para redirecionar para a página principal
-function login(event) {
-    event.preventDefault();
-    window.location.href = "index.html?login=true";
-}
+
 
 let loginEmail = document.getElementById("loginEmail");
 let loginPsw = document.getElementById("loginPsw");
-let email = document.getElementById("email");
+let email = document.getElementById("cadastroEmail");
 let psw = document.getElementById("password");
-let pswRepeat = document.getElementById("pswRepeat");
+let pswRepeat = document.getElementById("cadastroSenha");
 let letter = document.getElementById("letter");
 let capital = document.getElementById("capital");
 let number = document.getElementById("number");

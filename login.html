@@ -96,24 +96,63 @@
                 <h2 class="title">Cadastrar</h2>    
                 <span onclick="document.getElementById('sign-up-modal').style.display='none'" class="close" title="Fechar">&times;</span>
                     
-                <form class="sign-up-container" id="cadForm">
+
+                <form class="sign-up-container" id="cadastroForm">
+
                     <p id="matchEmail"></p>
-                    <input type="email" id="email" name="email" class="modalInput" placeholder="Email" required>
-                        
-                    <input type="password" id="password" name="password" class="modalInput" placeholder="Senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-                        
+                    <input type="email" id="cadastroEmail" name="email" class="modalInput" placeholder="Email" required>
+
+                    <input type="text" id="cadastroNome" name="nome" class="modalInput" placeholder="Nome" required>
+
+                    <input type="password" id="password" name="password" class="modalInput" placeholder="Senha"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
                     <div id="aviso">
-                            <p id="letter" class="invalid">Uma ou mais letra(s) <b>minúscula(s)</b></p>
-                            <p id="capital" class="invalid">Uma ou mais letras(s) <b>maiúscula(s)</b></p>
-                            <p id="number" class="invalid">Um ou mais <b>número(s)</b></p>
-                            <p id="length" class="invalid">Mínimo de <b>8 (oito) caracteres</b></p>
+                        <p id="letter" class="invalid">Uma ou mais letra(s) <b>minúscula(s)</b></p>
+                        <p id="capital" class="invalid">Uma ou mais letras(s) <b>maiúscula(s)</b></p>
+                        <p id="number" class="invalid">Um ou mais <b>número(s)</b></p>
+                        <p id="length" class="invalid">Mínimo de <b>8 (oito) caracteres</b></p>
                     </div>
-                        
-                    <input type="password" id="pswRepeat" name="pswRepeat" class="modalInput" placeholder="Repitir Senha" required>
+
+                    <input type="password" id="cadastroSenha" name="pswRepeat" class="modalInput"
+                        placeholder="Repitir Senha" required>
                     <p id="matchPsw"></p>
 
-                    <input onclick="login(event)" id="signInBtn" class="form-btn" type="submit" value="Entrar">
+                    <input id="signInBtn" class="form-btn" type="submit" value="Entrar">
                 </form>
+
+                <script>
+                    // Cadastro
+                    const cadastroForm = document.getElementById('cadastroForm');
+                    cadastroForm.addEventListener('submit', async (e) => {
+                        e.preventDefault();
+
+                        const nome = document.getElementById('cadastroNome').value;
+                        const email = document.getElementById('cadastroEmail').value;
+                        const senha = document.getElementById('cadastroSenha').value;
+
+                        try {
+                            const response = await fetch('http://localhost:4500/usuarios', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ nome, email, senha })
+                            });
+
+                            const data = await response.json();
+
+                            if (response.ok) {
+                                alert('Cadastro realizado com sucesso!');
+                                cadastroForm.reset();
+                            } else {
+                                alert('Erro no cadastro: ' + (data.message || ''));
+                            }
+                        } catch (err) {
+                            alert('Erro na requisição: ' + err.message);
+                        }
+                    });
+
+                </script>
+
     
                 <div class="buttons-container">
                     <div class="google-login-button">
