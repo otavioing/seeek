@@ -78,6 +78,42 @@ CREATE TABLE formacoes (
 
 
 
-continuar apartir de vagas
+CREATE TABLE vagas (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    nome VARCHAR(255), 
+    instituicao VARCHAR(255), 
+    data_vencimento DATE NULL,
+    id_categorias INT NOT NULL, 
+    link TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES usuarios(id)
+);
 
-https://www.figma.com/board/emGjvIQzVXhhJTVM8Z6tAz/Untitled?node-id=40-454&t=saijYtxTPb37Tz1Y-0
+CREATE TABLE portfolio (
+	id INT NOT NULL PRIMARY key AUTO_INCREMENT,
+    nome_projeto VARCHAR(350) NOT NULL,
+    imagem TEXT NOT NULL,
+    user_id INT NOT NULL,
+    descricao TEXT
+);
+
+CREATE table categorias (
+ id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(120) NOT NULL
+);
+
+CREATE TABLE portfolio_categoria (
+id  INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+portfolio_id INT NOT NULL,
+categoria_id INT NOT NULL
+);
+
+CREATE TABLE portfolio_index (
+id INT NOT NULL,
+    nome VARCHAR(100),
+    descricao TEXT,
+    Imagem varchar(100),
+    id_uso INT NOT NULL,
+    id_Curtidas INT NOT NULL,
+    id_categoria INT NOT NULL
+);
