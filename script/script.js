@@ -18,9 +18,7 @@ trocarBanner();
 setInterval(trocarBanner, 7500);
 
 
-
-let loginEmail = document.getElementById("loginEmail");
-let loginPsw = document.getElementById("loginPsw");
+// Sistema de login
 let email = document.getElementById("cadastroEmail");
 let psw = document.getElementById("password");
 let pswRepeat = document.getElementById("cadastroSenha");
@@ -28,7 +26,6 @@ let letter = document.getElementById("letter");
 let capital = document.getElementById("capital");
 let number = document.getElementById("number");
 let length = document.getElementById("length");
-let logInBtn = document.getElementById("logInBtn");
 let signInBtn = document.getElementById("signInBtn");
 
 psw.disabled = true;
@@ -36,11 +33,34 @@ pswRepeat.disabled = true;
 logInBtn.disabled = true;
 signInBtn.disabled = true;
 
-function checkLogin(){
-    if(loginEmail.value != "" && loginPsw.value != ""){
-        logInBtn.disabled = false;
-    }
+// Checar se os campos de login estão preenchidos
+const emailInput = document.getElementById('logInEmail');
+const passwordInput = document.getElementById('logInPsw');
+const loginButton = document.getElementById('logInBtn');
+
+function isValidEmail(email) {
+  // Regex simples para validar formato de e-mail
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 }
+
+function checkInputs() {
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  // Verifica se o e-mail é válido e a senha não está vazia
+  const emailOk = isValidEmail(email);
+  const passwordOk = password.length > 0;
+
+  loginButton.disabled = !(emailOk && passwordOk);
+}
+
+emailInput.addEventListener('input', checkInputs);
+passwordInput.addEventListener('input', checkInputs);
+
+window.addEventListener('DOMContentLoaded', () => {
+  loginButton.disabled = true;
+});
 
 psw.onfocus = function(){
     document.getElementById("aviso").style.display = "block";
