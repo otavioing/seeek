@@ -48,33 +48,6 @@
                     <input class="form-btn" id="logInBtn" type="submit" value="Entrar">
                 </form>
 
-                <script>    // Login
-                    const loginForm = document.getElementById('loginForm');
-                    loginForm.addEventListener('submit', async (e) => {
-                      e.preventDefault();
-                
-                      const email = document.getElementById('logInEmail').value;
-                      const senha = document.getElementById('logInPsw').value;
-                
-                      try {
-                        const response = await fetch('http://localhost:4500/usuarios/login', {
-                          method: 'POST',
-                          headers: { 'Content-Type': 'application/json' },
-                          body: JSON.stringify({ email, senha })
-                        });
-                
-                        const data = await response.json();
-                
-                        if (response.ok && data.usuario) {
-                          alert('Login realizado! Bem-vindo, ' + data.usuario.nome);
-                          window.location.href = "/index.html";
-                        } else {
-                          alert('Email ou senha inválidos.');
-                        }
-                      } catch (err) {
-                        alert('Erro na requisição: ' + err.message);
-                      }
-                    });</script>
 
                 <div class="buttons-container">
                     <div class="google-login-button">
@@ -146,40 +119,10 @@
                         placeholder="Repitir Senha" required>
                     <p id="matchPsw"></p>
 
+                    <input type="file" id="cadastroFoto" accept="image/*" required>
+
                     <input id="signInBtn" class="form-btn" type="submit" value="Cadastrar">
                 </form>
-
-                <script>
-                    // Cadastro
-                    const cadastroForm = document.getElementById('cadastroForm');
-                    cadastroForm.addEventListener('submit', async (e) => {
-                        e.preventDefault();
-
-                        const nome = document.getElementById('cadastroNome').value;
-                        const email = document.getElementById('cadastroEmail').value;
-                        const senha = document.getElementById('cadastroSenha').value;
-
-                        try {
-                            const response = await fetch('http://localhost:4500/usuarios', {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({ nome, email, senha })
-                            });
-
-                            const data = await response.json();
-
-                            if (response.ok) {
-                                alert('Cadastro realizado com sucesso!');
-                                cadastroForm.reset();
-                            } else {
-                                alert('Erro no cadastro: ' + (data.message || ''));
-                            }
-                        } catch (err) {
-                            alert('Erro na requisição: ' + err.message);
-                        }
-                    });
-
-                </script>
 
     
                 <div class="buttons-container">
@@ -229,6 +172,8 @@
 
     <script src="script/script.js"></script>
     <script src="script/caua.js"></script>
+    <script src="script/cadastro.js"></script>
+    <script src="script/login.js"></script>
 </body>
 
 </html>

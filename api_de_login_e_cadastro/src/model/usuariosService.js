@@ -35,16 +35,33 @@ const Erase = async (request, response) => {
     }
 };
 
-const Create = async (request, response) => {
+// const Create = async (request, response) => {
     
-    try{
-        const {nome, email, senha} = request.body;
-        const data = await banco.query('INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)', [nome, email, senha]);
-        response.status(200).send(data[0]);
+//     try{
+//         const {nome, email, senha} = request.body;
+//         const data = await banco.query('INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)', [nome, email, senha]);
+//         response.status(200).send(data[0]);
 
+//     } catch (error) {
+//         console.log("Erro ao conectar ao banco de dados: ", error.message);
+//         response.status(401).send({"message": "Falha ao executar a ação!"})
+//     }
+// }
+
+const Create = async (request, response) => {
+    try {
+        const { nome, email, senha } = request.body;
+        const foto = request.file ? `/uploads/${request.file.filename}` : null;
+
+        const data = await banco.query(
+            'INSERT INTO usuarios (nome, email, senha, foto) VALUES (?, ?, ?, ?)',
+            [nome, email, senha, foto]
+        );
+
+        response.status(200).send({ message: 'Usuário cadastrado com sucesso' });
     } catch (error) {
         console.log("Erro ao conectar ao banco de dados: ", error.message);
-        response.status(401).send({"message": "Falha ao executar a ação!"})
+        response.status(401).send({ message: "Falha ao executar a ação!" });
     }
 }
 
