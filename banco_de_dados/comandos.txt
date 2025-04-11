@@ -1,3 +1,12 @@
+tabela teste 
+
+ALTER TABLE usuarios ADD COLUMN foto VARCHAR(255);
+
+
+tabela do site
+
+
+
 CREATE TABLE usuarios (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
