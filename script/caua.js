@@ -827,10 +827,10 @@ for (var i = 0; i < BloquearEDenunciarPerfil.length; i++) {
     menuTema[i].innerHTML = idioma[selectedLanguage].PerfilTema;
   }
 
-  var menusair = document.getElementsByClassName("sairP");
-  for (var i = 0; i < menusair.length; i++) {
-    menusair[i].innerHTML = idioma[selectedLanguage].PerfilSair;
-  }
+  // var menusair = document.getElementsByClassName("sairP");
+  // for (var i = 0; i < menusair.length; i++) {
+  //   menusair[i].innerHTML = idioma[selectedLanguage].PerfilSair;
+  // }
 
   
   var MigalhaTendencia = document.getElementsByClassName("TenA");

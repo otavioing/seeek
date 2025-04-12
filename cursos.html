@@ -85,10 +85,12 @@
       <input type="text" placeholder="Pesquisar" class="Pesquisar">
       <a href=""><img src="img/search2.svg" alt="lupa"></a>
     </div>
-    <div class="usersite">
-
-      <!-- <a href=""><img src="img/bell2.svg" alt="sino"></a> -->
-      <button onclick="abrirMenu()"><img src="img/user2.svg" alt="user"></button>
+    <div id="usersite" class="usersite">
+      <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
+       <p id="nome_user"></p>
+      <button onclick="abrirMenu()">
+        <img id="img_user" src="img/user2.svg" alt="User" />
+      </button>
     </div>
     <nav class="hamburguer" id="menu">
       <div class="itemsdomenu">
@@ -528,6 +530,8 @@
   <script src="script/cake2.js"></script>
   <script src="script/lfy.js"></script>
   <script src="script/caua.js"></script>
+  <script src="script/user_logado.js"></script>
+
 </body>
 
 </html>
