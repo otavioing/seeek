@@ -20,6 +20,7 @@ setInterval(trocarBanner, 7500);
 
 // Sistema de login
 let email = document.getElementById("cadastroEmail");
+let nome = document.getElementById("cadastroNome");
 let psw = document.getElementById("password");
 let pswRepeat = document.getElementById("cadastroSenha");
 let letter = document.getElementById("letter");
@@ -45,7 +46,7 @@ function isValidEmail(email) {
 }
 
 function checkInputs() {
-  const email = emailInput.value.trim();
+  const email = emailInput.value.trim(); //trim: remove espaços em branco no início e no fim
   const password = passwordInput.value.trim();
 
   // Verifica se o e-mail é válido e a senha não está vazia
@@ -99,6 +100,9 @@ email.onkeyup = function(){
 }
 
 let emailMessage = document.getElementById("matchEmail"); // Mensagem para e-mail
+
+// Verificar se o nome não há nenhum caracter especial
+
 
 // Sistema se o e-mail está inserido corretamente
 function validateEmail(){
