@@ -35,19 +35,6 @@ const Erase = async (request, response) => {
     }
 };
 
-// const Create = async (request, response) => {
-    
-//     try{
-//         const {nome, email, senha} = request.body;
-//         const data = await banco.query('INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)', [nome, email, senha]);
-//         response.status(200).send(data[0]);
-
-//     } catch (error) {
-//         console.log("Erro ao conectar ao banco de dados: ", error.message);
-//         response.status(401).send({"message": "Falha ao executar a ação!"})
-//     }
-// }
-
 const Create = async (request, response) => {
     try {
         const { nome, email, senha } = request.body;
@@ -68,8 +55,8 @@ const Create = async (request, response) => {
 const Update = async (request, response) => {
     try {
         const id = request.params.id;
-        const {nome, email, senha} = request.body;
-        const data = await banco.query('UPDATE usuarios SET nome=?, email=?, senha=? WHERE id=?', [nome, email, senha, id]);
+        const {nome, email, senha, foto} = request.body;
+        const data = await banco.query('UPDATE usuarios SET nome=?, email=?, senha=?, foto=? WHERE id=?', [nome, email, senha, foto, id]);
         response.status(200).send(data[0]);
     } catch (error) {
         console.log("Erro ao conectar ao banco de dados: ", error.message);
