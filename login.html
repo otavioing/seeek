@@ -82,8 +82,23 @@
                 <div class="sign-up-label">
                     <button onclick="document.getElementById('sign-up-modal').style.display='flex'"
                     class="sign-up-link">Cadastrar</button>
-                    <a class="page-link-label" href="index.html">Esqueceu sua senha?</a>
+                    <a class="page-link-label" onclick="abrirModal()">Esqueceu sua senha?</a>
                 </div>
+
+                <div id="modal-recuperacao" class="modal">
+                    <div class="modal-conteudo">
+                      <span class="fechar" onclick="fecharModal()">&times;</span>
+                      <h3>Recuperar Senha</h3>
+                      <input type="email" id="emailRec" placeholder="Digite seu email" />
+                      <button onclick="enviarCodigo()">Enviar código</button>
+                      <div id="codigoContainer" style="display: none;">
+                        <input type="text" id="codigo" placeholder="Código recebido" />
+                        <input type="password" id="novaSenha" placeholder="Nova senha" />
+                        <button onclick="atualizarSenha()">Atualizar Senha</button>
+                      </div>
+                      <p id="mensagemRec"></p>
+                    </div>
+                  </div>
                 
             </div>
 
@@ -174,6 +189,7 @@
     <script src="script/caua.js"></script>
     <script src="script/cadastro.js"></script>
     <script src="script/login.js"></script>
+    <script src="script/esqueceu_senha.js"></script>
 </body>
 
 </html>

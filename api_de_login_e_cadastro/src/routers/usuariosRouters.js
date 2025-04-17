@@ -1,5 +1,5 @@
 const {Router} = require('express');
-const {GetAll, GetById, Erase, Create, Update, Login} = require("../model/usuariosService")
+const {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha} = require("../model/usuariosService")
 const upload = require('../config/upload'); 
 
 
@@ -12,6 +12,9 @@ rota.post("/", Create);
 rota.put("/:id", Update)
 rota.delete("/:id", Erase);
 rota.post("/login", Login)
+rota.post("/recuperar-senha", RecuperarSenha);
+rota.post("/atualizar-senha", AtualizarSenha);
+
 
 
 module.exports = rota;

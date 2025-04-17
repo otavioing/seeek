@@ -2,6 +2,9 @@ const express = require('express');
 
 const {banco} = require("./database")
 
+const bcrypt = require("bcrypt");
+
+
 
 const GetAll = async (request, response) => {
     try {
@@ -83,5 +86,40 @@ const Login = async (request, response) => {
     }
 };
 
+const { enviarEmailRecuperacao } = require('../utils/emailService');
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login}
+const RecuperarSenha = async (req, res) => {
+    const { email } = req.body;
+    try {
+        const [result] = await banco.query("SELECT * FROM usuarios WHERE email = ?", [email]);
+        if (result.length === 0) {
+            return res.status(404).send({ message: "Email não encontrado" });
+        }
+        const codigo = Math.floor(100000 + Math.random() * 900000); // Ex: 654321
+        // Aqui você pode salvar esse código temporariamente no banco ou só validar depois (simples)
+        await enviarEmailRecuperacao(email, codigo);
+        // Envia o código também no response (só enquanto você não tiver banco ou cache pra ele)
+        res.status(200).send({ message: "Código enviado para o email", codigo }); 
+    } catch (err) {
+        console.error("Erro ao recuperar senha:", err.message);
+        res.status(500).send({ message: "Erro interno" });
+    }
+};
+
+const AtualizarSenha = async (req, res) => {
+    const { email, novaSenha } = req.body;
+
+    try {
+        const hashed = await bcrypt.hash(novaSenha, 10);
+        await banco.query("UPDATE usuarios SET senha = ? WHERE email = ?", [hashed, email]);
+
+        res.status(200).send({ message: "Senha atualizada com sucesso!" });
+    } catch (err) {
+        res.status(500).send({ message: "Erro ao atualizar senha." });
+    }
+};
+
+
+
+
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha}
