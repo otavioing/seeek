@@ -294,7 +294,7 @@ button {
     margin: 4rem 0 1rem auto;
 }
 
-.imgsUser {
+.imgsUser, .buttonUser {
     width: 100%;
     margin-bottom: 1rem;
 }
@@ -304,6 +304,140 @@ button {
     height: 100%;
     border-radius: 1rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.buttonUser button {
+    background-color: var(--cinzaBase);
+    height: 15rem;
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: var(--branco);
+    font-size: clamp(1rem, 1.8vh, 3rem);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--azulBase);
+    gap: 0.5rem;
+}
+
+.buttonUser button img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.adcProjeto{
+    width: 95%;
+    background-color: var(--cinzaBase);
+    border-radius: 1rem;
+    display: flex;
+    color: var(--preto);
+    position: absolute;
+    top: -14%;
+    right: 2.5%;
+    z-index: 5;
+    padding: 2rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.containerAdcProjeto{
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+}
+
+.left-projeto{
+    width: 70%;
+    height: 100%;
+    border-right: 1px solid var(--cinzaBaseee);
+    padding-right: 2rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.right-projeto{
+    width: 30%;
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.right-projeto h4{
+    margin: 1rem 0;
+}
+
+.ferramentas{
+    border: 1px solid var(--cinzaBaseee);
+    border-radius: 0.4rem;
+    padding: 0.5rem 0 4rem 0;
+}
+
+.ferramentas h5{
+    padding: 0.3rem;
+    border-bottom: 1px solid var(--cinzaBaseee);
+}
+
+.botoesF, .botoesEdit{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 2rem 0;
+    
+}
+
+.botoesF button, .botaoOutros, .botoesEdit button{
+    width: 45%;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--preto);
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 0.4rem;
+}
+
+.botaoOutros{
+    width: 100%;
+}
+
+.botoesF button img, .botoesEdit button img{
+    height: 2rem;
+}
+
+.botaoAdcImgg{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cinzaBasee);
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+}
+
+.botaoAdcImgg div{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.6rem;
+}
+
+.botaoAdcImgg div button{
+    background: none;
+    border: 1px solid var(--azulBase);
+    border-radius: 0.4rem;
+    width: 20rem;
+    height: 8rem;
+}
+
+.botaoAdcImgg div button img{
+    height: 2rem;
 }
 
 /*-------------------- Seguir --------------------*/
