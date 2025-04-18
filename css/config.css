@@ -221,6 +221,51 @@ h1{
     display: block;
 }
 
+.caixadenotificacaoescluirconta {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 18px 22px;
+    max-width: 400px;
+    position: relative;
+    
+    /* display: none; */
+    /* text-align: center; */
+  }
+
+  .caixadenotificacaoescluirconta h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .caixadenotificacaoescluirconta p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+  }
+
+  .btn-cancel {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn-confirm {
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
 
 /*------------------------------------------------------------------------*/
 /*-------------------------------- @media --------------------------------*/
