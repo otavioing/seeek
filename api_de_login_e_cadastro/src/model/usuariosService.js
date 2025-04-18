@@ -71,20 +71,31 @@ const Login = async (request, response) => {
     const { email, senha } = request.body;
 
     try {
-        const [rows] = await banco.query("SELECT * FROM usuarios WHERE email = ? AND senha = ?", [email, senha]);
-        
-        if (rows.length > 0) {
-            // Usuário encontrado
-            response.status(200).send({ usuario: rows[0] });
-        } else {
-            // Nenhum usuário com esse email/senha
-            response.status(401).send({ message: "Email ou senha inválidos" });
+        const [rows] = await banco.query("SELECT * FROM usuarios WHERE email = ?", [email]);
+
+        if (rows.length === 0) {
+            return response.status(401).send({ message: "Email ou senha inválidos" });
         }
+
+        const usuario = rows[0];
+
+        // Aqui compara a senha digitada com a criptografada
+        const senhaValida = await bcrypt.compare(senha, usuario.senha);
+
+        if (!senhaValida) {
+            return response.status(401).send({ message: "Email ou senha inválidos" });
+        }
+
+        // Login OK, pode retornar os dados (sem a senha de preferência)
+        delete usuario.senha; // remove a senha da resposta
+        response.status(200).send({ usuario });
+
     } catch (error) {
-        console.log("Erro ao verificar login:", error.message);
+        console.error("Erro ao verificar login:", error.message);
         response.status(500).send({ message: "Erro interno no servidor" });
     }
 };
+
 
 const { enviarEmailRecuperacao } = require('../utils/emailService');
 
@@ -97,7 +108,7 @@ const RecuperarSenha = async (req, res) => {
         }
         const codigo = Math.floor(100000 + Math.random() * 900000); // Ex: 654321
         // Aqui você pode salvar esse código temporariamente no banco ou só validar depois (simples)
-        await enviarEmailRecuperacao(email, codigo);
+        await enviarEmailRecuperacao(email, result[0].nome, codigo);
         // Envia o código também no response (só enquanto você não tiver banco ou cache pra ele)
         res.status(200).send({ message: "Código enviado para o email", codigo }); 
     } catch (err) {

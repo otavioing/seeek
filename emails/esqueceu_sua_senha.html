@@ -1,20 +1,12 @@
-const nodemailer = require("nodemailer");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 
-const transporter = nodemailer.createTransport({
-    service: "gmail", // ou outro serviço de email
-    auth: {
-        user: "seek.arts.ink@gmail.com", 
-        pass: "jbvc jwgl dbfv ubxu"
-    }
-});
-
-const enviarEmailRecuperacao = async (destinatario, nome, codigo) => {
-    const info = await transporter.sendMail({
-        from: '"Seek App" <seek.arts.ink@gmail.com>',
-        to: destinatario,
-        subject: "Recuperação de Senha - Seek",
-        text: `Seu código de recuperação é: ${codigo}`,
-        html: `
     <style>
         main{
             display: flex;
@@ -24,7 +16,6 @@ const enviarEmailRecuperacao = async (destinatario, nome, codigo) => {
         }
         .conteudo{
             width: 600px;
-            background-color: #c3c1c1;
             padding: 1rem;
         }
         .logo{
@@ -51,11 +42,11 @@ const enviarEmailRecuperacao = async (destinatario, nome, codigo) => {
 
         <div class="texto">
             <div class="titulodotexto">
-                <h1>Olá ${nome}</h1>
+                <h1>Olá nome_do_user</h1>
             </div>
             <p>Você solicitou a recuperação de senha da sua conta, aqui esta seu codigo de recuperação</p>
 
-            <h2><b>${codigo}</b></h2>
+            <h2><b>12345</b></h2>
 
             <p>Se você não solicitou a recuperação de senha, desconsidere este e-mail <br> Se você não conseguir redefinir sua senha, entre em contato com o suporte.</p>
             <p>Atenciosamente, <br> Equipe Seek</p>
@@ -65,10 +56,6 @@ const enviarEmailRecuperacao = async (destinatario, nome, codigo) => {
     </div>
 
 </main>
-    `
-    });
-
-    console.log("Email enviado:", info.messageId);
-};
-
-module.exports = { enviarEmailRecuperacao };
+    
+</body>
+</html>
