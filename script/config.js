@@ -1,5 +1,5 @@
-const loginForm = document.getElementById("formexcluirconta");
-loginForm.addEventListener("submit", async (e) => {
+const loginForm = document.getElementById("botaoexcluircontaconfirmar");
+loginForm.addEventListener("click", async (e) => {
   try {
     const response = await fetch(
       `http://localhost:4500/usuarios/${usuario.id}`,
@@ -13,3 +13,16 @@ loginForm.addEventListener("submit", async (e) => {
     alert("Erro na requisição: " + err.message);
   }
 });
+
+function abrirnotificacaoexcluirconta(){
+  let notificacao = document.getElementById("caixadenotificacaoexcluirconta");
+
+  // notificacao.style.display = "block";
+  notificacao.style.top = "0rem";
+}
+
+function cancelarnotificacaoexcluirconta(){
+  let notificacao = document.getElementById("caixadenotificacaoexcluirconta");
+
+  notificacao.style.top = "-10rem";
+}
