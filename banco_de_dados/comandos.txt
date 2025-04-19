@@ -2,6 +2,9 @@ tabela teste
 
 ALTER TABLE usuarios ADD COLUMN foto VARCHAR(255);
 
+ALTER TABLE usuarios ADD verificado TINYINT(1) DEFAULT 0;
+
+
 
 tabela do site
 

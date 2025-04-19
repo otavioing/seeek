@@ -4,7 +4,7 @@ const {banco} = require("./database")
 
 const bcrypt = require("bcrypt");
 
-
+const { enviarEmailRecuperacao, enviaremailcriacao } = require('../utils/emailService');
 
 const GetAll = async (request, response) => {
     try {
@@ -35,6 +35,29 @@ const Erase = async (request, response) => {
     } catch (error) {
         console.log("Erro ao conectar ao banco de dados: ", error.message);
         response.status(401).send({"message": "Falha ao executar a ação!"})
+    }
+};
+
+const SolicitarCriacao = async (request, response) => {
+    try {
+        const { nome, email, senha } = request.body;
+        const foto = request.file ? `/uploads/${request.file.filename}` : null;
+
+        const codigo = Math.floor(100000 + Math.random() * 900000);
+
+
+        await enviaremailcriacao(email, nome, codigo);
+
+        // Retorna o código (se estiver em dev/teste)
+        response.status(200).send({
+            message: "Código de verificação enviado para o email",
+            codigo, // em produção, talvez você **não envie isso no response**
+            dados: { nome, email, senha, foto } // temporário, ou salva em cache
+        });
+
+    } catch (error) {
+        console.error("Erro ao enviar código:", error.message);
+        response.status(500).send({ message: "Erro ao solicitar criação de conta" });
     }
 };
 
@@ -97,7 +120,6 @@ const Login = async (request, response) => {
 };
 
 
-const { enviarEmailRecuperacao } = require('../utils/emailService');
 
 const RecuperarSenha = async (req, res) => {
     const { email } = req.body;
@@ -133,4 +155,4 @@ const AtualizarSenha = async (req, res) => {
 
 
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha}
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao}

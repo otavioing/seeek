@@ -1,83 +1,119 @@
-// // Cadastro
-// const cadastroForm = document.getElementById('cadastroForm');
-// cadastroForm.addEventListener('submit', async (e) => {
-//     e.preventDefault();
 
-//     const nome = document.getElementById('cadastroNome').value;
-//     const email = document.getElementById('cadastroEmail').value;
-//     const senha = document.getElementById('cadastroSenha').value;
+// Cadastro
+// const cadastroForm = document.getElementById("cadastroForm");
+// cadastroForm.addEventListener("submit", async (e) => {
+//   e.preventDefault();
 
-//     try {
-//         const response = await fetch('http://localhost:4500/usuarios', {
-//             method: 'POST',
-//             headers: { 'Content-Type': 'application/json' },
-//             body: JSON.stringify({ nome, email, senha })
-//         });
-
-//         const data = await response.json();
-
-//         if (response.ok) {
-//             alert('Cadastro realizado com sucesso!');
-//             cadastroForm.reset();
-//         } else {
-//             alert('Erro no cadastro: ' + (data.message || ''));
-//         }
-//     } catch (err) {
-//         alert('Erro na requisição: ' + err.message);
+//   const formData = new FormData();
+//   formData.append("nome", document.getElementById("cadastroNome").value);
+//   formData.append("email", document.getElementById("cadastroEmail").value);
+//   formData.append("senha", document.getElementById("cadastroSenha").value);
+//   formData.append("foto", document.getElementById("cadastroFoto").files[0]);
+//   try {
+//     const response = await fetch('http://localhost:4500/usuarios', {
+//       method: 'POST',
+//       body: formData
+//     });
+  
+//     const data = await response.json();
+//     if (response.ok) {
+//       alert('Cadastro realizado com sucesso!');
+//       cadastroForm.reset();
+//     } else {
+//       alert('Erro no cadastro: ' + (data.message || ''));
 //     }
+//   } catch (err) {
+//     alert('Erro na requisição: ' + err.message);
+//   }
+// });
+//   try {
+//     const responsesilicitacao = await fetch(
+//       "http://localhost:4500/usuarios/solicitar-criacao",
+//       {
+//         method: "POST",
+//         body: formData,
+//       }
+//     );
+//   } catch (err) {
+//     alert("Erro na requisição: " + err.message);
+//   }
 // });
 
-    // Cadastro
-    const cadastroForm = document.getElementById('cadastroForm');
-    cadastroForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+const cadastroForm = document.getElementById('cadastroForm');
+const verificacaoContainer = document.getElementById('verificacaoContainer');
+const verificarCodigoBtn = document.getElementById('verificarCodigoBtn');
+const codigoVerificacaoInput = document.getElementById('codigoVerificacao');
 
-      const formData = new FormData();
-      formData.append("nome", document.getElementById('cadastroNome').value);
-      formData.append("email", document.getElementById('cadastroEmail').value);
-      formData.append("senha", document.getElementById('cadastroSenha').value);
-      formData.append("foto", document.getElementById('cadastroFoto').files[0]);
+let codigoGerado = null;
+let dadosTemporarios = {}; // para guardar os dados até verificar
 
-      try {
-        const response = await fetch('http://localhost:4500/usuarios', {
-          method: 'POST',
-          body: formData
-        });
+cadastroForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-        const data = await response.json();
-        if (response.ok) {
-          alert('Cadastro realizado com sucesso!');
-          cadastroForm.reset();
-        } else {
-          alert('Erro no cadastro: ' + (data.message || ''));
-        }
-      } catch (err) {
-        alert('Erro na requisição: ' + err.message);
-      }
+  const nome = document.getElementById('cadastroNome').value;
+  const email = document.getElementById('cadastroEmail').value;
+  const senha = document.getElementById('cadastroSenha').value;
+  const foto = document.getElementById('cadastroFoto').files[0];
+
+  // Salva para depois usar na criação
+  dadosTemporarios = { nome, email, senha, foto };
+
+  try {
+    const response = await fetch('http://localhost:4500/usuarios/solicitar-criacao', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nome, email, senha })
     });
 
-/* <form class="sign-up-container" id="cadastroForm">
+    const data = await response.json();
 
-<p id="matchEmail"></p>
-<input type="email" id="cadastroEmail" name="email" class="modalInput" placeholder="Email" required>
+    if (!response.ok) {
+      alert('Erro ao solicitar verificação: ' + data.message);
+      return;
+    }
 
-<input type="text" id="cadastroNome" name="nome" class="modalInput" placeholder="Nome" required>
+    codigoGerado = data.codigo; // salvar o código enviado
+    verificacaoContainer.style.display = 'block'; // mostra o campo de verificação
 
-<input type="password" id="password" name="password" class="modalInput" placeholder="Senha"
-    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+  } catch (err) {
+    alert("Erro: " + err.message);
+  }
+});
 
-<div id="aviso">
-    <p id="letter" class="invalid">Uma ou mais letra(s) <b>minúscula(s)</b></p>
-    <p id="capital" class="invalid">Uma ou mais letras(s) <b>maiúscula(s)</b></p>
-    <p id="number" class="invalid">Um ou mais <b>número(s)</b></p>
-    <p id="length" class="invalid">Mínimo de <b>8 (oito) caracteres</b></p>
-</div>
+// Verificação do código
+verificarCodigoBtn.addEventListener('click', async () => {
+  const codigoDigitado = codigoVerificacaoInput.value;
 
-<input type="password" id="cadastroSenha" name="pswRepeat" class="modalInput"
-    placeholder="Repitir Senha" required>
-<p id="matchPsw"></p>
+  if (codigoDigitado != codigoGerado) {
+    alert("Código incorreto!");
+    return;
+  }
 
-<input type="file" id="cadastroFoto" accept="image/*" required>
+  const formData = new FormData();
+  formData.append("nome", dadosTemporarios.nome);
+  formData.append("email", dadosTemporarios.email);
+  formData.append("senha", dadosTemporarios.senha);
+  formData.append("foto", dadosTemporarios.foto);
 
-<input id="signInBtn" class="form-btn" type="submit" value="Cadastrar">
-</form> */
+  try {
+    const finalResponse = await fetch('http://localhost:4500/usuarios', {
+      method: 'POST',
+      body: formData
+    });
+
+    const finalData = await finalResponse.json();
+
+    if (finalResponse.ok) {
+      alert("Conta criada com sucesso!");
+      cadastroForm.reset();
+      verificacaoContainer.style.display = 'none';
+      codigoVerificacaoInput.value = '';
+    } else {
+      alert("Erro ao criar conta: " + finalData.message);
+    }
+  } catch (err) {
+    alert("Erro ao criar conta: " + err.message);
+  }
+});
+
+

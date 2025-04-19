@@ -68,7 +68,24 @@ const enviarEmailRecuperacao = async (destinatario, nome, codigo) => {
     `
     });
 
-    console.log("Email enviado:", info.messageId);
+    console.log("Email de recuperacao de conta enviado:", info.messageId);
 };
 
-module.exports = { enviarEmailRecuperacao };
+const enviaremailcriacao = async (email, nome, codigo) => {
+    const info = await transporter.sendMail({
+        from: '"Seek App" <seek.arts.ink@gmail.com>',
+        to: email,
+        subject: "Recuperação de Senha - Seek",
+        text: `Seu código de recuperação é: ${codigo}`,
+        html: `<p>Olá <strong>${nome}</strong>,</p>
+            <p>Você solicitou a criação de uma conta no Seek.</p>
+            <p>Seu código de verificação é:</p>
+            <h2>${codigo}</h2>
+            <p>Se você não solicitou isso, pode ignorar este e-mail.</p>
+            <p>Abraços,<br/>Equipe Seek</p>`,
+    });
+
+    console.log("Email de criação de conta enviado:", info.messageId);
+};
+
+module.exports = { enviarEmailRecuperacao, enviaremailcriacao };
