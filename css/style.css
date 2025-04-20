@@ -1568,16 +1568,16 @@ footer {
 /*Barra de acessibilidade*/
 .ativaredasativarvlibras{
     display: none;
+    position: fixed;
+     top: 300px;
 }
 .divativacaobarradeacessibilidade, .divbarradeacessibilidade{
     position: fixed;
-    top: 40%;
+    top: 300px;
     left: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
     z-index: 9999;
+    
 }
 .divativacaobarradeacessibilidade button, .divbarradeacessibilidade button{
     background-color: var(--branco);
@@ -1590,17 +1590,19 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+ 
 }
 .divativacaobarradeacessibilidade button:hover{
     background-color: var(--branco);
 }
 .botaoativacaobarra img{
     width: 2.5rem;
+   
 }
 .funcaoesbarradeacessibilidade img{
     width: 1.6rem;
 }
+
 .divbarradeacessibilidade{
     background-color: var(--branco);
     border-radius: 28px;
@@ -1611,11 +1613,15 @@ footer {
     padding: 5px 0 22px 0;
     gap: 8px;
     box-shadow: 0rem 0rem 1rem 0.1rem rgba(0, 0, 0, 0.5);
+    top: 300px;
+
 }
 #logodafatecdabarradeacessibilidade{
     width: 2.5rem;
 }
 /*fim da Barra de acessibilidade*/
+
+
 
 
 
