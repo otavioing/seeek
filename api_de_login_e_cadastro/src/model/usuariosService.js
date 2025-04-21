@@ -4,7 +4,7 @@ const {banco} = require("./database")
 
 const bcrypt = require("bcrypt");
 
-const { enviarEmailRecuperacao, enviaremailcriacao } = require('../utils/emailService');
+const { enviarEmailRecuperacao, enviaremailcriacao, enviaremailexclusao } = require('../utils/emailService');
 
 const GetAll = async (request, response) => {
     try {
@@ -58,6 +58,29 @@ const SolicitarCriacao = async (request, response) => {
     } catch (error) {
         console.error("Erro ao enviar código:", error.message);
         response.status(500).send({ message: "Erro ao solicitar criação de conta" });
+    }
+};
+
+const Solicitarexclusao = async (request, response) => {
+    try {
+        const { nome, email, senha } = request.body;
+        const foto = request.file ? `/uploads/${request.file.filename}` : null;
+
+        const codigo = Math.floor(100000 + Math.random() * 900000);
+
+
+        await enviaremailexclusao(email, nome, codigo);
+
+        // Retorna o código (se estiver em dev/teste)
+        response.status(200).send({
+            message: "Código de verificação enviado para o email",
+            codigo, // em produção, talvez você **não envie isso no response**
+            dados: { nome, email, senha, foto } // temporário, ou salva em cache
+        });
+
+    } catch (error) {
+        console.error("Erro ao enviar código:", error.message);
+        response.status(500).send({ message: "Erro ao solicitar exclusão de conta" });
     }
 };
 
@@ -155,4 +178,4 @@ const AtualizarSenha = async (req, res) => {
 
 
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao}
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao}
