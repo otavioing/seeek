@@ -122,5 +122,11 @@ function paginacarregada() {
         document.getElementById("cancelarTipoUser").style.display = "flex";
     });
 
-    
+
+    //função para fechar a aba de adicionar nova img no perfil do usuário    //DETALHE IMPORTANTE!!!!! NÃO FUNCIONA SAPORRA KSKSKSSKSKSKSKSK
+
+    function abrirAba() {
+        document.getElementById("adcProjeto").style.display = "flex";
+    }
+
 }

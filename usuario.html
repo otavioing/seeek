@@ -11,17 +11,17 @@
     <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
 </head>
 
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-SLCTJL00KV');
+    gtag('config', 'G-SLCTJL00KV');
 </script>
 
-<body id="todo" >
+<body id="todo">
 
     <div class="divativacaobarradeacessibilidade">
         <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg"
@@ -30,31 +30,31 @@
 
     <div id="barra" class="divbarradeacessibilidade">
         <button onclick="desativarbarra()" class="botaoativacaobarra">
-          <img src="img/barra/icon.svg" alt="símbolo da onu" />
+            <img src="img/barra/icon.svg" alt="símbolo da onu" />
         </button>
-  
+
         <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+            <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
         </button>
-  
+
         <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+            <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
         </button>
-  
-          <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/luabarra.svg" alt="Lua" />
+
+        <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
+            <img src="img/barra/luabarra.svg" alt="Lua" />
         </button>
-  
-          <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/solbarra.svg" alt="Sol" />
+
+        <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
+            <img src="img/barra/solbarra.svg" alt="Sol" />
         </button>
-  
+
         <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+            <img src="img/barra/iconvlibras.svg" alt="vlibras" />
         </button>
-  
+
         <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
-      </div>
+    </div>
 
     <header class="inicio">
         <button class="botaoMenu" id="botaoMenu">
@@ -88,11 +88,11 @@
         </div>
         <div id="usersite" class="usersite">
             <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
-             <p id="nome_user"></p>
+            <p id="nome_user"></p>
             <button onclick="abrirMenu()">
-              <img id="img_user" src="img/user2.svg" alt="User" />
+                <img id="img_user" src="img/user2.svg" alt="User" />
             </button>
-          </div>
+        </div>
         <nav class="hamburguer" id="menu">
             <div class="itemsdomenu">
                 <a class="botoesmenuhamburguer nav-link" href="index.html" class="ExpA">Explorar</a>
@@ -180,7 +180,8 @@
                         <p>@usuario</p>
                         <p class="cidadeepais"> <span class="UsoCP">cidade e país</span></p>
                         <div class="seguirUser2">
-                            <button class="botaoSelecionadoUser" id="editarUserPerfil"> <span class="UsoE">Editar </span></button>
+                            <button class="botaoSelecionadoUser" id="editarUserPerfil"> <span class="UsoE">Editar
+                                </span></button>
                         </div>
                         <button id="trocarUserPerfil"> <span class="UsoTU">Trocar de Usuário</span></button>
                     </div>
@@ -193,14 +194,17 @@
 
                     <div id="desaparecerInfoUser">
                         <div class="redessociais">
-                            <a href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"><img src="img/instagram.svg" alt="twitter">
+                            <a href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"><img
+                                    src="img/instagram.svg" alt="twitter">
                                 <p class="nomeUseuario">@usuario</p>
                             </a>
-                            <a href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"><img src="img/instagram.svg" alt="instagram">
+                            <a href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"><img
+                                    src="img/instagram.svg" alt="instagram">
                                 <p class="nomeUseuario">@usuario</p>
                             </a>
-                            <a class="tirarBorderB" href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"><img src="img/linkedin.svg"
-                                    alt="linkedin">
+                            <a class="tirarBorderB"
+                                href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"><img
+                                    src="img/linkedin.svg" alt="linkedin">
                                 <p class="nomeUseuario">@usuario</p>
                             </a>
                         </div>
@@ -236,15 +240,24 @@
             </div>
         </section>
 
-        <div class="adcProjeto">
+        <div class="adcProjeto" id="adcProjeto" style="display: none;">
+            <button id="btn-fechar">x</button>
             <div class="containerAdcProjeto">
                 <div class="left-projeto">
                     <div class="botaoAdcImgg">
                         <p>Adicionar foto ou vídeo</p>
                         <div>
-                            <button><img src="img/lupa+.svg" alt=""><p>imagem</p></button>
-                            <button><img src="img/lupa+.svg" alt=""><p>vídeo</p></button>
+                            <button><img src="img/lupa+.svg" alt="">
+                                <p>imagem</p>
+                            </button>
+                            <button><img src="img/lupa+.svg" alt="">
+                                <p>vídeo</p>
+                            </button>
                         </div>
+                    </div>
+                    <div class="txt-area-and-button">
+                        <button>Inserir</button>
+                        <textarea name="text-new-post" id="text-new-post" placeholder="descrição"></textarea>
                     </div>
                 </div>
 
@@ -253,27 +266,61 @@
                     <div class="ferramentas">
                         <h5>Criar elementos</h5>
                         <div class="botoesF">
-                            <button><img src="img/lupa+.svg" alt=""><p>Grade</p></button>
-                            <button><img src="img/lupa+.svg" alt=""><p>Grade</p></button>
-                            <button><img src="img/lupa+.svg" alt=""><p>Grade</p></button>
-                            <button><img src="img/lupa+.svg" alt=""><p>Grade</p></button>
-                            <button class="botaoOutros"><img src="img/lupa+.svg" alt=""><p>Grade</p></button>
+                            <button><img src="img/lupa+.svg" alt="">
+                                <p>Grade</p>
+                            </button>
+                            <button><img src="img/lupa+.svg" alt="">
+                                <p>Grade</p>
+                            </button>
+                            <button><img src="img/lupa+.svg" alt="">
+                                <p>Grade</p>
+                            </button>
+                            <button><img src="img/lupa+.svg" alt="">
+                                <p>Grade</p>
+                            </button>
+                            <div>
+                                <button class="botaoOutros"><img src="img/lupa+.svg" alt="">
+                                    <p>Grade</p>
+                                </button>
+                            </div>
                         </div>
 
                         <h5>Editar</h5>
                         <div class="botoesEdit">
-                            <button><img src="img/lupa+.svg" alt=""><p>Grade</p></button>
-                            <button><img src="img/lupa+.svg" alt=""><p>Grade</p></button>
+                            <button><img src="img/lupa+.svg" alt="">
+                                <p>Grade</p>
+                            </button>
+                            <button><img src="img/lupa+.svg" alt="">
+                                <p>Grade</p>
+                            </button>
                         </div>
-
                     </div>
-
+                    <div class="categorias">
+                        <h4>Categorias</h4>
+                        <div class="categoria">
+                            <div class="catt">
+                                <button>Ilustração</button>
+                                <button>Foto</button>
+                                <button>Abstrato</button>
+                                <button>Design</button>
+                                <button>Futurista</button>
+                                <button>Identidade Visual</button>
+                            </div>
+                            <div>
+                                <button id="btn-adc-cat">
+                                    <p>Adicionar</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <section id="mainImagensUser" class="mainImagensUser">
-            <div class="buttonUser"><button><img src="img/lupa+.svg" alt=""><p>Adicionar Projeto</p></button></div>
+            <div class="buttonUser"><button onclick="abrirAba()"><img src="img/lupa+.svg" alt="">
+                    <p>Adicionar Projeto</p>
+                </button></div>
             <div class="imgsUser"><img src="img/img_port/1mini.jpg" alt="Imagem 1"></div>
             <div class="imgsUser"><img src="img/img_port/2mini.jpg" alt="Imagem 2"></div>
             <div class="imgsUser"><img src="img/img_port/3mini.jpg" alt="Imagem 3"></div>
