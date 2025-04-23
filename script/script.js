@@ -18,119 +18,82 @@ trocarBanner();
 setInterval(trocarBanner, 7500);
 
 
-// Sistema de login
-let email = document.getElementById("cadastroEmail");
-let nome = document.getElementById("cadastroNome");
-let psw = document.getElementById("password");
-let pswRepeat = document.getElementById("cadastroSenha");
-let letter = document.getElementById("letter");
-let capital = document.getElementById("capital");
-let number = document.getElementById("number");
-let length = document.getElementById("length");
-let signInBtn = document.getElementById("signInBtn");
+// Elementos
+const el = id => document.getElementById(id);
+const [nome, email, psw, pswRepeat] = ["cadastroNome", "cadastroEmail", "password", "cadastroSenha"].map(el);
+const [letter, capital, number, length] = ["letter", "capital", "number", "length"].map(el);
+const [signInBtn, loginButton, emailInput, passwordInput] = ["signInBtn", "logInBtn", "logInEmail", "logInPsw"].map(el);
+const [nomeMsg, emailMsg, matchPsw] = ["matchNome", "matchEmail", "matchPsw"].map(el);
 
-psw.disabled = true;
-pswRepeat.disabled = true;
-logInBtn.disabled = true;
-signInBtn.disabled = true;
+// Regex
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const nameRegex = /^[a-zA-ZÀ-ÿ\s]+$/;
 
-// Checar se os campos de login estão preenchidos
-const emailInput = document.getElementById('logInEmail');
-const passwordInput = document.getElementById('logInPsw');
-const loginButton = document.getElementById('logInBtn');
+// Desativa campos inicialmente
+window.addEventListener('DOMContentLoaded', () => [psw, pswRepeat, signInBtn, loginButton].forEach(el => el.disabled = true));
 
-function isValidEmail(email) {
-  // Regex simples para validar formato de e-mail
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
+// Funções utilitárias
+const isValidEmail = val => emailRegex.test(val);
+const isValidName = val => nameRegex.test(val);
 
-function checkInputs() {
-  const email = emailInput.value.trim(); //trim: remove espaços em branco no início e no fim
-  const password = passwordInput.value.trim();
+const toggleRule = (el, valid) => {
+  el.classList.toggle("valid", valid);
+    el.classList.toggle("invalid", !valid);
+};
 
-  // Verifica se o e-mail é válido e a senha não está vazia
-  const emailOk = isValidEmail(email);
-  const passwordOk = password.length > 0;
+const updatePasswordRules = () => {
+    const val = psw.value;
+    toggleRule(letter, /[a-z]/.test(val));
+    toggleRule(capital, /[A-Z]/.test(val));
+    toggleRule(number, /\d/.test(val));
+    toggleRule(length, val.length >= 8);
+};
 
-  loginButton.disabled = !(emailOk && passwordOk);
-}
+const updateSignInButton = () => {
+    const valid = isValidName(nome.value) && isValidEmail(email.value) && psw.value === pswRepeat.value && psw.value.length >= 8;
+    signInBtn.disabled = !valid;
+};
 
-emailInput.addEventListener('input', checkInputs);
-passwordInput.addEventListener('input', checkInputs);
+// Validação de nome/email
+const validateField = (input, msgEl, validator, successMsg, errorMsg) => {
+    const valid = validator(input.value);
+    msgEl.textContent = valid ? successMsg : errorMsg;
+    msgEl.style.color = valid ? "green" : "red";
+    const enable = isValidName(nome.value) && isValidEmail(email.value);
+    psw.disabled = pswRepeat.disabled = !enable;
+    updateSignInButton();
+};
 
-window.addEventListener('DOMContentLoaded', () => {
-  loginButton.disabled = true;
+const checkPasswordMatch = () => {
+    const match = psw.value === pswRepeat.value && psw.value.length >= 8;
+    matchPsw.textContent = match ? "As senhas coincidem" : "As senhas não coincidem.";
+    matchPsw.style.color = match ? "green" : "red";
+    updateSignInButton();
+};
+
+const checkLoginInputs = () => {
+    loginButton.disabled = !(isValidEmail(emailInput.value.trim()) && passwordInput.value.trim().length);
+};
+
+// Eventos
+nome.addEventListener("keyup", () => validateField(nome, nomeMsg, isValidName, "Nome válido", "O nome não pode conter números ou caracteres especiais."));
+email.addEventListener("keyup", () => validateField(email, emailMsg, isValidEmail, "E-mail válido", "O e-mail deverá conter @"));
+
+["blur"].forEach(evt => {
+    nome.addEventListener(evt, () => nomeMsg.textContent = "");
+    email.addEventListener(evt, () => emailMsg.textContent = "");
 });
 
-psw.onfocus = function(){
-    document.getElementById("aviso").style.display = "block";
-}
+psw.addEventListener("focus", () => el("aviso").style.display = "block");
+psw.addEventListener("blur", () => el("aviso").style.display = "none");
 
-psw.onblur = function(){
-    document.getElementById("aviso").style.display = "none";
-}
+psw.addEventListener("keyup", () => {
+    updatePasswordRules();
+    checkPasswordMatch();
+});
+pswRepeat.addEventListener("keyup", checkPasswordMatch);
 
-// Função de checar se a senha bate com os requisitos
-psw.onkeyup = function(){
-    var lowerCaseLetters = /[a-z]/g;
-    letter.classList.toggle("valid", psw.value.match(lowerCaseLetters));
-    letter.classList.toggle("invalid", !psw.value.match(lowerCaseLetters));
-    
-    var upperCaseLetters = /[A-Z]/g;
-    capital.classList.toggle("valid", psw.value.match(upperCaseLetters));
-    capital.classList.toggle("invalid", !psw.value.match(upperCaseLetters));
-    
-    var numbers = /[0-9]/g;
-    number.classList.toggle("valid", psw.value.match(numbers));
-    number.classList.toggle("invalid", !psw.value.match(numbers));
-    
-    length.classList.toggle("valid", psw.value.length >= 8);
-    length.classList.toggle("invalid", psw.value.length < 8);
-    
-    checkMatch();
-}
-
-pswRepeat.onkeyup = function(){
-    checkMatch();
-}
-
-email.onkeyup = function(){
-    validateEmail();
-}
-
-let emailMessage = document.getElementById("matchEmail"); // Mensagem para e-mail
-
-// Verificar se o nome não há nenhum caracter especial
-
-
-// Sistema se o e-mail está inserido corretamente
-function validateEmail(){
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(emailPattern.test(email.value)){
-        emailMessage.textContent = "E-mail válido";
-        emailMessage.style.color = "green";
-        psw.disabled = false;
-        pswRepeat.disabled = false;
-    }else{
-        emailMessage.textContent = "O e-mail deverá conter @";
-        emailMessage.style.color = "red";
-        psw.disabled = true;
-        pswRepeat.disabled = true;
-    }
-}
-
-let matchPsw = document.getElementById("matchPsw"); // Mensagem para verificar se as senha coincidem
-
-// Sistema para verificar se as senhas coincidem
-function checkMatch(){
-    if(psw.value == pswRepeat.value && pswRepeat.value != ""){
-        matchPsw.textContent = "As senhas coincidem";
-        matchPsw.style.color = "green";
-        signInBtn.disabled = false;
-    }else{
-        matchPsw.textContent = "As senhas não coincidem.";
-        matchPsw.style.color = "red";
-        signInBtn.disabled = true;
-    }
-}
+["input"].forEach(evt => {
+    emailInput.addEventListener(evt, checkLoginInputs);
+    passwordInput.addEventListener(evt, checkLoginInputs);
+});
