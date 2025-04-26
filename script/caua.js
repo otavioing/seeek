@@ -12,7 +12,15 @@ function ModoClaro() {
   corpo.classList.remove("modoEscuro");
   localStorage.setItem("modo", "claro");
 }
+// Primeiro tenta buscar o usuário logado
+const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
 
+// Se existir, então salva o tema
+if (usuarioLogado) {
+  localStorage.setItem("modo", usuarioLogado.tema);
+}
+
+// Depois define as funções normalmente
 function MudarModos() {
   let corpo = document.getElementById("todo");
   if (corpo.classList.contains("modoEscuro")) {
@@ -29,6 +37,11 @@ function aplicarModo() {
     ModoClaro(); 
   }
 }
+
+// Finalmente aplica o modo quando a página carregar
+aplicarModo();
+
+console.log(usuario.tema);
 
 //-------------------------------- Troca de lingua --------------------------------/
 // sript para trocar a lingua do site

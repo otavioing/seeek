@@ -188,11 +188,11 @@ const Atualizartema = async (req, res) => {
 
         res.status(200).send({ message: "Tema atualizado com sucesso!" });
     } catch (err) {
-        res.status(500).send({ message: "Erro ao atualizar tema." });
+        res.status(500).send({ message: "Erro ao atualizar tema.", error: err.message });
     }
 
 };
 
 
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao}
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema}
