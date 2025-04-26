@@ -1,5 +1,13 @@
 tabela teste 
 
+CREATE TABLE usuarios(
+id int PRIMARY KEY AUTO_INCREMENT,
+    nome varchar(255) not null,
+    email varchar(255) UNIQUE NOT null,
+    foto varchar(255) NOT null,
+    data_de_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 ALTER TABLE usuarios ADD COLUMN foto VARCHAR(255);
 
 ALTER TABLE usuarios ADD verificado TINYINT(1) DEFAULT 0;

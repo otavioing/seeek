@@ -89,9 +89,13 @@ const Create = async (request, response) => {
         const { nome, email, senha } = request.body;
         const foto = request.file ? `/uploads/${request.file.filename}` : null;
 
+        // gera o hash da senha
+        const saltRounds = 10;
+        const senhaHash = await bcrypt.hash(senha, saltRounds);
+
         const data = await banco.query(
             'INSERT INTO usuarios (nome, email, senha, foto) VALUES (?, ?, ?, ?)',
-            [nome, email, senha, foto]
+            [nome, email, senhaHash, foto] // aqui usamos a senha já criptografada
         );
 
         response.status(200).send({ message: 'Usuário cadastrado com sucesso' });
@@ -100,6 +104,7 @@ const Create = async (request, response) => {
         response.status(401).send({ message: "Falha ao executar a ação!" });
     }
 }
+
 
 const Update = async (request, response) => {
     try {
@@ -175,6 +180,18 @@ const AtualizarSenha = async (req, res) => {
     }
 };
 
+const Atualizartema = async (req, res) => {
+    const { id, tema } = req.body;
+
+    try {
+        await banco.query("UPDATE usuarios SET tema = ? WHERE id = ?", [tema, id]);
+
+        res.status(200).send({ message: "Tema atualizado com sucesso!" });
+    } catch (err) {
+        res.status(500).send({ message: "Erro ao atualizar tema." });
+    }
+
+};
 
 
 

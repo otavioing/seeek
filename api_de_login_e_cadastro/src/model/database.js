@@ -1,6 +1,6 @@
 const mysql = require('mysql2/promise');
 
-const stringconnection = 'mysql://root@localhost:3306/curso_de_nodejs';
+const stringconnection = 'mysql://root@localhost:3306/seekdb';
 
 const banco = mysql.createPool(stringconnection);
 
@@ -10,7 +10,7 @@ const checkConnection = async () => {
             host: "localhost",
             user: "root",
             password: "",
-            database: "curso_de_nodejs",
+            database: "seekdb",
         });
         await connection.ping(); //testa se o banco está respondendo
         await connection.end(); //fecha a conexão
