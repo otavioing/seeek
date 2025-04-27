@@ -191,6 +191,7 @@ const Atualizartema = async (req, res) => {
         res.status(500).send({ message: "Erro ao atualizar tema.", error: err.message });
     }
 
+    console.log("Tema atualizado com sucesso!")
 };
 
 

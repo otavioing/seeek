@@ -25,10 +25,46 @@ function MudarModos() {
   let corpo = document.getElementById("todo");
   if (corpo.classList.contains("modoEscuro")) {
     ModoClaro();
+    atualizarTemaNoBanco("claro");
   } else {
     ModoEscuro();
+    atualizarTemaNoBanco("escuro");
   }
 }
+
+function atualizarTemaNoBanco(novoTema) {
+  const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+  if (!usuario) {
+    console.error("Usuário não está logado.");
+    return;
+  }
+
+  fetch("http://localhost:4500/usuarios/atualizar-tema", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      id: usuario.id,
+      tema: novoTema
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log("Tema atualizado:", data);
+
+    // Atualizar localStorage também
+    usuario.tema = novoTema;
+    localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+    localStorage.setItem("modo", novoTema);
+
+  })
+  .catch(err => {
+    console.error("Erro ao atualizar tema:", err);
+  });
+}
+
 
 function aplicarModo() {
   if (localStorage.getItem("modo") === "escuro") {
