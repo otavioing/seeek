@@ -154,7 +154,7 @@
 
     <section class="banneruser">
         <a class="voltarbutton" href="index.html"><img src="img/arrow-top.svg" alt="Seta para cima"></a>
-        <img src="img/bannerusuario.png" alt="banner do usuário">
+        <img id="imagemdefundodoperfil" src="img/bannerusuario.png" alt="banner do usuário">
         <div class="seguirCursosProjetos">
             <div class="seguirUser">
                 <button class="SegUso">Seguir</button>
@@ -171,13 +171,13 @@
         <section class="informacoesperfil" id="informacoesperfil">
             <div class="informacoesperfiltudo">
                 <div id="fotodeperfiluser" class="imgdousereNome">
-                    <img src="img/iconeperfil.svg" alt="logo do usuário">
+                    <img id="imgdeperfildouser" src="img/iconeperfil.svg" alt="logo do usuário">
                 </div>
 
                 <div class="dadosdouser">
                     <div id="infoUserContratar" class="infoUserContratar">
-                        <h1>Nome do Usuário</h1>
-                        <p>@usuario</p>
+                        <h1 id="nomedousuario">Nome do Usuário</h1>
+                        <p id="nomecompleto">@usuario</p>
                         <p class="cidadeepais"> <span class="UsoCP">cidade e país</span></p>
                         <div class="seguirUser2">
                             <button class="botaoSelecionadoUser" id="editarUserPerfil"> <span class="UsoE">Editar
@@ -220,7 +220,7 @@
                             </div>
                             <div class="bioUserSobre">
                                 <p class="UsoSU">Sobre o Usuário</p>
-                                <p class="sobreUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
+                                <p id="descricaouser" class="sobreUser">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta
                                     debitis
                                     deleniti nostrum nesciunt recusandae doloremque quo quos perferendis, minus,
                                     corporis
@@ -480,6 +480,7 @@
     <script src="script/cake2.js"></script>
     <script src="script/cake.js"></script>
     <script src="script/user_logado.js"></script>
+    <script src="usuario.js"></script>
 
 </body>
 
