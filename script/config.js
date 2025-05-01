@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //começo da parte de acessibilidade
 
+if (usuario && typeof usuario.acessibilidade_ativa !== 'undefined') {
+  const barra = document.getElementById('barra-acessibilidade');
+  if (barra) {
+    barra.style.display = usuario.acessibilidade_ativa ? 'block' : 'none';
+  }
+}
+
 document.getElementById(usuario.acessibilidade_ativa ? 'barraacessibilidadevisivel' : 'barraacessibilidadeinvisivel').checked = true;
 
 
@@ -113,3 +120,5 @@ function cancelarnotificacaoexcluirconta(){
 }
 
 //fim do código de excluir conta
+
+
