@@ -7,6 +7,11 @@ async function carregarUsuario() {
         const dados = await resposta.json();
         const usuario = dados[0];
 
+        if (dados.length === 0) {
+            window.location.href = 'erroaoencontrarusuario.html';
+            return;
+        }
+
         // Exibe os dados na página
         document.getElementById('nomedousuario').textContent = usuario.nome;
         document.getElementById('nomecompleto').textContent = usuario.nome_completo;
