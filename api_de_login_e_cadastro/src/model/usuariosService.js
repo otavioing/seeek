@@ -191,9 +191,22 @@ const Atualizartema = async (req, res) => {
         res.status(500).send({ message: "Erro ao atualizar tema.", error: err.message });
     }
 
-    console.log("Tema atualizado com sucesso!")
+};
+
+const Atualizaracessibilidade = async (req, res) => {
+    const { id, acessibilidade_ativa } = req.body;
+
+    try {
+        await banco.query("UPDATE usuarios SET acessibilidade_ativa = ? WHERE id = ?", [acessibilidade_ativa, id]);
+
+        res.status(200).send({ message: "acessibilidade atualizada com sucesso!" });
+    } catch (err) {
+        res.status(500).send({ message: "Erro ao atualizar tema.", error: err.message });
+    }
+
+    console.log("acessibilidade atualizado com sucesso!")
 };
 
 
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema}
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade}

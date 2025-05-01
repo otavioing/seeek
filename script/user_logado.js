@@ -41,6 +41,11 @@ if (usuario) {
 //   window.location.href = "/index.html"; // se não estiver logado
 // }
 
+if (!usuario.acessibilidade_ativa) {
+  document.getElementById('barra-acessibilidade').style.display = 'none';
+}
+
+
 function logout() {
   localStorage.removeItem("usuarioLogado");
   window.location.href = "/login.html";

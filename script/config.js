@@ -1,3 +1,48 @@
+document.addEventListener('DOMContentLoaded', function () {
+  
+  const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+//começo da parte de acessibilidade
+
+document.getElementById(usuario.acessibilidade_ativa ? 'barraacessibilidadevisivel' : 'barraacessibilidadeinvisivel').checked = true;
+
+
+// Adiciona o listener para atualizar a escolha
+document.querySelectorAll('input[name="barraacessibilidade"]').forEach((input) => {
+  input.addEventListener('change', async () => {
+    const novoValor = input.value === 'true';
+
+    try {
+      // Envia para o backend
+      await fetch('http://localhost:4500/usuarios/atualizar-acessibilidade', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          id: usuario.id,
+          acessibilidade_ativa: novoValor
+        })
+      });
+
+      // Atualiza localmente
+      usuario.acessibilidade_ativa = novoValor;
+      localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+
+      // Mostra ou oculta a barra de acessibilidade imediatamente
+      document.getElementById('barra-acessibilidade').style.display = novoValor ? 'block' : 'none';
+    } catch (erro) {
+      console.error("Erro ao atualizar acessibilidade:", erro);
+    }
+  });
+});
+});
+
+//fim da parte de acessibilidade
+
+// Código para o botão de excluir conta
+
+
 const loginForm = document.getElementById("botaoexcluircontaconfirmar");
 loginForm.addEventListener("click", async (e) => {
   try {
@@ -66,3 +111,5 @@ function cancelarnotificacaoexcluirconta(){
 
   notificacao.style.top = "-10rem";
 }
+
+//fim do código de excluir conta
