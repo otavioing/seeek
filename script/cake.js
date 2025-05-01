@@ -342,3 +342,16 @@ function desativaeativavlibras(){
 }
 
 
+function abrirnotificacao(){
+    let notificacao = document.getElementById("caixadenotificacaoexcluirconta");
+  
+    // notificacao.style.display = "block";
+    notificacao.style.top = "0rem";
+  }
+  
+  function fecharnotificacao(){
+    let notificacao = document.getElementById("caixadenotificacaoexcluirconta");
+  
+    notificacao.style.top = "-10rem";
+  }
+

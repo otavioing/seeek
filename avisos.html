@@ -175,20 +175,15 @@
   </nav>
   <div id="menuperfil" class="menuperfil">
     <div class="divmenuperfil">
-      <a href="usuario.html" class="Perf">Meu Perfil</a>
+      <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
     </div>
     <div class="divmenuperfil">
-      <a href="login.html" class="Conf">Configurações</a>
+      <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
     </div>
     <div class="botaomodoescuro">
       <label for=""><img src="img/lua.png" alt="Lua" /></label>
       <div class="checkbox-con">
-        <input
-          onclick="MudarModos()"
-          id="checkbox"
-          type="checkbox"
-          checked
-        />
+        <input  onclick="MudarModos()" id="checkbox" type="checkbox" checked />
       </div>
       <label for=""><img src="img/sol.png" alt="Sol" /></label>
     </div>

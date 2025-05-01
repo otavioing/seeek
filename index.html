@@ -157,10 +157,10 @@
 
     <div id="menuperfil" class="menuperfil">
       <div class="divmenuperfil">
-        <a href="usuario.html" class="Perf">Meu Perfil</a>
+        <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
       </div>
       <div class="divmenuperfil">
-        <a href="login.html" class="Conf">Configurações</a>
+        <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
       </div>
       <div class="botaomodoescuro">
         <label for=""><img src="img/lua.png" alt="Lua" /></label>
@@ -184,7 +184,15 @@
   </section>
 
   <main class="prIndex">
-
+    <div id="caixadenotificacaoexcluirconta" class="caixadenotificacaoexcluirconta">
+      <h2>Não foi possível continuar</h2>
+      <p>Você precisa estar logado para acessar esta página.</p>
+      <div class="actions">
+        <span onclick="fecharnotificacao()" id="cancelarnotificacaoexcluirconta" class="btn-cancel">Cancelar</span>
+        <span id="botaoexcluircontaconfirmar" class="btn-confirm"><a href="login.html">fazer login</a></span>
+      </div>
+    </div>
+    
     <!---------- Caixa de Seleção de Usuário ------- -->
 
     <div class="container1" id="user-box">
