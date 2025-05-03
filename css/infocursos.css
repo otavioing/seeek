@@ -71,6 +71,26 @@ a {
     color: var(--brancoBase);
 }
 
+
+.modoEscuro .containerr{
+    background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro .cursoInfo, .assinarCurso{
+    background-color: var(--ModoEscuroMesc2);
+    border: 1px solid black
+}
+
+.modoEscuro .assinarCurso{
+    background-color: var(--ModoEscuroMesc);
+    border: 1px solid black
+}
+
+.modoEscuro .assinarCurso button, .modoEscuro .btnSeguir{
+    background-color: var(--ModoEscuroFontC);
+
+}
+
 /*----------------------------------------------------------*/
 
 .mainInfoCursos{

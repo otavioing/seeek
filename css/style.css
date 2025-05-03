@@ -169,6 +169,15 @@ svg .st8{
     background-color: var(--ModoEscuroMesc2);
     
 }
+
+.modoEscuro .areaDePesquisa{
+    background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro .Entrarmodo{
+    color: red;
+}
+
 /*-------------------------------- Header inicio --------------------------------*/
 
 header {
@@ -308,6 +317,10 @@ header .botaoMenu span {
 
 
 /*-------------------------------- Section fy --------------------------------*/
+
+.Entrarmodo{
+    color: red;
+}
 
 .explorar {
     height: 3.5rem;
