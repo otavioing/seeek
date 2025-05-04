@@ -71,6 +71,7 @@ function aplicarModo() {
     ModoEscuro();
   } else {
     ModoClaro(); 
+    document.getElementById("checkbox").checked = true;
   }
 }
 

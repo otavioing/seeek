@@ -18,6 +18,9 @@ async function carregarUsuario() {
         document.getElementById('imgdeperfildouser').src = `http://localhost:4500${usuario.foto}`;
         document.getElementById('imagemdefundodoperfil').src = `http://localhost:4500${usuario.banner}`;
         document.getElementById('descricaouser').textContent = usuario.descricao;
+        document.getElementById('instagram').href = `https://www.instagram.com/${usuario.instagram}/`;
+        document.getElementById('twitter').href = `https://x.com/${usuario.x_twitter}/`;
+        
     } catch (erro) {
         console.error("Erro ao carregar usuário:", erro.message);
     }
