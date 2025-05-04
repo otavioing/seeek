@@ -109,8 +109,8 @@ const Create = async (request, response) => {
 const Update = async (request, response) => {
     try {
         const id = request.params.id;
-        const {nome, email, senha, foto} = request.body;
-        const data = await banco.query('UPDATE usuarios SET nome=?, email=?, senha=?, foto=? WHERE id=?', [nome, email, senha, foto, id]);
+        const {cidade_pais, cargo, nome, email, senha, foto} = request.body;
+        const data = await banco.query('UPDATE usuarios SET cidade_pais=?, cargo=?, nome=?, email=?, senha=?, foto=? WHERE id=?', [cidade_pais, cargo, nome, email, senha, foto, id]);
         response.status(200).send(data[0]);
     } catch (error) {
         console.log("Erro ao conectar ao banco de dados: ", error.message);

@@ -401,6 +401,34 @@
 
                       </form>
 
+                    <script>
+
+                      fetch(`http://localhost:4500/usuarios/${usuario.id}`)
+                      .then(response => response.json())
+                         .then(data => {
+                        if (data.length === 0) {
+                            alert("Usuário não encontrado!");
+                            return;
+                        }
+
+                         const user = data[0]; // <- Aqui está o segredo!
+
+                          console.log("Usuário recebido:", user);
+
+                               document.getElementById("CidadeForm").value = user.cidade_pais || "";
+                               document.getElementById("CargoForm").value = user.cargo || "";
+                               document.getElementById("NomeForm").value = user.nome || "";
+                               document.getElementById("EmailForm").value = user.email || "";
+                               document.getElementById("SenhaForm").value = ""; // segurança: não mostrar senha
+                               document.getElementById("URLForm").value = "";   // ajuste se tiver campo real para URL
+                           })
+                            .catch(error => {
+                                    console.error("Erro ao buscar dados do usuário:", error);
+                                 });
+
+                    </script>
+                      
+
                       <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
                         <p class="Pper10">Utilizar barra de acessibilidade</p>
                         <div class="opcaoprivacidade">
@@ -524,6 +552,7 @@
     <script src="script/cake.js"></script>
     <script src="script/user_logado.js"></script>
     <script src="script/config.js"></script>
+    <script src="script/acessibilidade.js"></script> 
     <script src="script/caua.js"></script>
 
 </body>

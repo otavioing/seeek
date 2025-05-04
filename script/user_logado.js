@@ -9,7 +9,7 @@ if (usuario) {
       </button>`;
 
   document.getElementById("menuperfil").innerHTML = `<div class="divmenuperfil">
-        <a href="usuario.html" class="Perf">Meu Perfil</a>
+        <a href="http://localhost:4500/usuario.html?id=${usuario.id}" class="Perf">Meu Perfil</a>
       </div>
        <div class="divmenuperfil">
         <a href="config.html" class="Conf">Configurações</a>
@@ -21,7 +21,7 @@ if (usuario) {
         </div>
         <label for=""><img src="img/sol.png" alt="Sol" /></label>
       </div>
-      <button onclick="logout()" id="sairdomenuperfil" class="sairP"><a href="login.html" style="color: red;">Sair</a></button>
+      <button onclick="logout()" id="sairdomenuperfil" class="sairP"> <a class="sairP" href="login.html">Sair</a></button>
       </div>
 `
 

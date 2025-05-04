@@ -27,9 +27,12 @@
 
     --branco: #f3f3f3;
 
+    --verde: #357635;
+
     --brancomenuperfil: #E6E6E6;
 
     --brancohovermenuham: rgba(217, 217, 217, 1);
+
 
 
     --cinzaescurofundodomudartema: #3A3A3A;
@@ -319,7 +322,12 @@ header .botaoMenu span {
 /*-------------------------------- Section fy --------------------------------*/
 
 .Entrarmodo{
-    color: red;
+    color: var(--verde);
+}
+
+
+.sairP{
+    color: var(--vermelhom) !important;
 }
 
 .explorar {
