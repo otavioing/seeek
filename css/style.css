@@ -275,6 +275,7 @@ header .usersite p{
 
 header .usersite img {
     height: 2rem;
+    border-radius: 50%;
 }
 
 header .logosite img {
