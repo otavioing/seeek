@@ -269,6 +269,10 @@ header .usersite button {
     cursor: pointer;
 }
 
+header .usersite p{
+    color: var(--branco);
+}
+
 header .usersite img {
     height: 2rem;
 }
