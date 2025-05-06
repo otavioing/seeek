@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/05/2025 às 18:40
+-- Tempo de geração: 06/05/2025 às 23:20
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -55,27 +55,29 @@ CREATE TABLE `usuarios` (
   `nome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
-  `foto` varchar(255) NOT NULL,
-  `data_de_criacao` timestamp NOT NULL DEFAULT current_timestamp(),
+  `foto` varchar(255) DEFAULT NULL,
   `tema` varchar(50) DEFAULT 'claro',
   `cidade_pais` varchar(255) DEFAULT NULL,
   `cargo` varchar(255) DEFAULT NULL,
-  `nome_completo` varchar(255) DEFAULT NULL,
+  `nome_de_usuario` varchar(255) DEFAULT NULL,
   `descricao` varchar(300) DEFAULT 'este usuário não possui descrição',
   `banner` varchar(255) DEFAULT NULL,
   `acessibilidade_ativa` tinyint(1) DEFAULT 1,
-  `instagram` varchar(255) DEFAULT NULL,
-  `x_twitter` varchar(255) DEFAULT NULL
+  `url_do_perfil_do_instagram` varchar(255) DEFAULT NULL,
+  `url_do_perfil_do_x_twitter` varchar(255) DEFAULT NULL,
+  `data_de_criacao` timestamp NOT NULL DEFAULT current_timestamp(),
+  `cadastro_completo` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `foto`, `data_de_criacao`, `tema`, `cidade_pais`, `cargo`, `nome_completo`, `descricao`, `banner`, `acessibilidade_ativa`, `instagram`, `x_twitter`) VALUES
-(2, 'cake', 'otaviodominguessilva@gmail.com', '$2b$10$cDKMPQaOGPdgY9TWkt8jNuzunjt2RgRtdsHlOlgRuT9Wno6XL8iFW', '/uploads/1745694263742-Camada_4.png', '2025-04-26 19:04:23', 'escuro', 'tesde de cidade', 'teste de cargo', 'otavio domingues', 'este usuário não possui descrição', '/uploads/bannerteste.jpg\n', 0, '_cake.ing', 'otaviods1'),
-(3, 'who.jxao', 'joaojfpessoal@gmail.com', '$2b$10$fJwhob.w51UdYqGq8GV76uC7r6wE6dJw.cufVIJxvWwxdwXa7M9vK', '/uploads/1746441551159-(,,_ï¹_,,).jpeg', '2025-05-05 10:39:11', 'claro', NULL, NULL, NULL, 'este usuário não possui descrição', NULL, 1, NULL, NULL),
-(4, 'ddd', 'dddd', '$2b$10$e.VUP6fgvcSPwcoxv/Pa5eWTAVDfOOwgHZRWzWKRSiNZQ0Oy6bq9q', '/uploads/foto_perfil1746549549472-print_inicio_seek.png', '2025-05-06 16:39:09', 'claro', NULL, NULL, NULL, 'este usuário não possui descrição', NULL, 1, NULL, NULL);
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `foto`, `tema`, `cidade_pais`, `cargo`, `nome_de_usuario`, `descricao`, `banner`, `acessibilidade_ativa`, `url_do_perfil_do_instagram`, `url_do_perfil_do_x_twitter`, `data_de_criacao`, `cadastro_completo`) VALUES
+(2, 'cake', 'otaviodominguessilva@gmail.com', '$2b$10$cDKMPQaOGPdgY9TWkt8jNuzunjt2RgRtdsHlOlgRuT9Wno6XL8iFW', '/uploads/foto_perfil1746565007613-print_inicio_seek.png', 'claro', 'tesde de cidade', 'desempregado', 'cakezin', 'dgwefdszx', '/uploads/bannerteste.jpg\n', 0, '_cake.ing', 'otaviods1', '2025-04-26 19:04:23', 1),
+(3, 'who.jxao', 'joaojfpessoal@gmail.com', '$2b$10$fJwhob.w51UdYqGq8GV76uC7r6wE6dJw.cufVIJxvWwxdwXa7M9vK', '/uploads/1746441551159-(,,_ï¹_,,).jpeg', 'claro', NULL, NULL, NULL, 'este usuário não possui descrição', NULL, 1, NULL, NULL, '2025-05-05 10:39:11', 0),
+(4, 'João da Silva', 'joao.silva@example.com', 'novaSenha123', '/uploads/foto_perfil1746562118695-print_inicio_seek.png', 'escuro', 'São Paulo, Brasil', NULL, NULL, NULL, 'https://meusite.com/banners/banner1.jpg', 1, 'https://instagram.com/joaosilva', 'https://twitter.com/joaosilva', '2025-05-06 16:39:09', 0),
+(5, 'fwsdxzfe', 'tectonicroom356@gmail.com', '$2b$10$L2VkkUv4o6G.QmpgA/nwsOJilt8.jUvj2dHA3Vt5.Fa4niTRTbMbK', '/uploads/foto_perfil1746565276500-print_inicio_seek.png', 'claro', NULL, 'desempregado', 'cakezin', 'rsdssaxfeadsx', NULL, 1, NULL, NULL, '2025-05-06 21:00:45', 1);
 
 --
 -- Índices para tabelas despejadas
@@ -109,7 +111,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restrições para tabelas despejadas
