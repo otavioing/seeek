@@ -1,22 +1,48 @@
-// Banner da página de login
-let banners = ["img/banner1.jpg", "img/banner2.png", "img/banner3.jpg"];
-let indiceBanner = 0;
+const banners = ["img/banner1.jpg", "img/banner2.png", "img/banner3.jpg"];
+let indice = 0;
+const canvas = document.getElementById("imgBanner");
+const ctx = canvas.getContext("2d");
 
-function trocarBanner() {
-    const imgBanner = document.getElementById("imgBanner");
-    if (imgBanner && banners.length > 0) {
-        imgBanner.style.opacity = 0.2;
-        setTimeout(() => {
-            imgBanner.src = banners[indiceBanner];
-            indiceBanner = (indiceBanner + 1) % banners.length;
-            imgBanner.style.opacity = 1;
-        }, 500);
+// Redimensiona o canvas para preencher a tela
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+// Faz fade entre imagens
+function fadeToImage(newImg) {
+  let alpha = 0;
+  const step = 0.02;
+
+  const fadeInterval = setInterval(() => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.globalAlpha = 1;
+    ctx.drawImage(currentImg, 0, 0, canvas.width, canvas.height);
+    ctx.globalAlpha = alpha;
+    ctx.drawImage(newImg, 0, 0, canvas.width, canvas.height);
+    alpha += step;
+    if (alpha >= 1) {
+      clearInterval(fadeInterval);
+      currentImg = newImg;
     }
+  }, 16); // Aproximadamente 60fps
 }
 
-trocarBanner();
-setInterval(trocarBanner, 7500);
-
+let currentImg = new Image();
+currentImg.src = banners[indice];
+currentImg.onload = () => {
+  ctx.drawImage(currentImg, 0, 0, canvas.width, canvas.height);
+  setInterval(() => {
+    indice = (indice + 1) % banners.length;
+    const nextImg = new Image();
+    nextImg.src = banners[indice];
+    nextImg.onload = () => {
+      fadeToImage(nextImg);
+    };
+  }, 7500);
+};
 
 // Elementos
 const el = id => document.getElementById(id);
@@ -54,7 +80,7 @@ const updateSignInButton = () => {
     signInBtn.disabled = !valid;
 };
 
-// Validação de nome/email
+// Validação de nome, email e senha
 const validateField = (input, msgEl, validator, successMsg, errorMsg) => {
     const valid = validator(input.value);
     msgEl.textContent = valid ? successMsg : errorMsg;
