@@ -41,7 +41,6 @@ const Erase = async (request, response) => {
 const SolicitarCriacao = async (request, response) => {
     try {
         const { nome, email, senha } = request.body;
-        const foto = request.file ? `/uploads/${request.file.filename}` : null;
 
         const codigo = Math.floor(100000 + Math.random() * 900000);
 
@@ -52,7 +51,7 @@ const SolicitarCriacao = async (request, response) => {
         response.status(200).send({
             message: "Código de verificação enviado para o email",
             codigo, // em produção, talvez você **não envie isso no response**
-            dados: { nome, email, senha, foto } // temporário, ou salva em cache
+            dados: { nome, email, senha} // temporário, ou salva em cache
         });
 
     } catch (error) {
@@ -87,15 +86,14 @@ const Solicitarexclusao = async (request, response) => {
 const Create = async (request, response) => {
     try {
         const { nome, email, senha } = request.body;
-        const foto = request.file ? `/uploads/foto_perfil${request.file.filename}` : null;
 
         // gera o hash da senha
         const saltRounds = 10;
         const senhaHash = await bcrypt.hash(senha, saltRounds);
 
         const data = await banco.query(
-            'INSERT INTO usuarios (nome, email, senha, foto) VALUES (?, ?, ?, ?)',
-            [nome, email, senhaHash, foto] // aqui usamos a senha já criptografada
+            'INSERT INTO usuarios (nome, email, senha) VALUES ( ?, ?, ?)',
+            [nome, email, senhaHash] // aqui usamos a senha já criptografada
         );
 
         response.status(200).send({ message: 'Usuário cadastrado com sucesso' });
@@ -109,14 +107,34 @@ const Create = async (request, response) => {
 const Update = async (request, response) => {
     try {
         const id = request.params.id;
-        const {cidade_pais, cargo, nome, email, senha, foto} = request.body;
-        const data = await banco.query('UPDATE usuarios SET cidade_pais=?, cargo=?, nome=?, email=?, senha=?, foto=? WHERE id=?', [cidade_pais, cargo, nome, email, senha, foto, id]);
+        const {nome, email, senha, tema, cidade_pais, cargo, nome_de_usuario, descricao, banner, url_do_perfil_do_instagram, url_do_perfil_do_x_twitter} = request.body;
+        const foto = request.file ? `/uploads/foto_perfil${request.file.filename}` : null;
+        const data = await banco.query('UPDATE usuarios SET nome=?, email=?, senha=?, foto=?, tema=?, cidade_pais=?, cargo=?, nome_de_usuario=?, descricao=?, banner=?, url_do_perfil_do_instagram=?, url_do_perfil_do_x_twitter=? WHERE id=?', [nome, email, senha, foto, tema, cidade_pais, cargo, nome_de_usuario, descricao, banner, url_do_perfil_do_instagram, url_do_perfil_do_x_twitter, id]);
         response.status(200).send(data[0]);
     } catch (error) {
         console.log("Erro ao conectar ao banco de dados: ", error.message);
         response.status(401).send({"message": "Falha ao executar a ação!"})
     }
 }
+
+const updatecompletarcadastro = async (request, response) => {
+    try {
+        const id = request.params.id;
+        const { nome_de_usuario, cargo, descricao } = request.body;
+        const foto = request.file ? `/uploads/foto_perfil${request.file.filename}` : null;
+
+        const data = await banco.query(
+            'UPDATE usuarios SET foto=?, cargo=?, nome_de_usuario=?, descricao=?, cadastro_completo=1 WHERE id=?',
+            [foto, cargo, nome_de_usuario, descricao, id]
+        );
+
+        response.status(200).send(data[0]);
+    } catch (error) {
+        console.log("Erro ao conectar ao banco de dados: ", error.message);
+        response.status(401).send({ "message": "Falha ao executar a ação!" });
+    }
+};
+
 
 const Login = async (request, response) => {
     const { email, senha } = request.body;
@@ -209,4 +227,4 @@ const Atualizaracessibilidade = async (req, res) => {
 
 
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade}
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastro}

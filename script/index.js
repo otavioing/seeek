@@ -110,10 +110,16 @@ function selectUserType(type) {
 
 // Fecha o modal de confirmação de usuário
 function onCloseDialog() {
-    document.getElementById("confirmation-box").style.display = "none";
-    document.getElementById("enterprise-confirmation-box").style.display = "none";
-    document.getElementById("user-box").style.display = "none";
-    window.location.href = "index.html";
+    let notificacao = document.getElementById("caixadenotificacaocompletarcadastro");
+    notificacao.style.top = "0rem";
+    setTimeout(() => {
+        notificacao.style.top = "-10rem";
+    }, 3000);
+}
+
+function fecharnotificacao(){
+    let notificacao = document.getElementById("caixadenotificacaocompletarcadastro");
+    notificacao.style.top = "-10rem";
 }
 
 function onRegisterEnterprise() {

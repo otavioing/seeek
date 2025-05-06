@@ -242,8 +242,14 @@
         </div>
 
       </div>
+
+      <div id="caixadenotificacaocompletarcadastro" class="caixadenotificacaocompletarcadastro">
+        <h2>Não é possivel fazer isso agora</h2>
+        <p>Você precisa completar o cadastro antes de fechar esta janela.</p>
+    </div>
+    
       <!-- Caixa  do tipo de usuario-->
-      <div class="confirmation-container" id="confirmation-box" style="display: none">
+      <div class="confirmation-container" id="confirmation-box">
         <div class="titulocadastro1">
           <h2>BEM-VINDO(A)</h2>
           <button class="close_dialog_register" onclick="onCloseDialog()">
@@ -251,26 +257,27 @@
           </button>
         </div>
         <p class="pp">Antes de prossseguir, preencha os dados abaixo</p>
-
+<form action="" id="formulariocaixaupdate">
         <div class="form">
           <div class="left-section">
             <div class="profile-photo">
               <div class="photo-placeholder">
-                <button>Adicionar foto de perfil</button>
+                <label for="cadastroFoto">Adicionar foto de perfil</label>
+                <input style="display: none;" type="file" id="cadastroFoto" accept="image/*" />  
               </div>
             </div>
             <div class="input-group">
-              <label for="username">OBRIGATÓRIO<span class="required">*</span></label>
-              <input type="text" id="username" placeholder="Nome de Usuário" />
-              <label for="profession"></label>
-              <input type="text" id="profession" placeholder="Sua Profissão" />
+              <label for="updatenomeuser">OBRIGATÓRIO<span class="required">*</span></label>
+              <input type="text" id="updatenomeuser" placeholder="Nome de Usuário" />
+              <label for="updateprofissao"></label>
+              <input type="text" id="updateprofissao" placeholder="Sua Profissão" />
             </div>
           </div>
 
           <div class="right-section">
             <div class="input-group">
-              <label class="Descricao1" for="description">Descrição</label>
-              <textarea id="description" placeholder="Descrição"></textarea>
+              <label class="Descricao1" for="updatedescricao">Descrição</label>
+              <textarea id="updatedescricao" placeholder="Descrição"></textarea>
             </div>
             <div class="certficateslabel">
               <label>Certificados</label>
@@ -284,7 +291,9 @@
               </div>
             </div>
           </div>
+          <input type="submit" id="submit" value="Salvar" class="submit-button" />
         </div>
+      </form>
 
         <div class="setaCorfirmar">
           <button><img src="/img/setaparacima.svg" alt="seta" />
@@ -774,6 +783,7 @@
   <script src="script/cake.js"></script>
   <script src="script/user_logado.js"></script>
   <script src="script/acessibilidade.js"></script>
+  <script src="script/caixa_completar_cad.js"></script>
 
 </body>
 
