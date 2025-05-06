@@ -87,7 +87,7 @@ const Solicitarexclusao = async (request, response) => {
 const Create = async (request, response) => {
     try {
         const { nome, email, senha } = request.body;
-        const foto = request.file ? `/uploads/${request.file.filename}` : null;
+        const foto = request.file ? `/uploads/foto_perfil${request.file.filename}` : null;
 
         // gera o hash da senha
         const saltRounds = 10;

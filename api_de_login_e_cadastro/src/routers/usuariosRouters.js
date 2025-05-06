@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade} = require("../model/usuariosService")
-const upload = require('../config/upload'); 
+const upload = require('../config/upload_foto_perfil'); 
 
 
 const rota = Router()
