@@ -1287,6 +1287,22 @@ footer {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.photo-dinamica{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .profile-photo1{
     display: flex;
     justify-content: space-between;

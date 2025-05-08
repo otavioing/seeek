@@ -50,6 +50,7 @@ cadastroForm.addEventListener("submit", async (e) => {
       // Se o cadastro estiver completo, esconda a caixa de verificação
       if (data[0].cadastro_completo === 1) {
         verificacaoContainer.style.display = "none";  // Esconde a caixa
+        ''
       } else {
         verificacaoContainer.style.display = "block";  // Exibe a caixa
       }
