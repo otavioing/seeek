@@ -106,7 +106,7 @@ verificarCodigoBtn.addEventListener('click', async () => {
       cadastroForm.reset();
       verificacaoContainer.style.display = 'none';
       codigoVerificacaoInput.value = '';
-      document.getElementById('cadastroForm').style.display = 'none'; // Esconde o formulário de cadastro
+      document.getElementById('sign-up-modal').style.display = 'none'; // Esconde o formulário de cadastro
     } else {
       alert("Erro ao criar conta: " + finalData.message);
     }
