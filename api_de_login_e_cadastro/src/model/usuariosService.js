@@ -121,7 +121,7 @@ const updatecompletarcadastro = async (request, response) => {
     try {
         const id = request.params.id;
         const { nome_de_usuario, cargo, descricao } = request.body;
-        const foto = request.file ? `/uploads/foto_perfil${request.file.filename}` : null;
+        const foto = request.file ? `/uploads/foto_perfil/${request.file.filename}` : null;
 
         const data = await banco.query(
             'UPDATE usuarios SET foto=?, cargo=?, nome_de_usuario=?, descricao=?, cadastro_completo=1 WHERE id=?',
