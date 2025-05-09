@@ -89,14 +89,15 @@
                     <div class="modal-conteudo">
                       <span class="fechar" onclick="fecharModal()">&times;</span>
                       <h3>Recuperar Senha</h3>
-                      <input type="email" id="emailRec" placeholder="Digite seu email" />
-                      <button onclick="enviarCodigo()">Enviar código</button>
-                      <div id="codigoContainer" style="display: none;">
-                        <input type="text" id="codigo" placeholder="Código recebido" />
-                        <input type="password" id="novaSenha" placeholder="Nova senha" />
-                        <button onclick="atualizarSenha()">Atualizar Senha</button>
-                      </div>
+                      <input class="modal-inputs" type="email" id="emailRec" placeholder="Digite seu email" />
+                      <button class="modal-buttons" onclick="enviarCodigo()">Enviar código</button>
                       <p id="mensagemRec"></p>
+                      <div id="codigoContainer" style="display: none;">
+                        <input class="modal-inputs" type="text" id="codigo" placeholder="Código recebido" />
+                        <input class="modal-inputs" type="password" id="novaSenha" placeholder="Nova senha" />
+                        <button class="modal-buttons" onclick="atualizarSenha()">Atualizar Senha</button>
+                      </div>
+                      
                     </div>
                   </div>
                 
@@ -142,7 +143,7 @@
 
                 
                 <div id="verificacaoContainer" style="display: none; margin-top: 1rem;">
-                    <label for="codigoVerificacao">Digite o código enviado ao seu e-mail:</label>
+                    <label for="codigoVerificacao">Digite o código enviado ao seu Email:</label>
                     <input type="text" id="codigoVerificacao" placeholder="Ex: 123456">
                     <button type="button" id="verificarCodigoBtn">Verificar Código</button>
                   </div>
