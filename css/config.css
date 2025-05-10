@@ -265,6 +265,14 @@ h1{
   }
 
 
+  .eXcluirconta{
+   background-color: var(--vermelhom); 
+   width: 22%;
+   border-radius: 7%;
+   height: 10%;
+   color: #ced4da;
+   font-size: 90%;
+  }
 
 
 /*------------------------------------------------------------------------*/
