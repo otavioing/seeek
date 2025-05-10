@@ -110,37 +110,13 @@ function selectUserType(type) {
 
 // Fecha o modal de confirmação de usuário
 function onCloseDialog() {
-    let notificacao = document.getElementById("caixadenotificacaocompletarcadastro");
-    notificacao.style.top = "0rem";
-    setTimeout(() => {
-        notificacao.style.top = "-10rem";
-    }, 3000);
-}
-
-function fecharnotificacao(){
-    let notificacao = document.getElementById("caixadenotificacaocompletarcadastro");
-    notificacao.style.top = "-10rem";
+    document.getElementById("confirmation-box").style.display = "none";
+    document.getElementById("enterprise-confirmation-box").style.display = "none";
+    document.getElementById("user-box").style.display = "none";
+    window.location.href = "index.html";
 }
 
 function onRegisterEnterprise() {
     // codigo para registrar usuario empresarial
     onCloseDialog();
 }
-
-document.getElementById("preview").style.display = "none";
-
-const input = document.getElementById("cadastroFoto");
-const preview = document.getElementById("preview");
-
-input.addEventListener("change", function () {
-const file = this.files[0];
-if (file) {
-const reader = new FileReader();
-reader.onload = function () {
-preview.src = reader.result;
-document.getElementById("preview").style.display = "flex";
-document.getElementById("labeladdfoto").style.display = "none";
-};
-reader.readAsDataURL(file);
-}
-});

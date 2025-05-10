@@ -71,11 +71,10 @@ function aplicarModo() {
     ModoEscuro();
   } else {
     ModoClaro(); 
-    document.getElementById("checkbox").checked = true;
   }
 }
 
-// aplica o modo quando a página carregar
+// Finalmente aplica o modo quando a página carregar
 aplicarModo();
 
 console.log(usuario.tema);
@@ -142,7 +141,7 @@ function aplicarIdioma() {
       Pergunta7:"Do you want to receive an immediate notification when someone requests to join a team?",
       Pergunta8:"Do you want to receive notification when there are offers/discounts?",
       Pergunta9:"Do you want to receive notification when there are offers/discounts?",
-      Pergunta10:"Use accessibility bar?",
+      Pergunta10:"Block adult content?",
       Pergunta11:"Do not allow third parties to embed your content on other sites?",
       PrivacidadeConf: "Privacy",
       NotificacoesConf: "Notifications",
@@ -403,7 +402,7 @@ function aplicarIdioma() {
       Pergunta7: "Vuoi ricevere una notifica immediata quando qualcuno chiede di partecipare a un team?",
       Pergunta8: "Vuoi ricevere notifiche quando ci sono offerte/sconti?",
       Pergunta9: "Vuoi ricevere notifiche quando ci sono offerte/sconti?",
-      Pergunta10: "Utilizzare la barra di accessibilità?",
+      Pergunta10: "Bloccare contenuti per adulti?",
       Pergunta11: "Non consentire a terzi di incorporare il tuo contenuto in altri siti?",
       PrivacidadeConf: "Privacy",
       NotificacoesConf: "Notifiche",
@@ -534,7 +533,7 @@ function aplicarIdioma() {
       Pergunta7: "Souhaitez-vous recevoir une notification immédiate lorsque quelqu'un demande à rejoindre une équipe?",
       Pergunta8: "Souhaitez-vous recevoir des notifications lorsqu'il y a des offres/remises?",
       Pergunta9: "Souhaitez-vous recevoir des notifications lorsqu'il y a des offres/remises?",
-      Pergunta10: "Utiliser la barre d'accessibilité ?",
+      Pergunta10: "Bloquer le contenu pour adultes?",
       Pergunta11: "Ne pas permettre à des tiers d'incorporer votre contenu sur d'autres sites?",
       PrivacidadeConf: "Confidentialité",
       NotificacoesConf: "Notifications",
@@ -667,7 +666,7 @@ function aplicarIdioma() {
       Pergunta7:"Deseja receber uma notificação imediata quando solicitarem para participar de uma equipe ?",
       Pergunta8:"Deseja receber notificação quando ouver ofertas/descontos?",
       Pergunta9:"Deseja receber notificação quando ouver ofertas/descontos?",
-      Pergunta10:"Utilizar barra de acessibilidade?",
+      Pergunta10:"Bloquear conteúdo adulto?",
       Pergunta11:"Não permitir que terceiros incorporem seu conteúdo em outros sites?",
       PrivacidadeConf: "Privacidede",
       NotificacoesConf: "Notificações",
