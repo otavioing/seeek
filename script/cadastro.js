@@ -53,10 +53,9 @@ cadastroForm.addEventListener('submit', async (e) => {
   const nome = document.getElementById('cadastroNome').value;
   const email = document.getElementById('cadastroEmail').value;
   const senha = document.getElementById('cadastroSenha').value;
-  const foto = document.getElementById('cadastroFoto').files[0];
 
   // Salva para depois usar na criação
-  dadosTemporarios = { nome, email, senha, foto };
+  dadosTemporarios = { nome, email, senha,};
 
   try {
     const response = await fetch('http://localhost:4500/usuarios/solicitar-criacao', {
@@ -93,7 +92,6 @@ verificarCodigoBtn.addEventListener('click', async () => {
   formData.append("nome", dadosTemporarios.nome);
   formData.append("email", dadosTemporarios.email);
   formData.append("senha", dadosTemporarios.senha);
-  formData.append("foto", dadosTemporarios.foto);
 
   try {
     const finalResponse = await fetch('http://localhost:4500/usuarios', {
@@ -108,6 +106,7 @@ verificarCodigoBtn.addEventListener('click', async () => {
       cadastroForm.reset();
       verificacaoContainer.style.display = 'none';
       codigoVerificacaoInput.value = '';
+      document.getElementById('sign-up-modal').style.display = 'none'; // Esconde o formulário de cadastro
     } else {
       alert("Erro ao criar conta: " + finalData.message);
     }
