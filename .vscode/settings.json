@@ -1,3 +1,8 @@
 {
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "cSpell.enabledFileTypes": {
+        "javascript": false,
+        "html": false,
+        "css": false
+    }
 }
