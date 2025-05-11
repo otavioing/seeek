@@ -42,7 +42,7 @@ cadastroForm.addEventListener("submit", async (e) => {
 
   document.addEventListener("DOMContentLoaded", async () => {
     try {
-      const response = await fetch(`http://localhost:4500/usuarios/${usuario.id}`);
+      const response = await fetch(`http://localhost:4500/usuarios/verificarcaixa/${usuario.id}`);
       const data = await response.json();
   
       const verificacaoContainer = document.getElementById("confirmation-box");

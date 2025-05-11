@@ -1,5 +1,5 @@
 const {Router} = require('express');
-const {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastro} = require("../model/usuariosService")
+const {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastro, Getbyidvarificarcaixa} = require("../model/usuariosService")
 const upload = require('../config/upload_foto_perfil'); 
 
 
@@ -7,6 +7,7 @@ const rota = Router()
 
 rota.get("/", GetAll);
 rota.get("/:id", GetById);
+rota.get("/verificarcaixa/:id", Getbyidvarificarcaixa);
 rota.post("/", upload.single("foto"), Create); 
 rota.post("/", Create);
 rota.put("/:id", Update)

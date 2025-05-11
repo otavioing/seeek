@@ -27,6 +27,18 @@ const GetById = async (request, response) => {
     }
 };
 
+const Getbyidvarificarcaixa = async (request, response) => {
+
+    try {
+        const id = request.params.id;
+        const data = await banco.query("SELECT cadastro_completo FROM usuarios WHERE id=?", [id]);
+        response.status(200).send(data[0]);
+    } catch (error) {
+        console.log("Erro ao conectar ao banco de dados: ", error.message);
+        response.status(401).send({"message": "Falha ao executar a ação!"})
+    }
+}
+
 const Erase = async (request, response) => {
     try {
         const id = request.params.id;
@@ -227,4 +239,4 @@ const Atualizaracessibilidade = async (req, res) => {
 
 
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastro}
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastro, Getbyidvarificarcaixa}
