@@ -106,8 +106,10 @@ a {
 }
 
 .modoEscuro .explorar .explorarDiv {
-    border-bottom: 1px solid var(--ModoEscuroFontV);
+    text-decoration: 2px underline var(--ModoEscuroFontV);
 }
+
+
 
 .modoEscuro .navsite .paginaselecionada {
     border-bottom: 3px solid var(--ModoEscuroFontV);
@@ -353,14 +355,19 @@ header .botaoMenu span {
     color: var(--preto);
     font-size: 1.3rem;
 }
-
-.explorar .explorarDiv {
-    border-bottom: 1px solid var(--azulBase);
+.selecionadoexplorar{
+    color: var(--azulBase);
+    text-decoration: underline;
 }
+
 
 .explorar .explorarDiv a {
     color: var(--azulBase);
 }
+.explorar .explorarDiv {
+    text-decoration: 2px underline var(--azulBase);
+}
+
 
 .explorar .tendencia {
     padding: 0.5rem 0.5rem 0.5rem 1rem;

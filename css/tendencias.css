@@ -144,3 +144,28 @@ h1{
     align-items: center;
     justify-content: center;
 }
+.explorar .explorarDiv {
+    text-decoration: none;
+}
+.explorar .explorarDiv a {
+    color: black;
+}
+.explorar .tendencia a{
+    color: var(--azulBase);
+}
+.modoEscuro .explorar .explorarDiv  a{
+    color: white;
+}
+.modoEscuro .explorar .explorarDiv {
+    text-decoration: none;
+}
+.explorar .tendencia{
+    text-decoration: 2px underline var(--azulBase);
+}
+.modoEscuro .explorar .tendencia a{
+    color: var(--ModoEscuroFontV);
+}
+
+.modoEscuro .explorar .tendencia{
+    text-decoration:2px underline var(--ModoEscuroFontV);
+}
