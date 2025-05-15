@@ -4,7 +4,7 @@ const upload = require('../config/upload_foto_post');
 
 const rota = Router();
 
-rota.post("/", upload.single("imagem"), CriarPost);
+rota.post("/", upload.single("arquivo"), CriarPost);
 rota.get("/", ListarPosts);
 
 module.exports = rota;

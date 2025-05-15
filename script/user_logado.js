@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = await response.json();
 
     if (Array.isArray(data) && data.length === 1) {
-      console.log("Usuário encontrado:", data[0]);
+      // console.log("Usuário encontrado:", data[0]);
       //header
       document.getElementById("nome_user").innerHTML = data[0].nome;
       document.getElementById("img_user").src = data[0].foto;
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   } catch (error) {
   console.log("Erro ao buscar dados do usuário:", error);
-  alert("Você não está logado", error);
+  // alert("Você não está logado", error);
 }
 
 });

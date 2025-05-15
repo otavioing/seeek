@@ -155,6 +155,7 @@
           </div>
     </header>
 
+    <form id="enviararquivodopost" enctype="multipart/form-data">
     <div class="adcProjeto" id="adcProjeto" style="display: flex;">
         <div class="containerAdcProjeto">
             <div class="left-projeto">
@@ -163,18 +164,18 @@
                     <div>
                         <label for="enviarImg" class="labelAdcImg"><img src="img/lupa+.svg" alt=""><p>imagem</p></label>
 
-                        <input type="file" id="enviarImg" style="display: none;">
-                        <input type="file" id="enviarVid" style="display: none;">
+                        <input type="file" id="enviarImg" name="arquivo" accept="image/*" style="display: none;">
+                        <input type="file" id="enviarVid" accept="video/*"  style="display: none;">
 
                         <label for="enviarVid"><img src="img/lupa+.svg" alt=""><p>vídeo</p></label>
                     </div>
                 </div>
                 <div class="txt-area-and-button">
-                    <button>Inserir</button>
+                    <button type="submit">Inserir</button>
                     <textarea name="text-new-post" id="text-new-post" placeholder="descrição"></textarea>
                 </div>
             </div>
-
+            
             <main class="right-projeto">
                 <h4>Ferramentas</h4>
                 <div class="ferramentas">
@@ -230,6 +231,7 @@
             </main>
         </div>
     </div>
+    </form>
 
     <footer>
         <div class="linksfooter">
@@ -273,4 +275,5 @@
     <script src="usuario.js"></script>
     <script src="script/acessibilidade.js"></script>
     <script src="script/user_logado.js"></script>
-</body>
+    <script src="script/adicionarProjeto.js"></script>
+</body> 
