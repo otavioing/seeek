@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seek - Usuário</title>
+    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/adicionarProjeto.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SLCTJL00KV');
+</script>
+
+<body id="todo">
+
+    <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
+        <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg"
+                alt="símbolo da onu"></button>
+    </div>
+
+    <div id="barra" class="divbarradeacessibilidade">
+        <button onclick="desativarbarra()" class="botaoativacaobarra">
+            <img src="img/barra/icon.svg" alt="símbolo da onu" />
+        </button>
+
+        <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
+            <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+        </button>
+
+        <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
+            <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+        </button>
+
+        <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
+            <img src="img/barra/luabarra.svg" alt="Lua" />
+        </button>
+
+        <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
+            <img src="img/barra/solbarra.svg" alt="Sol" />
+        </button>
+
+        <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
+            <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+        </button>
+
+        <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
+    </div>
+
+    <header class="inicio">
+        <button class="botaoMenu" id="botaoMenu">
+            <span class="linha1"></span>
+            <span class="linha2"></span>
+            <span class="linha3"></span>
+        </button>
+        <div class="logosite">
+            <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek"></a>
+        </div>
+        <div class="userhover">
+            <button><img id="img_useres" onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu"></button>
+        </div>
+        <nav class="navsite">
+            <div id="headerexplurar">
+                <a href="index.html" class="nav-link ExpA">Explorar</a>
+            </div>
+            <div id="headercursos">
+                <a href="cursos.html" class="nav-link CurA">Cursos</a>
+            </div>
+            <div id="headervagas">
+                <a href="vagas.html" class="nav-link VagA">Vagas</a>
+            </div>
+            <div class="sobrenoss">
+                <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
+            </div>
+        </nav>
+        <div class="pesquisasite">
+            <input type="text" placeholder="Pesquisar" class="Pesquisar">
+            <a href=""><img src="img/search2.svg" alt="Lupa"></a>
+        </div>
+        <div id="usersite" class="usersite">
+            <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
+            <p id="nome_user"></p>
+            <button onclick="abrirMenu()">
+                <img id="img_user" src="img/user2.svg" alt="User" />
+            </button>
+        </div>
+        <nav class="hamburguer" id="menu">
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="index.html" class="ExpA">Explorar</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="cursos.html" class="CurA">Cursos</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="vagas.html" class="VagA">Vagas</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer nav-link" href="sobre.html" class="SobA">Sobre Nós</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer" href="ajuda.html" class="SobA">Ajuda</a>
+            </div>
+            <div class="bordasuperior"></div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer " href="avisos.html" class="SobA">Avisos</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer " href="avisos.html" class="SobA">Atualizações</a>
+            </div>
+            <div class="itemsdomenu">
+                <a class="botoesmenuhamburguer " href="sobre.html#contatosobre" class="SobA">Contato</a>
+            </div>
+
+            <div class="itemsdomenu">
+                <select name="" id="">
+                    <option value="pt">Português</option>
+                    <option value="eng">English</option>
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+
+            <div class="direitosautoraismenu">
+                <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
+            </div>
+        </nav>
+        <div id="menuperfil" class="menuperfil">
+            <div id="divmeuperfil" class="divmenuperfil">
+              <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
+            </div>
+            <div id="divconfiguracoes" class="divmenuperfil">
+              <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
+            </div>
+            <div class="botaomodoescuro">
+              <label for=""><img src="img/lua.png" alt="Lua" /></label>
+              <div class="checkbox-con">
+                <input  onclick="MudarModos()" id="checkbox" type="checkbox"/>
+              </div>
+              <label for=""><img src="img/sol.png" alt="Sol" /></label>
+            </div>
+            <div id="diventrarsair">
+              <button id="sairdomenuperfil" class="sairP"><a href="login.html" ><span class="LoginPerfil">Login</span></a></button>
+            </div>
+          </div>
+    </header>
+
+    <div class="adcProjeto" id="adcProjeto" style="display: flex;">
+        <div class="containerAdcProjeto">
+            <div class="left-projeto">
+                <div class="botaoAdcImgg">
+                    <p>Adicionar foto ou vídeo</p>
+                    <div>
+                        <label for="enviarImg" class="labelAdcImg"><img src="img/lupa+.svg" alt=""><p>imagem</p></label>
+
+                        <input type="file" id="enviarImg" style="display: none;">
+                        <input type="file" id="enviarVid" style="display: none;">
+
+                        <label for="enviarVid"><img src="img/lupa+.svg" alt=""><p>vídeo</p></label>
+                    </div>
+                </div>
+                <div class="txt-area-and-button">
+                    <button>Inserir</button>
+                    <textarea name="text-new-post" id="text-new-post" placeholder="descrição"></textarea>
+                </div>
+            </div>
+
+            <main class="right-projeto">
+                <h4>Ferramentas</h4>
+                <div class="ferramentas">
+                    <h5>Criar elementos</h5>
+                    <div class="botoesF">
+                        <button><img src="img/lupa+.svg" alt="">
+                            <p>Grade</p>
+                        </button>
+                        <button><img src="img/lupa+.svg" alt="">
+                            <p>Grade</p>
+                        </button>
+                        <button><img src="img/lupa+.svg" alt="">
+                            <p>Grade</p>
+                        </button>
+                        <button><img src="img/lupa+.svg" alt="">
+                            <p>Grade</p>
+                        </button>
+                        <div>
+                            <button class="botaoOutros"><img src="img/lupa+.svg" alt="">
+                                <p>Grade</p>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h5>Editar</h5>
+                    <div class="botoesEdit">
+                        <button><img src="img/lupa+.svg" alt="">
+                            <p>Grade</p>
+                        </button>
+                        <button><img src="img/lupa+.svg" alt="">
+                            <p>Grade</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="categorias">
+                    <h4>Categorias</h4>
+                    <div class="categoria">
+                        <div class="catt">
+                            <button>Ilustração</button>
+                            <button>Foto</button>
+                            <button>Abstrato</button>
+                            <button>Design</button>
+                            <button>Futurista</button>
+                            <button>Identidade Visual</button>
+                        </div>
+                        <div>
+                            <button id="btn-adc-cat">
+                                <p>Adicionar</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer>
+        <div class="linksfooter">
+            <div class="infofooter">
+                <a href="ajuda.html" class="AjuF">Ajuda</a>
+                <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
+            </div>
+
+            <div class="infofooter">
+                <a href="sobre.html" class="SobA">Sobre Nós</a>
+                <a href="sobre.html#contatosobre" class="ConT">Contato</a>
+            </div>
+            <div class="infofooter">
+                <a href="avisos.html" class="AviF">Avisos</a>
+
+                <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+                    <option value="pt">Português</option>
+                    <option value="eng">English</option>
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+
+            <div class="infofooter">
+                <img src="img/logoSeekk 3@2x.png" alt="Logo Seek" />
+            </div>
+        </div>
+
+        <div class="direitosautorais">
+            <p class="DirF">
+                Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script/caua.js"></script>
+    <script src="script/lfy.js"></script>
+    <script src="script/cake2.js"></script>
+    <script src="script/cake.js"></script>
+    <script src="usuario.js"></script>
+    <script src="script/acessibilidade.js"></script>
+    <script src="script/user_logado.js"></script>
+</body>
