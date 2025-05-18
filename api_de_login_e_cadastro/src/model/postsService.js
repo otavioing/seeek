@@ -29,7 +29,7 @@ const ListarPosts = async (req, res) => {
             SELECT posts.*, usuarios.nome, usuarios.foto AS foto_perfil
             FROM posts
             JOIN usuarios ON posts.user_id = usuarios.id
-            ORDER BY criado_em DESC
+            ORDER BY RAND() 
         `);
         res.status(200).send(posts);
     } catch (err) {
