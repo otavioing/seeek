@@ -11,11 +11,13 @@
 
     --preto: #0E0E0E;
 
+    --pretoBorda: rgba(5, 5, 5, 0.5);
+
     --azulBase: #2B63F0;
 
     --azulBasee: #00008b;
 
-    --azulBasec: rgb(116, 84, 233);
+    --azulBasec: #76ADFF;
 
     --roxobase: #942af1;
 
@@ -58,6 +60,14 @@
 
 .modoEscuro .avisos h1, .modoEscuro .atualizacoes h2, .modoEscuro .migalhadepaosobrenos {
     color: var(--ModoEscuroFontV);
+}
+.modoEscuro .containerUpdate{
+    background-color: #3b3b3b;
+    border:var(--pretoBorda);
+}
+
+.modoEscuro .dataUpdate{
+    color: var(--azulBasec);
 }
 
 
@@ -124,7 +134,7 @@
     margin-bottom: 2.6rem;
     padding: 2rem 1rem;
     border: 1px solid var(--cinzaBorda);
-    box-shadow: 0px 2px 2px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.25);
     border-radius: 5px;
     background-color: #F5F5F5;
 }
@@ -145,6 +155,7 @@
     height: 1rem;
     margin-right: 6px;
 }
+
 .dataUpdate{
     font-size:1.5rem;
     font-weight: 600;
@@ -153,6 +164,7 @@
 .textoavisos p{
     font-size: 1.5rem;
 }
+
 @media screen and (max-width: 1000px) {
 
     .textoavisos p{
