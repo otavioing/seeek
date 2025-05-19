@@ -25,6 +25,7 @@
 
     --vermelhom: #EF0000;
 
+    --cinzaBorda: rgba(162, 162, 162,0.5);
 
 
     --ModoEscuroBase: #1F1F1F;
@@ -59,13 +60,10 @@
     color: var(--ModoEscuroFontV);
 }
 
-.modoEscuro .caixaatualizacaoesavisos {
-    background-color: var(--ModoEscuroFilt);
-}
 
-.modoEscuro .servidor , .modoEscuro .portifolios,.modoEscuro .aparencia , .modoEscuro .responsividade{
+/* .modoEscuro .servidor , .modoEscuro .portifolios,.modoEscuro .aparencia , .modoEscuro .responsividade{
     border: 2px solid var(--brancoBase);
-}
+} */
 /*-------------------------------- Modo Escuro Fim --------------------------------*/
 
 
@@ -108,11 +106,8 @@
     display: flex;
     flex-direction: column;
     padding: 4rem 7rem ;
-    height: 80vh;
-
 }
 .atualizacoes h2{
-
     font-size: 2.5rem;
     color: var(--azulBase);
     margin-bottom: 2rem;
@@ -122,78 +117,37 @@
 .caixaatualizacaoesavisos{
     display: flex;
     flex-direction: column;
-    background-color: var(--cinzaBasec);
-    padding: 1rem;
+}
+.containerUpdate{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.6rem;
+    padding: 2rem 1rem;
+    border: 1px solid var(--cinzaBorda);
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    background-color: #F5F5F5;
+}
+.contUpdHeader{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    height: 30rem;
 }
-.servidor{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.2rem;
-    border: 2px solid var(--preto);
-    border-radius: 5px;
-    font-size: 1.5rem;
-    height: 3rem;
+.contUpdText{
+     height: 5rem;
 }
-.servidor img {
+.containerUpdate img {
     width: 2rem;
     height: 1rem;
     margin-right: 6px;
 }
-.portifolios img {
-    width: 2rem;
-    height: 1rem;
-    margin-right: 6px;
-}
-.aparencia img {
-    width: 2rem;
-    height: 1rem;
-    margin-right: 6px;
-}
-.responsividade img {
-    width: 2rem;
-    height: 1rem;
-    margin-right: 6px;
-}
-.portifolios{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.2rem;
-    border: 2px solid var(--preto);
-    border-radius: 5px;
-    font-size: 1.5rem;
-    height: 3rem;
-
-}
-.aparencia{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.2rem;
-    border: 2px solid var(--preto);
-    border-radius: 5px;
-    font-size: 1.5rem;
-    height: 3rem;
-}
-.responsividade{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.2rem;
-    border: 2px solid var(--preto);
-    border-radius: 5px;
-    font-size: 1.5rem;
-    height: 3rem;
-
+.dataUpdate{
+    font-size:1.5rem;
+    font-weight: 600;
+    color: var(--azulBase);
 }
 .textoavisos p{
     font-size: 1.5rem;
