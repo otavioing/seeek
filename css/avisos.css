@@ -137,6 +137,7 @@
     margin-bottom: 1rem;
 }
 .contUpdText{
+    font-size: 1.2rem;
      height: 5rem;
 }
 .containerUpdate img {
@@ -170,17 +171,11 @@
     .textoavisos p{
         font-size: 1.2rem;
     }
-    .responsividade{
+    .contUpdHeader{
         font-size: 1.3rem;
     }
-    .aparencia{
-        font-size: 1.3rem;
-    }
-    .portifolios{
-        font-size: 1.3rem;
-    }
-    .servidor{
-        font-size: 1.3rem;
+    .contUpdText{
+        font-size: 1rem;
     }
     .avisos {
         padding: 4rem 2rem;
@@ -195,40 +190,25 @@
     .textoavisos p{
         font-size: 1rem;
     }
-    .responsividade{
-        font-size: 1rem;
+    .contUpdHeader{
+        font-size: 1.1rem;
     }
-    .aparencia{
-        font-size: 1rem;
+    .contUpdText{
+        font-size: 0.8rem;
     }
-    .portifolios{
-        font-size: 1rem;
-    }
-    .servidor{
-        font-size: 1rem;
-    }
+    
 }
 @media screen and (max-width: 500px){
 
     .textoavisos p{
         font-size: 0.8rem;
     }
-    .responsividade{
-        font-size: 0.8rem;
+      .contUpdHeader{
+        font-size: 0.9rem;
     }
-    .aparencia{
-        font-size: 0.8rem;
+    .contUpdText{
+        font-size: 0.6rem;
     }
-    .portifolios{
-        font-size: 0.8rem;
-    }
-    .servidor{
-        font-size: 0.8rem;
-    }
-    .avisos {
-        padding: 4rem 1rem;
-    }
-    
     .atualizacoes{
         padding: 4rem 1rem ;
     }
