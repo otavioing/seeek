@@ -277,6 +277,7 @@ header .usersite p{
 
 header .usersite img {
     height: 2rem;
+    aspect-ratio: 1/1;
     border-radius: 50%;
 }
 
@@ -970,9 +971,9 @@ footer {
     right: -50%;
     background-color: var(--brancomenuperfil);
     width: 13rem;
-    height: 18rem;
+    height: auto;
     z-index: 1;
-    padding: 1rem 0;
+    padding: 1rem;
     gap: 0.5rem;
     display: none;
     flex-direction: column;
@@ -997,27 +998,25 @@ footer {
 
 .divmenuperfil {
     display: flex;
-    align-items: center;
+    align-items: space-between;
     justify-content: center;
     width: 100%;
-    padding: 1rem;
     cursor: pointer;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: 0.3s;
 }
-
-
 
 .divconfiguracoes {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0.5rem;
     cursor: pointer;
 }
 
 .divmenuperfil:hover {
     background-color: var(--brancoBase);
-    
 }
 
 .divmodoescuro {
@@ -1026,7 +1025,6 @@ footer {
     align-items: center;
     gap: 0.5rem;
     width: 100%;
-    padding: 0.5rem;
     cursor: pointer;
 }
 
