@@ -8,6 +8,8 @@
 
     --cinzaBasec: rgb(215, 214, 214);
 
+    --cinzaClaro: rgb(235, 235, 235);
+
     --laranjaBase: rgb(228, 95, 16);
 
     --brancoBase: rgb(255, 255, 255);
@@ -55,6 +57,9 @@ a {
     color: var(--brancoBase);
 }
 
+body{
+    overflow-y: hidden;
+}
 
 /*------------------------------Modal Portifolio-----------------------------*/
 
@@ -104,6 +109,40 @@ a {
     overflow: hidden;
 }
 
+.footerLogin{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--cinzaClaro);
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.footerLogin a{
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0 1rem;
+}
+
+.bordaFooterLogin{
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 0 1rem;
+    color: var(--preto);
+}
+
+.direitosautorais{
+    padding: 0 1rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.spanSeekLogin{
+    border-bottom: 1px solid var(--branco);
+    padding-bottom: 0.2rem;
+}
+
 /*------ Trocar o fundo da página de login -------*/
 
 /* Animação esmaecer */
@@ -136,9 +175,18 @@ a {
     width: 80%;
 }
 
-.logologin h1{
+.logologin div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: translateY(-3rem);
+}
+
+.logologin div h1{
     font-size: 1.5rem;
     text-shadow: 4px 4px 5px #000;
+    margin-left: 45%;
 }
 
 .cardlogin{
@@ -543,6 +591,10 @@ main .quemsomoslogin a{
         padding: 20px;
         width: 50%;
     }
+
+    .footerLogin a, .footerLogin p, .footerLogin span{
+        font-size: 0.8rem;
+    }
   
 
 }
@@ -558,6 +610,28 @@ main .quemsomoslogin a{
         width: 85%;
     }
    
+}
+
+@media screen and (max-width: 700px){
+
+    .footerLogin{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        height: auto;
+        padding: 0.4rem;
+    }
+
+    .aFooter{
+        width: 80%;
+        padding-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
 }
 
 @media screen and (max-width: 550px) {
