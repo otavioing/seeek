@@ -232,6 +232,9 @@ h1{
     left: 40%;
     transition: top 0.3s ease-in-out;
   }
+  .caixadenotificacaoexcluirconta:hover{
+    transform: scale(1.01);
+  }
 
   .caixadenotificacaoexcluirconta h2 {
     font-size: 18px;
@@ -239,8 +242,8 @@ h1{
   }
 
   .caixadenotificacaoexcluirconta p {
-    color: #666;
-    font-size: 14px;
+    color:var(--ModoEscuroBase);
+    font-size: 19px;
     margin-bottom: 24px;
   }
 
@@ -266,14 +269,17 @@ h1{
 
 
   .eXcluirconta{
-   background-color: var(--vermelhom); 
-   width: 22%;
-   border-radius: 7%;
-   height: 10%;
+   background-color: var(--azulBasee); 
+   width: 35%;
+   border-radius: 10px;
+   height: 50%;
    color: #ced4da;
-   font-size: 90%;
+   font-size: 100%;
   }
-
+  .eXcluirconta:hover{
+    transform: scale(1.05);
+    cursor:pointer;
+  }
 
 /*------------------------------------------------------------------------*/
 /*-------------------------------- @media --------------------------------*/
