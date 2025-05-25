@@ -1648,9 +1648,7 @@ footer {
 }
 .divativacaobarradeacessibilidade, .divbarradeacessibilidade{
     position: fixed;
-    top: 300px;
-    left: 0;
-    display: flex;
+    top: 400px;
     z-index: 9999;
     
 }
@@ -1661,7 +1659,7 @@ footer {
     padding: 5px;
     cursor: pointer;
     border-radius: 25px;
-    transition: 0.3s;
+    transition: 0.4s;
     display: flex;
     align-items: center;
     justify-content: center;
