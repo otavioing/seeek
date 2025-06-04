@@ -73,6 +73,33 @@ a {
     color: var(--brancoBase);
 }
 
+/*-------------------------------- Modo Escuro --------------------------------*/
+
+.modoEscuro {
+    color: white;
+    background-color: var(--ModoEscuroBase);
+}
+
+.modoEscuro .botaoAdcImgg, .modoEscuro .ferramentas, .modoEscuro .txt-area-and-button button, .modoEscuro .txt-area-and-button textarea, .modoEscuro .categoria{
+    background-color: var(--ModoEscuroFilt);
+    color: white;
+}
+
+.modoEscuro .left-projeto , .modoEscuro .adcProjeto{
+    background-color: var(--ModoEscuroBase);
+    color: white;
+} 
+
+.modoEscuro .botoesF button, .modoEscuro .botaoOutros,.modoEscuro .botoesEdit button, .modoEscuro .categoria button{
+    background-color: var(--ModoEscuroMesc2);
+    color: white;
+}
+
+.modoEscuro .txt-area-and-button button:hover, .modoEscuro .txt-area-and-button textarea:hover, .modoEscuro .txt-area-and-button textarea:focus, .modoEscuro .botaoAdcImgg div button:hover{
+    background-color: var(--ModoEscuroMesc2);
+}
+
+
 /* ----------------------------------------- */
 
 .adcProjeto{
@@ -153,6 +180,12 @@ a {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 0.6rem;
     background-color: var(--cinzaE8EAF0);
+    transition: 0.3s;
+}
+
+.botoesF button:hover, .botaoOutros:hover, .botoesEdit button:hover{
+transform: scale(107%);
+
 }
 
 .botaoOutros{
@@ -236,6 +269,11 @@ a {
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     margin-bottom: 0.5rem;
     background-color: var(--cinzaE8EAF0);
+    transition: 0.3s;
+}
+
+.categoria button:hover{
+    transform: scale( 107%);
 }
 
 .txt-area-and-button{
