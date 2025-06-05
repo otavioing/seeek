@@ -70,27 +70,66 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Função para mover o scroll horizontalmente a página de tendências
+function atualizarBotoes(carrossel, setaEsq, setaDir) {
+    const scrollLeft = carrossel.scrollLeft;
+    const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
+
+    // Esconde a seta esquerda se está no início
+    if (scrollLeft <= 0) {
+        setaEsq.style.opacity = 0;
+        setaEsq.style.pointerEvents = 'none'; // Desabilita o clique
+    } else {
+        setaEsq.style.opacity = 1;
+        setaEsq.style.pointerEvents = 'auto'; // Habilita o clique
+    }
+
+    // Esconde a seta direita se chegou no fim
+    if (scrollLeft >= maxScrollLeft) {
+        setaDir.style.opacity = 0;
+        setaDir.style.pointerEvents = 'none'; // Desabilita o clique
+    } else {
+        setaDir.style.opacity = 1;
+        setaDir.style.pointerEvents = 'auto'; // Habilita o clique
+    }
+}
+
 function moverDir(button) {
-    // Encontrar o carrossel relacionado ao botão clicado
-    var carrossel = button.parentElement.querySelector('.carrossel-tend');
-    
-    // Definir uma fração da largura do carrossel para mover (exemplo: 1/3 da largura)
-    var parte = carrossel.clientWidth / 3;
-    
-    // Mover para a direita, rolando para a próxima parte
+    const carrossel = button.parentElement.querySelector('.carrossel-tend');
+    const setaEsq = button.parentElement.querySelector('.seta-esquerda');
+    const setaDir = button;
+
+    const parte = carrossel.clientWidth / 3;
     carrossel.scrollBy({ left: parte, behavior: 'smooth' });
+
+    setTimeout(() => atualizarBotoes(carrossel, setaEsq, setaDir), 300);
 }
 
 function moverEsq(button) {
-    // Encontrar o carrossel relacionado ao botão clicado
-    var carrossel = button.parentElement.querySelector('.carrossel-tend');
-    
-    // Definir uma fração da largura do carrossel para mover (exemplo: 1/3 da largura)
-    var parte = carrossel.clientWidth / 3;
-    
-    // Mover para a esquerda, rolando para a parte anterior
+    const carrossel = button.parentElement.querySelector('.carrossel-tend');
+    const setaDir = button.parentElement.querySelector('.seta-direita');
+    const setaEsq = button;
+
+    const parte = carrossel.clientWidth / 3;
     carrossel.scrollBy({ left: -parte, behavior: 'smooth' });
+
+    setTimeout(() => atualizarBotoes(carrossel, setaEsq, setaDir), 300);
 }
+
+// Inicializar estado dos botões ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    const carrosseis = document.querySelectorAll('.carrossel-tendencias');
+    carrosseis.forEach(secao => {
+        const carrossel = secao.querySelector('.carrossel-tend');
+        const setaEsq = secao.querySelector('.seta-esquerda');
+        const setaDir = secao.querySelector('.seta-direita');
+
+        atualizarBotoes(carrossel, setaEsq, setaDir);
+
+        carrossel.addEventListener('scroll', () => {
+            atualizarBotoes(carrossel, setaEsq, setaDir);
+        });
+    });
+});
 
 
 // Função para selecionar o tipo de usuário, caixinha de usuario pra escolher conta empresarial ou padrao.

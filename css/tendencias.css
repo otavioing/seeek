@@ -129,11 +129,12 @@ h1{
     outline: none;
     border: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
 }
 
 .seta-esquerda {
     left: 10px;
-    display: flex;
+    opacity: 0;
     align-items: center;
     justify-content: center;
 }
@@ -144,6 +145,7 @@ h1{
     align-items: center;
     justify-content: center;
 }
+
 .explorar .explorarDiv {
     text-decoration: none;
 }
