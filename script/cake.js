@@ -332,8 +332,25 @@ function desativarbarra(){
 const barraAcessibilidade = document.getElementById("barra-acessibilidade")
 const barra = document.getElementById("barra")
 
+console.log(barraAcessibilidade, barra)
+
 let MovimentoX, MovimentoY, Arrastado = false
-let barraAtual = null 
+let barraAtual = null
+
+
+function PegarPosicaoAntiga() {
+    let posicaoSalva = JSON.parse(localStorage.getItem("posicaoBarra"))
+    if (posicaoSalva) {
+        barraAcessibilidade.style.left = posicaoSalva.left + "px"
+        barraAcessibilidade.style.top = posicaoSalva.top + "px"
+        barra.style.left = posicaoSalva.left + "px"
+        barra.style.top = posicaoSalva.top + "px"
+    }
+}
+
+function salvarPosicao(left, top) {
+    localStorage.setItem("posicaoBarra", JSON.stringify({ left, top }))
+}
 
 function iniciarArraste(event, elemento) {
     Arrastado = true
@@ -341,19 +358,15 @@ function iniciarArraste(event, elemento) {
     MovimentoX = event.clientX - barraAtual.offsetLeft
     MovimentoY = event.clientY - barraAtual.offsetTop
     barraAtual.style.cursor = "grabbing"
-    console.log("Arraste iniciado em:", barraAtual.id)
 }
 
 document.addEventListener("mousedown", (event) => {
-
     if (event.target.closest("#barra-acessibilidade")) {
         iniciarArraste(event, barraAcessibilidade)
     } else if (event.target.closest("#barra")) {
-        iniciarArraste(event, barra);
+        iniciarArraste(event, barra)
     }
-
-})
-
+});
 
 document.addEventListener("mousemove", (event) => {
     if (Arrastado && barraAtual) {
@@ -364,16 +377,23 @@ document.addEventListener("mousemove", (event) => {
         barraAcessibilidade.style.top = novoY + "px"
         barra.style.left = novoX + "px"
         barra.style.top = novoY + "px"
+
+        salvarPosicao(novoX, novoY)
     }
-})
+});
 
 document.addEventListener("mouseup", () => {
-    Arrastado = false;
+    Arrastado = false
     if (barraAtual) {
-        barraAtual.style.cursor = "grab" // Se quiser trocar o mause , ta ai ó
+        barraAtual.style.cursor = "grab"
     }
-    barraAtual = null;
+    barraAtual = null
 })
+
+window.onload = PegarPosicaoAntiga;
+
+
+//Fim da ação de pegar e mover a barra de acessibilidade
 
 
 function desativaeativavlibras(){
