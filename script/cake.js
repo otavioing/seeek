@@ -327,6 +327,55 @@ function desativarbarra(){
 
 }
 
+// Código de puxar as duas barras de acessibilidade
+
+const barraAcessibilidade = document.getElementById("barra-acessibilidade")
+const barra = document.getElementById("barra")
+
+let MovimentoX, MovimentoY, Arrastado = false
+let barraAtual = null 
+
+function iniciarArraste(event, elemento) {
+    Arrastado = true
+    barraAtual = elemento
+    MovimentoX = event.clientX - barraAtual.offsetLeft
+    MovimentoY = event.clientY - barraAtual.offsetTop
+    barraAtual.style.cursor = "grabbing"
+    console.log("Arraste iniciado em:", barraAtual.id)
+}
+
+document.addEventListener("mousedown", (event) => {
+
+    if (event.target.closest("#barra-acessibilidade")) {
+        iniciarArraste(event, barraAcessibilidade)
+    } else if (event.target.closest("#barra")) {
+        iniciarArraste(event, barra);
+    }
+
+})
+
+
+document.addEventListener("mousemove", (event) => {
+    if (Arrastado && barraAtual) {
+        let novoX = event.clientX - MovimentoX
+        let novoY = event.clientY - MovimentoY
+
+        barraAcessibilidade.style.left = novoX + "px"
+        barraAcessibilidade.style.top = novoY + "px"
+        barra.style.left = novoX + "px"
+        barra.style.top = novoY + "px"
+    }
+})
+
+document.addEventListener("mouseup", () => {
+    Arrastado = false;
+    if (barraAtual) {
+        barraAtual.style.cursor = "grab" // Se quiser trocar o mause , ta ai ó
+    }
+    barraAtual = null;
+})
+
+
 function desativaeativavlibras(){
     let vlibras = document.getElementById("ativaredasativarvlibras");
 
