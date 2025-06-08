@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Maio-2025 às 13:29
+-- Tempo de geração: 08/06/2025 às 20:07
 -- Versão do servidor: 10.4.32-MariaDB
--- versão do PHP: 8.0.30
+-- Versão do PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,53 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `posts`
+-- Estrutura para tabela `perfis_empresa`
+--
+
+CREATE TABLE `perfis_empresa` (
+  `usuario_id` int(11) NOT NULL,
+  `razao_social` varchar(255) NOT NULL,
+  `nome_fantasia` varchar(255) DEFAULT NULL,
+  `cnpj` varchar(18) NOT NULL,
+  `telefone_comercial` varchar(20) DEFAULT NULL,
+  `categoria_negocio` varchar(30) DEFAULT NULL,
+  `numero_funcionarios` int(11) DEFAULT NULL,
+  `endereco_completo` varchar(255) DEFAULT NULL,
+  `descricao` varchar(300) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `perfis_empresa`
+--
+
+INSERT INTO `perfis_empresa` (`usuario_id`, `razao_social`, `nome_fantasia`, `cnpj`, `telefone_comercial`, `categoria_negocio`, `numero_funcionarios`, `endereco_completo`, `descricao`) VALUES
+(5, 'fesdfsef', 'fesfsefsef', 'sefsefsf', '23131333', 'fsefsef', 131231, 'teste', 'tdezh');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `perfis_padrao`
+--
+
+CREATE TABLE `perfis_padrao` (
+  `usuario_id` int(11) NOT NULL,
+  `profissao` varchar(50) DEFAULT NULL,
+  `nome_de_usuario` varchar(10) DEFAULT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
+  `certificados` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `perfis_padrao`
+--
+
+INSERT INTO `perfis_padrao` (`usuario_id`, `profissao`, `nome_de_usuario`, `descricao`, `certificados`) VALUES
+(2, 'Desenvolvedor(a) de Software', 'ana.dev', 'Profissional com 5 anos de experiência em desenvolvimento web, com foco em tecnologias JavaScript como Node.js e React. Buscando novos desafios.', 'teste');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `posts`
 --
 
 CREATE TABLE `posts` (
@@ -36,7 +82,7 @@ CREATE TABLE `posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `posts`
+-- Despejando dados para a tabela `posts`
 --
 
 INSERT INTO `posts` (`id`, `user_id`, `imagem`, `legenda`, `criado_em`) VALUES
@@ -47,7 +93,7 @@ INSERT INTO `posts` (`id`, `user_id`, `imagem`, `legenda`, `criado_em`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuarios`
+-- Estrutura para tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -66,40 +112,55 @@ CREATE TABLE `usuarios` (
   `url_do_perfil_do_instagram` varchar(255) DEFAULT NULL,
   `url_do_perfil_do_x_twitter` varchar(255) DEFAULT NULL,
   `data_de_criacao` timestamp NOT NULL DEFAULT current_timestamp(),
-  `cadastro_completo` tinyint(1) DEFAULT 0
+  `cadastro_completo` tinyint(1) DEFAULT 0,
+  `tipo` enum('padrao','empresa') DEFAULT 'padrao'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `usuarios`
+-- Despejando dados para a tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `foto`, `tema`, `cidade_pais`, `cargo`, `nome_de_usuario`, `descricao`, `banner`, `acessibilidade_ativa`, `url_do_perfil_do_instagram`, `url_do_perfil_do_x_twitter`, `data_de_criacao`, `cadastro_completo`) VALUES
-(2, 'cake', 'otaviodominguessilva@gmail.com', '$2b$10$cDKMPQaOGPdgY9TWkt8jNuzunjt2RgRtdsHlOlgRuT9Wno6XL8iFW', '/uploads/foto_perfil1746565007613-print_inicio_seek.png', 'claro', 'tesde de cidade', 'desempregado', 'cakezin', 'dgwefdszx', '/uploads/bannerteste.jpg\n', 0, '_cake.ing', 'otaviods1', '2025-04-26 19:04:23', 1),
-(3, 'who.jxao', 'joaojfpessoal@gmail.com', '$2b$10$fJwhob.w51UdYqGq8GV76uC7r6wE6dJw.cufVIJxvWwxdwXa7M9vK', '/uploads/1746441551159-(,,_ï¹_,,).jpeg', 'claro', NULL, NULL, NULL, 'este usuário não possui descrição', NULL, 1, NULL, NULL, '2025-05-05 10:39:11', 0),
-(4, 'João da Silva', 'joao.silva@example.com', 'novaSenha123', '/uploads/foto_perfil1746562118695-print_inicio_seek.png', 'escuro', 'São Paulo, Brasil', NULL, NULL, NULL, 'https://meusite.com/banners/banner1.jpg', 1, 'https://instagram.com/joaosilva', 'https://twitter.com/joaosilva', '2025-05-06 16:39:09', 0),
-(5, 'fwsdxzfe', 'tectonicroom356@gmail.com', '$2b$10$L2VkkUv4o6G.QmpgA/nwsOJilt8.jUvj2dHA3Vt5.Fa4niTRTbMbK', '/uploads/foto_perfil1746565276500-print_inicio_seek.png', 'claro', NULL, 'desempregado', 'cakezin', 'rsdssaxfeadsx', NULL, 1, NULL, NULL, '2025-05-06 21:00:45', 1),
-(6, 'Caua Eduardo', 'caua.edu.pessoal@gmail.com', '$2b$10$/ondjYi5RttO3RzVFY3SmuHiNOQXMLQlg0Yu6IPE0xR5vuSoVFuGu', NULL, 'claro', NULL, NULL, NULL, 'este usuário não possui descrição', NULL, 1, NULL, NULL, '2025-05-09 11:14:08', 0);
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `foto`, `tema`, `cidade_pais`, `cargo`, `nome_de_usuario`, `descricao`, `banner`, `acessibilidade_ativa`, `url_do_perfil_do_instagram`, `url_do_perfil_do_x_twitter`, `data_de_criacao`, `cadastro_completo`, `tipo`) VALUES
+(2, 'cake', 'otaviodominguessilva@gmail.com', '$2b$10$cDKMPQaOGPdgY9TWkt8jNuzunjt2RgRtdsHlOlgRuT9Wno6XL8iFW', '/uploads/foto_perfil1746565007613-print_inicio_seek.png', 'claro', 'tesde de cidade', 'desempregado', 'cakezin', 'dgwefdszx', '/uploads/bannerteste.jpg\n', 0, '_cake.ing', 'otaviods1', '2025-04-26 19:04:23', 1, 'padrao'),
+(3, 'who.jxao', 'joaojfpessoal@gmail.com', '$2b$10$fJwhob.w51UdYqGq8GV76uC7r6wE6dJw.cufVIJxvWwxdwXa7M9vK', '/uploads/1746441551159-(,,_ï¹_,,).jpeg', 'claro', NULL, NULL, NULL, 'este usuário não possui descrição', NULL, 1, NULL, NULL, '2025-05-05 10:39:11', 0, 'empresa'),
+(4, 'João da Silva', 'joao.silva@example.com', 'novaSenha123', '/uploads/foto_perfil1746562118695-print_inicio_seek.png', 'escuro', 'São Paulo, Brasil', NULL, NULL, NULL, 'https://meusite.com/banners/banner1.jpg', 1, 'https://instagram.com/joaosilva', 'https://twitter.com/joaosilva', '2025-05-06 16:39:09', 0, NULL),
+(5, 'fwsdxzfe', 'tectonicroom356@gmail.com', '$2b$10$L2VkkUv4o6G.QmpgA/nwsOJilt8.jUvj2dHA3Vt5.Fa4niTRTbMbK', '/uploads/foto_perfil/1749401888377-Verde.png', 'claro', NULL, '', '', '', NULL, 1, NULL, NULL, '2025-05-06 21:00:45', 0, 'empresa'),
+(6, 'Caua Eduardo', 'caua.edu.pessoal@gmail.com', '$2b$10$/ondjYi5RttO3RzVFY3SmuHiNOQXMLQlg0Yu6IPE0xR5vuSoVFuGu', NULL, 'claro', NULL, NULL, NULL, 'este usuário não possui descrição', NULL, 1, NULL, NULL, '2025-05-09 11:14:08', 0, NULL);
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `posts`
+-- Índices de tabela `perfis_empresa`
+--
+ALTER TABLE `perfis_empresa`
+  ADD PRIMARY KEY (`usuario_id`),
+  ADD UNIQUE KEY `cnpj` (`cnpj`);
+
+--
+-- Índices de tabela `perfis_padrao`
+--
+ALTER TABLE `perfis_padrao`
+  ADD PRIMARY KEY (`usuario_id`),
+  ADD UNIQUE KEY `nome_de_usuario` (`nome_de_usuario`);
+
+--
+-- Índices de tabela `posts`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Índices para tabela `usuarios`
+-- Índices de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
@@ -115,11 +176,23 @@ ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Restrições para despejos de tabelas
+-- Restrições para tabelas despejadas
 --
 
 --
--- Limitadores para a tabela `posts`
+-- Restrições para tabelas `perfis_empresa`
+--
+ALTER TABLE `perfis_empresa`
+  ADD CONSTRAINT `perfis_empresa_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE;
+
+--
+-- Restrições para tabelas `perfis_padrao`
+--
+ALTER TABLE `perfis_padrao`
+  ADD CONSTRAINT `perfis_padrao_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE;
+
+--
+-- Restrições para tabelas `posts`
 --
 ALTER TABLE `posts`
   ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`id`);
