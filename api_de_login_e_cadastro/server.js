@@ -1,10 +1,12 @@
 const express = require('express');
 const { checkConnection } = require("./src/model/database")
-const rotasUsuarios = require("./src/routers/usuariosRouters")
 const cors = require('cors');
 const app = express();
 const path = require('path');
+const rotasUsuarios = require("./src/routers/usuariosRouters")
 const rotasPosts = require("./src/routers/postsRouters");
+const rotasperfilspadrao = require ("./src/routers/perfils_padraoRouters")
+const rotasperfilsempresa = require ("./src/routers/perfils_empresaRouters")
 const dotenv = require("dotenv");
 dotenv.config();
 const Port = process.env.APP_PORT;
@@ -13,7 +15,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static('../uploads'));
 app.use(express.static(path.join(__dirname, '..')));
-app.use("/posts", rotasPosts);
 
 
 
@@ -22,6 +23,9 @@ app.get("/", (request, response) => {
 }); 
 
 app.use("/usuarios", rotasUsuarios);
+app.use("/posts", rotasPosts);
+app.use("/padrao", rotasperfilspadrao)
+app.use("/empresa", rotasperfilsempresa)
 
 
 app.listen(Port, () => {

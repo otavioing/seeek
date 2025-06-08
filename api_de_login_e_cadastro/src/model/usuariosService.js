@@ -39,6 +39,16 @@ const Getbyidvarificarcaixa = async (request, response) => {
     }
 }
 
+const verificartipo = async (request, response) => {
+    try {
+        const id = request.params.id;
+        const data = await banco.query("SELECT tipo FROM usuarios WHERE id = ?", [id]);      
+        response.status(200).send(data[0]);
+    } catch (err) {
+        res.status(500).send({ message: "Erro ao definir tipo.", error: err.message });
+    }
+};
+
 const Erase = async (request, response) => {
     try {
         const id = request.params.id;
@@ -147,6 +157,23 @@ const updatecompletarcadastro = async (request, response) => {
     }
 };
 
+const completarcadastro = async (request, response) => {
+    try {
+        const id = request.params.id;
+
+        const data = await banco.query(
+            'UPDATE usuarios SET cadastro_completo=1 WHERE id=?',
+            [id]
+        );
+
+        response.status(200).send(data[0]);
+    } catch (error) {
+        console.log("Erro ao conectar ao banco de dados: ", error.message);
+        response.status(401).send({ "message": "Falha ao executar a ação!" });
+    }
+};
+
+
 
 const Login = async (request, response) => {
     const { email, senha } = request.body;
@@ -231,12 +258,24 @@ const Atualizaracessibilidade = async (req, res) => {
 
         res.status(200).send({ message: "acessibilidade atualizada com sucesso!" });
     } catch (err) {
-        res.status(500).send({ message: "Erro ao atualizar tema.", error: err.message });
+        res.status(500).send({ message: "Erro ao atualizar acessibilidade.", error: err.message });
     }
 
     console.log("acessibilidade atualizado com sucesso!")
 };
 
+const definirtipo = async (req, res) => {
+    const { id } = req.params;
+    const { tipo } = req.body;
+    try {
+        await banco.query("UPDATE usuarios SET tipo = ? WHERE id = ?", [tipo, id]);      
+        res.status(200).send({ message: "tipo definido com sucesso!" });
+    } catch (err) {
+        res.status(500).send({ message: "Erro ao definir tipo.", error: err.message });
+    }
+};
 
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastro, Getbyidvarificarcaixa}
+
+
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastro, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro}

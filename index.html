@@ -198,6 +198,7 @@
     <!---------- Caixa de Seleção de Usuário ------- -->
 
     <div class="container1" id="user-box">
+
       <div class="welcome-container" id="user-selection">
         <div class="titulocadastro1">
           <h2>BEM-VINDO(A)</h2>
@@ -208,30 +209,36 @@
         <div class="container1p">
           <p>Por favor, selecione a opção que mais se encaixa com você</p>
         </div>
-
+        
         <div class="user-options-pai">
           <div class="user-options">
             <div class="tiposusuario">
-              <button onclick="selectUserType('default')">
-                <img src="img/user2.svg" alt="User" />
-              </button>
-              <p>Usuário(a) Padrão</p>
-            </div>
-
+                <form action="" id="escolheruserpadrao">
+                <button type="submit">
+                  <img src="img/user2.svg" alt="User" />
+                </button>
+              </form>
+                <p>Usuário(a) Padrão</p>
+              </div>
+  
+            
             <div class="tiposusuario">
-              <button onclick="selectUserType('enterprise')">
-                <img src="img/user2.svg" alt="User" />
+                <form action="" id="escolheruserempresa">
+                <button type="submit">
+                  <img src="img/user2.svg" alt="User" />
+                </button>
+              </form>
+                <p>Usuário(a) Empresarial</p>
+              </div>
+            </div>
+  
+            <div class="setaCorfirmar">
+              <button id="pularTipoUser">
+                <p>Pular</p><img src="/img/setaparacima.svg" alt="seta" />
               </button>
-              <p>Usuário(a) Empresarial</p>
             </div>
           </div>
 
-          <div class="setaCorfirmar">
-            <button id="pularTipoUser">
-              <p>Pular</p><img src="/img/setaparacima.svg" alt="seta" />
-            </button>
-          </div>
-        </div>
 
         <div class="cancelarTipoUser" id="cancelarTipoUser">
           <p>Ao clicar em pular, irá seguir como usuário(a) padrão.</p>
@@ -318,42 +325,57 @@
         <p class="pp">Antes de prossseguir, preencha os dados abaixo</p>
 
 
+        <form action="" id="completarcadastroempresa">
         <div class="empresarialDiv">
 
-          <div class="imgPerfilEmpresa">
-            <div class="fotoPerfilDesc">
-              <button>Adicionar foto de perfil</button>
-              <textarea class="men" name="mensagem" id="mensagem1" placeholder="Descrição"></textarea>
+
+            <div class="imgPerfilEmpresa">
+              <div class="fotoPerfilDesc">
+                <div class="photo-placeholder">
+                  <label id="labelfotoempresa" for="addfotoempresa">Adicionar foto de perfil</label>
+                  <img class="photo-dinamica" id="previewempresa" src="" alt="">
+                  <input type="file" id="addfotoempresa" style="display: none;" accept="image/*">
+                </div>
+                
+                <textarea class="men" name="mensagem" id="descricaodaempresa" placeholder="Descrição"></textarea>
+              </div>
             </div>
-          </div>
-
-          <!-----------------inputs----------------- -->
-          <div class="inputsEmpresarial">
-            <p class="InfoEmp">Informações</p>
-            <div class="input-group2">
-
-              <div class="inputsEmp">
-                <label for="username"><span class="required">OBRIGATÓRIO*</span></label>
-                <input type="text" id="username" name="username" placeholder="Nome da Empresa" />
-
-                <label for="profession"><span class="required">OBRIGATÓRIO*</span></label>
-                <input type="tell" id="tell" name="profession" placeholder="Telefone" />
-
+            
+            <!-----------------inputs----------------- -->
+            <div class="inputsEmpresarial">
+              <p class="InfoEmp">Informações</p>
+              <div class="input-group2">
+                
+                <div class="inputsEmp">
+                <label for="razaosocial"><span class="required">OBRIGATÓRIO*</span></label>
+                <input type="text" id="razaosocial" name="username" placeholder="Razão social da Empresa" />
+                
+                <label for="telefonedaempresa"><span class="required">OBRIGATÓRIO*</span></label>
+                <input type="tell" id="telefonedaempresa" name="profession" placeholder="Telefone" />
+                
+                <label for="nomefantasia"><span class="required">OBRIGATÓRIO*</span></label>
+                <input type="text" id="nomefantasia" placeholder="Nome fantasia">
+                
+                
                 <button>Adicionar Endereço</button>
               </div>
-
+              
               <div class="inputsEmp">
-                <label for="categoria"><span class="required">OBRIGATÓRIO*</span></label>
-                <input type="text" id="categoria" name="categoria" placeholder="Categoria do negócio" />
-
-                <label for="funcionarios"><span class="required">OBRIGATÓRIO*</span></label>
-                <input type="tell" id="tell" name="funcionarios" placeholder="Número de funcionarios">
-
+                <label for="categoriadaempresa"><span class="required">OBRIGATÓRIO*</span></label>
+                <input type="text" id="categoriadaempresa" name="categoria" placeholder="Categoria do negócio" />
+                
+                <label for="nomerodefuncionarios"><span class="required">OBRIGATÓRIO*</span></label>
+                <input type="number" id="nomerodefuncionarios" name="funcionarios" placeholder="Número de funcionarios">
+                
+                <label for="cnpjdaempresa"><span class="required">OBRIGATÓRIO*</span></label>
+                <input type="text" name="" id="cnpjdaempresa" placeholder="Número do cnpj">
+                
+                
                 <button>Data de fundação</button>
               </div>
-
+              
             </div>
-
+            
             <p class="complementarEmp">Complementar</p>
             <div class="adcSecEmp">
               <button class="add-section-btn">
@@ -363,6 +385,9 @@
             </div>
 
           </div>
+          <input type="submit">
+
+        </form>
 
         </div>
 

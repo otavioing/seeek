@@ -183,3 +183,21 @@ document.getElementById("labeladdfoto").style.display = "none";
 reader.readAsDataURL(file);
 }
 });
+
+document.getElementById("previewempresa").style.display = "none";
+
+const inputempresa = document.getElementById("addfotoempresa");
+const previewempresa = document.getElementById("previewempresa");
+
+inputempresa.addEventListener("change", function () {
+const file = this.files[0];
+if (file) {
+const reader = new FileReader();
+reader.onload = function () {
+previewempresa.src = reader.result;
+document.getElementById("previewempresa").style.display = "flex";
+document.getElementById("labelfotoempresa").style.display = "none";
+};
+reader.readAsDataURL(file);
+}
+});
