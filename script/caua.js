@@ -78,8 +78,6 @@ function aplicarModo() {
 // aplica o modo quando a página carregar
 aplicarModo();
 
-console.log(usuario.tema);
-
 //-------------------------------- Troca de lingua --------------------------------/
 // sript para trocar a lingua do site
 function aplicarIdioma() {
