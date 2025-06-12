@@ -193,7 +193,8 @@ transform: scale(107%);
 }
 
 .botoesF button img, .botoesEdit button img{
-    height: 2rem;
+    height: 1rem;
+
 }
 
 .botaoAdcImgg{
@@ -236,7 +237,7 @@ transform: scale(107%);
 }
 
 .botaoAdcImgg div label img{
-    height: 2rem;
+    height: 1.5rem;
 }
 
 .categorias{
