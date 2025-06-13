@@ -1864,12 +1864,10 @@ footer {
     }
 
     header .hamburguer .itemsdomenu:hover {
-
         background-color: var(--brancohovermenuham);
     }
 
     header .userhover {
-
         height: 70%;
     }
 
@@ -1970,11 +1968,11 @@ footer {
 
     .areaDePesquisa {
         width: 100vw;
-        padding: 2rem 0.5rem 0 0.5rem;
+        padding: 5rem 0.5rem 0 0.5rem;
     }
 
     .areaDePesquisa .closeSearchArea {
-        font-size: 1.5rem;
+        font-size: 4rem;
     }
 
 }
