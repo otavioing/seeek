@@ -44,42 +44,152 @@ formempresa.addEventListener("submit", async (e) => {
 
 const cadastroFormempresa = document.getElementById("completarcadastroempresa");
 cadastroFormempresa.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-  const razaosocial = document.getElementById("razaosocial").value;
-  const nomefantasia = document.getElementById("nomefantasia").value;
-  const telefonedaempresa = document.getElementById("telefonedaempresa").value;
-  const categoriadaempresa = document.getElementById("categoriadaempresa").value;
-  const nomerodefuncionarios = document.getElementById("nomerodefuncionarios").value;
-  const cnpjdaempresa = document.getElementById("cnpjdaempresa").value;
-  const descricaodaempresa = document.getElementById("descricaodaempresa").value;
-  const endereco_completo = "teste"; // Atualize conforme necessário
+  const fotoInput = document.getElementById("addfotoempresa");
+  if (fotoInput.files.length === 0) {
+    alert("Por favor, selecione uma foto.");
+    return;
+  }
 
-  const dadosEmpresa = {
-    razao_social: razaosocial,
-    nome_fantasia: nomefantasia,
-    cnpj: cnpjdaempresa,
-    telefone_comercial: telefonedaempresa,
-    categoria_negocio: categoriadaempresa,
-    numero_funcionarios: nomerodefuncionarios,
-    endereco_completo: endereco_completo,
-    descricao: descricaodaempresa
+  try {
+    // Envia foto primeiro
+    const formData = new FormData();
+    formData.append("foto", fotoInput.files[0]);
+    const fotoResponse = await fetch(
+      `http://localhost:4500/usuarios/enviar-foto-perfil/${usuario.id}`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    if (!fotoResponse.ok) {
+      const fotoErro = await fotoResponse.json();
+      alert("Erro ao enviar foto: " + fotoErro.message);
+      return; // para o fluxo se quiser impedir sem foto
+    }
+
+    // Continua com o envio dos dados da empresa
+    const razaosocial = document.getElementById("razaosocial").value;
+    const nomefantasia = document.getElementById("nomefantasia").value;
+    const telefonedaempresa = document.getElementById("telefonedaempresa").value;
+    const categoriadaempresa = document.getElementById("categoriadaempresa").value;
+    const nomerodefuncionarios = document.getElementById("nomerodefuncionarios").value;
+    const cnpjdaempresa = document.getElementById("cnpjdaempresa").value;
+    const descricaodaempresa = document.getElementById("descricaodaempresa").value;
+    const endereco_completo = "teste"; // Atualize conforme necessário
+
+    const dadosEmpresa = {
+      razao_social: razaosocial,
+      nome_fantasia: nomefantasia,
+      cnpj: cnpjdaempresa,
+      telefone_comercial: telefonedaempresa,
+      categoria_negocio: categoriadaempresa,
+      numero_funcionarios: nomerodefuncionarios,
+      endereco_completo: endereco_completo,
+      descricao: descricaodaempresa,
+    };
+
+    const finalResponse = await fetch(`http://localhost:4500/empresa/${usuario.id}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dadosEmpresa),
+    });
+
+    if (finalResponse.ok) {
+      const completarCadastroResponse = await fetch(
+        `http://localhost:4500/usuarios/completarcoluna-cadastro/${usuario.id}`,
+        {
+          method: "PUT",
+        }
+      );
+
+      if (completarCadastroResponse.ok) {
+        alert("Cadastro finalizado com sucesso!");
+        location.reload();
+      } else {
+        const erro = await completarCadastroResponse.json();
+        alert("Erro ao completar cadastro: " + erro.message);
+      }
+    } else {
+      const erro = await finalResponse.json();
+      alert("Erro ao completar cadastro: " + erro.message);
+    }
+  } catch (err) {
+    alert("Erro ao completar cadastro: " + err.message);
+  }
+});
+
+
+
+
+//fim do completar cadastro empresa
+
+//completar cadastro usuario padrao
+
+const cadastroForm = document.getElementById("formulariocaixaupdate");
+
+cadastroForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+  if (!usuario || !usuario.id) {
+    alert("Usuário não encontrado.");
+    return;
+  }
+
+  const nome_de_usuario = document.getElementById("updatenomeuser").value;
+  const profissao = document.getElementById("updateprofissao").value;
+  const descricao = document.getElementById("updatedescricao").value;
+  const certificados = "teste";
+
+  const dadospadrao = {
+    profissao,
+    nome_de_usuario,
+    descricao,
+    certificados
   };
 
   try {
     const finalResponse = await fetch(
-      `http://localhost:4500/empresa/${usuario.id}`,
+      `http://localhost:4500/padrao/${usuario.id}`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(dadosEmpresa)
+        body: JSON.stringify(dadospadrao)
       }
     );
 
     const finalData = await finalResponse.json();
 
     if (finalResponse.ok) {
+      const fotoInput = document.getElementById("cadastroFoto");
+
+      if (fotoInput.files.length > 0) {
+        const formData = new FormData();
+        formData.append("foto", fotoInput.files[0]);
+
+        const fotoResponse = await fetch(
+          `http://localhost:4500/usuarios/enviar-foto-perfil/${usuario.id}`,
+          {
+            method: "POST",
+            body: formData
+          }
+        );
+
+        if (!fotoResponse.ok) {
+          const erro = await fotoResponse.json();
+          alert("Erro ao enviar a foto: " + erro.message);
+          return;
+        }
+      }
+
+      // ✅ Só chega aqui se tudo deu certo (padrao + foto)
       const completarCadastroResponse = await fetch(
         `http://localhost:4500/usuarios/completarcoluna-cadastro/${usuario.id}`,
         {
@@ -89,63 +199,21 @@ cadastroFormempresa.addEventListener("submit", async (e) => {
 
       if (completarCadastroResponse.ok) {
         alert("Cadastro finalizado com sucesso!");
+        location.reload();
       } else {
         const erro = await completarCadastroResponse.json();
+        alert("Erro ao completar cadastro: " + erro.message);
       }
+
     } else {
+      alert("Erro ao salvar informações do usuário: " + finalData.message);
     }
   } catch (err) {
+    alert("Erro inesperado: " + err.message);
   }
 });
 
 
-
-//fim do completar cadastro empresa
-
-//completar cadastro usuario padrao
-
-// Remova a variável 'caixa', ela não é usada e 'cadastroForm' já faz o que você precisa.
-const cadastroForm = document.getElementById("formulariocaixaupdate");
-
-cadastroForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  // 1. Crie um objeto JavaScript simples com os dados
-  const dadosDoFormulario = {
-    nome_de_usuario: document.getElementById("updatenomeuser").value,
-    profissao: document.getElementById("updateprofissao").value,
-    descricao: document.getElementById("updatedescricao").value,
-    usuario_id: usuario.id
-  };
-
-  try {
-    const finalResponse = await fetch(
-      `http://localhost:4500/usuarios/completar-cadastro-padrao/`,
-      {
-        method: "PUT",
-        // 2. Adicione os cabeçalhos (headers) corretos para JSON
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        // 3. Envie o objeto convertido para string JSON
-        body: JSON.stringify(dadosDoFormulario)
-      }
-    );
-
-    const finalData = await finalResponse.json();
-
-    if (finalResponse.ok) {
-      alert("Cadastro finalizado com sucesso!");
-      cadastroForm.reset();
-    } else {
-      alert("Erro ao finalizar cadastro: " + finalData.message);
-    }
-  } catch (err) {
-    // O erro que você está vendo provavelmente vem daqui,
-    // com a mensagem que o servidor envia.
-    alert("Erro ao finalizar cadastro: " + err.message);
-  }
-});
 
 // Fim do completar cadastro usuario padrao
 
@@ -223,5 +291,14 @@ cadastroForm.addEventListener("submit", async (e) => {
     } catch (err) {
       console.error("Erro ao buscar dados do usuário:", err);
     }
+
+    document.getElementById("voltarparaselecaotipouser").addEventListener("click", function () {
+        const verificacaoContainer = document.getElementById("user-selection");
+        const caixausuariopadrao = document.getElementById("confirmation-box");
+        const caixausuarioempresa = document.getElementById("enterprise-confirmation-box");
+        verificacaoContainer.style.display = "block";
+        caixausuariopadrao.style.display = "none";
+        caixausuarioempresa.style.display = "none";
+    });
   });
   

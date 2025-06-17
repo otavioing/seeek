@@ -187,7 +187,22 @@ const completarcadastro = async (request, response) => {
     }
 };
 
+const EnviarfotoPerfil = async (request, response) => {
+    try {
+        const id = request.params.id;
+        const foto = request.file ? `/uploads/foto_perfil/${request.file.filename}` : null;
 
+        const data = await banco.query(
+            'UPDATE usuarios SET foto=? WHERE id=?',
+            [foto, id]
+        );
+
+        response.status(200).send(data[0]);
+    } catch (error) {
+        console.log("Erro ao conectar ao banco de dados: ", error.message);
+        response.status(401).send({ "message": "Falha ao executar a ação!" });
+    }
+};
 
 const Login = async (request, response) => {
     const { email, senha } = request.body;
@@ -292,4 +307,4 @@ const definirtipo = async (req, res) => {
 
 
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastropadrao, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro, updatecompletarcadastroempresa}
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastropadrao, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro, updatecompletarcadastroempresa, EnviarfotoPerfil};
