@@ -170,6 +170,7 @@ button {
     top: 68%;
     border: none;
     outline: none;
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
     /* background-color: none; */
 }
 .editarIconButton svg{
@@ -187,10 +188,6 @@ button {
 .informacoesperfiltudo .imgdousereNome{
     align-self: center;
 }
-.imgdousereNome .editarIconButton{
-    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
-}
-
 .imgdousereNome {
     width: fit-content;
     display: flex;
