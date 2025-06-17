@@ -327,6 +327,22 @@ function desativarbarra(){
 
 }
 
+
+
+function desativaeativavlibras(){
+    let vlibras = document.getElementById("ativaredasativarvlibras");
+
+    if (vlibras.style.display == "block") {
+        vlibras.style.display = "none";
+    }
+    else {
+        // Verifica se o estilo de exibição é "none" ou está vazio, e então define para "block"
+        if (vlibras.style.display == "none" || vlibras.style.display == "") {
+            vlibras.style.display = "block";
+        }
+    }
+}
+
 // Código de puxar as duas barras de acessibilidade
 
 const barraAcessibilidade = document.getElementById("barra-acessibilidade")
@@ -390,26 +406,12 @@ document.addEventListener("mouseup", () => {
     barraAtual = null
 })
 
-window.onload = PegarPosicaoAntiga;
+window.addEventListener('load', function() 
+{ PegarPosicaoAntiga() })
+
 
 
 //Fim da ação de pegar e mover a barra de acessibilidade
-
-
-function desativaeativavlibras(){
-    let vlibras = document.getElementById("ativaredasativarvlibras");
-
-    if (vlibras.style.display == "block") {
-        vlibras.style.display = "none";
-    }
-    else {
-        // Verifica se o estilo de exibição é "none" ou está vazio, e então define para "block"
-        if (vlibras.style.display == "none" || vlibras.style.display == "") {
-            vlibras.style.display = "block";
-        }
-    }
-}
-
 
 function abrirnotificacao(){
     let notificacao = document.getElementById("caixadenotificacaofazerlogin");
