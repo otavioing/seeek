@@ -166,17 +166,17 @@ button {
 
 .editarIconButton{
     position: absolute;
-    right: -3%;
+    right: 3%;
     top: 68%;
     border: none;
     outline: none;
     /* background-color: none; */
 }
 .editarIconButton svg{
-    height: 3rem;
+    height: 2.5rem;
 }
 .banneruser .editarIconButton{
-    top: 87%;
+    top: 90%;
     right: 0%;
 }
 .banneruser .editarIconButton svg path{
@@ -187,12 +187,14 @@ button {
 .informacoesperfiltudo .imgdousereNome{
     align-self: center;
 }
-.imgdousereNome {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.imgdousereNome .editarIconButton{
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
+}
 
+.imgdousereNome {
+    width: fit-content;
+    display: flex;
+    position: relative;
 }
 
 .imgdousereNome img {
