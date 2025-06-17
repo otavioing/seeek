@@ -164,7 +164,6 @@ button {
     height: 100%;
 }
 
-<<<<<<< HEAD
 .editarIconButton{
     position: absolute;
     right: -3%;
@@ -188,8 +187,6 @@ button {
 .informacoesperfiltudo .imgdousereNome{
     align-self: center;
 }
-=======
->>>>>>> 89a2ed79a92c099b2e3e60e03682ef9a8334b8c0
 .imgdousereNome {
     width: 100%;
     display: flex;
@@ -199,12 +196,7 @@ button {
 }
 
 .imgdousereNome img {
-<<<<<<< HEAD
     height: 12rem;
-=======
-    width: 8rem;
-    height: 8rem;
->>>>>>> 89a2ed79a92c099b2e3e60e03682ef9a8334b8c0
 }
 
 .redessociais {
