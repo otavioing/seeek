@@ -272,6 +272,12 @@ svg {
     width: 15px;
 }
 
+#seta{
+    height: 0.5rem;
+    stroke-width: 0.2rem;
+    transition: transform 0.5s
+}
+
 .setaoneoffvagas {
     display: flex;
     justify-content: center;
