@@ -139,15 +139,29 @@ const Update = async (request, response) => {
     }
 }
 
-const updatecompletarcadastro = async (request, response) => {
+const updatecompletarcadastropadrao = async (request, response) => {
     try {
-        const id = request.params.id;
-        const { nome_de_usuario, cargo, descricao } = request.body;
-        const foto = request.file ? `/uploads/foto_perfil/${request.file.filename}` : null;
+        const {usuario_id, nome_de_usuario, profissao, descricao } = request.body;
 
         const data = await banco.query(
-            'UPDATE usuarios SET foto=?, cargo=?, nome_de_usuario=?, descricao=?, cadastro_completo=1 WHERE id=?',
-            [foto, cargo, nome_de_usuario, descricao, id]
+            'INSERT INTO perfis_padrao (nome_de_usuario, profissao, descricao, usuario_id) VALUES (?, ?, ?, ?)',
+            [nome_de_usuario, profissao, descricao, usuario_id]
+        );
+
+        response.status(200).send(data[0]);
+    } catch (error) {
+        console.log("Erro ao conectar ao banco de dados: ", error.message);
+        response.status(401).send({ "message": "Falha ao executar a ação!" });
+    }
+};
+
+const updatecompletarcadastroempresa = async (request, response) => {
+    try {
+        const {usuario_id, razao_social, nome_fantasia, cnpj, telefone_comercial, categoria_negocio, numero_funcionarios, endereco_completo,descricao } = request.body;
+
+        const data = await banco.query(
+            'INSERT INTO perfis_empresa (usuario_id, razao_social, nome_fantasia, cnpj, telefone_comercial, categoria_negocio, numero_funcionarios, endereco_completo, descricao) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+            [usuario_id, razao_social, nome_fantasia, cnpj, telefone_comercial, categoria_negocio, numero_funcionarios, endereco_completo,descricao]
         );
 
         response.status(200).send(data[0]);
@@ -278,4 +292,4 @@ const definirtipo = async (req, res) => {
 
 
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastro, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro}
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastropadrao, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro, updatecompletarcadastroempresa}

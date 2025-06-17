@@ -1,5 +1,5 @@
 const {Router} = require('express');
-const {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastro, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro} = require("../model/usuariosService")
+const {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastropadrao, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro, updatecompletarcadastroempresa} = require("../model/usuariosService")
 const upload = require('../config/upload_foto_perfil'); 
 
 
@@ -12,7 +12,7 @@ rota.get("/verificarcaixatipo/:id", verificartipo);
 rota.post("/", upload.single("foto"), Create); 
 rota.post("/", Create);
 rota.put("/:id", Update)
-rota.put("/completar-cadastro/:id", upload.single("foto"), updatecompletarcadastro);
+rota.post("/completar-cadastro-padrao", updatecompletarcadastropadrao);
 rota.delete("/:id", Erase);
 rota.post("/login", Login)
 rota.post("/recuperar-senha", RecuperarSenha);
@@ -23,6 +23,7 @@ rota.post("/atualizar-tema", Atualizartema);
 rota.post("/atualizar-acessibilidade", Atualizaracessibilidade);
 rota.put("/atualizar-tipo/:id", definirtipo);
 rota.put("/completarcoluna-cadastro/:id", completarcadastro)
+rota.post("/completar-cadastro-empresa", updatecompletarcadastroempresa);
 
 
 

@@ -91,13 +91,10 @@ cadastroFormempresa.addEventListener("submit", async (e) => {
         alert("Cadastro finalizado com sucesso!");
       } else {
         const erro = await completarCadastroResponse.json();
-        alert("Erro ao completar o cadastro: " + erro.message);
       }
     } else {
-      alert("Erro ao finalizar cadastro: " + finalData.message);
     }
   } catch (err) {
-    alert("Erro ao finalizar cadastro: " + err.message);
   }
 });
 
@@ -105,46 +102,52 @@ cadastroFormempresa.addEventListener("submit", async (e) => {
 
 //fim do completar cadastro empresa
 
-var caixa = document.getElementById("formulariocaixaupdate");
+//completar cadastro usuario padrao
+
+// Remova a variável 'caixa', ela não é usada e 'cadastroForm' já faz o que você precisa.
 const cadastroForm = document.getElementById("formulariocaixaupdate");
+
 cadastroForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const nome_user = document.getElementById("updatenomeuser").value;
-  const profissao = document.getElementById("updateprofissao").value;
-  const descricao = document.getElementById("updatedescricao").value;
-  const foto = document.getElementById("cadastroFoto").files[0];
-
-  const formData = new FormData();
-  formData.append("nome_de_usuario", nome_user);
-  formData.append("cargo", profissao);
-  formData.append("descricao", descricao);
-  if (foto) {
-    formData.append("foto", foto);
-  }
+  // 1. Crie um objeto JavaScript simples com os dados
+  const dadosDoFormulario = {
+    nome_de_usuario: document.getElementById("updatenomeuser").value,
+    profissao: document.getElementById("updateprofissao").value,
+    descricao: document.getElementById("updatedescricao").value,
+    usuario_id: usuario.id
+  };
 
   try {
     const finalResponse = await fetch(
-      `http://localhost:4500/usuarios/completar-cadastro/${usuario.id}`,
+      `http://localhost:4500/usuarios/completar-cadastro-padrao/`,
       {
         method: "PUT",
-        body: formData,
+        // 2. Adicione os cabeçalhos (headers) corretos para JSON
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        // 3. Envie o objeto convertido para string JSON
+        body: JSON.stringify(dadosDoFormulario)
       }
     );
 
     const finalData = await finalResponse.json();
 
     if (finalResponse.ok) {
-      alert("cadastro finalizado com sucesso!");
+      alert("Cadastro finalizado com sucesso!");
       cadastroForm.reset();
-      
     } else {
       alert("Erro ao finalizar cadastro: " + finalData.message);
     }
   } catch (err) {
+    // O erro que você está vendo provavelmente vem daqui,
+    // com a mensagem que o servidor envia.
     alert("Erro ao finalizar cadastro: " + err.message);
   }
 });
+
+// Fim do completar cadastro usuario padrao
 
 
 
