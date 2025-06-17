@@ -1,3 +1,13 @@
+const editar = document.getElementById('editarUserPerfil')
+
+
+
+
+
+
+
+
+
 // const params = new URLSearchParams(window.location.search);
 // const idUsuario = params.get('id');
 

@@ -163,18 +163,33 @@ button {
     width: 100%;
     height: 100%;
 }
+/* icones de editar */
 
+.editarIconButton{
+    position: absolute;
+    right: -5%;
+    top: 60%;
+    border: none;
+    outline: none;
+    background-color: none;
+}
+
+/*  */
+.informacoesperfiltudo .imgdousereNome{
+    align-self: center;
+}
 .imgdousereNome {
-    width: 100%;
+    width: fit-content;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
 
 .imgdousereNome img {
-    width: 8rem;
-    height: 8rem;
+    /* width: 8rem; */
+    height: 12rem;
 }
 
 .redessociais {
@@ -308,7 +323,7 @@ button {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);;
 }
 
 .buttonUser button {
@@ -394,11 +409,10 @@ button {
 .cursosDoUser {
     display: block;
     background-color: var(--cinzaBase);
-    width: 80%;
     margin: 4rem 0 1rem 5rem;
     border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    padding: 2rem 1rem 2rem 1rem;
+    box-shadow:2px 2px 5px rgba(0, 0, 0, 0.3);;
 }
 
 .cursosDoUser h2 {
@@ -424,7 +438,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .descPreco p {
@@ -435,7 +449,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .precoCursoUser h3 {
@@ -672,8 +686,8 @@ footer {
 @media screen and (max-width: 400px) {
 
     .imgdousereNome img {
-        width: 6rem;
-        height: 6rem;
+        /* width: 6rem; */
+        height: 8rem;
     }
 
     .informacoesperfiltudo {
