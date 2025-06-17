@@ -126,6 +126,10 @@
 .modoEscuro .botaofiltrarcursosmedia1200px button, .modoEscuro .botaofiltrarcursosmedia button, .botaofiltrarcursosmedia1200px button {
     color: var(--ModoEscuroFontC);
 }
+
+.modoEscuro #setapreco {
+    stroke: var(--ModoEscuroFontC);
+}
 /*-------------------------------- Modo Escuro Fim --------------------------------*/
 
 
@@ -291,6 +295,11 @@
 #seta {
     transition: transform 0.5s;
 }
+
+#setapreco , #seta{
+    height: 0.5rem;
+}
+
 
 .faixadeprecocursos {
     display: none;
