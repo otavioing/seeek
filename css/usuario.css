@@ -167,11 +167,21 @@ button {
 
 .editarIconButton{
     position: absolute;
-    right: -5%;
-    top: 60%;
+    right: -3%;
+    top: 68%;
     border: none;
     outline: none;
-    background-color: none;
+    /* background-color: none; */
+}
+.editarIconButton svg{
+    height: 3rem;
+}
+.banneruser .editarIconButton{
+    top: 87%;
+    right: 0%;
+}
+.banneruser .editarIconButton svg path{
+   fill: var(--branco);
 }
 
 /*  */
@@ -184,11 +194,10 @@ button {
     position: relative;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+
 }
 
 .imgdousereNome img {
-    /* width: 8rem; */
     height: 12rem;
 }
 

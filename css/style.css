@@ -183,6 +183,10 @@ svg .st8{
     color: red;
 }
 
+.modoEscuro .editarIconButton svg path{
+    fill: rgb(224, 224, 224)
+ }
+
 /*-------------------------------- Header inicio --------------------------------*/
 
 header {
