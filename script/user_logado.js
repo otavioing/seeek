@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.getElementById("img_useres").src = data[0].foto;
       // fim do header
       // menu perfil
-      document.getElementById("divmeuperfil").innerHTML = `<a href="http://localhost:4500/usuario.html?id=${usuario.id}" class="Perf">Meu Perfil</a>`;
+      document.getElementById("divmeuperfil").innerHTML = `<a href="usuario.html" class="Perf">Meu Perfil</a>`;
       document.getElementById("divconfiguracoes").innerHTML = `<a href="config.html" class="Conf">Configurações</a>`;
       document.getElementById("diventrarsair").innerHTML = `<button onclick="logout()" id="sairdomenuperfil" class="sairP"> <a class="sairP" href="login.html">Sair</a></button>`;
       // fim do menu perfil

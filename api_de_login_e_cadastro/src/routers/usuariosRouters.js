@@ -8,7 +8,7 @@ const rota = Router()
 rota.get("/", GetAll);
 rota.get("/:id", GetById);
 rota.get("/verificarcaixa/:id", Getbyidvarificarcaixa);
-rota.get("/verificarcaixatipo/:id", verificartipo);
+rota.get("/verificartipo/:id", verificartipo);
 rota.post("/", upload.single("foto"), Create); 
 rota.post("/", Create);
 rota.put("/:id", Update)

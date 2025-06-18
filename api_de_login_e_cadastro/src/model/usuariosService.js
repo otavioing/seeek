@@ -305,6 +305,30 @@ const definirtipo = async (req, res) => {
 };
 
 
+//padrao
+// SELECT
+//     u.foto,
+//     u.banner,
+//     u.nome,
+//     u.nome_de_usuario,
+//     pp.descricao
+// FROM
+//     usuarios AS u
+// INNER JOIN
+//     perfis_padrao AS pp ON u.id = pp.usuario_id;
 
+
+
+//empresas
+// SELECT
+//     u.foto,
+//     u.banner,
+//     u.nome,
+//     u.nome_de_usuario,
+//     pe.descricao
+// FROM
+//     usuarios AS u
+// INNER JOIN
+//     perfis_empresa AS pe ON u.id = pe.usuario_id;
 
 module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastropadrao, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro, updatecompletarcadastroempresa, EnviarfotoPerfil};

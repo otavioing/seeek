@@ -229,7 +229,7 @@ cadastroForm.addEventListener("submit", async (e) => {
             return; // Para a execução se não houver ID
         }
 
-        const response = await fetch(`http://localhost:4500/usuarios/verificarcaixatipo/${usuario.id}`);
+        const response = await fetch(`http://localhost:4500/usuarios/verificartipo/${usuario.id}`);
         const data = await response.json();
 
         // Pega os elementos da página
