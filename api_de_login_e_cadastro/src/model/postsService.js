@@ -38,4 +38,21 @@ const ListarPosts = async (req, res) => {
     }
 };
 
-module.exports = { CriarPost, ListarPosts };
+const ListarPostsPorUsuario = async (req, res) => {
+    try {
+        const userId = req.params.id;
+        const [posts] = await banco.query(`
+            SELECT posts.*, usuarios.nome, usuarios.foto AS foto_perfil
+            FROM posts
+            JOIN usuarios ON posts.user_id = usuarios.id
+            WHERE posts.user_id = ?
+            ORDER BY posts.criado_em DESC
+        `, [userId]);
+        res.status(200).send(posts);
+    } catch (err) {
+        console.error("Erro ao buscar posts:", err.message);
+        res.status(500).send({ message: "Erro interno" });
+    }
+};
+
+module.exports = { CriarPost, ListarPosts, ListarPostsPorUsuario };

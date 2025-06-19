@@ -304,31 +304,30 @@ const definirtipo = async (req, res) => {
     }
 };
 
+const GetAllPadrao = async (request, response) => {
+    try {
+        const id = request.params.id;
+        const data = await banco.query("SELECT u.foto, u.banner, u.nome, u.nome_de_usuario, pp.descricao FROM usuarios AS u INNER JOIN perfis_padrao AS pp ON u.id = pp.usuario_id WHERE id = ?", [id]);
+        response.status(200).send(data[0]);
+    } catch (error) {
+        console.log("Erro ao conectar ao banco de dados: ", error.message);
+        response.status(401).send({"message": "Falha ao executar a ação!"})
+    } 
 
-//padrao
-// SELECT
-//     u.foto,
-//     u.banner,
-//     u.nome,
-//     u.nome_de_usuario,
-//     pp.descricao
-// FROM
-//     usuarios AS u
-// INNER JOIN
-//     perfis_padrao AS pp ON u.id = pp.usuario_id;
-
+}
 
 
-//empresas
-// SELECT
-//     u.foto,
-//     u.banner,
-//     u.nome,
-//     u.nome_de_usuario,
-//     pe.descricao
-// FROM
-//     usuarios AS u
-// INNER JOIN
-//     perfis_empresa AS pe ON u.id = pe.usuario_id;
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastropadrao, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro, updatecompletarcadastroempresa, EnviarfotoPerfil};
+const GetAllEmpresas = async (request, response) => {
+    try {
+        const id = request.params.id;
+        const data = await banco.query("SELECT u.foto, u.banner, u.nome, u.nome_de_usuario, pe.descricao FROM usuarios AS u INNER JOIN perfis_empresa AS pe ON u.id = pe.usuario_id WHERE id = ?", [id]);
+        response.status(200).send(data[0]);
+    } catch (error) {
+        console.log("Erro ao conectar ao banco de dados: ", error.message);
+        response.status(401).send({"message": "Falha ao executar a ação!"})
+    } 
+};
+
+
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastropadrao, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro, updatecompletarcadastroempresa, EnviarfotoPerfil, GetAllPadrao, GetAllEmpresas};

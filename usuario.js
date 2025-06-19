@@ -1,26 +1,54 @@
 const userId = JSON.parse(localStorage.getItem("usuarioLogado"));
+
 async function carregarUsuario() {
     try {
         const resposta = await fetch(`http://localhost:4500/usuarios/verificartipo/${userId.id}`);
-        const data = await response.json();
+        const data = await resposta.json();
         
         if (data && data.length > 0) {
-            const userData = data[0]; // Fica mais fácil de ler
+            const userData = data[0];
+            let usuario;
 
-            // Caso 1: O usuário é do tipo 'padrao'
             if (userData.tipo === 'padrao') {
-                const resposta = await fetch(`http://localhost:4500/usuarios/${userId.id}`);
-                const data = await response.json();
-                usuario = data[0];
+                const respostaPadrao = await fetch(`http://localhost:4500/usuarios/padrao/${userId.id}`);
+                const dataPadrao = await respostaPadrao.json();
+                usuario = dataPadrao[0];
+                // alert("Usuário do tipo " + userData.tipo + " carregado com sucesso!");
+                document.getElementById('nomedousuario').textContent = usuario.nome;
+                document.getElementById('nomecompleto').textContent = `@${usuario.nome_de_usuario}`;
+                document.getElementById('imgdeperfildouser').src = usuario.foto;
+                document.getElementById('imagemdefundodoperfil').src = usuario.banner;
+                document.getElementById('descricaouser').textContent = usuario.descricao;
+                const postspadrao = await fetch(`http://localhost:4500/posts/usuario/${userId.id}`);
+                const dadosPostspadrao = await postspadrao.json();
+                post = dadosPostspadrao[0];
+                if (post) {
+                    const mainImagensUser = document.getElementById('mainImagensUser');
+                    mainImagensUser.innerHTML = ''; // Limpa o conteúdo anterior
+                    dadosPostspadrao.forEach(post => {
+                        const postElement = document.createElement('div');
+                        postElement.className = 'imgsUser';
+                        postElement.innerHTML = `
+                        <img src="${post.imagem}" alt="Post Image">`;
+                        mainImagensUser.appendChild(postElement);
+                    });
 
+                }else {
+                    console.error("Nenhum post encontrado para o usuário padrão.");
+                    document.getElementById('mainImagensUser').innerHTML = `<div class="buttonUser"><a href="adicionarProjeto.html"><button><img src="img/lupa+.svg" alt=""><p>Adicionar Projeto</p></button></a></div>`;
+                }
+                    
 
-            // Caso 2: O usuário é do tipo 'empresa'
             } else if (userData.tipo === 'empresa') {
-                const resposta = await fetch(`http://localhost:4500/usuarios/${userId.id}`);
-                const data = await response.json();
-                usuario = data[0];
-
-                
+                const respostaEmpresa = await fetch(`http://localhost:4500/usuarios/empresas/${userId.id}`);
+                const dataEmpresa = await respostaEmpresa.json();
+                usuario = dataEmpresa[0];
+                // alert("Usuário do tipo " + userData.tipo + " carregado com sucesso!");
+                document.getElementById('nomedousuario').textContent = usuario.nome;
+                document.getElementById('nomecompleto').textContent = `@${usuario.nome_de_usuario}`;
+                document.getElementById('imgdeperfildouser').src = usuario.foto;
+                document.getElementById('imagemdefundodoperfil').src = usuario.banner;
+                document.getElementById('descricaouser').textContent = usuario.descricao;
             }
 
         } else {
@@ -31,6 +59,8 @@ async function carregarUsuario() {
         console.error("Erro ao carregar usuário:", erro.message);
     }
 }
+
+
 
 
 carregarUsuario();
