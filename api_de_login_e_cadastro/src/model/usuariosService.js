@@ -130,8 +130,32 @@ const Update = async (request, response) => {
     try {
         const id = request.params.id;
         const {nome, email, senha, tema, cidade_pais, cargo, nome_de_usuario, descricao, banner, url_do_perfil_do_instagram, url_do_perfil_do_x_twitter} = request.body;
-        const foto = request.file ? `/uploads/foto_perfil${request.file.filename}` : null;
+        const foto = request.file ? `/uploads/foto_perfil/${request.file.filename}` : null;
         const data = await banco.query('UPDATE usuarios SET nome=?, email=?, senha=?, foto=?, tema=?, cidade_pais=?, cargo=?, nome_de_usuario=?, descricao=?, banner=?, url_do_perfil_do_instagram=?, url_do_perfil_do_x_twitter=? WHERE id=?', [nome, email, senha, foto, tema, cidade_pais, cargo, nome_de_usuario, descricao, banner, url_do_perfil_do_instagram, url_do_perfil_do_x_twitter, id]);
+        response.status(200).send(data[0]);
+    } catch (error) {
+        console.log("Erro ao conectar ao banco de dados: ", error.message);
+        response.status(401).send({"message": "Falha ao executar a ação!"})
+    }
+}
+
+const Updatefoto = async (request, response) => {
+    try {
+        const id = request.params.id;
+        const foto = request.file ? `/uploads/foto_perfil/${request.file.filename}` : null;
+        const data = await banco.query('UPDATE usuarios SET foto=? WHERE id=?', [foto, id]);
+        response.status(200).send(data[0]);
+    } catch (error) {
+        console.log("Erro ao conectar ao banco de dados: ", error.message);
+        response.status(401).send({"message": "Falha ao executar a ação!"})
+    }
+
+}
+const Updatefotobanner = async (request, response) => {
+    try {
+        const id = request.params.id;
+        const foto = request.file ? `/uploads/banners/${request.file.filename}` : null;
+        const data = await banco.query('UPDATE usuarios SET banner=? WHERE id=?', [foto, id]);
         response.status(200).send(data[0]);
     } catch (error) {
         console.log("Erro ao conectar ao banco de dados: ", error.message);
@@ -307,7 +331,7 @@ const definirtipo = async (req, res) => {
 const GetAllPadrao = async (request, response) => {
     try {
         const id = request.params.id;
-        const data = await banco.query("SELECT u.foto, u.banner, u.nome, u.nome_de_usuario, pp.descricao FROM usuarios AS u INNER JOIN perfis_padrao AS pp ON u.id = pp.usuario_id WHERE id = ?", [id]);
+        const data = await banco.query("SELECT u.foto, u.banner, u.nome, u.nome_de_usuario, pp.descricao, (SELECT COUNT(*) FROM posts WHERE user_id = u.id) AS total_posts FROM usuarios AS u INNER JOIN perfis_padrao AS pp ON u.id = pp.usuario_id WHERE u.id = 2;", [id]);
         response.status(200).send(data[0]);
     } catch (error) {
         console.log("Erro ao conectar ao banco de dados: ", error.message);
@@ -321,7 +345,7 @@ const GetAllPadrao = async (request, response) => {
 const GetAllEmpresas = async (request, response) => {
     try {
         const id = request.params.id;
-        const data = await banco.query("SELECT u.foto, u.banner, u.nome, u.nome_de_usuario, pe.descricao FROM usuarios AS u INNER JOIN perfis_empresa AS pe ON u.id = pe.usuario_id WHERE id = ?", [id]);
+        const data = await banco.query("SELECT u.foto, u.banner, u.nome, u.nome_de_usuario, pe.descricao, (SELECT COUNT(*) FROM posts WHERE user_id = u.id) AS total_posts FROM usuarios AS u INNER JOIN perfis_empresa AS pe ON u.id = pe.usuario_id WHERE u.id = ?;", [id]);
         response.status(200).send(data[0]);
     } catch (error) {
         console.log("Erro ao conectar ao banco de dados: ", error.message);
@@ -330,4 +354,4 @@ const GetAllEmpresas = async (request, response) => {
 };
 
 
-module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastropadrao, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro, updatecompletarcadastroempresa, EnviarfotoPerfil, GetAllPadrao, GetAllEmpresas};
+module.exports = {GetAll, GetById, Erase, Create, Update, Login, RecuperarSenha, AtualizarSenha, SolicitarCriacao, Solicitarexclusao, Atualizartema, Atualizaracessibilidade, updatecompletarcadastropadrao, Getbyidvarificarcaixa, definirtipo, verificartipo, completarcadastro, updatecompletarcadastroempresa, EnviarfotoPerfil, GetAllPadrao, GetAllEmpresas, Updatefoto, Updatefotobanner};
