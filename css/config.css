@@ -228,7 +228,7 @@ h1{
     padding: 18px 22px;
     max-width: 400px;
     position: fixed;
-    top: -10rem;
+    top: -15rem;
     left: 40%;
     transition: top 0.3s ease-in-out;
   }

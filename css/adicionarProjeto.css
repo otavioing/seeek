@@ -317,3 +317,76 @@ transform: scale(107%);
     background-color: var(--cinzad8d8d8);
 }
 
+/* notificação */
+
+.caixadenotificacaorealizadocomsucesso {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 18px 22px;
+    max-width: 400px;
+    position: fixed;
+    top: -15rem;
+    left: 40%;
+    transition: top 0.3s ease-in-out;
+  }
+
+  .caixadenotificacaorealizadocomsucesso h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--preto);
+  }
+
+  .caixadenotificacaorealizadocomsucesso p {
+    color: var(--cinzaBasee);
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+  }
+
+  .btn-cancel {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn-confirm a{
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .caixadenotificacaocompletarcadastro {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 18px 22px;
+    max-width: 400px;
+    position: fixed;
+    top: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 0.3s ease-in-out;
+    z-index: 1;
+  }
+
+  .caixadenotificacaocompletarcadastro h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .caixadenotificacaocompletarcadastro p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  /* fim da notificação */
+

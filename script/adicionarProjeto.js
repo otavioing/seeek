@@ -20,10 +20,29 @@ form.addEventListener('submit', async (e) => {
 
     const data = await response.json();
     console.log("Resposta do servidor:", data);
+    if (response.ok) {
+      abrirnotificacaopostenviado();
+      form.reset(); // Limpa os campos do formulário
+      window.onbeforeunload = null; // Impede recarregamento automático, se houver
+    } else {
+      alert("Erro ao adicionar projeto: " + data.message);
+    }
   } catch (err) {
     alert("Erro na requisição: " + err.message);
     console.log("Erro na requisição:", err);
   }
 });
 
-console.log("Script de adicionar projeto carregado.");
+
+    function abrirnotificacaopostenviado(){
+  let notificacao = document.getElementById("caixadenotificacaopostrealizadocomsucesso");
+
+  notificacao.style.top = "0rem";
+      setTimeout(() => {
+        notificacao.style.top = "-10rem";
+    }, 3000);
+}
+// <div id="caixadenotificacaopostrealizadocomsucesso" class="caixadenotificacaorealizadocomsucesso">
+//  <h2>Post enviado com sucesso!</h2>
+//  <p>Seu conteúdo foi publicado e já pode ser visualizado por outros usuários.</p>
+// </div>

@@ -158,7 +158,7 @@
     <section class="banneruser">
         <a class="voltarbutton" href="index.html"><img src="img/arrow-top.svg" alt="Seta para cima"></a>
         <form id="formImagemBannerPerfil">
-            <label for="inputImagembannerPerfil" class="editarIconButton"><svg viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <label for="inputImagembannerPerfil" class="editarIconButton" id="editarbannerperfil" style="display: none;"><svg viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M6.6 76.5169C4.785 76.5169 3.23125 75.8714 1.93875 74.5805C0.64625 73.2896 0 71.7378 0 69.9251V23.7828C0 21.9701 0.64625 20.4183 1.93875 19.1274C3.23125 17.8365 4.785 17.191 6.6 17.191H36.0525L29.4525 23.7828H6.6V69.9251H52.8V47.0188L59.4 40.427V69.9251C59.4 71.7378 58.7538 73.2896 57.4613 74.5805C56.1688 75.8714 54.615 76.5169 52.8 76.5169H6.6ZM30.3169 46.2247V32.2172L60.5944 1.97752C61.2544 1.31834 61.9969 0.823962 62.8219 0.494374C63.6469 0.164786 64.4719 -7.62939e-06 65.2969 -7.62939e-06C66.1769 -7.62939e-06 67.0156 0.164786 67.8131 0.494374C68.6106 0.823962 69.3394 1.31834 69.9994 1.97752L74.6194 6.67415C75.2244 7.33333 75.6919 8.06117 76.0219 8.85767C76.3519 9.65417 76.5169 10.4644 76.5169 11.2884C76.5169 12.1124 76.3656 12.9226 76.0631 13.7191C75.7606 14.5156 75.2794 15.2434 74.6194 15.9026L44.3419 46.2247H30.3169ZM36.9169 39.6329H41.5369L60.6769 20.5168L58.3669 18.2097L55.9744 15.9026L36.9169 34.9363V39.6329Z"
                         fill="black" />
@@ -198,7 +198,7 @@
             <div class="informacoesperfiltudo">
                 <div id="fotodeperfiluser" class="imgdousereNome">
                     <form id="formImagemPerfilUser">
-                        <label for="inputImagemPerfilUser" class="editarIconButton"><svg viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <label for="inputImagemPerfilUser" class="editarIconButton" style="display: none;" id="editarfotodeperfl"><svg viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M6.6 76.5169C4.785 76.5169 3.23125 75.8714 1.93875 74.5805C0.64625 73.2896 0 71.7378 0 69.9251V23.7828C0 21.9701 0.64625 20.4183 1.93875 19.1274C3.23125 17.8365 4.785 17.191 6.6 17.191H36.0525L29.4525 23.7828H6.6V69.9251H52.8V47.0188L59.4 40.427V69.9251C59.4 71.7378 58.7538 73.2896 57.4613 74.5805C56.1688 75.8714 54.615 76.5169 52.8 76.5169H6.6ZM30.3169 46.2247V32.2172L60.5944 1.97752C61.2544 1.31834 61.9969 0.823962 62.8219 0.494374C63.6469 0.164786 64.4719 -7.62939e-06 65.2969 -7.62939e-06C66.1769 -7.62939e-06 67.0156 0.164786 67.8131 0.494374C68.6106 0.823962 69.3394 1.31834 69.9994 1.97752L74.6194 6.67415C75.2244 7.33333 75.6919 8.06117 76.0219 8.85767C76.3519 9.65417 76.5169 10.4644 76.5169 11.2884C76.5169 12.1124 76.3656 12.9226 76.0631 13.7191C75.7606 14.5156 75.2794 15.2434 74.6194 15.9026L44.3419 46.2247H30.3169ZM36.9169 39.6329H41.5369L60.6769 20.5168L58.3669 18.2097L55.9744 15.9026L36.9169 34.9363V39.6329Z"
                         fill="black" />
@@ -219,6 +219,25 @@
                         <div class="seguirUser2">
                             <button class="botaoSelecionadoUser" id="editarUserPerfil"> <span class="UsoE">Editar
                                 </span></button>
+                                <script>
+                                    document.getElementById('editarUserPerfil').addEventListener('click', function() {
+
+                                        let botao1 = document.getElementById('editarfotodeperfl');
+                                        let botao2 = document.getElementById('editarbannerperfil');
+                                        let botaoeditar = document.getElementById('editarUserPerfil');
+
+                                        if (botao1.style.display === "none" && botao2.style.display === "none") {
+                                            botao1.style.display = "block";
+                                            botao2.style.display = "block";
+                                            botaoeditar.textContent = "Modo editor ativo";
+                                        } else {
+                                            botao1.style.display = "none";
+                                            botao2.style.display = "none";
+                                            botaoeditar.textContent = "Editar";
+                                        }
+
+                                    });
+                                </script>
                         </div>
                         <button id="trocarUserPerfil"> <span class="UsoTU">Trocar de Usuário</span></button>
                     </div>

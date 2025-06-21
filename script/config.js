@@ -132,7 +132,7 @@ function abrirnotificacaoexcluirconta(){
 function cancelarnotificacaoexcluirconta(){
   let notificacao = document.getElementById("caixadenotificacaoexcluirconta");
 
-  notificacao.style.top = "-10rem";
+  notificacao.style.top = "-15rem";
 }
 
 //fim do código de excluir conta
