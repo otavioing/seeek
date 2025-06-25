@@ -539,6 +539,31 @@ footer {
     fill: var(--azulBase);
 }
 
+/* caixa de notificações */
+.caixadenotificacaomodoeditor {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 18px 22px;
+    max-width: 400px;
+    position: fixed;
+    top: -15rem;
+    left: 40%;
+    transition: top 0.3s ease-in-out;
+  }
+
+  .caixadenotificacaomodoeditor h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--preto);
+  }
+
+  .caixadenotificacaomodoeditor p {
+    color: var(--cinzaBasee);
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
 
 /*------------------------------------------------------------------------*/
 /*-------------------------------- @media --------------------------------*/

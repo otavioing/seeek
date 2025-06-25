@@ -152,13 +152,13 @@ function onCloseDialog() {
     let notificacao = document.getElementById("caixadenotificacaocompletarcadastro");
     notificacao.style.top = "0rem";
     setTimeout(() => {
-        notificacao.style.top = "-10rem";
+        notificacao.style.top = "-15rem";
     }, 3000);
 }
 
 function fecharnotificacao(){
     let notificacao = document.getElementById("caixadenotificacaocompletarcadastro");
-    notificacao.style.top = "-10rem";
+    notificacao.style.top = "-15rem";
 }
 
 function onRegisterEnterprise() {

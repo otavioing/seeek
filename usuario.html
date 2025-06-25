@@ -193,6 +193,12 @@
             </div>
         </div>
 
+        <div id="caixadenotificacaomodoeditor" class="caixadenotificacaomodoeditor">
+            <h2>Modo de edição ativo</h2>
+            <p>Enquanto você estiver neste modo, poderá clicar nos ícones de lápis e editar suas informações.</p>
+        </div>
+
+
 
         <section class="informacoesperfil" id="informacoesperfil">
             <div class="informacoesperfiltudo">
@@ -230,10 +236,12 @@
                                             botao1.style.display = "block";
                                             botao2.style.display = "block";
                                             botaoeditar.textContent = "Modo editor ativo";
+                                            document.getElementById("caixadenotificacaomodoeditor").style.top = "0rem";
                                         } else {
                                             botao1.style.display = "none";
                                             botao2.style.display = "none";
                                             botaoeditar.textContent = "Editar";
+                                            document.getElementById("caixadenotificacaomodoeditor").style.top = "-15rem";
                                         }
 
                                     });

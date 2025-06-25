@@ -1,0 +1,29 @@
+### Testa o email de criação de conta
+### Descrição: Envia um email de criação de conta para o usuário com ID 5
+POST http://localhost:4500/usuarios/solicitar-criacao
+Content-Type: application/json
+
+{
+    "nome": "João Silva",
+    "email": "otaviodominguessilva@gmail.com",
+    "senha": "senha123"
+}
+
+### Testa o email de recuperação de senha
+### Descrição: Envia um email de recuperação de senha para o usuário com ID 5
+POST http://localhost:4500/usuarios/recuperar-senha
+Content-Type: application/json
+
+{
+    "email": "otaviodominguessilva@gmail.com"
+}
+
+### Testa o email de confirmação de exclusão de conta
+### Descrição: Envia um email de confirmação de exclusão de conta para o usuário com
+
+POST http://localhost:4500/usuarios/solicitar-exclusao
+Content-Type: application/json
+
+{
+    "email": "otaviodominguessilva@gmail.com"
+}

@@ -331,7 +331,7 @@ const definirtipo = async (req, res) => {
 const GetAllPadrao = async (request, response) => {
     try {
         const id = request.params.id;
-        const data = await banco.query("SELECT u.foto, u.banner, u.nome, u.nome_de_usuario, pp.descricao, (SELECT COUNT(*) FROM posts WHERE user_id = u.id) AS total_posts FROM usuarios AS u INNER JOIN perfis_padrao AS pp ON u.id = pp.usuario_id WHERE u.id = 2;", [id]);
+        const data = await banco.query("SELECT u.foto, u.banner, u.nome, u.nome_de_usuario, pp.descricao, (SELECT COUNT(*) FROM posts WHERE user_id = u.id) AS total_posts FROM usuarios AS u INNER JOIN perfis_padrao AS pp ON u.id = pp.usuario_id WHERE u.id = ?;", [id]);
         response.status(200).send(data[0]);
     } catch (error) {
         console.log("Erro ao conectar ao banco de dados: ", error.message);

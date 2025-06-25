@@ -1,0 +1,115 @@
+### Teste de API para usuários
+
+### Teste de obtenção de usuário
+### Descrição: Obtém a lista de usuários cadastrados
+GET http://localhost:4500/usuarios
+
+### Teste de obtenção de usuário por ID
+### Descrição: Obtém os detalhes do usuário com ID 5
+GET http://localhost:4500/usuarios/5
+
+### Teste de criação de usuário
+### Descrição: Cria um novo usuário com os dados fornecidos
+POST http://localhost:4500/usuarios
+Content-Type: application/json
+
+{
+  "nome": "João Silva",
+  "email": "fewfwfw@hbrhbv",
+  "senha": "senha123"
+}
+
+### Teste de atualização de usuário
+### Descrição: Atualiza os dados do usuário com ID 5
+PUT http://localhost:4500/usuarios/5
+Content-Type: application/json
+
+{
+  "nome": "João Silva Atualizado",
+  "email": "fewfwfw@hbrhbv atualizado",
+  "senha": "senha1234"
+}
+
+### Teste de exclusão de usuário
+### Descrição: Exclui o usuário com ID 5
+DELETE http://localhost:4500/usuarios/8
+
+###virificar se a caixa de completar cadastro está funcionando
+### Descrição: Verifica se a caixa de completar cadastro está funcionando para o usuário com ID 5
+GET http://localhost:4500/usuarios/verificarcaixa/5
+
+### verificar tipo de usuario
+### Descrição: Verifica o tipo de usuário do usuário com ID 5
+GET http://localhost:4500/usuarios/verificartipo/5
+
+### Teste de update de foto de perfil
+### Descrição: Atualiza a foto de perfil do usuário com ID 5
+
+PUT http://localhost:4500/usuarios/update-foto/5
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="foto"; filename="foto.jpg"
+Content-Type: image/jpeg
+
+< ./foto.jpg
+--MyBoundary--
+
+### Teste de update banner de perfil
+### Descrição: Atualiza o banner de perfil do usuário com ID 5
+
+PUT http://localhost:4500/usuarios/update-fotobanner/5
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="banner"; filename="banner.jpg"
+Content-Type: image/jpeg
+
+< ./foto.jpg
+--MyBoundary--
+
+### Teste updete completar cadastro padrao
+### Descrição: Atualiza o completar cadastro padrão do usuário com ID 5
+PUT http://localhost:4500/usuarios/completar-cadastro-padrao
+Content-Type: application/json
+
+{
+  "nome_de_usuario": "joao_silva",
+  "profissao": "Desenvolvedor",
+  "descricao": "Desenvolvedor de software com experiência em várias linguagens.", 
+  "usuario_id": 5
+}
+
+### Teste update completar cadastro empresa
+### Descrição: Atualiza o completar cadastro de empresa do usuário com ID 5
+
+PUT http://localhost:4500/usuarios/completar-cadastro-empresa
+Content-Type: application/json
+
+{
+    "usuario_id": 5,
+    "razao_social": "Empresa Exemplo LTDA",
+    "nome_fantasia": "Empresa Exemplo",
+    "cnpj": "12.345.678/0001-90",
+    "telefone_comercial": "+55 11 91234-5678",
+    "categoria_negocio": "Tecnologia",
+    "numero_funcionarios": 50,
+    "endereco_completo": "Rua Exemplo, 123, Bairro Exemplo, Cidade Exemplo, Estado Exemplo, 12345-678",
+    "descricao": "Empresa especializada em desenvolvimento de software e soluções tecnológicas."
+}
+
+### Teste login de usuário
+### Descrição: Realiza o login do usuário com email e senha fornecidos
+
+POST http://localhost:4500/usuarios/login
+Content-Type: application/json
+
+{
+  "email": "fewfwfw@hbrhbv",
+  "senha": "senha123"
+}
+
+### Teste recuperação de senha
+### Descrição: Solicita a recuperação de senha para o usuário com email fornecido
+
+POST http://localhost:4500/usuarios/recuperar-senha

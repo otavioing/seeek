@@ -9,7 +9,7 @@ loginForm.addEventListener("submit", async (e) => {
     const response = await fetch("http://localhost:4500/usuarios/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, senha }),
+      body: JSON.stringify({ email, senha }), 
     });
 
     const data = await response.json();
