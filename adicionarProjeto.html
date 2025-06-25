@@ -171,9 +171,17 @@
                     </div>
                 </div>
                 <div class="txt-area-and-button">
-                    <button type="submit">Inserir</button>
-                    <textarea name="text-new-post" id="text-new-post" placeholder="descrição"></textarea>
-                </div>
+  <button type="submit">Inserir</button>
+  <textarea name="text-new-post" id="text-new-post" placeholder="descrição" oninput="autoResize(this)"></textarea>
+</div>
+
+<script>
+  function autoResize(textarea) {
+    textarea.style.height = 'auto'; // reseta a altura
+    textarea.style.height = textarea.scrollHeight + 'px'; // ajusta para o conteúdo
+  }
+</script>
+
             </div>
             
             <main class="right-projeto">
