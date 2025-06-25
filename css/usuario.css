@@ -104,10 +104,12 @@ button {
     object-fit: cover;
     position: relative;
     font-size: clamp(0.85rem, 1.3vw, 1.5rem);
+    background-position: center;
+
 }
 
 .banneruser img {
-    height: 100%;
+    aspect-ratio: 16/3;
     width: 100%;
     object-fit: cover;
 }
@@ -181,9 +183,6 @@ button {
     top: 90%;
     right: 0%;
 }
-.banneruser .editarIconButton svg path{
-   fill: var(--branco);
-}
 
 /*  */
 .informacoesperfiltudo .imgdousereNome{
@@ -197,6 +196,9 @@ button {
 
 .imgdousereNome img {
     height: 12rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .redessociais {
@@ -531,6 +533,10 @@ footer {
 
 .infoProjetosCursos .opccaoSelecionada {
     border-bottom: 3px solid var(--azulBase);
+}
+
+#botaoeditarperfil{
+    fill: var(--azulBase);
 }
 
 

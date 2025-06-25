@@ -390,3 +390,46 @@ transform: scale(107%);
 
   /* fim da notificação */
 
+  @media screen and (max-width: 1200px) {
+
+    .containerAdcProjeto{
+        display: block;
+    }
+    .left-projeto{
+        width: 100%;
+        height: auto;
+        border-right: none;
+        padding-right: 0;
+        border-radius: 1rem 1rem 0 0;
+        border: none;
+    }
+
+    #text-new-post{
+        margin-bottom: 1rem;
+    }
+
+    .right-projeto{
+        width: 100%;
+        margin-left: 0;
+    }
+    .categorias{
+        margin-top: 2rem;
+    }
+
+    .botaoAdcImgg div label{
+        width: 40%;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .botaoAdcImgg div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+ 
+    
+  }

@@ -283,6 +283,7 @@ header .usersite img {
     height: 2rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 header .logosite img {
@@ -305,6 +306,9 @@ header .userhover {
 
 header .userhover img {
     height: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
 }
 .userhover button {
     background-color: transparent;
