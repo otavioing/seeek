@@ -283,7 +283,6 @@ header .usersite img {
     height: 2rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    object-fit: cover;
 }
 
 header .logosite img {
@@ -306,9 +305,6 @@ header .userhover {
 
 header .userhover img {
     height: 80%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    object-fit: cover;
 }
 .userhover button {
     background-color: transparent;
@@ -506,20 +502,18 @@ header .botaoMenu span {
 
 /*-------------------------------- Main Imagens --------------------------------*/
 .gride {
-    display: block;
-    width: 95%;
-    margin: 0 auto;
-    column-count: 4;
-    break-inside: avoid-column;
-    column-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
 
 .gride>div {
     position: relative;
-    background-color: #f0f0f0;
     overflow: hidden;
     text-align: center;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
 }
@@ -609,30 +603,6 @@ header .botaoMenu span {
     top: 0;
 }
 
-.gride #filho1,
-.gride #filho2,
-.gride #filho3,
-.gride #filho4,
-.gride #filho5,
-.gride #filho6,
-.gride #filho7,
-.gride #filho8 {
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-.gride #filho1 img,
-.gride #filho2 img,
-.gride #filho3 img,
-.gride #filho4 img,
-.gride #filho5 img,
-.gride #filho6 img,
-.gride #filho7 img,
-.gride #filho8 img {
-    width: 100%;
-}
 
 .prIndex .img3 {
     display: flex;
@@ -643,7 +613,6 @@ header .botaoMenu span {
 .img2 img {
     width: 80%;
 }
-
 .selecionado {
     height: 138%;
     display: flex;
@@ -666,7 +635,23 @@ header .botaoMenu span {
     align-items: flex-start;
     font-size: clamp(1rem, 1.3vw, 1.5rem);
 }
-
+.divPortifolio {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  position: relative;
+}
+.post {
+  height: 26rem;
+  width: 26rem;
+  position: relative;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}
 /*------------------------------Modal Portifolio-----------------------------*/
 
 #modalPort {
@@ -1074,7 +1059,7 @@ footer {
 .cancelarTipoUser{
     display: none;
     flex-direction: column;
-    justify-content: space-beetween;
+    justify-content: space-between;
     align-items: center;
     width: 70%;
     height: auto;
@@ -1779,16 +1764,25 @@ footer {
 /*-------------------------------- @media --------------------------------*/
 /*------------------------------------------------------------------------*/
 
+@media screen and (max-width:1800px) {
 
-@media screen and (max-width:1300px) {
+    .post{
+        height: 20rem;
+        width: 20rem;
+    }
+}
+@media screen and (max-width:1380px) {
 
     header .pesquisasite {
         justify-content: center;
     }
-
+    .post{
+        height: 18rem;
+        width: 18rem;
+    }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
 
     header .pesquisasite input {
         width: 60%;
@@ -1920,9 +1914,8 @@ footer {
     }
 
     .gride {
-        column-count: 3;
+        grid-template-columns: repeat(3, 2fr);
     }
-
     .modal-content {
         width: 70%;
     }
@@ -1935,7 +1928,10 @@ footer {
         width: 100%;
         margin: 0;
     }
-
+    .post{
+        height: 16rem;
+        width: 16rem;
+    }
     .comentariomodalRight{
         width: 100%;
         margin: 0;
@@ -1961,7 +1957,15 @@ footer {
     }
 
 }
-
+@media screen and (max-width: 900px) {
+    .gride{
+        grid-template-columns: repeat(2, 2fr);
+    }
+    .post {
+        height: 20rem;
+        width: 20rem;
+    }
+}
 
 @media screen and (max-width: 750px) {
 
@@ -1986,7 +1990,7 @@ footer {
 }
 
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 745px) {
 
     .linksfooter {
         width: 100%;
@@ -2012,15 +2016,18 @@ footer {
     }
 
     .gride {
-        column-count: 2;
+        grid-template-columns: repeat(1, 1fr);
     }
-
     .contratar-btn-span{
         padding: 0.3rem;
     }
 
     .close{
         font-size: 1.5rem;
+    }
+    .post{
+        height: 24rem;
+        width: 24rem;
     }
 
 }
@@ -2134,6 +2141,10 @@ footer {
     .fotoPerfilDesc button{
         width: 30%;
     }
+    .post{
+        height: 24rem;
+        width: 24rem;
+    }
 
 
 }
@@ -2142,9 +2153,12 @@ footer {
 @media screen and (max-width: 450px) {
 
     .gride {
-        column-count: 1;
+       grid-template-columns: repeat(1, 2fr); 
     }
-
+    .post{
+        height: 20rem;
+        width: 20rem;
+    }
     .inicio .logosite img {
         height: 60%;
     }
@@ -2276,7 +2290,12 @@ footer {
     }
 
 }
-
+@media screen and (max-height: 350px) {
+    .post{
+        height: 22rem;
+        width: 22rem;
+    }
+}
 @media screen and (max-height: 640px) {
 
 
