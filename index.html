@@ -273,6 +273,25 @@
                 <img class="photo-dinamica" id="preview" src="" alt="">
                 <input style="display: none;" type="file" id="cadastroFoto" accept="image/*" />  
 
+                <script>
+  const inputFoto = document.getElementById("cadastroFoto");
+  const preview = document.getElementById("preview");
+  const labelFoto = document.getElementById("labeladdfoto");
+
+  inputFoto.addEventListener("change", function () {
+    const arquivo = this.files[0];
+    if (arquivo) {
+      const leitor = new FileReader();
+      leitor.onload = function (e) {
+        preview.src = e.target.result;
+        preview.style.display = "block";
+        labelFoto.style.display = "none"; // Esconde o label após a seleção da foto
+
+      };
+      leitor.readAsDataURL(arquivo);
+    }
+  });
+</script>
               </div>
             </div>
             <div class="input-group">
@@ -336,7 +355,24 @@
                   <img class="photo-dinamica" id="previewempresa" src="" alt="">
                   <input type="file" id="addfotoempresa" style="display: none;" accept="image/*">
                 </div>
-                
+                  <script>
+  const inputEmpresa = document.getElementById("addfotoempresa");
+  const previewEmpresa = document.getElementById("previewempresa");
+  const labelEmpresa = document.getElementById("labelfotoempresa");
+
+  inputEmpresa.addEventListener("change", function () {
+    const arquivo = this.files[0];
+    if (arquivo) {
+      const leitor = new FileReader();
+      leitor.onload = function (e) {
+        previewEmpresa.src = e.target.result;
+        labelEmpresa.style.display = "none"; // Esconde o label após a seleção da foto
+        previewEmpresa.style.display = "block";
+      };
+      leitor.readAsDataURL(arquivo);
+    }
+  });
+</script>
                 <textarea class="men" name="mensagem" id="descricaodaempresa" placeholder="Descrição"></textarea>
               </div>
             </div>
@@ -472,7 +508,7 @@
               <p>9.900 <span class="SegG">seguidores</span></p>
             </div>
             <div class="PerfAv">
-              <img src="${post.foto_perfil}" alt="Perfil" />
+              <img id="fotododonodopost" src="${post.foto_perfil}" alt="Perfil" />
               <div class="PLike">
                 <p class="like">99%</p>
                 <img src="img/Vector.svg" alt="Like" />

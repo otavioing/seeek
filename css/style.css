@@ -591,8 +591,11 @@ header .botaoMenu span {
     gap: 0.4rem;
 }
 
-.portHover .PotH .PerfAv img {
-    height: 50%;
+.portHover .PotH .PerfAv #fotododonodopost {
+    height: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .gride>div .portHover p img {
@@ -1306,7 +1309,7 @@ footer {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     color: #333;
