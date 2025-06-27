@@ -278,7 +278,10 @@ header .usersite button {
 header .usersite p{
     color: var(--branco);
 }
-
+#img_user{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
 header .usersite img {
     height: 2rem;
     aspect-ratio: 1/1;
@@ -304,7 +307,9 @@ header .userhover {
 }
 
 header .userhover img {
-    height: 80%;
+    height: 130%;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
 }
 .userhover button {
     background-color: transparent;
@@ -1895,6 +1900,7 @@ footer {
 
     header .userhover {
         height: 70%;
+        border-radius: 100%;
     }
 
     .inicio .logosite img {
@@ -1960,6 +1966,7 @@ footer {
         width: 100%;
         margin: 0;
     }
+    
 
 }
 
@@ -2222,6 +2229,9 @@ footer {
         width: 90%;
         left: 5%;
         padding: 0.5rem;
+    }
+    header .userhover img {
+        height: 100%;
     }
 
 
