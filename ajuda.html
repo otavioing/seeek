@@ -288,18 +288,43 @@
       <img src="img/chatcomiaajuda.png" alt="">
     </div>
     <div class="chatcontainer">
-      <div class="titulochat">
-        <p>Chat com a IA</p>
-        <button>X</button>
+
+        <div class="titulochat">
+          <p>Chat com a IA</p>
+          <button>X</button>
+        </div>
+        <div class="conversa" id="chat-conversation">
+        </div>
+        <div class="teclado">
+          <input id="chat-input" type="text" placeholder="Digite sua mensagem...">
+          <button id="chat-send">Enviar</button>
+        </div>
       </div>
-      <div class="conversa">
-        <p>de</p>
-      </div>
-      <div class="teclado">
-        <input type="text" placeholder="Digite sua mensagem...">
-        <button>Enviar</button>
-      </div>
-    </div>
+    <script>
+      var chatInput = document.getElementById('chat-input');
+      var chatSend = document.getElementById('chat-send');
+      var chatConversation = document.getElementById('chat-conversation');
+      var userMessage = chatInput.value;
+      
+     
+
+      chatSend.onclick = async () => {
+          var userMessages = chatInput.value;  // aqui pega o valor atualizado
+        chatConversation.innerHTML += `<p>${userMessages}</p>`;
+        chatInput.value = '';  
+        const response = await fetch("http://localhost:4500/openai/ia", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ pergunta: userMessages }),
+          });
+          
+  
+          const data = await response.json();
+          chatConversation.innerHTML += `<span>${data.resposta}</span>`;
+
+      }
+
+    </script>
 
     <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
     <div vw class="enabled">
