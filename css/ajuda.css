@@ -185,6 +185,11 @@
   transform: scale(1.1);
   transition: 0.5s;
 }
+.botaochatajuda button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .botaochatajuda img {
   width: 50px;
   height: 50px;
@@ -195,34 +200,45 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.15);
   width: 300px;
   height: 400px;
   position: fixed;
   bottom: 20px;
   right: 20px;
+  border-radius: 10px;
   background-color: var(--brancoBase);
+  transition: bottom 0.4s ease;
 }
 .titulochat {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   width: 100%;
   height: 10%;
-  border: 1px solid var(--vermelhom);
+  border: 1px solid var(--cinzaBase);
+  padding: 1rem;
+}
+.titulochat button{
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
 }
 .conversa {
   height: 80%;
   width: 100%;
-  border: 1px solid var(--vermelhom);
+  /* border: 1px solid var(--vermelhom); */
   overflow: hidden;
 }
 .teclado {
   height: 10%;
   width: 100%;
-  border: 1px solid var(--vermelhom);
+  border: 1px solid var(--cinzaBase);
 }
 .teclado input {
   width: 80%;
@@ -259,6 +275,19 @@
   word-break: break-word;
   align-self: flex-start;
   text-align: left;
+}
+.loading-response::after {
+  content: "...";
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 @media screen and (max-width: 1300px) {
   .imagemcadastro img {
