@@ -283,7 +283,6 @@ function desativaeativavlibras(){
 const barraAcessibilidade = document.getElementById("barra-acessibilidade")
 const barra = document.getElementById("barra")
 
-console.log(barraAcessibilidade, barra)
 
 let MovimentoX, MovimentoY, Arrastado = false
 let barraAtual = null
