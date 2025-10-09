@@ -138,3 +138,50 @@ function cancelarnotificacaoexcluirconta(){
 //fim do código de excluir conta
 
 
+//script para trocar o id do botão de acordo com o clique
+
+let listaconfig = document.getElementById("listaconfig");
+if (listaconfig) {
+    let botoeslist = listaconfig.querySelectorAll("button");
+    let quantitotal = botoeslist.length;
+    for (let g = 0; g < quantitotal; g++) {
+        botoeslist[g].addEventListener("click", alterarcategoria);
+    }
+    function alterarcategoria() {
+        for (let i = 0; i < quantitotal; i++) {
+            botoeslist[i].id = "";
+        }
+        this.id = "selecionado";
+    }
+}
+
+//script para fazer a barra lateral da aba de configurações funcinar
+function privacidade() {
+    let privacidade = document.getElementById("privacidadeconfig");
+    let notificacao = document.getElementById("notificacoesconfig");
+    let infouser = document.getElementById("informacoesousuario");
+
+    notificacao.style.display = "none";
+    infouser.style.display = "none";
+    privacidade.style.display = "flex";
+}
+
+function notificaacoes() {
+    let privacidade = document.getElementById("privacidadeconfig");
+    let notificacao = document.getElementById("notificacoesconfig");
+    let infouser = document.getElementById("informacoesousuario");
+
+    privacidade.style.display = "none";
+    infouser.style.display = "none";
+    notificacao.style.display = "flex";
+}
+
+function informacoesuser() {
+    let privacidade = document.getElementById("privacidadeconfig");
+    let notificacao = document.getElementById("notificacoesconfig");
+    let infouser = document.getElementById("informacoesousuario");
+
+    privacidade.style.display = "none";
+    notificacao.style.display = "none";
+    infouser.style.display = "flex";
+}
