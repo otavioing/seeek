@@ -14,3 +14,21 @@ function abrirMenu() {
 
     }
 }
+
+
+// codigo para abrir notificação de fazer login
+function abrirnotificacao(){
+    let notificacao = document.getElementById("caixadenotificacaofazerlogin");
+  
+    // notificacao.style.display = "block";
+    notificacao.style.top = "0rem";
+  }
+  
+  function fecharnotificacao(){
+    let notificacao = document.getElementById("caixadenotificacaofazerlogin");
+  
+    notificacao.style.top = "-10rem";
+  }
+
+
+

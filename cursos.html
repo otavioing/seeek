@@ -1,562 +1,686 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seek - Cursos</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cursos.css" />
+    <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seek - Cursos</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/cursos.css">
-  <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml">
-  <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
-</head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    gtag("config", "G-SLCTJL00KV");
+  </script>
 
-  gtag('config', 'G-SLCTJL00KV');
-</script>
-
-<body id="todo">
-
-  <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
-    <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg"
-        alt="símbolo da onu"></button>
-  </div>
-
-  <div id="barra" class="divbarradeacessibilidade">
-    <button onclick="desativarbarra()" class="botaoativacaobarra">
-      <img src="img/barra/icon.svg" alt="símbolo da onu" />
-    </button>
-
-    <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
-      <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
-    </button>
-
-    <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
-      <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
-    </button>
-
-      <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
-      <img src="img/barra/luabarra.svg" alt="Lua" />
-    </button>
-
-      <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
-      <img src="img/barra/solbarra.svg" alt="Sol" />
-    </button>
-
-    <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
-      <img src="img/barra/iconvlibras.svg" alt="vlibras" />
-    </button>
-
-    <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
-  </div>
-  <header class="inicio">
-    <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
-      <span class="linha1"></span>
-      <span class="linha2"></span>
-      <span class="linha3"></span>
-    </button>
-    <div class="logosite">
-      <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek"></a>
-    </div>
-    <div class="userhover">
-      <button><img id="img_useres" onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu"></button>
-    </div>
-    <nav class="navsite">
-      <div id="headerexplurar" class="navSelecionado">
-        <a href="index.html" class="nav-link ExpA">Explorar</a>
-      </div>
-      <div id="headercursos">
-        <a href="cursos.html" class="nav-link CurA">Cursos</a>
-      </div>
-      <div id="headervagas">
-        <a href="vagas.html" class="nav-link VagA">Vagas</a>
-      </div>
-      <div class="sobrenoss">
-        <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
-      </div>
-    </nav>
-    <div class="pesquisasite">
-      <input type="text" placeholder="Pesquisar" class="Pesquisar">
-      <a href=""><img src="img/search2.svg" alt="lupa"></a>
-    </div>
-    <div id="usersite" class="usersite">
-      <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
-       <p id="nome_user"></p>
-      <button onclick="abrirMenu()">
-        <img id="img_user" src="img/user2.svg" alt="User" />
+  <body id="todo">
+    <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
+      <button
+        id="botaobarra"
+        onclick="ativarbarra()"
+        class="botaoativacaobarra"
+      >
+        <img src="img/barra/icon.svg" alt="símbolo da onu" />
       </button>
     </div>
-    <nav class="hamburguer" id="menu">
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="index.html"> <span class="ExpA">Explorar </span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="cursos.html"> <span class="CurA">Cursos </span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="vagas.html"> <span class="VagA">Vagas</span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="sobre.html"><Span class="SobA">Sobre Nós</Span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer" href="ajuda.html"> <span class="AjuF">Ajuda</span> </a>
-      </div>
-      <div class="bordasuperior"></div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer " href="avisos.html" class="SobA"><span class="AviF">Avisos</span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer " href="avisos.html"> <span class="AtuF">Atualizações </span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer " href="sobre.html#contatosobre"> <span class="Conf">Contato </span></a>
-      </div>
 
-      <div class="itemsdomenu">
-        <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
-          <option value="pt">Português</option>
-          <option value="eng">English</option>
-          <option value="es">Español</option>
-          <option value="it">Italiano</option>
-          <option value="fr">Français</option>
-        </select>
-      </div>
-      <div class="bordasuperior"></div>
+    <div id="barra" class="divbarradeacessibilidade">
+      <button onclick="desativarbarra()" class="botaoativacaobarra">
+        <img src="img/barra/icon.svg" alt="símbolo da onu" />
+      </button>
 
-      <div class="divredessociais">
-        <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"><img src="img/Linkedin.svg" alt="Logo Linkedin" /></a>
-        <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
-        <a href="https://www.instagram.com/seek.oficial/"><img src="img/instagram.svg" alt="Logo instagram" /></a>
-      </div>
-      <div class="bordasuperior"></div>
+      <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
+        <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+      </button>
 
+      <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
+        <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+      </button>
 
-      <div class="direitosautoraismenu">
-        <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
-      </div>
-    </nav>
-    <div id="menuperfil" class="menuperfil">
-      <div id="divmeuperfil" class="divmenuperfil">
-        <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
-      </div>
-      <div id="divconfiguracoes" class="divmenuperfil">
-        <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
-      </div>
-      <div class="botaomodoescuro">
-        <label for=""><img src="img/lua.png" alt="Lua" /></label>
-        <div class="checkbox-con">
-          <input  onclick="MudarModos()" id="checkbox" type="checkbox"/>
-        </div>
-        <label for=""><img src="img/sol.png" alt="Sol" /></label>
-      </div>
-      <div id="diventrarsair" class="divmenuperfil">
-        <button id="sairdomenuperfil" class="sairP"><a href="login.html" ><span class="LoginPerfil">Login</span></a></button>
-      </div>
+      <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
+        <img src="img/barra/luabarra.svg" alt="Lua" />
+      </button>
+
+      <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
+        <img src="img/barra/solbarra.svg" alt="Sol" />
+      </button>
+
+      <button
+        onclick="desativaeativavlibras()"
+        class="funcaoesbarradeacessibilidade"
+      >
+        <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+      </button>
+
+      <img
+        id="logodafatecdabarradeacessibilidade"
+        src="img/Logofatec.svg"
+        alt="Logo da fatec"
+      />
     </div>
-  </header>
-
-  <div class="caminhonavegaçãocursos">
-    <a href="index.html" class="ExpA">Início</a>
-    <p>></p> <a class="migalhadepaocursos" href="cursos.html">Cursos</a>
-
-    <h1 class="h1Cursos"><span class="CurA">Cursos</span></h1>
-
-  </div>
-
-  <main>
-
-    <div id="caixadenotificacaofazerlogin" class="caixadenotificacaofazerlogin">
-      <h2>Não foi possível continuar</h2>
-      <p>Você precisa estar logado para acessar esta página.</p>
-      <div class="actions">
-        <span onclick="fecharnotificacao()" id="cancelarnotificacaofazerlogin" class="btn-cancel">Cancelar</span>
-        <span id="botaofazerloginconfirmar" class="btn-confirm"><a href="login.html">fazer login</a></span>
+    <header class="inicio">
+      <button
+        aria-label="botão menu de hamburguer"
+        class="botaoMenu"
+        id="botaoMenu"
+      >
+        <span class="linha1"></span>
+        <span class="linha2"></span>
+        <span class="linha3"></span>
+      </button>
+      <div class="logosite">
+        <a class="logosite" href="index.html"
+          ><img src="img/logo.svg" alt="Logo Seek"
+        /></a>
       </div>
+      <div class="userhover">
+        <button>
+          <img
+            id="img_useres"
+            onclick="abrirMenu()"
+            src="img/user2.svg"
+            alt="perfil menu"
+          />
+        </button>
+      </div>
+      <nav class="navsite">
+        <div id="headerexplurar" class="navSelecionado">
+          <a href="index.html" class="nav-link ExpA">Explorar</a>
+        </div>
+        <div id="headercursos">
+          <a href="cursos.html" class="nav-link CurA">Cursos</a>
+        </div>
+        <div id="headervagas">
+          <a href="vagas.html" class="nav-link VagA">Vagas</a>
+        </div>
+        <div class="sobrenoss">
+          <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
+        </div>
+      </nav>
+      <div class="pesquisasite">
+        <input type="text" placeholder="Pesquisar" class="Pesquisar" />
+        <a href=""><img src="img/search2.svg" alt="lupa" /></a>
+      </div>
+      <div id="usersite" class="usersite">
+        <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
+        <p id="nome_user"></p>
+        <button onclick="abrirMenu()">
+          <img id="img_user" src="img/user2.svg" alt="User" />
+        </button>
+      </div>
+      <nav class="hamburguer" id="menu">
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer nav-link" href="index.html">
+            <span class="ExpA">Explorar </span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer nav-link" href="cursos.html">
+            <span class="CurA">Cursos </span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer nav-link" href="vagas.html">
+            <span class="VagA">Vagas</span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer nav-link" href="sobre.html"
+            ><span class="SobA">Sobre Nós</span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="ajuda.html">
+            <span class="AjuF">Ajuda</span>
+          </a>
+        </div>
+        <div class="bordasuperior"></div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"
+            ><span class="AviF">Avisos</span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="avisos.html">
+            <span class="AtuF">Atualizações </span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="sobre.html#contatosobre">
+            <span class="Conf">Contato </span></a
+          >
+        </div>
+
+        <div class="itemsdomenu">
+          <select
+            aria-label="Idioma"
+            name="Idioma"
+            id="idiomaSelect"
+            onchange="TrocaLinguagem(this.value)"
+          >
+            <option value="pt">Português</option>
+            <option value="eng">English</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+        <div class="bordasuperior"></div>
+
+        <div class="divredessociais">
+          <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"
+            ><img src="img/Linkedin.svg" alt="Logo Linkedin"
+          /></a>
+          <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
+          <a href="https://www.instagram.com/seek.oficial/"
+            ><img src="img/instagram.svg" alt="Logo instagram"
+          /></a>
+        </div>
+        <div class="bordasuperior"></div>
+
+        <div class="direitosautoraismenu">
+          <p class="DirF">
+            Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+          </p>
+        </div>
+      </nav>
+      <div id="menuperfil" class="menuperfil">
+        <div id="divmeuperfil" class="divmenuperfil">
+          <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
+        </div>
+        <div id="divconfiguracoes" class="divmenuperfil">
+          <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
+        </div>
+        <div class="botaomodoescuro">
+          <label for=""><img src="img/lua.png" alt="Lua" /></label>
+          <div class="checkbox-con">
+            <input onclick="MudarModos()" id="checkbox" type="checkbox" />
+          </div>
+          <label for=""><img src="img/sol.png" alt="Sol" /></label>
+        </div>
+        <div id="diventrarsair" class="divmenuperfil">
+          <button id="sairdomenuperfil" class="sairP">
+            <a href="login.html"><span class="LoginPerfil">Login</span></a>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="caminhonavegaçãocursos">
+      <a href="index.html" class="ExpA">Início</a>
+      <p>></p>
+      <a class="migalhadepaocursos" href="cursos.html">Cursos</a>
+
+      <h1 class="h1Cursos"><span class="CurA">Cursos</span></h1>
     </div>
-    <div class="maincursos">
-      <div class="filtroflutuante" id="filtroflutuante">
-        <div class="titulofiltroflutuante">
-          <svg viewBox="0 0 68 64" class="modoEscuroImagem1">
-            <path d="M11.3219 13.2295H45.2871"  />
-            <path d="M11.3219 31.7505H28.3045" />
-            <path d="M39.6262 31.7505H56.6088" />
-            <path d="M22.6437 50.2715H56.6089"/>
-            <path d="M50.948 18.5216C54.0744 18.5216 56.6088 16.1523 56.6088 13.2298C56.6088 10.3072 54.0744 7.93799 50.948 7.93799C47.8216 7.93799 45.2871 10.3072 45.2871 13.2298C45.2871 16.1523 47.8216 18.5216 50.948 18.5216Z" />
-            <path d="M33.9653 37.0426C37.0917 37.0426 39.6262 34.6733 39.6262 31.7508C39.6262 28.8282 37.0917 26.459 33.9653 26.459C30.8389 26.459 28.3044 28.8282 28.3044 31.7508C28.3044 34.6733 30.8389 37.0426 33.9653 37.0426Z" />
-            <path d="M16.9828 55.564C20.1092 55.564 22.6436 53.1948 22.6436 50.2723C22.6436 47.3497 20.1092 44.9805 16.9828 44.9805C13.8564 44.9805 11.3219 47.3497 11.3219 50.2723C11.3219 53.1948 13.8564 55.564 16.9828 55.564Z" stroke-width="3.57528" stroke-linecap="round"/>
+
+    <main>
+      <div
+        id="caixadenotificacaofazerlogin"
+        class="caixadenotificacaofazerlogin"
+      >
+        <h2>Não foi possível continuar</h2>
+        <p>Você precisa estar logado para acessar esta página.</p>
+        <div class="actions">
+          <span
+            onclick="fecharnotificacao()"
+            id="cancelarnotificacaofazerlogin"
+            class="btn-cancel"
+            >Cancelar</span
+          >
+          <span id="botaofazerloginconfirmar" class="btn-confirm"
+            ><a href="login.html">fazer login</a></span
+          >
+        </div>
+      </div>
+      <div class="maincursos">
+        <div class="filtroflutuante" id="filtroflutuante">
+          <div class="titulofiltroflutuante">
+            <svg viewBox="0 0 68 64" class="modoEscuroImagem1">
+              <path d="M11.3219 13.2295H45.2871" />
+              <path d="M11.3219 31.7505H28.3045" />
+              <path d="M39.6262 31.7505H56.6088" />
+              <path d="M22.6437 50.2715H56.6089" />
+              <path
+                d="M50.948 18.5216C54.0744 18.5216 56.6088 16.1523 56.6088 13.2298C56.6088 10.3072 54.0744 7.93799 50.948 7.93799C47.8216 7.93799 45.2871 10.3072 45.2871 13.2298C45.2871 16.1523 47.8216 18.5216 50.948 18.5216Z"
+              />
+              <path
+                d="M33.9653 37.0426C37.0917 37.0426 39.6262 34.6733 39.6262 31.7508C39.6262 28.8282 37.0917 26.459 33.9653 26.459C30.8389 26.459 28.3044 28.8282 28.3044 31.7508C28.3044 34.6733 30.8389 37.0426 33.9653 37.0426Z"
+              />
+              <path
+                d="M16.9828 55.564C20.1092 55.564 22.6436 53.1948 22.6436 50.2723C22.6436 47.3497 20.1092 44.9805 16.9828 44.9805C13.8564 44.9805 11.3219 47.3497 11.3219 50.2723C11.3219 53.1948 13.8564 55.564 16.9828 55.564Z"
+                stroke-width="3.57528"
+                stroke-linecap="round"
+              />
             </svg>
-          <h2 class="FilC">Filtrar</h2>
+            <h2 class="FilC">Filtrar</h2>
 
-          <button class="botaotestparafecharofiltro">fechar</button>
-        </div>
-        <div class="tiposdecursoscursos">
-          <h2 class="titulosfiltroflutuante TDCC">Tipos de curso</h2>
-          <div class="divparadarogapentrealabeleoinput">
-            <label for=""> <span class="DisC"> Design </span> </label>
-            <input type="radio" name="" id="radio1">
+            <button class="botaotestparafecharofiltro">fechar</button>
           </div>
-          <div class="divparadarogapentrealabeleoinput">
-            <label for=""> <span class="IluC"> Ilustração </span> </label>
-            <input type="radio" name="" id="radio2">
-          </div>
-          <div class="divparadarogapentrealabeleoinput">
-            <label for=""> <span class="FotC">Fotográfia </span> </label>
-            <input type="radio" name="" id="radio3">
-          </div>
-        </div>
-
-        <div class="precocursos">
-          <h2 class="titulosfiltroflutuante PreC">Preço</h2>
-          <div class="divparadarogapentrealabeleoinput">
-
-            <label for=""> <span class="FixC"> Fixo </span> </label>
-            <input type="radio" name="" id="radio4">
-          </div>
-          <div class="divparadarogapentrealabeleoinput">
-            <label for=""> <span class="MenC">Mensal</span> </label>
-            <input type="radio" name="" id="radio5">
-          </div>
-          <div class="setaoneoffcursos">
-            <p class="FaiC">Faixa de Preço</p>
-
-            <svg viewBox="0 0 14 8" id="setapreco" onclick="setapreco()" alt="seta para baixo" >
-            <path class="st0" d="M13,1L7,7L1,1"/>
-            </svg>
-
-            <!-- <img id="setapreco" onclick="setapreco()" src="img/setaparabaixo.svg" alt="seta para baixo"> -->
-          </div>
-          <div id="faixadeprecocursos" class="faixadeprecocursos">
-
-            <input class="precominmax" type="number" name="" id="" placeholder="min">
-            <p>-</p>
-            <input class="precominmax" type="number" name="" id="" placeholder="max">
-
+          <div class="tiposdecursoscursos">
+            <h2 class="titulosfiltroflutuante TDCC">Tipos de curso</h2>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for=""> <span class="DisC"> Design </span> </label>
+              <input type="radio" name="" id="radio1" />
+            </div>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for=""> <span class="IluC"> Ilustração </span> </label>
+              <input type="radio" name="" id="radio2" />
+            </div>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for=""> <span class="FotC">Fotográfia </span> </label>
+              <input type="radio" name="" id="radio3" />
+            </div>
           </div>
 
-        </div>
+          <div class="precocursos">
+            <h2 class="titulosfiltroflutuante PreC">Preço</h2>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for=""> <span class="FixC"> Fixo </span> </label>
+              <input type="radio" name="" id="radio4" />
+            </div>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for=""> <span class="MenC">Mensal</span> </label>
+              <input type="radio" name="" id="radio5" />
+            </div>
+            <div class="setaoneoffcursos">
+              <p class="FaiC">Faixa de Preço</p>
 
-        <div class="duracaocursos">
-          <h2 class="titulosfiltroflutuante DurC">Duração</h2>
-          <div class="divparadarogapentrealabeleoinput">
-
-            <label for=""> <span class="IndC">Indefinida</span> </label>
-            <input type="radio" name="" id="radio6">
-          </div>
-          <div class="setaoneoffcursos">
-            <p class="TEMC">Tempo em horas</p>
-
-            <svg viewBox="0 0 14 8" id="seta" onclick="seta()" alt="seta para baixo" >
-              <path class="st0" d="M13,1L7,7L1,1"/>
+              <svg
+                viewBox="0 0 14 8"
+                id="setapreco"
+                onclick="setapreco()"
+                alt="seta para baixo"
+              >
+                <path class="st0" d="M13,1L7,7L1,1" />
               </svg>
-  
-            <!-- <img id="seta" onclick="seta()" src="img/setaparabaixo.svg" alt="seta para baixo"> -->
 
-          </div>
-          <div id="divinputpreco" class="divinputpreco">
-            <input class="precominmax" type="number" name="" id="" placeholder="min">
-            <p>-</p>
-            <input class="precominmax" type="number" name="" id="" placeholder="max">
+              <!-- <img id="setapreco" onclick="setapreco()" src="img/setaparabaixo.svg" alt="seta para baixo"> -->
+            </div>
+            <div id="faixadeprecocursos" class="faixadeprecocursos">
+              <input
+                class="precominmax"
+                type="number"
+                name=""
+                id=""
+                placeholder="min"
+              />
+              <p>-</p>
+              <input
+                class="precominmax"
+                type="number"
+                name=""
+                id=""
+                placeholder="max"
+              />
+            </div>
           </div>
 
+          <div class="duracaocursos">
+            <h2 class="titulosfiltroflutuante DurC">Duração</h2>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for=""> <span class="IndC">Indefinida</span> </label>
+              <input type="radio" name="" id="radio6" />
+            </div>
+            <div class="setaoneoffcursos">
+              <p class="TEMC">Tempo em horas</p>
+
+              <svg
+                viewBox="0 0 14 8"
+                id="seta"
+                onclick="seta()"
+                alt="seta para baixo"
+              >
+                <path class="st0" d="M13,1L7,7L1,1" />
+              </svg>
+
+              <!-- <img id="seta" onclick="seta()" src="img/setaparabaixo.svg" alt="seta para baixo"> -->
+            </div>
+            <div id="divinputpreco" class="divinputpreco">
+              <input
+                class="precominmax"
+                type="number"
+                name=""
+                id=""
+                placeholder="min"
+              />
+              <p>-</p>
+              <input
+                class="precominmax"
+                type="number"
+                name=""
+                id=""
+                placeholder="max"
+              />
+            </div>
+          </div>
+
+          <div class="localcursos">
+            <h2 class="titulosfiltroflutuante LocC">Local</h2>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for=""> <span class="PresC">Presencial</span> </label>
+              <input type="radio" name="" id="radio7" />
+            </div>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for=""> <span class="HOC">Home office </span> </label>
+              <input type="radio" name="" id="radio8" />
+            </div>
+          </div>
+
+          <div class="aplicarfiltrocursos">
+            <button class="AplG">Aplicar</button>
+          </div>
+
+          <div class="limparfiltrocursos">
+            <button type="button" onclick="desmarcarRadio()" class="LCG">
+              Limpar filtro
+            </button>
+          </div>
         </div>
 
-        <div class="localcursos">
-          <h2 class="titulosfiltroflutuante LocC">Local</h2>
-          <div class="divparadarogapentrealabeleoinput">
-            <label for=""> <span class="PresC">Presencial</span> </label>
-            <input type="radio" name="" id="radio7">
-          </div>
-          <div class="divparadarogapentrealabeleoinput">
-            <label for=""> <span class="HOC">Home office </span> </label>
-            <input type="radio" name="" id="radio8">
-          </div>
+        <div class="alinharadiv">
+          <button class="botaofiltrarcursosmedia">
+            <svg viewBox="0 0 68 64" class="modoEscuroImagem1">
+              <path d="M11.3219 13.2295H45.2871" />
+              <path d="M11.3219 31.7505H28.3045" />
+              <path d="M39.6262 31.7505H56.6088" />
+              <path d="M22.6437 50.2715H56.6089" />
+              <path
+                d="M50.948 18.5216C54.0744 18.5216 56.6088 16.1523 56.6088 13.2298C56.6088 10.3072 54.0744 7.93799 50.948 7.93799C47.8216 7.93799 45.2871 10.3072 45.2871 13.2298C45.2871 16.1523 47.8216 18.5216 50.948 18.5216Z"
+              />
+              <path
+                d="M33.9653 37.0426C37.0917 37.0426 39.6262 34.6733 39.6262 31.7508C39.6262 28.8282 37.0917 26.459 33.9653 26.459C30.8389 26.459 28.3044 28.8282 28.3044 31.7508C28.3044 34.6733 30.8389 37.0426 33.9653 37.0426Z"
+              />
+              <path
+                d="M16.9828 55.564C20.1092 55.564 22.6436 53.1948 22.6436 50.2723C22.6436 47.3497 20.1092 44.9805 16.9828 44.9805C13.8564 44.9805 11.3219 47.3497 11.3219 50.2723C11.3219 53.1948 13.8564 55.564 16.9828 55.564Z"
+                stroke-width="3.57528"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="FilC"> Filtrar </span>
+          </button>
+
+          <button class="botaofiltrarcursosmedia1200px">
+            <svg viewBox="0 0 68 64" class="modoEscuroImagem1">
+              <path d="M11.3219 13.2295H45.2871" />
+              <path d="M11.3219 31.7505H28.3045" />
+              <path d="M39.6262 31.7505H56.6088" />
+              <path d="M22.6437 50.2715H56.6089" />
+              <path
+                d="M50.948 18.5216C54.0744 18.5216 56.6088 16.1523 56.6088 13.2298C56.6088 10.3072 54.0744 7.93799 50.948 7.93799C47.8216 7.93799 45.2871 10.3072 45.2871 13.2298C45.2871 16.1523 47.8216 18.5216 50.948 18.5216Z"
+              />
+              <path
+                d="M33.9653 37.0426C37.0917 37.0426 39.6262 34.6733 39.6262 31.7508C39.6262 28.8282 37.0917 26.459 33.9653 26.459C30.8389 26.459 28.3044 28.8282 28.3044 31.7508C28.3044 34.6733 30.8389 37.0426 33.9653 37.0426Z"
+              />
+              <path
+                d="M16.9828 55.564C20.1092 55.564 22.6436 53.1948 22.6436 50.2723C22.6436 47.3497 20.1092 44.9805 16.9828 44.9805C13.8564 44.9805 11.3219 47.3497 11.3219 50.2723C11.3219 53.1948 13.8564 55.564 16.9828 55.564Z"
+                stroke-width="3.57528"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="FilC"> Filtrar </span>
+          </button>
         </div>
 
-
-        <div class="aplicarfiltrocursos">
-
-          <button class="AplG">Aplicar</button>
-
+        <div class="containercursos">
+          <button
+            onclick="abrircaixaflutuantecursos()"
+            class="botaocaixacursos"
+          >
+            <div class="cursos">
+              <img src="img/imagemtestecurso.png" alt="imagem teste do curso" />
+              <div class="informacoescursos">
+                <div class="nomedocursoedoautor">
+                  <h2 class="NomC">Nome do curso</h2>
+                  <p>José Antonio</p>
+                </div>
+                <div class="valordocursoebotaofavorito">
+                  <p class="precoC">R$ 23,00/mês</p>
+                  <img src="img/heart.svg" alt="imagem teste do curso" />
+                </div>
+              </div>
+            </div>
+          </button>
+          <button
+            onclick="abrircaixaflutuantecursos()"
+            class="botaocaixacursos"
+          >
+            <div class="cursos">
+              <img
+                src="img/imagemtestecurso (2).png"
+                alt="imagem teste do curso"
+              />
+              <div class="informacoescursos">
+                <div class="nomedocursoedoautor">
+                  <h2 class="NomC">Nome do curso</h2>
+                  <p>José Antonio</p>
+                </div>
+                <div class="valordocursoebotaofavorito">
+                  <p class="precoC">R$ 23,00/mês</p>
+                  <img src="img/heart.svg" alt="imagem teste do curso" />
+                </div>
+              </div>
+            </div>
+          </button>
+          <button
+            onclick="abrircaixaflutuantecursos()"
+            class="botaocaixacursos"
+          >
+            <div class="cursos">
+              <img
+                src="img/imagemtestecurso (3).png"
+                alt="imagem teste do curso"
+              />
+              <div class="informacoescursos">
+                <div class="nomedocursoedoautor">
+                  <h2 class="NomC">Nome do curso</h2>
+                  <p>José Antonio</p>
+                </div>
+                <div class="valordocursoebotaofavorito">
+                  <p class="precoC">R$ 23,00/mês</p>
+                  <img src="img/heart.svg" alt="imagem teste do curso" />
+                </div>
+              </div>
+            </div>
+          </button>
+          <button
+            onclick="abrircaixaflutuantecursos()"
+            class="botaocaixacursos"
+          >
+            <div class="cursos">
+              <img
+                src="img/imagemtestecurso (4).png"
+                alt="imagem teste do curso"
+              />
+              <div class="informacoescursos">
+                <div class="nomedocursoedoautor">
+                  <h2 class="NomC">Nome do curso</h2>
+                  <p>José Antonio</p>
+                </div>
+                <div class="valordocursoebotaofavorito">
+                  <p class="precoC">R$ 23,00/mês</p>
+                  <img src="img/heart.svg" alt="imagem teste do curso" />
+                </div>
+              </div>
+            </div>
+          </button>
+          <button
+            onclick="abrircaixaflutuantecursos()"
+            class="botaocaixacursos"
+          >
+            <div class="cursos">
+              <img
+                src="img/imagemtestecurso (5).png"
+                alt="imagem teste do curso"
+              />
+              <div class="informacoescursos">
+                <div class="nomedocursoedoautor">
+                  <h2 class="NomC">Nome do curso</h2>
+                  <p>José Antonio</p>
+                </div>
+                <div class="valordocursoebotaofavorito">
+                  <p class="precoC">R$ 23,00/mês</p>
+                  <img src="img/heart.svg" alt="imagem teste do curso" />
+                </div>
+              </div>
+            </div>
+          </button>
+          <button
+            onclick="abrircaixaflutuantecursos()"
+            class="botaocaixacursos"
+          >
+            <div class="cursos">
+              <img
+                src="img/imagemtestecurso (6).png"
+                alt="imagem teste do curso"
+              />
+              <div class="informacoescursos">
+                <div class="nomedocursoedoautor">
+                  <h2 class="NomC">Nome do curso</h2>
+                  <p>José Antonio</p>
+                </div>
+                <div class="valordocursoebotaofavorito">
+                  <p class="precoC">R$ 23,00/mês</p>
+                  <img src="img/heart.svg" alt="imagem teste do curso" />
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="caixaflutuante">
+        <div>
+          <button
+            id="botaofecharcaixaflutuantecursos"
+            onclick="fecharcaixaflutuantecursos()"
+          ></button>
+          <img src="../img/imagemtestecurso.png" alt="imagem teste do curso" />
         </div>
 
-        <div class="limparfiltrocursos">
-
-          <button type="button" onclick="desmarcarRadio()" class="LCG">Limpar filtro</button>
-
-        </div>
-
-
-
-
-
-
-      </div>
-
-      <div class="alinharadiv">
-
-        <button class="botaofiltrarcursosmedia">
-          <svg viewBox="0 0 68 64" class="modoEscuroImagem1">
-            <path d="M11.3219 13.2295H45.2871"  />
-            <path d="M11.3219 31.7505H28.3045" />
-            <path d="M39.6262 31.7505H56.6088" />
-            <path d="M22.6437 50.2715H56.6089"/>
-            <path d="M50.948 18.5216C54.0744 18.5216 56.6088 16.1523 56.6088 13.2298C56.6088 10.3072 54.0744 7.93799 50.948 7.93799C47.8216 7.93799 45.2871 10.3072 45.2871 13.2298C45.2871 16.1523 47.8216 18.5216 50.948 18.5216Z" />
-            <path d="M33.9653 37.0426C37.0917 37.0426 39.6262 34.6733 39.6262 31.7508C39.6262 28.8282 37.0917 26.459 33.9653 26.459C30.8389 26.459 28.3044 28.8282 28.3044 31.7508C28.3044 34.6733 30.8389 37.0426 33.9653 37.0426Z" />
-            <path d="M16.9828 55.564C20.1092 55.564 22.6436 53.1948 22.6436 50.2723C22.6436 47.3497 20.1092 44.9805 16.9828 44.9805C13.8564 44.9805 11.3219 47.3497 11.3219 50.2723C11.3219 53.1948 13.8564 55.564 16.9828 55.564Z" stroke-width="3.57528" stroke-linecap="round"/>
-          </svg>
-          <span class="FilC"> Filtrar </span>
-        </button>
-
-        <button class="botaofiltrarcursosmedia1200px">
-          <svg viewBox="0 0 68 64" class="modoEscuroImagem1">
-            <path d="M11.3219 13.2295H45.2871"  />
-            <path d="M11.3219 31.7505H28.3045" />
-            <path d="M39.6262 31.7505H56.6088" />
-            <path d="M22.6437 50.2715H56.6089"/>
-            <path d="M50.948 18.5216C54.0744 18.5216 56.6088 16.1523 56.6088 13.2298C56.6088 10.3072 54.0744 7.93799 50.948 7.93799C47.8216 7.93799 45.2871 10.3072 45.2871 13.2298C45.2871 16.1523 47.8216 18.5216 50.948 18.5216Z" />
-            <path d="M33.9653 37.0426C37.0917 37.0426 39.6262 34.6733 39.6262 31.7508C39.6262 28.8282 37.0917 26.459 33.9653 26.459C30.8389 26.459 28.3044 28.8282 28.3044 31.7508C28.3044 34.6733 30.8389 37.0426 33.9653 37.0426Z" />
-            <path d="M16.9828 55.564C20.1092 55.564 22.6436 53.1948 22.6436 50.2723C22.6436 47.3497 20.1092 44.9805 16.9828 44.9805C13.8564 44.9805 11.3219 47.3497 11.3219 50.2723C11.3219 53.1948 13.8564 55.564 16.9828 55.564Z" stroke-width="3.57528" stroke-linecap="round"/>
-          </svg>
-          <span class="FilC"> Filtrar </span>
-        </button>
-
-      </div>
-
-      <div class="containercursos">
-
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
-          <div class="cursos">
-            <img src="img/imagemtestecurso.png" alt="imagem teste do curso">
-            <div class="informacoescursos">
-              <div class="nomedocursoedoautor">
-                <h2 class="NomC">Nome do curso</h2>
-                <p>José Antonio</p>
-              </div>
-              <div class="valordocursoebotaofavorito">
-                <p class="precoC">R$ 23,00/mês</p>
-                <img src="img/heart.svg" alt="imagem teste do curso">
-              </div>
-            </div>
-          </div>
-        </button>
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
-          <div class="cursos">
-            <img src="img/imagemtestecurso (2).png" alt="imagem teste do curso">
-            <div class="informacoescursos">
-              <div class="nomedocursoedoautor">
-                <h2 class="NomC">Nome do curso</h2>
-                <p>José Antonio</p>
-              </div>
-              <div class="valordocursoebotaofavorito">
-                <p class="precoC">R$ 23,00/mês</p>
-                <img src="img/heart.svg" alt="imagem teste do curso">
-              </div>
-            </div>
-          </div>
-        </button>
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
-          <div class="cursos">
-            <img src="img/imagemtestecurso (3).png" alt="imagem teste do curso">
-            <div class="informacoescursos">
-              <div class="nomedocursoedoautor">
-                <h2 class="NomC">Nome do curso</h2>
-                <p>José Antonio</p>
-              </div>
-              <div class="valordocursoebotaofavorito">
-                <p class="precoC">R$ 23,00/mês</p>
-                <img src="img/heart.svg" alt="imagem teste do curso">
-              </div>
-            </div>
-          </div>
-        </button>
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
-          <div class="cursos">
-            <img src="img/imagemtestecurso (4).png" alt="imagem teste do curso">
-            <div class="informacoescursos">
-              <div class="nomedocursoedoautor">
-                <h2 class="NomC">Nome do curso</h2>
-                <p>José Antonio</p>
-              </div>
-              <div class="valordocursoebotaofavorito">
-                <p class="precoC">R$ 23,00/mês</p>
-                <img src="img/heart.svg" alt="imagem teste do curso">
-              </div>
-            </div>
-          </div>
-        </button>
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
-          <div class="cursos">
-            <img src="img/imagemtestecurso (5).png" alt="imagem teste do curso">
-            <div class="informacoescursos">
-              <div class="nomedocursoedoautor">
-                <h2 class="NomC">Nome do curso</h2>
-                <p>José Antonio</p>
-              </div>
-              <div class="valordocursoebotaofavorito">
-                <p class="precoC">R$ 23,00/mês</p>
-                <img src="img/heart.svg" alt="imagem teste do curso">
-              </div>
-            </div>
-          </div>
-        </button>
-        <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
-          <div class="cursos">
-            <img src="img/imagemtestecurso (6).png" alt="imagem teste do curso">
-            <div class="informacoescursos">
-              <div class="nomedocursoedoautor">
-                <h2 class="NomC">Nome do curso</h2>
-                <p>José Antonio</p>
-              </div>
-              <div class="valordocursoebotaofavorito">
-                <p class="precoC">R$ 23,00/mês</p>
-                <img src="img/heart.svg" alt="imagem teste do curso">
-              </div>
-            </div>
-          </div>
-        </button>
-
-
-
-
-
-      </div>
-
-
-    </div>
-    <div class="caixaflutuante">
-      <div>
-        <button id="botaofecharcaixaflutuantecursos" onclick="fecharcaixaflutuantecursos()"></button>
-        <img src="../img/imagemtestecurso.png" alt="imagem teste do curso">
-      </div>
-
-      <div class="informacoescaixaflutuantecursos">
+        <div class="informacoescaixaflutuantecursos">
           <div class="nomedocursoedoautor">
-              <h2 class="NomC">Curso de design</h2>
-              <p>Um curso feito por José Antonio</p>
+            <h2 class="NomC">Curso de design</h2>
+            <p>Um curso feito por José Antonio</p>
           </div>
           <div class="valordocursoetempo">
-
-              <h2 class="precoC">R$23,00/mês</h2>
-              <p>Tempo: 48horas</p>
-
+            <h2 class="precoC">R$23,00/mês</h2>
+            <p>Tempo: 48horas</p>
           </div>
-
-      </div>
-      <p id="descricaodacaixaflutuantecursos">Breve descrição do curso</p>
-      <div class="infocursoscaixaflutuante">
-
-
-
-              <div class="infosobreocurso">
-                  <div class="iconssobresocurso">
-                      <img src="../img/estrela.svg" alt="estrela">
-                      <img src="../img/cinema.svg" alt="take">
-                      <img src="../img/perfilcursos.svg" alt="silhueta de uma pessoa">
-                      <img src="../img/like.svg" alt="joia">
-                      <img src="../img/som.svg" alt="alto falante ">
-                      <img src="../img/legenda.svg" alt="legenda">
-                  </div>
-                  <div class="infosobreocursolegendas">
-                      <p>Level: iniciante</p>
-                      <p>15 módulos(50min)</p>
-                      <p>20.000 estudantes</p>
-                      <p>89% reviews positivas</p>
-                      <p>Audio: Português</p>
-                      <p>CC: inglês,espanhol</p>
-                  </div>
-              </div>
+        </div>
+        <p id="descricaodacaixaflutuantecursos">Breve descrição do curso</p>
+        <div class="infocursoscaixaflutuante">
+          <div class="infosobreocurso">
+            <div class="iconssobresocurso">
+              <img src="../img/estrela.svg" alt="estrela" />
+              <img src="../img/cinema.svg" alt="take" />
+              <img src="../img/perfilcursos.svg" alt="silhueta de uma pessoa" />
+              <img src="../img/like.svg" alt="joia" />
+              <img src="../img/som.svg" alt="alto falante " />
+              <img src="../img/legenda.svg" alt="legenda" />
+            </div>
+            <div class="infosobreocursolegendas">
+              <p>Level: iniciante</p>
+              <p>15 módulos(50min)</p>
+              <p>20.000 estudantes</p>
+              <p>89% reviews positivas</p>
+              <p>Audio: Português</p>
+              <p>CC: inglês,espanhol</p>
+            </div>
+          </div>
 
           <div class="assinarcursocaixaflutuante">
-              
-              <button id="idassinarcursocaixaflutuante">Assinar</button>
-              
+            <button id="idassinarcursocaixaflutuante">Assinar</button>
           </div>
-      </div>
-      <div class="botaomaisinfocursoscaixaflutuante">
+        </div>
+        <div class="botaomaisinfocursoscaixaflutuante">
           <a href="infocursos.html" id="botaoinscrever">Mais informações</a>
-      </div>
-  </div>
-
-  <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    </div>
-
-  </main>
-
-  
-
-  <button class="btn-scroll-top" arial-label="Voltar ao topo">
-    <img src="img/arrow-top.svg" alt="Voltar ao topo" width="50" height="50" />
-  </button>
-
-  <footer>
-
-    <div class="linksfooter">
-
-      <div class="infofooter">
-        <a href="ajuda.html" class="AjuF">Ajuda</a>
-        <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
+        </div>
       </div>
 
-      <div class="infofooter">
-        <a href="sobre.html" class="SobA">Sobre Nós</a>
-        <a href="sobre.html#contatosobre" class="ConT">Contato</a>
-
+      <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
+        <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+          new window.VLibras.Widget("https://vlibras.gov.br/app");
+        </script>
       </div>
-      <div class="infofooter">
-        <a href="avisos.html" class="AviF">Avisos</a>
+    </main>
 
-        <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
-          <option value="pt">Português</option>
-          <option value="eng">English</option>
-          <option value="es">Español</option>
-          <option value="it">Italiano</option>
-          <option value="fr">Français</option>
-        </select>
+    <button class="btn-scroll-top" arial-label="Voltar ao topo">
+      <img
+        src="img/arrow-top.svg"
+        alt="Voltar ao topo"
+        width="50"
+        height="50"
+      />
+    </button>
+
+    <footer>
+      <div class="linksfooter">
+        <div class="infofooter">
+          <a href="ajuda.html" class="AjuF">Ajuda</a>
+          <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
+        </div>
+
+        <div class="infofooter">
+          <a href="sobre.html" class="SobA">Sobre Nós</a>
+          <a href="sobre.html#contatosobre" class="ConT">Contato</a>
+        </div>
+        <div class="infofooter">
+          <a href="avisos.html" class="AviF">Avisos</a>
+
+          <select
+            aria-label="Idioma"
+            name="Idioma"
+            id="idiomaSelect"
+            onchange="TrocaLinguagem(this.value)"
+          >
+            <option value="pt">Português</option>
+            <option value="eng">English</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+
+        <div class="infofooter">
+          <img src="img/logoSeekk 3@2x.png" alt="Logo Seek" />
+        </div>
       </div>
 
-      <div class="infofooter">
-        <img src="img/logoSeekk 3@2x.png" alt="Logo Seek">
+      <div class="direitosautorais">
+        <p class="DirF">
+          Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+        </p>
       </div>
+    </footer>
 
-    </div>
-
-    <div class="direitosautorais">
-      <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
-    </div>
-
-
-  </footer>
-
-  <script src="script/border.js"></script>
-  <script src="script/cake.js"></script>
-  <script src="script/cursos.js"></script>
-  <script src="script/lfy.js"></script>
-  <script src="script/caua.js"></script>
-  <script src="script/user_logado.js"></script>
-  <script src="config.html"></script>
-  <script src="script/acessibilidade.js"></script>
-  <script src="script/script.js"></script>
-
-
-</body>
-
+    <script src="script/cursos.js"></script>
+    <script src="script/lfy.js"></script>
+    <script src="script/user_logado.js"></script>
+    <script src="config.html"></script>
+    <script src="script/acessibilidade.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/tema.js"></script>
+    <script src="script/traducao.js"></script>
+  </body>
 </html>
 <!-- <input type="checkbox" name="campos" id="campos"> -->

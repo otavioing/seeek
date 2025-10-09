@@ -31,3 +31,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+
+// funçao para abrir os comentários do madal
+
+function abrirComentarios(){
+    
+    let comentarios = document.getElementById("comentariomodal");
+    let barradivisoria = document.getElementById("barradivisoriamodal");
+
+    // Alternar o display de comentarios
+    if (comentarios.style.display === "none" || comentarios.style.display === "") {
+        comentarios.style.display = "flex";
+    } else {
+        comentarios.style.display = "none";
+    }
+
+    // Alternar o display de barradivisoria
+    if (barradivisoria.style.display === "none" || barradivisoria.style.display === "") {
+        barradivisoria.style.display = "flex";
+    } else {
+        barradivisoria.style.display = "none";
+    }
+}

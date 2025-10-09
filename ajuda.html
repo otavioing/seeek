@@ -345,8 +345,7 @@
           <p>Chat com a IA</p>
           <button id="chat-close">X</button>
         </div>
-        <div class="conversa" id="chat-conversation">
-        </div>
+        <div class="conversa" id="chat-conversation"></div>
         <div class="teclado">
           <input
             id="chat-input"
@@ -373,7 +372,9 @@
             body: JSON.stringify({ pergunta: userMessages }),
           });
           const data = await response.json();
-          const loadingMsg = chatConversation.querySelector("span.loading-response");
+          const loadingMsg = chatConversation.querySelector(
+            "span.loading-response"
+          );
           if (loadingMsg) loadingMsg.remove();
           chatConversation.innerHTML += `<span>${data.resposta}</span>`;
           // Scroll para o final
@@ -466,11 +467,10 @@
     </footer>
 
     <script src="script/lfy.js"></script>
-    <script src="script/caua.js"></script>
-    <script src="script/cake.js"></script>
     <script src="script/user_logado.js"></script>
     <script src="script/acessibilidade.js"></script>
     <script src="script/script.js"></script>
-
+    <script src="script/tema.js"></script>
+    <script src="script/traducao.js"></script>
   </body>
 </html>

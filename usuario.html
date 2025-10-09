@@ -1,312 +1,459 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seek - Usuário</title>
-    <link rel="stylesheet" href="css/usuario.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
-</head>
+    <link rel="stylesheet" href="css/usuario.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+  </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
-<script>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"
+  ></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    gtag('config', 'G-SLCTJL00KV');
-</script>
+    gtag("config", "G-SLCTJL00KV");
+  </script>
 
-<body id="todo">
-
+  <body id="todo">
     <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
-        <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg"
-                alt="símbolo da onu"></button>
+      <button
+        id="botaobarra"
+        onclick="ativarbarra()"
+        class="botaoativacaobarra"
+      >
+        <img src="img/barra/icon.svg" alt="símbolo da onu" />
+      </button>
     </div>
 
     <div id="barra" class="divbarradeacessibilidade">
-        <button onclick="desativarbarra()" class="botaoativacaobarra">
-            <img src="img/barra/icon.svg" alt="símbolo da onu" />
-        </button>
+      <button onclick="desativarbarra()" class="botaoativacaobarra">
+        <img src="img/barra/icon.svg" alt="símbolo da onu" />
+      </button>
 
-        <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
-            <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
-        </button>
+      <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
+        <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+      </button>
 
-        <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
-            <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
-        </button>
+      <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
+        <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+      </button>
 
-        <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
-            <img src="img/barra/luabarra.svg" alt="Lua" />
-        </button>
+      <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
+        <img src="img/barra/luabarra.svg" alt="Lua" />
+      </button>
 
-        <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
-            <img src="img/barra/solbarra.svg" alt="Sol" />
-        </button>
+      <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
+        <img src="img/barra/solbarra.svg" alt="Sol" />
+      </button>
 
-        <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
-            <img src="img/barra/iconvlibras.svg" alt="vlibras" />
-        </button>
+      <button
+        onclick="desativaeativavlibras()"
+        class="funcaoesbarradeacessibilidade"
+      >
+        <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+      </button>
 
-        <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
+      <img
+        id="logodafatecdabarradeacessibilidade"
+        src="img/Logofatec.svg"
+        alt="Logo da fatec"
+      />
     </div>
 
     <header class="inicio">
-        <button class="botaoMenu" id="botaoMenu">
-            <span class="linha1"></span>
-            <span class="linha2"></span>
-            <span class="linha3"></span>
+      <button class="botaoMenu" id="botaoMenu">
+        <span class="linha1"></span>
+        <span class="linha2"></span>
+        <span class="linha3"></span>
+      </button>
+      <div class="logosite">
+        <a class="logosite" href="index.html"
+          ><img src="img/logo.svg" alt="Logo Seek"
+        /></a>
+      </div>
+      <div class="userhover">
+        <button>
+          <img
+            id="img_useres"
+            onclick="abrirMenu()"
+            src="img/user2.svg"
+            alt="perfil menu"
+          />
         </button>
-        <div class="logosite">
-            <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek"></a>
+      </div>
+      <nav class="navsite">
+        <div id="headerexplurar">
+          <a href="index.html" class="nav-link ExpA">Explorar</a>
         </div>
-        <div class="userhover">
-            <button><img id="img_useres" onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu"></button>
+        <div id="headercursos">
+          <a href="cursos.html" class="nav-link CurA">Cursos</a>
         </div>
-        <nav class="navsite">
-            <div id="headerexplurar">
-                <a href="index.html" class="nav-link ExpA">Explorar</a>
-            </div>
-            <div id="headercursos">
-                <a href="cursos.html" class="nav-link CurA">Cursos</a>
-            </div>
-            <div id="headervagas">
-                <a href="vagas.html" class="nav-link VagA">Vagas</a>
-            </div>
-            <div class="sobrenoss">
-                <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
-            </div>
-        </nav>
-        <div class="pesquisasite">
-            <input type="text" placeholder="Pesquisar" class="Pesquisar">
-            <a href=""><img src="img/search2.svg" alt="Lupa"></a>
+        <div id="headervagas">
+          <a href="vagas.html" class="nav-link VagA">Vagas</a>
         </div>
-        <div id="usersite" class="usersite">
-            <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
-            <p id="nome_user"></p>
-            <button onclick="abrirMenu()">
-                <img id="img_user" src="img/user2.svg" alt="User" />
-            </button>
+        <div class="sobrenoss">
+          <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
         </div>
-        <nav class="hamburguer" id="menu">
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer nav-link" href="index.html" class="ExpA">Explorar</a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer nav-link" href="cursos.html" class="CurA">Cursos</a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer nav-link" href="vagas.html" class="VagA">Vagas</a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer nav-link" href="sobre.html" class="SobA">Sobre Nós</a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer" href="ajuda.html" class="SobA">Ajuda</a>
-            </div>
-            <div class="bordasuperior"></div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer " href="avisos.html" class="SobA">Avisos</a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer " href="avisos.html" class="SobA">Atualizações</a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer " href="sobre.html#contatosobre" class="SobA">Contato</a>
-            </div>
+      </nav>
+      <div class="pesquisasite">
+        <input type="text" placeholder="Pesquisar" class="Pesquisar" />
+        <a href=""><img src="img/search2.svg" alt="Lupa" /></a>
+      </div>
+      <div id="usersite" class="usersite">
+        <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
+        <p id="nome_user"></p>
+        <button onclick="abrirMenu()">
+          <img id="img_user" src="img/user2.svg" alt="User" />
+        </button>
+      </div>
+      <nav class="hamburguer" id="menu">
+        <div class="itemsdomenu">
+          <a
+            class="botoesmenuhamburguer nav-link"
+            href="index.html"
+            class="ExpA"
+            >Explorar</a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a
+            class="botoesmenuhamburguer nav-link"
+            href="cursos.html"
+            class="CurA"
+            >Cursos</a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a
+            class="botoesmenuhamburguer nav-link"
+            href="vagas.html"
+            class="VagA"
+            >Vagas</a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a
+            class="botoesmenuhamburguer nav-link"
+            href="sobre.html"
+            class="SobA"
+            >Sobre Nós</a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="ajuda.html" class="SobA"
+            >Ajuda</a
+          >
+        </div>
+        <div class="bordasuperior"></div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"
+            >Avisos</a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"
+            >Atualizações</a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a
+            class="botoesmenuhamburguer"
+            href="sobre.html#contatosobre"
+            class="SobA"
+            >Contato</a
+          >
+        </div>
 
-            <div class="itemsdomenu">
-                <select name="" id="">
-                    <option value="pt">Português</option>
-                    <option value="eng">English</option>
-                    <option value="es">Español</option>
-                    <option value="it">Italiano</option>
-                    <option value="fr">Français</option>
-                </select>
-            </div>
-
-            <div class="direitosautoraismenu">
-                <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
-            </div>
-        </nav>
-        <div id="menuperfil" class="menuperfil">
-            <div id="divmeuperfil" class="divmenuperfil">
-                <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
-            </div>
-            <div id="divconfiguracoes" class="divmenuperfil">
-                <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
-            </div>
-            <div class="botaomodoescuro">
-                <label for=""><img src="img/lua.png" alt="Lua" /></label>
-                <div class="checkbox-con">
-                    <input onclick="MudarModos()" id="checkbox" type="checkbox" />
-                </div>
-                <label for=""><img src="img/sol.png" alt="Sol" /></label>
-            </div>
-            <div id="diventrarsair" class="divmenuperfil">
-                <button id="sairdomenuperfil" class="sairP"><a href="login.html"><span
-                            class="LoginPerfil">Login</span></a></button>
-            </div>
+        <div class="itemsdomenu">
+          <select name="" id="">
+            <option value="pt">Português</option>
+            <option value="eng">English</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Français</option>
+          </select>
         </div>
+
+        <div class="direitosautoraismenu">
+          <p class="DirF">
+            Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+          </p>
+        </div>
+      </nav>
+      <div id="menuperfil" class="menuperfil">
+        <div id="divmeuperfil" class="divmenuperfil">
+          <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
+        </div>
+        <div id="divconfiguracoes" class="divmenuperfil">
+          <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
+        </div>
+        <div class="botaomodoescuro">
+          <label for=""><img src="img/lua.png" alt="Lua" /></label>
+          <div class="checkbox-con">
+            <input onclick="MudarModos()" id="checkbox" type="checkbox" />
+          </div>
+          <label for=""><img src="img/sol.png" alt="Sol" /></label>
+        </div>
+        <div id="diventrarsair" class="divmenuperfil">
+          <button id="sairdomenuperfil" class="sairP">
+            <a href="login.html"><span class="LoginPerfil">Login</span></a>
+          </button>
+        </div>
+      </div>
     </header>
 
     <section class="banneruser">
-        <a class="voltarbutton" href="index.html"><img src="img/arrow-top.svg" alt="Seta para cima"></a>
-        <form id="formImagemBannerPerfil">
-            <label for="inputImagembannerPerfil" class="editarIconButton" id="editarbannerperfil" style="display: none;"><svg viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M6.6 76.5169C4.785 76.5169 3.23125 75.8714 1.93875 74.5805C0.64625 73.2896 0 71.7378 0 69.9251V23.7828C0 21.9701 0.64625 20.4183 1.93875 19.1274C3.23125 17.8365 4.785 17.191 6.6 17.191H36.0525L29.4525 23.7828H6.6V69.9251H52.8V47.0188L59.4 40.427V69.9251C59.4 71.7378 58.7538 73.2896 57.4613 74.5805C56.1688 75.8714 54.615 76.5169 52.8 76.5169H6.6ZM30.3169 46.2247V32.2172L60.5944 1.97752C61.2544 1.31834 61.9969 0.823962 62.8219 0.494374C63.6469 0.164786 64.4719 -7.62939e-06 65.2969 -7.62939e-06C66.1769 -7.62939e-06 67.0156 0.164786 67.8131 0.494374C68.6106 0.823962 69.3394 1.31834 69.9994 1.97752L74.6194 6.67415C75.2244 7.33333 75.6919 8.06117 76.0219 8.85767C76.3519 9.65417 76.5169 10.4644 76.5169 11.2884C76.5169 12.1124 76.3656 12.9226 76.0631 13.7191C75.7606 14.5156 75.2794 15.2434 74.6194 15.9026L44.3419 46.2247H30.3169ZM36.9169 39.6329H41.5369L60.6769 20.5168L58.3669 18.2097L55.9744 15.9026L36.9169 34.9363V39.6329Z"
-                        fill="#2B63F0" />
-                    <path d="M50.16 65.5169H10.8267L20.66 52.1836L28.035 62.1836L37.8683 48.8502L50.16 65.5169Z"
-                        fill="#2B63F0" />
-                </svg>
-            </label>
-            <input type="file" id="inputImagembannerPerfil" accept="image/*" style="display: none;">
-        </form>
-        <img id="imagemdefundodoperfil" src="img/bannerusuario.png" alt="banner do usuário">
-        <div class="seguirCursosProjetos">
-
-            <!-- <div class="seguirUser">
+      <a class="voltarbutton" href="index.html"
+        ><img src="img/arrow-top.svg" alt="Seta para cima"
+      /></a>
+      <form id="formImagemBannerPerfil">
+        <label
+          for="inputImagembannerPerfil"
+          class="editarIconButton"
+          id="editarbannerperfil"
+          style="display: none"
+          ><svg
+            viewBox="0 0 77 77"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.6 76.5169C4.785 76.5169 3.23125 75.8714 1.93875 74.5805C0.64625 73.2896 0 71.7378 0 69.9251V23.7828C0 21.9701 0.64625 20.4183 1.93875 19.1274C3.23125 17.8365 4.785 17.191 6.6 17.191H36.0525L29.4525 23.7828H6.6V69.9251H52.8V47.0188L59.4 40.427V69.9251C59.4 71.7378 58.7538 73.2896 57.4613 74.5805C56.1688 75.8714 54.615 76.5169 52.8 76.5169H6.6ZM30.3169 46.2247V32.2172L60.5944 1.97752C61.2544 1.31834 61.9969 0.823962 62.8219 0.494374C63.6469 0.164786 64.4719 -7.62939e-06 65.2969 -7.62939e-06C66.1769 -7.62939e-06 67.0156 0.164786 67.8131 0.494374C68.6106 0.823962 69.3394 1.31834 69.9994 1.97752L74.6194 6.67415C75.2244 7.33333 75.6919 8.06117 76.0219 8.85767C76.3519 9.65417 76.5169 10.4644 76.5169 11.2884C76.5169 12.1124 76.3656 12.9226 76.0631 13.7191C75.7606 14.5156 75.2794 15.2434 74.6194 15.9026L44.3419 46.2247H30.3169ZM36.9169 39.6329H41.5369L60.6769 20.5168L58.3669 18.2097L55.9744 15.9026L36.9169 34.9363V39.6329Z"
+              fill="#2B63F0"
+            />
+            <path
+              d="M50.16 65.5169H10.8267L20.66 52.1836L28.035 62.1836L37.8683 48.8502L50.16 65.5169Z"
+              fill="#2B63F0"
+            />
+          </svg>
+        </label>
+        <input
+          type="file"
+          id="inputImagembannerPerfil"
+          accept="image/*"
+          style="display: none"
+        />
+      </form>
+      <img
+        id="imagemdefundodoperfil"
+        src="img/bannerusuario.png"
+        alt="banner do usuário"
+      />
+      <div class="seguirCursosProjetos">
+        <!-- <div class="seguirUser">
                 <button class="SegUso">Seguir</button>
             </div> -->
-            <div class="cursosProjetos">
-                <button class="botaoSelecionado" id="projetosUser1"> <span class="ProUso">Projetos</span></button>
-                <button id="cursosUser1" class="CurA">Cursos</button>
-            </div>
+        <div class="cursosProjetos">
+          <button class="botaoSelecionado" id="projetosUser1">
+            <span class="ProUso">Projetos</span>
+          </button>
+          <button id="cursosUser1" class="CurA">Cursos</button>
         </div>
+      </div>
     </section>
 
     <main class="mainUser">
-
-        <div id="caixadenotificacaofazerlogin" class="caixadenotificacaofazerlogin">
-            <h2>Não foi possível continuar</h2>
-            <p>Você precisa estar logado para acessar esta página.</p>
-            <div class="actions">
-                <span onclick="fecharnotificacao()" id="cancelarnotificacaofazerlogin"
-                    class="btn-cancel">Cancelar</span>
-                <span id="botaofazerloginconfirmar" class="btn-confirm"><a href="login.html">fazer login</a></span>
-            </div>
+      <div
+        id="caixadenotificacaofazerlogin"
+        class="caixadenotificacaofazerlogin"
+      >
+        <h2>Não foi possível continuar</h2>
+        <p>Você precisa estar logado para acessar esta página.</p>
+        <div class="actions">
+          <span
+            onclick="fecharnotificacao()"
+            id="cancelarnotificacaofazerlogin"
+            class="btn-cancel"
+            >Cancelar</span
+          >
+          <span id="botaofazerloginconfirmar" class="btn-confirm"
+            ><a href="login.html">fazer login</a></span
+          >
         </div>
+      </div>
 
-        <div id="caixadenotificacaomodoeditor" class="caixadenotificacaomodoeditor">
-            <h2>Modo de edição ativo</h2>
-            <p>Enquanto você estiver neste modo, poderá clicar nos ícones de lápis e editar suas informações.</p>
-        </div>
+      <div
+        id="caixadenotificacaomodoeditor"
+        class="caixadenotificacaomodoeditor"
+      >
+        <h2>Modo de edição ativo</h2>
+        <p>
+          Enquanto você estiver neste modo, poderá clicar nos ícones de lápis e
+          editar suas informações.
+        </p>
+      </div>
 
-
-
-        <section class="informacoesperfil" id="informacoesperfil">
-            <div class="informacoesperfiltudo">
-                <div id="fotodeperfiluser" class="imgdousereNome">
-                    <img id="imgdeperfildouser" src="img/iconeperfil.svg" alt="logo do usuário">
-                    <form id="formImagemPerfilUser">
-                        <label for="inputImagemPerfilUser" class="editarIconButton" style="display: none;" id="editarfotodeperfl"><svg viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M6.6 76.5169C4.785 76.5169 3.23125 75.8714 1.93875 74.5805C0.64625 73.2896 0 71.7378 0 69.9251V23.7828C0 21.9701 0.64625 20.4183 1.93875 19.1274C3.23125 17.8365 4.785 17.191 6.6 17.191H36.0525L29.4525 23.7828H6.6V69.9251H52.8V47.0188L59.4 40.427V69.9251C59.4 71.7378 58.7538 73.2896 57.4613 74.5805C56.1688 75.8714 54.615 76.5169 52.8 76.5169H6.6ZM30.3169 46.2247V32.2172L60.5944 1.97752C61.2544 1.31834 61.9969 0.823962 62.8219 0.494374C63.6469 0.164786 64.4719 -7.62939e-06 65.2969 -7.62939e-06C66.1769 -7.62939e-06 67.0156 0.164786 67.8131 0.494374C68.6106 0.823962 69.3394 1.31834 69.9994 1.97752L74.6194 6.67415C75.2244 7.33333 75.6919 8.06117 76.0219 8.85767C76.3519 9.65417 76.5169 10.4644 76.5169 11.2884C76.5169 12.1124 76.3656 12.9226 76.0631 13.7191C75.7606 14.5156 75.2794 15.2434 74.6194 15.9026L44.3419 46.2247H30.3169ZM36.9169 39.6329H41.5369L60.6769 20.5168L58.3669 18.2097L55.9744 15.9026L36.9169 34.9363V39.6329Z"
-                        fill="#2B63F0" />
-                    <path d="M50.16 65.5169H10.8267L20.66 52.1836L28.035 62.1836L37.8683 48.8502L50.16 65.5169Z"
-                        fill="#2B63F0" />
+      <section class="informacoesperfil" id="informacoesperfil">
+        <div class="informacoesperfiltudo">
+          <div id="fotodeperfiluser" class="imgdousereNome">
+            <img
+              id="imgdeperfildouser"
+              src="img/iconeperfil.svg"
+              alt="logo do usuário"
+            />
+            <form id="formImagemPerfilUser">
+              <label
+                for="inputImagemPerfilUser"
+                class="editarIconButton"
+                style="display: none"
+                id="editarfotodeperfl"
+                ><svg
+                  viewBox="0 0 77 77"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.6 76.5169C4.785 76.5169 3.23125 75.8714 1.93875 74.5805C0.64625 73.2896 0 71.7378 0 69.9251V23.7828C0 21.9701 0.64625 20.4183 1.93875 19.1274C3.23125 17.8365 4.785 17.191 6.6 17.191H36.0525L29.4525 23.7828H6.6V69.9251H52.8V47.0188L59.4 40.427V69.9251C59.4 71.7378 58.7538 73.2896 57.4613 74.5805C56.1688 75.8714 54.615 76.5169 52.8 76.5169H6.6ZM30.3169 46.2247V32.2172L60.5944 1.97752C61.2544 1.31834 61.9969 0.823962 62.8219 0.494374C63.6469 0.164786 64.4719 -7.62939e-06 65.2969 -7.62939e-06C66.1769 -7.62939e-06 67.0156 0.164786 67.8131 0.494374C68.6106 0.823962 69.3394 1.31834 69.9994 1.97752L74.6194 6.67415C75.2244 7.33333 75.6919 8.06117 76.0219 8.85767C76.3519 9.65417 76.5169 10.4644 76.5169 11.2884C76.5169 12.1124 76.3656 12.9226 76.0631 13.7191C75.7606 14.5156 75.2794 15.2434 74.6194 15.9026L44.3419 46.2247H30.3169ZM36.9169 39.6329H41.5369L60.6769 20.5168L58.3669 18.2097L55.9744 15.9026L36.9169 34.9363V39.6329Z"
+                    fill="#2B63F0"
+                  />
+                  <path
+                    d="M50.16 65.5169H10.8267L20.66 52.1836L28.035 62.1836L37.8683 48.8502L50.16 65.5169Z"
+                    fill="#2B63F0"
+                  />
                 </svg>
-            </label>
-                        <input type="file" id="inputImagemPerfilUser" accept="image/*" style="display: none;">
-                    </form>
-                </div>
+              </label>
+              <input
+                type="file"
+                id="inputImagemPerfilUser"
+                accept="image/*"
+                style="display: none"
+              />
+            </form>
+          </div>
 
-                <div class="dadosdouser">
-                    <div id="infoUserContratar" class="infoUserContratar">
-                        <h1 id="nomedousuario">Nome do Usuário</h1>
-                        <p id="nomecompleto">@usuario</p>
-                        <p class="cidadeepais"> <span class="UsoCP">cidade e país</span></p>
-                        <div class="seguirUser2">
-                            <button class="botaoSelecionadoUser" id="editarUserPerfil"> <span class="UsoE">Editar
-                                </span></button>
-                                <script>
-                                    document.getElementById('editarUserPerfil').addEventListener('click', function() {
+          <div class="dadosdouser">
+            <div id="infoUserContratar" class="infoUserContratar">
+              <h1 id="nomedousuario">Nome do Usuário</h1>
+              <p id="nomecompleto">@usuario</p>
+              <p class="cidadeepais">
+                <span class="UsoCP">cidade e país</span>
+              </p>
+              <div class="seguirUser2">
+                <button class="botaoSelecionadoUser" id="editarUserPerfil">
+                  <span class="UsoE">Editar </span>
+                </button>
+                <script>
+                  document
+                    .getElementById("editarUserPerfil")
+                    .addEventListener("click", function () {
+                      let botao1 = document.getElementById("editarfotodeperfl");
+                      let botao2 =
+                        document.getElementById("editarbannerperfil");
+                      let botaoeditar =
+                        document.getElementById("editarUserPerfil");
 
-                                        let botao1 = document.getElementById('editarfotodeperfl');
-                                        let botao2 = document.getElementById('editarbannerperfil');
-                                        let botaoeditar = document.getElementById('editarUserPerfil');
-
-                                        if (botao1.style.display === "none" && botao2.style.display === "none") {
-                                            botao1.style.display = "block";
-                                            botao2.style.display = "block";
-                                            botaoeditar.textContent = "Modo editor ativo";
-                                            document.getElementById("caixadenotificacaomodoeditor").style.top = "0rem";
-                                        } else {
-                                            botao1.style.display = "none";
-                                            botao2.style.display = "none";
-                                            botaoeditar.textContent = "Editar";
-                                            document.getElementById("caixadenotificacaomodoeditor").style.top = "-15rem";
-                                        }
-
-                                    });
-                                </script>
-                        </div>
-                        <button id="trocarUserPerfil"> <span class="UsoTU">Trocar de Usuário</span></button>
-                    </div>
-
-                    <div class="infoProjetosCursos">
-                        <div class="opccaoSelecionada" id="InfoUser"><button> Info </button></div>
-                        <div><button id="ProjetosUser"> <span class="UsoP">Projetos</span></button></div>
-                        <div><button id="CursosUser"><span class="CurA">Cursos </span></button></div>
-                    </div>
-
-                    <div id="desaparecerInfoUser">
-                        <div class="redessociais">
-                            <a id="twitter" href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"><img
-                                    src="img/fotos/play2.svg" alt="twitter">
-                                <p class="nomeUseuario">@usuario</p>
-                            </a>
-                            <a id="instagram" href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"><img
-                                    src="img/fotos/insta.svg" alt="instagram">
-                                <p class="nomeUseuario">@usuario</p>
-                            </a>
-                            <a class="tirarBorderB"
-                                href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"><img
-                                    src="img/fotos/linkedin.svg" alt="linkedin">
-                                <p class="nomeUseuario">@usuario</p>
-                            </a>
-                        </div>
-
-                        <div class="bio">
-                            <div class="bioUserProjetos">
-                                <p class="UsoPF">Projetos feitos</p>
-                                <p id="quantidadedepost">7</p>
-                            </div>
-                            <div class="bioUserClassificacao">
-                                <p class="UsoC">Classificação</p>
-                                <img src="img/fotos/medalha.svg" alt="Logo classificação">
-                            </div>
-                            <div class="bioUserSobre">
-                                <p class="UsoSU">Sobre o Usuário</p>
-                                <p id="descricaouser" class="sobreUser">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Dicta
-                                    debitis
-                                    deleniti nostrum nesciunt recusandae doloremque quo quos perferendis, minus,
-                                    corporis
-                                    molestiae illo ad aspernatur deserunt, praesentium ex nihil impedit dolor!</p>
-                            </div>
-                            <div class="bioUserCertificados">
-                                <p class="userCertificados"> <span class="UsoCE">Certificados</span></p>
-                                <p>Lorem ipsum dolor - 2023</p>
-                            </div>
-                        </div>
-
-                        <div class="bloquearUser">
-                            <button><span class="UsoBD">Bloquear/Denunciar</span></button>
-                        </div>
-                    </div>
-                </div>
+                      if (
+                        botao1.style.display === "none" &&
+                        botao2.style.display === "none"
+                      ) {
+                        botao1.style.display = "block";
+                        botao2.style.display = "block";
+                        botaoeditar.textContent = "Modo editor ativo";
+                        document.getElementById(
+                          "caixadenotificacaomodoeditor"
+                        ).style.top = "0rem";
+                      } else {
+                        botao1.style.display = "none";
+                        botao2.style.display = "none";
+                        botaoeditar.textContent = "Editar";
+                        document.getElementById(
+                          "caixadenotificacaomodoeditor"
+                        ).style.top = "-15rem";
+                      }
+                    });
+                </script>
+              </div>
+              <button id="trocarUserPerfil">
+                <span class="UsoTU">Trocar de Usuário</span>
+              </button>
             </div>
-        </section>
 
-        <section id="mainImagensUser" class="mainImagensUser">
-            <!-- <div class="buttonUser"><a href="adicionarProjeto.html" target="_blank"><button><img src="img/lupa+.svg"
+            <div class="infoProjetosCursos">
+              <div class="opccaoSelecionada" id="InfoUser">
+                <button>Info</button>
+              </div>
+              <div>
+                <button id="ProjetosUser">
+                  <span class="UsoP">Projetos</span>
+                </button>
+              </div>
+              <div>
+                <button id="CursosUser">
+                  <span class="CurA">Cursos </span>
+                </button>
+              </div>
+            </div>
+
+            <div id="desaparecerInfoUser">
+              <div class="redessociais">
+                <a
+                  id="twitter"
+                  href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"
+                  ><img src="img/fotos/play2.svg" alt="twitter" />
+                  <p class="nomeUseuario">@usuario</p>
+                </a>
+                <a
+                  id="instagram"
+                  href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"
+                  ><img src="img/fotos/insta.svg" alt="instagram" />
+                  <p class="nomeUseuario">@usuario</p>
+                </a>
+                <a
+                  class="tirarBorderB"
+                  href="https://www.instagram.com/seek.oficial?igsh=ZnZhNmJicWF6OWhn"
+                  ><img src="img/fotos/linkedin.svg" alt="linkedin" />
+                  <p class="nomeUseuario">@usuario</p>
+                </a>
+              </div>
+
+              <div class="bio">
+                <div class="bioUserProjetos">
+                  <p class="UsoPF">Projetos feitos</p>
+                  <p id="quantidadedepost">7</p>
+                </div>
+                <div class="bioUserClassificacao">
+                  <p class="UsoC">Classificação</p>
+                  <img src="img/fotos/medalha.svg" alt="Logo classificação" />
+                </div>
+                <div class="bioUserSobre">
+                  <p class="UsoSU">Sobre o Usuário</p>
+                  <p id="descricaouser" class="sobreUser">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Dicta debitis deleniti nostrum nesciunt recusandae
+                    doloremque quo quos perferendis, minus, corporis molestiae
+                    illo ad aspernatur deserunt, praesentium ex nihil impedit
+                    dolor!
+                  </p>
+                </div>
+                <div class="bioUserCertificados">
+                  <p class="userCertificados">
+                    <span class="UsoCE">Certificados</span>
+                  </p>
+                  <p>Lorem ipsum dolor - 2023</p>
+                </div>
+              </div>
+
+              <div class="bloquearUser">
+                <button><span class="UsoBD">Bloquear/Denunciar</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mainImagensUser" class="mainImagensUser">
+        <!-- <div class="buttonUser"><a href="adicionarProjeto.html" target="_blank"><button><img src="img/lupa+.svg"
                             alt="">
                         <p>Adicionar Projeto</p>
                     </button></a></div>
@@ -318,163 +465,181 @@
             <div class="imgsUser"><img src="img/img_port/5mini.jpg" alt="imagem 6"></div>
             <div class="imgsUser"><img src="img/img_port/8mini.jpg" alt="imagem 7"></div>
             <div class="imgsUser"><img src="img/img_port/7mini.jpg" alt="imagem 8"></div> -->
-        </section>
+      </section>
 
-        <section class="mainCursosUser" id="mainCursosUser">
-            <div class="cursosDoUser">
-                <h2 class="NomC">Cursos de design</h2>
-                <div class="imgDescPreco">
-                    <img src="img/imagemtestecurso.png" alt="Imagem do curso">
-                    <div class="descPreco">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odio vero tempora
-                            doloribus et omnis enim aut natus exercitationem! Facere, sint ipsa. Corporis doloremque
-                            nesciunt asperiores voluptas soluta similique?</p>
-                        <div class="precoCursoUser">
-                            <h3 class="precoC">R$23,00/mês</h3>
-                            <h4>40<span class="UsoH">horas</span></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="pessoasLike">
-                    <div class="likePessoas">
-                        <div class="likeepessoas1">
-                            <div class="likeUser"><img src="img/like.svg" alt="likes do curso">
-                                <p>89%</p>
-                            </div>
-                            <div class="pessoasUser"><img src="img/circle.svg" alt="pessoas do curso">
-                                <p>1000</p>
-                            </div>
-                        </div>
-                        <img src="img/heart.svg" alt="">
-                    </div>
-                </div>
+      <section class="mainCursosUser" id="mainCursosUser">
+        <div class="cursosDoUser">
+          <h2 class="NomC">Cursos de design</h2>
+          <div class="imgDescPreco">
+            <img src="img/imagemtestecurso.png" alt="Imagem do curso" />
+            <div class="descPreco">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                quaerat odio vero tempora doloribus et omnis enim aut natus
+                exercitationem! Facere, sint ipsa. Corporis doloremque nesciunt
+                asperiores voluptas soluta similique?
+              </p>
+              <div class="precoCursoUser">
+                <h3 class="precoC">R$23,00/mês</h3>
+                <h4>40<span class="UsoH">horas</span></h4>
+              </div>
             </div>
-
-            <div class="cursosDoUser">
-                <h2 class="NomC">Cursos de design</h2>
-                <div class="imgDescPreco">
-                    <img src="img/imagemtestecurso.png" alt="Imagem do curso">
-                    <div class="descPreco">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odio vero tempora
-                            doloribus et omnis enim aut natus exercitationem! Facere, sint ipsa. Corporis doloremque
-                            nesciunt asperiores voluptas soluta similique?</p>
-                        <div class="precoCursoUser">
-                            <h3 class="precoC">R$23,00/mês</h3>
-                            <h4>48<span class="UsoH">horas</span></h4>
-                        </div>
-                    </div>
+          </div>
+          <div class="pessoasLike">
+            <div class="likePessoas">
+              <div class="likeepessoas1">
+                <div class="likeUser">
+                  <img src="img/like.svg" alt="likes do curso" />
+                  <p>89%</p>
                 </div>
-                <div class="pessoasLike">
-                    <div class="likePessoas">
-                        <div class="likeepessoas1">
-                            <div class="likeUser"><img src="img/like.svg" alt="likes do curso">
-                                <p>89%</p>
-                            </div>
-                            <div class="pessoasUser"><img src="img/circle.svg" alt="pessoas do curso">
-                                <p>1000</p>
-                            </div>
-                        </div>
-                        <img src="img/heart.svg" alt="">
-                    </div>
+                <div class="pessoasUser">
+                  <img src="img/circle.svg" alt="pessoas do curso" />
+                  <p>1000</p>
                 </div>
+              </div>
+              <img src="img/heart.svg" alt="" />
             </div>
+          </div>
+        </div>
 
-            <div class="cursosDoUser">
-                <h2 class="NomC">Cursos de design</h2>
-                <div class="imgDescPreco">
-                    <img src="img/imagemtestecurso.png" alt="Imagem do curso">
-                    <div class="descPreco">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quaerat odio vero tempora
-                            doloribus et omnis enim aut natus exercitationem! Facere, sint ipsa. Corporis doloremque
-                            nesciunt asperiores voluptas soluta similique?</p>
-                        <div class="precoCursoUser">
-                            <h3 class="precoC">R$23,00/mês</h3>
-                            <h4>48<span class="UsoH">horas</span></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="pessoasLike">
-                    <div class="likePessoas">
-                        <div class="likeepessoas1">
-                            <div class="likeUser"><img src="img/like.svg" alt="likes do curso">
-                                <p>89%</p>
-                            </div>
-                            <div class="pessoasUser"><img src="img/circle.svg" alt="pessoas do curso">
-                                <p>1000</p>
-                            </div>
-                        </div>
-                        <img src="img/heart.svg" alt="">
-                    </div>
-                </div>
+        <div class="cursosDoUser">
+          <h2 class="NomC">Cursos de design</h2>
+          <div class="imgDescPreco">
+            <img src="img/imagemtestecurso.png" alt="Imagem do curso" />
+            <div class="descPreco">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                quaerat odio vero tempora doloribus et omnis enim aut natus
+                exercitationem! Facere, sint ipsa. Corporis doloremque nesciunt
+                asperiores voluptas soluta similique?
+              </p>
+              <div class="precoCursoUser">
+                <h3 class="precoC">R$23,00/mês</h3>
+                <h4>48<span class="UsoH">horas</span></h4>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="pessoasLike">
+            <div class="likePessoas">
+              <div class="likeepessoas1">
+                <div class="likeUser">
+                  <img src="img/like.svg" alt="likes do curso" />
+                  <p>89%</p>
+                </div>
+                <div class="pessoasUser">
+                  <img src="img/circle.svg" alt="pessoas do curso" />
+                  <p>1000</p>
+                </div>
+              </div>
+              <img src="img/heart.svg" alt="" />
+            </div>
+          </div>
+        </div>
 
-
+        <div class="cursosDoUser">
+          <h2 class="NomC">Cursos de design</h2>
+          <div class="imgDescPreco">
+            <img src="img/imagemtestecurso.png" alt="Imagem do curso" />
+            <div class="descPreco">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                quaerat odio vero tempora doloribus et omnis enim aut natus
+                exercitationem! Facere, sint ipsa. Corporis doloremque nesciunt
+                asperiores voluptas soluta similique?
+              </p>
+              <div class="precoCursoUser">
+                <h3 class="precoC">R$23,00/mês</h3>
+                <h4>48<span class="UsoH">horas</span></h4>
+              </div>
+            </div>
+          </div>
+          <div class="pessoasLike">
+            <div class="likePessoas">
+              <div class="likeepessoas1">
+                <div class="likeUser">
+                  <img src="img/like.svg" alt="likes do curso" />
+                  <p>89%</p>
+                </div>
+                <div class="pessoasUser">
+                  <img src="img/circle.svg" alt="pessoas do curso" />
+                  <p>1000</p>
+                </div>
+              </div>
+              <img src="img/heart.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <button class="btn-scroll-top" arial-label="Voltar ao topo">
-        <img src="img/arrow-top.svg" alt="Voltar ao topo" width="50" height="50" />
+      <img
+        src="img/arrow-top.svg"
+        alt="Voltar ao topo"
+        width="50"
+        height="50"
+      />
     </button>
 
     <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
         </div>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+      </script>
     </div>
 
     <footer>
-        <div class="linksfooter">
-            <div class="infofooter">
-                <a href="ajuda.html" class="AjuF">Ajuda</a>
-                <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
-            </div>
-
-            <div class="infofooter">
-                <a href="sobre.html" class="SobA">Sobre Nós</a>
-                <a href="sobre.html#contatosobre" class="ConT">Contato</a>
-            </div>
-            <div class="infofooter">
-                <a href="avisos.html" class="AviF">Avisos</a>
-
-                <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
-                    <option value="pt">Português</option>
-                    <option value="eng">English</option>
-                    <option value="es">Español</option>
-                    <option value="it">Italiano</option>
-                    <option value="fr">Français</option>
-                </select>
-            </div>
-
-            <div class="infofooter">
-                <img src="img/logoSeekk 3@2x.png" alt="Logo Seek" />
-            </div>
+      <div class="linksfooter">
+        <div class="infofooter">
+          <a href="ajuda.html" class="AjuF">Ajuda</a>
+          <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
         </div>
 
-        <div class="direitosautorais">
-            <p class="DirF">
-                Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
-            </p>
+        <div class="infofooter">
+          <a href="sobre.html" class="SobA">Sobre Nós</a>
+          <a href="sobre.html#contatosobre" class="ConT">Contato</a>
         </div>
+        <div class="infofooter">
+          <a href="avisos.html" class="AviF">Avisos</a>
+
+          <select
+            aria-label="Idioma"
+            name="Idioma"
+            id="idiomaSelect"
+            onchange="TrocaLinguagem(this.value)"
+          >
+            <option value="pt">Português</option>
+            <option value="eng">English</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+
+        <div class="infofooter">
+          <img src="img/logoSeekk 3@2x.png" alt="Logo Seek" />
+        </div>
+      </div>
+
+      <div class="direitosautorais">
+        <p class="DirF">
+          Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+        </p>
+      </div>
     </footer>
 
-    <script src="script/caua.js"></script>
     <script src="script/lfy.js"></script>
-    <script src="script/cake2.js"></script>
-    <script src="script/cake.js"></script>
     <script src="usuario.js"></script>
     <script src="script/acessibilidade.js"></script>
     <script src="script/user_logado.js"></script>
     <script src="script/script.js"></script>
-
-
-
-</body>
-
+    <script src="script/tema.js"></script>
+    <script src="script/traducao.js"></script>
+  </body>
 </html>

@@ -1,561 +1,809 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seek-Configurações</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/config.css">
-    <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/config.css" />
+    <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+  </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-SLCTJL00KV');
-</script>
+    gtag("config", "G-SLCTJL00KV");
+  </script>
 
-<body id="todo">
+  <body id="todo">
+    <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
+      <button
+        id="botaobarra"
+        onclick="ativarbarra()"
+        class="botaoativacaobarra"
+      >
+        <img src="img/barra/icon.svg" alt="símbolo da onu" />
+      </button>
+    </div>
 
-  <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
-    <button
-      id="botaobarra"
-      onclick="ativarbarra()"
-      class="botaoativacaobarra"
-    >
-      <img src="img/barra/icon.svg" alt="símbolo da onu" />
-    </button>
-  </div>
+    <div id="barra" class="divbarradeacessibilidade">
+      <button onclick="desativarbarra()" class="botaoativacaobarra">
+        <img src="img/barra/icon.svg" alt="símbolo da onu" />
+      </button>
 
-  <div id="barra" class="divbarradeacessibilidade">
-    <button onclick="desativarbarra()" class="botaoativacaobarra">
-      <img src="img/barra/icon.svg" alt="símbolo da onu" />
-    </button>
+      <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
+        <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+      </button>
 
-    <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
-      <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
-    </button>
-
-    <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
-      <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
-    </button>
+      <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
+        <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+      </button>
 
       <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
-      <img src="img/barra/luabarra.svg" alt="Lua" />
-    </button>
+        <img src="img/barra/luabarra.svg" alt="Lua" />
+      </button>
 
       <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
-      <img src="img/barra/solbarra.svg" alt="Sol" />
-    </button>
+        <img src="img/barra/solbarra.svg" alt="Sol" />
+      </button>
 
-    <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
-      <img src="img/barra/iconvlibras.svg" alt="vlibras" />
-    </button>
+      <button
+        onclick="desativaeativavlibras()"
+        class="funcaoesbarradeacessibilidade"
+      >
+        <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+      </button>
 
-    <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
-  </div>
-
-<header class="inicio">
-  <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
-    <span class="linha1"></span>
-    <span class="linha2"></span>
-    <span class="linha3"></span>
-  </button>
-  <div class="logosite">
-    <a class="logosite" href="index.html"
-      ><img src="img/logo.svg" alt="Logo Seek"
-    /></a>
-  </div>
-  <div class="userhover">
-    <button>
-      <img id="img_useres" onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu" />
-    </button>
-  </div>
-  <nav class="navsite">
-    <div id="headerexplurar" class="navSelecionado">
-      <a href="index.html" class="nav-link ExpA">Explorar</a>
-    </div>
-    <div id="headercursos">
-      <a href="cursos.html" class="nav-link CurA">Cursos</a>
-    </div>
-    <div id="headervagas">
-      <a href="vagas.html" class="nav-link VagA">Vagas</a>
-    </div>
-    <div class="sobrenoss">
-      <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
-    </div>
-  </nav>
-  <div class="pesquisasite">
-    <input type="text" placeholder="Pesquisar" class="Pesquisar" />
-    <a href=""><img src="img/search2.svg" alt="Lupa" /></a>
-  </div>
-  <div id="usersite" class="usersite">
-    <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
-     <p id="nome_user"></p>
-    <button onclick="abrirMenu()">
-      <img id="img_user" src="img/user2.svg" alt="User" />
-    </button>
-  </div>
-  <nav class="hamburguer" id="menu">
-    <div class="itemsdomenu">
-      <a class="botoesmenuhamburguer nav-link" href="index.html">
-        <span class="ExpA">Explorar </span></a
-      >
-    </div>
-    <div class="itemsdomenu">
-      <a class="botoesmenuhamburguer nav-link" href="cursos.html">
-        <span class="CurA">Cursos </span></a
-      >
-    </div>
-    <div class="itemsdomenu">
-      <a class="botoesmenuhamburguer nav-link" href="vagas.html">
-        <span class="VagA">Vagas</span></a
-      >
-    </div>
-    <div class="itemsdomenu">
-      <a class="botoesmenuhamburguer nav-link" href="sobre.html"
-        ><span class="SobA">Sobre Nós</span></a
-      >
-    </div>
-    <div class="itemsdomenu">
-      <a class="botoesmenuhamburguer" href="ajuda.html">
-        <span class="AjuF">Ajuda</span>
-      </a>
-    </div>
-    <div class="bordasuperior"></div>
-    <div class="itemsdomenu">
-      <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"
-        ><span class="AviF">Avisos</span></a
-      >
-    </div>
-    <div class="itemsdomenu">
-      <a class="botoesmenuhamburguer" href="avisos.html">
-        <span class="AtuF">Atualizações </span></a
-      >
-    </div>
-    <div class="itemsdomenu">
-      <a class="botoesmenuhamburguer" href="sobre.html#contatosobre">
-        <span class="Conf">Contato </span></a
-      >
+      <img
+        id="logodafatecdabarradeacessibilidade"
+        src="img/Logofatec.svg"
+        alt="Logo da fatec"
+      />
     </div>
 
-    <div class="itemsdomenu">
-      <select
-      aria-label="Idioma"
-        name="Idioma"
-        id="idiomaSelect"
-        onchange="TrocaLinguagem(this.value)"
+    <header class="inicio">
+      <button
+        aria-label="botão menu de hamburguer"
+        class="botaoMenu"
+        id="botaoMenu"
       >
-        <option value="pt">Português</option>
-        <option value="eng">English</option>
-        <option value="es">Español</option>
-        <option value="it">Italiano</option>
-        <option value="fr">Français</option>
-      </select>
-    </div>
-    <div class="bordasuperior"></div>
-
-    <div class="divredessociais">
-      <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"><img src="img/Linkedin.svg" alt="Logo Linkedin" /></a>
-      <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
-      <a href="https://www.instagram.com/seek.oficial/"><img src="img/instagram.svg" alt="Logo instagram" /></a>
-    </div>
-    <div class="bordasuperior"></div>
-
-    <div class="direitosautoraismenu">
-      <p class="DirF">
-        Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
-      </p>
-    </div>
-  </nav>
-  <div id="menuperfil" class="menuperfil">
-    <div id="divmeuperfil" class="divmenuperfil">
-      <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
-    </div>
-    <div id="divconfiguracoes" class="divmenuperfil">
-      <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
-    </div>
-    <div class="botaomodoescuro">
-      <label for=""><img src="img/lua.png" alt="Lua" /></label>
-      <div class="checkbox-con">
-        <input  onclick="MudarModos()" id="checkbox" type="checkbox"/>
+        <span class="linha1"></span>
+        <span class="linha2"></span>
+        <span class="linha3"></span>
+      </button>
+      <div class="logosite">
+        <a class="logosite" href="index.html"
+          ><img src="img/logo.svg" alt="Logo Seek"
+        /></a>
       </div>
-      <label for=""><img src="img/sol.png" alt="Sol" /></label>
-    </div>
-    <div id="diventrarsair" class="divmenuperfil">
-      <button id="sairdomenuperfil" class="sairP"><a href="login.html" ><span class="LoginPerfil">Login</span></a></button>
-    </div>
-  </div>
-</header>
+      <div class="userhover">
+        <button>
+          <img
+            id="img_useres"
+            onclick="abrirMenu()"
+            src="img/user2.svg"
+            alt="perfil menu"
+          />
+        </button>
+      </div>
+      <nav class="navsite">
+        <div id="headerexplurar" class="navSelecionado">
+          <a href="index.html" class="nav-link ExpA">Explorar</a>
+        </div>
+        <div id="headercursos">
+          <a href="cursos.html" class="nav-link CurA">Cursos</a>
+        </div>
+        <div id="headervagas">
+          <a href="vagas.html" class="nav-link VagA">Vagas</a>
+        </div>
+        <div class="sobrenoss">
+          <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
+        </div>
+      </nav>
+      <div class="pesquisasite">
+        <input type="text" placeholder="Pesquisar" class="Pesquisar" />
+        <a href=""><img src="img/search2.svg" alt="Lupa" /></a>
+      </div>
+      <div id="usersite" class="usersite">
+        <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
+        <p id="nome_user"></p>
+        <button onclick="abrirMenu()">
+          <img id="img_user" src="img/user2.svg" alt="User" />
+        </button>
+      </div>
+      <nav class="hamburguer" id="menu">
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer nav-link" href="index.html">
+            <span class="ExpA">Explorar </span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer nav-link" href="cursos.html">
+            <span class="CurA">Cursos </span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer nav-link" href="vagas.html">
+            <span class="VagA">Vagas</span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer nav-link" href="sobre.html"
+            ><span class="SobA">Sobre Nós</span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="ajuda.html">
+            <span class="AjuF">Ajuda</span>
+          </a>
+        </div>
+        <div class="bordasuperior"></div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"
+            ><span class="AviF">Avisos</span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="avisos.html">
+            <span class="AtuF">Atualizações </span></a
+          >
+        </div>
+        <div class="itemsdomenu">
+          <a class="botoesmenuhamburguer" href="sobre.html#contatosobre">
+            <span class="Conf">Contato </span></a
+          >
+        </div>
+
+        <div class="itemsdomenu">
+          <select
+            aria-label="Idioma"
+            name="Idioma"
+            id="idiomaSelect"
+            onchange="TrocaLinguagem(this.value)"
+          >
+            <option value="pt">Português</option>
+            <option value="eng">English</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+        <div class="bordasuperior"></div>
+
+        <div class="divredessociais">
+          <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"
+            ><img src="img/Linkedin.svg" alt="Logo Linkedin"
+          /></a>
+          <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
+          <a href="https://www.instagram.com/seek.oficial/"
+            ><img src="img/instagram.svg" alt="Logo instagram"
+          /></a>
+        </div>
+        <div class="bordasuperior"></div>
+
+        <div class="direitosautoraismenu">
+          <p class="DirF">
+            Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+          </p>
+        </div>
+      </nav>
+      <div id="menuperfil" class="menuperfil">
+        <div id="divmeuperfil" class="divmenuperfil">
+          <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
+        </div>
+        <div id="divconfiguracoes" class="divmenuperfil">
+          <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
+        </div>
+        <div class="botaomodoescuro">
+          <label for=""><img src="img/lua.png" alt="Lua" /></label>
+          <div class="checkbox-con">
+            <input onclick="MudarModos()" id="checkbox" type="checkbox" />
+          </div>
+          <label for=""><img src="img/sol.png" alt="Sol" /></label>
+        </div>
+        <div id="diventrarsair" class="divmenuperfil">
+          <button id="sairdomenuperfil" class="sairP">
+            <a href="login.html"><span class="LoginPerfil">Login</span></a>
+          </button>
+        </div>
+      </div>
+    </header>
 
     <main>
-
-      <div id="caixadenotificacaofazerlogin" class="caixadenotificacaofazerlogin">
+      <div
+        id="caixadenotificacaofazerlogin"
+        class="caixadenotificacaofazerlogin"
+      >
         <h2>Não foi possível continuar</h2>
         <p>Você precisa estar logado para acessar esta página.</p>
         <div class="actions">
-          <span onclick="fecharnotificacao()" id="cancelarnotificacaofazerlogin" class="btn-cancel">Cancelar</span>
-          <span id="botaofazerloginconfirmar" class="btn-confirm"><a href="login.html">fazer login</a></span>
+          <span
+            onclick="fecharnotificacao()"
+            id="cancelarnotificacaofazerlogin"
+            class="btn-cancel"
+            >Cancelar</span
+          >
+          <span id="botaofazerloginconfirmar" class="btn-confirm"
+            ><a href="login.html">fazer login</a></span
+          >
         </div>
       </div>
-      
-        <h1 class="ConM">Configurações</h1>
-        <div class="divconfigmain">
-            <div class="menuconfigoracoes">
-                <ul id="listaconfig">
-                    <li class="lidivconfig"><button onclick="privacidade()" id="selecionado" class="PriM textoli">Privacidede</button></li>
-                    <li class="lidivconfig"><button onclick="notificaacoes()" class="NotM textoli">Notificações</button></li>
-                    <li class="lidivconfig"><button onclick="informacoesuser()" class="InfM textoli">Informações Usuário</button></li>
-                    <li class="lidivconfig"><button class="EmaM textoli">Email/Senha</button></li>
-                </ul>
 
-            </div>
-
-            <div class="containerconfig">
-                <div id="privacidadeconfig" class="privacidadeconfig">
-
-                    <h2 class="PriM">Privacidade</h2>
-
-                    <div class="visibilidadedoperfil fontetexto gapentreopcoesepergunta">
-                        <div class="pergunta">
-                            <p class="Pper1">Deseja que todos possam ver seu perfil na área de busca ?</p>
-                        </div>
-                        <div class="opcaoprivacidade">
-                            <form action="">
-                                <input type="radio" name="visibilidade" id="visivel" value="visivel">
-                                <label for="visivel" class="OS">Sim</label>
-
-                                <input type="radio" name="visibilidade" id="invisivel" value="invisivel">
-                                <label for="invisivel"  class="ON">Não</label>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="visibilidadedosprejetos fontetexto gapentreopcoesepergunta">
-                        <div class="pergunta">
-                            <p class="Pper2">Deseja que todos possam ver seus projetos na área de busca ?</p>
-                        </div>
-                        <div class="opcaoprivacidade">
-                            <form action="">
-                                <input type="radio" name="visibilidade" id="visivel" value="visivel">
-                                <label for="visivel" class="OS">Sim</label>
-
-                                <input type="radio" name="visibilidade" id="invisivel" value="invisivel">
-                                <label for="invisivel" class="ON">Não</label>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="visibilidadedoscursos fontetexto gapentreopcoesepergunta">
-                        <div class="pergunta">
-                            <p class="Pper3">Deseja que todos possam ver seus cursos na área de busca ?</p>
-                        </div>
-                        <div class="opcaoprivacidade">
-                            <form action="">
-                                <input type="radio" name="visibilidade" id="visivel" value="visivel">
-                                <label for="visivel" class="OS">Sim</label>
-
-                                <input type="radio" name="visibilidade" id="invisivel" value="invisivel">
-                                <label for="invisivel" class="ON">Não</label>
-                            </form>
-                        </div>
-
-                    </div>
-                    <div class="visibilidadedoemaildousuario fontetexto gapentreopcoesepergunta">
-                        <div class="pergunta">
-                            <p class="Pper4">Deseja que todos possam ver seu email ?</p>
-                        </div>
-                        <div class="opcaoprivacidade">
-                            <form action="">
-                                <input type="radio" name="visibilidade" id="visivel" value="visivel">
-                                <label for="visivel" class="OS">Sim</label>
-
-                                <input type="radio" name="visibilidade" id="invisivel" value="invisivel">
-                                <label for="invisivel" class="ON">Não</label>
-                            </form>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                </div>
-
-                <div id="notificacoesconfig" class="notificacoesconfig">
-
-                    <h2 class="NotM">Notificações</h2>
-
-                    <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
-
-                        <p class="Pper5">Deseja receber um resumo das suas notificações por e-mail?</p>
-                        <div class="opcaoprivacidade">
-                            <form action="">
-                                <input type="radio" name="visibilidade" id="visivel" value="visivel">
-                                <label for="visivel" class="OS">Sim</label>
-
-                                <input type="radio" name="visibilidade" id="invisivel" value="invisivel">
-                                <label for="invisivel" class="ON">Não</label>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
-
-                        <p class="Pper6">Deseja receber uma notificação imediata de solicitação de contrato?</p>
-                        <div class="opcaoprivacidade">
-                            <form action="">
-                                <input type="radio" name="visibilidade" id="visivel" value="visivel">
-                                <label for="visivel" class="OS">Sim</label>
-
-                                <input type="radio" name="visibilidade" id="invisivel" value="invisivel">
-                                <label for="invisivel" class="ON">Não</label>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
-
-                        <p class="Pper7">Deseja ser notificado quando solicitarem sua participação em uma equipe?
-                        </p>
-                        <div class="opcaoprivacidade">
-                            <form action="">
-                                <input type="radio" name="visibilidade" id="visivel" value="visivel">
-                                <label for="visivel" class="OS">Sim</label>
-
-                                <input type="radio" name="visibilidade" id="invisivel" value="invisivel">
-                                <label for="invisivel" class="ON">Não</label>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
-
-                        <p class="Pper8">Deseja receber notificação quando ouver ofertas/descontos?</p>
-                        <div class="opcaoprivacidade">
-                            <form action="">
-                                <input type="radio" name="visibilidade" id="visivel" value="visivel">
-                                <label for="visivel" class="OS">Sim</label>
-
-                                <input type="radio" name="visibilidade" id="invisivel" value="invisivel">
-                                <label for="invisivel" class="ON">Não</label>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
-
-                        <p class="Pper9">Deseja receber notificação quando ouver ofertas/descontos?</p>
-                        <div class="opcaoprivacidade">
-                            <form action="">
-                                <input type="radio" name="visibilidade" id="visivel" value="visivel">
-                                <label for="visivel" class="OS">Sim</label>
-
-                                <input type="radio" name="visibilidade" id="invisivel" value="invisivel">
-                                <label for="invisivel" class="ON">Não</label>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="informacoesousuario" class="informacoesousuario">
-
-                    <h2 class="InfM">Informações do Usuário</h2>
-
-                    <form id="forminfouser" action="">
-
-
-                        <div class="form-group">
-                            <label for="Cidade" class="CidP">Cidade/País</label>
-                            <input type="text" class="form-control CidadeForm" id="CidadeForm"
-                            placeholder="Digite o nome da sua cidade">
-                            <p class="erroinputconf">Este campo é obrigatório. Por favor, informe o nome da sua cidade.</p>
-                                
-                        </div>
-                        <div class="form-group">
-                            <label for="Cargo" class="Carg">Cargo</label>
-                            <input type="text" class="form-control CargoForm" id="CargoForm" 
-                            placeholder="cargodousuario">
-                            <p class="erroinputconf">Este campo é obrigatório. Por favor, informe seu cargo.</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="Perfil" class="Url">URL do perfil</label>
-                            <input type="url" class="form-control" id="URLForm"
-                                placeholder="https://www.seek.com/perfil-usuário">
-                                <p class="erroinputconf">Este campo é obrigatório. Por favor, informe a URL do seu perfil.</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="SEma">Seu e-mail</label>
-                            <input type="email" class="form-control" id="EmailForm" placeholder="teste@gmail.com">
-                            <p class="erroinputconf">Este campo é obrigatório. Por favor, informe um e-mail válido.</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="Senha" class="Senh">Senha</label>
-                            <input type="password" class="form-control" id="SenhaForm" placeholder="********">
-                            <p class="erroinputconf">Este campo é obrigatório. Por favor, informe uma senha.</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="NomeDeUsuario" class="Nome ">Nome de Usuário</label>
-                            <input type="text" class="form-control NomeForm" id="NomeForm" placeholder="Nome do Usuário">
-                            <p class="erroinputconf">Este campo é obrigatório. Por favor, informe um nome de usuário.</p>
-                          </div>
-
-                      </form>
-
-                    <script>
-
-                      fetch(`http://localhost:4500/usuarios/${usuario.id}`)
-                      .then(response => response.json())
-                         .then(data => {
-                        if (data.length === 0) {
-                            alert("Usuário não encontrado!");
-                            return;
-                        }
-
-                         const user = data[0]; // <- Aqui está o segredo!
-
-                          console.log("Usuário recebido:", user);
-
-                               document.getElementById("CidadeForm").value = user.cidade_pais || "";
-                               document.getElementById("CargoForm").value = user.cargo || "";
-                               document.getElementById("NomeForm").value = user.nome || "";
-                               document.getElementById("EmailForm").value = user.email || "";
-                               document.getElementById("SenhaForm").value = ""; // segurança: não mostrar senha
-                               document.getElementById("URLForm").value = "";   // ajuste se tiver campo real para URL
-                           })
-                            .catch(error => {
-                                    console.error("Erro ao buscar dados do usuário:", error);
-                                 });
-
-                    </script>
-                      
-
-                      <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
-                        <p class="Pper10">Utilizar barra de acessibilidade</p>
-                        <div class="opcaoprivacidade">
-                            <form action="">
-                                <input type="radio" name="barraacessibilidade" id="barraacessibilidadevisivel" value="true">
-                                <label for="barraacessibilidadevisivel" class="OS">Sim</label>
-                    
-                                <input type="radio" name="barraacessibilidade" id="barraacessibilidadeinvisivel" value="false">
-                                <label for="barraacessibilidadeinvisivel" class="ON">Não</label>
-                            </form>
-                        </div>
-                    </div>
-                    
-                        <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
-
-                            <p class="Pper11">Não permitir que terceiros incorporem seu conteúdo em outros sites?</p>
-                            <div class="opcaoprivacidade">
-                                <form action="">
-                                    <input type="radio" name="visibilidade" id="visivel" value="visivel">
-                                    <label for="visivel" class="OS">Sim</label>
-
-                                    <input type="radio" name="visibilidade" id="invisivel" value="invisivel">
-                                    <label for="invisivel" class="ON">Não</label>
-                                </form>
-                            </div>
-                        </div>
-
-
-
-                    <div id="alinhar">
-                        <div id="divsalvarconfig">
-
-                            <button id="salvarconfig" class="ConSA">Salvar alterações</button>
-                          </div>
-                        </div>
-
-                        <button class="eXcluirconta" onclick="abrirnotificacaoexcluirconta()">Excluir conta</button>
-                        
-                        
-                        <div id="caixadenotificacaoexcluirconta" class="caixadenotificacaoexcluirconta">
-                          <h2>Você tem certeza?</h2>
-                          <p>Isso irá excluir sua conta permanentemente, essa ação não pode ser desfeita.</p>
-                          <div class="actions">
-                            <span onclick="cancelarnotificacaoexcluirconta()" id="cancelarnotificacaoexcluirconta" class="btn-cancel">cancelar</span>
-                            <span id="botaoexcluircontaconfirmar" class="btn-confirm">confirmar</span>
-                          </div>
-                        </div>
-
-                        <div id="verificacaoContainer" style="display: none; margin-top: 1rem;">
-                          <p>Enviamos um codigo ao email associado a essa conta para a Exclusão da conta </p>
-                          <label for="codigoVerificacao">Digite o código enviado ao seu e-mail:</label>
-                          <input type="text" id="codigoVerificacao" placeholder="Ex: 123456">
-                          <button type="button" id="verificarCodigoBtn">Verificar Código</button>
-                        </div>
-                </div>
-
-            </div>
+      <h1 class="ConM">Configurações</h1>
+      <div class="divconfigmain">
+        <div class="menuconfigoracoes">
+          <ul id="listaconfig">
+            <li class="lidivconfig">
+              <button
+                onclick="privacidade()"
+                id="selecionado"
+                class="PriM textoli"
+              >
+                Privacidede
+              </button>
+            </li>
+            <li class="lidivconfig">
+              <button onclick="notificaacoes()" class="NotM textoli">
+                Notificações
+              </button>
+            </li>
+            <li class="lidivconfig">
+              <button onclick="informacoesuser()" class="InfM textoli">
+                Informações Usuário
+              </button>
+            </li>
+            <li class="lidivconfig">
+              <button class="EmaM textoli">Email/Senha</button>
+            </li>
+          </ul>
         </div>
 
-        <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
-          <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-              <div class="vw-plugin-top-wrapper"></div>
+        <div class="containerconfig">
+          <div id="privacidadeconfig" class="privacidadeconfig">
+            <h2 class="PriM">Privacidade</h2>
+
+            <div
+              class="visibilidadedoperfil fontetexto gapentreopcoesepergunta"
+            >
+              <div class="pergunta">
+                <p class="Pper1">
+                  Deseja que todos possam ver seu perfil na área de busca ?
+                </p>
+              </div>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="visivel"
+                    value="visivel"
+                  />
+                  <label for="visivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="invisivel"
+                    value="invisivel"
+                  />
+                  <label for="invisivel" class="ON">Não</label>
+                </form>
+              </div>
+            </div>
+            <div
+              class="visibilidadedosprejetos fontetexto gapentreopcoesepergunta"
+            >
+              <div class="pergunta">
+                <p class="Pper2">
+                  Deseja que todos possam ver seus projetos na área de busca ?
+                </p>
+              </div>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="visivel"
+                    value="visivel"
+                  />
+                  <label for="visivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="invisivel"
+                    value="invisivel"
+                  />
+                  <label for="invisivel" class="ON">Não</label>
+                </form>
+              </div>
+            </div>
+            <div
+              class="visibilidadedoscursos fontetexto gapentreopcoesepergunta"
+            >
+              <div class="pergunta">
+                <p class="Pper3">
+                  Deseja que todos possam ver seus cursos na área de busca ?
+                </p>
+              </div>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="visivel"
+                    value="visivel"
+                  />
+                  <label for="visivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="invisivel"
+                    value="invisivel"
+                  />
+                  <label for="invisivel" class="ON">Não</label>
+                </form>
+              </div>
+            </div>
+            <div
+              class="visibilidadedoemaildousuario fontetexto gapentreopcoesepergunta"
+            >
+              <div class="pergunta">
+                <p class="Pper4">Deseja que todos possam ver seu email ?</p>
+              </div>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="visivel"
+                    value="visivel"
+                  />
+                  <label for="visivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="invisivel"
+                    value="invisivel"
+                  />
+                  <label for="invisivel" class="ON">Não</label>
+                </form>
+              </div>
             </div>
           </div>
-          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-          <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-          </script>
+
+          <div id="notificacoesconfig" class="notificacoesconfig">
+            <h2 class="NotM">Notificações</h2>
+
+            <div
+              class="infonotificacoesconfig fontetexto gapentreopcoesepergunta"
+            >
+              <p class="Pper5">
+                Deseja receber um resumo das suas notificações por e-mail?
+              </p>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="visivel"
+                    value="visivel"
+                  />
+                  <label for="visivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="invisivel"
+                    value="invisivel"
+                  />
+                  <label for="invisivel" class="ON">Não</label>
+                </form>
+              </div>
+            </div>
+            <div
+              class="infonotificacoesconfig fontetexto gapentreopcoesepergunta"
+            >
+              <p class="Pper6">
+                Deseja receber uma notificação imediata de solicitação de
+                contrato?
+              </p>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="visivel"
+                    value="visivel"
+                  />
+                  <label for="visivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="invisivel"
+                    value="invisivel"
+                  />
+                  <label for="invisivel" class="ON">Não</label>
+                </form>
+              </div>
+            </div>
+            <div
+              class="infonotificacoesconfig fontetexto gapentreopcoesepergunta"
+            >
+              <p class="Pper7">
+                Deseja ser notificado quando solicitarem sua participação em uma
+                equipe?
+              </p>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="visivel"
+                    value="visivel"
+                  />
+                  <label for="visivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="invisivel"
+                    value="invisivel"
+                  />
+                  <label for="invisivel" class="ON">Não</label>
+                </form>
+              </div>
+            </div>
+            <div
+              class="infonotificacoesconfig fontetexto gapentreopcoesepergunta"
+            >
+              <p class="Pper8">
+                Deseja receber notificação quando ouver ofertas/descontos?
+              </p>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="visivel"
+                    value="visivel"
+                  />
+                  <label for="visivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="invisivel"
+                    value="invisivel"
+                  />
+                  <label for="invisivel" class="ON">Não</label>
+                </form>
+              </div>
+            </div>
+            <div
+              class="infonotificacoesconfig fontetexto gapentreopcoesepergunta"
+            >
+              <p class="Pper9">
+                Deseja receber notificação quando ouver ofertas/descontos?
+              </p>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="visivel"
+                    value="visivel"
+                  />
+                  <label for="visivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="invisivel"
+                    value="invisivel"
+                  />
+                  <label for="invisivel" class="ON">Não</label>
+                </form>
+              </div>
+            </div>
           </div>
 
-          
-          
+          <div id="informacoesousuario" class="informacoesousuario">
+            <h2 class="InfM">Informações do Usuário</h2>
+
+            <form id="forminfouser" action="">
+              <div class="form-group">
+                <label for="Cidade" class="CidP">Cidade/País</label>
+                <input
+                  type="text"
+                  class="form-control CidadeForm"
+                  id="CidadeForm"
+                  placeholder="Digite o nome da sua cidade"
+                />
+                <p class="erroinputconf">
+                  Este campo é obrigatório. Por favor, informe o nome da sua
+                  cidade.
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="Cargo" class="Carg">Cargo</label>
+                <input
+                  type="text"
+                  class="form-control CargoForm"
+                  id="CargoForm"
+                  placeholder="cargodousuario"
+                />
+                <p class="erroinputconf">
+                  Este campo é obrigatório. Por favor, informe seu cargo.
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="Perfil" class="Url">URL do perfil</label>
+                <input
+                  type="url"
+                  class="form-control"
+                  id="URLForm"
+                  placeholder="https://www.seek.com/perfil-usuário"
+                />
+                <p class="erroinputconf">
+                  Este campo é obrigatório. Por favor, informe a URL do seu
+                  perfil.
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="email" class="SEma">Seu e-mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="EmailForm"
+                  placeholder="teste@gmail.com"
+                />
+                <p class="erroinputconf">
+                  Este campo é obrigatório. Por favor, informe um e-mail válido.
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="Senha" class="Senh">Senha</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="SenhaForm"
+                  placeholder="********"
+                />
+                <p class="erroinputconf">
+                  Este campo é obrigatório. Por favor, informe uma senha.
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="NomeDeUsuario" class="Nome">Nome de Usuário</label>
+                <input
+                  type="text"
+                  class="form-control NomeForm"
+                  id="NomeForm"
+                  placeholder="Nome do Usuário"
+                />
+                <p class="erroinputconf">
+                  Este campo é obrigatório. Por favor, informe um nome de
+                  usuário.
+                </p>
+              </div>
+            </form>
+
+            <script>
+              fetch(`http://localhost:4500/usuarios/${usuario.id}`)
+                .then((response) => response.json())
+                .then((data) => {
+                  if (data.length === 0) {
+                    alert("Usuário não encontrado!");
+                    return;
+                  }
+
+                  const user = data[0]; // <- Aqui está o segredo!
+
+                  console.log("Usuário recebido:", user);
+
+                  document.getElementById("CidadeForm").value =
+                    user.cidade_pais || "";
+                  document.getElementById("CargoForm").value = user.cargo || "";
+                  document.getElementById("NomeForm").value = user.nome || "";
+                  document.getElementById("EmailForm").value = user.email || "";
+                  document.getElementById("SenhaForm").value = ""; // segurança: não mostrar senha
+                  document.getElementById("URLForm").value = ""; // ajuste se tiver campo real para URL
+                })
+                .catch((error) => {
+                  console.error("Erro ao buscar dados do usuário:", error);
+                });
+            </script>
+
+            <div
+              class="infonotificacoesconfig fontetexto gapentreopcoesepergunta"
+            >
+              <p class="Pper10">Utilizar barra de acessibilidade</p>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="barraacessibilidade"
+                    id="barraacessibilidadevisivel"
+                    value="true"
+                  />
+                  <label for="barraacessibilidadevisivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="barraacessibilidade"
+                    id="barraacessibilidadeinvisivel"
+                    value="false"
+                  />
+                  <label for="barraacessibilidadeinvisivel" class="ON"
+                    >Não</label
+                  >
+                </form>
+              </div>
+            </div>
+
+            <div
+              class="infonotificacoesconfig fontetexto gapentreopcoesepergunta"
+            >
+              <p class="Pper11">
+                Não permitir que terceiros incorporem seu conteúdo em outros
+                sites?
+              </p>
+              <div class="opcaoprivacidade">
+                <form action="">
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="visivel"
+                    value="visivel"
+                  />
+                  <label for="visivel" class="OS">Sim</label>
+
+                  <input
+                    type="radio"
+                    name="visibilidade"
+                    id="invisivel"
+                    value="invisivel"
+                  />
+                  <label for="invisivel" class="ON">Não</label>
+                </form>
+              </div>
+            </div>
+
+            <div id="alinhar">
+              <div id="divsalvarconfig">
+                <button id="salvarconfig" class="ConSA">
+                  Salvar alterações
+                </button>
+              </div>
+            </div>
+
+            <button
+              class="eXcluirconta"
+              onclick="abrirnotificacaoexcluirconta()"
+            >
+              Excluir conta
+            </button>
+
+            <div
+              id="caixadenotificacaoexcluirconta"
+              class="caixadenotificacaoexcluirconta"
+            >
+              <h2>Você tem certeza?</h2>
+              <p>
+                Isso irá excluir sua conta permanentemente, essa ação não pode
+                ser desfeita.
+              </p>
+              <div class="actions">
+                <span
+                  onclick="cancelarnotificacaoexcluirconta()"
+                  id="cancelarnotificacaoexcluirconta"
+                  class="btn-cancel"
+                  >cancelar</span
+                >
+                <span id="botaoexcluircontaconfirmar" class="btn-confirm"
+                  >confirmar</span
+                >
+              </div>
+            </div>
+
+            <div
+              id="verificacaoContainer"
+              style="display: none; margin-top: 1rem"
+            >
+              <p>
+                Enviamos um codigo ao email associado a essa conta para a
+                Exclusão da conta
+              </p>
+              <label for="codigoVerificacao"
+                >Digite o código enviado ao seu e-mail:</label
+              >
+              <input
+                type="text"
+                id="codigoVerificacao"
+                placeholder="Ex: 123456"
+              />
+              <button type="button" id="verificarCodigoBtn">
+                Verificar Código
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
+        <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+          new window.VLibras.Widget("https://vlibras.gov.br/app");
+        </script>
+      </div>
     </main>
 
     <footer>
-
-        <div class="linksfooter">
-    
-            <div class="infofooter">
-                <a href="ajuda.html" class="AjuF">Ajuda</a>
-                <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
-              </div>
-        
-              <div class="infofooter">
-                <a href="sobre.html" class="SobA">Sobre Nós</a>
-                <a href="sobre.html#contatosobre" class="ConT">Contato</a>
-        
-              </div>
-              <div class="infofooter">
-                <a href="avisos.html" class="AviF">Avisos</a>
-    
-            <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
-              <option value="pt">Português</option>
-              <option value="eng">English</option>
-              <option value="es">Español</option>
-              <option value="it">Italiano</option>
-              <option value="fr">Français</option>
-            </select>
-          </div>
-    
-          <div class="infofooter">
-            <img src="img/logoSeekk 3@2x.png" alt="Logo Seek">
-          </div>
-    
+      <div class="linksfooter">
+        <div class="infofooter">
+          <a href="ajuda.html" class="AjuF">Ajuda</a>
+          <a href="avisos.html#atualizacoesss" class="AtuF">Atualizações</a>
         </div>
-    
-        <div class="direitosautorais">
-          <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
-        </div>
-    
-    
-      </footer>
 
-      
-    
+        <div class="infofooter">
+          <a href="sobre.html" class="SobA">Sobre Nós</a>
+          <a href="sobre.html#contatosobre" class="ConT">Contato</a>
+        </div>
+        <div class="infofooter">
+          <a href="avisos.html" class="AviF">Avisos</a>
+
+          <select
+            aria-label="Idioma"
+            name="Idioma"
+            id="idiomaSelect"
+            onchange="TrocaLinguagem(this.value)"
+          >
+            <option value="pt">Português</option>
+            <option value="eng">English</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+
+        <div class="infofooter">
+          <img src="img/logoSeekk 3@2x.png" alt="Logo Seek" />
+        </div>
+      </div>
+
+      <div class="direitosautorais">
+        <p class="DirF">
+          Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+        </p>
+      </div>
+    </footer>
+
     <!-- <script src="script/cautela.js"></script>   -->
-    <script src="script/cake.js"></script>
     <script src="script/user_logado.js"></script>
     <script src="script/config.js"></script>
-    <script src="script/acessibilidade.js"></script> 
-    <script src="script/caua.js"></script>
+    <script src="script/acessibilidade.js"></script>
     <script src="script/script.js"></script>
-
-</body>
-
+    <script src="script/tema.js"></script>
+    <script src="script/traducao.js"></script>
+  </body>
 </html>

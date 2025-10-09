@@ -936,6 +936,8 @@ footer {
 
 .direitosautorais {
     color: var(--brancoBase);
+    display: flex;
+    flex-direction: row;
 }
 
 .borda {

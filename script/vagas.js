@@ -86,3 +86,43 @@ radios.forEach(radio => {
 });
 
 
+function toggleFiltro() {
+  const filtro = document.getElementById("filtroflutuante");
+  const largura = window.innerWidth;
+
+  if (largura <= 550) {
+    // mobile pequeno: usa animação por top
+    filtro.style.top = (filtro.style.top === "0%") ? "-200%" : "0%";
+  } else if (largura > 550 && largura <= 1200) {
+    // tablet/médio: abre/fecha por display
+    filtro.style.display = (filtro.style.display === "block") ? "none" : "block";
+  } else {
+    // desktop: sidebar fixa → sempre visível
+    filtro.style.display = "block";
+    filtro.style.top = ""; // limpa se veio do mobile
+  }
+}
+
+// Adiciona o evento a todos os botões de filtro
+document.querySelectorAll(
+  ".botaofiltrarcursosmedia, .botaofiltrarcursosmedia1200px, .botaotestparafecharofiltro"
+).forEach(btn => {
+  btn.addEventListener("click", toggleFiltro);
+});
+
+// Garante comportamento correto ao redimensionar
+window.addEventListener("resize", () => {
+  const filtro = document.getElementById("filtroflutuante");
+  const largura = window.innerWidth;
+
+  if (largura > 1200) {
+    filtro.style.display = "block";
+    filtro.style.top = ""; // limpa caso tenha vindo do mobile
+  } else if (largura <= 550) {
+    filtro.style.top = "-200%";
+    filtro.style.display = ""; // limpa display se tiver vindo do tablet
+  } else {
+    filtro.style.display = "none";
+    filtro.style.top = ""; // limpa top se tiver vindo do mobile
+  }
+});
