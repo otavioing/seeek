@@ -87,15 +87,19 @@ cadastroForm.addEventListener('submit', async (e) => {
   const email = document.getElementById('cadastroEmail').value;
   const senha = document.getElementById('cadastroSenha').value;
 
-  const formData = new FormData();
-  formData.append("nome", nome);
-  formData.append("email", email);
-  formData.append("senha", senha);
+  const dados = {
+    nome,
+    email,
+    senha
+  };
 
   try {
     const response = await fetch('http://localhost:4500/usuarios', {
       method: 'POST',
-      body: formData
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dados)
     });
 
     const data = await response.json();
@@ -105,7 +109,7 @@ cadastroForm.addEventListener('submit', async (e) => {
       cadastroForm.reset();
       document.getElementById('sign-up-modal').style.display = 'none';
     } else {
-      alert("Erro ao criar conta: " + data.message);
+      alert("Erro ao criar conta: " + (data.message || 'Erro desconhecido.'));
     }
   } catch (err) {
     alert("Erro ao criar conta: " + err.message);
