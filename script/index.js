@@ -111,4 +111,11 @@ async function carregarPosts() {
 
 
 
-carregarPosts();
+carregarPosts();carregarPosts();
+
+// Adicionar novo projeto
+
+  function adicionarlist() {
+    const container = document.querySelector('.listadeadicao');
+    container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
+  }

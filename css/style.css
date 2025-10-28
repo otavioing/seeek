@@ -187,6 +187,10 @@ svg .st8{
     fill: white
  }
 
+ .modoEscuro .adicionarProj , .modoEscuro .adiciona {
+    background-color: var(--ModoEscuroFontV);
+ }
+
 /*-------------------------------- Header inicio --------------------------------*/
 
 header {
@@ -1791,6 +1795,78 @@ footer {
 /*fim da Barra de acessibilidade*/
 
 
+.adicionarProj {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--azulBase);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.adimais {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+}
+
+.adimais::before,
+.adimais::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 0.1rem;
+}
+
+.adimais::before {
+  width: 100%;
+  height: 0.2rem;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.adimais::after {
+  height: 100%;
+  width: 0.2rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.listadeadicao {
+  position: fixed;
+  bottom: 1rem;
+  right: 7rem; /* distância para alinhar à esquerda do botão */
+  display: none;
+  flex-direction: row;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.adiciona {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--azulBase);
+  border-radius: 50%;
+  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+}
+
+.adiciona img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+}
 
 
 
