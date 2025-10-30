@@ -100,9 +100,8 @@ async function carregarPosts() {
       document.getElementById("modalImage").src = post.imagem;
       document.querySelector(".nomedousuariomodal h2").textContent = post.titulo || "Título do portfólio";
       document.querySelector(".AutMG").textContent = `${post.nome} • 0 seguidores`;
-      document.querySelector("PotG ").textContent = post.titulo || "Portfólio teste";
+      document.querySelector(".PotMG ").textContent = post.titulo || "Portfólio teste";
       document.querySelector(".imagemusuariomodal img").src = post.foto_perfil || "img/iconeperfil.svg";
-
       document.getElementById("modalPort").style.display = "block";
     });
 
