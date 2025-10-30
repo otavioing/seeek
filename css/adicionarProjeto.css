@@ -80,7 +80,7 @@ a {
     background-color: var(--ModoEscuroBase);
 }
 
-.modoEscuro .botaoAdcImgg, .modoEscuro .ferramentas, .modoEscuro .txt-area-and-button button, .modoEscuro .txt-area-and-button textarea, .modoEscuro .categoria{
+.modoEscuro .botaoAdcImgg, .modoEscuro .ferramentas, .modoEscuro .txt-area-and-button button, .modoEscuro .txt-area-and-button textarea, .modoEscuro .categoria, .modoEscuro .textoTituloProjeto{
     background-color: var(--ModoEscuroFilt);
     color: white;
 }
@@ -95,7 +95,7 @@ a {
     color: white;
 }
 
-.modoEscuro .txt-area-and-button button:hover, .modoEscuro .txt-area-and-button textarea:hover, .modoEscuro .txt-area-and-button textarea:focus, .modoEscuro .botaoAdcImgg div button:hover{
+.modoEscuro .txt-area-and-button button:hover, .modoEscuro .txt-area-and-button textarea:hover, .modoEscuro .txt-area-and-button textarea:focus, .modoEscuro .botaoAdcImgg div button:hover, .modoEscuro .textoTituloProjeto:hover{
     background-color: var(--ModoEscuroMesc2);
 }
 
@@ -286,7 +286,7 @@ transform: scale(107%);
 }
 
 
-.txt-area-and-button button, .txt-area-and-button textarea{
+.txt-area-and-button button, .txt-area-and-button textarea, .textoTituloProjeto{
     width: 100%;
     height: 3rem;
     background: none;

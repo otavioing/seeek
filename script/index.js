@@ -73,7 +73,7 @@ async function carregarPosts() {
         
         <div class="portHover">
           <div class="portHoverInt">
-            <h3 class="PotG">Portfólio teste</h3>
+            <h3 class="PotMG">${post.titulo}</h3>
             <div class="SalvarPort">
               <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
             </div>
@@ -100,6 +100,7 @@ async function carregarPosts() {
       document.getElementById("modalImage").src = post.imagem;
       document.querySelector(".nomedousuariomodal h2").textContent = post.titulo || "Título do portfólio";
       document.querySelector(".AutMG").textContent = `${post.nome} • 0 seguidores`;
+      document.querySelector("PotG ").textContent = post.titulo || "Portfólio teste";
       document.querySelector(".imagemusuariomodal img").src = post.foto_perfil || "img/iconeperfil.svg";
 
       document.getElementById("modalPort").style.display = "block";

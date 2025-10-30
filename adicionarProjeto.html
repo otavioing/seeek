@@ -218,6 +218,15 @@
       <div class="adcProjeto" id="adcProjeto" style="display: flex">
         <div class="containerAdcProjeto">
           <div class="left-projeto">
+            <div class="tituloProj">
+              <textarea
+                name="textoTituloProjeto"
+                id="textoTituloProjeto"
+                placeholder="Titulo"
+                oninput="autoResize(this)"
+                class="textoTituloProjeto"
+              ></textarea>
+            </div>
             <div class="botaoAdcImgg">
               <p>Adicionar foto ou vídeo</p>
               <div>
@@ -255,13 +264,6 @@
                 oninput="autoResize(this)"
               ></textarea>
             </div>
-
-            <script>
-              function autoResize(textarea) {
-                textarea.style.height = "auto"; // reseta a altura
-                textarea.style.height = textarea.scrollHeight + "px"; // ajusta para o conteúdo
-              }
-            </script>
           </div>
 
           <main class="right-projeto">

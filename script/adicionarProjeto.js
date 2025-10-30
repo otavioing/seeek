@@ -5,11 +5,13 @@ form.addEventListener('submit', async (e) => {
 
   const arquivo = document.getElementById('enviarImg').files[0];
   const descricao = document.getElementById('text-new-post').value;
+  const titulo = document.getElementById('textoTituloProjeto').value;
   const user_id = usuario.id;
 
   const formData = new FormData();
   formData.append("arquivo", arquivo);
   formData.append("legenda", descricao);
+  formData.append("titulo", titulo);
   formData.append("user_id", user_id);
 
   try {
@@ -46,3 +48,8 @@ form.addEventListener('submit', async (e) => {
 //  <h2>Post enviado com sucesso!</h2>
 //  <p>Seu conteúdo foi publicado e já pode ser visualizado por outros usuários.</p>
 // </div>
+
+ function autoResize(textarea) {
+ textarea.style.height = "auto"; // reseta a altura
+  textarea.style.height = textarea.scrollHeight + "px"; // ajusta para o conteúdo
+}
