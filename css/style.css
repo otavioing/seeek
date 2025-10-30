@@ -884,6 +884,7 @@ header .botaoMenu span {
 
 .logocomentario img{
     height: 3rem;
+    border-radius: 100%;
 }
 
 .nomeusuariocomentario{

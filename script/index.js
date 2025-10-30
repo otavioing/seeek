@@ -95,13 +95,21 @@ async function carregarPosts() {
         </div>
         
       </div>
+
+   
+
     `;
     div.addEventListener("click", () => {
       document.getElementById("modalImage").src = post.imagem;
       document.querySelector(".nomedousuariomodal h2").textContent = post.titulo || "Título do portfólio";
       document.querySelector(".AutMG").textContent = `${post.nome} • 0 seguidores`;
       document.querySelector(".PotMG ").textContent = post.titulo || "Portfólio teste";
-      document.querySelector(".imagemusuariomodal img").src = post.foto_perfil || "img/iconeperfil.svg";
+      document.querySelector(".imagemusuariomodal img ").src = post.foto_perfil || "img/iconeperfil.svg";
+      document.querySelector(".logocomentario img").src = post.foto_perfil || "img/iconeperfil.svg";
+      document.querySelector("#comentariomodal .comentario").textContent = post.legenda || "Descrição do portfólio";
+      document.querySelector(".Nome").textContent = post.nome || "Nome do usuário";
+      document.querySelector(".NomeTitu").textContent = post.titulo || "Título do portfólio";
+       document.querySelector(".comentarioDesc").textContent = post.legenda || "Descrição do portfólio";
       document.getElementById("modalPort").style.display = "block";
     });
 
