@@ -140,23 +140,26 @@
             >
           </div>
 
-          <div id="modal-recuperacao" class="modal">
+          <!-- <div id="modal-recuperacao" class="modal">
             <div class="modal-conteudo">
-              <div class="modal-cabecalho">
-                <h3>Recuperar Senha</h3>
-                <span class="fechar" onclick="fecharModal()">&times;</span>
+              <div cl>
+                <div class="modal-cabecalho">
+                  <h3>Recuperar Senha</h3>
+                  <span class="fechar" onclick="fecharModal()">&times;</span>
+                </div>
+                <p>Sem problemas. Insira seu endereço de e-mail abaixo e enviaremos um link para você redefinir sua senha.</p>
+                <input
+                  class="modal-inputs"
+                  type="email"
+                  id="emailRec"
+                  placeholder="Digite seu email"
+                />
+                <button class="modal-buttons" onclick="enviarCodigo()">
+                  Enviar código
+                </button>
+                <p id="mensagemRec"></p>
+
               </div>
-              <p>Sem problemas. Insira seu endereço de e-mail abaixo e enviaremos um link para você redefinir sua senha.</p>
-              <input
-                class="modal-inputs"
-                type="email"
-                id="emailRec"
-                placeholder="Digite seu email"
-              />
-              <button class="modal-buttons" onclick="enviarCodigo()">
-                Enviar código
-              </button>
-              <p id="mensagemRec"></p>
               <div id="codigoContainer" >
                 <input
                   class="modal-inputs"
@@ -173,6 +176,57 @@
                 <button class="modal-buttons" onclick="atualizarSenha()">
                   Atualizar Senha
                 </button>
+              </div>
+            </div>
+          </div> -->
+
+          <div id="container_enviar_email_recuperacao" class="container_enviar_email_recuperacao" style="display: none">
+            <div class="enviar_email_recuperacao">
+              <div class="modal-cabecalho">
+                <h3>Recuperar Senha</h3>
+                <span class="fechar" onclick="fecharModal()">&times;</span>
+              </div>
+
+              <div class="container_inputs">
+                <input
+                  class="modal-inputs"
+                  type="email"
+                  id="emailRec"
+                  placeholder="Digite seu email"
+                />
+                <button id="botao_enviar_email_recuperacao" class="modal-buttons" onclick="enviarCodigo()">
+                  Enviar código
+                </button>
+                <p id="mensagemRecEmail"></p>
+              </div>
+            </div>
+          </div>
+
+          <div id="container_enviar_codigo_recuperacao" class="container_enviar_codigo_recuperacao" style="display: none">
+            <div class="enviar_codigo_recuperacao">
+              <div class="modal-cabecalho">
+                <h3>Insira o código recebido</h3>
+                <span class="fechar" onclick="fecharModal()">&times;</span>
+              </div>
+              <div class="container_inputs">
+                <input
+                  class="modal-inputs"
+                  type="text"
+                  id="codigo"
+                  placeholder="Código recebido"
+                  autocomplete="one-time-code"
+                />
+                <input
+                  class="modal-inputs"
+                  type="password"
+                  id="novaSenha"
+                  placeholder="Nova senha"
+                  autocomplete="new-password"
+                />
+                <button class="modal-buttons" onclick="atualizarSenha()">
+                  Atualizar Senha
+                </button>
+                <p id="mensagemRecCodigo"></p>
               </div>
             </div>
           </div>

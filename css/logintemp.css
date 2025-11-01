@@ -459,7 +459,8 @@ main .quemsomoslogin a{
     font-size: 1.5rem;
 }
 
-.modal {
+/*------------------------ Recuperação de senha ------------------------*/
+.container_enviar_email_recuperacao, .container_enviar_codigo_recuperacao {
     display: block;
     position: fixed;
     z-index: 999;
@@ -469,56 +470,73 @@ main .quemsomoslogin a{
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.6);
+}
 
-  }
-  
-  .modal-conteudo {
+.enviar_email_recuperacao, .enviar_codigo_recuperacao {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    margin: 10% auto;
+    margin: 15% auto;
     padding: 20px;
     border-radius: 10px;
     width: 500px;
     gap: 1rem;
     flex-direction: column;
-  }
+}
 
-  .modal-cabecalho{
+.modal-cabecalho{
     display: flex;
-    width: 100%;
-    align-items: center;
     justify-content: space-between;
-  }
-  
-  .fechar {
-    align-self: flex-end;
-    cursor: pointer;
-    font-size: 20px;
-  }
-
-  .modal-inputs{
-    border-radius: 20px;
-    border: 1px solid #c0c0c0;
-    outline: 0 !important;
-    box-sizing: border-box;
-    padding: 12px 15px;
+    align-items: center;
     width: 100%;
-  }
+    margin-bottom: 1rem;
+}
 
-  .modal-buttons{
-    width: 50%;
-    padding: 0.75rem 1rem;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
-    border-radius: 20px;
-    border: 0 !important;
-    outline: 0 !important;
-    background: var(--azulDesq);
-    color: white;
+.modal-cabecalho h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--preto);
+}
+.modal-cabecalho .fechar {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--preto);
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-  }
+}
+
+.container_inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.container_inputs input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--cinzaBase);
+    outline: none;
+    font-size: 1rem;
+}
+
+.container_inputs button {
+    height: 2.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--azulBase);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/*------------------------fim Recuperação de senha ---------------------*/
+
 
   #verificacaoContainer {
     display: flex;
