@@ -460,7 +460,7 @@ main .quemsomoslogin a{
 }
 
 .modal {
-    display: none;
+    display: block;
     position: fixed;
     z-index: 999;
     left: 0;
@@ -473,19 +473,51 @@ main .quemsomoslogin a{
   }
   
   .modal-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     margin: 10% auto;
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
-    display: flex;
+    width: 500px;
+    gap: 1rem;
     flex-direction: column;
+  }
+
+  .modal-cabecalho{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .fechar {
     align-self: flex-end;
     cursor: pointer;
     font-size: 20px;
+  }
+
+  .modal-inputs{
+    border-radius: 20px;
+    border: 1px solid #c0c0c0;
+    outline: 0 !important;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    width: 100%;
+  }
+
+  .modal-buttons{
+    width: 50%;
+    padding: 0.75rem 1rem;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+    border-radius: 20px;
+    border: 0 !important;
+    outline: 0 !important;
+    background: var(--azulDesq);
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   }
 
   #verificacaoContainer {

@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 // escolher tipo de conta
 const formpadrao = document.getElementById("escolheruserpadrao");
 const formempresa = document.getElementById("escolheruserempresa");
@@ -302,3 +304,4 @@ cadastroForm.addEventListener("submit", async (e) => {
     });
   });
   
+});
