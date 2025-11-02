@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 // --------------------------- Conexão com o backend para login --------------------------- //
 const loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", async (e) => {
@@ -10,7 +12,7 @@ loginForm.addEventListener("submit", async (e) => {
     const response = await fetch("http://localhost:4500/usuarios/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, senha }), 
+      body: JSON.stringify({ email, senha }),
     });
 
     const data = await response.json();
@@ -21,7 +23,7 @@ loginForm.addEventListener("submit", async (e) => {
         id: data.usuario.id,
         tema: data.usuario.tema,
         tema: data.usuario.tema,
-        token: data.token
+        token: data.token,
       };
 
       localStorage.setItem("usuarioLogado", JSON.stringify(usuarioSeguro));
@@ -35,3 +37,5 @@ loginForm.addEventListener("submit", async (e) => {
 });
 
 // --------------------------- Fim da conexão com o backend -------------------------- //
+
+});

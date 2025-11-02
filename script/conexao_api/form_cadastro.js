@@ -1,4 +1,3 @@
-
 // const cadastroForm = document.getElementById('cadastroForm');
 // const verificacaoContainer = document.getElementById('verificacaoContainer');
 // const verificarCodigoBtn = document.getElementById('verificarCodigoBtn');
@@ -75,31 +74,30 @@
 //   }
 // });
 
-
 /*
   Código ajustado para criar o usuário diretamente, sem solicitar código de verificação.
 */
 
-cadastroForm.addEventListener('submit', async (e) => {
+cadastroForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const nome = document.getElementById('cadastroNome').value;
-  const email = document.getElementById('cadastroEmail').value;
-  const senha = document.getElementById('cadastroSenha').value;
+  const nome = document.getElementById("cadastroNome").value;
+  const email = document.getElementById("cadastroEmail").value;
+  const senha = document.getElementById("cadastroSenha").value;
 
   const dados = {
     nome,
     email,
-    senha
+    senha,
   };
 
   try {
-    const response = await fetch('http://localhost:4500/usuarios', {
-      method: 'POST',
+    const response = await fetch("http://localhost:4500/usuarios", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(dados)
+      body: JSON.stringify(dados),
     });
 
     const data = await response.json();
@@ -107,9 +105,9 @@ cadastroForm.addEventListener('submit', async (e) => {
     if (response.ok) {
       alert("Conta criada com sucesso!");
       cadastroForm.reset();
-      document.getElementById('sign-up-modal').style.display = 'none';
+      document.getElementById("sign-up-modal").style.display = "none";
     } else {
-      alert("Erro ao criar conta: " + (data.message || 'Erro desconhecido.'));
+      alert("Erro ao criar conta: " + (data.message || "Erro desconhecido."));
     }
   } catch (err) {
     alert("Erro ao criar conta: " + err.message);
