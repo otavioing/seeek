@@ -653,16 +653,18 @@ header .botaoMenu span {
   height: 100%;
   width: 100%;
   border-radius: 0.5rem;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
   cursor: pointer;
   position: relative;
+  
+  
 }
 .post {
-  height: 26rem;
-  width: 26rem;
-  position: relative;
-  border-radius: 10px;
-  background-color: #f0f0f0;
+    height: 26rem;
+    width: 26rem;
+    position: relative;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 /*------------------------------Modal Portifolio-----------------------------*/
 
