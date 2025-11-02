@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
   function abrirModal() {
     document.getElementById(
       "container_enviar_email_recuperacao"
@@ -28,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       const res = await fetch(
-        "http://localhost:4500/usuarios/recuperar-senha",
+        "http://localhost:4500/usuarios/criar-codigo-verificacao",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -92,4 +91,3 @@ document.addEventListener("DOMContentLoaded", function () {
       msg.innerText = "Erro na requisição.";
     }
   }
-});

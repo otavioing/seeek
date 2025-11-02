@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!divPort) return;
 
     const bg = divPort.style.backgroundImage;
-    const url = bg.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+    const url = bg.replace(/^url\(["']?/, "").replace(/["']?\)$/, "");
     modalImage.src = url;
 
     modal.style.display = "block";
@@ -32,25 +32,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
+//função para pular o tipo usuário
+document.getElementById("pularTipoUser").addEventListener("click", function () {
+  document.getElementById("cancelarTipoUser").style.display = "flex";
+});
 
 // funçao para abrir os comentários do madal
 
 function abrirComentarios() {
-
   let comentarios = document.getElementById("comentariomodal");
   let barradivisoria = document.getElementById("barradivisoriamodal");
 
   // Alternar o display de comentarios
-  if (comentarios.style.display === "none" || comentarios.style.display === "") {
+  if (
+    comentarios.style.display === "none" ||
+    comentarios.style.display === ""
+  ) {
     comentarios.style.display = "flex";
   } else {
     comentarios.style.display = "none";
   }
 
   // Alternar o display de barradivisoria
-  if (barradivisoria.style.display === "none" || barradivisoria.style.display === "") {
+  if (
+    barradivisoria.style.display === "none" ||
+    barradivisoria.style.display === ""
+  ) {
     barradivisoria.style.display = "flex";
   } else {
     barradivisoria.style.display = "none";
@@ -60,13 +67,13 @@ function abrirComentarios() {
 // Função para carregar os posts do servidor
 
 async function carregarPosts() {
-  const resposta = await fetch('http://localhost:4500/posts');
+  const resposta = await fetch("http://localhost:4500/posts");
   const posts = await resposta.json();
-  const container = document.getElementById('gride');
-  container.innerHTML = '';
-  posts.forEach(post => {
-    const div = document.createElement('div');
-    div.className = 'post';
+  const container = document.getElementById("gride");
+  container.innerHTML = "";
+  posts.forEach((post) => {
+    const div = document.createElement("div");
+    div.className = "post";
     div.innerHTML = `
           <div class="divPortifolio" id="filho" 
           style="background-image: url('${post.imagem}'); background-size: cover; background-position: center;">
@@ -101,15 +108,25 @@ async function carregarPosts() {
     `;
     div.addEventListener("click", () => {
       document.getElementById("modalImage").src = post.imagem;
-      document.querySelector(".nomedousuariomodal h2").textContent = post.titulo || "Título do portfólio";
-      document.querySelector(".AutMG").textContent = `${post.nome} • 0 seguidores`;
-      document.querySelector(".PotMG ").textContent = post.titulo || "Portfólio teste";
-      document.querySelector(".imagemusuariomodal img ").src = post.foto_perfil || "img/iconeperfil.svg";
-      document.querySelector(".logocomentario img").src = post.foto_perfil || "img/iconeperfil.svg";
-      document.querySelector("#comentariomodal .comentario").textContent = post.legenda || "Descrição do portfólio";
-      document.querySelector(".Nome").textContent = post.nome || "Nome do usuário";
-      document.querySelector(".NomeTitu").textContent = post.titulo || "Título do portfólio";
-       document.querySelector(".comentarioDesc").textContent = post.legenda || "Descrição do portfólio";
+      document.querySelector(".nomedousuariomodal h2").textContent =
+        post.titulo || "Título do portfólio";
+      document.querySelector(
+        ".AutMG"
+      ).textContent = `${post.nome} • 0 seguidores`;
+      document.querySelector(".PotMG ").textContent =
+        post.titulo || "Portfólio teste";
+      document.querySelector(".imagemusuariomodal img ").src =
+        post.foto_perfil || "img/iconeperfil.svg";
+      document.querySelector(".logocomentario img").src =
+        post.foto_perfil || "img/iconeperfil.svg";
+      document.querySelector("#comentariomodal .comentario").textContent =
+        post.legenda || "Descrição do portfólio";
+      document.querySelector(".Nome").textContent =
+        post.nome || "Nome do usuário";
+      document.querySelector(".NomeTitu").textContent =
+        post.titulo || "Título do portfólio";
+      document.querySelector(".comentarioDesc").textContent =
+        post.legenda || "Descrição do portfólio";
       document.getElementById("modalPort").style.display = "block";
     });
 
@@ -117,13 +134,13 @@ async function carregarPosts() {
   });
 }
 
-
-
-carregarPosts();carregarPosts();
+carregarPosts();
+carregarPosts();
 
 // Adicionar novo projeto
 
-  function adicionarlist() {
-    const container = document.querySelector('.listadeadicao');
-    container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
-  }
+function adicionarlist() {
+  const container = document.querySelector(".listadeadicao");
+  container.style.display =
+    container.style.display === "flex" ? "none" : "flex";
+}
