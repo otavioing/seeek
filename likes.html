@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <style>
+      .botao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+
+    <div>
+      <h1>Teste</h1>
+
+      <button id="likebutton" class="botao">
+        <img id="imagemcoracao" src="img/coracao.svg" alt="" />
+        <p id="numerotatallikes">0</p>
+      </button>
+    </div>
+
+    <script>
+      async function verificarLike() {
+        let userId = 9;
+        let postId = 19;
+        const resposta = await fetch(
+          `http://localhost:4500/posts/verifica-like/${userId}/${postId}`
+        );
+        const dados = await resposta.json();
+
+        var imagemCoracao = document.getElementById("imagemcoracao");
+        if (dados) {
+          imagemCoracao.src = "img/coracaop.svg";
+        } else {
+          imagemCoracao.src = "img/coracao.svg";
+        }
+
+        return dados.liked;
+      }
+
+      async function exibirlikes() {
+        let idpost = 19;
+        var numeroTotalLikes = document.getElementById("numerotatallikes");
+        const resposta = await fetch(
+          `http://localhost:4500/posts/likes/${idpost}`
+        );
+        const dados = await resposta.json();
+        numeroTotalLikes.innerText = dados[0].total_likes;
+      }
+
+      exibirlikes();
+      verificarLike();
+
+      document
+        .getElementById("likebutton")
+        .addEventListener("click", async function () {
+          let postId = 19;
+          let userId = 9;
+
+          var imagemCoracao = document.getElementById("imagemcoracao");
+          if (imagemCoracao.src.includes("coracao.svg")) {
+            imagemCoracao.src = "img/coracaop.svg";
+          } else {
+            imagemCoracao.src = "img/coracao.svg";
+          }
+
+          // função de inserção
+          async function inserirLike() {
+            const resposta = await fetch(`http://localhost:4500/posts/like`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ userId, postId }),
+            });
+            return resposta.json();
+          }
+
+          // espera o servidor processar antes de atualizar os likes
+          await inserirLike();
+          await exibirlikes();
+        });
+    </script>
+  </body>
+</html>
