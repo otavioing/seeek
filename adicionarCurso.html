@@ -218,7 +218,8 @@
     <main >
      
 
-        <section class="adicionarCurso">
+        
+            <form action="" class="adicionarCurso">
 
             <div class="ladoEsquerdo">
                 <div class="TituloCursoDiv">   
@@ -245,8 +246,74 @@
                     <button type="submit">Inserir</button>
                     <textarea name="text-new-curso" id="text-new-curso" placeholder="Descrição" oninput="autoResize(this)" class="text-new-curso"></textarea>
                 </div>
+            </div>
 
-                <div class="containeradicionaraulas">
+            <div class="ladoDireito">
+                <h4>Ferramentas</h4>
+            <div class="ferramentas">
+                <h5>Criar elementos</h5>
+                       <div class="botoesF">
+                <button>
+                  <img src="img/fotos/grade.svg" alt="" />
+                  <p>Grade</p>
+                </button>
+                <button>
+                  <img src="img/fotos/texto.svg" alt="" />
+                  <p>Texto</p>
+                </button>
+                <button>
+                  <img src="img/fotos/imagem.svg" alt="" />
+                  <p>Imagem</p>
+                </button>
+                <button>
+                  <img src="img/fotos/play.svg" alt="" />
+                  <p>Áudio/Video</p>
+                </button>
+                <div>
+                  <button class="botaoOutros">
+                    <img src="img/fotos/outros.svg" alt="" />
+                    <p>Outros</p>
+                  </button>
+                </div>
+              </div>
+
+
+                    <h5>Editar</h5>
+              <div class="botoesEdit">
+                <button>
+                  <img src="img/fotos/estilos.svg" alt="" />
+                  <p>Estilos</p>
+                </button>
+                <button>
+                  <img src="img/fotos/config.svg" alt="" />
+                  <p>Configurações</p>
+                </button>
+              </div>
+            </div>
+            <div class="Categoria">
+                <h4>Categorias</h4>
+              <div class="categorias">
+                <div class="catt">
+                  <button>Ilustração</button>
+                  <button>Foto</button>
+                  <button>Abstrato</button>
+                  <button>Design</button>
+                  <button>Futurista</button>
+                  <button>Identidade Visual</button>
+                </div>
+                <div>
+                  <button id="btn-adc-cat">
+                    Adicionar
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+            </form>
+
+        <section class="mainaulas">
+
+           <div class="containeradicionaraulas">
 
                     <button>Adicionar nova aula</button>    
                 <!-- colocar função para adicionar mais aulas e limitar -->
@@ -261,71 +328,7 @@
                     </div>
 
                 </div>
-            </div>
-
-            <div class="ladoDireito">
-                <h4>Ferramentas</h4>
-            <div class="ferramentas">
-                <h5>Criar elementos</h5>
-                    <div class="botoesF">
-                        <button>
-                        <img src="img/fotos/grade.svg" alt="" />
-                        <p>Grade</p>
-                        </button>
-                        <button>
-                        <img src="img/fotos/texto.svg" alt="" />
-                        <p>Texto</p>
-                        </button>
-                        <button>
-                        <img src="img/fotos/imagem.svg" alt="" />
-                        <p>Imagem</p>
-                        </button>
-                        <button>
-                        <img src="img/fotos/play.svg" alt="" />
-                        <p>Áudio/Video</p>
-                        </button>
-                        <div>
-                        <button class="botaoOutros">
-                            <img src="img/fotos/outros.svg" alt="" />
-                            <p>Outros</p>
-                        </button>
-                        </div>
-                    </div>
-
-                    <h5>Editar</h5>
-              <div class="botoesEdit">
-                <button>
-                  <img src="img/fotos/estilos.svg" alt="" />
-                  <p>Estilos</p>
-                </button>
-                <button>
-                  <img src="img/fotos/config.svg" alt="" />
-                  <p>Configurações</p>
-                </button>
-              </div>
-            </div>
-
-            <div class="Categoria">
-              <h4>Categorias</h4>
-              <div class="categorias">
-                <div class="catt">
-                  <button>Ilustração</button>
-                  <button>Foto</button>
-                  <button>Abstrato</button>
-                  <button>Design</button>
-                  <button>Futurista</button>
-                  <button>Identidade Visual</button>
-                </div>
-                <div>
-                  <button id="btn-adc-cat">
-                    <p>Adicionar</p>
-                  </button>
-                </div>
-              </div>
-            </div>
         </section>
-
-        
     </main>
 
     <script src="script/lfy.js"></script>
