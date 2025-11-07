@@ -1,9 +1,11 @@
 :root {
     --cinzaBase: rgb(220, 220, 220);
-
     --cinzaBasee: rgb(158, 158, 158);
-
     --cinzaBasec: rgb(215, 214, 214);
+    --cinzaE8EAF0: #E8EAF0;
+    --cinzaE2E3E8: #E2E3E8;
+    --cinzad8d8d8: #d8d8d8;
+
 
     --laranjaBase: rgb(228, 95, 16);
 
@@ -37,6 +39,7 @@
 
     --ModoEscuroBase: #1F1F1F;
     --ModoEscuroFilt: #131313;
+    --ModoEscuroFilt2: #141414;
     --ModoEscuroMesc: #656565;
     --ModoEscuroMesc2: #555555;
 
@@ -72,8 +75,9 @@ a {
 }
 
 
-.modoEscuro .containerr{
-    background-color: var(--ModoEscuroFilt);
+.modoEscuro , .modoEscuro .containerr{
+    background-color: var(--ModoEscuroBase);
+    color: white;
 }
 
 .modoEscuro .cursoInfo, .assinarCurso{
@@ -91,6 +95,13 @@ a {
 
 }
 
+.modoEscuro .aulasCursos div, .modoEscuro .headerCurso, .modoEscuro .headerassinarCurso, .modoEscuro .cursoInfo, .assinarCurso, .modoEscuro .assinarCurso{
+    background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro  .aulasCursos div, .modoEscuro .headerCurso{
+    background-color: var(--ModoEscuroFilt2);
+}
 /*----------------------------------------------------------*/
 
 .mainInfoCursos{
@@ -98,11 +109,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem;
+    padding: 2rem;
 }
 
 .containerr{
-    width: 80%;
     display: flex;
     justify-content: space-between;
     gap: 0.2rem;
@@ -112,10 +122,18 @@ a {
 
 .cursoInfo, .assinarCurso{
     width: 80%;
-    background-color: var(--cinzaBasec);
+    background-color: var(--cinzaBase);
     border: 1px solid var(--cinzaBasee);
     border-radius: 1rem;
     padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.headerCurso{
+    background-color: var(--cinzaBasec);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .cursoInfo .headerCurso{
@@ -184,6 +202,13 @@ a {
 
 .aulasCursos div{
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--cinzaBasec);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
 }
 
 .aulasCursos div img{
@@ -192,6 +217,19 @@ a {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
 }
+
+.headerassinarCurso{
+    background-color: var(--cinzaBasec);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
 
 .assinarCurso{
     width: 20%;
@@ -208,7 +246,6 @@ a {
 
 .assinarCurso button{
     padding: 0.3rem 0.5rem;
-    width: 80%;
     height: 3rem;
     border: none;
     border-radius: 0.5rem;
@@ -216,7 +253,6 @@ a {
     color: var(--brancoBase);
     font-size: 1.2rem;
     cursor: pointer;
-    margin-bottom: 1.5rem;
 }
 
 .assinarCurso .divs div{
@@ -232,6 +268,8 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+    border-top: 1px solid var(--cinzaBasee);
 }
 
 .tag{
@@ -245,9 +283,10 @@ a {
     padding: 0.3rem 0.3rem;
     height: 1.5rem;
     width: 100%;
+    margin-bottom: 0.5rem;
     border: none;
     border-radius: 0.2rem;
-    background-color: var(--azulBase);
+    background-color: var(--roxobase);
     color: var(--brancoBase);
     cursor: pointer;
     font-size: 1rem;
