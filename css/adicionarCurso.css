@@ -75,7 +75,7 @@ a {
 
 /*-------------------------------- Modo Escuro --------------------------------*/
 
-.modoEscuro , .modoEscuro .adicionarCurso{
+.modoEscuro , .modoEscuro .adicionarCurso , .modoEscuro .mainaulas{
     background-color: var(--ModoEscuroBase);
     color: var(--brancoBase);
 }
@@ -85,8 +85,9 @@ a {
     color: var(--brancoBase);
 }
 
-.modoEscuro .textoTituloCurso:hover, .modoEscuro .text-new-curso:hover, .modoEscuro .descricaocursoeinserir textarea:hover, .modoEscuro .descricaocursoeinserir button:hover {
+.modoEscuro .textoTituloCurso:hover, .modoEscuro .text-new-curso:hover, .modoEscuro .descricaocursoeinserir textarea:hover, .modoEscuro .descricaocursoeinserir button:hover , .modoEscuro , .modoEscuro .botoesF button, .modoEscuro .botoesEdit button, .modoEscuro .categorias button{
 background-color: var(--ModoEscuroMesc2);
+color: white;
 }
 
 /*-------------------------------- Fim Modo Escuro --------------------------------*/
@@ -284,6 +285,8 @@ background-color: var(--ModoEscuroMesc2);
     gap: 1rem;
     margin-bottom: 1rem;
 }
+
+/* -----adicionar aulas----- */
 
 .mainaulas{
     background-color: var(--cinzaE8EAF0);
