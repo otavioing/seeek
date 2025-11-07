@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seek - Adicionar Projeto</title>
+    <title>Seek - Adicionar Curso</title>
     <link rel="stylesheet" href="css/usuario.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/adicionarCurso.css">
     <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml" />
     <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="css/adicionarProjeto.css" />
   </head>
 
   <!-- Google tag (gtag.js) -->
@@ -27,6 +27,7 @@
   </script>
 
   <body id="todo">
+
     <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
       <button
         id="botaobarra"
@@ -214,88 +215,84 @@
       </div>
     </header>
 
-    <form id="enviararquivodopost" enctype="multipart/form-data">
-      <div class="adcProjeto" id="adcProjeto" style="display: flex">
-        <div class="containerAdcProjeto">
-          <div class="left-projeto">
-            <div class="tituloProj">
-              <textarea
-                name="textoTituloProjeto"
-                id="textoTituloProjeto"
-                placeholder="Titulo"
-                oninput="autoResize(this)"
-                class="textoTituloProjeto"
-              ></textarea>
-            </div>
-            <div class="botaoAdcImgg">
-              <p>Adicionar foto ou vídeo</p>
-              <div>
-                <label for="enviarImg" class="labelAdcImg"
-                  ><img src="img/fotos/imagem.svg" alt="" />
-                  <p>Imagem</p></label
-                >
+    <main >
+     
 
-                <input
-                  type="file"
-                  id="enviarImg"
-                  name="arquivo"
-                  accept="image/*"
-                  style="display: none"
-                />
-                <input
-                  type="file"
-                  id="enviarVid"
-                  accept="video/*"
-                  style="display: none"
-                />
+        <section class="adicionarCurso">
 
-                <label for="enviarVid"
-                  ><img src="img/fotos/videos.svg" alt="" />
-                  <p>Vídeo</p></label
-                >
-              </div>
-            </div>
-            <div class="txt-area-and-button">
-              <button type="submit">Inserir</button>
-              <textarea
-                name="text-new-post"
-                id="text-new-post"
-                placeholder="descrição"
-                oninput="autoResize(this)"
-              ></textarea>
-            </div>
-          </div>
-
-          <main class="right-projeto">
-            <h4>Ferramentas</h4>
-            <div class="ferramentas">
-              <h5>Criar elementos</h5>
-              <div class="botoesF">
-                <button>
-                  <img src="img/fotos/grade.svg" alt="" />
-                  <p>Grade</p>
-                </button>
-                <button>
-                  <img src="img/fotos/texto.svg" alt="" />
-                  <p>Texto</p>
-                </button>
-                <button>
-                  <img src="img/fotos/imagem.svg" alt="" />
-                  <p>Imagem</p>
-                </button>
-                <button>
-                  <img src="img/fotos/play.svg" alt="" />
-                  <p>Áudio/Video</p>
-                </button>
-                <div>
-                  <button class="botaoOutros">
-                    <img src="img/fotos/outros.svg" alt="" />
-                    <p>Outros</p>
-                  </button>
+            <div class="ladoEsquerdo">
+                <div class="TituloCursoDiv">   
+                <textarea name="textoTituloCurso" id="textoTituloCurso" placeholder="Titulo" oninput="autoResize(this)" class="textoTituloCurso"></textarea>
                 </div>
-              </div>
+                
+                
+                <div class="fotocurso">
+                    <p>Adicionar imagem ao Curso</p>
 
-              <h5>Editar</h5>
+                    <label for="enviarImg" class="labelAdcImg"
+                    ><img src="img/fotos/imagem.svg" alt="" />
+                    <p>Imagem</p></label>
+                    <input
+                    type="file"
+                    id="enviarImg"
+                    name="arquivo"
+                    accept="image/*"
+                    style="display: none"
+                    />
+                </div>
+
+                <div class="descricaocursoeinserir">
+                    <button type="submit">Inserir</button>
+                    <textarea name="text-new-curso" id="text-new-curso" placeholder="Descrição" oninput="autoResize(this)" class="text-new-curso"></textarea>
+                </div>
+
+                <div class="containeradicionaraulas">
+
+                    <button>Adicionar nova aula</button>    
+                <!-- colocar função para adicionar mais aulas e limitar -->
+                <!-- Exemplo de como vai ser -->
+                    <div class="AulasCursos">
+                        <input
+                        type="file"
+                        id="enviarVid"
+                        accept="video/*"
+                        style="display: none"
+                        />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="ladoDireito">
+                <h4>Ferramentas</h4>
+            <div class="ferramentas">
+                <h5>Criar elementos</h5>
+                    <div class="botoesF">
+                        <button>
+                        <img src="img/fotos/grade.svg" alt="" />
+                        <p>Grade</p>
+                        </button>
+                        <button>
+                        <img src="img/fotos/texto.svg" alt="" />
+                        <p>Texto</p>
+                        </button>
+                        <button>
+                        <img src="img/fotos/imagem.svg" alt="" />
+                        <p>Imagem</p>
+                        </button>
+                        <button>
+                        <img src="img/fotos/play.svg" alt="" />
+                        <p>Áudio/Video</p>
+                        </button>
+                        <div>
+                        <button class="botaoOutros">
+                            <img src="img/fotos/outros.svg" alt="" />
+                            <p>Outros</p>
+                        </button>
+                        </div>
+                    </div>
+
+                    <h5>Editar</h5>
               <div class="botoesEdit">
                 <button>
                   <img src="img/fotos/estilos.svg" alt="" />
@@ -307,9 +304,10 @@
                 </button>
               </div>
             </div>
-            <div class="categorias">
+
+            <div class="Categoria">
               <h4>Categorias</h4>
-              <div class="categoria">
+              <div class="categorias">
                 <div class="catt">
                   <button>Ilustração</button>
                   <button>Foto</button>
@@ -325,11 +323,10 @@
                 </div>
               </div>
             </div>
-          </main>
-        </div>
-      </div>
-    </form>
+        </section>
 
+        
+    </main>
 
     <script src="script/lfy.js"></script>
     <script src="usuario.js"></script>
@@ -341,6 +338,4 @@
     <script src="script/traducao.js"></script>
     <script src="script/criar_footer.js"></script>
     <script src="script/verificar_token.js"></script>
-
   </body>
-</html>
