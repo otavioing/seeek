@@ -99,6 +99,15 @@ a {
     background-color: var(--ModoEscuroMesc2);
 }
 
+.modoEscuro .botaoAdcImgg div label:hover{
+    background-color: var(--ModoEscuroFontV);
+    color: var(--brancoBase);
+}
+
+.modoEscuro .botaoAdcImgg div label{
+    border: 2px solid var(--ModoEscuroFontV);
+    color: var(--brancoBase);
+}
 
 /* ----------------------------------------- */
 
@@ -218,7 +227,7 @@ transform: scale(107%);
 
 .botaoAdcImgg div label{
     background: none;
-    border: 2px solid var(--azul76ADFF);
+    border: 2px solid var(--azulBase);
     border-radius: 0.6rem;
     width: 20rem;
     height: 8rem;
@@ -231,7 +240,7 @@ transform: scale(107%);
 }
 
 .botaoAdcImgg div label:hover{
-    background-color: var(--azul76ADFF);
+    background-color: var(--azulBase);
     color: var(--branco);
     transform: scale(1.05);
 }
