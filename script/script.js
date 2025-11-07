@@ -27,7 +27,7 @@ function abrirnotificacao(){
   function fecharnotificacao(){
     let notificacao = document.getElementById("caixadenotificacaofazerlogin");
   
-    notificacao.style.top = "-10rem";
+    notificacao.style.top = "-18rem";
   }
 
 

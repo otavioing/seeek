@@ -215,121 +215,175 @@
       </div>
     </header>
 
-    <main >
-     
+    <main>
+  <form action="" class="adicionarCurso">
+    <div class="ladoEsquerdo">
+      <div class="TituloCursoDiv">
+        <textarea
+          name="textoTituloCurso"
+          id="textoTituloCurso"
+          placeholder="Titulo"
+          oninput="autoResize(this)"
+          class="textoTituloCurso"
+        ></textarea>
+      </div>
 
-        
-            <form action="" class="adicionarCurso">
+      <div class="fotocurso">
+        <p>Adicionar imagem ao Curso</p>
+        <label for="enviarImg" class="labelAdcImg">
+          <img src="img/fotos/imagem.svg" alt="" />
+          <p>Imagem</p>
+        </label>
+        <input
+          type="file"
+          id="enviarImg"
+          name="arquivo"
+          accept="image/*"
+          style="display: none"
+        />
+      </div>
 
-            <div class="ladoEsquerdo">
-                <div class="TituloCursoDiv">   
-                <textarea name="textoTituloCurso" id="textoTituloCurso" placeholder="Titulo" oninput="autoResize(this)" class="textoTituloCurso"></textarea>
-                </div>
-                
-                
-                <div class="fotocurso">
-                    <p>Adicionar imagem ao Curso</p>
+      <div class="descricaocursoeinserir">
+        <button type="submit">Inserir</button>
+        <textarea
+          name="text-new-curso"
+          id="text-new-curso"
+          placeholder="Descrição"
+          oninput="autoResize(this)"
+          class="text-new-curso"
+        ></textarea>
+      </div>
+    </div>
 
-                    <label for="enviarImg" class="labelAdcImg"
-                    ><img src="img/fotos/imagem.svg" alt="" />
-                    <p>Imagem</p></label>
-                    <input
-                    type="file"
-                    id="enviarImg"
-                    name="arquivo"
-                    accept="image/*"
-                    style="display: none"
-                    />
-                </div>
-
-                <div class="descricaocursoeinserir">
-                    <button type="submit">Inserir</button>
-                    <textarea name="text-new-curso" id="text-new-curso" placeholder="Descrição" oninput="autoResize(this)" class="text-new-curso"></textarea>
-                </div>
-            </div>
-
-            <div class="ladoDireito">
-                <h4>Ferramentas</h4>
-            <div class="ferramentas">
-                <h5>Criar elementos</h5>
-                       <div class="botoesF">
-                <button>
-                  <img src="img/fotos/grade.svg" alt="" />
-                  <p>Grade</p>
-                </button>
-                <button>
-                  <img src="img/fotos/texto.svg" alt="" />
-                  <p>Texto</p>
-                </button>
-                <button>
-                  <img src="img/fotos/imagem.svg" alt="" />
-                  <p>Imagem</p>
-                </button>
-                <button>
-                  <img src="img/fotos/play.svg" alt="" />
-                  <p>Áudio/Video</p>
-                </button>
-                <div>
-                  <button class="botaoOutros">
-                    <img src="img/fotos/outros.svg" alt="" />
-                    <p>Outros</p>
-                  </button>
-                </div>
-              </div>
-
-
-                    <h5>Editar</h5>
-              <div class="botoesEdit">
-                <button>
-                  <img src="img/fotos/estilos.svg" alt="" />
-                  <p>Estilos</p>
-                </button>
-                <button>
-                  <img src="img/fotos/config.svg" alt="" />
-                  <p>Configurações</p>
-                </button>
-              </div>
-            </div>
-            <div class="Categoria">
-                <h4>Categorias</h4>
-              <div class="categorias">
-                <div class="catt">
-                  <button>Ilustração</button>
-                  <button>Foto</button>
-                  <button>Abstrato</button>
-                  <button>Design</button>
-                  <button>Futurista</button>
-                  <button>Identidade Visual</button>
-                </div>
-                <div>
-                  <button id="btn-adc-cat">
-                    Adicionar
-                  </button>
-                </div>
-              </div>
-            </div>
+    <div class="ladoDireito">
+      <h4>Ferramentas</h4>
+      <div class="ferramentas">
+        <h5>Criar elementos</h5>
+        <div class="botoesF">
+          <button>
+            <img src="img/fotos/grade.svg" alt="" />
+            <p>Grade</p>
+          </button>
+          <button>
+            <img src="img/fotos/texto.svg" alt="" />
+            <p>Texto</p>
+          </button>
+          <button>
+            <img src="img/fotos/imagem.svg" alt="" />
+            <p>Imagem</p>
+          </button>
+          <button>
+            <img src="img/fotos/play.svg" alt="" />
+            <p>Áudio/Video</p>
+          </button>
+          <div>
+            <button class="botaoOutros">
+              <img src="img/fotos/outros.svg" alt="" />
+              <p>Outros</p>
+            </button>
+          </div>
         </div>
-            </form>
 
-        <section class="mainaulas">
+        <h5>Editar</h5>
+        <div class="botoesEdit">
+          <button>
+            <img src="img/fotos/estilos.svg" alt="" />
+            <p>Estilos</p>
+          </button>
+          <button>
+            <img src="img/fotos/config.svg" alt="" />
+            <p>Configurações</p>
+          </button>
+        </div>
+      </div>
 
-           <div class="containeradicionaraulas">
+      <div class="Categoria">
+        <h4>Categorias</h4>
+        <div class="categorias">
+          <div class="catt">
+            <button>Ilustração</button>
+            <button>Foto</button>
+            <button>Abstrato</button>
+            <button>Design</button>
+            <button>Futurista</button>
+            <button>Identidade Visual</button>
+          </div>
+          <div>
+            <button id="btn-adc-cat">Adicionar</button>
+          </div>
+        </div>
+      </div>
 
-                    <button>Adicionar nova aula</button>    
-                <!-- colocar função para adicionar mais aulas e limitar -->
-                <!-- Exemplo de como vai ser -->
-                    <div class="AulasCursos">
-                        <input
-                        type="file"
-                        id="enviarVid"
-                        accept="video/*"
-                        style="display: none"
-                        />
-                    </div>
+      <div class="Parametros">
+        <h4>Parametros</h4>
+        <div class="parametro">
+          <div class="parame">
+            <div class="paramegrup">
+              <label for="nivelCurso">Nível do Curso</label>
+              <select name="nivelCurso" id="nivelCurso">
+                <option value="iniciante">Iniciante</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+              </select>
+            </div>
 
-                </div>
-        </section>
-    </main>
+            <div class="paramegrup">
+              <label for="precoCurso">Preço do Curso</label>
+              <select name="precoCurso" id="precoCurso">
+                <option value="gratuito">Gratuito</option>
+                <option value="pago">Pago</option>
+              </select>
+            </div>
+
+            <div class="paramegrup">
+              <label for="quantidadeVagas">Quantidade de Vagas</label>
+              <input
+                type="number"
+                id="quantidadeVagas"
+                name="quantidadeVagas"
+                min="1"
+                max="1000"
+              />
+            </div>
+
+            <div class="paramegrup">
+              <label for="audioCurso">Áudio do Curso</label>
+              <select name="audioCurso" id="audioCurso">
+                <option value="portugues">Português</option>
+                <option value="ingles">Inglês</option>
+                <option value="espanhol">Espanhol</option>
+              </select>
+            </div>
+
+            <div class="paramegrup">
+              <label for="legendaCurso">Legenda Curso</label>
+              <select name="legendaCurso" id="legendaCurso">
+                <option value="portugues">Português</option>
+                <option value="ingles">Inglês</option>
+                <option value="espanhol">Espanhol</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form> <!-- FECHAMENTO CORRETO DO FORM -->
+
+  <section class="mainaulas">
+    <div class="containeradicionaraulas">
+      <button>Adicionar nova aula</button>
+      <div class="AulasCursos">
+        <input
+          type="file"
+          id="enviarVid"
+          accept="video/*"
+          style="display: none"
+        />
+      </div>
+    </div>
+  </section>
+</main>
+
 
     <script src="script/lfy.js"></script>
     <script src="usuario.js"></script>

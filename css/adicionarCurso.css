@@ -80,12 +80,12 @@ a {
     color: var(--brancoBase);
 }
 
-.modoEscuro .textoTituloCurso, .modoEscuro .text-new-curso , .modoEscuro .fotocurso, .modoEscuro .descricaocursoeinserir button, .modoEscuro .containeradicionaraulas button, .modoEscuro .ferramentas, .modoEscuro .categorias{
+.modoEscuro .textoTituloCurso, .modoEscuro .text-new-curso , .modoEscuro .fotocurso, .modoEscuro .descricaocursoeinserir button, .modoEscuro .containeradicionaraulas button, .modoEscuro .ferramentas, .modoEscuro .categorias, .modoEscuro .parametro{
     background-color: var(--ModoEscuroFilt);
     color: var(--brancoBase);
 }
 
-.modoEscuro .textoTituloCurso:hover, .modoEscuro .text-new-curso:hover, .modoEscuro .descricaocursoeinserir textarea:hover, .modoEscuro .descricaocursoeinserir button:hover , .modoEscuro , .modoEscuro .botoesF button, .modoEscuro .botoesEdit button, .modoEscuro .categorias button, .containeradicionaraulas button:hover{
+.modoEscuro .textoTituloCurso:hover, .modoEscuro .text-new-curso:hover, .modoEscuro .descricaocursoeinserir textarea:hover, .modoEscuro .descricaocursoeinserir button:hover , .modoEscuro , .modoEscuro .botoesF button, .modoEscuro .botoesEdit button, .modoEscuro .categorias button, .containeradicionaraulas button:hover , .modoEscuro .paramegrup , .modoEscuro .paramegrup select , .modoEscuro .paramegrup input{
 background-color: var(--ModoEscuroMesc2);
 color: white;
 }
@@ -179,10 +179,10 @@ color: white;
     margin-bottom: 1rem;
 }
 
-.ferramentas, .categorias{
+.ferramentas, .categorias, .parametro{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 0.6rem;
-    padding: 0.5rem 0 4rem 0;
+    padding: 0.5rem 0 2rem 0;
     background-color: var(--cinzaE2E3E8);
 }
 
@@ -274,8 +274,8 @@ color: white;
     padding: 0 2rem;
 }
 
-.Categoria{
-    margin-top: 5rem;
+.Categoria h4, .Parametros h4{
+    margin-bottom: 1rem;
 }
 
 .categorias{
@@ -296,7 +296,7 @@ color: white;
     border-radius: 0.4rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     resize: none;
-    background-color: var(--cinzaE2E3E8);
+    background-color: var(--cinzaE8EAF0);
     outline: none;
     transition: 0.3s;
     margin-bottom: 0.6rem;
@@ -307,6 +307,50 @@ color: white;
     break-inside: avoid-column;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+.parame{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.paramegrup{
+    width: auto;
+    height: 3rem;
+    background: none;
+    border: none;
+    color: var(--preto);
+    font-size: clamp(1rem, 1.8vh, 3rem);
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    resize: none;
+    background-color: var(--cinzaE8EAF0);
+    outline: none;
+    transition: 0.3s;
+    margin: 0.6rem 0.3rem 0 0.3rem;
+}
+
+.paramegrup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paramegrup select , .paramegrup input{
+    width: 40%;
+    height: 3rem;
+    background: none;
+    border: none;
+    color: var(--preto);
+    font-size: clamp(1rem, 1.8vh, 3rem);
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    resize: none;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 /* -----adicionar aulas----- */

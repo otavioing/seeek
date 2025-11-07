@@ -2052,6 +2052,10 @@ footer {
         margin: 0;
     }
     
+    .caixadenotificacaofazerlogin{
+        left: 35%;
+        margin-top: 8rem;
+    }
 
 }
 
@@ -2070,6 +2074,11 @@ footer {
     .modal-nav button img {
         width: 40%;
         height: 40%;
+    }
+
+     .caixadenotificacaofazerlogin{
+        left: 30%;
+        margin-top: 8rem;
     }
 
 }
@@ -2102,6 +2111,12 @@ footer {
     .areaDePesquisa .closeSearchArea {
         font-size: 4rem;
     }
+
+    .caixadenotificacaofazerlogin{
+        left: 25%;
+        margin-top: 8rem;
+    }
+
 
 }
 
@@ -2146,6 +2161,12 @@ footer {
         width: 24rem;
     }
 
+    .caixadenotificacaofazerlogin{
+        left: 20%;
+        margin-top: 8rem;
+    }
+
+
 }
 
 @media screen and (max-width: 600px) {
@@ -2157,6 +2178,12 @@ footer {
     .imgPerfilEmpresa{
         width: 40%;
     }
+
+      .caixadenotificacaofazerlogin{
+        left: 15%;
+        margin-top: 8rem;
+    }
+
 
 }
 
@@ -2262,6 +2289,12 @@ footer {
         width: 24rem;
     }
 
+      .caixadenotificacaofazerlogin{
+        left: 10%;
+        margin-top: 8rem;
+    }
+
+
 
 }
 
@@ -2319,6 +2352,10 @@ footer {
         height: 100%;
     }
 
+  .caixadenotificacaofazerlogin{
+        left: 5%;
+        margin-top: 8rem;
+    }
 
 }
 
@@ -2406,6 +2443,11 @@ footer {
 
     .cancelarTipoUser p, .cancelarOuConfirmar button{
         font-size: 0.8rem;
+    }
+    
+    .caixadenotificacaofazerlogin{
+        left: 2%;
+        margin-top: 8rem;
     }
 
 }
