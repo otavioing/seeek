@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
 // escolher tipo de conta
 const formpadrao = document.getElementById("escolheruserpadrao");
@@ -304,4 +304,4 @@ cadastroForm.addEventListener("submit", async (e) => {
     });
   });
   
-});
+// });
