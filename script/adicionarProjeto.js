@@ -7,7 +7,7 @@ form.addEventListener('submit', async (e) => {
   const descricao = document.getElementById('text-new-post').value;
   const titulo = document.getElementById('textoTituloProjeto').value;
   const user_id = usuario.id;
-  const categoria = document.querySelector('input[name="categoria"]:checked')?.value;
+  const id_categoria = document.querySelector('input[name="categoria"]:checked')?.value;
   alert(categoria); 
 
   const formData = new FormData();
@@ -15,7 +15,7 @@ form.addEventListener('submit', async (e) => {
   formData.append("legenda", descricao);
   formData.append("titulo", titulo);
   formData.append("user_id", user_id);
-  formData.append("categoria", categoria);
+  formData.append("id_categoria", id_categoria);
 
   try {
     const response = await fetch("http://localhost:4500/posts", {
