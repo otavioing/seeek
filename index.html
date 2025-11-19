@@ -90,7 +90,7 @@
     </div>
     <div id="usersite" class="usersite">
       <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
-       <p id="nome_user"></p>
+      <p id="nome_user"></p>
       <button onclick="abrirMenu()">
         <img id="img_user" src="img/user2.svg" alt="User" />
       </button>
@@ -165,12 +165,13 @@
       <div class="botaomodoescuro">
         <label for=""><img src="img/lua.png" alt="Lua" /></label>
         <div class="checkbox-con">
-          <input  onclick="MudarModos()" id="checkbox" type="checkbox"/>
+          <input onclick="MudarModos()" id="checkbox" type="checkbox" />
         </div>
         <label for=""><img src="img/sol.png" alt="Sol" /></label>
       </div>
       <div id="diventrarsair" class="divmenuperfil">
-        <button id="sairdomenuperfil" class="sairP"><a href="login.html" ><span class="LoginPerfil">Login</span></a></button>
+        <button id="sairdomenuperfil" class="sairP"><a href="login.html"><span
+              class="LoginPerfil">Login</span></a></button>
       </div>
     </div>
   </header>
@@ -194,7 +195,7 @@
         <span id="botaofazerloginconfirmar" class="btn-confirm"><a href="login.html">fazer login</a></span>
       </div>
     </div>
-    
+
     <!---------- Caixa de Seleção de Usuário ------- -->
 
     <div class="container1" id="user-box">
@@ -209,35 +210,35 @@
         <div class="container1p">
           <p>Por favor, selecione a opção que mais se encaixa com você</p>
         </div>
-        
+
         <div class="user-options-pai">
           <div class="user-options">
             <div class="tiposusuario">
-                <form action="" id="escolheruserpadrao">
+              <form action="" id="escolheruserpadrao">
                 <button type="submit">
                   <img src="img/user2.svg" alt="User" />
                 </button>
               </form>
-                <p>Usuário(a) Padrão</p>
-              </div>
-  
-            
-            <div class="tiposusuario">
-                <form action="" id="escolheruserempresa">
-                <button type="submit">
-                  <img src="img/user2.svg" alt="User" />
-                </button>
-              </form>
-                <p>Usuário(a) Empresarial</p>
-              </div>
+              <p>Usuário(a) Padrão</p>
             </div>
-  
-            <div class="setaCorfirmar">
-              <button id="pularTipoUser">
-                <p>Pular</p><img src="/img/setaparacima.svg" alt="seta" />
-              </button>
+
+
+            <div class="tiposusuario">
+              <form action="" id="escolheruserempresa">
+                <button type="submit">
+                  <img src="img/user2.svg" alt="User" />
+                </button>
+              </form>
+              <p>Usuário(a) Empresarial</p>
             </div>
           </div>
+
+          <div class="setaCorfirmar">
+            <button id="pularTipoUser">
+              <p>Pular</p><img src="/img/setaparacima.svg" alt="seta" />
+            </button>
+          </div>
+        </div>
 
 
         <div class="cancelarTipoUser" id="cancelarTipoUser">
@@ -253,8 +254,8 @@
       <div id="caixadenotificacaocompletarcadastro" class="caixadenotificacaocompletarcadastro">
         <h2>Não é possivel fazer isso agora</h2>
         <p>Você precisa completar o cadastro antes de fechar esta janela.</p>
-    </div>
-    
+      </div>
+
       <!-- Caixa  do tipo de usuario-->
       <div class="confirmation-container" id="confirmation-box">
         <div class="titulocadastro1">
@@ -264,64 +265,65 @@
           </button>
         </div>
         <p class="pp">Antes de prossseguir, preencha os dados abaixo</p>
-<form action="" id="formulariocaixaupdate">
-        <div class="form">
-          <div class="left-section">
-            <div class="profile-photo">
-              <div class="photo-placeholder">
-                <label id="labeladdfoto" for="cadastroFoto" style="text-align: center;">Adicionar foto de perfil</label>
-                <img class="photo-dinamica" id="preview" src="" alt="">
-                <input style="display: none;" type="file" id="cadastroFoto" accept="image/*" />  
+        <form action="" id="formulariocaixaupdate">
+          <div class="form">
+            <div class="left-section">
+              <div class="profile-photo">
+                <div class="photo-placeholder">
+                  <label id="labeladdfoto" for="cadastroFoto" style="text-align: center;">Adicionar foto de
+                    perfil</label>
+                  <img class="photo-dinamica" id="preview" src="" alt="">
+                  <input style="display: none;" type="file" id="cadastroFoto" accept="image/*" />
 
-                <script>
-  const inputFoto = document.getElementById("cadastroFoto");
-  const preview = document.getElementById("preview");
-  const labelFoto = document.getElementById("labeladdfoto");
+                  <script>
+                    const inputFoto = document.getElementById("cadastroFoto");
+                    const preview = document.getElementById("preview");
+                    const labelFoto = document.getElementById("labeladdfoto");
 
-  inputFoto.addEventListener("change", function () {
-    const arquivo = this.files[0];
-    if (arquivo) {
-      const leitor = new FileReader();
-      leitor.onload = function (e) {
-        preview.src = e.target.result;
-        preview.style.display = "block";
-        labelFoto.style.display = "none"; // Esconde o label após a seleção da foto
+                    inputFoto.addEventListener("change", function () {
+                      const arquivo = this.files[0];
+                      if (arquivo) {
+                        const leitor = new FileReader();
+                        leitor.onload = function (e) {
+                          preview.src = e.target.result;
+                          preview.style.display = "block";
+                          labelFoto.style.display = "none"; // Esconde o label após a seleção da foto
 
-      };
-      leitor.readAsDataURL(arquivo);
-    }
-  });
-</script>
+                        };
+                        leitor.readAsDataURL(arquivo);
+                      }
+                    });
+                  </script>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="updatenomeuser">OBRIGATÓRIO<span class="required">*</span></label>
+                <input type="text" id="updatenomeuser" placeholder="Nome de Usuário" />
+                <label for="updateprofissao"></label>
+                <input type="text" id="updateprofissao" placeholder="Sua Profissão" />
               </div>
             </div>
-            <div class="input-group">
-              <label for="updatenomeuser">OBRIGATÓRIO<span class="required">*</span></label>
-              <input type="text" id="updatenomeuser" placeholder="Nome de Usuário" />
-              <label for="updateprofissao"></label>
-              <input type="text" id="updateprofissao" placeholder="Sua Profissão" />
-            </div>
-          </div>
 
-          <div class="right-section">
-            <div class="input-group">
-              <label class="Descricao1" for="updatedescricao">Descrição</label>
-              <textarea id="updatedescricao" placeholder="Descrição"></textarea>
-            </div>
-            <div class="certficateslabel">
-              <label>Certificados</label>
-            </div>
-            <div class="certificates">
-              <div class="certficatess">
-                <button class="add-section-btn">
-                  Adicionar seção ao perfil
-                </button>
-                <button class="add-icon">+</button>
+            <div class="right-section">
+              <div class="input-group">
+                <label class="Descricao1" for="updatedescricao">Descrição</label>
+                <textarea id="updatedescricao" placeholder="Descrição"></textarea>
+              </div>
+              <div class="certficateslabel">
+                <label>Certificados</label>
+              </div>
+              <div class="certificates">
+                <div class="certficatess">
+                  <button class="add-section-btn">
+                    Adicionar seção ao perfil
+                  </button>
+                  <button class="add-icon">+</button>
+                </div>
               </div>
             </div>
+            <input type="submit" id="submit" value="Salvar" class="submit-button" />
           </div>
-          <input type="submit" id="submit" value="Salvar" class="submit-button" />
-        </div>
-      </form>
+        </form>
 
         <div class="setaCorfirmar">
           <button id="voltarparaselecaotipouser"><img src="/img/setaparacima.svg" alt="seta" />
@@ -329,7 +331,7 @@
           </button>
         </div>
 
-        
+
 
       </div>
 
@@ -345,7 +347,7 @@
 
 
         <form action="" id="completarcadastroempresa">
-        <div class="empresarialDiv">
+          <div class="empresarialDiv">
 
 
             <div class="imgPerfilEmpresa">
@@ -355,85 +357,86 @@
                   <img class="photo-dinamica" id="previewempresa" src="" alt="">
                   <input type="file" id="addfotoempresa" style="display: none;" accept="image/*">
                 </div>
-                  <script>
-  const inputEmpresa = document.getElementById("addfotoempresa");
-  const previewEmpresa = document.getElementById("previewempresa");
-  const labelEmpresa = document.getElementById("labelfotoempresa");
+                <script>
+                  const inputEmpresa = document.getElementById("addfotoempresa");
+                  const previewEmpresa = document.getElementById("previewempresa");
+                  const labelEmpresa = document.getElementById("labelfotoempresa");
 
-  inputEmpresa.addEventListener("change", function () {
-    const arquivo = this.files[0];
-    if (arquivo) {
-      const leitor = new FileReader();
-      leitor.onload = function (e) {
-        previewEmpresa.src = e.target.result;
-        labelEmpresa.style.display = "none"; // Esconde o label após a seleção da foto
-        previewEmpresa.style.display = "block";
-      };
-      leitor.readAsDataURL(arquivo);
-    }
-  });
-</script>
+                  inputEmpresa.addEventListener("change", function () {
+                    const arquivo = this.files[0];
+                    if (arquivo) {
+                      const leitor = new FileReader();
+                      leitor.onload = function (e) {
+                        previewEmpresa.src = e.target.result;
+                        labelEmpresa.style.display = "none"; // Esconde o label após a seleção da foto
+                        previewEmpresa.style.display = "block";
+                      };
+                      leitor.readAsDataURL(arquivo);
+                    }
+                  });
+                </script>
                 <textarea class="men" name="mensagem" id="descricaodaempresa" placeholder="Descrição"></textarea>
               </div>
             </div>
-            
+
             <!-----------------inputs----------------- -->
             <div class="inputsEmpresarial">
               <p class="InfoEmp">Informações</p>
               <div class="input-group2">
-                
-                <div class="inputsEmp">
-                <label for="razaosocial"><span class="required">OBRIGATÓRIO*</span></label>
-                <input type="text" id="razaosocial" name="username" placeholder="Razão social da Empresa" />
-                
-                <label for="telefonedaempresa"><span class="required">OBRIGATÓRIO*</span></label>
-                <input type="tell" id="telefonedaempresa" name="profession" placeholder="Telefone" />
-                
-                <label for="nomefantasia"><span class="required">OBRIGATÓRIO*</span></label>
-                <input type="text" id="nomefantasia" placeholder="Nome fantasia">
-                
-                
-                <button>Adicionar Endereço</button>
-              </div>
-              
-              <div class="inputsEmp">
-                <label for="categoriadaempresa"><span class="required">OBRIGATÓRIO*</span></label>
-                <input type="text" id="categoriadaempresa" name="categoria" placeholder="Categoria do negócio" />
-                
-                <label for="nomerodefuncionarios"><span class="required">OBRIGATÓRIO*</span></label>
-                <input type="number" id="nomerodefuncionarios" name="funcionarios" placeholder="Número de funcionarios">
-                
-                <label for="cnpjdaempresa"><span class="required">OBRIGATÓRIO*</span></label>
-                <input type="text" name="" id="cnpjdaempresa" placeholder="Número do cnpj">
-                
-                
-                <button>Data de fundação</button>
-              </div>
-              
-            </div>
-            
-            <p class="complementarEmp">Complementar</p>
-            <div class="adcSecEmp">
-              <button class="add-section-btn">
-                Adicionar seção ao perfil
-              </button>
-              <button class="add-icon">+</button>
-            </div>
 
-          </div>
-          <input type="submit">
+                <div class="inputsEmp">
+                  <label for="razaosocial"><span class="required">OBRIGATÓRIO*</span></label>
+                  <input type="text" id="razaosocial" name="username" placeholder="Razão social da Empresa" />
+
+                  <label for="telefonedaempresa"><span class="required">OBRIGATÓRIO*</span></label>
+                  <input type="tell" id="telefonedaempresa" name="profession" placeholder="Telefone" />
+
+                  <label for="nomefantasia"><span class="required">OBRIGATÓRIO*</span></label>
+                  <input type="text" id="nomefantasia" placeholder="Nome fantasia">
+
+
+                  <button>Adicionar Endereço</button>
+                </div>
+
+                <div class="inputsEmp">
+                  <label for="categoriadaempresa"><span class="required">OBRIGATÓRIO*</span></label>
+                  <input type="text" id="categoriadaempresa" name="categoria" placeholder="Categoria do negócio" />
+
+                  <label for="nomerodefuncionarios"><span class="required">OBRIGATÓRIO*</span></label>
+                  <input type="number" id="nomerodefuncionarios" name="funcionarios"
+                    placeholder="Número de funcionarios">
+
+                  <label for="cnpjdaempresa"><span class="required">OBRIGATÓRIO*</span></label>
+                  <input type="text" name="" id="cnpjdaempresa" placeholder="Número do cnpj">
+
+
+                  <button>Data de fundação</button>
+                </div>
+
+              </div>
+
+              <p class="complementarEmp">Complementar</p>
+              <div class="adcSecEmp">
+                <button class="add-section-btn">
+                  Adicionar seção ao perfil
+                </button>
+                <button class="add-icon">+</button>
+              </div>
+
+            </div>
+            <input type="submit">
 
         </form>
 
-        </div>
-
-        <div class="setaCorfirmar">
-          <button><img src="/img/setaparacima.svg" alt="seta" />
-            <p>Voltar</p>
-          </button>
-        </div>
-
       </div>
+
+      <div class="setaCorfirmar">
+        <button><img src="/img/setaparacima.svg" alt="seta" />
+          <p>Voltar</p>
+        </button>
+      </div>
+
+    </div>
 
     </div>
 
@@ -446,13 +449,16 @@
 
       <button class="buttonFiltro">
         <svg viewBox="0 0 68 64" class="modoEscuroImagem1">
-            <path d="M11.3219 13.2295H45.2871" />
-            <path d="M11.3219 31.7505H28.3045" />
-            <path d="M39.6262 31.7505H56.6088" />
-            <path d="M22.6437 50.2715H56.6089" />
-            <path d="M50.948 18.5216C54.0744 18.5216 56.6088 16.1523 56.6088 13.2298C56.6088 10.3072 54.0744 7.93799 50.948 7.93799C47.8216 7.93799 45.2871 10.3072 45.2871 13.2298C45.2871 16.1523 47.8216 18.5216 50.948 18.5216Z" />
-            <path d="M33.9653 37.0426C37.0917 37.0426 39.6262 34.6733 39.6262 31.7508C39.6262 28.8282 37.0917 26.459 33.9653 26.459C30.8389 26.459 28.3044 28.8282 28.3044 31.7508C28.3044 34.6733 30.8389 37.0426 33.9653 37.0426Z" />
-            <path d="M16.9828 55.564C20.1092 55.564 22.6436 53.1948 22.6436 50.2723C22.6436 47.3497 20.1092 44.9805 16.9828 44.9805C13.8564 44.9805 11.3219 47.3497 11.3219 50.2723C11.3219 53.1948 13.8564 55.564 16.9828 55.564Z" />
+          <path d="M11.3219 13.2295H45.2871" />
+          <path d="M11.3219 31.7505H28.3045" />
+          <path d="M39.6262 31.7505H56.6088" />
+          <path d="M22.6437 50.2715H56.6089" />
+          <path
+            d="M50.948 18.5216C54.0744 18.5216 56.6088 16.1523 56.6088 13.2298C56.6088 10.3072 54.0744 7.93799 50.948 7.93799C47.8216 7.93799 45.2871 10.3072 45.2871 13.2298C45.2871 16.1523 47.8216 18.5216 50.948 18.5216Z" />
+          <path
+            d="M33.9653 37.0426C37.0917 37.0426 39.6262 34.6733 39.6262 31.7508C39.6262 28.8282 37.0917 26.459 33.9653 26.459C30.8389 26.459 28.3044 28.8282 28.3044 31.7508C28.3044 34.6733 30.8389 37.0426 33.9653 37.0426Z" />
+          <path
+            d="M16.9828 55.564C20.1092 55.564 22.6436 53.1948 22.6436 50.2723C22.6436 47.3497 20.1092 44.9805 16.9828 44.9805C13.8564 44.9805 11.3219 47.3497 11.3219 50.2723C11.3219 53.1948 13.8564 55.564 16.9828 55.564Z" />
         </svg>
         <span class="PerB"> Personalizar a Galeria </span>
       </button>
@@ -463,23 +469,25 @@
     <section class="areaDePesquisa">
       <span class="closeSearchArea">&times;</span>
       <input type="text" placeholder="Pesquisar" class="pesquisarindex">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum debitis hic id tempore recusandae provident sunt velit deleniti! Fugit qui dicta suscipit omnis architecto eaque necessitatibus asperiores facere cumque delectus.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum debitis hic id tempore recusandae
+        provident sunt velit deleniti! Fugit qui dicta suscipit omnis architecto eaque necessitatibus asperiores facere
+        cumque delectus.</p>
 
       <h2>Seguindo</h2>
 
       <div class="imagensFiltro">
-          <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
-          <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
-          <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
-          <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
-          <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
-          <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
+        <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
+        <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
+        <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
+        <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
+        <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
+        <img src="img/banner-designer-grafico.png" alt="Imagem do filtro" class="imgFiltro">
       </div>
-  </section>
+    </section>
 
-  
 
-<div id="gride" class="gride">
+
+    <div id="gride" class="gride">
     </div>
 
     <!--Início modal-->
@@ -547,45 +555,45 @@
                 </div>
               </div>
               <p class="comentario">
-              comentário do usuário sobre o portfólio exibido no modal.
+                comentário do usuário sobre o portfólio exibido no modal.
               </p>
             </div>
           </div>
           <div class="comentariomodalRight">
             <div class="userecomentarioRight">
               <div class="logocomentario">
-             <div>
+                <div>
                   <h2 class="nomeusuariocomentario"><span class="NomeTitu">Nome do Usuário</span></h2>
                 </div>
               </div>
               <p class="comentarioDesc">
-              comentário do usuário sobre o portfólio exibido no modal.
+                comentário do usuário sobre o portfólio exibido no modal.
               </p>
             </div>
 
 
-               </div>
           </div>
-
-          
-    <!--Fim modal-->
-    
-    <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
-      <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
         </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
-      </div>
 
 
-    </div>
-  
+        <!--Fim modal-->
+
+        <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
+          <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+        </div>
+
+
+      </div>
+
   </main>
 
   <!--main tendências-->
@@ -597,17 +605,21 @@
   </button>
 
   <div onclick="adicionarlist()">
-  <section class="adicionarProj"  > 
- <div class="adimais"></div>      
-  </section>
+    <section class="adicionarProj">
+      <div class="adimais"></div>
+    </section>
   </div>
 
   <div class="listadeadicao">
-    <a href="adicionarProjeto.html"><div class="adiciona"> <img src="img/icones/editar.svg" alt=""> </div></a>
-    <a href="adicionarCurso.html"><div class="adiciona"></div> </a>
+    <a href="adicionarProjeto.html">
+      <div class="adiciona"> <img src="img/icones/editar.svg" alt=""> </div>
+    </a>
+    <a href="adicionarCurso.html">
+      <div class="adiciona"></div>
+    </a>
     <div class="adiciona"></div>
   </div>
- 
+
   <script src="script/index.js"></script>
   <script src="script/lfy.js"></script>
   <script src="script/user_logado.js"></script>

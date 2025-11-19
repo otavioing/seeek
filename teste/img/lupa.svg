@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 666.7 666.7">
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+      }
+
+      .st0, .st1 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 66.7px;
+      }
+
+      .st1 {
+        fill: #fff;
+        stroke: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Interface__x2F__Magnifying_x5F_Glass_x5F_Minus">
+    <path id="Vector" class="st0" d="M166.7,266.7h200M433.3,433.3l200,200M266.7,500c-128.9,0-233.3-104.5-233.3-233.3S137.8,33.3,266.7,33.3s233.3,104.5,233.3,233.3-104.5,233.3-233.3,233.3Z"/>
+    <circle class="st1" cx="264.8" cy="256.5" r="142.7"/>
+  </g>
+</svg>

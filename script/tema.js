@@ -22,14 +22,39 @@ if (usuarioLogado) {
 // Depois define as funções normalmente
 function MudarModos() {
   let corpo = document.getElementById("todo");
+
   if (corpo.classList.contains("modoEscuro")) {
     ModoClaro();
     atualizarTemaNoBanco("claro");
+
+    // atualiza o select
+    document.getElementById("temaSelectConfig").value = "claro";
   } else {
     ModoEscuro();
     atualizarTemaNoBanco("escuro");
+
+    // atualiza o select
+    document.getElementById("temaSelectConfig").value = "escuro";
   }
 }
+
+function TrocaTema(valor) {
+  if (valor === "escuro") {
+    ModoEscuro();
+    atualizarTemaNoBanco("escuro");
+  } else {
+    ModoClaro();
+    atualizarTemaNoBanco("claro");
+  }
+
+  // Sincroniza checkbox se existir
+  const checkbox = document.getElementById("checkbox");
+  if (checkbox) {
+    checkbox.checked = valor !== "escuro";
+  }
+}
+
+
 
 function atualizarTemaNoBanco(novoTema) {
   const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
@@ -66,13 +91,24 @@ function atualizarTemaNoBanco(novoTema) {
 
 
 function aplicarModo() {
-  if (localStorage.getItem("modo") === "escuro") {
+  const modo = localStorage.getItem("modo");
+
+  if (modo === "escuro") {
     ModoEscuro();
   } else {
-    ModoClaro(); 
-    document.getElementById("checkbox").checked = true;
+    ModoClaro();
+  }
+
+  // select mostra o modo atual
+  document.getElementById("temaSelectConfig").value = modo;
+
+  // checkbox também sincroniza
+  const checkbox = document.getElementById("checkbox");
+  if (checkbox) {
+    checkbox.checked = modo !== "escuro";
   }
 }
+
 
 // aplica o modo quando a página carregar
 aplicarModo();
