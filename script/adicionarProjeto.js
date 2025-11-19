@@ -8,8 +8,6 @@ form.addEventListener('submit', async (e) => {
   const titulo = document.getElementById('textoTituloProjeto').value;
   const user_id = usuario.id;
   const id_categoria = document.querySelector('input[name="categoria"]:checked')?.value;
-  alert(categoria); 
-
   const formData = new FormData();
   formData.append("arquivo", arquivo);
   formData.append("legenda", descricao);
@@ -39,14 +37,14 @@ form.addEventListener('submit', async (e) => {
 });
 
 
-function abrirnotificacaopostenviado() {
-  let notificacao = document.getElementById("caixadenotificacaopostrealizadocomsucesso");
+// function abrirnotificacaopostenviado() {
+//   let notificacao = document.getElementById("caixadenotificacaopostrealizadocomsucesso");
 
-  notificacao.style.top = "0rem";
-  setTimeout(() => {
-    notificacao.style.top = "-10rem";
-  }, 3000);
-}
+//   notificacao.style.top = "0rem";
+//   setTimeout(() => {
+//     notificacao.style.top = "-10rem";
+//   }, 3000);
+// }
 // <div id="caixadenotificacaopostrealizadocomsucesso" class="caixadenotificacaorealizadocomsucesso">
 //  <h2>Post enviado com sucesso!</h2>
 //  <p>Seu conteúdo foi publicado e já pode ser visualizado por outros usuários.</p>
