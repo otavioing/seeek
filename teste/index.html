@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+  <header class="inicio">
+    <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
+      <span class="linha1"></span>
+      <span class="linha2"></span>
+      <span class="linha3"></span>
+    </button>
+    <div class="logosite">
+      <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek" /></a>
+    </div>
+    <div class="userhover">
+      <button>
+        <img id="img_useres" onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu" />
+      </button>
+    </div>
+    <nav class="navsite">
+      <div id="headerexplurar">
+        <a href="index.html" class="nav-link ExpA">Explorar</a>
+      </div>
+      <div id="headercursos">
+        <a href="cursos.html" class="nav-link CurA">Cursos</a>
+      </div>
+      <div id="headervagas">
+        <a href="vagas.html" class="nav-link VagA">Vagas</a>
+      </div>
+      <div class="sobrenoss">
+        <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
+      </div>
+    </nav>
+    <div class="pesquisasite">
+      <input type="text" placeholder="Pesquisar" class="Pesquisar" />
+      <a href=""><img src="img/search2.svg" alt="Lupa" /></a>
+    </div>
+    <div id="usersite" class="usersite">
+      <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
+      <p id="nome_user"></p>
+      <button onclick="abrirMenu()">
+        <img id="img_user" src="img/user2.svg" alt="User" />
+      </button>
+    </div>
+    <nav class="hamburguer" id="menu">
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="index.html">
+          <span class="ExpA">Explorar </span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="cursos.html">
+          <span class="CurA">Cursos </span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="vagas.html">
+          <span class="VagA">Vagas</span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer nav-link" href="sobre.html"><span class="SobA">Sobre Nós</span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="ajuda.html">
+          <span class="AjuF">Ajuda</span>
+        </a>
+      </div>
+      <div class="bordasuperior"></div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"><span class="AviF">Avisos</span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="avisos.html">
+          <span class="AtuF">Atualizações </span></a>
+      </div>
+      <div class="itemsdomenu">
+        <a class="botoesmenuhamburguer" href="sobre.html#contatosobre">
+          <span class="Conf">Contato </span></a>
+      </div>
+
+      <div class="itemsdomenu">
+        <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+          <option value="pt">Português</option>
+          <option value="eng">English</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+      <div class="bordasuperior"></div>
+
+      <div class="divredessociais">
+        <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"><img src="img/Linkedin.svg"
+            alt="Logo Linkedin" /></a>
+        <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
+        <a href="https://www.instagram.com/seek.oficial/"><img src="img/instagram.svg" alt="Logo instagram" /></a>
+      </div>
+      <div class="bordasuperior"></div>
+
+      <div class="direitosautoraismenu">
+        <p class="DirF">
+          Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
+        </p>
+      </div>
+    </nav>
+
+    <div id="menuperfil" class="menuperfil">
+      <div id="divmeuperfil" class="divmenuperfil">
+        <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
+      </div>
+      <div id="divconfiguracoes" class="divmenuperfil">
+        <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
+      </div>
+      <div class="botaomodoescuro">
+        <label for=""><img src="img/lua.png" alt="Lua" /></label>
+        <div class="checkbox-con">
+          <input onclick="MudarModos()" id="checkbox" type="checkbox" />
+        </div>
+        <label for=""><img src="img/sol.png" alt="Sol" /></label>
+      </div>
+      <div id="diventrarsair" class="divmenuperfil">
+        <button id="sairdomenuperfil" class="sairP"><a href="login.html"><span
+              class="LoginPerfil">Login</span></a></button>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="esquerda">
+
+      <button class="opcaoconfig" id="btnconfiggeral">
+        <img src="settings.svg" alt="Ícone de configurações" />
+        <span>Geral</span>
+      </button>
+      <button class="opcaoconfig" id="btnconfignotificacoes">
+        <img src="notifications.svg" alt="Ícone de notificações" />
+        <span>Notificações</span>
+      </button>
+      <button class="opcaoconfig" id="btnconfigseguranca">
+        <img src="security.svg" alt="Ícone de segurança" />
+        <span>Segurança</span>
+      </button>
+      <button class="opcaoconfig" id="btnconfigprivacidade">
+        <img src="settings.svg" alt="Ícone de privacidade" />
+        <span>Privacidade</span>
+      </button>
+      <button class="opcaoconfig" id="logout">
+        <img src="logout.svg" alt="Ícone de sair" />
+        <span>Sair</span>
+      </button>
+
+    </section>
+
+    <section class="direita">
+
+      <div class="configgeral" id="configgeral">
+
+        <div class="headerconfig">
+          <h3>Configurações Gerais</h3>
+          <p>Gerencie suas preferências de conta e configurações do Seek.</p>
+        </div>
+
+
+        <div class="containeropcaoselect">
+          <h4>Idioma</h4>
+          <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
+            <option value="pt">Português</option>
+            <option value="eng">English</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+
+        <div class="containeropcaoselect">
+          <h4>Tema</h4>
+          <select aria-label="Tema" name="Tema" id="temaSelectConfig" onchange="TrocaTema(this.value)">
+            <option value="claro">Claro</option>
+            <option value="escuro">Escuro</option>
+          </select>
+        </div>
+
+        <div class="containerswitches">
+          <label for="check-acessibilidade">Barra de acessibilidade</label>
+          <div class="checkbox-apple">
+            <input class="yep" id="check-acessibilidade" type="checkbox">
+            <label for="check-acessibilidade"></label>
+          </div>
+
+
+          <script>
+            // Pegar o checkbox
+            const checkboxAcess = document.getElementById("check-acessibilidade");
+
+            // Garantir que o estado do checkbox reflita o usuário logado ao carregar
+            const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+            if (usuario) {
+              checkboxAcess.checked = usuario.acessibilidade_ativa === true;
+
+              // Mostrar/ocultar a barra ao carregar
+              document.getElementById('barra-acessibilidade').style.display =
+                usuario.acessibilidade_ativa ? 'block' : 'none';
+            }
+
+            // Listener do checkbox
+            checkboxAcess.addEventListener("change", async () => {
+              const novoValor = checkboxAcess.checked; // true ou false
+
+              try {
+                // Envia para o backend
+                await fetch("http://localhost:4500/usuarios/atualizar-acessibilidade", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    id: usuario.id,
+                    acessibilidade_ativa: novoValor,
+                  }),
+                });
+
+                // Atualiza localmente
+                usuario.acessibilidade_ativa = novoValor;
+                localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+
+                // Mostra ou oculta a barra na hora
+                document.getElementById("barra-acessibilidade").style.display =
+                  novoValor ? "block" : "none";
+              } catch (erro) {
+                console.error("Erro ao atualizar acessibilidade:", erro);
+              }
+            });
+
+
+          </script>
+
+        </div>
+
+
+      </div>
+
+      <div class="confignotifacacao" id="confignotifacacao" style="display: none;">
+        <div class="headerconfig">
+          <h3>Configurações de Notificações</h3>
+          <p>Gerencie suas preferências de notificações do Seek.</p>
+        </div>
+
+        <div class="containerswitches">
+          <label for="check-email">Notificações por Email</label>
+          <div class="checkbox-apple">
+            <input class="yep" id="check-email" type="checkbox">
+            <label for="check-email"></label>
+          </div>
+        </div>
+
+        <div class="containerswitches">
+          <label for="check-push">Notificações de Atualizações</label>
+          <div class="checkbox-apple">
+            <input class="yep" id="check-push" type="checkbox">
+            <label for="check-push"></label>
+          </div>
+        </div>
+
+        <div class="containerswitches">
+          <label for="check-login">Receber notificações de login</label>
+          <div class="checkbox-apple">
+            <input class="yep" id="check-login" type="checkbox">
+            <label for="check-login"></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="configseguranca" id="configseguranca" style="display: none;">
+
+        <div class="headerconfig">
+          <h3>Configurações de Segurança</h3>
+          <p>Gerencie suas preferências de segurança do Seek.</p>
+        </div>
+
+
+        <!-- Não sei o que colocar aqui -->
+      </div>
+
+      <div class="configprivacidade" id="configprivacidade" style="display: none;">
+
+        <div class="headerconfig">
+          <h3>Configurações de Privacidade</h3>
+          <p>Gerencie suas preferências de privacidade do Seek.</p>
+        </div>
+
+        <div class="containerswitches">
+          <label for="check-busca">exibir seu perfil em resultados de busca</label>
+          <div class="checkbox-apple">
+            <input class="yep" id="check-busca" type="checkbox">
+            <label for="check-busca"></label>
+          </div>
+        </div>
+        <div class="containerswitches">
+          <label for="check-perfil">exibir nome real no perfil</label>
+          <div class="checkbox-apple">
+            <input class="yep" id="check-perfil" type="checkbox">
+            <label for="check-perfil"></label>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+    </section>
+
+
+  </main>
+
+  <script>
+    // Seleciona todos os botões
+    const botoes = document.querySelectorAll("#btnconfiggeral, #btnconfignotificacoes, #btnconfigseguranca, #btnconfigprivacidade");
+
+    // Função auxiliar para remover a classe 'ativo' de todos os botões
+    function removerAtivo() {
+      botoes.forEach(btn => btn.classList.remove("ativo"));
+    }
+
+    // Config Geral
+    document.getElementById("btnconfiggeral").addEventListener("click", function () {
+      removerAtivo();
+      this.classList.add("ativo");
+      document.getElementById("configgeral").style.display = "block";
+      document.getElementById("confignotifacacao").style.display = "none";
+      document.getElementById("configseguranca").style.display = "none";
+      document.getElementById("configprivacidade").style.display = "none";
+    });
+
+    // Config Notificações
+    document.getElementById("btnconfignotificacoes").addEventListener("click", function () {
+      removerAtivo();
+      this.classList.add("ativo");
+      document.getElementById("configgeral").style.display = "none";
+      document.getElementById("confignotifacacao").style.display = "block";
+      document.getElementById("configseguranca").style.display = "none";
+      document.getElementById("configprivacidade").style.display = "none";
+    });
+
+    // Config Segurança
+    document.getElementById("btnconfigseguranca").addEventListener("click", function () {
+      removerAtivo();
+      this.classList.add("ativo");
+      document.getElementById("configgeral").style.display = "none";
+      document.getElementById("confignotifacacao").style.display = "none";
+      document.getElementById("configseguranca").style.display = "block";
+      document.getElementById("configprivacidade").style.display = "none";
+    });
+
+    // Config Privacidade
+    document.getElementById("btnconfigprivacidade").addEventListener("click", function () {
+      removerAtivo();
+      this.classList.add("ativo");
+      document.getElementById("configgeral").style.display = "none";
+      document.getElementById("confignotifacacao").style.display = "none";
+      document.getElementById("configseguranca").style.display = "none";
+      document.getElementById("configprivacidade").style.display = "block";
+    });
+
+
+
+  </script>
+
+
+
+  <script src="js/header.js" defer async></script>
+  <script src="js/footer.js" defer async></script>
+  <script src="js/tema.js" defer async></script>
+</body>
+
+</html>

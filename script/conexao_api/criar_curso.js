@@ -1,5 +1,7 @@
 form = document.getElementById("form_criar_curso");
 
+
+
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -8,7 +10,7 @@ form.addEventListener("submit", async (event) => {
     const tituloCurso = document.getElementById("textoTituloCurso").value;
     const imagemCurso = document.getElementById("enviarImg").files[0];
     const descricaoCurso = document.getElementById("textoDescricaoCurso").value;
-    const categoria = document.querySelector('input[name="categoria"]:checked')?.value;
+    const id_categoria = document.querySelector('input[name="categoria"]:checked')?.value;
     const nivelCurso = document.getElementById("nivelCurso").value;
     const valorCurso = document.getElementById("inputValorCurso").value;
     const quantidadevagas = document.getElementById("inputVagasCurso").value;
@@ -21,7 +23,7 @@ form.addEventListener("submit", async (event) => {
     formData.append("nome_curso", tituloCurso);
     formData.append("imagem_curso", imagemCurso);
     formData.append("descricao_curso", descricaoCurso);
-    formData.append("categoria_curso", categoria);
+    formData.append("id_categoria", id_categoria);
     formData.append("nivel_curso", nivelCurso);
     formData.append("valor_curso", valorCurso);
     formData.append("quantidade_vagas", quantidadevagas);

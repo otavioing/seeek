@@ -1,0 +1,863 @@
+/*------------------------------------------------------------------------------*/
+/*-------------------------------- Explorar CSS --------------------------------*/
+/*------------------------------------------------------------------------------*/
+
+:root {
+    --cinzaBase: rgb(220, 220, 220);
+
+    --cinzaBasee: rgb(158, 158, 158);
+
+    --cinzaBasec: rgb(215, 214, 214);
+
+    --laranjaBase: rgb(228, 95, 16);
+
+    --brancoBase: rgb(255, 255, 255);
+
+    --preto: #0E0E0E;
+
+    --azulBase: #2B63F0;
+
+    --azulBasee: #00008b;
+
+    --azulBasec: rgb(116, 84, 233);
+
+    --roxobase: #942af1;
+
+    --roxoc: rgb(172, 161, 210);
+
+    --branco: #f3f3f3;
+
+    --vermelhom: #EF0000;
+
+
+
+    --ModoEscuroBase: #1F1F1F;
+    --ModoEscuroMesc: #656565;
+    --ModoEscuroFilt: #131313;
+    --ModoEscuroMesc2: #555555;
+
+    --ModoEscuroFontV: #5AB3FF;
+    --ModoEscuroFontC: #E197FF;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--brancoBase);
+}
+
+/* header>div,
+header>nav {
+    width: 20%;
+    height: 100%;
+} */
+
+
+/*-------------------------------- Header inicio --------------------------------*/
+
+header {
+    background-color: var(--preto);
+    padding: 1rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+header .logosite,
+header .navsite,
+header .pesquisasite,
+header .usersite {
+    display: flex;
+    align-items: center;
+}
+
+header .logosite {
+    width: 20%;
+    justify-content: center;
+    height: 100%;
+}
+
+header .navsite {
+    width: 20%;
+    gap: 1rem;
+}
+
+header .pesquisasite {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header .pesquisasite input {
+    border: none;
+    height: 50%;
+    width: 80%;
+    border-radius: 0.8rem;
+    outline: none;
+    padding: 1rem;
+}
+
+header .usersite {
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15%;
+}
+
+header .usersite img {
+    height: 45%;
+}
+
+header .logosite img {
+    height: 100%;
+}
+
+header .sobrenoss {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-left: 1px solid var(--brancoBase);
+    border-right: 1px solid var(--brancoBase);
+}
+
+header .hamburguer {
+    display: none;
+}
+
+header .botaoMenu{
+    display: none;
+}
+
+header .userhover {
+    display: none;
+    width: 5rem;
+}
+
+header .userhover img {
+    height: 80%;
+}
+
+header .botaoMenu{
+
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background-color: transparent;
+    border: none;
+}
+
+header .botaoMenu span{
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--azulBase);
+}
+
+body{
+    position: relative; 
+    height: 1vw;
+}
+
+/*-------------------------------- Section fy --------------------------------*/
+
+.fy{
+    /* margin-bottom: 2rem; */
+    display: block;
+    height: 1rem;
+    padding: 2rem;
+    align-items: end;
+    background-color: var(--brancoBase);
+}
+
+.fy .fyy div{
+    display: flex;
+    width: 8.6rem;
+    margin-bottom: 0.4rem;
+    border-right: 1px solid var(--azulBase);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fy .fyy .pv a{
+    display: flex;
+    color: var(--azulBase);
+    border-bottom: 1px solid var(--azulBase);
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 0.3rem;
+}
+
+.fy .fyy .seguindo a{
+    display: flex;
+    color: var(--azulBase);
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 0.3rem;
+}
+
+.fy .fyy .seguindo{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.fy .fyy{
+    display: flex;
+    border-bottom: 1px solid var(--azulBase);
+    margin-bottom: 0.7rem;
+   
+}
+
+.filtro{
+    display: flex;
+    gap: 1rem;
+    width: 7%;
+    background-color: var(--cinzaBase);
+    border-radius: 0.8rem;
+    transition: 0.3s;
+    margin: 1.3rem 1.3rem;
+    padding: 0.4rem 3rem;
+    justify-content: center;
+   
+}
+
+
+.filtro img{
+    height: 2.3rem;
+    /* margin-left: 1rem; */
+}
+
+.filtro .filtrar{
+    color: var(--azulBase);
+    font-size: 2rem;
+}
+
+
+/*-------------------------------- Main prIndex --------------------------------*/
+
+.prIndex{
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+/*-------------------------------- Main Imagens --------------------------------*/
+.gride{
+    display: grid;
+    gap: 1rem;
+    margin: 0 5% 0 5%;
+    border-radius: 0.6rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 20rem 20rem 20rem;
+    grid-template-areas: "f1 f6 f3 f8"
+                         "f5 f6 f7 f8"
+                         "f5 f2 f7 f4";
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-wrap: wrap;
+}
+.gride > div{
+    position: relative;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+.gride > div .portHover{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding-left: 1rem;
+    height: 5rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    transition: all 0.5s;
+}
+.gride > div .portHover .like{
+    display: flex;
+    flex-direction: row;
+    padding-left: 85%;
+}
+
+.gride > div .portHover p img{
+    height: 60%;
+}
+.gride > div:hover .portHover{
+    top: 0;
+}
+.gride #filho1{
+     background-image: url(img/img_port/portIndx/1.jpg);
+    background-size: cover;
+    grid-area: f1;
+    border-radius: 1.8rem;
+}
+.gride #filho2{
+    background-image: url(img/img_port/portIndx/2.jpg);
+    background-size: cover;
+    grid-area: f2;
+    border-radius: 1.8rem;
+    
+}
+.gride #filho3{
+    background-image: url(img/img_port/portIndx/3.jpg);
+    background-size: cover;
+    grid-area: f3;
+    border-radius: 1.8rem;
+}
+.gride #filho4{
+    background-image: url(img/img_port/portIndx/4.jpg);
+    background-size: cover;
+    grid-area: f4;
+    border-radius: 1.8rem;
+}
+
+.gride #filho5{
+    background-image: url(img/img_port/portIndx/5.jpg);
+    background-size: cover;
+    grid-area: f5;
+    border-radius: 1.8rem;
+}
+.gride #filho6{
+    background-image: url(img/img_port/portIndx/6.jpg);
+    background-size: cover;
+    grid-area: f6;
+    border-radius: 1.8rem;
+}
+.gride #filho7{
+    background-image: url(img/img_port/portIndx/7.jpg);
+    background-size: cover;
+    grid-area: f7;
+    border-radius: 1.8rem;
+}
+
+.gride #filho8{
+    background-image: url(img/img_port/portIndx/8.jpg);
+    background-size: cover;
+    grid-area: f8;
+    border-radius: 1.8rem;
+}
+.prIndex .img3{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.img2 img{
+    width: 80%;
+}
+
+.selecionado{
+    height: 138%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #0E0E0E;
+}
+
+/*------------------------------Modal Portifolio-----------------------------*/
+
+#modalPort, .sign-up-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 8rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content, .sign-up-content{
+    position: relative;
+    background-color: var(--brancoBase);
+    margin: auto;
+    width: 80%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--preto);
+    color: var(--brancoBase);
+    padding: 1rem;
+    border: 0.365rem solid transparent ;
+    border-image: linear-gradient(-90deg, rgb(75, 15, 110)0%, rgb(45, 100, 240)100%) 1;
+}
+
+.botaoContratar{
+    width: 10rem;
+    border: none;
+    padding: 1rem;
+    color: var(--brancoBase);
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-image: linear-gradient(-90deg, rgb(75, 15, 110)0%, rgb(45, 100, 240)100%);
+}
+
+.botaoContratar:hover{
+    background-image: linear-gradient(-90deg, rgb(90, 30, 125)0%, rgb(60, 115, 255)100%);
+}
+
+.modal-body{
+    display: flex;
+    gap: 2rem;
+    padding: 0.5rem 1rem;
+    height: auto;
+}
+
+.modal-nav{
+    margin: 0rem;
+    gap: 0.5rem;
+}
+
+.modal-nav button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: var(--brancoBase);
+    width: 4rem;
+}
+
+.modal-button{
+    width: 3rem;
+    height: auto;
+    margin: 0.5rem;
+}
+
+#modalImage{
+    width: 80%;
+}
+
+.close{
+    position: absolute;
+    left: 101%;
+    top: 0.5%;
+    color: var(--brancoBase);
+    float: right;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus{
+    color: var(--cinzaBasec);
+    text-decoration: none;
+    cursor: pointer;
+}
+.perfilPort{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    
+}
+
+.perfilPort p{
+    font-weight: 400;
+    font-size: 0.5rem;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*-------------------------------- @media --------------------------------*/
+/*------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1200px) {
+
+    header .pesquisasite input {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        margin-left: 3rem;
+    }
+
+    .close{
+        position: absolute;
+        left: 101%;
+        top: 0.5%;
+    }
+
+    .gride{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 15rem 15rem 15rem;
+        grid-template-areas: "f1 f6 f3 "
+                             "f5 f6 f7 "
+                             "f5 f2 f7 "
+                             "f4 f8 f1"
+                             "f3 f8 f2";
+        
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    .gride{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(6,20rem);
+        grid-template-areas: "f1 f6"
+                             "f5 f6"
+                             "f5 f2"
+                             "f3 f7"
+                             "f8 f7"
+                             "f8 f4";
+        
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+  header .navsite {
+    display: none;
+  }
+
+  header .pesquisasite {
+    display: none;
+  }
+
+  header .usersite {
+    display: none;
+  }
+
+ header .userhover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ header .botaoMenu{
+    display: flex;
+ }
+
+ header .hamburguer .botoesmenuhamburguer{
+
+    color: var(--cinza100);
+    padding: 1rem ;
+    cursor: pointer;
+    color: white;
+    
+}
+
+header .hamburguer .botoesmenuhamburguer:hover{
+    color: white;
+    background-color: #8C8C8C;
+}
+
+header .hamburguer{
+    display: flex;
+    height: 31%;
+    position: absolute;
+    flex-direction: column;  
+    width: 25%;
+    top: 13.2%;
+    bottom: 49%;
+    right: -99%;
+    background-color: black;
+    align-items: center;
+    gap: 0.5em;
+    transition: right 0.3s;
+    z-index: 1;
+
+}
+
+header .hamburguer .botoesmenuhamburguer{
+
+    color: var(--cinza100);
+    padding: 1rem ;
+    cursor: pointer;
+    color: white;
+    
+}
+
+header .hamburguer .botoesmenuhamburguer:hover{
+
+    color: white;
+    background-color: #8C8C8C;
+}
+
+header .userhover{
+
+    height: 100%;
+}
+
+
+/*-------------------------------- Main --------------------------------*/
+
+.close{
+    position: absolute;
+    left: 101%;
+    top: 0.5%;
+}
+
+.prIndex .perfilPort h1{
+    font-size: 150%;
+}
+
+}
+
+
+@media screen and (max-width: 750px) {
+
+    .close{
+        position: absolute;
+        left: 101%;
+        top: 0.5%;
+    }
+
+    .perfilPort{
+        font-size: 70%;
+    }
+    .perfilPort p{
+        font-size: 60%;
+    }
+
+}
+
+
+@media screen and (max-width: 660px) {
+
+    .close{
+        position: absolute;
+        left: 101%;
+        top: 0.5%;
+    }
+
+    .perfilPort{
+        font-size: 60%;
+    }
+    .perfilPort p{
+        font-size: 60%;
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .close{
+        position: absolute;
+        left: 101%;
+        top: 0.5%;
+    }
+
+    .perfilPort{
+        font-size: 60%;
+        width: 100%;
+    }
+    .perfilPort p{
+        font-size: 50%;
+    }
+
+}
+
+
+/*------------------------------------ Footer -----------------------------------*/
+footer{
+    align-content: center;
+    align-items: center;
+    margin: 2rem 0 0 0;
+    height: 13rem;
+    background-color: #0E0E0E;
+    color: white;
+}
+.test{
+    position: relative;
+    bottom: 4vh;
+    right: 59vh;
+    border-right: solid white 0.2rem;
+    border-radius: 2px;
+    height: 7rem;
+}
+.contatos img{
+    width: 11%;
+    height: 10%;
+}
+.contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.PrinFooter{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem 0 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+footer .PrinFooter{
+    justify-content: center;
+    gap:2rem;
+}
+footer .PrinFooter img{
+    height: 10%;
+}
+footer{
+    position:relative;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+
+}
+.EndFooter{
+    background-color: #0E0E0E;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 1rem 0 0 0;
+    border-top: solid white 0.4rem;
+}
+.Info{
+    height: 8rem;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1.8rem;
+    border-left: solid white 0.2rem;
+    border-right: solid white 0.2rem;
+    border-radius: 2px;
+
+}
+.Info a{
+    padding: 1rem;
+}
+.logoFooter{
+    width: 15%;
+}
+/* From Uiverse.io by wilsondesouza */ 
+ul {
+    list-style: none;
+  }
+  
+  .example-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  .example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .example-2 .icon-content a:hover {
+    color: white;
+  }
+  .example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+    height: 100%;
+  }
+  
+  .example-2 .icon-content a[data-social="linkedin"] .filled,
+  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+  }
+  
+  .example-2 .icon-content a[data-social="github"] .filled,
+  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+  }
+  .example-2 .icon-content a[data-social="instagram"] .filled,
+  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f
+    );
+  }
+  .example-2 .icon-content a[data-social="youtube"] .filled,
+  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000;
+  }
+  
