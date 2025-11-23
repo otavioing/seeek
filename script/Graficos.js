@@ -1,7 +1,8 @@
 let grafico;
 
 async function carregarDados() {
-  const resposta = await fetch('http://localhost:4500/estatisticas/categoriasusadasporusuario/28');
+  const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+  const resposta = await fetch(`http://localhost:4500/estatisticas/categoriasusadasporusuario/${usuario.id}`);
   const dados = await resposta.json();
   console.log(dados);
 
