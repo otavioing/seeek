@@ -100,7 +100,7 @@ function aplicarModo() {
   }
 
   // select mostra o modo atual
-  document.getElementById("temaSelectConfig").value = modo;
+  // document.getElementById("temaSelectConfig").value = modo;
 
   // checkbox também sincroniza
   const checkbox = document.getElementById("checkbox");

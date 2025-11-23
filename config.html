@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/config.css" />
     <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml" />
     <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/Graficos.js"></script>
+
   </head>
 
   <!-- Google tag (gtag.js) -->
@@ -741,6 +744,28 @@
               </button>
             </div>
           </div>
+
+          <div id="infoestatistica" class="infoestatistica">
+
+              <div class="conteudograficos">
+              <div class="graficoPizza">
+                <canvas id="pizzaCanvas"></canvas>
+              </div>
+
+              <div class="categoriasdiv">
+                <h2>Tags mais usadas por você:</h2>
+            <ul id="minhaLegenda">
+              <li>Designer</li>
+              <li>Empresas</li>
+              <li>Artistas</li>
+              <li>Fotográfos</li>
+              <li>Ilustradores</li>
+              <li>Designers Gráficos</li>
+            </ul>
+              </div>
+
+          </div>
+          </div>
         </div>
       </div>
 
@@ -756,6 +781,8 @@
           new window.VLibras.Widget("https://vlibras.gov.br/app");
         </script>
       </div>
+
+
     </main>
 
 
@@ -768,6 +795,7 @@
     <script src="script/traducao.js"></script>
     <script src="script/criar_footer.js"></script>
     <script src="script/verificar_token.js"></script>
+
 
   </body>
 </html>
