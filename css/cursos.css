@@ -82,7 +82,7 @@
 .modoEscuro .linhaPreco,
 .modoEscuro .linhahabi,
 .modoEscuro .duracao,
-.modoEscuro .loc{
+.modoEscuro .loc {
     border-bottom: var(--ModoEscuroFontC) 1px solid;
 }
 
@@ -94,42 +94,49 @@
     border-bottom: 1.5px solid var(--ModoEscuroFontC);
 }
 
-.modoEscuro .cursos, 
+.modoEscuro .cursos,
 .modoEscuro .caixaflutuante {
     background-color: var(--ModoEscuroFilt);
 }
 
-.modoEscuro .caixaflutuante h2{
+.modoEscuro .caixaflutuante h2 {
     color: var(--ModoEscuroFontC);
 }
 
-.modoEscuro #idassinarcursocaixaflutuante{
+.modoEscuro #idassinarcursocaixaflutuante {
     background-color: var(--ModoEscuroFontC);
 }
 
 
-.modoEscuro .caminhonavegaçãocursos h1{
+.modoEscuro .caminhonavegaçãocursos h1 {
     color: var(--ModoEscuroFontC);
 }
 
-.modoEscuro .filtroflutuante svg , .modoEscuro .botaofiltrarcursosmedia svg, .modoEscuro .botaofiltrarcursosmedia1200px svg {
+.modoEscuro .filtroflutuante svg,
+.modoEscuro .botaofiltrarcursosmedia svg,
+.modoEscuro .botaofiltrarcursosmedia1200px svg {
     fill-opacity: 0;
     stroke: var(--ModoEscuroFontC);
-    
+
 }
 
-.modoEscuro .botaofiltrarcursosmedia1200px , .modoEscuro .botaofiltrarcursosmedia, .botaofiltrarcursosmedia1200px {
+.modoEscuro .botaofiltrarcursosmedia1200px,
+.modoEscuro .botaofiltrarcursosmedia,
+.botaofiltrarcursosmedia1200px {
     background-color: var(--ModoEscuroMesc);
     border: 1px solid var(--ModoEscuroMesc2);
 }
 
-.modoEscuro .botaofiltrarcursosmedia1200px button, .modoEscuro .botaofiltrarcursosmedia button, .botaofiltrarcursosmedia1200px button {
+.modoEscuro .botaofiltrarcursosmedia1200px button,
+.modoEscuro .botaofiltrarcursosmedia button,
+.botaofiltrarcursosmedia1200px button {
     color: var(--ModoEscuroFontC);
 }
 
 .modoEscuro #setapreco {
     stroke: var(--ModoEscuroFontC);
 }
+
 /*-------------------------------- Modo Escuro Fim --------------------------------*/
 
 
@@ -139,7 +146,7 @@
 
 .caminhonavegaçãocursos a {
     color: black;
-    
+
 }
 
 .caminhonavegaçãocursos {
@@ -222,12 +229,12 @@
     border-bottom: 1.5px solid var(--roxobase);
 }
 
-.filtroflutuante svg  {
+.filtroflutuante svg {
     height: 50px;
     fill-opacity: 0;
     stroke: var(--roxobase);
-    stroke-width:3.57528;
-    stroke-linecap:round;
+    stroke-width: 3.57528;
+    stroke-linecap: round;
 }
 
 .titulofiltroflutuante {
@@ -296,7 +303,8 @@
     transition: transform 0.5s;
 }
 
-#setapreco , #seta{
+#setapreco,
+#seta {
     height: 0.5rem;
 }
 
@@ -320,12 +328,13 @@
 }
 
 
-.botaofiltrarcursosmedia svg, .botaofiltrarcursosmedia1200px svg {
+.botaofiltrarcursosmedia svg,
+.botaofiltrarcursosmedia1200px svg {
     width: 40px;
     fill-opacity: 0;
     stroke: var(--roxobase);
-    stroke-width:3.57528;
-    stroke-linecap:round;
+    stroke-width: 3.57528;
+    stroke-linecap: round;
 }
 
 .alinharadiv {
@@ -356,7 +365,7 @@
 }
 
 .cursos img {
-    width: 100%;
+    /* width: 100%; */
     height: 70%;
     object-fit: cover;
     border-radius: 10px;
@@ -369,7 +378,8 @@
     height: 30%;
     flex-wrap: wrap;
 }
-.caminhonavegaçãocursos h1{
+
+.caminhonavegaçãocursos h1 {
     margin-left: 16.5%;
     color: var(--roxobase);
 }
@@ -486,7 +496,8 @@
     justify-content: center;
     width: 100%;
 }
-.botaomaisinfocursoscaixaflutuante a{
+
+.botaomaisinfocursoscaixaflutuante a {
     text-decoration: none;
     color: var(--roxobase);
     cursor: pointer;
@@ -516,37 +527,44 @@
     background-color: var(--azulBasec);
     color: var(--branco);
 }
-.infosobreocurso{
+
+.infosobreocurso {
     display: flex;
     gap: 0.5rem;
     width: 100%;
 }
-.infosobreocurso .iconssobresocurso img{
+
+.infosobreocurso .iconssobresocurso img {
     width: 15px;
     height: 15px;
     display: flex;
     flex-direction: column;
-    
+
 }
-.infosobreocurso .iconssobresocurso{
+
+.infosobreocurso .iconssobresocurso {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
 }
-.infosobreocursolegendas{
+
+.infosobreocursolegendas {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
 }
-.borda{
+
+.borda {
     border: 1px solid red;
 }
-.valordocursoetempo{
+
+.valordocursoetempo {
     display: flex;
     flex-direction: column;
     align-items: end;
 }
-#botaofecharcaixaflutuantecursos{
+
+#botaofecharcaixaflutuantecursos {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -556,56 +574,89 @@
     justify-content: center;
     align-items: center;
 }
-#botaofecharcaixaflutuantecursos img{
+
+#botaofecharcaixaflutuantecursos img {
     width: 20px;
 }
-@media screen and (max-width:1230px){
-    .infosobreocursolegendas{
-        font-size: 0.8rem;
-    }
-    .infosobreocurso .iconssobresocurso img{
-        width: 12px;
-        height: 12px;
-    }
-    #botaoinscrever{
-        font-size: 0.8rem;
+
+.capa_curso {
+    width: 450px;
+}
+
+@media screen and (max-width:1500px) {
+
+    .capa_curso {
+        width: 400px;
     }
 }
 
-@media screen and (max-width:1170px){
-    .informacoescaixaflutuantecursos p{
+@media screen and (max-width:1300px) {
+    .capa_curso {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:1230px) {
+    .infosobreocursolegendas {
         font-size: 0.8rem;
     }
-    .informacoescaixaflutuantecursos h2{
+
+    .infosobreocurso .iconssobresocurso img {
+        width: 12px;
+        height: 12px;
+    }
+
+    #botaoinscrever {
+        font-size: 0.8rem;
+    }
+
+    .capa_curso {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width:1170px) {
+    .informacoescaixaflutuantecursos p {
+        font-size: 0.8rem;
+    }
+
+    .informacoescaixaflutuantecursos h2 {
         font-size: 1.2rem;
     }
-    #descricaodacaixaflutuantecursos{
+
+    #descricaodacaixaflutuantecursos {
         font-size: 1.1rem;
     }
-    .caixaflutuante{
+
+    .caixaflutuante {
         width: 60%;
     }
 }
-@media screen and (max-width:900px){
-    .informacoescaixaflutuantecursos p{
+
+@media screen and (max-width:900px) {
+    .informacoescaixaflutuantecursos p {
         font-size: 0.6rem;
     }
-    .informacoescaixaflutuantecursos h2{
+
+    .informacoescaixaflutuantecursos h2 {
         font-size: 1rem;
     }
-    .caixaflutuante{
+
+    .caixaflutuante {
         width: 70%;
     }
 }
-@media screen and (max-width:550px){
-    .caixaflutuante{
+
+@media screen and (max-width:550px) {
+    .caixaflutuante {
         width: 100%;
     }
 }
 
 
 /*fim da caixa flutuante*/
-.botaofiltrarcursosmedia, .botaofiltrarcursosmedia1200px {
+.botaofiltrarcursosmedia,
+.botaofiltrarcursosmedia1200px {
     width: 95%;
     background-color: var(--cinzaBasec);
     border: 1px solid var(--cinzaBasee);
@@ -619,7 +670,8 @@
     outline: none;
 }
 
-.botaofiltrarcursosmedia button, .botaofiltrarcursosmedia1200px button {
+.botaofiltrarcursosmedia button,
+.botaofiltrarcursosmedia1200px button {
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -629,10 +681,12 @@
     justify-content: center;
     align-items: center;
 }
-.botaotestparafecharofiltro{
+
+.botaotestparafecharofiltro {
     display: none;
 }
-.divparadarogapentrealabeleoinput{
+
+.divparadarogapentrealabeleoinput {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -670,7 +724,7 @@
         display: flex;
     }
 
-    
+
 
 }
 
@@ -738,17 +792,17 @@
         grid-template-columns: 1fr;
     }
 
-    .botaotestparafecharofiltro{
+    .botaotestparafecharofiltro {
         display: flex;
 
     }
 
-    .caminhonavegaçãocursos{
+    .caminhonavegaçãocursos {
         padding: 1rem;
 
     }
 
-    .filtroflutuante{
+    .filtroflutuante {
         display: flex;
         flex-direction: column;
         width: 100%;

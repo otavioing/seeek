@@ -435,11 +435,8 @@
           </button>
         </div>
 
-        <div class="containercursos">
-          <button
-            onclick="abrircaixaflutuantecursos()"
-            class="botaocaixacursos"
-          >
+        <div id="containercursos" class="containercursos">
+          <button onclick="abrircaixaflutuantecursos()" class="botaocaixacursos">
             <div class="cursos">
               <img src="img/imagemtestecurso.png" alt="imagem teste do curso" />
               <div class="informacoescursos">
@@ -480,7 +477,7 @@
             class="botaocaixacursos"
           >
             <div class="cursos">
-              <img
+              <img class="capa_curso"
                 src="img/imagemtestecurso (3).png"
                 alt="imagem teste do curso"
               />
@@ -561,7 +558,7 @@
           </button>
         </div>
       </div>
-      <div class="caixaflutuante">
+      <div id="caixaflutuante" class="caixaflutuante">
         <div>
           <button
             id="botaofecharcaixaflutuantecursos"
@@ -643,6 +640,7 @@
     <script src="script/tema.js"></script>
     <script src="script/traducao.js"></script>
     <script src="script/criar_footer.js"></script>
+    <script src="script/conexao_api/carregar_cursos.js"></script>
     <script src="script/verificar_token.js"></script>
 
   </body>
