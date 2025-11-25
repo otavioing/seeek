@@ -5,7 +5,7 @@ async function carregarCursos() {
     container.innerHTML = "";
     cursos.forEach((curso) => {
         const div = document.createElement("div");
-        div.className = "post";
+        div.className = "posts";
         div.innerHTML = `
               <button onclick="abrircaixaflutuantecursos(${curso.id})" class="botaocaixacursos">
             <div class="cursos">
