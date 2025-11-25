@@ -172,20 +172,23 @@
               class="textoTituloProjeto"></textarea>
           </div>
           <div class="botaoAdcImgg">
-            <p>Adicionar foto ou vídeo</p>
+            <p>Adicionar foto</p>
             <div>
               <label for="enviarImg" class="labelAdcImg"><img src="img/fotos/imagem.svg" alt="" />
                 <p>Imagem</p>
               </label>
 
               <input type="file" id="enviarImg" name="arquivo" accept="image/*" style="display: none" />
-              <input type="file" id="enviarVid" accept="video/*" style="display: none" />
+              <!-- <input type="file" id="enviarVid" accept="video/*" style="display: none" />
 
               <label for="enviarVid"><img src="img/fotos/videos.svg" alt="" />
                 <p>Vídeo</p>
-              </label>
+              </label>  -->
+
+              <!-- <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.6rem;" src="" alt=""> -->
             </div>
           </div>
+
           <div class="txt-area-and-button">
             <button type="submit">Inserir</button>
             <textarea name="text-new-post" id="text-new-post" placeholder="descrição"
@@ -238,12 +241,6 @@
             <h4>Categorias</h4>
             <div class="categoria">
               <div class="catt">
-                <!-- <button>Ilustração</button>
-                  <button>Foto</button>
-                  <button>Abstrato</button>
-                  <button>Design</button>
-                  <button>Futurista</button>
-                  <button>Identidade Visual</button> -->
                 <form id="categoria">
                   <input type="radio" id="categoria-ilustracao" name="categoria" value="1">
                   <label for="categoria-ilustracao">ilustração</label>

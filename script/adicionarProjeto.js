@@ -24,7 +24,7 @@ form.addEventListener('submit', async (e) => {
     const data = await response.json();
     console.log("Resposta do servidor:", data);
     if (response.ok) {
-      abrirnotificacaopostenviado();
+      // abrirnotificacaopostenviado();
       form.reset(); // Limpa os campos do formulário
       window.onbeforeunload = null; // Impede recarregamento automático, se houver
     } else {
