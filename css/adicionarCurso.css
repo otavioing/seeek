@@ -38,7 +38,7 @@
     --cinzaescurofundodomudartema: #3A3A3A;
 
     --vermelhom: #EF0000;
-    --ModoEscuroVermelho:#fd4848;
+    --ModoEscuroVermelho: #fd4848;
 
 
 
@@ -61,7 +61,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -75,34 +75,55 @@ a {
 
 /*-------------------------------- Modo Escuro --------------------------------*/
 
-.modoEscuro , .modoEscuro .adicionarCurso , .modoEscuro .mainaulas{
+.modoEscuro,
+.modoEscuro .adicionarCurso,
+.modoEscuro .mainaulas {
     background-color: var(--ModoEscuroBase);
     color: var(--brancoBase);
 }
 
-.modoEscuro .textoTituloCurso, .modoEscuro .text-new-curso , .modoEscuro .fotocurso, .modoEscuro .descricaocursoeinserir button, .modoEscuro .containeradicionaraulas button, .modoEscuro .ferramentas, .modoEscuro .categorias, .modoEscuro .parametro{
+.modoEscuro .textoTituloCurso,
+.modoEscuro .text-new-curso,
+.modoEscuro .fotocurso,
+.modoEscuro .descricaocursoeinserir button,
+.modoEscuro .containeradicionaraulas button,
+.modoEscuro .ferramentas,
+.modoEscuro .categorias,
+.modoEscuro .parametro {
     background-color: var(--ModoEscuroFilt);
     color: var(--brancoBase);
 }
 
-.modoEscuro .textoTituloCurso:hover, .modoEscuro .text-new-curso:hover, .modoEscuro .descricaocursoeinserir textarea:hover, .modoEscuro .descricaocursoeinserir button:hover , .modoEscuro , .modoEscuro .botoesF button, .modoEscuro .botoesEdit button, .modoEscuro .categorias button, .containeradicionaraulas button:hover , .modoEscuro .paramegrup , .modoEscuro .paramegrup select , .modoEscuro .paramegrup input{
-background-color: var(--ModoEscuroMesc2);
-color: white;
+.modoEscuro .textoTituloCurso:hover,
+.modoEscuro .text-new-curso:hover,
+.modoEscuro .descricaocursoeinserir textarea:hover,
+.modoEscuro .descricaocursoeinserir button:hover,
+.modoEscuro,
+.modoEscuro .botoesF button,
+.modoEscuro .botoesEdit button,
+.modoEscuro .categorias button,
+.containeradicionaraulas button:hover,
+.modoEscuro .paramegrup,
+.modoEscuro .paramegrup select,
+.modoEscuro .paramegrup input {
+    background-color: var(--ModoEscuroMesc2);
+    color: white;
 }
 
-.modoEscuro .labelAdcImg{
+.modoEscuro .labelAdcImg {
     border: 2px solid var(--ModoEscuroFontC);
     color: var(--brancoBase);
 }
 
-.modoEscuro .labelAdcImg:hover{
+.modoEscuro .labelAdcImg:hover {
     background-color: var(--ModoEscuroFontC);
     color: var(--brancoBase);
 }
+
 /*-------------------------------- Fim Modo Escuro --------------------------------*/
 
 /*-------------------------------- Main AdicionarCurso --------------------------------*/
-.adicionarCurso{
+.adicionarCurso {
     width: 100%;
     background-color: var(--cinzaE8EAF0);
     display: flex;
@@ -111,7 +132,7 @@ color: white;
 }
 
 /* -----Lado Esquerdo----- */
-.ladoEsquerdo{
+.ladoEsquerdo {
     width: 70%;
     height: 100%;
     border-right: 1px solid var(--cinzaBasee);
@@ -119,11 +140,11 @@ color: white;
     border-radius: 1rem 0 0 1rem;
 }
 
-.TituloCursoDiv{
+.TituloCursoDiv {
     margin-bottom: 1rem;
 }
 
-.fotocurso{
+.fotocurso {
     height: 80vh;
     width: 100%;
     display: flex;
@@ -136,18 +157,18 @@ color: white;
     background-color: var(--cinzaE2E3E8);
 }
 
-.fotocurso p{
+.fotocurso p {
     margin-bottom: 0.6rem;
 }
 
-.fotocursoimg{
+.fotocursoimg {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 0.6rem;
 }
 
-.labelAdcImg{
+.labelAdcImg {
     background: none;
     border: 2px solid var(--roxobase);
     border-radius: 0.6rem;
@@ -161,13 +182,14 @@ color: white;
     cursor: pointer;
 }
 
-.labelAdcImg:hover{
+.labelAdcImg:hover {
     background-color: var(--roxobase);
     color: var(--brancoBase);
     transform: scale(1.05);
 }
 
-.textoTituloCurso , .text-new-curso{
+.textoTituloCurso,
+.text-new-curso {
     width: 100%;
     height: 4rem;
     background: none;
@@ -186,14 +208,16 @@ color: white;
     margin-bottom: 1rem;
 } */
 
-.ferramentas, .categorias, .parametro{
+.ferramentas,
+.categorias,
+.parametro {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 0.6rem;
     padding: 0.5rem 1rem 1rem 1rem;
     background-color: var(--cinzaE2E3E8);
 }
 
-.descricaocursoeinserir{
+.descricaocursoeinserir {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -201,7 +225,8 @@ color: white;
     margin-top: 1rem;
 }
 
-.descricaocursoeinserir button, .containeradicionaraulas button{
+.descricaocursoeinserir button,
+.containeradicionaraulas button {
     width: 100%;
     height: 3rem;
     background: none;
@@ -218,18 +243,18 @@ color: white;
 }
 
 /* -----Lado direito----- */
-.ferramentas h5{
+.ferramentas h5 {
     padding: 0.3rem;
     border-bottom: 1px solid var(--cinzaBasee);
     width: 95%;
     margin-left: 2.5%;
 }
 
-.ladoDireito h4{
+.ladoDireito h4 {
     margin-top: 1rem;
 }
 
-.ladoDireito{
+.ladoDireito {
     width: 30%;
     height: 100%;
     padding-left: 2rem;
@@ -238,7 +263,8 @@ color: white;
     gap: 1rem;
 }
 
-.botoesF ,.botoesEdit {
+.botoesF,
+.botoesEdit {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
@@ -246,17 +272,20 @@ color: white;
     justify-content: center;
     margin: 1rem 0 2rem 0;
 }
-.botoesF div{
+
+.botoesF div {
     width: 100%;
     padding: 1rem;
 }
 
-.botoesF div button{
+.botoesF div button {
     width: 100%;
 }
 
-.botoesF button, .botaoOutros, .botoesEdit button{
-   width: 45%;
+.botoesF button,
+.botaoOutros,
+.botoesEdit button {
+    width: 45%;
     height: 6rem;
     display: flex;
     flex-direction: column;
@@ -270,18 +299,22 @@ color: white;
     transition: 0.3s;
 }
 
-.botoesF button:hover, .botaoOutros:hover, .botoesEdit button:hover, .categorias button:hover{
+.botoesF button:hover,
+.botaoOutros:hover,
+.botoesEdit button:hover,
+.categorias button:hover {
     transform: scale(1.05);
 }
 
-.containeradicionaraulas{
+.containeradicionaraulas {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 0 2rem;
 }
 
-.Categoria h4, .Parametros h4{
+.Categoria h4,
+.Parametros h4 {
     margin-bottom: 1rem;
 }
 
@@ -290,6 +323,42 @@ color: white;
     border-radius: 0.6rem;
     padding: 1rem;
 
+}
+
+
+.containernotificacao {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    /* fixa no lado direito */
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+/* Caixa da notificação */
+.notificacao {
+    background: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    min-width: 250px;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    /* opacity: 1; */
+    /* transform: translateX(100px); */
+    /* transform: translateX(0); */
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
 }
 
 
@@ -322,23 +391,23 @@ color: white;
 }
 
 .catt input[type="radio"] {
-  display: none;
+    display: none;
 }
 
-.catt input[type="radio"]:checked + label {
-  background-color: var(--azulBase);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-  transform: scale(1.02);
-  transition: 0.2s;
+.catt input[type="radio"]:checked+label {
+    background-color: var(--azulBase);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+    transition: 0.2s;
 }
 
-.parame{
+.parame {
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.paramegrup{
+.paramegrup {
     width: auto;
     height: 3rem;
     background: none;
@@ -355,13 +424,14 @@ color: white;
     margin: 0.6rem 0.3rem 0 0.3rem;
 }
 
-.paramegrup{
+.paramegrup {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.paramegrup select , .paramegrup input{
+.paramegrup select,
+.paramegrup input {
     width: 40%;
     height: 3rem;
     background: none;
@@ -378,7 +448,7 @@ color: white;
 
 /* -----adicionar aulas----- */
 
-.mainaulas{
+.mainaulas {
     background-color: var(--cinzaE8EAF0);
     color: var(--preto);
     padding: 2rem;
@@ -389,27 +459,25 @@ color: white;
 
 /*-------------------------------- Midia --------------------------------*/
 
- @media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
 
-    .adicionarCurso{
+    .adicionarCurso {
         display: block;
         height: 100%;
         width: 100%;
     }
 
-    .ladoEsquerdo{
-    width: 100%;
-    height: 70%;
-    border-right: none;
-    padding: 0;
+    .ladoEsquerdo {
+        width: 100%;
+        height: 70%;
+        border-right: none;
+        padding: 0;
+    }
+
+    .ladoDireito {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
 }
-
-.ladoDireito{
-    width: 100%;
-    height: auto;
-    padding: 0;
- }
-
- }
-
-

@@ -341,7 +341,6 @@ a {
     height: 3rem;
     background: none;
     border: none;
-    color: var(--preto);
     font-size: clamp(1rem, 1.8vh, 3rem);
     padding: 0.5rem;
     border-radius: 0.4rem;
@@ -452,6 +451,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
 }
 
 /* Caixa da notificação */
@@ -468,6 +471,10 @@ a {
     /* transform: translateX(100px); */
     /* transform: translateX(0); */
     transition: opacity 0.3s ease;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
 }
 
 /* fim da notificação */
