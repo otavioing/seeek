@@ -24,7 +24,7 @@ form.addEventListener('submit', async (e) => {
     const data = await response.json();
     console.log("Resposta do servidor:", data);
     if (response.ok) {
-      // abrirnotificacaopostenviado();
+      abrirnotificacaopostenviado();
       form.reset(); // Limpa os campos do formulário
       window.onbeforeunload = null; // Impede recarregamento automático, se houver
     } else {
@@ -37,19 +37,14 @@ form.addEventListener('submit', async (e) => {
 });
 
 
-// function abrirnotificacaopostenviado() {
-//   let notificacao = document.getElementById("caixadenotificacaopostrealizadocomsucesso");
+function abrirnotificacaopostenviado() {
+  let notificacao = document.getElementById("notificacao");
 
-//   notificacao.style.top = "0rem";
-//   setTimeout(() => {
-//     notificacao.style.top = "-10rem";
-//   }, 3000);
-// }
-// <div id="caixadenotificacaopostrealizadocomsucesso" class="caixadenotificacaorealizadocomsucesso">
-//  <h2>Post enviado com sucesso!</h2>
-//  <p>Seu conteúdo foi publicado e já pode ser visualizado por outros usuários.</p>
-// </div>
-
+  notificacao.style.opacity = "1";
+  setTimeout(() => {
+    notificacao.style.opacity = "0";
+  }, 3000);
+}
 function autoResize(textarea) {
   textarea.style.height = "auto"; // reseta a altura
   textarea.style.height = textarea.scrollHeight + "px"; // ajusta para o conteúdo

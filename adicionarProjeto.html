@@ -163,6 +163,18 @@
     </div>
   </header>
 
+
+  <div id="containernotificacao" class="containernotificacao">
+
+    <div id="notificacao" class="notificacao">
+      <p id="textonotificacao">Post criado com Sucesso</p>
+    </div>
+
+  </div>
+
+
+
+
   <form id="enviararquivodopost" enctype="multipart/form-data">
     <div class="adcProjeto" id="adcProjeto" style="display: flex">
       <div class="containerAdcProjeto">
@@ -171,23 +183,53 @@
             <textarea name="textoTituloProjeto" id="textoTituloProjeto" placeholder="Titulo" oninput="autoResize(this)"
               class="textoTituloProjeto"></textarea>
           </div>
-          <div class="botaoAdcImgg">
-            <p>Adicionar foto</p>
-            <div>
-              <label for="enviarImg" class="labelAdcImg"><img src="img/fotos/imagem.svg" alt="" />
-                <p>Imagem</p>
-              </label>
+          <div id="botaoAdcImgg" class="botaoAdcImgg">
+            <p id="textoaddfoto">Adicionar foto</p>
+            <div id="containerinputs">
+                <label for="enviarImg" class="labelAdcImg"><img src="img/fotos/imagem.svg" alt="" />
+                  <p>Imagem</p>
+                </label>
+  
+                <input type="file" id="enviarImg" name="arquivo" accept="image/*" style="display: none" />
 
-              <input type="file" id="enviarImg" name="arquivo" accept="image/*" style="display: none" />
               <!-- <input type="file" id="enviarVid" accept="video/*" style="display: none" />
 
               <label for="enviarVid"><img src="img/fotos/videos.svg" alt="" />
                 <p>Vídeo</p>
               </label>  -->
 
-              <!-- <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.6rem;" src="" alt=""> -->
             </div>
+            <!-- <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.6rem;" src="img/design1.webp" alt=""> -->
           </div>
+
+          <script>
+            const inputImagem = document.getElementById("enviarImg");
+            const textoaddfoto = document.getElementById("textoaddfoto");
+            const containerfoto = document.getElementById("botaoAdcImgg");
+            const containerinputs = document.getElementById("containerinputs");
+
+            inputImagem.addEventListener("change", function () {
+              const arquivo = this.files[0];
+              if (arquivo) {
+                const leitor = new FileReader();
+                leitor.onload = function (e) {
+                  containerinputs.style.display = "none";
+                  textoaddfoto.style.display = "none";
+                  const img = document.createElement("img");
+                  img.style.width = "100%";
+                  img.style.height = "100%";
+                  img.style.objectFit = "cover";
+                  img.style.borderRadius = "0.6rem";
+                  img.src = e.target.result;
+                  containerfoto.appendChild(img);
+                };
+                leitor.readAsDataURL(arquivo);
+              } else {
+                return;
+              }
+            });
+
+          </script>
 
           <div class="txt-area-and-button">
             <button type="submit">Inserir</button>

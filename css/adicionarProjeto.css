@@ -310,14 +310,14 @@ a {
 }
 
 .catt input[type="radio"] {
-  display: none;
+    display: none;
 }
 
-.catt input[type="radio"]:checked + label {
-  background-color: var(--azulBase);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-  transform: scale(1.02);
-  transition: 0.2s;
+.catt input[type="radio"]:checked+label {
+    background-color: var(--azulBase);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+    transition: 0.2s;
 }
 
 
@@ -373,7 +373,7 @@ a {
 
 /* notificação */
 
-.caixadenotificacaorealizadocomsucesso {
+/* .caixadenotificacaorealizadocomsucesso {
     background: white;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -440,6 +440,34 @@ a {
     color: #666;
     font-size: 14px;
     margin-bottom: 24px;
+} */
+
+/* Container da notificação */
+.containernotificacao {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    /* fixa no lado direito */
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Caixa da notificação */
+.notificacao {
+    background: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    min-width: 250px;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    /* opacity: 1; */
+    /* transform: translateX(100px); */
+    /* transform: translateX(0); */
+    transition: opacity 0.3s ease;
 }
 
 /* fim da notificação */

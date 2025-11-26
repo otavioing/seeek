@@ -520,9 +520,9 @@
             <img id="modalImage" src="" alt="Imagem do Portfólio" />
           </div>
           <nav class="modal-nav">
-            <button type="button" id="Favoritar">
-              <img class="modal-button" src="img/coracao.svg" alt="Botão Favoritar" /><span
-                class="modalFa">Favoritar</span>
+            <button onclick="inserirLike()" type="button" id="Favoritar">
+              <img id="imagemcoracao" class="modal-button" src="img/coracao.svg" alt="Botão Favoritar" /><span id="nomerolikespost"
+                class="modalFa">0</span>
             </button>
             <button type="button">
               <img class="modal-button" src="img/ferramenta.svg" alt="Botão Ferramenta" /><span
@@ -593,6 +593,7 @@
 
 
       </div>
+    </div>
 
   </main>
 
@@ -629,6 +630,7 @@
   <script src="script/tema.js"></script>
   <script src="script/traducao.js"></script>
   <script src="script/criar_footer.js"></script>
+  <script src="script/conexao_api/carregar_posts_index.js"></script>
   <script src="script/verificar_token.js"></script>
 
 
