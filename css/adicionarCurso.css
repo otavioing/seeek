@@ -105,7 +105,7 @@ a {
 .containeradicionaraulas button:hover,
 .modoEscuro .paramegrup,
 .modoEscuro .paramegrup select,
-.modoEscuro .paramegrup input {
+.modoEscuro .paramegrup input, .modoEscuro .catt label {
     background-color: var(--ModoEscuroMesc2);
     color: white;
 }

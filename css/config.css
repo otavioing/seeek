@@ -72,6 +72,10 @@
     background-color: var(--ModoEscuroInput);
 }
 
+.modoEscuro .infoestatistica{
+    background-color: var(--ModoEscuroFilt);
+}
+
 
 /*-------------------------------- Modo Escuro Fim --------------------------------*/
 

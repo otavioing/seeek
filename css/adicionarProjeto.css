@@ -99,7 +99,8 @@ a {
 .modoEscuro .botoesF button,
 .modoEscuro .botaoOutros,
 .modoEscuro .botoesEdit button,
-.modoEscuro .categoria button {
+.modoEscuro .categoria button,
+.modoEscuro .catt label {
     background-color: var(--ModoEscuroMesc2);
     color: white;
 }
