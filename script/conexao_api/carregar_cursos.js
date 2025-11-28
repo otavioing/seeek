@@ -7,7 +7,7 @@ async function carregarCursos() {
         const div = document.createElement("div");
         div.className = "posts";
         div.innerHTML = `
-              <button onclick="abrircaixaflutuantecursos(${curso.id})" class="botaocaixacursos">
+              <button class="botaocaixacursos">
             <div class="cursos">
               <img class="capa_curso" src="${curso.imagem_curso}" alt="imagem do curso" />
               <div class="informacoescursos">
@@ -29,3 +29,6 @@ async function carregarCursos() {
 }
 
 carregarCursos();
+
+
+// abrircaixaflutuantecursos(${curso.id})
