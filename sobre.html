@@ -2,20 +2,20 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seek - Sobre Nós</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sobre.css">
-    <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seek - Sobre Nós</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sobre.css">
+  <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-SLCTJL00KV');
@@ -24,386 +24,345 @@
 <body id="todo">
 
   <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
-    <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg" alt="Símbolo da onu"></button>
-</div>
+    <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra"><img src="img/barra/icon.svg"
+        alt="Símbolo da onu"></button>
+  </div>
 
-<div id="barra" class="divbarradeacessibilidade">
-  <button onclick="desativarbarra()" class="botaoativacaobarra">
-    <img src="img/barra/icon.svg" alt="símbolo da onu" />
-  </button>
+  <div id="barra" class="divbarradeacessibilidade">
+    <button onclick="desativarbarra()" class="botaoativacaobarra">
+      <img src="img/barra/icon.svg" alt="símbolo da onu" />
+    </button>
 
-  <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
-    <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
-  </button>
+    <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+    </button>
 
-  <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
-    <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
-  </button>
+    <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+    </button>
 
     <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
-    <img src="img/barra/luabarra.svg" alt="Lua" />
-  </button>
+      <img src="img/barra/luabarra.svg" alt="Lua" />
+    </button>
 
     <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
-    <img src="img/barra/solbarra.svg" alt="Sol" />
-  </button>
-
-  <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
-    <img src="img/barra/iconvlibras.svg" alt="vlibras" />
-  </button>
-
-  <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
-</div>
-
-  <header class="inicio">
-    <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
-      <span class="linha1"></span>
-      <span class="linha2"></span>
-      <span class="linha3"></span>
+      <img src="img/barra/solbarra.svg" alt="Sol" />
     </button>
-    <div class="logosite">
-      <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek"></a>
-    </div>
-    <div class="userhover">
-      <button><img id="img_useres" onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu"></button>
-    </div>
-    <nav class="navsite">
-      <div id="headerexplurar" class="navSelecionado">
-        <a href="index.html" class="nav-link ExpA">Explorar</a>
-      </div>
-      <div id="headercursos">
-        <a href="cursos.html" class="nav-link CurA">Cursos</a>
-      </div>
-      <div id="headervagas">
-        <a href="vagas.html" class="nav-link VagA">Vagas</a>
-      </div>
-      <div class="sobrenoss">
-        <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
-      </div>
-    </nav>
-    <div class="pesquisasite">
-      <input type="text" placeholder="Pesquisar" class="Pesquisar">
-      <a href=""><img src="img/search2.svg" alt="lupa"></a>
-    </div>
-    <div id="usersite" class="usersite">
-      <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
-       <p id="nome_user"></p>
-      <button onclick="abrirMenu()">
-        <img id="img_user" src="img/user2.svg" alt="User" />
-      </button>
-    </div>
-    <nav class="hamburguer" id="menu">
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="index.html"> <span class="ExpA">Explorar </span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="cursos.html"> <span class="CurA">Cursos </span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="vagas.html"> <span class="VagA">Vagas</span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="sobre.html"><Span class="SobA">Sobre Nós</Span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer" href="ajuda.html"> <span class="AjuF">Ajuda</span> </a>
-      </div>
-      <div class="bordasuperior"></div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer " href="avisos.html" class="SobA"><span class="AviF">Avisos</span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer " href="avisos.html"> <span class="AtuF">Atualizações </span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer " href="sobre.html#contatosobre"> <span class="Conf">Contato </span></a>
-      </div>
 
-      <div class="itemsdomenu">
-        <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
-          <option value="pt">Português</option>
-          <option value="eng">English</option>
-          <option value="es">Español</option>
-          <option value="it">Italiano</option>
-          <option value="fr">Français</option>
-        </select>
-      </div>
-      <div class="bordasuperior"></div>
-      <div class="divredessociais">
-        <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"><img src="img/Linkedin.svg" alt="Logo Linkedin" /></a>
-        <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
-        <a href="https://www.instagram.com/seek.oficial/"><img src="img/instagram.svg" alt="Logo instagram" /></a>
-      </div>
-      <div class="bordasuperior"></div>
+    <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+    </button>
 
+    <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
+  </div>
 
-      <div class="direitosautoraismenu">
-        <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
-      </div>
-    </nav>
-    <div id="menuperfil" class="menuperfil">
-      <div id="divmeuperfil" class="divmenuperfil">
-        <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
-      </div>
-      <div id="divconfiguracoes" class="divmenuperfil">
-        <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
-      </div>
-      <div class="botaomodoescuro">
-        <label for=""><img src="img/lua.png" alt="Lua" /></label>
-        <div class="checkbox-con">
-          <input  onclick="MudarModos()" id="checkbox" type="checkbox"/>
-        </div>
-        <label for=""><img src="img/sol.png" alt="Sol" /></label>
-      </div>
-      <div id="diventrarsair" class="divmenuperfil">
-        <button id="sairdomenuperfil" class="sairP"><a href="login.html" ><span class="LoginPerfil">Login</span></a></button>
+    <header class="inicio" id="header">
+      <script src="script/criar_header.js" defer></script>
+    </header>
+
+  <section class="migalhadepao">
+
+    <a class="migalhadepaosobrenoshome" href="">Home></a>
+    <a class="migalhadepaosobrenos SobA" href="">Sobre nós</a>
+
+  </section>
+
+  <main>
+
+    <div id="caixadenotificacaofazerlogin" class="caixadenotificacaofazerlogin">
+      <h2>Não foi possível continuar</h2>
+      <p>Você precisa estar logado para acessar esta página.</p>
+      <div class="actions">
+        <span onclick="fecharnotificacao()" id="cancelarnotificacaofazerlogin" class="btn-cancel">Cancelar</span>
+        <span id="botaofazerloginconfirmar" class="btn-confirm"><a href="login.html">fazer login</a></span>
       </div>
     </div>
-  </header>
 
-    <section class="migalhadepao">
+    <div class="paisobrenos">
+      <div class="infosobrenos">
+        <h1 class="h1sobrenos"><b class="SobA">Sobre nós</b></h1>
 
-        <a class="migalhadepaosobrenoshome" href="">Home></a> 
-        <a class="migalhadepaosobrenos SobA"  href="">Sobre nós</a>
+        <div class="textosobrenosnos">
+          <p class="textosobrenos SobT">Nossa intenção com o Seek é dar visibilidade <br>
+            e maiores oportunidades aos artistas visuais,<br>
+            além de proporcionar um maior contato com <br>
+            empresas que buscam profissionais com <br>
+            suas capacidades</p>
 
-    </section>
-
-    <main>
-
-      <div id="caixadenotificacaofazerlogin" class="caixadenotificacaofazerlogin">
-        <h2>Não foi possível continuar</h2>
-        <p>Você precisa estar logado para acessar esta página.</p>
-        <div class="actions">
-          <span onclick="fecharnotificacao()" id="cancelarnotificacaofazerlogin" class="btn-cancel">Cancelar</span>
-          <span id="botaofazerloginconfirmar" class="btn-confirm"><a href="login.html">fazer login</a></span>
-        </div>
-      </div>
-
-        <div class="paisobrenos">
-            <div class="infosobrenos">
-                <h1 class="h1sobrenos"><b class="SobA">Sobre nós</b></h1>
-
-                <div class="textosobrenosnos">
-                    <p class="textosobrenos SobT">Nossa intenção com o Seek é dar visibilidade <br>
-                        e maiores oportunidades aos artistas visuais,<br>
-                        além de proporcionar um maior contato com <br>
-                        empresas que buscam profissionais com <br>
-                        suas capacidades</p>
-
-                    <p class="textosobrenos2 SobT1">Também oferecemos acesso a uma plataforma <br>
-                        de educação, permitindo que artistas e outros <br>
-                        profissionais possam se aprimorar e se destacar <br>
-                        no mercado de trabalho.</p>
-                </div>
-
-            </div>
-            <div class="artepaginasobrenos">
-                <img src="img/Frame.svg" alt="Arte pagina sobre nos">
-            </div>
+          <p class="textosobrenos2 SobT1">Também oferecemos acesso a uma plataforma <br>
+            de educação, permitindo que artistas e outros <br>
+            profissionais possam se aprimorar e se destacar <br>
+            no mercado de trabalho.</p>
         </div>
 
-        <div class="peoples">
-            <h2 class="h2sobrenos"><b class="Eqp">Equipe</b></h2>
-            <div class="paicontainersobrenos">
+      </div>
+      <div class="artepaginasobrenos">
+        <img src="img/Frame.svg" alt="Arte pagina sobre nos">
+      </div>
+    </div>
 
-                <div class="containersobrenos">
-                    <div class="sobrenodnome">
-                        <div class="infocartaosobrenos">
-                            <img src="img/FotosColaboradores/Allanimagem.webp" alt="Foto de um dos criadores do site">
-                        </div>
-                        <div class="infocartaosobrenos2">
-                            <h4>Allan</h4>
-                            <p class="SobAllan">Olá! Meu nome é Allan e tenho 18 anos. Sou um dos colaboradores responsáveis pelo desenvolvimento das funcionalidades em JavaScript no site Seek, estou comprometido em me aprimorar constantemente e contribuir para o crescimento e sucesso da Seek. Estou sempre buscando maneiras inovadoras de melhorar a experiência dos usuários e a acessibilidade.</span></p>
-                        </div>
-                    </div>
-                </div>
+    <div class="peoples">
+      <h2 class="h2sobrenos"><b class="Eqp">Equipe</b></h2>
+      <div class="paicontainersobrenos">
 
-                <div class="containersobrenos">
-                    <div class="sobrenodnome">
-                        <div class="infocartaosobrenos">
-                            <img src="img/FotosColaboradores/fotoperfilbruno.svg" alt="Foto de um dos criadores do site">
-                        </div>
-                        <div class="infocartaosobrenos2">
-                            <h4>Bruno</h4>
-                            <p class="SobBruno">Prazer, meu nome é Bruno, dentre os colaboradores para criação do site Seek eu sou o responsavel pela programação em "JavaScript", meu objetivo é manter as funcionalidades do Site e deixar o mais dinâmico possivel</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="containersobrenos">
-
-                    <div class="sobrenodnome">
-                        <div class="infocartaosobrenos">
-                            <img src="img/FotosColaboradores/Cauaimagem.jpg" alt="Foto de um dos criadores do site">
-                        </div>
-                        <div class="infocartaosobrenos2">
-                            <h4>Cauã</h4>
-                            <p class="SobCaua">Olá, prazer! Meu nome é Cauã Eduardo. Sou o Scrum Master do projeto Seek. Junto aos outros membros da equipe, fui designado para liderar e coordenar o projeto, garantindo que tudo ocorra da melhor forma possível. Minha principal responsabilidade é assegurar o bom andamento do projeto, mas também estou sempre disposto a ajudar em todas as áreas, conforme necessário. </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="containersobrenos">
-
-                    <div class="sobrenodnome">
-                        <div class="infocartaosobrenos">
-                            <img src="img/FotosColaboradores/JoãoImagem3.jpg"  alt="Foto de um dos criadores do site">
-                        </div>
-                        <div class="infocartaosobrenos2">
-                            <h4>João Felipe</h4>
-                            <p class="SobJoao">Meu nome é João Felipe e nasci em 2006. Sou um dos colaboradores da criação do site Seek, com foco principal na implementação de CSS. Eu garanto que nossa estética seja visualmente agradável e acessível em diversas plataformas.</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="containersobrenos">
-
-                    <div class="sobrenodnome">
-                        <div class="infocartaosobrenos">
-                            <img src="img/FotosColaboradores/Miguelimagem.jpg" alt="Foto de um dos criadores do site">
-                        </div>
-                        <div class="infocartaosobrenos2">
-                            <h4>Miguel</h4>
-                            <p class="SobMiguel">Faço parte da equipe de design do Seek, me chamo Miguel Galhardo Lima, e explorando conceitos mais modernos desenvolvemos a interface do Seek pensando em atingir não só nosso público alvo, mas ser acessível a todos. Destrancando elementos e explorando contrastes e padronizações para melhor entendimento do usuário</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="containersobrenos">
-
-                    <div class="sobrenodnome">
-                        <div class="infocartaosobrenos">
-                            <img src="img/FotosColaboradores/OtavioImagem.jpg" alt="Foto de um dos criadores do site">
-                        </div>
-                        <div class="infocartaosobrenos2">
-                            <h4>Otávio</h4>
-                            <p class="SobOtav">Eu sou um dos principais criadores do Seek. Nasci em 2006, em uma pequena cidade no interior de São Paulo. Como responsável pelo front-end, participo ativamente em quase todas as áreas da criação do site. Minha função principal é garantir que o site seja funcional para os usuários, utilizando tecnologias como HTML5 e CSS.</p>
-                        </div>
-                    </div>
-
-                </div>
+        <div class="containersobrenos">
+          <div class="sobrenodnome">
+            <div class="infocartaosobrenos">
+              <img src="img/FotosColaboradores/Allanimagem.webp" alt="Foto de um dos criadores do site">
             </div>
+            <div class="infocartaosobrenos2">
+              <h4>Allan</h4>
+              <p class="SobAllan">Olá! Meu nome é Allan e tenho 18 anos. Sou um dos colaboradores responsáveis pelo
+                desenvolvimento das funcionalidades em JavaScript no site Seek, estou comprometido em me aprimorar
+                constantemente e contribuir para o crescimento e sucesso da Seek. Estou sempre buscando maneiras
+                inovadoras de melhorar a experiência dos usuários e a acessibilidade.</span></p>
+            </div>
+          </div>
         </div>
 
-        <div class="contatosobrenos" id="contatosobre">
-
-            <div class="h2contatoedesc">
-                <h2 class="ConT">Contato</h2>
-                <p class="ConTI">Caso precise de mais alguma informação sobre nós ou sobre o site, entre em contato conosco através
-                    das nossas redes sociais.</p>
+        <div class="containersobrenos">
+          <div class="sobrenodnome">
+            <div class="infocartaosobrenos">
+              <img src="img/FotosColaboradores/fotoperfilbruno.svg" alt="Foto de um dos criadores do site">
             </div>
+            <div class="infocartaosobrenos2">
+              <h4>Bruno</h4>
+              <p class="SobBruno">Prazer, meu nome é Bruno, dentre os colaboradores para criação do site Seek eu sou o
+                responsavel pela programação em "JavaScript", meu objetivo é manter as funcionalidades do Site e deixar
+                o mais dinâmico possivel</p>
+            </div>
+          </div>
+        </div>
 
-            <div class="redessociais">
-                <div id="fotosobrenos">
-                  <?xml version="1.0" encoding="utf-8"?>
-                  <!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                  <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="0 0 645 310" style="enable-background:new 0 0 645 310;" xml:space="preserve">
-                  <style type="text/css">
-                    .st0{fill:#0E0E0E;}
-                    .st1{fill:#322BF0;}
-                    .st2{fill:#2B63F0;}
-                    .st3{fill:#2BA1F0;}
-                    .st4{fill:#2AE3F0;}
-                    .st5{fill:#B72AF0;}
-                    .st6{fill:#722BF0;}
-                    .st7{fill:#EAEAEA;}
-                    .st8{fill:#FFFFFF;}
-                  </style>
-                  <path class="st0" d="M199.9,81.5h-79.2l-39.6,68.5l39.6,68.5h79.2l39.6-68.5L199.9,81.5z"/>
-                  <g>
-                    <g>
-                      <path class="st1" d="M153.7,8.3c-52.3,2.5-97.2,33.2-119.8,77.2h0h164.3L153.7,8.3z"/>
-                    </g>
-                    <path class="st2" d="M33.9,85.6c-24,46.6-19.9,100.7,6.9,142.3l0,0L123,85.6L33.9,85.6z"/>
-                    <path class="st3" d="M40.9,228c28.3,44,77.3,67.6,126.7,65.2l0,0L85.4,150.9L40.9,228z"/>
-                    <path class="st4" d="M167.7,293.2c52.3-2.5,97.2-33.2,119.8-77.2h0H123.2L167.7,293.2z"/>
-                    <path class="st5" d="M287.6,215.9c24-46.6,19.9-100.7-6.9-142.3l0,0l-82.2,142.3L287.6,215.9z"/>
-                    <path class="st6" d="M280.5,73.4c-28.3-44-77.3-67.6-126.7-65.2l0,0L236,150.6L280.5,73.4z"/>
-                  </g>
-                  <path class="st7" d="M280.5,73.4l-120,75.8L233,27.7C251.6,38.4,269.1,54.6,280.5,73.4z"/>
-                  <g>
-                    <path class="st8" d="M394.9,146.3c-4.4-4.6-10.4-6.9-18.4-6.9h-3v-8.1h19.6c1.3,0,2.5-1.1,2.7-2.5l2.3-25.4v-0.1
+        <div class="containersobrenos">
+
+          <div class="sobrenodnome">
+            <div class="infocartaosobrenos">
+              <img src="img/FotosColaboradores/Cauaimagem.jpg" alt="Foto de um dos criadores do site">
+            </div>
+            <div class="infocartaosobrenos2">
+              <h4>Cauã</h4>
+              <p class="SobCaua">Olá, prazer! Meu nome é Cauã Eduardo. Sou o Scrum Master do projeto Seek. Junto aos
+                outros membros da equipe, fui designado para liderar e coordenar o projeto, garantindo que tudo ocorra
+                da melhor forma possível. Minha principal responsabilidade é assegurar o bom andamento do projeto, mas
+                também estou sempre disposto a ajudar em todas as áreas, conforme necessário. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="containersobrenos">
+
+          <div class="sobrenodnome">
+            <div class="infocartaosobrenos">
+              <img src="img/FotosColaboradores/JoãoImagem3.jpg" alt="Foto de um dos criadores do site">
+            </div>
+            <div class="infocartaosobrenos2">
+              <h4>João Felipe</h4>
+              <p class="SobJoao">Meu nome é João Felipe e nasci em 2006. Sou um dos colaboradores da criação do site
+                Seek, com foco principal na implementação de CSS. Eu garanto que nossa estética seja visualmente
+                agradável e acessível em diversas plataformas.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="containersobrenos">
+
+          <div class="sobrenodnome">
+            <div class="infocartaosobrenos">
+              <img src="img/FotosColaboradores/Miguelimagem.jpg" alt="Foto de um dos criadores do site">
+            </div>
+            <div class="infocartaosobrenos2">
+              <h4>Miguel</h4>
+              <p class="SobMiguel">Faço parte da equipe de design do Seek, me chamo Miguel Galhardo Lima, e explorando
+                conceitos mais modernos desenvolvemos a interface do Seek pensando em atingir não só nosso público alvo,
+                mas ser acessível a todos. Destrancando elementos e explorando contrastes e padronizações para melhor
+                entendimento do usuário</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="containersobrenos">
+
+          <div class="sobrenodnome">
+            <div class="infocartaosobrenos">
+              <img src="img/FotosColaboradores/OtavioImagem.jpg" alt="Foto de um dos criadores do site">
+            </div>
+            <div class="infocartaosobrenos2">
+              <h4>Otávio</h4>
+              <p class="SobOtav">Eu sou um dos principais criadores do Seek. Nasci em 2006, em uma pequena cidade no
+                interior de São Paulo. Como responsável pelo front-end, participo ativamente em quase todas as áreas da
+                criação do site. Minha função principal é garantir que o site seja funcional para os usuários,
+                utilizando tecnologias como HTML5 e CSS.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="contatosobrenos" id="contatosobre">
+
+      <div class="h2contatoedesc">
+        <h2 class="ConT">Contato</h2>
+        <p class="ConTI">Caso precise de mais alguma informação sobre nós ou sobre o site, entre em contato conosco
+          através
+          das nossas redes sociais.</p>
+      </div>
+
+      <div class="redessociais">
+        <div id="fotosobrenos">
+          <?xml version="1.0" encoding="utf-8"?>
+          <!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+          <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 645 310" style="enable-background:new 0 0 645 310;" xml:space="preserve">
+            <style type="text/css">
+              .st0 {
+                fill: #0E0E0E;
+              }
+
+              .st1 {
+                fill: #322BF0;
+              }
+
+              .st2 {
+                fill: #2B63F0;
+              }
+
+              .st3 {
+                fill: #2BA1F0;
+              }
+
+              .st4 {
+                fill: #2AE3F0;
+              }
+
+              .st5 {
+                fill: #B72AF0;
+              }
+
+              .st6 {
+                fill: #722BF0;
+              }
+
+              .st7 {
+                fill: #EAEAEA;
+              }
+
+              .st8 {
+                fill: #FFFFFF;
+              }
+            </style>
+            <path class="st0" d="M199.9,81.5h-79.2l-39.6,68.5l39.6,68.5h79.2l39.6-68.5L199.9,81.5z" />
+            <g>
+              <g>
+                <path class="st1" d="M153.7,8.3c-52.3,2.5-97.2,33.2-119.8,77.2h0h164.3L153.7,8.3z" />
+              </g>
+              <path class="st2" d="M33.9,85.6c-24,46.6-19.9,100.7,6.9,142.3l0,0L123,85.6L33.9,85.6z" />
+              <path class="st3" d="M40.9,228c28.3,44,77.3,67.6,126.7,65.2l0,0L85.4,150.9L40.9,228z" />
+              <path class="st4" d="M167.7,293.2c52.3-2.5,97.2-33.2,119.8-77.2h0H123.2L167.7,293.2z" />
+              <path class="st5" d="M287.6,215.9c24-46.6,19.9-100.7-6.9-142.3l0,0l-82.2,142.3L287.6,215.9z" />
+              <path class="st6" d="M280.5,73.4c-28.3-44-77.3-67.6-126.7-65.2l0,0L236,150.6L280.5,73.4z" />
+            </g>
+            <path class="st7" d="M280.5,73.4l-120,75.8L233,27.7C251.6,38.4,269.1,54.6,280.5,73.4z" />
+            <g>
+              <path class="st8"
+                d="M394.9,146.3c-4.4-4.6-10.4-6.9-18.4-6.9h-3v-8.1h19.6c1.3,0,2.5-1.1,2.7-2.5l2.3-25.4v-0.1
                       c0.2-1.3-0.5-2.2-1.9-2.5c-9.7-2.2-19.9-3.3-30.3-3.3c-14.7,0-25.3,2.3-31.4,7c-5.8,4.5-8.6,12.4-8.6,23.9c0,9.6,2.2,16.4,6.8,20.9
                       c4.6,4.5,10.6,6.7,17.7,6.7h3v8.1h-20.2c-1.3,0-2.5,1.1-2.7,2.5l-2.4,26.7l0,0v0c-0.1,1.4,0.4,2.3,1.7,2.6
-                      c10.2,2.5,21.9,3.8,34.6,3.8c13.3,0,23-2.4,28.7-7.1c5.5-4.6,8.3-12.4,8.3-24C401.4,158.5,399.2,151,394.9,146.3z"/>
-                    <path class="st8" d="M477.3,172.3c-0.2-1.4-1.3-2.4-2.7-2.4h-30.9v-8.1h31.9c1.1,0,2.1-0.7,2.4-1.8c1.3-5.2,2-10.5,2.2-15.9
+                      c10.2,2.5,21.9,3.8,34.6,3.8c13.3,0,23-2.4,28.7-7.1c5.5-4.6,8.3-12.4,8.3-24C401.4,158.5,399.2,151,394.9,146.3z" />
+              <path class="st8" d="M477.3,172.3c-0.2-1.4-1.3-2.4-2.7-2.4h-30.9v-8.1h31.9c1.1,0,2.1-0.7,2.4-1.8c1.3-5.2,2-10.5,2.2-15.9
                       c0-5.7-0.9-10.7-2.8-15.2c-1.8-4.1-5-7.4-9.9-9.9c-5-2.5-11.4-3.7-19.6-3.7c-14.3,0-24.3,3-29.9,9c-5.5,6.1-8.4,17.5-8.4,33.6
                       c0,15.7,2.8,26.7,8.3,32.8c5.4,6,14.4,9,26.6,9c12.1,0,23.1-1.1,32.9-3.3c1.6-0.4,1.7-2,1.7-2.7L477.3,172.3z M442.8,135.5h8.3
-                      v17.6h-8.3V135.5z"/>
-                    <path class="st8" d="M555.2,172.3c-0.2-1.4-1.3-2.4-2.7-2.4h-30.9v-8.1h31.8c1.1,0,2.1-0.7,2.4-1.8c1.3-5.2,2-10.5,2.2-15.9
+                      v17.6h-8.3V135.5z" />
+              <path class="st8" d="M555.2,172.3c-0.2-1.4-1.3-2.4-2.7-2.4h-30.9v-8.1h31.8c1.1,0,2.1-0.7,2.4-1.8c1.3-5.2,2-10.5,2.2-15.9
                       c0-5.7-0.9-10.7-2.8-15.2c-1.8-4.1-5-7.4-9.9-9.9c-5-2.5-11.4-3.7-19.6-3.7c-14.3,0-24.3,3-29.9,9c-5.6,6.1-8.4,17.5-8.4,33.6
                       c0,15.7,2.8,26.7,8.3,32.8c5.4,6,14.4,9,26.6,9c12.1,0,23.1-1.1,32.9-3.3c1.6-0.4,1.7-2,1.7-2.7L555.2,172.3z M520.7,135.5h8.3
-                      v17.6h-8.3V135.5z"/>
-                    <path class="st8" d="M637.5,146.8c0.3-0.4,0.5-0.9,0.5-1.2v-25.1c0-1.6-1.2-2.8-2.8-2.8h-19.5c-0.7,0-1.4,0.5-1.8,1.3l-11,23.9
+                      v17.6h-8.3V135.5z" />
+              <path class="st8"
+                d="M637.5,146.8c0.3-0.4,0.5-0.9,0.5-1.2v-25.1c0-1.6-1.2-2.8-2.8-2.8h-19.5c-0.7,0-1.4,0.5-1.8,1.3l-11,23.9
                       l-0.8,1.7h-9l2-4.3l12.1-26.1l0-0.1c0-0.1,0-0.3,0-0.4V100c0-1.7-1.2-2.8-3-2.8h-0.2l-35.3,2.3c-1.5,0.1-2.5,1.2-2.5,2.6v92.4
                       c0,1.6,1.2,2.8,2.8,2.8h29.3c1.3,0,2.4-0.5,3-1.3c0.6-0.9,0.7-2.1,0.3-3.4l-6.6-18.2l-1.5-4h8.8l0.7,2l8.4,23.5
-                      c0.1,0.3,0.5,1.4,2.2,1.4h21.4c1.6,0,2.8-1.2,2.8-2.8v-25.9c0-0.3-0.2-0.7-0.4-0.9l0,0l0-0.1l-7.9-8.5l-1.9-2.1l2-2L637.5,146.8z"
-                      />
-                  </g>
-                  </svg>
-                                  </div>
+                      c0.1,0.3,0.5,1.4,2.2,1.4h21.4c1.6,0,2.8-1.2,2.8-2.8v-25.9c0-0.3-0.2-0.7-0.4-0.9l0,0l0-0.1l-7.9-8.5l-1.9-2.1l2-2L637.5,146.8z" />
+            </g>
+          </svg>
+        </div>
 
-                <div class="contatosobrenos2">
-                    <div>
+        <div class="contatosobrenos2">
+          <div>
 
-                      <svg viewBox="0 0 124 124" class="Teste1" id="imgemailsobrenos" width="30px" alt="Logo Email preto e branco">
-                        <path d="M88.8064 30.2842C94.3814 30.2842 98.9005 35.4886 98.9005 41.9086V80.6566C98.9005 87.0767 94.3814 92.281 88.8064 92.281H34.9707C29.3958 92.281 24.8765 87.0767 24.8765 80.6566V41.9086C24.8765 35.4886 29.3958 30.2842 34.9707 30.2842H88.8064ZM86.2926 38.0338H37.4847L59.8037 58.3249C61.0261 59.4366 62.7509 59.4366 63.9736 58.3249L86.2926 38.0338ZM31.6059 42.5626V80.6566C31.6059 82.7966 33.1124 84.5314 34.9707 84.5314H88.8064C90.6647 84.5314 92.1711 82.7966 92.1711 80.6566V42.5627L68.1432 64.4076C64.476 67.7419 59.301 67.7419 55.6338 64.4076L31.6059 42.5626Z" />
-                        <path d="M62 10.3333C90.489 10.3333 113.667 33.511 113.667 62C113.667 90.489 90.489 113.667 62 113.667C33.511 113.667 10.3333 90.489 10.3333 62C10.3333 33.511 33.511 10.3333 62 10.3333ZM62 0C27.7605 0 0 27.7605 0 62C0 96.2395 27.7605 124 62 124C96.2395 124 124 96.2395 124 62C124 27.7605 96.2395 0 62 0Z" />
-                        </svg>
-                        
-                      <a href="https://mail.google.com/mail/u/0/?hl=pt-BR#inbox?compose=DmwnWrRmVXDQMDqsRvVfWNKNFXwsqBwksXRgmCzwgnQflBWRqfPbLMTMGZPvRcbqCKWDqMWwrpKL">seek.arts.ink@gmail.com</a></div>
+            <svg viewBox="0 0 124 124" class="Teste1" id="imgemailsobrenos" width="30px"
+              alt="Logo Email preto e branco">
+              <path
+                d="M88.8064 30.2842C94.3814 30.2842 98.9005 35.4886 98.9005 41.9086V80.6566C98.9005 87.0767 94.3814 92.281 88.8064 92.281H34.9707C29.3958 92.281 24.8765 87.0767 24.8765 80.6566V41.9086C24.8765 35.4886 29.3958 30.2842 34.9707 30.2842H88.8064ZM86.2926 38.0338H37.4847L59.8037 58.3249C61.0261 59.4366 62.7509 59.4366 63.9736 58.3249L86.2926 38.0338ZM31.6059 42.5626V80.6566C31.6059 82.7966 33.1124 84.5314 34.9707 84.5314H88.8064C90.6647 84.5314 92.1711 82.7966 92.1711 80.6566V42.5627L68.1432 64.4076C64.476 67.7419 59.301 67.7419 55.6338 64.4076L31.6059 42.5626Z" />
+              <path
+                d="M62 10.3333C90.489 10.3333 113.667 33.511 113.667 62C113.667 90.489 90.489 113.667 62 113.667C33.511 113.667 10.3333 90.489 10.3333 62C10.3333 33.511 33.511 10.3333 62 10.3333ZM62 0C27.7605 0 0 27.7605 0 62C0 96.2395 27.7605 124 62 124C96.2395 124 124 96.2395 124 62C124 27.7605 96.2395 0 62 0Z" />
+            </svg>
 
-
-                    <div> <svg width="30px" viewBox="0 0 124 124" id="imglinkdinsobrenos" alt="Logo Linkedin preto e branco">
-                      <path d="M62 10.3333C90.489 10.3333 113.667 33.511 113.667 62C113.667 90.489 90.489 113.667 62 113.667C33.511 113.667 10.3333 90.489 10.3333 62C10.3333 33.511 33.511 10.3333 62 10.3333ZM62 0C27.7605 0 0 27.7605 0 62C0 96.2395 27.7605 124 62 124C96.2395 124 124 96.2395 124 62C124 27.7605 96.2395 0 62 0Z" />
-                      <path d="M45.7856 50.0127C48.1202 50.0127 50.0127 48.1202 50.0127 45.7856C50.0127 43.4511 48.1202 41.5586 45.7856 41.5586C43.4511 41.5586 41.5586 43.4511 41.5586 45.7856C41.5586 48.1202 43.4511 50.0127 45.7856 50.0127Z" />
-                      <path d="M41.5586 55.651C41.5586 54.0947 42.8203 52.833 44.3766 52.833H47.1947C48.751 52.833 50.0127 54.0947 50.0127 55.651V78.1953C50.0127 79.7517 48.751 81.0134 47.1947 81.0134H44.3766C42.8203 81.0134 41.5586 79.7517 41.5586 78.1953V55.651Z" />
-                      <path d="M58.4655 81.0134H61.2835C62.8399 81.0134 64.1016 79.7517 64.1016 78.1953V65.5142C64.1016 61.2871 72.5557 58.4691 72.5557 64.1052V78.1965C72.5557 79.7529 73.8173 81.0134 75.3737 81.0134H78.1917C79.7482 81.0134 81.0098 79.7517 81.0098 78.1953V61.2871C81.0098 55.651 76.7827 52.833 71.1467 52.833C65.5106 52.833 64.1016 57.0601 64.1016 57.0601V55.651C64.1016 54.0947 62.8399 52.833 61.2835 52.833H58.4655C56.9091 52.833 55.6475 54.0947 55.6475 55.651V78.1953C55.6475 79.7517 56.9091 81.0134 58.4655 81.0134Z" />
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M83.8283 30.2871C88.4975 30.2871 92.2824 34.0722 92.2824 38.7412V83.8298C92.2824 88.499 88.4975 92.2839 83.8283 92.2839H38.7398C34.0707 92.2839 30.2856 88.499 30.2856 83.8298V38.7412C30.2856 34.0722 34.0707 30.2871 38.7398 30.2871H83.8283ZM83.8283 35.9232C85.3847 35.9232 86.6464 37.1849 86.6464 38.7412V83.8298C86.6464 85.3862 85.3847 86.6478 83.8283 86.6478H38.7398C37.1834 86.6478 35.9217 85.3862 35.9217 83.8298V38.7412C35.9217 37.1849 37.1834 35.9232 38.7398 35.9232H83.8283Z" />
-                      </svg>
-                    <a href="https://www.instagram.com/seek_brasil?igsh=ZnZhNmJicWF6OWhn">Seek.oficial</a></div>
+            <a
+              href="https://mail.google.com/mail/u/0/?hl=pt-BR#inbox?compose=DmwnWrRmVXDQMDqsRvVfWNKNFXwsqBwksXRgmCzwgnQflBWRqfPbLMTMGZPvRcbqCKWDqMWwrpKL">seek.arts.ink@gmail.com</a>
+          </div>
 
 
-                    <div>
-
-                      <svg width="30px" viewBox="0 0 115 115" id="imginstagramsobrenos" alt="Logo instagram preto e branco">
-                        <path d="M57.424 9.69189C83.7639 9.69189 105.193 31.1211 105.193 57.461C105.193 83.8009 83.7639 105.23 57.424 105.23C31.0841 105.23 9.6549 83.8009 9.6549 57.461C9.6549 31.1211 31.0841 9.69189 57.424 9.69189ZM57.424 0.138062C25.7674 0.138062 0.101074 25.8044 0.101074 57.461C0.101074 89.1176 25.7674 114.784 57.424 114.784C89.0807 114.784 114.747 89.1176 114.747 57.461C114.747 25.8044 89.0807 0.138062 57.424 0.138062ZM57.424 33.9682C65.0767 33.9682 65.9843 33.9968 69.0081 34.1354C76.7801 34.4888 80.401 38.1719 80.7593 45.8818C80.893 48.9056 80.9217 49.8084 80.9217 57.461C80.9217 65.1136 80.893 66.0213 80.7593 69.0403C80.401 76.7454 76.7849 80.438 69.0081 80.7915C65.9843 80.9252 65.0814 80.9587 57.424 80.9587C49.7714 80.9587 48.8638 80.93 45.8448 80.7915C38.0584 80.4332 34.4519 76.7359 34.0936 69.0403C33.9598 66.0213 33.9264 65.1136 33.9264 57.461C33.9264 49.8084 33.9598 48.9008 34.0936 45.8818C34.4471 38.1671 38.068 34.4841 45.8448 34.1306C48.8638 33.9921 49.7714 33.9682 57.424 33.9682ZM57.424 28.7995C49.6377 28.7995 48.668 28.833 45.606 28.9763C35.1923 29.454 29.4122 35.2293 28.9345 45.6429C28.796 48.7049 28.7626 49.6794 28.7626 57.461C28.7626 65.2474 28.796 66.2219 28.9345 69.2791C29.4122 79.688 35.1923 85.4729 45.606 85.9506C48.668 86.0891 49.6377 86.1225 57.424 86.1225C65.2104 86.1225 66.1849 86.0891 69.2469 85.9506C79.6415 85.4729 85.4454 79.6976 85.9136 69.2791C86.0521 66.2219 86.0855 65.2474 86.0855 57.461C86.0855 49.6794 86.0521 48.7049 85.9136 45.6429C85.4454 35.2436 79.6606 29.4492 69.2469 28.9763C66.1849 28.833 65.2104 28.7995 57.424 28.7995ZM57.424 42.7434C49.2985 42.7434 42.7064 49.3307 42.7064 57.461C42.7064 65.5913 49.2985 72.1787 57.424 72.1787C65.5496 72.1787 72.1417 65.5913 72.1417 57.461C72.1417 49.3355 65.5496 42.7434 57.424 42.7434ZM57.424 67.0149C52.1456 67.0149 47.8702 62.7395 47.8702 57.461C47.8702 52.1873 52.1456 47.9072 57.424 47.9072C62.6978 47.9072 66.9827 52.1825 66.9827 57.461C66.9827 62.7395 62.6978 67.0149 57.424 67.0149ZM72.7197 38.726C70.8233 38.726 69.2803 40.2641 69.2803 42.1654C69.2803 44.0618 70.8185 45.6047 72.7197 45.6047C74.6209 45.6047 76.1639 44.0666 76.1639 42.1654C76.1639 40.2641 74.6257 38.726 72.7197 38.726Z" />
-                        </svg>
-                        <a href=https://www.instagram.com/seek_brasil?igsh=ZnZhNmJicWF6OWhn>seek.oficial</a></div>
-
-                </div>
-            </div>
-
-            <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
-              <div vw class="enabled">
-                <div vw-access-button class="active"></div>
-                <div vw-plugin-wrapper>
-                  <div class="vw-plugin-top-wrapper"></div>
-                </div>
-              </div>
-              <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-              <script>
-                new window.VLibras.Widget('https://vlibras.gov.br/app');
-              </script>
-              </div>
-            
-    </main>
-            
-
-    <button class="btn-scroll-top" arial-label="Voltar ao topo">
-        <img src="img/arrow-top.svg" alt="Voltar ao topo" width="50" height="50" />
-    </button>
+          <div> <svg width="30px" viewBox="0 0 124 124" id="imglinkdinsobrenos" alt="Logo Linkedin preto e branco">
+              <path
+                d="M62 10.3333C90.489 10.3333 113.667 33.511 113.667 62C113.667 90.489 90.489 113.667 62 113.667C33.511 113.667 10.3333 90.489 10.3333 62C10.3333 33.511 33.511 10.3333 62 10.3333ZM62 0C27.7605 0 0 27.7605 0 62C0 96.2395 27.7605 124 62 124C96.2395 124 124 96.2395 124 62C124 27.7605 96.2395 0 62 0Z" />
+              <path
+                d="M45.7856 50.0127C48.1202 50.0127 50.0127 48.1202 50.0127 45.7856C50.0127 43.4511 48.1202 41.5586 45.7856 41.5586C43.4511 41.5586 41.5586 43.4511 41.5586 45.7856C41.5586 48.1202 43.4511 50.0127 45.7856 50.0127Z" />
+              <path
+                d="M41.5586 55.651C41.5586 54.0947 42.8203 52.833 44.3766 52.833H47.1947C48.751 52.833 50.0127 54.0947 50.0127 55.651V78.1953C50.0127 79.7517 48.751 81.0134 47.1947 81.0134H44.3766C42.8203 81.0134 41.5586 79.7517 41.5586 78.1953V55.651Z" />
+              <path
+                d="M58.4655 81.0134H61.2835C62.8399 81.0134 64.1016 79.7517 64.1016 78.1953V65.5142C64.1016 61.2871 72.5557 58.4691 72.5557 64.1052V78.1965C72.5557 79.7529 73.8173 81.0134 75.3737 81.0134H78.1917C79.7482 81.0134 81.0098 79.7517 81.0098 78.1953V61.2871C81.0098 55.651 76.7827 52.833 71.1467 52.833C65.5106 52.833 64.1016 57.0601 64.1016 57.0601V55.651C64.1016 54.0947 62.8399 52.833 61.2835 52.833H58.4655C56.9091 52.833 55.6475 54.0947 55.6475 55.651V78.1953C55.6475 79.7517 56.9091 81.0134 58.4655 81.0134Z" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M83.8283 30.2871C88.4975 30.2871 92.2824 34.0722 92.2824 38.7412V83.8298C92.2824 88.499 88.4975 92.2839 83.8283 92.2839H38.7398C34.0707 92.2839 30.2856 88.499 30.2856 83.8298V38.7412C30.2856 34.0722 34.0707 30.2871 38.7398 30.2871H83.8283ZM83.8283 35.9232C85.3847 35.9232 86.6464 37.1849 86.6464 38.7412V83.8298C86.6464 85.3862 85.3847 86.6478 83.8283 86.6478H38.7398C37.1834 86.6478 35.9217 85.3862 35.9217 83.8298V38.7412C35.9217 37.1849 37.1834 35.9232 38.7398 35.9232H83.8283Z" />
+            </svg>
+            <a href="https://www.instagram.com/seek_brasil?igsh=ZnZhNmJicWF6OWhn">Seek.oficial</a>
+          </div>
 
 
-    <script src="script/lfy.js"></script>
-    <script src="script/user_logado.js"></script>
-    <script src="script/acessibilidade.js"></script>
-    <script src="script/script.js"></script>
-    <script src="script/tema.js"></script>
-    <script src="script/traducao.js"></script>
-    <script src="script/criar_footer.js"></script>
-    <script src="script/verificar_token.js"></script>
+          <div>
+
+            <svg width="30px" viewBox="0 0 115 115" id="imginstagramsobrenos" alt="Logo instagram preto e branco">
+              <path
+                d="M57.424 9.69189C83.7639 9.69189 105.193 31.1211 105.193 57.461C105.193 83.8009 83.7639 105.23 57.424 105.23C31.0841 105.23 9.6549 83.8009 9.6549 57.461C9.6549 31.1211 31.0841 9.69189 57.424 9.69189ZM57.424 0.138062C25.7674 0.138062 0.101074 25.8044 0.101074 57.461C0.101074 89.1176 25.7674 114.784 57.424 114.784C89.0807 114.784 114.747 89.1176 114.747 57.461C114.747 25.8044 89.0807 0.138062 57.424 0.138062ZM57.424 33.9682C65.0767 33.9682 65.9843 33.9968 69.0081 34.1354C76.7801 34.4888 80.401 38.1719 80.7593 45.8818C80.893 48.9056 80.9217 49.8084 80.9217 57.461C80.9217 65.1136 80.893 66.0213 80.7593 69.0403C80.401 76.7454 76.7849 80.438 69.0081 80.7915C65.9843 80.9252 65.0814 80.9587 57.424 80.9587C49.7714 80.9587 48.8638 80.93 45.8448 80.7915C38.0584 80.4332 34.4519 76.7359 34.0936 69.0403C33.9598 66.0213 33.9264 65.1136 33.9264 57.461C33.9264 49.8084 33.9598 48.9008 34.0936 45.8818C34.4471 38.1671 38.068 34.4841 45.8448 34.1306C48.8638 33.9921 49.7714 33.9682 57.424 33.9682ZM57.424 28.7995C49.6377 28.7995 48.668 28.833 45.606 28.9763C35.1923 29.454 29.4122 35.2293 28.9345 45.6429C28.796 48.7049 28.7626 49.6794 28.7626 57.461C28.7626 65.2474 28.796 66.2219 28.9345 69.2791C29.4122 79.688 35.1923 85.4729 45.606 85.9506C48.668 86.0891 49.6377 86.1225 57.424 86.1225C65.2104 86.1225 66.1849 86.0891 69.2469 85.9506C79.6415 85.4729 85.4454 79.6976 85.9136 69.2791C86.0521 66.2219 86.0855 65.2474 86.0855 57.461C86.0855 49.6794 86.0521 48.7049 85.9136 45.6429C85.4454 35.2436 79.6606 29.4492 69.2469 28.9763C66.1849 28.833 65.2104 28.7995 57.424 28.7995ZM57.424 42.7434C49.2985 42.7434 42.7064 49.3307 42.7064 57.461C42.7064 65.5913 49.2985 72.1787 57.424 72.1787C65.5496 72.1787 72.1417 65.5913 72.1417 57.461C72.1417 49.3355 65.5496 42.7434 57.424 42.7434ZM57.424 67.0149C52.1456 67.0149 47.8702 62.7395 47.8702 57.461C47.8702 52.1873 52.1456 47.9072 57.424 47.9072C62.6978 47.9072 66.9827 52.1825 66.9827 57.461C66.9827 62.7395 62.6978 67.0149 57.424 67.0149ZM72.7197 38.726C70.8233 38.726 69.2803 40.2641 69.2803 42.1654C69.2803 44.0618 70.8185 45.6047 72.7197 45.6047C74.6209 45.6047 76.1639 44.0666 76.1639 42.1654C76.1639 40.2641 74.6257 38.726 72.7197 38.726Z" />
+            </svg>
+            <a href=https://www.instagram.com/seek_brasil?igsh=ZnZhNmJicWF6OWhn>seek.oficial</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
+        <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+          new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+      </div>
+
+  </main>
+
+  <footer id="footer">
+    <script src="script/criar_footer.js" defer></script>
+  </footer>
+
+
+  <button class="btn-scroll-top" arial-label="Voltar ao topo">
+    <img src="img/arrow-top.svg" alt="Voltar ao topo" width="50" height="50" />
+  </button>
+
+
+  <script src="script/lfy.js"></script>
+  <script src="script/user_logado.js"></script>
+  <script src="script/acessibilidade.js"></script>
+  <script src="script/script.js"></script>
+  <script src="script/tema.js"></script>
+  <script src="script/traducao.js"></script>
+  <script src="script/verificar_token.js"></script>
 
 
 

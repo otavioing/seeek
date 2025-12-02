@@ -11,159 +11,53 @@
     <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
 </head>
 
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-SLCTJL00KV');
+    gtag('config', 'G-SLCTJL00KV');
 </script>
 
 <body>
     <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
-        <button
-          id="botaobarra"
-          onclick="ativarbarra()"
-          class="botaoativacaobarra"
-        >
-          <img src="img/barra/icon.svg" alt="símbolo da onu" />
+        <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra">
+            <img src="img/barra/icon.svg" alt="símbolo da onu" />
         </button>
-      </div>
-  
-      <div id="barra" class="divbarradeacessibilidade">
+    </div>
+
+    <div id="barra" class="divbarradeacessibilidade">
         <button onclick="desativarbarra()" class="botaoativacaobarra">
-          <img src="img/barra/icon.svg" alt="símbolo da onu" />
+            <img src="img/barra/icon.svg" alt="símbolo da onu" />
         </button>
-  
+
         <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+            <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
         </button>
-  
+
         <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+            <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
         </button>
-  
-          <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/luabarra.svg" alt="Lua" />
+
+        <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
+            <img src="img/barra/luabarra.svg" alt="Lua" />
         </button>
-  
-          <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/solbarra.svg" alt="Sol" />
+
+        <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
+            <img src="img/barra/solbarra.svg" alt="Sol" />
         </button>
-  
+
         <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
-          <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+            <img src="img/barra/iconvlibras.svg" alt="vlibras" />
         </button>
-  
+
         <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
-      </div>
-      
-    <header class="inicio">
-        <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
-            <span class="linha1"></span>
-            <span class="linha2"></span>
-            <span class="linha3"></span>
-          </button>
-        <div class="logosite">
-            <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek"></a>
-        </div>
-        <div class="userhover">
-            <button><img id="img_useres" onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu"></button>
-        </div>
-        <nav class="navsite">
-            <div id="headerexplurar" class="navSelecionado">
-                <a href="index.html" class="nav-link ExpA">Explorar</a>
-            </div>
-            <div id="headercursos">
-                <a href="cursos.html" class="nav-link CurA">Cursos</a>
-            </div>
-            <div id="headervagas">
-                <a href="vagas.html" class="nav-link VagA">Vagas</a>
-            </div>
-            <div class="sobrenoss">
-                <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
-            </div>
-        </nav>
-        <div class="pesquisasite">
-            <input type="text" placeholder="Pesquisar" class="Pesquisar">
-            <a href=""><img src="img/search2.svg" alt="Lupa"></a>
-        </div>
-        <div id="usersite" class="usersite">
-            <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
-             <p id="nome_user"></p>
-            <button onclick="abrirMenu()">
-              <img id="img_user" src="img/user2.svg" alt="User" />
-            </button>
-          </div>
-        <nav class="hamburguer" id="menu">
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer nav-link" href="index.html"> <span class="ExpA">Explorar </span></a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer nav-link" href="cursos.html"> <span class="CurA">Cursos </span></a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer nav-link" href="vagas.html"> <span class="VagA">Vagas</span></a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer nav-link" href="sobre.html"><Span class="SobA">Sobre Nós</Span></a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer" href="ajuda.html"> <span class="AjuF">Ajuda</span> </a>
-            </div>
-            <div class="bordasuperior"></div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer " href="avisos.html" class="SobA"><span class="AviF">Avisos</span></a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer " href="avisos.html"> <span class="AtuF">Atualizações </span></a>
-            </div>
-            <div class="itemsdomenu">
-                <a class="botoesmenuhamburguer " href="sobre.html#contatosobre"> <span class="Conf">Contato </span></a>
-            </div>
+    </div>
 
-            <div class="itemsdomenu">
-                <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
-                    <option value="pt">Português</option>
-                    <option value="eng">English</option>
-                    <option value="es">Español</option>
-                    <option value="it">Italiano</option>
-                    <option value="fr">Français</option>
-                </select>
-            </div>
-            <div class="bordasuperior"></div>
-            <div class="divredessociais">
-                <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"><img src="img/Linkedin.svg" alt="Logo Linkedin" /></a>
-                <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
-                <a href="https://www.instagram.com/seek.oficial/"><img src="img/instagram.svg" alt="Logo instagram" /></a>
-              </div>
-            <div class="bordasuperior"></div>
-
-
-            <div class="direitosautoraismenu">
-                <p class="DirF">Todos os direitos reservados. ©Seek <span class="anoatual"></span>.</p>
-            </div>
-        </nav>
-        <div id="menuperfil" class="menuperfil">
-            <div id="divmeuperfil" class="divmenuperfil">
-              <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
-            </div>
-            <div id="divconfiguracoes" class="divmenuperfil">
-              <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
-            </div>
-            <div class="botaomodoescuro">
-              <label for=""><img src="img/lua.png" alt="Lua" /></label>
-              <div class="checkbox-con">
-                <input  onclick="MudarModos()" id="checkbox" type="checkbox"/>
-              </div>
-              <label for=""><img src="img/sol.png" alt="Sol" /></label>
-            </div>
-            <div id="diventrarsair">
-              <button id="sairdomenuperfil" class="sairP"><a href="login.html" ><span class="LoginPerfil">Login</span></a></button>
-            </div>
-          </div>
+    <header class="inicio" id="header">
+      <script src="script/criar_header.js" defer></script>
     </header>
 
     <div class="caminhonavegaçãocursos">
@@ -179,10 +73,11 @@
             <h2>Não foi possível continuar</h2>
             <p>Você precisa estar logado para acessar esta página.</p>
             <div class="actions">
-              <span onclick="fecharnotificacao()" id="cancelarnotificacaofazerlogin" class="btn-cancel">Cancelar</span>
-              <span id="botaofazerloginconfirmar" class="btn-confirm"><a href="login.html">fazer login</a></span>
+                <span onclick="fecharnotificacao()" id="cancelarnotificacaofazerlogin"
+                    class="btn-cancel">Cancelar</span>
+                <span id="botaofazerloginconfirmar" class="btn-confirm"><a href="login.html">fazer login</a></span>
             </div>
-          </div>
+        </div>
 
         <section class="informacoessobreocurso">
             <div class="infodonodocurso">
@@ -207,27 +102,27 @@
 
             <div class="infocurso">
                 <div class="espacoentreoselementos">
-                <h1>Curso de Design</h1>
-                <div class="videoapresentacaodocurso">
-                    <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
+                    <h1>Curso de Design</h1>
+                    <div class="videoapresentacaodocurso">
+                        <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
 
-                <div class="infocursomedia ">
+                    <div class="infocursomedia ">
                         <div class="iconscaixaflutuantecursos">
                             <img src="img/estrela.svg" alt="estrela">
                             <img src="img/cinema.svg" alt="cinema">
                             <img src="img/perfilcursos.svg" alt="perfil cursos">
                             <img src="img/like.svg" alt="like">
-                            
+
                         </div>
                         <div class="informacoessobreocursocaixaflutuante">
                             <p>Level: iniciante</p>
                             <p>15 módulos(50min)</p>
                             <p>20.000 estudantes</p>
                             <p>89% reviews positivas</p>
-                           
+
                         </div>
                         <div class="iconscaixaflutuantecursos">
                             <img src="img/som.svg" alt="Alto falante">
@@ -237,112 +132,130 @@
                             <p>Audio: Português</p>
                             <p>CC: inglês,espanhol</p>
                         </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="assisnarmedia">
-                <div class="valordocurso">
-                    <p>R$ 23, 00 /mês</p>
+                <div class="assisnarmedia">
+                    <div class="valordocurso">
+                        <p>R$ 23, 00 /mês</p>
+                    </div>
+                    <div class="botaoassinar">
+                        <button>Assinar</button>
+                    </div>
                 </div>
-                <div class="botaoassinar">
-                    <button>Assinar</button>
+
+                <div class="espacoentreoselementos2">
+
+
+                    <div class="descricaodocurso">
+                        <h2>Descrição do curso</h2>
+                        <p id="descgrande">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+                            mollitia facilis dolor repellat
+                            fugiat sapiente, temporibus, dolores cumque perspiciatis incidunt eos, iusto dolorum quia
+                            ratione
+                            quibusdam nam quae similique enim?
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati doloremque similique
+                            nostrum
+                            quasi asperiores, tenetur deleniti dolorem ducimus. Ad, voluptas magni explicabo ducimus qui
+                            fugiat
+                            maxime perspiciatis magnam culpa aut!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, facilis quidem perspiciatis
+                            ut
+                            dignissimos explicabo fugit quam, nobis rerum magni minima expedita eligendi maxime itaque
+                            suscipit.
+                            Architecto impedit culpa corrupti?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore sed accusantium debitis
+                            omnis
+                            quibusdam vero reiciendis architecto, voluptatum, accusamus mollitia tenetur, quam impedit
+                            nobis
+                            temporibus velit vitae molestiae deleniti rem!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores laudantium voluptatum
+                            labore culpa
+                            minus veniam, rerum iusto, enim nobis facilis illum sapiente, tenetur nesciunt repudiandae
+                            consectetur aliquid ab soluta minima.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sit eum voluptas, animi,
+                            necessitatibus tempora nihil nobis non quod placeat illo et, exercitationem optio. Quaerat
+                            aliquam
+                            doloremque consequuntur tempora ducimus!
+                        </p>
+                        <p id="descpequena">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+                            mollitia facilis dolor repellat
+                            fugiat sapiente, temporibus, dolores cumque perspiciatis incidunt eos, iusto dolorum quia
+                            ratione
+                            quibusdam nam quae similique enim?
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati doloremque similique
+                            nostrum
+                            quasi asperiores, tenetur deleniti dolorem ducimus. Ad, voluptas magni explicabo ducimus qui
+                            fugiat
+                            maxime perspiciatis magnam culpa aut!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, facilis quidem perspiciatis
+                            ut
+                            dignissimos explicabo fugit quam, nobis rerum magni minima expedita eligendi maxime itaque
+                            suscipit.
+                            Architecto impedit culpa corrupti?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore sed accusantium debitis
+                            omnis
+                            quibusdam vero reiciendis architecto, voluptatum, accusamus mollitia tenetur, quam impedit
+                            nobis
+
+                        </p>
+                    </div>
+
+
+
+
+                    <div class="containeraulasdocurso">
+
+
+                        <div class="videoaulacurso">
+                            <div class="containerpararesponsividadedoiframe">
+                                <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="infovidesdocurso ">
+                                <p>introdução</p>
+                                <p>45min</p>
+                            </div>
+                        </div>
+                        <div class="videoaulacurso">
+                            <div class="containerpararesponsividadedoiframe">
+                                <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="infovidesdocurso ">
+                                <p>introdução</p>
+                                <p>45min</p>
+                            </div>
+                        </div>
+                        <div class="videoaulacurso">
+                            <div class="containerpararesponsividadedoiframe">
+                                <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="infovidesdocurso ">
+                                <p>introdução</p>
+                                <p>45min</p>
+                            </div>
+                        </div>
+                        <div class="videoaulacurso">
+                            <div class="containerpararesponsividadedoiframe">
+                                <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="infovidesdocurso ">
+                                <p>introdução</p>
+                                <p>45min</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
                 </div>
-            </div>
-
-<div class="espacoentreoselementos2">
-
-
-    <div class="descricaodocurso">
-        <h2>Descrição do curso</h2>
-        <p id="descgrande">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur mollitia facilis dolor repellat
-            fugiat sapiente, temporibus, dolores cumque perspiciatis incidunt eos, iusto dolorum quia ratione
-            quibusdam nam quae similique enim?
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati doloremque similique nostrum
-            quasi asperiores, tenetur deleniti dolorem ducimus. Ad, voluptas magni explicabo ducimus qui fugiat
-            maxime perspiciatis magnam culpa aut!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, facilis quidem perspiciatis ut
-            dignissimos explicabo fugit quam, nobis rerum magni minima expedita eligendi maxime itaque suscipit.
-            Architecto impedit culpa corrupti?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore sed accusantium debitis omnis
-            quibusdam vero reiciendis architecto, voluptatum, accusamus mollitia tenetur, quam impedit nobis
-            temporibus velit vitae molestiae deleniti rem!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores laudantium voluptatum labore culpa
-            minus veniam, rerum iusto, enim nobis facilis illum sapiente, tenetur nesciunt repudiandae
-            consectetur aliquid ab soluta minima.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sit eum voluptas, animi,
-            necessitatibus tempora nihil nobis non quod placeat illo et, exercitationem optio. Quaerat aliquam
-            doloremque consequuntur tempora ducimus!
-        </p>
-        <p id="descpequena">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur mollitia facilis dolor repellat
-            fugiat sapiente, temporibus, dolores cumque perspiciatis incidunt eos, iusto dolorum quia ratione
-            quibusdam nam quae similique enim?
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati doloremque similique nostrum
-            quasi asperiores, tenetur deleniti dolorem ducimus. Ad, voluptas magni explicabo ducimus qui fugiat
-            maxime perspiciatis magnam culpa aut!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, facilis quidem perspiciatis ut
-            dignissimos explicabo fugit quam, nobis rerum magni minima expedita eligendi maxime itaque suscipit.
-            Architecto impedit culpa corrupti?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore sed accusantium debitis omnis
-            quibusdam vero reiciendis architecto, voluptatum, accusamus mollitia tenetur, quam impedit nobis
-           
-        </p>
-    </div>
-
-
-
-
-    <div class="containeraulasdocurso">
-
-
-        <div class="videoaulacurso">
-            <div class="containerpararesponsividadedoiframe">
-                <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="infovidesdocurso ">
-                <p>introdução</p>
-                <p>45min</p>
-            </div>
-        </div>
-        <div class="videoaulacurso">
-            <div class="containerpararesponsividadedoiframe">
-                <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="infovidesdocurso ">
-                <p>introdução</p>
-                <p>45min</p>
-            </div>
-        </div>
-        <div class="videoaulacurso">
-            <div class="containerpararesponsividadedoiframe">
-                <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="infovidesdocurso ">
-                <p>introdução</p>
-                <p>45min</p>
-            </div>
-        </div>
-        <div class="videoaulacurso">
-            <div class="containerpararesponsividadedoiframe">
-                <iframe src="https://www.youtube.com/embed/kcnUi1sznYM" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="infovidesdocurso ">
-                <p>introdução</p>
-                <p>45min</p>
-            </div>
-        </div>
-
-
-
-    </div>
-</div>
             </div>
         </section>
         <section class="divoutrasinfodocurso">
@@ -397,18 +310,22 @@
 
         <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
             <div vw class="enabled">
-              <div vw-access-button class="active"></div>
-              <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-              </div>
+                <div vw-access-button class="active"></div>
+                <div vw-plugin-wrapper>
+                    <div class="vw-plugin-top-wrapper"></div>
+                </div>
             </div>
             <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
             <script>
-              new window.VLibras.Widget('https://vlibras.gov.br/app');
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
             </script>
-            </div>
+        </div>
 
     </main>
+
+    <footer id="footer">
+        <script src="script/criar_footer.js" defer></script>
+    </footer>
 
 
     <script src="script/user_logado.js"></script>
@@ -416,7 +333,6 @@
     <script src="script/script.js"></script>
     <script src="script/tema.js"></script>
     <script src="script/traducao.js"></script>
-    <script src="script/criar_footer.js"></script>
     <script src="script/verificar_token.js"></script>
 
 

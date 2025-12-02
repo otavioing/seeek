@@ -1,5 +1,5 @@
 function criarFooter() {
-    const footer = document.createElement('footer');
+    const footer = document.getElementById('footer');
     footer.innerHTML = `    <div class="linksfooter">
       <div class="infofooter">
         <a href="ajuda.html" class="AjuF">Ajuda</a>
@@ -31,7 +31,6 @@ function criarFooter() {
       <p class="DirF"> Todos os direitos reservados. ©Seek .</p>
       <span id="anoatual" class="anoatual"></span>
     </div>`;
-    document.body.appendChild(footer);
 };
 
 criarFooter();

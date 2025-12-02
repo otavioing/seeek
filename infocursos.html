@@ -56,124 +56,9 @@
     <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec">
   </div>
 
-  <header class="inicio">
-    <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
-      <span class="linha1"></span>
-      <span class="linha2"></span>
-      <span class="linha3"></span>
-    </button>
-    <div class="logosite">
-      <a class="logosite" href="index.html"><img src="img/logo.svg" alt="Logo Seek" /></a>
-    </div>
-    <div class="userhover">
-      <button>
-        <img id="img_useres" onclick="abrirMenu()" src="img/user2.svg" alt="perfil menu" />
-      </button>
-    </div>
-    <nav class="navsite">
-      <div id="headerexplurar">
-        <a href="index.html" class="nav-link ExpA">Explorar</a>
-      </div>
-      <div id="headercursos">
-        <a href="cursos.html" class="nav-link CurA">Cursos</a>
-      </div>
-      <div id="headervagas">
-        <a href="vagas.html" class="nav-link VagA">Vagas</a>
-      </div>
-      <div class="sobrenoss">
-        <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
-      </div>
-    </nav>
-    <div class="pesquisasite">
-      <input type="text" placeholder="Pesquisar" class="Pesquisar" />
-      <a href=""><img src="img/search2.svg" alt="Lupa" /></a>
-    </div>
-    <div id="usersite" class="usersite">
-      <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
-       <p id="nome_user"></p>
-      <button onclick="abrirMenu()">
-        <img id="img_user" src="img/user2.svg" alt="User" />
-      </button>
-    </div>
-    <nav class="hamburguer" id="menu">
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="index.html">
-          <span class="ExpA">Explorar </span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="cursos.html">
-          <span class="CurA">Cursos </span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="vagas.html">
-          <span class="VagA">Vagas</span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer nav-link" href="sobre.html"><span class="SobA">Sobre Nós</span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer" href="ajuda.html">
-          <span class="AjuF">Ajuda</span>
-        </a>
-      </div>
-      <div class="bordasuperior"></div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"><span class="AviF">Avisos</span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer" href="avisos.html">
-          <span class="AtuF">Atualizações </span></a>
-      </div>
-      <div class="itemsdomenu">
-        <a class="botoesmenuhamburguer" href="sobre.html#contatosobre">
-          <span class="Conf">Contato </span></a>
-      </div>
-
-      <div class="itemsdomenu">
-        <select aria-label="Idioma" name="Idioma" id="idiomaSelect" onchange="TrocaLinguagem(this.value)">
-          <option value="pt">Português</option>
-          <option value="eng">English</option>
-          <option value="es">Español</option>
-          <option value="it">Italiano</option>
-          <option value="fr">Français</option>
-        </select>
-      </div>
-      <div class="bordasuperior"></div>
-
-      <div class="divredessociais">
-        <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"><img src="img/Linkedin.svg"
-            alt="Logo Linkedin" /></a>
-        <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
-        <a href="https://www.instagram.com/seek.oficial/"><img src="img/instagram.svg" alt="Logo instagram" /></a>
-      </div>
-      <div class="bordasuperior"></div>
-
-      <div class="direitosautoraismenu">
-        <p class="DirF">
-          Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
-        </p>
-      </div>
-    </nav>
-
-    <div id="menuperfil" class="menuperfil">
-      <div id="divmeuperfil" class="divmenuperfil">
-        <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
-      </div>
-      <div id="divconfiguracoes" class="divmenuperfil">
-        <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
-      </div>
-      <div class="botaomodoescuro">
-        <label for=""><img src="img/lua.png" alt="Lua" /></label>
-        <div class="checkbox-con">
-          <input  onclick="MudarModos()" id="checkbox" type="checkbox"/>
-        </div>
-        <label for=""><img src="img/sol.png" alt="Sol" /></label>
-      </div>
-      <div id="diventrarsair">
-        <button id="sairdomenuperfil" class="sairP"><a href="login.html" ><span class="LoginPerfil">Login</span></a></button>
-      </div>
-    </div>
-  </header>
+    <header class="inicio" id="header">
+      <script src="script/criar_header.js" defer></script>
+    </header>
 
   <main class="mainInfoCursos">
 
@@ -188,106 +73,130 @@
 
     <div class="containerr">
 
-        <div class="cursoInfo">
-            <div class="headerCurso">
-                <div class="logoNome">
-                    <img src="img/iconeperfil.svg" alt="">
-                    <div class="nomeSeguidores">
-                        <h2>Nome do criador</h2>
-                        <p>0 seguidores</p>
-                        <p>São Paulo/Brasil</p>
-                    </div>
-                </div>
-                <button class="btnSeguir"><p>Seguir</p><img src="img/circle.svg" alt=""></button>
+      <div class="cursoInfo">
+        <div class="headerCurso">
+          <div class="logoNome">
+            <img src="img/iconeperfil.svg" alt="">
+            <div class="nomeSeguidores">
+              <h2>Nome do criador</h2>
+              <p>0 seguidores</p>
+              <p>São Paulo/Brasil</p>
             </div>
-
-            <div class="mainCurso">
-                <h4>Curso de Design</h4>
-
-                <div class="videoCurso">
-                    <img src="img/imagemtestecurso.png" alt="">
-                </div>
-                <div class="descCurso">
-                    <h5>Descrição completa</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod a illo, tempore vitae ipsum quos cum est culpa possimus, cumque ipsam consequatur. Cupiditate, rerum non dolores esse sunt libero magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magni sequi ducimus totam vel delectus minus voluptates rerum quos cupiditate odio, non enim at, iusto tenetur? Quam vel necessitatibus possimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis modi corrupti doloremque esse facere repudiandae dolor consequatur suscipit, quae obcaecati sapiente delectus enim ipsa natus sed error perspiciatis, dignissimos rerum!</p>
-                </div>
-
-                <div class="videosCurso">
-                    <div class="aulasCursos">
-                        <div>
-                            <img src="img/banner-designer-grafico.png" alt="">
-                            <p>Introdução</p>
-                            <p>45min</p>
-                        </div>
-                        <div>
-                            <img src="img/banner-designer-grafico.png" alt="">
-                            <p>Introdução</p>
-                            <p>45min</p>
-                        </div>
-                        <div>
-                            <img src="img/banner-designer-grafico.png" alt="">
-                            <p>Introdução</p>
-                            <p>45min</p>
-                        </div>
-                        <div>
-                            <img src="img/banner-designer-grafico.png" alt="">
-                            <p>Introdução</p>
-                            <p>45min</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="assinarCurso">
-
-          <div class="headerassinarCurso">
-            <h4>R$ 23,00/mês</h4>
-            <button>Assinar</button>
           </div>
-            <div class="divs">
-                <div>
-                    <img src="img/estrela.svg" alt="">
-                    <p>Level: iniciante</p>
-                </div>
-                <div>
-                    <img src="img/estrela.svg" alt="">
-                    <p>Módulos: 15 (50min)</p>
-                </div>
-                <div>
-                    <img src="img/estrela.svg" alt="">
-                    <p>Estudantes: 20.000</p>
-                </div>
-                <div>
-                    <img src="img/estrela.svg" alt="">
-                    <p>Likes: 89%</p>
-                </div>
-                <div>
-                    <img src="img/estrela.svg" alt="">
-                    <p>Áudio: português</p>
-                </div>
-                <div>
-                    <img src="img/estrela.svg" alt="">
-                    <p>CC: inglês, espanhol</p>
-                </div>
-            </div>
-
-            <div class="tags">
-                <p>Tags</p>
-                <div class="tag">
-                    <button><p>Tags</p></button>
-                    <button><p>Tags</p></button>
-                    <button><p>Tags</p></button>
-                    <button><p>Tags</p></button>
-                    <button><p>Tags</p></button>
-                    <button><p>Tags</p></button>
-                </div>
-            </div>
+          <button class="btnSeguir">
+            <p>Seguir</p><img src="img/circle.svg" alt="">
+          </button>
         </div>
+
+        <div class="mainCurso">
+          <h4>Curso de Design</h4>
+
+          <div class="videoCurso">
+            <img src="img/imagemtestecurso.png" alt="">
+          </div>
+          <div class="descCurso">
+            <h5>Descrição completa</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod a illo, tempore vitae ipsum quos cum est
+              culpa possimus, cumque ipsam consequatur. Cupiditate, rerum non dolores esse sunt libero magni! Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Placeat magni sequi ducimus totam vel delectus minus
+              voluptates rerum quos cupiditate odio, non enim at, iusto tenetur? Quam vel necessitatibus possimus. Lorem
+              ipsum dolor sit amet consectetur, adipisicing elit. Omnis modi corrupti doloremque esse facere repudiandae
+              dolor consequatur suscipit, quae obcaecati sapiente delectus enim ipsa natus sed error perspiciatis,
+              dignissimos rerum!</p>
+          </div>
+
+          <div class="videosCurso">
+            <div class="aulasCursos">
+              <div>
+                <img src="img/banner-designer-grafico.png" alt="">
+                <p>Introdução</p>
+                <p>45min</p>
+              </div>
+              <div>
+                <img src="img/banner-designer-grafico.png" alt="">
+                <p>Introdução</p>
+                <p>45min</p>
+              </div>
+              <div>
+                <img src="img/banner-designer-grafico.png" alt="">
+                <p>Introdução</p>
+                <p>45min</p>
+              </div>
+              <div>
+                <img src="img/banner-designer-grafico.png" alt="">
+                <p>Introdução</p>
+                <p>45min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="assinarCurso">
+
+        <div class="headerassinarCurso">
+          <h4>R$ 23,00/mês</h4>
+          <button>Assinar</button>
+        </div>
+        <div class="divs">
+          <div>
+            <img src="img/estrela.svg" alt="">
+            <p>Level: iniciante</p>
+          </div>
+          <div>
+            <img src="img/estrela.svg" alt="">
+            <p>Módulos: 15 (50min)</p>
+          </div>
+          <div>
+            <img src="img/estrela.svg" alt="">
+            <p>Estudantes: 20.000</p>
+          </div>
+          <div>
+            <img src="img/estrela.svg" alt="">
+            <p>Likes: 89%</p>
+          </div>
+          <div>
+            <img src="img/estrela.svg" alt="">
+            <p>Áudio: português</p>
+          </div>
+          <div>
+            <img src="img/estrela.svg" alt="">
+            <p>CC: inglês, espanhol</p>
+          </div>
+        </div>
+
+        <div class="tags">
+          <p>Tags</p>
+          <div class="tag">
+            <button>
+              <p>Tags</p>
+            </button>
+            <button>
+              <p>Tags</p>
+            </button>
+            <button>
+              <p>Tags</p>
+            </button>
+            <button>
+              <p>Tags</p>
+            </button>
+            <button>
+              <p>Tags</p>
+            </button>
+            <button>
+              <p>Tags</p>
+            </button>
+          </div>
+        </div>
+      </div>
 
     </div>
 
   </main>
+
+  <footer id="footer">
+    <script src="script/criar_footer.js" defer></script>
+  </footer>
 
   <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
     <div vw class="enabled">
@@ -300,7 +209,7 @@
     <script>
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    </div>
+  </div>
 
 
   </div>
@@ -323,7 +232,4 @@
   <script src="script/acessibilidade.js"></script>
   <script src="script/script.js"></script>
   <script src="script/tema.js"></script>
-  <script src="script/criar_footer.js"></script>
   <script src="script/traducao.js"></script>
-
-

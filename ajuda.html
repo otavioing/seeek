@@ -1,441 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seek - Ajuda</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/ajuda.css" />
-    <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml" />
-    <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml" />
-  </head>
 
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seek - Ajuda</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/ajuda.css" />
+  <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+</head>
 
-    gtag("config", "G-SLCTJL00KV");
-  </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  <body id="todo">
-    <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
-      <button
-        id="botaobarra"
-        onclick="ativarbarra()"
-        class="botaoativacaobarra"
-      >
-        <img src="img/barra/icon.svg" alt="símbolo da onu" />
-      </button>
-    </div>
+  gtag("config", "G-SLCTJL00KV");
+</script>
 
-    <div id="barra" class="divbarradeacessibilidade">
-      <button onclick="desativarbarra()" class="botaoativacaobarra">
-        <img src="img/barra/icon.svg" alt="símbolo da onu" />
-      </button>
+<body id="todo">
+  <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
+    <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra">
+      <img src="img/barra/icon.svg" alt="símbolo da onu" />
+    </button>
+  </div>
 
-      <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
-        <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
-      </button>
-
-      <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
-        <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
-      </button>
-
-      <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
-        <img src="img/barra/luabarra.svg" alt="Lua" />
-      </button>
-
-      <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
-        <img src="img/barra/solbarra.svg" alt="Sol" />
-      </button>
-
-      <button
-        onclick="desativaeativavlibras()"
-        class="funcaoesbarradeacessibilidade"
-      >
-        <img src="img/barra/iconvlibras.svg" alt="vlibras" />
-      </button>
-
-      <img
-        id="logodafatecdabarradeacessibilidade"
-        src="img/Logofatec.svg"
-        alt="Logo da fatec"
-      />
-    </div>
-
-    <header class="inicio">
-      <button
-        aria-label="botão menu de hamburguer"
-        class="botaoMenu"
-        id="botaoMenu"
-      >
-        <span class="linha1"></span>
-        <span class="linha2"></span>
-        <span class="linha3"></span>
-      </button>
-      <div class="logosite">
-        <a class="logosite" href="index.html"
-          ><img src="img/logo.svg" alt="Logo Seek"
-        /></a>
-      </div>
-      <div class="userhover">
-        <button>
-          <img
-            id="img_useres"
-            onclick="abrirMenu()"
-            src="img/user2.svg"
-            alt="perfil menu"
-          />
-        </button>
-      </div>
-      <nav class="navsite">
-        <div id="headerexplurar" class="navSelecionado">
-          <a href="index.html" class="nav-link ExpA">Explorar</a>
-        </div>
-        <div id="headercursos">
-          <a href="cursos.html" class="nav-link CurA">Cursos</a>
-        </div>
-        <div id="headervagas">
-          <a href="vagas.html" class="nav-link VagA">Vagas</a>
-        </div>
-        <div class="sobrenoss">
-          <a href="sobre.html" class="nav-link SobA">Sobre Nós</a>
-        </div>
-      </nav>
-      <div class="pesquisasite">
-        <input type="text" placeholder="Pesquisar" class="Pesquisar" />
-        <a href=""><img src="img/search2.svg" alt="Lupa" /></a>
-      </div>
-      <div id="usersite" class="usersite">
-        <!-- <a href=""><img src="img/bell2.svg" alt="Sino" /></a> -->
-        <p id="nome_user"></p>
-        <button onclick="abrirMenu()">
-          <img id="img_user" src="img/user2.svg" alt="User" />
-        </button>
-      </div>
-      <nav class="hamburguer" id="menu">
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer nav-link" href="index.html">
-            <span class="ExpA">Explorar </span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer nav-link" href="cursos.html">
-            <span class="CurA">Cursos </span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer nav-link" href="vagas.html">
-            <span class="VagA">Vagas</span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer nav-link" href="sobre.html"
-            ><span class="SobA">Sobre Nós</span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer" href="ajuda.html">
-            <span class="AjuF">Ajuda</span>
-          </a>
-        </div>
-        <div class="bordasuperior"></div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer" href="avisos.html" class="SobA"
-            ><span class="AviF">Avisos</span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer" href="avisos.html">
-            <span class="AtuF">Atualizações </span></a
-          >
-        </div>
-        <div class="itemsdomenu">
-          <a class="botoesmenuhamburguer" href="sobre.html#contatosobre">
-            <span class="Conf">Contato </span></a
-          >
-        </div>
-
-        <div class="itemsdomenu">
-          <select
-            aria-label="Idioma"
-            name="Idioma"
-            id="idiomaSelect"
-            onchange="TrocaLinguagem(this.value)"
-          >
-            <option value="pt">Português</option>
-            <option value="eng">English</option>
-            <option value="es">Español</option>
-            <option value="it">Italiano</option>
-            <option value="fr">Français</option>
-          </select>
-        </div>
-        <div class="bordasuperior"></div>
-
-        <div class="divredessociais">
-          <a href="https://www.linkedin.com/in/seek-artes-9a676733a/"
-            ><img src="img/Linkedin.svg" alt="Logo Linkedin"
-          /></a>
-          <button><img src="img/whatsapp.svg" alt="Logo whatsapp" /></button>
-          <a href="https://www.instagram.com/seek.oficial/"
-            ><img src="img/instagram.svg" alt="Logo instagram"
-          /></a>
-        </div>
-        <div class="bordasuperior"></div>
-
-        <div class="direitosautoraismenu">
-          <p class="DirF">
-            Todos os direitos reservados. ©Seek <span class="anoatual"></span>.
-          </p>
-        </div>
-      </nav>
-      <div id="menuperfil" class="menuperfil">
-        <div id="divmeuperfil" class="divmenuperfil">
-          <a onclick="abrirnotificacao()" class="Perf">Meu Perfil</a>
-        </div>
-        <div id="divconfiguracoes" class="divmenuperfil">
-          <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
-        </div>
-        <div class="botaomodoescuro">
-          <label for=""><img src="img/lua.png" alt="Lua" /></label>
-          <div class="checkbox-con">
-            <input onclick="MudarModos()" id="checkbox" type="checkbox" />
-          </div>
-          <label for=""><img src="img/sol.png" alt="Sol" /></label>
-        </div>
-        <div id="diventrarsair" class="divmenuperfil">
-          <button id="sairdomenuperfil" class="sairP">
-            <a href="login.html"><span class="LoginPerfil">Login</span></a>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <section class="migalhadepao">
-      <a class="migalhadepaosobrenoshome" href="">
-        <span class="ExpA">Explorar</span></a
-      >
-      <p>></p>
-      <a class="migalhadepaosobrenos" href="">
-        <span class="AjuF"> Ajuda </span></a
-      >
-    </section>
-    <main class="mainajuda">
-      <div
-        id="caixadenotificacaofazerlogin"
-        class="caixadenotificacaofazerlogin"
-      >
-        <h2>Não foi possível continuar</h2>
-        <p>Você precisa estar logado para acessar esta página.</p>
-        <div class="actions">
-          <span
-            onclick="fecharnotificacao()"
-            id="cancelarnotificacaofazerlogin"
-            class="btn-cancel"
-            >Cancelar</span
-          >
-          <span id="botaofazerloginconfirmar" class="btn-confirm"
-            ><a href="login.html">fazer login</a></span
-          >
-        </div>
-      </div>
-      <h1 class="h1ajuda"><span class="AjuF">Ajuda </span></h1>
-
-      <div class="usuarioajuda">
-        <div class="usuariosinfoeimg">
-          <h2 class="h2usuario"><span class="UsuA">Usuário</span></h2>
-
-          <p class="textousuarioajuda">
-            <span class="TexUA"
-              >Começando pela parte do usuário, você pode configurar sua <br />
-              conta da forma como quiser e até podendo alterar o tipo <br />
-              dela, podendo selecionar um tipo de conta para professores, <br />
-              ou a padrão(artistas), ou empresa.</span
-            >
-          </p>
-        </div>
-        <div class="imagemcamera">
-          <img src="img/Group 311 camera.svg" alt="camera" />
-        </div>
-      </div>
-
-      <div class="portajuda">
-        <div class="portiajudaimg">
-          <h2 class="h2portifolio"><span class="PortAj">Portfólios</span></h2>
-
-          <p class="textousuarioportifolioajuda">
-            <span class="TexPA"
-              >A parte de portfólio, além de você poder atualizar o seu indo
-              <br />
-              na secção de portfólio e adicionar ou editar.E para acesar os
-              <br />
-              porfólios de outras pessoas você pode fazer de duas <br />
-              formas. <br />
-              Uma delas é indo em explorar que utiliza um algoritmo pra <br />
-              filtrar alguns portfólios que talvez você tenha enteresse, ou
-              <br />
-              indo na barra de pesquisa e buscar por um estilo ou ator que
-              <br />
-              te interessa,podendo filtrar após a pesquisa.E ao clicar na <br />
-              capa do portfólio ele abrirá na sua tela uma janela onde <br />
-              estará o porfólio completo.</span
-            >
-          </p>
-        </div>
-        <div class="portinfoeimg">
-          <img src="img/Group 313 fotoimpresa.svg" alt="foto impresa" />
-        </div>
-      </div>
-
-      <div class="cursosvagasajuda">
-        <div class="infocursosevagas">
-          <h2 class="h2curevagasajuda">
-            <span class="CeVA">Cursos/vagas </span>
-          </h2>
-
-          <p class="textocursoevagasajuda">
-            <span class="TexCeVA"
-              >Semelhante ao portfólio, você pode acesar o curso ou vaga <br />
-              ao clicar na sua capa, e caso queira mais informações, é só <br />
-              clicar em “mais informações” para poder ver melhor as <br />
-              especificações da vaga, ou do curso, além também poder <br />
-              acesar os cursos que você queira pela barra de pesquisa ou <br />
-              pelo menu inddo em “cursos” ou “vagas”</span
-            >
-          </p>
-        </div>
-        <div class="imagemcurvagas">
-          <img src="img/Group 342 mesa.svg" alt="mesa" />
-        </div>
-      </div>
-
-      <div class="cadastroajuda">
-        <div class="infocadastroajuda">
-          <h2 class="h2cadastoajuda"><span class="CadA">Cadastro</span></h2>
-
-          <p class="textocadastroajuda">
-            <span class="CadAT"
-              >Na página de entrar/cadastro, você utiliza seu e-mail <br />
-              principal ou de preferência para poder acesar o site <br />
-              caso queira, do contrário é só clicar na seta no canto <br />
-              superior direito para acessar o site como anônimo
-            </span>
-          </p>
-        </div>
-        <div class="imagemcadastro">
-          <img src="img/Group 314 cnh.svg" alt="cnh" />
-        </div>
-      </div>
-
-      <div class="botaochatajuda">
-        <button id="chat-toggle">
-          <img src="img/chatcomiaajuda.png" alt="" />
-        </button>
-      </div>
-      <div id="chat-container" class="chatcontainer">
-        <div class="titulochat">
-          <p>Chat com a IA</p>
-          <button id="chat-close">X</button>
-        </div>
-        <div class="conversa" id="chat-conversation"></div>
-        <div class="teclado">
-          <input
-            id="chat-input"
-            type="text"
-            placeholder="Digite sua mensagem..."
-          />
-          <button id="chat-send">Enviar</button>
-        </div>
-      </div>
-      <script>
-        var chatInput = document.getElementById("chat-input");
-        var chatSend = document.getElementById("chat-send");
-        var chatConversation = document.getElementById("chat-conversation");
-
-        async function sendChatMessage() {
-          var userMessages = chatInput.value;
-          if (!userMessages.trim()) return;
-          chatConversation.innerHTML += `<p>${userMessages}</p>`;
-          chatInput.value = "";
-          chatConversation.innerHTML += `<span class="loading-response"></span>`;
-          const response = await fetch("http://localhost:4500/openai/ia", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ pergunta: userMessages }),
-          });
-          const data = await response.json();
-          const loadingMsg = chatConversation.querySelector(
-            "span.loading-response"
-          );
-          if (loadingMsg) loadingMsg.remove();
-          chatConversation.innerHTML += `<span>${data.resposta}</span>`;
-          // Scroll para o final
-          chatConversation.scrollTop = chatConversation.scrollHeight;
-        }
-
-        chatSend.onclick = sendChatMessage;
-
-        chatInput.addEventListener("keydown", function (event) {
-          if (event.key === "Enter") {
-            event.preventDefault();
-            sendChatMessage();
-          }
-        });
-
-        chatClose = document.getElementById("chat-close");
-        chatContainer = document.getElementById("chat-container");
-
-        chatClose.onclick = function () {
-          chatContainer.style.bottom = "-2000px";
-        };
-
-        chatOpen = document.getElementById("chat-toggle");
-
-        chatOpen.onclick = function () {
-          chatContainer.style.bottom = "20px";
-        };
-      </script>
-
-      <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
-        <div vw class="enabled">
-          <div vw-access-button class="active"></div>
-          <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-          </div>
-        </div>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-          new window.VLibras.Widget("https://vlibras.gov.br/app");
-        </script>
-      </div>
-    </main>
-
-    <button class="btn-scroll-top" arial-label="Voltar ao topo">
-      <img
-        src="img/arrow-top.svg"
-        alt="Voltar ao topo"
-        width="50"
-        height="50"
-      />
+  <div id="barra" class="divbarradeacessibilidade">
+    <button onclick="desativarbarra()" class="botaoativacaobarra">
+      <img src="img/barra/icon.svg" alt="símbolo da onu" />
     </button>
 
+    <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+    </button>
 
-    <script src="script/lfy.js"></script>
-    <script src="script/user_logado.js"></script>
-    <script src="script/acessibilidade.js"></script>
-    <script src="script/script.js"></script>
-    <script src="script/tema.js"></script>
-    <script src="script/traducao.js"></script>
-    <script src="script/criar_footer.js"></script>
-    <script src="script/verificar_token.js"></script>
+    <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+    </button>
 
-  </body>
+    <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/luabarra.svg" alt="Lua" />
+    </button>
+
+    <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/solbarra.svg" alt="Sol" />
+    </button>
+
+    <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+    </button>
+
+    <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec" />
+  </div>
+
+    <header class="inicio" id="header">
+      <script src="script/criar_header.js" defer></script>
+    </header>
+
+  <section class="migalhadepao">
+    <a class="migalhadepaosobrenoshome" href="">
+      <span class="ExpA">Explorar</span></a>
+    <p>></p>
+    <a class="migalhadepaosobrenos" href="">
+      <span class="AjuF"> Ajuda </span></a>
+  </section>
+  <main class="mainajuda">
+    <div id="caixadenotificacaofazerlogin" class="caixadenotificacaofazerlogin">
+      <h2>Não foi possível continuar</h2>
+      <p>Você precisa estar logado para acessar esta página.</p>
+      <div class="actions">
+        <span onclick="fecharnotificacao()" id="cancelarnotificacaofazerlogin" class="btn-cancel">Cancelar</span>
+        <span id="botaofazerloginconfirmar" class="btn-confirm"><a href="login.html">fazer login</a></span>
+      </div>
+    </div>
+    <h1 class="h1ajuda"><span class="AjuF">Ajuda </span></h1>
+
+    <div class="usuarioajuda">
+      <div class="usuariosinfoeimg">
+        <h2 class="h2usuario"><span class="UsuA">Usuário</span></h2>
+
+        <p class="textousuarioajuda">
+          <span class="TexUA">Começando pela parte do usuário, você pode configurar sua <br />
+            conta da forma como quiser e até podendo alterar o tipo <br />
+            dela, podendo selecionar um tipo de conta para professores, <br />
+            ou a padrão(artistas), ou empresa.</span>
+        </p>
+      </div>
+      <div class="imagemcamera">
+        <img src="img/Group 311 camera.svg" alt="camera" />
+      </div>
+    </div>
+
+    <div class="portajuda">
+      <div class="portiajudaimg">
+        <h2 class="h2portifolio"><span class="PortAj">Portfólios</span></h2>
+
+        <p class="textousuarioportifolioajuda">
+          <span class="TexPA">A parte de portfólio, além de você poder atualizar o seu indo
+            <br />
+            na secção de portfólio e adicionar ou editar.E para acesar os
+            <br />
+            porfólios de outras pessoas você pode fazer de duas <br />
+            formas. <br />
+            Uma delas é indo em explorar que utiliza um algoritmo pra <br />
+            filtrar alguns portfólios que talvez você tenha enteresse, ou
+            <br />
+            indo na barra de pesquisa e buscar por um estilo ou ator que
+            <br />
+            te interessa,podendo filtrar após a pesquisa.E ao clicar na <br />
+            capa do portfólio ele abrirá na sua tela uma janela onde <br />
+            estará o porfólio completo.</span>
+        </p>
+      </div>
+      <div class="portinfoeimg">
+        <img src="img/Group 313 fotoimpresa.svg" alt="foto impresa" />
+      </div>
+    </div>
+
+    <div class="cursosvagasajuda">
+      <div class="infocursosevagas">
+        <h2 class="h2curevagasajuda">
+          <span class="CeVA">Cursos/vagas </span>
+        </h2>
+
+        <p class="textocursoevagasajuda">
+          <span class="TexCeVA">Semelhante ao portfólio, você pode acesar o curso ou vaga <br />
+            ao clicar na sua capa, e caso queira mais informações, é só <br />
+            clicar em “mais informações” para poder ver melhor as <br />
+            especificações da vaga, ou do curso, além também poder <br />
+            acesar os cursos que você queira pela barra de pesquisa ou <br />
+            pelo menu inddo em “cursos” ou “vagas”</span>
+        </p>
+      </div>
+      <div class="imagemcurvagas">
+        <img src="img/Group 342 mesa.svg" alt="mesa" />
+      </div>
+    </div>
+
+    <div class="cadastroajuda">
+      <div class="infocadastroajuda">
+        <h2 class="h2cadastoajuda"><span class="CadA">Cadastro</span></h2>
+
+        <p class="textocadastroajuda">
+          <span class="CadAT">Na página de entrar/cadastro, você utiliza seu e-mail <br />
+            principal ou de preferência para poder acesar o site <br />
+            caso queira, do contrário é só clicar na seta no canto <br />
+            superior direito para acessar o site como anônimo
+          </span>
+        </p>
+      </div>
+      <div class="imagemcadastro">
+        <img src="img/Group 314 cnh.svg" alt="cnh" />
+      </div>
+    </div>
+
+    <div class="botaochatajuda">
+      <button id="chat-toggle">
+        <img src="img/chatcomiaajuda.png" alt="" />
+      </button>
+    </div>
+    <div id="chat-container" class="chatcontainer">
+      <div class="titulochat">
+        <p>Chat com a IA</p>
+        <button id="chat-close">X</button>
+      </div>
+      <div class="conversa" id="chat-conversation"></div>
+      <div class="teclado">
+        <input id="chat-input" type="text" placeholder="Digite sua mensagem..." />
+        <button id="chat-send">Enviar</button>
+      </div>
+    </div>
+    <script>
+      var chatInput = document.getElementById("chat-input");
+      var chatSend = document.getElementById("chat-send");
+      var chatConversation = document.getElementById("chat-conversation");
+
+      async function sendChatMessage() {
+        var userMessages = chatInput.value;
+        if (!userMessages.trim()) return;
+        chatConversation.innerHTML += `<p>${userMessages}</p>`;
+        chatInput.value = "";
+        chatConversation.innerHTML += `<span class="loading-response"></span>`;
+        const response = await fetch("http://localhost:4500/openai/ia", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ pergunta: userMessages }),
+        });
+        const data = await response.json();
+        const loadingMsg = chatConversation.querySelector(
+          "span.loading-response"
+        );
+        if (loadingMsg) loadingMsg.remove();
+        chatConversation.innerHTML += `<span>${data.resposta}</span>`;
+        // Scroll para o final
+        chatConversation.scrollTop = chatConversation.scrollHeight;
+      }
+
+      chatSend.onclick = sendChatMessage;
+
+      chatInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          sendChatMessage();
+        }
+      });
+
+      chatClose = document.getElementById("chat-close");
+      chatContainer = document.getElementById("chat-container");
+
+      chatClose.onclick = function () {
+        chatContainer.style.bottom = "-2000px";
+      };
+
+      chatOpen = document.getElementById("chat-toggle");
+
+      chatOpen.onclick = function () {
+        chatContainer.style.bottom = "20px";
+      };
+    </script>
+
+    <div id="ativaredasativarvlibras" class="ativaredasativarvlibras">
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+      </script>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <script src="script/criar_footer.js" defer></script>
+  </footer>
+
+  <button class="btn-scroll-top" arial-label="Voltar ao topo">
+    <img src="img/arrow-top.svg" alt="Voltar ao topo" width="50" height="50" />
+  </button>
+
+
+  <script src="script/lfy.js"></script>
+  <script src="script/user_logado.js"></script>
+  <script src="script/acessibilidade.js"></script>
+  <script src="script/script.js"></script>
+  <script src="script/tema.js"></script>
+  <script src="script/traducao.js"></script>
+  <script src="script/verificar_token.js"></script>
+
+</body>
+
 </html>

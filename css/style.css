@@ -38,7 +38,7 @@
     --cinzaescurofundodomudartema: #3A3A3A;
 
     --vermelhom: #EF0000;
-    --ModoEscuroVermelho:#fd4848;
+    --ModoEscuroVermelho: #fd4848;
 
 
 
@@ -61,7 +61,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -96,7 +96,10 @@ a {
     color: var(--brancoBase);
 }
 
-.modoEscuro .explorar a , .modoEscuro #menu a , .modoEscuro #menu select, .modoEscuro .menuperfil a {
+.modoEscuro .explorar a,
+.modoEscuro #menu a,
+.modoEscuro #menu select,
+.modoEscuro .menuperfil a {
     color: var(--brancoBase);
 }
 
@@ -132,12 +135,13 @@ a {
     color: white;
 }
 
-.modoEscuro #menu{
+.modoEscuro #menu {
     background-color: var(--ModoEscuroFilt);
 }
 
 
-.modoEscuro #menu select, .modoEscuro .menuperfil{
+.modoEscuro #menu select,
+.modoEscuro .menuperfil {
     color: var(--brancoBase);
     background-color: var(--ModoEscuroFilt);
 }
@@ -146,50 +150,54 @@ a {
     background-color: var(--ModoEscuroBase);
 }
 
-.modoEscuro #sairdomenuperfil{
+.modoEscuro #sairdomenuperfil {
     color: var(--ModoEscuroVermelho);
 }
 
-.modoEscuro .filtroExplorar .buttonFiltro svg{
+.modoEscuro .filtroExplorar .buttonFiltro svg {
     fill-opacity: 0;
     stroke: var(--ModoEscuroFontV);
 }
 
-.modoEscuro .userecomentarioLeft, .userecomentarioRight p, .modoEscuro .nomeusuariocomentario {
-  color: black;
+.modoEscuro .userecomentarioLeft,
+.userecomentarioRight p,
+.modoEscuro .nomeusuariocomentario {
+    color: black;
 }
 
 .modoEscuro .comentariomodal {
     background-color: var(--ModoEscuroMesc);
 }
 
-.modoEscuro .modal-content{
+.modoEscuro .modal-content {
     background-color: var(--ModoEscuroBase);
 }
-svg .st8{
+
+svg .st8 {
     fill: #0E0E0E;
-    }
-    
-.modoEscuro .divmenuperfil:hover {
-    background-color: var(--ModoEscuroMesc2);
-    
 }
 
-.modoEscuro .areaDePesquisa{
+.modoEscuro .divmenuperfil:hover {
+    background-color: var(--ModoEscuroMesc2);
+
+}
+
+.modoEscuro .areaDePesquisa {
     background-color: var(--ModoEscuroFilt);
 }
 
-.modoEscuro .Entrarmodo{
+.modoEscuro .Entrarmodo {
     color: red;
 }
 
-.modoEscuro .editarIconButton svg path{
+.modoEscuro .editarIconButton svg path {
     fill: white
- }
+}
 
- .modoEscuro .adicionarProj , .modoEscuro .adiciona {
+.modoEscuro .adicionarProj,
+.modoEscuro .adiciona {
     background-color: var(--ModoEscuroFontV);
- }
+}
 
 /*-------------------------------- Header inicio --------------------------------*/
 
@@ -230,7 +238,7 @@ header .navsite {
     width: 5rem;
 }
 
-.sobrenoss{
+.sobrenoss {
     width: 10rem;
 }
 
@@ -251,6 +259,9 @@ header .pesquisasite {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
+    /* pai referência */
+
 }
 
 header .pesquisasite input {
@@ -262,6 +273,42 @@ header .pesquisasite input {
     padding: 1rem;
 }
 
+.listaResultados {
+    position: absolute;
+    top: 100%;
+    /* cola logo abaixo do input */
+    left: 0;
+    width: 100%;
+    border-radius: 0.8rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    /* Esconde até ter resultados */
+    z-index: 999;
+    /* fica na frente de outros elementos */
+    max-height: calc(7 * 40px);
+    /* altura de 7 itens (ajuste conforme seu padding) */
+    overflow-y: auto;
+    /* aparece scroll só quando necessário */
+}
+
+.listaResultados li a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 0.8rem;
+
+}
+
+.listaResultados li a:hover {
+    background-color: #f2f2f2;
+}
+
 header .usersite {
     width: 20%;
     display: flex;
@@ -269,6 +316,7 @@ header .usersite {
     gap: 7%;
 
 }
+
 header .usersite button {
     width: 15%;
     display: flex;
@@ -279,13 +327,15 @@ header .usersite button {
     cursor: pointer;
 }
 
-header .usersite p{
+header .usersite p {
     color: var(--branco);
 }
-#img_user{
+
+#img_user {
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
+
 header .usersite img {
     height: 2rem;
     aspect-ratio: 1/1;
@@ -315,6 +365,7 @@ header .userhover img {
     border-radius: 100%;
     aspect-ratio: 1/1;
 }
+
 .userhover button {
     background-color: transparent;
     border: none;
@@ -346,12 +397,12 @@ header .botaoMenu span {
 
 /*-------------------------------- Section fy --------------------------------*/
 
-.Entrarmodo{
+.Entrarmodo {
     color: var(--verde);
 }
 
 
-.sairP{
+.sairP {
     color: var(--vermelhom) !important;
 }
 
@@ -369,7 +420,8 @@ header .botaoMenu span {
     color: var(--preto);
     font-size: 1.3rem;
 }
-.selecionadoexplorar{
+
+.selecionadoexplorar {
     color: var(--azulBase);
     text-decoration: underline;
 }
@@ -378,6 +430,7 @@ header .botaoMenu span {
 .explorar .explorarDiv a {
     color: var(--azulBase);
 }
+
 .explorar .explorarDiv {
     text-decoration: 2px underline var(--azulBase);
 }
@@ -428,8 +481,8 @@ header .botaoMenu span {
 
 .filtroExplorar .buttonFiltro svg {
     height: 2.5rem;
-    stroke-width:3.57528;
-    stroke-linecap:round;
+    stroke-width: 3.57528;
+    stroke-linecap: round;
     stroke: var(--azulBase);
     fill-opacity: 0;
 
@@ -489,9 +542,11 @@ header .botaoMenu span {
 
 .imgFiltro {
     background-color: var(--cinzaBasee);
-    width: 100%; /* Defina a largura fixa */
+    width: 100%;
+    /* Defina a largura fixa */
     aspect-ratio: 16/9;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço sem distorcer */
 }
 
 /*-------------------------------- Main prIndex --------------------------------*/
@@ -511,10 +566,10 @@ header .botaoMenu span {
 
 /*-------------------------------- Main Imagens --------------------------------*/
 .gride {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
 
 .gride>div {
@@ -625,6 +680,7 @@ header .botaoMenu span {
 .img2 img {
     width: 80%;
 }
+
 .selecionado {
     height: 138%;
     display: flex;
@@ -641,31 +697,34 @@ header .botaoMenu span {
     height: 1rem;
 }
 
-.portHover .AutorP{
+.portHover .AutorP {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-size: clamp(1rem, 1.3vw, 1.5rem);
 }
+
 .divPortifolio {
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  position: relative;
-  
-  
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+
+
 }
+
 .post {
     height: 26rem;
     width: 26rem;
     position: relative;
     border-radius: 10px;
     background-color: #f0f0f0;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 /*------------------------------Modal Portifolio-----------------------------*/
 
 #modalPort {
@@ -711,7 +770,7 @@ header .botaoMenu span {
     padding: 1rem;
 }
 
-.nomedousuariomodal{
+.nomedousuariomodal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -720,17 +779,17 @@ header .botaoMenu span {
     width: 80%;
 }
 
-.imagemusuariomodal{
+.imagemusuariomodal {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.imagemusuariomodal img{
+.imagemusuariomodal img {
     height: 4rem;
 }
 
-.contratar-btn-span{
+.contratar-btn-span {
     height: 100%;
     width: 20%;
     display: flex;
@@ -740,13 +799,13 @@ header .botaoMenu span {
     padding: 0.3rem 1rem;
 }
 
-.contratar-btn-btn{
+.contratar-btn-btn {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.botaoContratar{
+.botaoContratar {
     background-color: var(--roxobase);
     color: var(--brancoBase);
     border: none;
@@ -756,7 +815,7 @@ header .botaoMenu span {
     width: 5rem;
 }
 
-.close{
+.close {
     display: flex;
     color: var(--branco);
     font-size: clamp(0.2rem, 2vw, 1.3rem);
@@ -774,7 +833,7 @@ header .botaoMenu span {
     height: auto;
 }
 
-.imgmodal > img{
+.imgmodal>img {
     width: 100%;
     height: auto;
     border-radius: 0.4rem;
@@ -788,7 +847,7 @@ header .botaoMenu span {
     gap: 1rem;
     width: 15%;
     height: 100%;
-    
+
 }
 
 .modal-nav button {
@@ -812,14 +871,14 @@ header .botaoMenu span {
     box-shadow: none;
 }
 
-.barradivisoriamodal{
+.barradivisoriamodal {
     display: none;
     width: 80%;
     margin: auto;
     border-bottom: 1px solid var(--cinzaBasee);
 }
 
-.comentariomodal{
+.comentariomodal {
     width: 100%;
     display: none;
     padding: 0 1rem;
@@ -838,7 +897,7 @@ header .botaoMenu span {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.nomeecompartilhar{
+.nomeecompartilhar {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
@@ -847,7 +906,7 @@ header .botaoMenu span {
     gap: 0.5rem;
 }
 
-.compartilharcomentario{
+.compartilharcomentario {
     display: flex;
     justify-content: flex-end;
     gap: 0.5rem;
@@ -856,14 +915,14 @@ header .botaoMenu span {
     right: 5;
 }
 
-.compartilharcomentario button{
+.compartilharcomentario button {
     background: none;
     border: none;
     outline: none;
     cursor: pointer;
 }
 
-.compartilharcomentario button img{
+.compartilharcomentario button img {
     height: 1rem;
 }
 
@@ -879,21 +938,22 @@ header .botaoMenu span {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.logocomentarioLeft{
+.logocomentarioLeft {
     display: flex;
     justify-content: center;
 }
 
-.logocomentario img{
+.logocomentario img {
     height: 3rem;
     border-radius: 100%;
 }
 
-.nomeusuariocomentario{
+.nomeusuariocomentario {
     margin-bottom: 0.3rem;
 }
 
-.userecomentarioLeft, .userecomentarioRight{
+.userecomentarioLeft,
+.userecomentarioRight {
     font-size: clamp(0.6rem, 1vw, 1.3rem);
 }
 
@@ -990,7 +1050,7 @@ footer {
     padding: 1rem;
     gap: 0.5rem;
     display: none;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -1001,11 +1061,13 @@ footer {
     font-size: 1.2rem;
     font-weight: 700;
 }
-.menuperfil div{
+
+.menuperfil div {
     padding: 0px;
     height: 2.5rem;
 }
-.menuperfil div > a{
+
+.menuperfil div>a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -1073,7 +1135,7 @@ footer {
     z-index: 1;
 }
 
-.cancelarTipoUser{
+.cancelarTipoUser {
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -1090,18 +1152,18 @@ footer {
     left: 15%;
 }
 
-.cancelarTipoUser p{
+.cancelarTipoUser p {
     font-size: clamp(0.6rem, 2vh, 2.5rem);
     margin-bottom: 1rem;
 }
 
-.cancelarOuConfirmar{
+.cancelarOuConfirmar {
     display: flex;
     width: 100%;
     justify-content: space-around;
 }
 
-.cancelarOuConfirmar button{
+.cancelarOuConfirmar button {
     width: 40%;
     height: 2rem;
     background: none;
@@ -1111,11 +1173,11 @@ footer {
     font-size: clamp(1rem, 1.8vh, 3rem);
 }
 
-#cancelarTipoUser{
+#cancelarTipoUser {
     color: var(--vermelhom);
 }
 
-#confirmarTipoUser{
+#confirmarTipoUser {
     color: var(--azulBase);
 }
 
@@ -1210,7 +1272,7 @@ footer {
     gap: 0.5rem;
 }
 
-.setaCorfirmar button{
+.setaCorfirmar button {
     display: flex;
     gap: 0.5rem;
     height: 1rem;
@@ -1230,23 +1292,26 @@ footer {
 
 }
 
-.confirmation-container, .confirmation-container2 {
+.confirmation-container,
+.confirmation-container2 {
     display: none;
     width: 100%;
     height: 100%;
     min-height: 400px;
-    
+
 }
 
 
 
-.confirmation-container .setaCorfirmar, .confirmation-container2 .setaCorfirmar {
+.confirmation-container .setaCorfirmar,
+.confirmation-container2 .setaCorfirmar {
     display: flex;
     justify-content: flex-start;
     padding: 0 0 1rem 1rem;
 }
 
-.confirmation-container .setaCorfirmar button img, .confirmation-container2 .setaCorfirmar button img {
+.confirmation-container .setaCorfirmar button img,
+.confirmation-container2 .setaCorfirmar button img {
     transform: rotate(270deg);
 }
 
@@ -1291,7 +1356,7 @@ footer {
     flex-wrap: wrap;
 }
 
-#formulariocaixaupdate{
+#formulariocaixaupdate {
     flex-wrap: wrap;
 }
 
@@ -1306,7 +1371,7 @@ footer {
 }
 
 
-.submit-button{
+.submit-button {
     width: auto;
     height: 2rem;
     background-color: var(--azulBase);
@@ -1327,7 +1392,7 @@ footer {
     margin-bottom: 20px;
 }
 
-.photo-placeholder{
+.photo-placeholder {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -1343,7 +1408,7 @@ footer {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.photo-dinamica{
+.photo-dinamica {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -1359,13 +1424,13 @@ footer {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.profile-photo1{
+.profile-photo1 {
     display: flex;
     justify-content: space-between;
 }
 
 
-.fotoPerfilDesc button{
+.fotoPerfilDesc button {
     width: 70%;
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -1381,7 +1446,7 @@ footer {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.fotoPerfilDesc{
+.fotoPerfilDesc {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -1402,27 +1467,27 @@ footer {
     border-right: 1px solid var(--cinzaBasee);
 }
 
-.inputsEmpresarial{
+.inputsEmpresarial {
     padding: 0.5rem 1.5rem;
     width: 80%;
 }
 
-.inputsEmpresarial .InfoEmp{
+.inputsEmpresarial .InfoEmp {
     margin-bottom: 1rem;
 }
 
-.men{
+.men {
     height: 15rem;
     width: 90%;
     padding: 10px;
     border: 1px solid var(--cinzaBase);
-    border-radius: 5px;  
+    border-radius: 5px;
     resize: none;
     background-color: var(--cinzaBase);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);    
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.input-group2{
+.input-group2 {
     color: red;
     font-size: 80%;
     display: flex;
@@ -1430,7 +1495,8 @@ footer {
     padding-bottom: 1rem;
 }
 
-.inputsEmp input, .inputsEmp button{
+.inputsEmp input,
+.inputsEmp button {
     width: 100%;
     padding: 10px;
     border: 1px solid var(--cinzaBase);
@@ -1444,24 +1510,24 @@ footer {
     transition: 0.3s;
 }
 
-.inputsEmp input{
+.inputsEmp input {
     cursor: text;
 }
 
-.inputsEmp button:hover{
+.inputsEmp button:hover {
     background-color: var(--cinzaBasee);
 
 }
 
-.inputsEmp button{
+.inputsEmp button {
     margin-top: 1rem;
 }
 
-.inputsEmp label{
+.inputsEmp label {
     font-size: 0.6rem;
 }
 
-.adcSecEmp{
+.adcSecEmp {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1469,11 +1535,11 @@ footer {
     gap: 0.6rem;
 }
 
-.adcSecEmp button{
+.adcSecEmp button {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.complementarEmp{
+.complementarEmp {
     margin-top: 0.5rem;
     margin-bottom: 0.3rem;
 }
@@ -1655,13 +1721,15 @@ footer {
     justify-content: center;
     gap: 1rem;
 }
-.divredessociais button{
+
+.divredessociais button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    
+
 }
-.divredessociais img{
+
+.divredessociais img {
     height: 2rem;
 }
 
@@ -1669,18 +1737,22 @@ footer {
 
 
 /*Barra de acessibilidade*/
-.ativaredasativarvlibras{
+.ativaredasativarvlibras {
     display: none;
     position: fixed;
-     top: 300px;
+    top: 300px;
 }
-.divativacaobarradeacessibilidade, .divbarradeacessibilidade{
+
+.divativacaobarradeacessibilidade,
+.divbarradeacessibilidade {
     position: fixed;
     top: 400px;
     z-index: 9999;
-    
+
 }
-.divativacaobarradeacessibilidade button, .divbarradeacessibilidade button{
+
+.divativacaobarradeacessibilidade button,
+.divbarradeacessibilidade button {
     background-color: var(--branco);
     color: var(--preto);
     border: none;
@@ -1691,23 +1763,27 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
- 
+
 }
-.divativacaobarradeacessibilidade .botaoativacaobarra{
-    filter: drop-shadow(2px 4px 2px rgba(0,0,0,0.5));
+
+.divativacaobarradeacessibilidade .botaoativacaobarra {
+    filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.5));
 }
-.divativacaobarradeacessibilidade button:hover{
+
+.divativacaobarradeacessibilidade button:hover {
     background-color: var(--branco);
 }
-.botaoativacaobarra img{
+
+.botaoativacaobarra img {
     width: 2.5rem;
-   
+
 }
-.funcaoesbarradeacessibilidade img{
+
+.funcaoesbarradeacessibilidade img {
     width: 1.6rem;
 }
 
-.divbarradeacessibilidade{
+.divbarradeacessibilidade {
     background-color: var(--branco);
     border-radius: 28px;
     display: none;
@@ -1716,11 +1792,12 @@ footer {
     justify-content: center;
     padding: 0 0 23px 0;
     gap: 8px;
-    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.5));
+    filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.5));
     top: 300px;
 
 }
-#logodafatecdabarradeacessibilidade{
+
+#logodafatecdabarradeacessibilidade {
     width: 2.5rem;
 }
 
@@ -1735,41 +1812,41 @@ footer {
     top: -100rem;
     left: 40%;
     transition: top 0.3s ease-in-out;
-  }
+}
 
-  .caixadenotificacaofazerlogin h2 {
+.caixadenotificacaofazerlogin h2 {
     font-size: 18px;
     margin-bottom: 12px;
     color: var(--preto);
-  }
+}
 
-  .caixadenotificacaofazerlogin p {
+.caixadenotificacaofazerlogin p {
     color: var(--cinzaBasee);
     font-size: 14px;
     margin-bottom: 24px;
-  }
+}
 
-  .actions {
+.actions {
     display: flex;
     justify-content: end;
     gap: 16px;
-  }
+}
 
-  .btn-cancel {
+.btn-cancel {
     color: red;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  .btn-confirm a{
+.btn-confirm a {
     color: blue;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  .caixadenotificacaocompletarcadastro {
+.caixadenotificacaocompletarcadastro {
     background: white;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -1781,95 +1858,97 @@ footer {
     transform: translateX(-50%);
     transition: top 0.3s ease-in-out;
     z-index: 1;
-  }
+}
 
-  .caixadenotificacaocompletarcadastro h2 {
+.caixadenotificacaocompletarcadastro h2 {
     font-size: 18px;
     margin-bottom: 12px;
-  }
+}
 
-  .caixadenotificacaocompletarcadastro p {
+.caixadenotificacaocompletarcadastro p {
     color: #666;
     font-size: 14px;
     margin-bottom: 24px;
-  }
+}
+
 /* fim da caixa de notificações */
 
 /*fim da Barra de acessibilidade*/
 
 
 .adicionarProj {
-  position: fixed;
-  bottom: 1rem;
-  right: 2rem;
-  width: 4rem;
-  height: 4rem;
-  background-color: var(--azulBase);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  z-index: 10;
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--azulBase);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 10;
 }
 
 .adimais {
-  position: relative;
-  width: 2rem;
-  height: 2rem;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
 }
 
 .adimais::before,
 .adimais::after {
-  content: "";
-  position: absolute;
-  background-color: white;
-  border-radius: 0.1rem;
+    content: "";
+    position: absolute;
+    background-color: white;
+    border-radius: 0.1rem;
 }
 
 .adimais::before {
-  width: 100%;
-  height: 0.2rem;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+    width: 100%;
+    height: 0.2rem;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
 
 .adimais::after {
-  height: 100%;
-  width: 0.2rem;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+    height: 100%;
+    width: 0.2rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .listadeadicao {
-  position: fixed;
-  bottom: 1rem;
-  right: 7rem; /* distância para alinhar à esquerda do botão */
-  display: none;
-  flex-direction: row;
-  gap: 0.8rem;
-  align-items: center;
+    position: fixed;
+    bottom: 1rem;
+    right: 7rem;
+    /* distância para alinhar à esquerda do botão */
+    display: none;
+    flex-direction: row;
+    gap: 0.8rem;
+    align-items: center;
 }
 
 .adiciona {
-  width: 3rem;
-  height: 3rem;
-  background-color: var(--azulBase);
-  border-radius: 50%;
-  box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--azulBase);
+    border-radius: 50%;
+    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
 }
 
 .adiciona img {
-  padding: 8px 0 0 0 ;
-  width: 75%;
-  height: 75%;
-  object-fit: contain;
-  margin: auto;
-  display: block;
-  cursor: pointer;
+    padding: 8px 0 0 0;
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+    cursor: pointer;
 }
 
 
@@ -1880,17 +1959,19 @@ footer {
 
 @media screen and (max-width:1800px) {
 
-    .post{
+    .post {
         height: 20rem;
         width: 20rem;
     }
 }
+
 @media screen and (max-width:1380px) {
 
     header .pesquisasite {
         justify-content: center;
     }
-    .post{
+
+    .post {
         height: 18rem;
         width: 18rem;
     }
@@ -1937,13 +2018,14 @@ footer {
         width: 80%;
     }
 
-    .itemsdomenu select{
+    .itemsdomenu select {
 
         background-color: transparent;
         border: none;
         font-size: 1.1rem;
 
     }
+
     .direitosautoraismenu {
         display: flex;
         justify-content: center;
@@ -1975,7 +2057,8 @@ footer {
         width: 100%;
         text-align: center;
     }
-    .itemsdomenu a{
+
+    .itemsdomenu a {
         color: var(--preto);
     }
 
@@ -2031,28 +2114,31 @@ footer {
     .gride {
         grid-template-columns: repeat(3, 2fr);
     }
+
     .modal-content {
         width: 70%;
     }
 
-    .comentariomodal{
+    .comentariomodal {
         flex-direction: column;
     }
-    
-    .comentariomodalLeft{
+
+    .comentariomodalLeft {
         width: 100%;
         margin: 0;
     }
-    .post{
+
+    .post {
         height: 16rem;
         width: 16rem;
     }
-    .comentariomodalRight{
+
+    .comentariomodalRight {
         width: 100%;
         margin: 0;
     }
-    
-    .caixadenotificacaofazerlogin{
+
+    .caixadenotificacaofazerlogin {
         left: 35%;
         margin-top: 8rem;
     }
@@ -2067,7 +2153,7 @@ footer {
         left: 12.5%;
     }
 
-    .modal-nav button span{
+    .modal-nav button span {
         font-size: 0.7rem;
     }
 
@@ -2076,16 +2162,18 @@ footer {
         height: 40%;
     }
 
-     .caixadenotificacaofazerlogin{
+    .caixadenotificacaofazerlogin {
         left: 30%;
         margin-top: 8rem;
     }
 
 }
+
 @media screen and (max-width: 900px) {
-    .gride{
+    .gride {
         grid-template-columns: repeat(2, 2fr);
     }
+
     .post {
         height: 20rem;
         width: 20rem;
@@ -2112,7 +2200,7 @@ footer {
         font-size: 4rem;
     }
 
-    .caixadenotificacaofazerlogin{
+    .caixadenotificacaofazerlogin {
         left: 25%;
         margin-top: 8rem;
     }
@@ -2149,19 +2237,21 @@ footer {
     .gride {
         grid-template-columns: repeat(1, 1fr);
     }
-    .contratar-btn-span{
+
+    .contratar-btn-span {
         padding: 0.3rem;
     }
 
-    .close{
+    .close {
         font-size: 1.5rem;
     }
-    .post{
+
+    .post {
         height: 24rem;
         width: 24rem;
     }
 
-    .caixadenotificacaofazerlogin{
+    .caixadenotificacaofazerlogin {
         left: 20%;
         margin-top: 8rem;
     }
@@ -2171,15 +2261,15 @@ footer {
 
 @media screen and (max-width: 600px) {
 
-    .input-group2{
+    .input-group2 {
         flex-direction: column;
     }
 
-    .imgPerfilEmpresa{
+    .imgPerfilEmpresa {
         width: 40%;
     }
 
-      .caixadenotificacaofazerlogin{
+    .caixadenotificacaofazerlogin {
         left: 15%;
         margin-top: 8rem;
     }
@@ -2231,7 +2321,7 @@ footer {
         top: 0;
     }
 
-    .botaoContratar{
+    .botaoContratar {
         width: 3rem;
         font-size: 0.5rem;
     }
@@ -2242,54 +2332,56 @@ footer {
         padding: 0.4rem;
     }
 
-    .imagemusuariomodal img{
+    .imagemusuariomodal img {
         height: 3rem;
     }
 
-    .modal-header{
+    .modal-header {
         gap: 0.5rem;
     }
 
-    .contratar-btn-span{
+    .contratar-btn-span {
         width: 30%;
     }
 
-    .modal-body{
+    .modal-body {
         padding: 1rem;
     }
 
-    .modal-nav button span{
+    .modal-nav button span {
         font-size: 0.5rem;
     }
 
-    .empresarialDiv{
+    .empresarialDiv {
         flex-direction: column;
     }
 
-    .inputsEmpresarial, .imgPerfilEmpresa{
+    .inputsEmpresarial,
+    .imgPerfilEmpresa {
         width: 100%;
         border-right: none;
     }
 
-    .fotoPerfilDesc{
+    .fotoPerfilDesc {
         width: 90%;
         border-bottom: 1px solid var(--cinzaBase);
         padding-bottom: 1rem;
     }
 
-    .men{
+    .men {
         height: 5rem;
     }
 
-    .fotoPerfilDesc button{
+    .fotoPerfilDesc button {
         width: 30%;
     }
-    .post{
+
+    .post {
         height: 24rem;
         width: 24rem;
     }
 
-      .caixadenotificacaofazerlogin{
+    .caixadenotificacaofazerlogin {
         left: 10%;
         margin-top: 8rem;
     }
@@ -2302,12 +2394,14 @@ footer {
 @media screen and (max-width: 450px) {
 
     .gride {
-       grid-template-columns: repeat(1, 2fr); 
+        grid-template-columns: repeat(1, 2fr);
     }
-    .post{
+
+    .post {
         height: 20rem;
         width: 20rem;
     }
+
     .inicio .logosite img {
         height: 60%;
     }
@@ -2343,16 +2437,17 @@ footer {
         font-size: 0.7rem;
     }
 
-    .cancelarTipoUser{
+    .cancelarTipoUser {
         width: 90%;
         left: 5%;
         padding: 0.5rem;
     }
+
     header .userhover img {
         height: 100%;
     }
 
-  .caixadenotificacaofazerlogin{
+    .caixadenotificacaofazerlogin {
         left: 5%;
         margin-top: 8rem;
     }
@@ -2441,22 +2536,25 @@ footer {
         width: 3rem;
     }
 
-    .cancelarTipoUser p, .cancelarOuConfirmar button{
+    .cancelarTipoUser p,
+    .cancelarOuConfirmar button {
         font-size: 0.8rem;
     }
-    
-    .caixadenotificacaofazerlogin{
+
+    .caixadenotificacaofazerlogin {
         left: 2%;
         margin-top: 8rem;
     }
 
 }
+
 @media screen and (max-height: 350px) {
-    .post{
+    .post {
         height: 22rem;
         width: 22rem;
     }
 }
+
 @media screen and (max-height: 640px) {
 
 
@@ -2466,4 +2564,4 @@ footer {
 
 }
 
-/* From Uiverse.io by Cevorob */ 
+/* From Uiverse.io by Cevorob */
