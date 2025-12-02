@@ -14,7 +14,7 @@ document.getElementById('inputpesquisar').addEventListener('input', async functi
     const resposta = await fetch(`http://localhost:4500/usuarios/buscar-usuario-por-nome/${input}`);
     const resultado = await resposta.json();
     if (resultado.length === 0) {
-        listaResultados.innerHTML = '<li>Nenhum resultado encontrado</li>';
+        listaResultados.innerHTML = '<li><a>Nenhum resultado encontrado</a></li>';
         return;
     }else{
         listaResultados.style.display = 'block';
@@ -23,7 +23,7 @@ document.getElementById('inputpesquisar').addEventListener('input', async functi
     
         resultado.forEach((usuario) => {
             const li = document.createElement("li");
-            li.innerHTML = `<a href="perfil-usuario.html?id=${usuario.id}">${usuario.nome}</a>`;
+            li.innerHTML = `<img src="${usuario.foto}" alt="foto de perfil do usuario"/> <a href="perfil-usuario.html?id=${usuario.id}">${usuario.nome}</a>`;
             listaResultados.appendChild(li);
         });
     }

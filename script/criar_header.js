@@ -29,11 +29,10 @@ function criarheader() {
       </div>
     </nav>
     <div class="pesquisasite">
-      <input type="text" placeholder="Pesquisar" class="Pesquisar" id="inputpesquisar"/>
+      <input type="text" placeholder="Pesquisar" class="Pesquisar" id="inputpesquisar" autocomplete="off"/>
       <a href=""><img src="img/search2.svg" alt="Lupa" /></a>
 
       <ul id="listaResultados" class="listaResultados">
-
       </ul>
     </div>
     <div id="usersite" class="usersite">

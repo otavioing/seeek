@@ -296,6 +296,17 @@ header .pesquisasite input {
     /* aparece scroll só quando necessário */
 }
 
+.listaResultados li {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+.listaResultados li img {
+    height: 1.5rem;
+    margin: 10px;
+    object-fit: cover;
+}
+
 .listaResultados li a {
     display: block;
     padding: 10px;
