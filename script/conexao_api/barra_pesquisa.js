@@ -23,7 +23,7 @@ document.getElementById('inputpesquisar').addEventListener('input', async functi
     
         resultado.forEach((usuario) => {
             const li = document.createElement("li");
-            li.innerHTML = `<img src="${usuario.foto}" alt="foto de perfil do usuario"/> <a href="perfil-usuario.html?id=${usuario.id}">${usuario.nome}</a>`;
+            li.innerHTML = `<img src="${usuario.foto}" alt="foto de perfil do usuario"/> <a href="perfil.html?id=${usuario.id}">${usuario.nome}</a>`;
             listaResultados.appendChild(li);
         });
     }
