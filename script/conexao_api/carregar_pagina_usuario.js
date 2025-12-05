@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
           ).textContent = `@${usuario.nome_de_usuario}`;
           document.getElementById("imgdeperfildouser").src = usuario.foto;
           document.getElementById("imagemdefundodoperfil").src = usuario.banner;
+          document.getElementById("numerodepessoasquesegue").textContent =
+            usuario.total_seguindo;
+          document.getElementById("nomerodeseguidores").textContent =
+            usuario.total_seguidores;
           document.getElementById("descricaouser").textContent =
             usuario.descricao;
           document.getElementById("quantidadedepost").textContent =
@@ -64,6 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
           ).textContent = `@${usuario.nome_de_usuario}`;
           document.getElementById("imgdeperfildouser").src = usuario.foto;
           document.getElementById("imagemdefundodoperfil").src = usuario.banner;
+          document.getElementById("numerodepessoasquesegue").textContent =
+            usuario.total_seguindo;
+          document.getElementById("nomerodeseguidores").textContent =
+            usuario.total_seguidores;
           document.getElementById("descricaouser").textContent =
             usuario.descricao;
           document.getElementById("quantidadedepost").textContent =

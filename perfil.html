@@ -105,14 +105,6 @@
             </div>
         </div>
 
-        <div id="caixadenotificacaomodoeditor" class="caixadenotificacaomodoeditor">
-            <h2>Modo de edição ativo</h2>
-            <p>
-                Enquanto você estiver neste modo, poderá clicar nos ícones de lápis e
-                editar suas informações.
-            </p>
-        </div>
-
         <section class="informacoesperfil" id="informacoesperfil">
             <div class="informacoesperfiltudo">
                 <div id="fotodeperfiluser" class="imgdousereNome">
@@ -140,8 +132,12 @@
                         <p class="cidadeepais">
                             <span class="UsoCP">cidade e país</span>
                         </p>
+                        <div class="seguidoresSeguindo">
+                            <button>Seguindo <span id="numerodepessoasquesegue">0</span> </button>
+                            <button>Seguidores <span id="nomerodeseguidores">0</span></button>
+                        </div>
                         <button id="SeguirUserPerfil">
-                            <span>Seguir</span>
+                            <span id="botaoseguir">Seguir</span>
                         </button>
                     </div>
 
@@ -356,6 +352,7 @@
     </footer>
 
 
+    <script src="script/conexao_api/carregar_perfil_publico.js"></script>
     <script src="script/script.js"></script>
     <script src="script/user_logado.js"></script>
     <script src="script/acessibilidade.js"></script>

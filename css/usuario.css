@@ -237,6 +237,25 @@ button {
     color: var(--cinzaBasee);
 }
 
+.seguidoresSeguindo{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: small;
+    color: var(--cinzaBasee);
+    margin-bottom: 0.5rem;
+}
+
+.seguidoresSeguindo button{
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    color: var(--cinzaBasee);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
 .infoUserContratar button {
     width: 60%;
     height: 2rem;
