@@ -93,7 +93,6 @@ async function carregarPosts() {
                 post.legenda || "Descrição do portfólio";
             document.getElementById("modalPort").style.display = "block";
         });
-
         container.appendChild(div);
     });
 }
@@ -145,3 +144,4 @@ async function inserirLike() {
     return resposta.json();
 
 }
+

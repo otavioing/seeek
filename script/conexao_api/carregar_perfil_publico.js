@@ -124,7 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         const data = await resposta.json();
         document.getElementById("botaoseguir").textContent = data.seguindo ? "Seguindo" : "Seguir";
-        
     });
 
     carregarUsuario();
