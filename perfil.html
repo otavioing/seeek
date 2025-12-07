@@ -94,6 +94,69 @@
         </div>
     </section>
 
+    <section class="containerseguidoreseseguindo" id="containerseguidoreseseguindo" style="display: none;">
+
+
+        <div class="caixa" id="caixaseguidoreseseguindo">
+
+            <div class="headeropcoes">
+                <button id="botaoSeguindo">seguindo</button>
+                <div class="barravertical"></div>
+                <button id="botaoSeguidores">seguidores</button>
+            </div>
+
+
+            <div id="containerlistaseguidores" class="containerlistaseguidores" style="display: none;">
+
+                <ul id="listaseguidores" class="listausuariosseguidores">
+                    <script src="script/conexao_api/carregar_seguidoresperfil.js" defer></script>
+                </ul>
+
+            </div>
+
+            <div id="containerlistaseguindo" class="containerlistaseguindo" style="display: none;">
+                <ul id="listaseguindo" class="listausuariosseguindo">
+                    <script src="script/conexao_api/carregar_seguindoperfil.js" defer></script>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <script>
+        const botaoSeguidores = document.getElementById("botaoSeguidores");
+        const botaoSeguindo = document.getElementById("botaoSeguindo");
+        const listaSeguidores = document.getElementById("containerlistaseguidores");
+        const listaSeguindo = document.getElementById("containerlistaseguindo");
+        const containerSeguidoresSeguindo = document.querySelector(".containerseguidoreseseguindo");
+
+        botaoSeguidores.addEventListener("click", () => {
+            botaoSeguidores.classList.add("ativo");
+            botaoSeguindo.classList.remove("ativo");
+            listaSeguidores.style.display = "block";
+            listaSeguindo.style.display = "none";
+        });
+
+        botaoSeguindo.addEventListener("click", () => {
+            botaoSeguindo.classList.add("ativo");
+            botaoSeguidores.classList.remove("ativo");
+            listaSeguindo.style.display = "block";
+            listaSeguidores.style.display = "none";
+        });
+
+
+        document.getElementById("containerseguidoreseseguindo").addEventListener("click", function (event) {
+            if (event.target === containerSeguidoresSeguindo) {
+                containerSeguidoresSeguindo.style.display = "none";
+                listaSeguindo.style.display = "none";
+                listaSeguidores.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        });
+    </script>
+
     <main class="mainUser">
         <div id="caixadenotificacaofazerlogin" class="caixadenotificacaofazerlogin">
             <h2>Não foi possível continuar</h2>
@@ -133,9 +196,38 @@
                             <span class="UsoCP">cidade e país</span>
                         </p>
                         <div class="seguidoresSeguindo">
-                            <button>Seguindo <span id="numerodepessoasquesegue">0</span> </button>
-                            <button>Seguidores <span id="nomerodeseguidores">0</span></button>
+                            <button id="botaoSeguindoabrircaixa">Seguindo <span id="numerodepessoasquesegue">0</span> </button>
+                            <button id="botaoSeguidoresabrircaixa">Seguidores <span id="nomerodeseguidores">0</span></button>
                         </div>
+
+                        <script>
+                            document.getElementById("botaoSeguindoabrircaixa").addEventListener("click", function () {
+                                const conatiner = document.getElementById("containerseguidoreseseguindo");
+                                const listaSeguidores = document.getElementById("containerlistaseguidores");
+                                const listaSeguindo = document.getElementById("containerlistaseguindo");
+                                const botaoSeguidores = document.getElementById("botaoSeguidores");
+                                const botaoSeguindo = document.getElementById("botaoSeguindo");
+                                botaoSeguidores.classList.remove("ativo");
+                                botaoSeguindo.classList.add("ativo");
+                                conatiner.style.display = "flex";
+                                listaSeguindo.style.display = "block";
+                                document.body.style.overflow = "hidden";
+
+                            });
+
+                            document.getElementById("botaoSeguidoresabrircaixa").addEventListener("click", function () {
+                                const conatiner = document.getElementById("containerseguidoreseseguindo");
+                                const listaSeguidores = document.getElementById("containerlistaseguidores");
+                                const listaSeguindo = document.getElementById("containerlistaseguindo");
+                                const botaoSeguidores = document.getElementById("botaoSeguidores");
+                                const botaoSeguindo = document.getElementById("botaoSeguindo");
+                                botaoSeguidores.classList.add("ativo");
+                                botaoSeguindo.classList.remove("ativo");
+                                conatiner.style.display = "flex";
+                                listaSeguidores.style.display = "block";
+                                document.body.style.overflow = "hidden";
+                            });
+                        </script>
                         <button id="SeguirUserPerfil">
                             <span id="botaoseguir">Seguir</span>
                         </button>

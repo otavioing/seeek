@@ -166,28 +166,31 @@ button {
     height: 100%;
 }
 
-.editarIconButton{
+.editarIconButton {
     position: absolute;
     right: 3%;
     top: 68%;
     border: none;
     outline: none;
     filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
-    background:none;
+    background: none;
     cursor: pointer;
 }
-.editarIconButton svg{
+
+.editarIconButton svg {
     height: 2.5rem;
 }
-.banneruser .editarIconButton{
+
+.banneruser .editarIconButton {
     top: 90%;
     right: 0%;
 }
 
 /*  */
-.informacoesperfiltudo .imgdousereNome{
+.informacoesperfiltudo .imgdousereNome {
     align-self: center;
 }
+
 .imgdousereNome {
     width: fit-content;
     display: flex;
@@ -237,7 +240,7 @@ button {
     color: var(--cinzaBasee);
 }
 
-.seguidoresSeguindo{
+.seguidoresSeguindo {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -246,7 +249,7 @@ button {
     margin-bottom: 0.5rem;
 }
 
-.seguidoresSeguindo button{
+.seguidoresSeguindo button {
     background: none !important;
     border: none !important;
     cursor: pointer !important;
@@ -427,6 +430,94 @@ button {
     justify-content: center;
 }
 
+/* ---------------------------------Container seguidores e seguindo ------------------------------- */
+
+.ativo {
+    text-decoration: underline;
+}
+
+.containerseguidoreseseguindo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.caixa {
+    width: 400px;
+    min-height: 300px;
+    max-height: 350px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.headeropcoes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.barravertical {
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.headeropcoes button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #2B63F0;
+    cursor: pointer;
+}
+
+.headeropcoes button:hover {
+    transform: scale(1.10);
+}
+
+.containerlistaseguindo,
+.containerlistaseguidores {
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.listausuariosseguindo li,
+.listausuariosseguidores li {
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+.itemusuariolista {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.imagemusuariolista {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.nomeusuariolista {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
 /*-------------------- Main Cursos --------------------*/
 
 .mainCursosUser {
@@ -554,7 +645,7 @@ footer {
     border-bottom: 3px solid var(--azulBase);
 }
 
-#botaoeditarperfil{
+#botaoeditarperfil {
     fill: var(--azulBase);
 }
 
@@ -569,19 +660,19 @@ footer {
     top: -15rem;
     left: 40%;
     transition: top 0.3s ease-in-out;
-  }
+}
 
-  .caixadenotificacaomodoeditor h2 {
+.caixadenotificacaomodoeditor h2 {
     font-size: 18px;
     margin-bottom: 12px;
     color: var(--preto);
-  }
+}
 
-  .caixadenotificacaomodoeditor p {
+.caixadenotificacaomodoeditor p {
     color: var(--cinzaBasee);
     font-size: 14px;
     margin-bottom: 24px;
-  }
+}
 
 
 /*------------------------------------------------------------------------*/

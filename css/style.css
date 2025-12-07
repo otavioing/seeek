@@ -779,6 +779,7 @@ header .botaoMenu span {
     width: 60%;
     gap: 1.5rem;
     padding: 1rem;
+    cursor: pointer;
 }
 
 .nomedousuariomodal {

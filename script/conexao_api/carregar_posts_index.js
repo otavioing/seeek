@@ -26,7 +26,7 @@ function abrirComentarios() {
 // Função para carregar os posts do servidor
 
 let postSelecionadoId = null;
-
+let usuario_id = null;
 
 async function carregarPosts() {
     const resposta = await fetch("http://localhost:4500/posts");
@@ -70,7 +70,11 @@ async function carregarPosts() {
     `;
         div.addEventListener("click", async () => {
             postSelecionadoId = post.id;
+            usuario_id = post.user_id;
             await atualizarLikeInfo();
+            document.getElementById("perfilPort").addEventListener("click", function () {
+                window.location.href = `perfil.html?id=${usuario_id}`;
+            });
             document.getElementById("modalImage").src = post.imagem;
             document.querySelector(".nomedousuariomodal h2").textContent =
                 post.titulo || "Título do portfólio";
@@ -95,7 +99,12 @@ async function carregarPosts() {
         });
         container.appendChild(div);
     });
+
+
+
+
 }
+
 
 carregarPosts();
 
