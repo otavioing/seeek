@@ -297,18 +297,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Erro ao buscar dados do usuário:", err);
   }
 
-  document
-    .getElementById("voltarparaselecaotipouser")
-    .addEventListener("click", function () {
-      const verificacaoContainer = document.getElementById("user-selection");
-      const caixausuariopadrao = document.getElementById("confirmation-box");
-      const caixausuarioempresa = document.getElementById(
-        "enterprise-confirmation-box"
-      );
-      verificacaoContainer.style.display = "block";
-      caixausuariopadrao.style.display = "none";
-      caixausuarioempresa.style.display = "none";
-    });
 });
+
+function voltarescolhertipodeuser() {
+  const verificacaoContainer = document.getElementById("user-selection");
+  const caixausuariopadrao = document.getElementById("confirmation-box");
+  const caixausuarioempresa = document.getElementById(
+    "enterprise-confirmation-box"
+  );
+  verificacaoContainer.style.display = "block";
+  caixausuariopadrao.style.display = "none";
+  caixausuarioempresa.style.display = "none";
+};
 
 // });

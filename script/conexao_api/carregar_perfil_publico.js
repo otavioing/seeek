@@ -109,6 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             "mainImagensUser"
                         ).innerHTML = `<div class="buttonUser"><p> Este usuário não possui posts.</p></div>`;
                     }
+                } else if (userData.tipo === null) {
+                    window.location.href = "erroaoencontrarusuario.html";
                 }
             } else {
                 console.error("Nenhum dado de usuário foi retornado pela API.");
