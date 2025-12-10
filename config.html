@@ -61,10 +61,10 @@
     <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec" />
   </div>
 
-    <header class="inicio" id="header">
-      <script src="script/criar_header.js" defer></script>
-      <script src="script/conexao_api/barra_pesquisa.js" defer></script>
-    </header>
+  <header class="inicio" id="header">
+    <script src="script/criar_header.js" defer></script>
+    <script src="script/conexao_api/barra_pesquisa.js" defer></script>
+  </header>
 
   <main>
     <div id="caixadenotificacaofazerlogin" class="caixadenotificacaofazerlogin">
@@ -194,59 +194,58 @@
           </div>
           <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
             <p class="Pper6">
-              Deseja receber uma notificação imediata de solicitação de
-              contrato?
+              Deseja receber uma notificação ao receber um like em seus
+              projetos?
             </p>
             <div class="opcaoprivacidade">
-              <form action="">
-                <input type="radio" name="visibilidade" id="visivel" value="visivel" />
-                <label for="visivel" class="OS">Sim</label>
+              <form id="formlikes" data-pref="receber_likes">
+                <input type="radio" name="visibilidade" id="likessim" value="1" />
+                <label for="likessim" class="OS">Sim</label>
 
-                <input type="radio" name="visibilidade" id="invisivel" value="invisivel" />
-                <label for="invisivel" class="ON">Não</label>
+                <input type="radio" name="visibilidade" id="likesnao" value="0" />
+                <label for="likesnao" class="ON">Não</label>
               </form>
             </div>
           </div>
           <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
             <p class="Pper7">
-              Deseja ser notificado quando solicitarem sua participação em uma
-              equipe?
+              Deseja ser notificado quando comentarem em seus projetos?
             </p>
             <div class="opcaoprivacidade">
-              <form action="">
-                <input type="radio" name="visibilidade" id="visivel" value="visivel" />
-                <label for="visivel" class="OS">Sim</label>
+              <form id="formcomentarios" data-pref="receber_comentarios">
+                <input type="radio" name="visibilidade" id="comentariosim" value="1" />
+                <label for="comentariosim" class="OS">Sim</label>
 
-                <input type="radio" name="visibilidade" id="invisivel" value="invisivel" />
-                <label for="invisivel" class="ON">Não</label>
+                <input type="radio" name="visibilidade" id="comentarionao" value="0" />
+                <label for="comentarionao" class="ON">Não</label>
               </form>
             </div>
           </div>
           <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
             <p class="Pper8">
-              Deseja receber notificação quando ouver ofertas/descontos?
+              Deseja receber notificação quando ouver um novo seguidor
             </p>
             <div class="opcaoprivacidade">
-              <form action="">
-                <input type="radio" name="visibilidade" id="visivel" value="visivel" />
-                <label for="visivel" class="OS">Sim</label>
+              <form id="formseguidores" data-pref="receber_seguidores">
+                <input type="radio" name="visibilidade" id="seguidorsim" value="1" />
+                <label for="seguidorsim" class="OS">Sim</label>
 
-                <input type="radio" name="visibilidade" id="invisivel" value="invisivel" />
-                <label for="invisivel" class="ON">Não</label>
+                <input type="radio" name="visibilidade" id="seguidornao" value="0" />
+                <label for="seguidornao" class="ON">Não</label>
               </form>
             </div>
           </div>
           <div class="infonotificacoesconfig fontetexto gapentreopcoesepergunta">
             <p class="Pper9">
-              Deseja receber notificação quando ouver ofertas/descontos?
+              Deseja receber notificação quando ouver um login em sua conta
             </p>
             <div class="opcaoprivacidade">
-              <form action="">
-                <input type="radio" name="visibilidade" id="visivel" value="visivel" />
-                <label for="visivel" class="OS">Sim</label>
+              <form id="formnotificacoeslogin" data-pref="receber_login">
+                <input type="radio" name="visibilidade" id="loginsim" value="1" />
+                <label for="loginsim" class="OS">Sim</label>
 
-                <input type="radio" name="visibilidade" id="invisivel" value="invisivel" />
-                <label for="invisivel" class="ON">Não</label>
+                <input type="radio" name="visibilidade" id="loginnao" value="0" />
+                <label for="loginnao" class="ON">Não</label>
               </form>
             </div>
           </div>
@@ -448,7 +447,8 @@
   <script src="script/acessibilidade.js"></script>
   <script src="script/script.js"></script>
   <script src="script/tema.js"></script>
-  <script src="script/traducao.js"></script>
+  <!-- <script src="script/traducao.js"></script> -->
+  <script src="script/conexao_api/verificar_preferencias_notificacaos.js"></script>
   <script src="script/verificar_token.js"></script>
 
 
