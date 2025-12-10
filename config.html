@@ -118,12 +118,12 @@
               </p>
             </div>
             <div class="opcaoprivacidade">
-              <form action="">
-                <input type="radio" name="visibilidade" id="visivel" value="visivel" />
-                <label for="visivel" class="OS">Sim</label>
+              <form id="formbusca" data-pref="exibir_na_busca">
+                <input type="radio" name="visibilidade" id="buscasim" value="1" />
+                <label for="buscasim" class="OS">Sim</label>
 
-                <input type="radio" name="visibilidade" id="invisivel" value="invisivel" />
-                <label for="invisivel" class="ON">Não</label>
+                <input type="radio" name="visibilidade" id="buscanao" value="0" />
+                <label for="buscanao" class="ON">Não</label>
               </form>
             </div>
           </div>
@@ -134,12 +134,12 @@
               </p>
             </div>
             <div class="opcaoprivacidade">
-              <form action="">
-                <input type="radio" name="visibilidade" id="visivel" value="visivel" />
-                <label for="visivel" class="OS">Sim</label>
+              <form id="formfeed" data-pref="exibir_no_feed">
+                <input type="radio" name="visibilidade" id="feedsim" value="1" />
+                <label for="feedsim" class="OS">Sim</label>
 
-                <input type="radio" name="visibilidade" id="invisivel" value="invisivel" />
-                <label for="invisivel" class="ON">Não</label>
+                <input type="radio" name="visibilidade" id="feednao" value="0" />
+                <label for="feednao" class="ON">Não</label>
               </form>
             </div>
           </div>
@@ -150,26 +150,26 @@
               </p>
             </div>
             <div class="opcaoprivacidade">
-              <form action="">
-                <input type="radio" name="visibilidade" id="visivel" value="visivel" />
-                <label for="visivel" class="OS">Sim</label>
+              <form id="formcursofeed" data-pref="exibir_cursos_no_feed">
+                <input type="radio" name="visibilidade" id="cursosim" value="1" />
+                <label for="cursosim" class="OS">Sim</label>
 
-                <input type="radio" name="visibilidade" id="invisivel" value="invisivel" />
-                <label for="invisivel" class="ON">Não</label>
+                <input type="radio" name="visibilidade" id="cursosnao" value="0" />
+                <label for="cursosnao" class="ON">Não</label>
               </form>
             </div>
           </div>
           <div class="visibilidadedoemaildousuario fontetexto gapentreopcoesepergunta">
             <div class="pergunta">
-              <p class="Pper4">Deseja que todos possam ver seu email ?</p>
+              <p class="Pper4">Deseja que todos possam ver os posts que voce curtiu?</p>
             </div>
             <div class="opcaoprivacidade">
-              <form action="">
-                <input type="radio" name="visibilidade" id="visivel" value="visivel" />
-                <label for="visivel" class="OS">Sim</label>
+              <form id="formcurtidas" data-pref="exibir_likes">
+                <input type="radio" name="visibilidade" id="likessim" value="1" />
+                <label for="likessim" class="OS">Sim</label>
 
-                <input type="radio" name="visibilidade" id="invisivel" value="invisivel" />
-                <label for="invisivel" class="ON">Não</label>
+                <input type="radio" name="visibilidade" id="likesnao" value="0" />
+                <label for="likesnao" class="ON">Não</label>
               </form>
             </div>
           </div>
@@ -449,6 +449,7 @@
   <script src="script/tema.js"></script>
   <!-- <script src="script/traducao.js"></script> -->
   <script src="script/conexao_api/verificar_preferencias_notificacaos.js"></script>
+  <script src="script/conexao_api/verificar_preferencias_privacidade.js"></script>
   <script src="script/verificar_token.js"></script>
 
 
