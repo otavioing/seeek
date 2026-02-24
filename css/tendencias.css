@@ -48,10 +48,11 @@
 }
 
 /*-------------------- Modo Escuro --------------------*/
-.modoEscuro .carrossel-tendencias {
-    background-color: var(--ModoEscuroMesc2);
-}
 
+
+.modoEscuro .carrossel-tendencias{
+    background-color: var(--ModoEscuroFilt);
+}
 
 /*-------------------- Modo Escuro --------------------*/
 
