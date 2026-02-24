@@ -1,61 +1,123 @@
+// --------------------------- Início do banner com slideshow --------------------------- //
 
+const banners = [
+  "img/banner1.jpg",
+  "img/banner2.png",
+  "img/banner3.jpg"
+];
 
-// --------------------------- Banner com slideshow --------------------------- //
-
-
-// Lista de imagens para o slideshow
-const banners = ["img/banner1.jpg", "img/banner2.png", "img/banner3.jpg"];
-
-// Variáveis de controle
-let i = 0;
 const c = document.getElementById("imgBanner");
 const ctx = c.getContext("2d");
-let img = new Image();
-let interval;
 
-// Ajusta o canvas ao tamanho da tela
+// Configurações
+const SLIDE_DURATION = 7500; // tempo da imagem parada
+const FADE_DURATION = 800;   // duração do fade
+
+let images = [];
+let currentIndex = 0;
+let currentImage = null;
+let nextImage = null;
+
+let lastSwitchTime = 0;
+let isFading = false;
+let fadeStartTime = 0;
+let running = false;
+
+
+// --------------------------- Resize Responsivo --------------------------- //
+
 const resize = () => {
-  c.width = innerWidth;
-  c.height = innerHeight;
+  c.width = window.innerWidth;
+  c.height = window.innerHeight;
+  drawCurrent();
 };
+
 window.addEventListener("resize", resize);
-resize();
 
-// Função de transição com fade entre imagens
-const fade = next => {
-  let a = 0, s = 0.02;
-  const f = setInterval(() => {
-    ctx.clearRect(0, 0, c.width, c.height);
-    ctx.globalAlpha = 1;
-    ctx.drawImage(img, 0, 0, c.width, c.height);
-    ctx.globalAlpha = a;
-    ctx.drawImage(next, 0, 0, c.width, c.height);
-    a += s;
-    if (a >= 1) {
-      clearInterval(f);
-      img = next;
+
+// --------------------------- Draw Helpers --------------------------- //
+
+const drawImage = (image, alpha = 1) => {
+  ctx.globalAlpha = alpha;
+  ctx.drawImage(image, 0, 0, c.width, c.height);
+};
+
+const drawCurrent = () => {
+  if (!currentImage) return;
+  ctx.clearRect(0, 0, c.width, c.height);
+  drawImage(currentImage, 1);
+};
+
+
+// --------------------------- Easing Suave --------------------------- //
+
+const easeInOut = t => {
+  return t < 0.5
+    ? 2 * t * t
+    : 1 - Math.pow(-2 * t + 2, 2) / 2;
+};
+
+
+// --------------------------- Loop Principal --------------------------- //
+
+const loop = (now) => {
+  if (!running) return;
+
+  if (!lastSwitchTime) lastSwitchTime = now;
+
+  const elapsed = now - lastSwitchTime;
+
+  // Hora de iniciar fade
+  if (!isFading && elapsed >= SLIDE_DURATION) {
+    isFading = true;
+    fadeStartTime = now;
+    nextImage = images[(currentIndex + 1) % images.length];
+  }
+
+  ctx.clearRect(0, 0, c.width, c.height);
+
+  if (isFading) {
+    const fadeElapsed = now - fadeStartTime;
+    let progress = fadeElapsed / FADE_DURATION;
+
+    if (progress >= 1) {
+      // Finaliza fade
+      progress = 1;
+      isFading = false;
+      currentIndex = (currentIndex + 1) % images.length;
+      currentImage = nextImage;
+      lastSwitchTime = now;
     }
-  }, 16); // Aproximadamente 60 FPS
+
+    const eased = easeInOut(progress);
+
+    drawImage(currentImage, 1);
+    drawImage(nextImage, eased);
+
+  } else {
+    drawImage(currentImage, 1);
+  }
+
+  requestAnimationFrame(loop);
 };
 
-// Inicia o slideshow
+
+// --------------------------- Controle --------------------------- //
+
 const start = () => {
-  if (interval) return; // Já está rodando
-  interval = setInterval(() => {
-    const nextImage = new Image();
-    i = (i + 1) % banners.length;
-    nextImage.src = banners[i];
-    nextImage.onload = () => fade(nextImage);
-  }, 7500); // Tempo entre trocas de imagem
+  if (running) return;
+  running = true;
+  lastSwitchTime = 0;
+  requestAnimationFrame(loop);
 };
 
-// Para o slideshow
 const stop = () => {
-  clearInterval(interval);
-  interval = null;
+  running = false;
 };
 
-// Pausa/resume o slideshow ao mudar a visibilidade da aba
+
+// --------------------------- Controle de Visibilidade --------------------------- //
+
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     stop();
@@ -64,16 +126,36 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 
-// Carrega a primeira imagem e inicia o slideshow
-img.src = banners[i];
-img.onload = () => {
-  ctx.drawImage(img, 0, 0, c.width, c.height);
-  start();
+
+// --------------------------- Pré-carregamento --------------------------- //
+
+const preloadImages = () => {
+  return Promise.all(
+    banners.map(src => {
+      return new Promise(resolve => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => resolve(img);
+      });
+    })
+  );
 };
 
 
+// --------------------------- Inicialização --------------------------- //
+
+resize();
+
+preloadImages().then(loaded => {
+  images = loaded;
+  currentImage = images[0];
+  drawCurrent();
+  start();
+});
 
 // --------------------------- Fim do banner com slideshow --------------------------- //
+
+
 
 // --------------------------- Validação de formulário de login e cadastro --------------------------- //
 // Elementos
