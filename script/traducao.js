@@ -28,8 +28,6 @@ function aplicarIdioma() {
       PortifolioTeste: "Test portfolio",
       portSalvar: "save",
       PortifolioAutor: "Author",
-      ModalPortifolio: "Portfolio prototype",
-      ModalAutor: "Creators name • 0 followers",
       AjudaFooter: "Help",
       TermosFooter: "Terms",
       AtualizacaoFooter: "Updates",
@@ -176,8 +174,6 @@ function aplicarIdioma() {
       PortifolioTeste: " Portafolio Experimento",
       portSalvar: "ahorrar",
       PortifolioAutor: "Autor",
-      ModalPortifolio: " Prototipo del portafolio",
-      ModalAutor: "Nombre del creador • 0 seguidores",
       seguidoresIndex: "Seguidores",
       AjudaFooter: "Ajuda",
       TermosFooter: "Termo",
@@ -324,8 +320,6 @@ function aplicarIdioma() {
       PortifolioTeste: "Portfolio di prova",
       portSalvar: "Salvare",
       PortifolioAutor: "Autore",
-      ModalPortifolio: "Prototipo di portfolio",
-      ModalAutor: "Nome del creatore • 0 follower",
       seguidoresIndex: "Seguaci",
       AjudaFooter: "Aiuto",
       TermosFooter: "Termini",
@@ -473,8 +467,6 @@ function aplicarIdioma() {
       PortifolioTeste: "Test portfolio",
       portSalvar: "Enregistrer",
       PortifolioAutor: "Auteur",
-      ModalPortifolio: "Prototype de portfolio",
-      ModalAutor: "Nom du créateur • 0 abonnés",
       seguidoresIndex: "Abonnés",
       AjudaFooter: "Aide",
       TermosFooter: "Termes",
@@ -627,8 +619,6 @@ function aplicarIdioma() {
       PortifolioAutor: "Autor",
       seguidoresIndex: "Seguidores",
       SalvarimgIndex: "Salvar",
-      ModalPortifolio: "Protótipo de portifólio",
-      ModalAutor: "Nome do criador • 0 seguidores",
       AjudaFooter: "Ajuda",
       TermosFooter: "Termo",
       AtualizacaoFooter: "Atualização",
@@ -978,16 +968,6 @@ function aplicarIdioma() {
   var AutorGrid = document.getElementsByClassName("AutG");
   for (var i = 0; i < AutorGrid.length; i++) {
     AutorGrid[i].innerHTML = idioma[selectedLanguage].PortifolioAutor;
-  }
-
-  var PortfolioModal = document.getElementsByClassName("PotMG");
-  for (var i = 0; i < PortfolioModal.length; i++) {
-    PortfolioModal[i].innerHTML = idioma[selectedLanguage].ModalPortifolio;
-  }
-
-  var AutorModal = document.getElementsByClassName("AutMG");
-  for (var i = 0; i < AutorModal.length; i++) {
-    AutorModal[i].innerHTML = idioma[selectedLanguage].ModalAutor;
   }
 
   var Seguidores = document.getElementsByClassName("SegG");
