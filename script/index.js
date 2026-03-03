@@ -45,6 +45,7 @@ document.getElementById("pularTipoUser").addEventListener("click", function () {
 
 function adicionarlist() {
   const container = document.querySelector(".listadeadicao");
-  container.style.display =
-    container.style.display === "flex" ? "none" : "flex";
+  const currentDisplay = window.getComputedStyle(container).display;
+  container.style.display = currentDisplay === "none" ? "flex" : "none";
 }
+

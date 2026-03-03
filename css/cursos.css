@@ -74,7 +74,7 @@
 .modoEscuro h1,
 .modoEscuro .aplicarfiltrocursos button,
 .modoEscuro .valordocursoebotaofavorito p,
-.modoEscuro .botaomaisinfocursoscaixaflutuante a {
+.modoEscuro .botaomaisinfocursoscaixaflutuante a, .modoEscuro .FilC {
     color: var(--ModoEscuroFontC);
 }
 

@@ -199,6 +199,10 @@ svg .st8 {
     background-color: var(--ModoEscuroFontV);
 }
 
+.modoEscuro .adicionarProjC{
+    background-color: var(--ModoEscuroFontC);
+}
+
 .modoEscuro .skeleton {
     animation: Night 1.5s infinite linear;
     background: #3a3a3a;
@@ -222,7 +226,7 @@ svg .st8 {
     width: 30%;
 }
 
-.modoEscuro .AdicionaC {
+.modoEscuro .adicionaC {
     background-color: var(--ModoEscuroFontC);
 }
 
@@ -1914,7 +1918,7 @@ footer {
 /*fim da Barra de acessibilidade*/
 
 
-.adicionarProj {
+.adicionarProj  {
     position: fixed;
     bottom: 1rem;
     right: 2rem;
@@ -1928,6 +1932,22 @@ footer {
     box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
     cursor: pointer;
     z-index: 10;
+}
+
+.adicionarProjC {
+     position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--roxobase);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 10;  
 }
 
 .adimais {
@@ -1979,7 +1999,7 @@ footer {
     box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
 }
 
-.AdicionaC{
+.adicionaC{
     width: 3rem;
     height: 3rem;
     background-color: var(--roxobase);
@@ -1987,7 +2007,7 @@ footer {
     box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
 }
 
-.adiciona svg {
+.adiciona svg , .adicionaC svg{
     padding: 8px 0 0 0;
     width: 75%;
     height: 75%;

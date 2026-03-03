@@ -51,7 +51,7 @@ async function carregarPosts() {
           <div class="PotH">
             <div class="AutorP">
               <h3 class="AutG">${post.nome}</h3>
-              <p>${post.total_seguidores} <span class="SegG">seguidores</span></p>
+              <p>9.900 <span class="SegG">seguidores</span></p>
             </div>
             <div class="PerfAv">
               <img id="fotododonodopost" src="${post.foto_perfil}" alt="Perfil" />
@@ -80,7 +80,7 @@ async function carregarPosts() {
                 post.titulo || "Título do portfólio";
             document.querySelector(
                 ".AutMG"
-            ).textContent = `${post.nome} • ${post.total_seguidores} seguidores`;
+            ).textContent = `${post.nome} • 0 seguidores`;
             document.querySelector(".PotMG ").textContent =
                 post.titulo || "Portfólio teste";
             document.querySelector(".imagemusuariomodal img ").src =
