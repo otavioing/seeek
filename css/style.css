@@ -1057,8 +1057,8 @@ footer {
 /*seta para subir a guia */
 .btn-scroll-top {
     position: fixed;
-    right: 2rem;
-    bottom: 2rem;
+    right: 2.5rem;
+    bottom: 6rem;
     display: grid;
     place-items: center;
     outline: none;
