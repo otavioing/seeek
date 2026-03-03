@@ -190,7 +190,7 @@ svg .st8 {
     color: red;
 }
 
-.modoEscuro .editarIconButton svg path {
+.modoEscuro .editarIconButton svg path, .modoEscuro .adiciona svg {
     fill: white
 }
 
@@ -222,6 +222,9 @@ svg .st8 {
     width: 30%;
 }
 
+.modoEscuro .AdicionaC {
+    background-color: var(--ModoEscuroFontC);
+}
 
 /*-------------------------------- Header inicio --------------------------------*/
 
@@ -1976,7 +1979,15 @@ footer {
     box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
 }
 
-.adiciona img {
+.AdicionaC{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--roxobase);
+    border-radius: 50%;
+    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
+}
+
+.adiciona svg {
     padding: 8px 0 0 0;
     width: 75%;
     height: 75%;
@@ -1984,6 +1995,7 @@ footer {
     margin: auto;
     display: block;
     cursor: pointer;
+    fill:#000;
 }
 
 /* -------------------------------- css para os esqueletos ---------------------------------- */
