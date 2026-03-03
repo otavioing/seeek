@@ -972,8 +972,8 @@ height: 15rem;
 /* teste do botão voltar ao topo */
 .btn-scroll-top {
     position: fixed;
-    right: 2.5rem;
-    bottom: 6rem;
+    right: 2rem;
+    bottom: 2rem;
     display: grid;
     place-items: center;
     outline: none;
