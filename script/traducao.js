@@ -99,13 +99,13 @@ function aplicarIdioma() {
       IlustracaoCursos: "Illustration",
       FotografiaCursos: "Photography",
       PrecoCursos: "Price",
-      FixoCursos: "Fixed",
-      MensalCursos: "Monthly",
+      FixoCursos: "free",
+      MensalCursos: "paid",
       Faixadepreco: "Price Range",
       DuracaoCursos: "Duration",
       IndefinidaCursos: "Undefined",
       TempoEmHorasCursos: "Time in hours",
-      LocalCursos: "Location",
+      LocalCursos: "Language",
       PresencialCursos: "In-person",
       Homeoffice: "Home office",
       AplicarGeral: "Apply",
@@ -246,13 +246,13 @@ function aplicarIdioma() {
       IlustracaoCursos: "Ilustración",
       FotografiaCursos: "Fotografía",
       PrecoCursos: "Precio",
-      FixoCursos: "Fijo",
-      MensalCursos: "Mensual",
+      FixoCursos: "Gratuito",
+      MensalCursos: "pago",
       Faixadepreco: "Rango de Precio",
       DuracaoCursos: "Duración",
       IndefinidaCursos: "Indefinida",
       TempoEmHorasCursos: "Tiempo en horas",
-      LocalCursos: "Ubicación",
+      LocalCursos: "idioma",
       PresencialCursos: "Presencial",
       Homeoffice: "Home office",
       AplicarGeral: "Aplicar",
@@ -391,13 +391,13 @@ function aplicarIdioma() {
       IlustracaoCursos: "Illustrazione",
       FotografiaCursos: "Fotografia",
       PrecoCursos: "Prezzo",
-      FixoCursos: "Fisso",
-      MensalCursos: "Mensile",
+      FixoCursos: "Gratuito",
+      MensalCursos: "pago",
       Faixadepreco: "Fascia di Prezzo",
       DuracaoCursos: "Durata",
       IndefinidaCursos: "Indefinita",
       TempoEmHorasCursos: "Tempo in ore",
-      LocalCursos: "Località",
+      LocalCursos: "lingua",
       PresencialCursos: "In presenza",
       Homeoffice: "Lavoro da casa",
       AplicarGeral: "Applica",
@@ -541,13 +541,13 @@ function aplicarIdioma() {
       IlustracaoCursos: "Illustration",
       FotografiaCursos: "Photographie",
       PrecoCursos: "Prix",
-      FixoCursos: "Fixe",
-      MensalCursos: "Mensuel",
+      FixoCursos: "Gratuit",
+      MensalCursos: "payé",
       Faixadepreco: "Plage de prix",
       DuracaoCursos: "Durée",
       IndefinidaCursos: "Indéfinie",
       TempoEmHorasCursos: "Temps en heures",
-      LocalCursos: "Local",
+      LocalCursos: "langue",
       PresencialCursos: "En présentiel",
       Homeoffice: "Télétravail",
       AplicarGeral: "Appliquer",
@@ -686,13 +686,13 @@ function aplicarIdioma() {
       IlustracaoCursos: "Ilustração",
       FotografiaCursos: "Fotografia",
       PrecoCursos: "Preço",
-      FixoCursos: "Fixo",
-      MensalCursos: "Mensal",
+      FixoCursos: "Gratuito",
+      MensalCursos: "pago",
       Faixadepreco: "Faixa de Preço",
       DuracaoCursos: "Duração",
       IndefinidaCursos: "Indefinida",
       TempoEmHorasCursos: "Tempo em horas",
-      LocalCursos: "Local",
+      LocalCursos: "idioma",
       PresencialCursos: "Presencial",
       Homeoffice: "Home office",
       AplicarGeral: "Aplicar",
@@ -1227,16 +1227,6 @@ function aplicarIdioma() {
   var LocalDoCursos = document.getElementsByClassName("LocC");
   for (var i = 0; i < LocalDoCursos.length; i++) {
     LocalDoCursos[i].innerHTML = idioma[selectedLanguage].LocalCursos;
-  }
-
-  var PresencialDoCursos = document.getElementsByClassName("PresC");
-  for (var i = 0; i < PresencialDoCursos.length; i++) {
-    PresencialDoCursos[i].innerHTML = idioma[selectedLanguage].PresencialCursos;
-  }
-
-  var HomeofficeCursos = document.getElementsByClassName("HOC");
-  for (var i = 0; i < HomeofficeCursos.length; i++) {
-    HomeofficeCursos[i].innerHTML = idioma[selectedLanguage].Homeoffice;
   }
 
   var AplicarNoGeral = document.getElementsByClassName("AplG");

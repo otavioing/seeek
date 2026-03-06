@@ -104,49 +104,48 @@
           <h2 class="titulosfiltroflutuante TDCC">Tipos de curso</h2>
           <div class="divparadarogapentrealabeleoinput">
             <label for=""> <span class="DisC"> Design </span> </label>
-            <input type="radio" name="" id="radio1" />
+            <input type="radio" name="categoria" id="radio1" />
           </div>
           <div class="divparadarogapentrealabeleoinput">
             <label for=""> <span class="IluC"> Ilustração </span> </label>
-            <input type="radio" name="" id="radio2" />
+            <input type="radio" name="categoria" id="radio2" />
           </div>
           <div class="divparadarogapentrealabeleoinput">
             <label for=""> <span class="FotC">Fotográfia </span> </label>
-            <input type="radio" name="" id="radio3" />
+            <input type="radio" name="categoria" id="radio3" />
           </div>
         </div>
 
         <div class="precocursos">
           <h2 class="titulosfiltroflutuante PreC">Preço</h2>
           <div class="divparadarogapentrealabeleoinput">
-            <label for=""> <span class="FixC"> Fixo </span> </label>
-            <input type="radio" name="" id="radio4" />
+            <label for=""> <span class="FixC"> Gratuito </span> </label>
+            <input type="radio" name="preco" id="radio4" />
           </div>
           <div class="divparadarogapentrealabeleoinput">
-            <label for=""> <span class="MenC">Mensal</span> </label>
-            <input type="radio" name="" id="radio5" />
+            <label for=""> <span class="MenC">Pago</span> </label>
+            <input type="radio" name="preco" id="radio5" />
           </div>
-          <div class="setaoneoffcursos">
+          <!-- <div class="setaoneoffcursos">
             <p class="FaiC">Faixa de Preço</p>
 
             <svg viewBox="0 0 14 8" id="setapreco" onclick="setapreco()" alt="seta para baixo">
               <path class="st0" d="M13,1L7,7L1,1" />
             </svg>
 
-            <!-- <img id="setapreco" onclick="setapreco()" src="img/setaparabaixo.svg" alt="seta para baixo"> -->
           </div>
           <div id="faixadeprecocursos" class="faixadeprecocursos">
             <input class="precominmax" type="number" name="" id="" placeholder="min" />
             <p>-</p>
             <input class="precominmax" type="number" name="" id="" placeholder="max" />
-          </div>
+          </div> -->
         </div>
 
         <div class="duracaocursos">
           <h2 class="titulosfiltroflutuante DurC">Duração</h2>
           <div class="divparadarogapentrealabeleoinput">
             <label for=""> <span class="IndC">Indefinida</span> </label>
-            <input type="radio" name="" id="radio6" />
+            <input type="radio" name="duracao" id="radio6" />
           </div>
           <div class="setaoneoffcursos">
             <p class="TEMC">Tempo em horas</p>
@@ -164,17 +163,21 @@
           </div>
         </div>
 
-        <div class="localcursos">
-          <h2 class="titulosfiltroflutuante LocC">Local</h2>
-          <div class="divparadarogapentrealabeleoinput">
-            <label for=""> <span class="PresC">Presencial</span> </label>
-            <input type="radio" name="" id="radio7" />
-          </div>
-          <div class="divparadarogapentrealabeleoinput">
-            <label for=""> <span class="HOC">Home office </span> </label>
-            <input type="radio" name="" id="radio8" />
-          </div>
-        </div>
+        <form class="localcursos">
+          <h2 class="titulosfiltroflutuante LocC">Idioma</h2>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for="idiomaport"> <span>Português</span></label>
+              <input type="radio" name="idioma" id="idiomaport" />
+            </div>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for="idiomaing"> <span>Inglês</span> </label>
+              <input type="radio" name="idioma" id="idiomaing" />
+            </div>
+            <div class="divparadarogapentrealabeleoinput">
+              <label for="idiomaesp"> <span>Espanhol</span> </label>
+              <input type="radio" name="idioma" id="idiomaesp" />
+            </div>
+          </form>
 
         <div class="aplicarfiltrocursos">
           <button class="AplG">Aplicar</button>

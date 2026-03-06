@@ -74,7 +74,8 @@
 .modoEscuro h1,
 .modoEscuro .aplicarfiltrocursos button,
 .modoEscuro .valordocursoebotaofavorito p,
-.modoEscuro .botaomaisinfocursoscaixaflutuante a, .modoEscuro .FilC {
+.modoEscuro .botaomaisinfocursoscaixaflutuante a,
+.modoEscuro .FilC {
     color: var(--ModoEscuroFontC);
 }
 
@@ -347,7 +348,7 @@
 
 .containercursos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 20rem;
     width: 70%;
     margin-top: 1rem;
@@ -357,10 +358,10 @@
     box-sizing: border-box;
 }
 
-.posts{
-display: flex;
-flex-direction: column;
-height: 15rem;
+.posts {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
 }
 
 .cursos {
@@ -451,9 +452,10 @@ height: 15rem;
     gap: 1rem;
 }
 
-.post{
+.post {
     width: auto;
 }
+
 .caixaflutuante img {
     width: 100%;
     height: 17rem;
