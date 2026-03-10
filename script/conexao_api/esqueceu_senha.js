@@ -27,7 +27,7 @@
 
     try {
       const res = await fetch(
-        "http://localhost:4500/usuarios/criar-codigo-verificacao",
+        `${ip_api}/usuarios/criar-codigo-verificacao`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -63,7 +63,7 @@
 
     try {
       const res = await fetch(
-        "http://localhost:4500/usuarios/atualizar-senha",
+        `${ip_api}/usuarios/atualizar-senha`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

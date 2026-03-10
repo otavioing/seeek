@@ -1,65 +1,65 @@
 document.addEventListener('DOMContentLoaded', function () {
-  
+
   const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
 
-//começo da parte de acessibilidade
+  //começo da parte de acessibilidade
 
-document.getElementById(usuario.acessibilidade_ativa ? 'barraacessibilidadevisivel' : 'barraacessibilidadeinvisivel').checked = true;
+  document.getElementById(usuario.acessibilidade_ativa ? 'barraacessibilidadevisivel' : 'barraacessibilidadeinvisivel').checked = true;
 
 
-// Adiciona o listener para atualizar a escolha
-document.querySelectorAll('input[name="barraacessibilidade"]').forEach((input) => {
-  input.addEventListener('change', async () => {
-    const novoValor = input.value === 'true';
+  // Adiciona o listener para atualizar a escolha
+  document.querySelectorAll('input[name="barraacessibilidade"]').forEach((input) => {
+    input.addEventListener('change', async () => {
+      const novoValor = input.value === 'true';
 
-    try {
-      // Envia para o backend
-      await fetch('http://localhost:4500/usuarios/atualizar-acessibilidade', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          id: usuario.id,
-          acessibilidade_ativa: novoValor
-        })
-      });
+      try {
+        // Envia para o backend
+        await fetch(`${ip_api}/usuarios/atualizar-acessibilidade`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id: usuario.id,
+            acessibilidade_ativa: novoValor
+          })
+        });
 
-      // Atualiza localmente
-      usuario.acessibilidade_ativa = novoValor;
-      localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+        // Atualiza localmente
+        usuario.acessibilidade_ativa = novoValor;
+        localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
 
-      // Mostra ou oculta a barra de acessibilidade imediatamente
-      document.getElementById('barra-acessibilidade').style.display = novoValor ? 'block' : 'none';
-    } catch (erro) {
-      console.error("Erro ao atualizar acessibilidade:", erro);
-    }
+        // Mostra ou oculta a barra de acessibilidade imediatamente
+        document.getElementById('barra-acessibilidade').style.display = novoValor ? 'block' : 'none';
+      } catch (erro) {
+        console.error("Erro ao atualizar acessibilidade:", erro);
+      }
+    });
   });
-});
 });
 
 //fim da parte de acessibilidade
 
 // Código para o form de editar perfil
 
-fetch(`http://localhost:4500/usuarios/${usuario.id}`)
-.then(response => response.json())
-   .then(data => {
+fetch(`${ip_api}/usuarios/${usuario.id}`)
+  .then(response => response.json())
+  .then(data => {
 
-   const user = data[0]; // <- Aqui está o segredo!
+    const user = data[0]; // <- Aqui está o segredo!
 
     console.log("Usuário recebido:", user);
 
-         document.getElementById("CidadeForm").value = user.cidade_pais || "";
-         document.getElementById("CargoForm").value = user.cargo || "";
-         document.getElementById("NomeForm").value = user.nome || "";
-         document.getElementById("EmailForm").value = user.email || "";
-         document.getElementById("SenhaForm").value = ""; // segurança: não mostrar senha
-         document.getElementById("URLForm").value = `http://localhost:4500/usuario.html?id=${usuario.id}`;   // ajuste se tiver campo real para URL
-     })
-      .catch(error => {
-              console.error("Erro ao buscar dados do usuário:", error);
-           });
+    document.getElementById("CidadeForm").value = user.cidade_pais || "";
+    document.getElementById("CargoForm").value = user.cargo || "";
+    document.getElementById("NomeForm").value = user.nome || "";
+    document.getElementById("EmailForm").value = user.email || "";
+    document.getElementById("SenhaForm").value = ""; // segurança: não mostrar senha
+    document.getElementById("URLForm").value = `${ip_api}/usuario.html?id=${usuario.id}`;   // ajuste se tiver campo real para URL
+  })
+  .catch(error => {
+    console.error("Erro ao buscar dados do usuário:", error);
+  });
 
 // fim do código de editar perfil
 
@@ -69,7 +69,7 @@ fetch(`http://localhost:4500/usuarios/${usuario.id}`)
 const loginForm = document.getElementById("botaoexcluircontaconfirmar");
 loginForm.addEventListener("click", async (e) => {
   try {
-    const response = await fetch('http://localhost:4500/usuarios/solicitar-exclusao', {
+    const response = await fetch(`${ip_api}/usuarios/solicitar-exclusao`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -106,7 +106,7 @@ verificarCodigoBtn.addEventListener('click', async () => {
 
   try {
     const response = await fetch(
-      `http://localhost:4500/usuarios/${usuario.id}`,
+      `${ip_api}/usuarios/${usuario.id}`,
       {
         method: "DELETE",
       }
@@ -121,15 +121,39 @@ verificarCodigoBtn.addEventListener('click', async () => {
   }
 });
 
+fetch(`${ip_api}/usuarios/${usuario.id}`)
+  .then((response) => response.json())
+  .then((data) => {
+    if (data.length === 0) {
+      alert("Usuário não encontrado!");
+      return;
+    }
 
-function abrirnotificacaoexcluirconta(){
+    const user = data[0]; // <- Aqui está o segredo!
+
+    console.log("Usuário recebido:", user);
+
+    document.getElementById("CidadeForm").value =
+      user.cidade_pais || "";
+    document.getElementById("CargoForm").value = user.cargo || "";
+    document.getElementById("NomeForm").value = user.nome || "";
+    document.getElementById("EmailForm").value = user.email || "";
+    document.getElementById("SenhaForm").value = ""; // segurança: não mostrar senha
+    document.getElementById("URLForm").value = ""; // ajuste se tiver campo real para URL
+  })
+  .catch((error) => {
+    console.error("Erro ao buscar dados do usuário:", error);
+  });
+
+
+function abrirnotificacaoexcluirconta() {
   let notificacao = document.getElementById("caixadenotificacaoexcluirconta");
 
   // notificacao.style.display = "block";
   notificacao.style.top = "0rem";
 }
 
-function cancelarnotificacaoexcluirconta(){
+function cancelarnotificacaoexcluirconta() {
   let notificacao = document.getElementById("caixadenotificacaoexcluirconta");
 
   notificacao.style.top = "-15rem";
@@ -142,63 +166,63 @@ function cancelarnotificacaoexcluirconta(){
 
 let listaconfig = document.getElementById("listaconfig");
 if (listaconfig) {
-    let botoeslist = listaconfig.querySelectorAll("button");
-    let quantitotal = botoeslist.length;
-    for (let g = 0; g < quantitotal; g++) {
-        botoeslist[g].addEventListener("click", alterarcategoria);
+  let botoeslist = listaconfig.querySelectorAll("button");
+  let quantitotal = botoeslist.length;
+  for (let g = 0; g < quantitotal; g++) {
+    botoeslist[g].addEventListener("click", alterarcategoria);
+  }
+  function alterarcategoria() {
+    for (let i = 0; i < quantitotal; i++) {
+      botoeslist[i].id = "";
     }
-    function alterarcategoria() {
-        for (let i = 0; i < quantitotal; i++) {
-            botoeslist[i].id = "";
-        }
-        this.id = "selecionado";
-    }
+    this.id = "selecionado";
+  }
 }
 
 //script para fazer a barra lateral da aba de configurações funcinar
 function privacidade() {
-    let privacidade = document.getElementById("privacidadeconfig");
-    let notificacao = document.getElementById("notificacoesconfig");
-    let infouser = document.getElementById("informacoesousuario");
-    let estatistica = document.getElementById("infoestatistica");
+  let privacidade = document.getElementById("privacidadeconfig");
+  let notificacao = document.getElementById("notificacoesconfig");
+  let infouser = document.getElementById("informacoesousuario");
+  let estatistica = document.getElementById("infoestatistica");
 
-    notificacao.style.display = "none";
-    infouser.style.display = "none";
-    estatistica.style.display = "none";
-    privacidade.style.display = "flex";
+  notificacao.style.display = "none";
+  infouser.style.display = "none";
+  estatistica.style.display = "none";
+  privacidade.style.display = "flex";
 }
 
 function notificaacoes() {
-    let privacidade = document.getElementById("privacidadeconfig");
-    let notificacao = document.getElementById("notificacoesconfig");
-    let infouser = document.getElementById("informacoesousuario");
-    let estatistica = document.getElementById("infoestatistica");
+  let privacidade = document.getElementById("privacidadeconfig");
+  let notificacao = document.getElementById("notificacoesconfig");
+  let infouser = document.getElementById("informacoesousuario");
+  let estatistica = document.getElementById("infoestatistica");
 
-    privacidade.style.display = "none";
-    infouser.style.display = "none";
-    estatistica.style.display = "none";
-    notificacao.style.display = "flex";
+  privacidade.style.display = "none";
+  infouser.style.display = "none";
+  estatistica.style.display = "none";
+  notificacao.style.display = "flex";
 }
 
 function informacoesuser() {
-    let privacidade = document.getElementById("privacidadeconfig");
-    let notificacao = document.getElementById("notificacoesconfig");
-    let infouser = document.getElementById("informacoesousuario");
-    let estatistica = document.getElementById("infoestatistica");
+  let privacidade = document.getElementById("privacidadeconfig");
+  let notificacao = document.getElementById("notificacoesconfig");
+  let infouser = document.getElementById("informacoesousuario");
+  let estatistica = document.getElementById("infoestatistica");
 
-    privacidade.style.display = "none";
-    notificacao.style.display = "none";
-    estatistica.style.display = "none";
-    infouser.style.display = "flex";
+  privacidade.style.display = "none";
+  notificacao.style.display = "none";
+  estatistica.style.display = "none";
+  infouser.style.display = "flex";
 }
 
 function infoestatistica() {
-    let privacidade = document.getElementById("privacidadeconfig");
-    let notificacao = document.getElementById("notificacoesconfig");
-    let infouser = document.getElementById("informacoesousuario");
-    let estatistica = document.getElementById("infoestatistica");
-    privacidade.style.display = "none";
-    notificacao.style.display = "none";
-    infouser.style.display = "none";
-    estatistica.style.display = "flex";
+  let privacidade = document.getElementById("privacidadeconfig");
+  let notificacao = document.getElementById("notificacoesconfig");
+  let infouser = document.getElementById("informacoesousuario");
+  let estatistica = document.getElementById("infoestatistica");
+  privacidade.style.display = "none";
+  notificacao.style.display = "none";
+  infouser.style.display = "none";
+  estatistica.style.display = "flex";
 }

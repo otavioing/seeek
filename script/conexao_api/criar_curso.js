@@ -146,7 +146,7 @@ form.addEventListener("submit", async (event) => {
     formData.append("legenda_curso", legendaCurso);
 
     try {
-        const resposta = await fetch("http://localhost:4500/postscursos", {
+        const resposta = await fetch(`${ip_api}/postscursos`, {
             method: "POST",
             body: formData,
         });

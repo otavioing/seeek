@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function carregarUsuario() {
     try {
       const resposta = await fetch(
-        `http://localhost:4500/usuarios/verificartipo/${userId.id}`
+        `${ip_api}/usuarios/verificartipo/${userId.id}`
       );
       const data = await resposta.json();
 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (userData.tipo === "padrao") {
           const respostaPadrao = await fetch(
-            `http://localhost:4500/usuarios/padrao/${userId.id}`
+            `${ip_api}/usuarios/padrao/${userId.id}`
           );
           const dataPadrao = await respostaPadrao.json();
           usuario = dataPadrao[0];
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("quantidadedepost").textContent =
             usuario.total_posts;
           const postspadrao = await fetch(
-            `http://localhost:4500/posts/usuario/${userId.id}`
+            `${ip_api}/posts/usuario/${userId.id}`
           );
           const dadosPostspadrao = await postspadrao.json();
           post = dadosPostspadrao[0];
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         } else if (userData.tipo === "empresa") {
           const respostaEmpresa = await fetch(
-            `http://localhost:4500/usuarios/empresas/${userId.id}`
+            `${ip_api}/usuarios/empresas/${userId.id}`
           );
           const dataEmpresa = await respostaEmpresa.json();
           usuario = dataEmpresa[0];
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("quantidadedepost").textContent =
             usuario.total_posts;
           const postsempresa = await fetch(
-            `http://localhost:4500/posts/usuario/${userId.id}`
+            `${ip_api}/posts/usuario/${userId.id}`
           );
           const dadosPostsempresa = await postsempresa.json();
           post = dadosPostsempresa[0];

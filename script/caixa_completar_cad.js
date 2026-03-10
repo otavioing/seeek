@@ -9,7 +9,7 @@ formpadrao.addEventListener("submit", async (e) => {
 
   try {
     const finalResponse = await fetch(
-      `http://localhost:4500/usuarios/atualizar-tipo/${usuario.id}`,
+      `${ip_api}/usuarios/atualizar-tipo/${usuario.id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -26,7 +26,7 @@ formempresa.addEventListener("submit", async (e) => {
 
   try {
     const finalResponse = await fetch(
-      `http://localhost:4500/usuarios/atualizar-tipo/${usuario.id}`,
+      `${ip_api}/usuarios/atualizar-tipo/${usuario.id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -57,7 +57,7 @@ cadastroFormempresa.addEventListener("submit", async (e) => {
     const formData = new FormData();
     formData.append("foto", fotoInput.files[0]);
     const fotoResponse = await fetch(
-      `http://localhost:4500/usuarios/enviar-foto-perfil/${usuario.id}`,
+      `${ip_api}/usuarios/enviar-foto-perfil/${usuario.id}`,
       {
         method: "POST",
         body: formData,
@@ -97,7 +97,7 @@ cadastroFormempresa.addEventListener("submit", async (e) => {
     };
 
     const finalResponse = await fetch(
-      `http://localhost:4500/empresa/${usuario.id}`,
+      `${ip_api}/empresa/${usuario.id}`,
       {
         method: "POST",
         headers: {
@@ -109,7 +109,7 @@ cadastroFormempresa.addEventListener("submit", async (e) => {
 
     if (finalResponse.ok) {
       const completarCadastroResponse = await fetch(
-        `http://localhost:4500/usuarios/completarcoluna-cadastro/${usuario.id}`,
+        `${ip_api}/usuarios/completarcoluna-cadastro/${usuario.id}`,
         {
           method: "PUT",
         }
@@ -160,7 +160,7 @@ cadastroForm.addEventListener("submit", async (e) => {
 
   try {
     const finalResponse = await fetch(
-      `http://localhost:4500/padrao/${usuario.id}`,
+      `${ip_api}/padrao/${usuario.id}`,
       {
         method: "POST",
         headers: {
@@ -180,7 +180,7 @@ cadastroForm.addEventListener("submit", async (e) => {
         formData.append("foto", fotoInput.files[0]);
 
         const fotoResponse = await fetch(
-          `http://localhost:4500/usuarios/enviar-foto-perfil/${usuario.id}`,
+          `${ip_api}/usuarios/enviar-foto-perfil/${usuario.id}`,
           {
             method: "POST",
             body: formData,
@@ -196,7 +196,7 @@ cadastroForm.addEventListener("submit", async (e) => {
 
       // ✅ Só chega aqui se tudo deu certo (padrao + foto)
       const completarCadastroResponse = await fetch(
-        `http://localhost:4500/usuarios/completarcoluna-cadastro/${usuario.id}`,
+        `${ip_api}/usuarios/completarcoluna-cadastro/${usuario.id}`,
         {
           method: "PUT",
         }
@@ -228,7 +228,7 @@ async function Verificartipodeusuario() {
     }
 
     const response = await fetch(
-      `http://localhost:4500/usuarios/verificartipo/${usuario.id}`
+      `${ip_api}/usuarios/verificartipo/${usuario.id}`
     );
     const data = await response.json();
 
@@ -275,7 +275,7 @@ async function Verificartipodeusuario() {
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await fetch(
-      `http://localhost:4500/usuarios/verificarcaixa/${usuario.id}`
+      `${ip_api}/usuarios/verificarcaixa/${usuario.id}`
     );
     const data = await response.json();
 

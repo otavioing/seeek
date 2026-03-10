@@ -67,7 +67,7 @@ form.addEventListener('submit', async (e) => {
   formData.append("id_categoria", id_categoria);
 
   try {
-    const response = await fetch("http://localhost:4500/posts", {
+    const response = await fetch(`${ip_api}/posts`, {
       method: "POST",
       body: formData,
     });

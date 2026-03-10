@@ -29,7 +29,7 @@ let postSelecionadoId = null;
 let usuario_id = null;
 
 async function carregarPosts() {
-    const resposta = await fetch("http://localhost:4500/posts");
+    const resposta = await fetch(`${ip_api}/posts`);
     const posts = await resposta.json();
     const container = document.getElementById("gride");
     container.innerHTML = "";
@@ -108,13 +108,12 @@ async function carregarPosts() {
 
 carregarPosts();
 
-const userId = JSON.parse(localStorage.getItem("usuarioLogado"));
 
 async function atualizarLikeInfo() {
 
     // Verifica se o usuário já curtiu o post
     const respostaLike = await fetch(
-        `http://localhost:4500/posts/verifica-like/${userId.id}/${postSelecionadoId}`
+        `${ip_api}/posts/verifica-like/${userId.id}/${postSelecionadoId}`
     );
     const likeData = await respostaLike.json();
 
@@ -128,7 +127,7 @@ async function atualizarLikeInfo() {
     // Busca o total de likes do post
     var numeroTotalLikes = document.getElementById("nomerolikespost");
     const respostaTotal = await fetch(
-        `http://localhost:4500/posts/likes/${postSelecionadoId}`
+        `${ip_api}/posts/likes/${postSelecionadoId}`
     );
     const totalData = await respostaTotal.json();
 
@@ -142,7 +141,7 @@ async function atualizarLikeInfo() {
 
 
 async function inserirLike() {
-    const resposta = await fetch(`http://localhost:4500/posts/like`, {
+    const resposta = await fetch(`${ip_api}/posts/like`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

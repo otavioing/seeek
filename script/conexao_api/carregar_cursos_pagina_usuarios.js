@@ -2,7 +2,7 @@ async function carregarCursosPaginaUsuarios() {
     const userId = JSON.parse(localStorage.getItem("usuarioLogado"));
 
 
-    const resposta = await fetch(`http://localhost:4500/postscursos/listarporusuario/${userId.id}`);
+    const resposta = await fetch(`${ip_api}/postscursos/listarporusuario/${userId.id}`);
     const cursos = await resposta.json();
     const container = document.getElementById("mainCursosUser");
     container.innerHTML = "";

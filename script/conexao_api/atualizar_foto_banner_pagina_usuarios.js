@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       try {
         const response = await fetch(
-          `http://localhost:4500/usuarios/update-fotobanner/${userId.id}`,
+          `${ip_api}/usuarios/update-fotobanner/${userId.id}`,
           {
             method: "PUT",
             body: formData,

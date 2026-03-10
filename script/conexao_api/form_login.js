@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const senha = document.getElementById("logInPsw").value;
 
     try {
-      const response = await fetch("http://localhost:4500/usuarios/login", {
+      const response = await fetch(`${ip_api}/usuarios/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, senha }),

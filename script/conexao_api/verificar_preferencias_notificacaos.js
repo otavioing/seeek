@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const forms = document.querySelectorAll("form[data-pref]");
 
   // busca TODAS as preferências do usuário só 1 vez
-  const resposta = await fetch(`http://localhost:4500/usuarios/preferencias-notificacoes/${userId}`);
+  const resposta = await fetch(`${ip_api}/usuarios/preferencias-notificacoes/${userId}`);
   const prefs = await resposta.json();
 
   forms.forEach(form => {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     form.addEventListener("change", async () => {
       const novaPreferencia = form.visibilidade.value;
 
-      await fetch(`http://localhost:4500/usuarios/preferencias-notificacoes/${userId}`, {
+      await fetch(`${ip_api}/usuarios/preferencias-notificacoes/${userId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

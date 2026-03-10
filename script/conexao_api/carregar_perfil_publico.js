@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function carregarUsuario() {
         try {
             const resposta = await fetch(
-                `http://localhost:4500/usuarios/verificartipo/${id}`
+                `${ip_api}/usuarios/verificartipo/${id}`
             );
             const data = await resposta.json();
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (userData.tipo === "padrao") {
                     const respostaPadrao = await fetch(
-                        `http://localhost:4500/usuarios/padrao/${id}`
+                        `${ip_api}/usuarios/padrao/${id}`
                     );
                     const dataPadrao = await respostaPadrao.json();
                     usuario = dataPadrao[0];
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById("quantidadedepost").textContent =
                         usuario.total_posts;
                     const postspadrao = await fetch(
-                        `http://localhost:4500/posts/usuario/${id}`
+                        `${ip_api}/posts/usuario/${id}`
                     );
                     const dadosPostspadrao = await postspadrao.json();
                     post = dadosPostspadrao[0];
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         ).innerHTML = `<div class="buttonUser"><p> Este usuário não possui posts.</p></div>`;
                     }
                     const verificarseguindo = await fetch(
-                        `http://localhost:4500/usuarios/verificarsesegue/${userId.id}/${id}`
+                        `${ip_api}/usuarios/verificarsesegue/${userId.id}/${id}`
                     );
                     const dadosVerificarseguindo = await verificarseguindo.json();
                     const estaSeguindo = dadosVerificarseguindo.segue;
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 } else if (userData.tipo === "empresa") {
                     const respostaEmpresa = await fetch(
-                        `http://localhost:4500/usuarios/empresas/${id}`
+                        `${ip_api}/usuarios/empresas/${id}`
                     );
                     const dataEmpresa = await respostaEmpresa.json();
                     usuario = dataEmpresa[0];
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById("quantidadedepost").textContent =
                         usuario.total_posts;
                     const postsempresa = await fetch(
-                        `http://localhost:4500/posts/usuario/${id}`
+                        `${ip_api}/posts/usuario/${id}`
                     );
                     const dadosPostsempresa = await postsempresa.json();
                     post = dadosPostsempresa[0];
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.getElementById("SeguirUserPerfil").addEventListener("click", async function () {
-        const resposta = await fetch(`http://localhost:4500/usuarios/seguir-usuario/${userId.id}/${id}`, {
+        const resposta = await fetch(`${ip_api}/usuarios/seguir-usuario/${userId.id}/${id}`, {
             method: "POST",
         });
         const data = await resposta.json();

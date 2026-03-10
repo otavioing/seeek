@@ -17,7 +17,7 @@
 //   dadosTemporarios = { nome, email, senha,};
 
 //   try {
-//     const response = await fetch('http://localhost:4500/usuarios/solicitar-criacao', {
+//     const response = await fetch(`${ip_api}/usuarios/solicitar-criacao`, {
 //       method: 'POST',
 //       headers: { 'Content-Type': 'application/json' },
 //       body: JSON.stringify({ nome, email, senha })
@@ -53,7 +53,7 @@
 //   formData.append("senha", dadosTemporarios.senha);
 
 //   try {
-//     const finalResponse = await fetch('http://localhost:4500/usuarios', {
+//     const finalResponse = await fetch(`${ip_api}/usuarios`, {
 //       method: 'POST',
 //       body: formData
 //     });
@@ -92,7 +92,7 @@ cadastroForm.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch("http://localhost:4500/usuarios", {
+    const response = await fetch(`${ip_api}/usuarios`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

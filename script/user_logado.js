@@ -3,7 +3,7 @@ const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch(`http://localhost:4500/usuarios/${usuario.id}`, {
+    const response = await fetch(`${ip_api}/usuarios/${usuario.id}`, {
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${usuario.token}`

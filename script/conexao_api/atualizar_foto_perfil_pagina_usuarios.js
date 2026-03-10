@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const userId = JSON.parse(localStorage.getItem("usuarioLogado"));
 
   document
     .getElementById("inputImagemPerfilUser")
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       try {
         const response = await fetch(
-          `http://localhost:4500/usuarios/update-foto/${userId.id}`,
+          `${ip_api}/usuarios/update-foto/${userId.id}`,
           {
             method: "PUT",
             body: formData,

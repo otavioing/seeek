@@ -4,7 +4,7 @@ async function carregarSeguidores() {
     const listaResultados = document.getElementById('listaseguidores');
 
 
-    const resposta = await fetch(`http://localhost:4500/usuarios/lista-seguidores/${id}`);
+    const resposta = await fetch(`${ip_api}/usuarios/lista-seguidores/${id}`);
     const resultado = await resposta.json();
     if (resultado.length === 0) {
         listaResultados.innerHTML = '<li><a>Nenhum resultado encontrado</a></li>';

@@ -4,7 +4,7 @@
 
 async function carregarCursos() {
 
-    const resposta = await fetch("http://localhost:4500/postscursos");
+    const resposta = await fetch(`${ip_api}/postscursos`);
     const cursos = await resposta.json();
 
     renderizarCursos(cursos);
@@ -62,22 +62,22 @@ function renderizarCursos(cursos) {
 
 async function aplicarFiltro() {
 
-    let url = "http://localhost:4500/postscursos";
+    let url = `${ip_api}/postscursos`;
 
     // -----------------
     // CATEGORIA
     // -----------------
 
     if (document.getElementById("radio1").checked) {
-        url = "http://localhost:4500/postscursos/listarporcategoria/2";
+        url = `${ip_api}/postscursos/listarporcategoria/2`;
     }
 
     if (document.getElementById("radio2").checked) {
-        url = "http://localhost:4500/postscursos/listarporcategoria/1";
+        url = `${ip_api}/postscursos/listarporcategoria/1`;
     }
 
     if (document.getElementById("radio3").checked) {
-        url = "http://localhost:4500/postscursos/listarporcategoria/3";
+        url = `${ip_api}/postscursos/listarporcategoria/3`;
     }
 
     // -----------------
@@ -85,11 +85,11 @@ async function aplicarFiltro() {
     // -----------------
 
     if (document.getElementById("radio4").checked) {
-        url = "http://localhost:4500/postscursos/listarporpagamento/gratuito";
+        url = `${ip_api}/postscursos/listarporpagamento/gratuito`;
     }
 
     if (document.getElementById("radio5").checked) {
-        url = "http://localhost:4500/postscursos/listarporpagamento/pago";
+        url = `${ip_api}/postscursos/listarporpagamento/pago`;
     }
 
     // -----------------
@@ -97,15 +97,15 @@ async function aplicarFiltro() {
     // -----------------
 
     if (document.getElementById("idiomaport").checked) {
-        url = "http://localhost:4500/postscursos/listarporidioma/portugues";
+        url = `${ip_api}/postscursos/listarporidioma/portugues`;
     }
 
     if (document.getElementById("idiomaing").checked) {
-        url = "http://localhost:4500/postscursos/listarporidioma/ingles";
+        url = `${ip_api}/postscursos/listarporidioma/ingles`;
     }
 
     if (document.getElementById("idiomaesp").checked) {
-        url = "http://localhost:4500/postscursos/listarporidioma/espanhol";
+        url = `${ip_api}/postscursos/listarporidioma/espanhol`;
     }
 
     try {

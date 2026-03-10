@@ -64,7 +64,7 @@ function atualizarTemaNoBanco(novoTema) {
     return;
   }
 
-  fetch("http://localhost:4500/usuarios/atualizar-tema", {
+  fetch(`${ip_api}/usuarios/atualizar-tema`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

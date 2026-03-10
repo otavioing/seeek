@@ -1,5 +1,5 @@
 async function carregarsectionsTendencias() {
-  const resposta = await fetch("http://localhost:4500/tendencias");
+  const resposta = await fetch(`${ip_api}/tendencias`);
   const tendencias = await resposta.json();
   const container = document.getElementById("containersectionstendencias");
   container.innerHTML = "";
@@ -29,7 +29,7 @@ async function carregarsectionsTendencias() {
     const idCategoria = section.querySelector(".idcategoriapost").textContent.trim();
     const divPosts = section.querySelector(".containerpoststendencias");
 
-    const respPosts = await fetch(`http://localhost:4500/tendencias/${idCategoria}`);
+    const respPosts = await fetch(`${ip_api}/tendencias/${idCategoria}`);
     const posts = await respPosts.json();
 
     posts.forEach((post) => {

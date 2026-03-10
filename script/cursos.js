@@ -84,7 +84,7 @@ async function abrircaixaflutuantecursos(id) {
   //     corpo.style.overflow = "auto";
   //     html.style.overflow = "auto";
   // }
-  const resposta = await fetch(`http://localhost:4500/postscursos/${id}`);
+  const resposta = await fetch(`${ip_api}/postscursos/${id}`);
   const cursos = await resposta.json();
   const container = document.getElementById("caixaflutuante");
   container.innerHTML = "";

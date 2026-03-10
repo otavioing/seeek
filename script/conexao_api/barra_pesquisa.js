@@ -11,7 +11,7 @@ document.getElementById('inputpesquisar').addEventListener('input', async functi
     }
 
 
-    const resposta = await fetch(`http://localhost:4500/usuarios/buscar-usuario-por-nome/${input}`);
+    const resposta = await fetch(`${ip_api}/usuarios/buscar-usuario-por-nome/${input}`);
     const resultado = await resposta.json();
     if (resultado.length === 0) {
         listaResultados.innerHTML = '<li><a>Nenhum resultado encontrado</a></li>';
