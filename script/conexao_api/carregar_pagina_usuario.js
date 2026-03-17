@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const userData = data[0];
         let usuario;
 
+        const response = await fetch(`${ip_api}/usuarios/foto-perfil/${userId.id}`);
+        const result = await response.json();
+
         if (userData.tipo === "padrao") {
           const respostaPadrao = await fetch(
             `${ip_api}/usuarios/padrao/${userId.id}`
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById(
             "nomecompleto"
           ).textContent = `@${usuario.nome_de_usuario}`;
-          document.getElementById("imgdeperfildouser").src = usuario.foto;
+          document.getElementById("imgdeperfildouser").src = result.foto;
           document.getElementById("imagemdefundodoperfil").src = usuario.banner;
           document.getElementById("numerodepessoasquesegue").textContent =
             usuario.total_seguindo;
@@ -66,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById(
             "nomecompleto"
           ).textContent = `@${usuario.nome_de_usuario}`;
-          document.getElementById("imgdeperfildouser").src = usuario.foto;
+          document.getElementById("imgdeperfildouser").src = result.foto;
           document.getElementById("imagemdefundodoperfil").src = usuario.banner;
           document.getElementById("numerodepessoasquesegue").textContent =
             usuario.total_seguindo;

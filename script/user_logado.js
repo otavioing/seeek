@@ -8,15 +8,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${usuario.token}`
       }
-    });    
+    });
     const data = await response.json();
 
     if (Array.isArray(data) && data.length === 1) {
-      
+
+      const response = await fetch(`${ip_api}/usuarios/foto-perfil/${data[0].id}`);
+      const result = await response.json();
+
       //header
       document.getElementById("nome_user").innerHTML = data[0].nome;
-      document.getElementById("img_user").src = data[0].foto;
-      document.getElementById("img_useres").src = data[0].foto;
+      document.getElementById("img_user").src = result.foto;
+      document.getElementById("img_useres").src = result.foto;
       // fim do header
 
       // menu perfil
@@ -28,18 +31,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       // barra de acessibilidade
       if (data[0].acessibilidade_ativa === 1) {
         document.getElementById('barra-acessibilidade').style.display = 'block';
-      }else{
+      } else {
         document.getElementById('barra-acessibilidade').style.display = 'none';
       }
       // fim da barra de acessibilidade
     } else {
-     console.error("Usuário não encontrado ou dados inválidos.");
+      console.error("Usuário não encontrado ou dados inválidos.");
 
 
     }
   } catch (error) {
-  console.error("Erro ao buscar dados do usuário:", error);
-}
+    console.error("Erro ao buscar dados do usuário:", error);
+  }
 
 });
 
