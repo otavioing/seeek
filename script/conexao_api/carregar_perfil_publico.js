@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 const userData = data[0];
                 let usuario;
 
+                const response = await fetch(`${ip_api}/usuarios/foto-perfil/${id}`);
+                const result = await response.json();
+
                 if (userData.tipo === "padrao") {
                     const respostaPadrao = await fetch(
                         `${ip_api}/usuarios/padrao/${id}`
@@ -28,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById(
                         "nomecompleto"
                     ).textContent = `@${usuario.nome_de_usuario}`;
-                    document.getElementById("imgdeperfildouser").src = usuario.foto;
+                    document.getElementById("imgdeperfildouser").src = result.foto;
                     document.getElementById("imagemdefundodoperfil").src = usuario.banner;
                     document.getElementById("descricaouser").textContent =
                         usuario.descricao;
@@ -79,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById(
                         "nomecompleto"
                     ).textContent = `@${usuario.nome_de_usuario}`;
-                    document.getElementById("imgdeperfildouser").src = usuario.foto;
+                    document.getElementById("imgdeperfildouser").src = result.foto;
                     document.getElementById("imagemdefundodoperfil").src = usuario.banner;
                     document.getElementById("numerodepessoasquesegue").textContent =
                         usuario.total_seguindo;
