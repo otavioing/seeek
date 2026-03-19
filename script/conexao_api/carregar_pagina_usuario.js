@@ -8,103 +8,65 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       const data = await resposta.json();
 
-      if (data && data.length > 0) {
-        const userData = data[0];
-        let usuario;
-
-        const response = await fetch(`${ip_api}/usuarios/foto-perfil/${userId.id}`);
-        const result = await response.json();
-
-        if (userData.tipo === "padrao") {
-          const respostaPadrao = await fetch(
-            `${ip_api}/usuarios/padrao/${userId.id}`
-          );
-          const dataPadrao = await respostaPadrao.json();
-          usuario = dataPadrao[0];
-          // alert("Usuário do tipo " + userData.tipo + " carregado com sucesso!");
-          document.getElementById("nomedousuario").textContent = usuario.nome;
-          document.getElementById(
-            "nomecompleto"
-          ).textContent = `@${usuario.nome_de_usuario}`;
-          document.getElementById("imgdeperfildouser").src = result.foto;
-          document.getElementById("imagemdefundodoperfil").src = usuario.banner;
-          document.getElementById("numerodepessoasquesegue").textContent =
-            usuario.total_seguindo;
-          document.getElementById("nomerodeseguidores").textContent =
-            usuario.total_seguidores;
-          document.getElementById("descricaouser").textContent =
-            usuario.descricao;
-          document.getElementById("quantidadedepost").textContent =
-            usuario.total_posts;
-          const postspadrao = await fetch(
-            `${ip_api}/posts/usuario/${userId.id}`
-          );
-          const dadosPostspadrao = await postspadrao.json();
-          post = dadosPostspadrao[0];
-          if (post) {
-            const mainImagensUser = document.getElementById("mainImagensUser");
-            mainImagensUser.innerHTML =
-              '<div class="buttonUser"><a href="adicionarProjeto.html"><button><img src="img/lupa+.svg" alt=""><p>Adicionar Projeto</p></button></a></div>'; // Limpa o conteúdo anterior
-            dadosPostspadrao.forEach((post) => {
-              const postElement = document.createElement("div");
-              postElement.className = "imgsUser";
-              postElement.innerHTML = `
-                        <img src="${post.imagem}" alt="Post Image">`;
-              mainImagensUser.appendChild(postElement);
-            });
-          } else {
-            console.error("Nenhum post encontrado para o usuário padrão.");
-            document.getElementById(
-              "mainImagensUser"
-            ).innerHTML = `<div class="buttonUser"><a href="adicionarProjeto.html"><button><img src="img/lupa+.svg" alt=""><p>Adicionar Projeto</p></button></a></div>`;
-          }
-        } else if (userData.tipo === "empresa") {
-          const respostaEmpresa = await fetch(
-            `${ip_api}/usuarios/empresas/${userId.id}`
-          );
-          const dataEmpresa = await respostaEmpresa.json();
-          usuario = dataEmpresa[0];
-          // alert("Usuário do tipo " + userData.tipo + " carregado com sucesso!");
-          document.getElementById("nomedousuario").textContent = usuario.nome;
-          document.getElementById(
-            "nomecompleto"
-          ).textContent = `@${usuario.nome_de_usuario}`;
-          document.getElementById("imgdeperfildouser").src = result.foto;
-          document.getElementById("imagemdefundodoperfil").src = usuario.banner;
-          document.getElementById("numerodepessoasquesegue").textContent =
-            usuario.total_seguindo;
-          document.getElementById("nomerodeseguidores").textContent =
-            usuario.total_seguidores;
-          document.getElementById("descricaouser").textContent =
-            usuario.descricao;
-          document.getElementById("quantidadedepost").textContent =
-            usuario.total_posts;
-          const postsempresa = await fetch(
-            `${ip_api}/posts/usuario/${userId.id}`
-          );
-          const dadosPostsempresa = await postsempresa.json();
-          post = dadosPostsempresa[0];
-          if (post) {
-            const mainImagensUser = document.getElementById("mainImagensUser");
-            mainImagensUser.innerHTML =
-              '<div class="buttonUser"><a href="adicionarProjeto.html"><button><img src="img/lupa+.svg" alt=""><p>Adicionar Projeto</p></button></a></div>'; // Limpa o conteúdo anterior
-            dadosPostsempresa.forEach((post) => {
-              const postElement = document.createElement("div");
-              postElement.className = "imgsUser";
-              postElement.innerHTML = `
-                        <img src="${post.imagem}" alt="Post Image">`;
-              mainImagensUser.appendChild(postElement);
-            });
-          } else {
-            console.error("Nenhum post encontrado para o usuário padrão.");
-            document.getElementById(
-              "mainImagensUser"
-            ).innerHTML = `<div class="buttonUser"><a href="adicionarProjeto.html"><button><img src="img/lupa+.svg" alt=""><p>Adicionar Projeto</p></button></a></div>`;
-          }
-        }
-      } else {
-        console.error("Nenhum dado de usuário foi retornado pela API.");
+      if (!data || data.length === 0) {
+        console.error("Nenhum dado de usuário foi retornado.");
+        return;
       }
+
+      const userData = data[0];
+
+      const endpoint =
+        userData.tipo === "padrao" ? "padrao" : "empresas";
+
+      const respostaUsuario = await fetch(
+        `${ip_api}/usuarios/${endpoint}/${userId.id}`
+      );
+      const usuario = await respostaUsuario.json();
+
+      // 🎯 Dados do perfil
+      document.getElementById("nomedousuario").textContent = usuario.nome;
+      document.getElementById("nomecompleto").textContent =
+        `@${usuario.nome_de_usuario ?? "user"}`;
+      document.getElementById("imgdeperfildouser").src = usuario.foto;
+      document.getElementById("imagemdefundodoperfil").src =
+        usuario.banner ?? "";
+      document.getElementById("numerodepessoasquesegue").textContent =
+        usuario.total_seguindo;
+      document.getElementById("nomerodeseguidores").textContent =
+        usuario.total_seguidores;
+      document.getElementById("descricaouser").textContent =
+        usuario.descricao ?? "";
+      document.getElementById("quantidadedepost").textContent =
+        usuario.total_posts;
+
+      // 📸 Posts
+      const respostaPosts = await fetch(
+        `${ip_api}/posts/usuario/${userId.id}`
+      );
+      const dadosPosts = await respostaPosts.json();
+
+      const mainImagensUser = document.getElementById("mainImagensUser");
+
+      mainImagensUser.innerHTML = `
+        <div class="buttonUser">
+          <a href="adicionarProjeto.html">
+            <button>
+              <img src="img/lupa+.svg" alt="">
+              <p>Adicionar Projeto</p>
+            </button>
+          </a>
+        </div>
+      `;
+
+      if (dadosPosts && dadosPosts.length > 0) {
+        dadosPosts.forEach((post) => {
+          const postElement = document.createElement("div");
+          postElement.className = "imgsUser";
+          postElement.innerHTML = `<img src="${post.imagem}" alt="Post Image">`;
+          mainImagensUser.appendChild(postElement);
+        });
+      }
+
     } catch (erro) {
       console.error("Erro ao carregar usuário:", erro.message);
     }
