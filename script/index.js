@@ -39,8 +39,6 @@ document.getElementById("pularTipoUser").addEventListener("click", function () {
 
 // funçao para abrir os comentários do madal
 
-
-
 // Adicionar novo projeto
 
 function adicionarlist() {

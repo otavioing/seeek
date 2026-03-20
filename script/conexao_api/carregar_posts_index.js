@@ -1,3 +1,7 @@
+const params = new URLSearchParams(window.location.search);
+const idPost = params.get("idpost");
+
+
 function abrirComentarios() {
     let comentarios = document.getElementById("comentariomodal");
     let barradivisoria = document.getElementById("barradivisoriamodal");
@@ -80,7 +84,7 @@ async function carregarPosts() {
                 post.titulo || "Título do portfólio";
             document.querySelector(
                 ".AutMG"
-            ).textContent = `${post.nome} • 0 seguidores`;
+            ).textContent = `${post.nome} • ${post.total_seguidores} seguidores`;
             document.querySelector(".PotMG ").textContent =
                 post.titulo || "Portfólio teste";
             document.querySelector(".imagemusuariomodal img ").src =
@@ -96,14 +100,26 @@ async function carregarPosts() {
             document.querySelector(".comentarioDesc").textContent =
                 post.legenda || "Descrição do portfólio";
             document.getElementById("modalPort").style.display = "block";
+            document.getElementById("botaocompartilharpost").addEventListener("click", function () {
+
+                const link = `https://seeek.netlify.app/index.html?idpost=${post.id}`;
+
+                navigator.clipboard.writeText(link)
+                    .then(() => {
+                        alert("Link copiado para a área de transferência!");
+                    })
+                    .catch(err => {
+                        console.error("Erro ao copiar: ", err);
+                    });
+
+            });
         });
         container.appendChild(div);
     });
 
-
-
-
 }
+
+
 
 
 carregarPosts();
