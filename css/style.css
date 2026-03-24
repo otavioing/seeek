@@ -83,11 +83,21 @@ a {
     background-color: var(--ModoEscuroBase);
 }
 
+.modoEscuro .user-options-pai, .modoEscuro .container1p , .modoEscuro .form, .modoEscuro .pp, .modoEscuro .confirmation-container .setaCorfirmar, .modoEscuro .confirmation-container2 .setaCorfirmar, .modoEscuro {
+    background-color: var(--ModoEscuroFilt);
+}
+
+.modoEscuro .user-options button, .modoEscuro .photo-placeholder, .modoEscuro .input-group textarea, .modoEscuro .input-group input, .modoEscuro .input-group textarea, .modoEscuro .add-section-btn{
+    background-color: var(--ModoEscuroMesc);
+}
+
 .modoEscuro header .botaoMenu span {
     background-color: var(--brancoBase);
 }
 
-
+.modoEscuro .titulocadastro1{
+    background-color: var(--ModoEscuroFontV);
+}
 
 .modoEscuro .explorar,
 .modoEscuro .filtroExplorar .buttonFiltro,
@@ -99,7 +109,7 @@ a {
 .modoEscuro .explorar a,
 .modoEscuro #menu a,
 .modoEscuro #menu select,
-.modoEscuro .menuperfil a {
+.modoEscuro .menuperfil a, .modoEscuro .setaCorfirmar button, .modoEscuro .add-section-btn {
     color: var(--brancoBase);
 }
 
