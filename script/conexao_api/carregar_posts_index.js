@@ -37,90 +37,95 @@ async function carregarPosts() {
     const posts = await resposta.json();
     const container = document.getElementById("gride");
     container.innerHTML = "";
+
     posts.forEach((post) => {
+        const imagem = post.imagens?.[0] || "img/placeholder.png";
+
         const div = document.createElement("div");
         div.className = "post";
+
         div.innerHTML = `
-          <div class="divPortifolio" id="filho" 
-          style="background-image: url('${post.imagem}'); background-size: cover; background-position: center;">
+          <div class="divPortifolio" 
+          style="background-image: url('${imagem}'); background-size: cover; background-position: center;">
         
         <div class="portHover">
           <div class="portHoverInt">
             <h3 class="PotMG">${post.titulo}</h3>
             <div class="SalvarPort">
-              <button><img src="img/Arrow 7.svg" alt="seta" /> <span class="SalM">Salvar</span></button>
+              <button><img src="img/Arrow 7.svg" /> <span class="SalM">Salvar</span></button>
             </div>
           </div>
 
           <div class="PotH">
             <div class="AutorP">
-              <h3 class="AutG">${post.nome}</h3>
-              <p>9.900 <span class="SegG">seguidores</span></p>
+              <h3 class="AutG">${post.user.nome}</h3>
+              <p>${post.total_seguidores} <span class="SegG">seguidores</span></p>
             </div>
             <div class="PerfAv">
-              <img id="fotododonodopost" src="${post.foto_perfil}" alt="Perfil" />
+              <img src="${post.user.foto}" alt="Perfil" />
               <div class="PLike">
-                <p class="like">99%</p>
+                <p class="like">${post.total_likes}</p>
                 <img src="img/Vector.svg" alt="Like" />
               </div>
             </div>
           </div>
         </div>
-        
       </div>
+        `;
 
-   
-
-    `;
         div.addEventListener("click", async () => {
             postSelecionadoId = post.id;
-            usuario_id = post.user_id;
+            usuario_id = post.user.id;
+
             await atualizarLikeInfo();
-            document.getElementById("perfilPort").addEventListener("click", function () {
+
+            document.getElementById("perfilPort").onclick = () => {
                 window.location.href = `perfil.html?id=${usuario_id}`;
-            });
-            document.getElementById("modalImage").src = post.imagem;
+            };
+
+            document.getElementById("modalImage").src = imagem;
+
             document.querySelector(".nomedousuariomodal h2").textContent =
                 post.titulo || "Título do portfólio";
-            document.querySelector(
-                ".AutMG"
-            ).textContent = `${post.nome} • ${post.total_seguidores} seguidores`;
-            document.querySelector(".PotMG ").textContent =
-                post.titulo || "Portfólio teste";
-            document.querySelector(".imagemusuariomodal img ").src =
-                post.foto_perfil || "img/iconeperfil.svg";
-            document.querySelector(".logocomentario img").src =
-                post.foto_perfil || "img/iconeperfil.svg";
-            document.querySelector("#comentariomodal .comentario").textContent =
-                post.legenda || "Descrição do portfólio";
-            document.querySelector(".Nome").textContent =
-                post.nome || "Nome do usuário";
-            document.querySelector(".NomeTitu").textContent =
-                post.titulo || "Título do portfólio";
-            document.querySelector(".comentarioDesc").textContent =
-                post.legenda || "Descrição do portfólio";
-            document.getElementById("modalPort").style.display = "block";
-            document.getElementById("botaocompartilharpost").addEventListener("click", function () {
 
+            document.querySelector(".AutMG").textContent =
+                `${post.user.nome} • ${post.total_seguidores} seguidores`;
+
+            document.querySelector(".PotMG").textContent =
+                post.titulo || "Portfólio";
+
+            document.querySelector(".imagemusuariomodal img").src =
+                post.user.foto || "img/iconeperfil.svg";
+
+            document.querySelector(".logocomentario img").src =
+                post.user.foto || "img/iconeperfil.svg";
+
+            document.querySelector("#comentariomodal .comentario").textContent =
+                post.legenda || "Descrição";
+
+            document.querySelector(".Nome").textContent =
+                post.user.nome;
+
+            document.querySelector(".NomeTitu").textContent =
+                post.titulo;
+
+            document.querySelector(".comentarioDesc").textContent =
+                post.legenda;
+
+            document.getElementById("modalPort").style.display = "block";
+
+            document.getElementById("botaocompartilharpost").onclick = () => {
                 const link = `https://seeek.netlify.app/index.html?idpost=${post.id}`;
 
                 navigator.clipboard.writeText(link)
-                    .then(() => {
-                        alert("Link copiado para a área de transferência!");
-                    })
-                    .catch(err => {
-                        console.error("Erro ao copiar: ", err);
-                    });
-
-            });
+                    .then(() => alert("Link copiado!"))
+                    .catch(err => console.error("Erro ao copiar: ", err));
+            };
         });
+
         container.appendChild(div);
     });
-
 }
-
-
-
 
 carregarPosts();
 

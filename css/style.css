@@ -699,6 +699,8 @@ header .botaoMenu span {
 
 }
 
+
+
 .portHover .PotH .PerfAv {
     height: 100%;
     display: flex;
@@ -2041,6 +2043,16 @@ footer {
     display: block;
     cursor: pointer;
     fill:#000;
+}
+
+/* aquiiii */
+
+.PerfAv img,
+.imagemusuariomodal img,
+.logocomentario img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* deixa redondo */
 }
 
 /* -------------------------------- css para os esqueletos ---------------------------------- */

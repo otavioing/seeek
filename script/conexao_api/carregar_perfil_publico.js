@@ -46,16 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (dadosPosts && dadosPosts.length > 0) {
                 dadosPosts.forEach((post) => {
+                    const imagem = post.imagens?.[0] || "img/placeholder.png";
+
                     const postElement = document.createElement("div");
                     postElement.className = "imgsUser";
-                    postElement.innerHTML = `<img src="${post.imagem}" alt="Post Image">`;
+
+                    postElement.innerHTML = `
+            <img src="${imagem}" alt="Post Image">
+        `;
+
                     mainImagensUser.appendChild(postElement);
                 });
             } else {
                 mainImagensUser.innerHTML = `
-                    <div class="buttonUser">
-                        <p>Este usuário não possui posts.</p>
-                    </div>`;
+        <div class="buttonUser">
+            <p>Este usuário não possui posts.</p>
+        </div>`;
             }
 
             // 👥 Verificar se está seguindo

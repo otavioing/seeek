@@ -4,9 +4,10 @@ async function carregarsectionsTendencias() {
   const container = document.getElementById("containersectionstendencias");
   container.innerHTML = "";
 
-  tendencias.forEach(async (tendencia) => {
+  for (const tendencia of tendencias) {
     const section = document.createElement("section");
     section.classList.add("carrossel-tendencias");
+
     section.innerHTML = `
       <h4>${tendencia.nome_categoria} - 
         <span class="Tmproj">${tendencia.total_posts} projetos</span>
@@ -14,9 +15,7 @@ async function carregarsectionsTendencias() {
       </h4>
 
       <button class="seta-esquerda" onclick="moverEsq(this)">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-chevron-left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path d="m15 18-6-6 6-6" />
         </svg>
       </button>
@@ -26,21 +25,25 @@ async function carregarsectionsTendencias() {
 
     container.appendChild(section);
 
-    const idCategoria = section.querySelector(".idcategoriapost").textContent.trim();
+    const idCategoria = tendencia.id_categoria;
     const divPosts = section.querySelector(".containerpoststendencias");
 
     const respPosts = await fetch(`${ip_api}/tendencias/${idCategoria}`);
     const posts = await respPosts.json();
 
     posts.forEach((post) => {
+      const imagem = post.imagens?.[0] || "img/placeholder.png";
+
       const item = document.createElement("div");
       item.classList.add("carrossel-tend-item");
+
       item.innerHTML = `
-        <img src="${post.imagem}" alt="${post.titulo}" />
+        <img src="${imagem}" alt="${post.titulo}" />
       `;
+
       divPosts.appendChild(item);
     });
-  });
+  }
 }
 
 

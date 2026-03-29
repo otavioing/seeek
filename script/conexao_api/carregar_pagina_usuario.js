@@ -48,25 +48,30 @@ document.addEventListener("DOMContentLoaded", function () {
       const mainImagensUser = document.getElementById("mainImagensUser");
 
       mainImagensUser.innerHTML = `
-        <div class="buttonUser">
-          <a href="adicionarProjeto.html">
-            <button>
-              <img src="img/lupa+.svg" alt="">
-              <p>Adicionar Projeto</p>
-            </button>
-          </a>
-        </div>
-      `;
+  <div class="buttonUser">
+    <a href="adicionarProjeto.html">
+      <button>
+        <img src="img/lupa+.svg" alt="">
+        <p>Adicionar Projeto</p>
+      </button>
+    </a>
+  </div>
+`;
 
       if (dadosPosts && dadosPosts.length > 0) {
         dadosPosts.forEach((post) => {
+          const imagem = post.imagens?.[0] || "img/placeholder.png";
+
           const postElement = document.createElement("div");
           postElement.className = "imgsUser";
-          postElement.innerHTML = `<img src="${post.imagem}" alt="Post Image">`;
+
+          postElement.innerHTML = `
+      <img src="${imagem}" alt="Post Image">
+    `;
+
           mainImagensUser.appendChild(postElement);
         });
       }
-
     } catch (erro) {
       console.error("Erro ao carregar usuário:", erro.message);
     }
