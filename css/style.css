@@ -843,30 +843,40 @@ header .botaoMenu span {
     height: 4rem;
 }
 
-.contratar-btn-span {
+.contratar-btn-span,
+.Editar-btn-span {
     height: 100%;
-    width: 20%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-end;
     gap: 0.5rem;
     padding: 0.3rem 1rem;
 }
 
-.contratar-btn-btn {
+.contratar-btn-btn,
+.Editar-btn-btn {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.botaoContratar {
-    background-color: var(--roxobase);
+.botaoContratar,
+.botaoEditar {
     color: var(--brancoBase);
     border: none;
     border-radius: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.75rem 1.5rem;
     cursor: pointer;
-    width: 5rem;
+    min-width: 8rem;
+    width: fit-content;
+}
+
+.botaoContratar {
+    background-color: var(--roxobase);
+}
+
+.botaoEditar {
+    background-color: var(--azulBase);
 }
 
 .close {
