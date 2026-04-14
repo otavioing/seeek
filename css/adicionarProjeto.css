@@ -227,7 +227,7 @@ a {
 }
 
 .botaoAdcImgg {
-    height: 80vh;
+    min-height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -237,13 +237,39 @@ a {
     border-radius: 0.6rem;
     margin-top: 1rem;
     background-color: var(--cinzaE2E3E8);
+    position: relative;
 }
 
+.botaoAdcImgg .galeria-imagens {
+    align-self: center;
+    justify-self: center;
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, 120px));
+    gap: 1rem;
+    padding: 1rem;
+}
 
-.botaoAdcImgg div {
+#textoaddfoto {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#containerinputs {
     display: flex;
     gap: 1rem;
     margin-top: 0.6rem;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+#containerinputs.com-galeria {
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
 }
 
 .botaoAdcImgg div label {
@@ -350,6 +376,58 @@ a {
     background-color: var(--cinzaE2E3E8);
     outline: none;
     transition: 0.3s;
+}
+
+/* Galeria de Imagens */
+.galeria-imagens {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, 120px));
+    gap: 1rem;
+    width: auto;
+    padding: 1rem;
+}
+
+.container-imagem {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-remover-imagem {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    padding: 0;
+}
+
+.btn-remover-imagem:hover {
+    background-color: rgba(255, 0, 0, 1);
+    transform: scale(1.1);
+}
+
+.modoEscuro .container-imagem {
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 #btn-fechar {

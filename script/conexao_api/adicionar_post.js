@@ -3,13 +3,13 @@ const form = document.getElementById('enviararquivodopost');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const arquivo = document.getElementById('enviarImg').files[0];
+  const arquivos = document.getElementById('enviarImg').files;
   const descricao = document.getElementById('text-new-post').value.trim();
   const titulo = document.getElementById('textoTituloProjeto').value.trim();
   const id_categoria = document.querySelector('input[name="categoria"]:checked')?.value;
 
   // ⚠ VALIDAÇÕES
-  if (!arquivo) {
+  if (arquivos.length === 0) {
     // alert("Selecione uma imagem para postar!");
     // reproduzir áudio padrão do site em vez de abrir seletor (substitua o caminho)
     try {
@@ -20,6 +20,17 @@ form.addEventListener('submit', async (e) => {
       console.log('Erro ao criar/reproduzir áudio:', err);
     }
     abrirnotificacaopost("Selecione uma imagem para postar!");
+    return;
+  }
+  if (typeof arquivosArmazenados !== 'undefined' && arquivosArmazenados.length > 5) {
+    try {
+      const audio = new Audio('../error-011-352286.mp3');
+      audio.volume = 0.8;
+      await audio.play().catch(err => console.log('Erro ao reproduzir áudio:', err));
+    } catch (err) {
+      console.log('Erro ao criar/reproduzir áudio:', err);
+    }
+    abrirnotificacaopost("Máximo de 5 imagens permitidas!");
     return;
   }
   if (!titulo) {
@@ -60,7 +71,12 @@ form.addEventListener('submit', async (e) => {
   }
 
   const formData = new FormData();
-  formData.append("arquivo", arquivo);
+  // Adicionar todos os arquivos armazenados
+  if (typeof arquivosArmazenados !== 'undefined') {
+    arquivosArmazenados.forEach((arquivo) => {
+      formData.append("arquivo", arquivo);
+    });
+  }
   formData.append("legenda", descricao);
   formData.append("titulo", titulo);
   formData.append("user_id", usuario.id);
