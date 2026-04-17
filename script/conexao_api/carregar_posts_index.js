@@ -31,6 +31,27 @@ function abrirComentarios() {
 
 let postSelecionadoId = null;
 let usuario_id = null;
+const usuarioLogadoPosts = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+const botaoEditarModal = document.querySelector(".botaoEditar");
+if (botaoEditarModal) {
+    botaoEditarModal.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (!postSelecionadoId) return;
+
+        window.location.href = `editar_projeto.html?idpost=${postSelecionadoId}`;
+    });
+}
+
+function atualizarVisibilidadeBotaoEditar(idDonoPost) {
+    const botaoEditarPost = document.querySelector(".botaoEditar");
+    if (!botaoEditarPost) return;
+
+    const ehDonoDoPost =
+        Number(usuarioLogadoPosts?.id) === Number(idDonoPost);
+
+    botaoEditarPost.style.display = ehDonoDoPost ? "block" : "none";
+}
 
 async function carregarPosts() {
     const resposta = await fetch(`${ip_api}/posts`);
@@ -76,6 +97,7 @@ async function carregarPosts() {
         div.addEventListener("click", async () => {
             postSelecionadoId = post.id;
             usuario_id = post.user.id;
+            atualizarVisibilidadeBotaoEditar(post.user.id);
 
             await atualizarLikeInfo();
 

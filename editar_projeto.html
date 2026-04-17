@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seek - Editar Projeto</title>
+  <link rel="stylesheet" href="css/usuario.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/adicionarProjeto.css" />
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLCTJL00KV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-SLCTJL00KV");
+</script>
+
+<body id="todo">
+  <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
+    <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra">
+      <img src="img/barra/icon.svg" alt="símbolo da onu" />
+    </button>
+  </div>
+
+  <div id="barra" class="divbarradeacessibilidade">
+    <button onclick="desativarbarra()" class="botaoativacaobarra">
+      <img src="img/barra/icon.svg" alt="símbolo da onu" />
+    </button>
+
+    <button onclick="zoommenos()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/lupa-.svg" alt="Lupa com um - no centro" />
+    </button>
+
+    <button onclick="zoommais()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/lupa+.svg" alt="Lupa com um + no centro" />
+    </button>
+
+    <button onclick="ModoEscuro()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/luabarra.svg" alt="Lua" />
+    </button>
+
+    <button onclick="ModoClaro()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/solbarra.svg" alt="Sol" />
+    </button>
+
+    <button onclick="desativaeativavlibras()" class="funcaoesbarradeacessibilidade">
+      <img src="img/barra/iconvlibras.svg" alt="vlibras" />
+    </button>
+
+    <img id="logodafatecdabarradeacessibilidade" src="img/Logofatec.svg" alt="Logo da fatec" />
+  </div>
+
+  <header class="inicio" id="header">
+    <script src="script/criar_header.js" defer></script>
+    <script src="script/conexao_api/barra_pesquisa.js" defer></script>
+  </header>
+
+  <div id="containernotificacao" class="containernotificacao">
+    <div id="notificacao" class="notificacao">
+      <p id="textonotificacao"></p>
+    </div>
+  </div>
+
+  <form id="formEditarProjeto">
+    <div class="adcProjeto" id="adcProjeto" style="display: flex">
+      <div class="containerAdcProjeto">
+        <div class="left-projeto">
+          <div class="tituloProj">
+            <textarea name="textoTituloProjeto" id="textoTituloProjeto" placeholder="Titulo" oninput="autoResize(this)"
+              class="textoTituloProjeto"></textarea>
+          </div>
+
+          <div id="botaoAdcImgg" class="botaoAdcImgg">
+            <p id="textoaddfoto">Fotos do projeto (não editável)</p>
+            <div id="previewImagensExistentes" class="galeria-imagens"></div>
+          </div>
+
+          <div class="txt-area-and-button">
+            <button type="submit">Salvar alterações</button>
+            <textarea name="text-new-post" id="text-new-post" placeholder="descrição"
+              oninput="autoResize(this)"></textarea>
+          </div>
+        </div>
+
+        <main class="right-projeto">
+          <h4>Ferramentas</h4>
+          <div class="ferramentas">
+            <h5>Criar elementos</h5>
+            <div class="botoesF">
+              <button type="button" disabled>
+                <img src="img/fotos/grade.svg" alt="" />
+                <p>Grade</p>
+              </button>
+              <button type="button" disabled>
+                <img src="img/fotos/texto.svg" alt="" />
+                <p>Texto</p>
+              </button>
+              <button type="button" disabled>
+                <img src="img/fotos/imagem.svg" alt="" />
+                <p>Imagem</p>
+              </button>
+              <button type="button" disabled>
+                <img src="img/fotos/play.svg" alt="" />
+                <p>Áudio/Video</p>
+              </button>
+              <div>
+                <button type="button" class="botaoOutros" disabled>
+                  <img src="img/fotos/outros.svg" alt="" />
+                  <p>Outros</p>
+                </button>
+              </div>
+            </div>
+
+            <h5>Editar</h5>
+            <div class="botoesEdit">
+              <button type="button" disabled>
+                <img src="img/fotos/estilos.svg" alt="" />
+                <p>Estilos</p>
+              </button>
+              <button type="button" disabled>
+                <img src="img/fotos/config.svg" alt="" />
+                <p>Configurações</p>
+              </button>
+            </div>
+          </div>
+
+          <div class="categorias">
+            <h4>Categorias</h4>
+            <div class="categoria">
+              <div class="catt">
+                <div id="categoria">
+                  <input type="radio" id="categoria-ilustracao" name="categoria" value="1">
+                  <label for="categoria-ilustracao">ilustração</label>
+
+                  <input type="radio" id="categoria-foto" name="categoria" value="3">
+                  <label for="categoria-foto">foto</label>
+
+                  <input type="radio" id="categoria-abstrato" name="categoria" value="5">
+                  <label for="categoria-abstrato">abstrato</label>
+
+                  <input type="radio" id="categoria-design" name="categoria" value="2">
+                  <label for="categoria-design">design</label>
+
+                  <input type="radio" id="categoria-futurista" name="categoria" value="4">
+                  <label for="categoria-futurista">futurista</label>
+
+                  <input type="radio" id="categoria-identidade-visual" name="categoria" value="6">
+                  <label for="categoria-identidade-visual">identidade visual</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </form>
+
+  <footer id="footer">
+    <script src="script/criar_footer.js" defer></script>
+  </footer>
+
+  <script src="script/ambiente.js"></script>
+  <script src="script/lfy.js"></script>
+  <script src="script/conexao_api/editar_post.js"></script>
+  <script src="script/acessibilidade.js"></script>
+  <script src="script/user_logado.js"></script>
+  <script src="script/script.js"></script>
+  <script src="script/tema.js"></script>
+  <script src="script/traducao.js"></script>
+  <script src="script/verificar_token.js"></script>
+</body>
+
+</html>

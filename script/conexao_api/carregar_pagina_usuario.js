@@ -1,5 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
   const userId = JSON.parse(localStorage.getItem("usuarioLogado"));
+  let modoEdicaoPosts = false;
+
+  async function excluirPost(postId, cardElement) {
+    const confirmar = window.confirm("Deseja excluir este post?");
+    if (!confirmar) return;
+
+    try {
+      const resposta = await fetch(`${ip_api}/posts/${postId}`, {
+        method: "DELETE",
+      });
+
+      if (!resposta.ok) {
+        const erro = await resposta.json().catch(() => ({}));
+        throw new Error(erro.message || "Não foi possível excluir o post.");
+      }
+
+      cardElement.remove();
+
+      const contadorPosts = document.getElementById("quantidadedepost");
+      if (contadorPosts) {
+        const totalAtual = Math.max(0, Number(contadorPosts.textContent) - 1);
+        contadorPosts.textContent = String(totalAtual);
+      }
+    } catch (erro) {
+      console.error("Erro ao excluir post:", erro.message);
+      alert(erro.message);
+    }
+  }
+
+  function atualizarVisibilidadeBotoesExcluir() {
+    document.querySelectorAll(".botao-excluir-post").forEach((botao) => {
+      botao.style.display = modoEdicaoPosts ? "flex" : "none";
+    });
+  }
 
   async function carregarUsuario() {
     try {
@@ -64,17 +98,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
           const postElement = document.createElement("div");
           postElement.className = "imgsUser";
+          postElement.style.position = "relative";
+          postElement.style.overflow = "hidden";
+          postElement.dataset.postId = post.id;
 
           postElement.innerHTML = `
+      <button type="button" class="botao-excluir-post" aria-label="Excluir post">
+        <img src="img/icones/lixeira.svg" alt="Excluir post">
+      </button>
       <img src="${imagem}" alt="Post Image">
     `;
 
+          const botaoExcluir = postElement.querySelector(".botao-excluir-post");
+          botaoExcluir.style.display = modoEdicaoPosts ? "flex" : "none";
+          botaoExcluir.style.position = "absolute";
+          botaoExcluir.style.top = "0.75rem";
+          botaoExcluir.style.right = "0.75rem";
+          botaoExcluir.style.zIndex = "2";
+          botaoExcluir.style.border = "none";
+          botaoExcluir.style.borderRadius = "999px";
+          botaoExcluir.style.padding = "0.45rem";
+          botaoExcluir.style.background = "rgba(0, 0, 0, 0.6)";
+          botaoExcluir.style.cursor = "pointer";
+          botaoExcluir.style.alignItems = "center";
+          botaoExcluir.style.justifyContent = "center";
+          botaoExcluir.style.backdropFilter = "blur(4px)";
+
+          const iconeLixeira = botaoExcluir.querySelector("img");
+          iconeLixeira.style.width = "18px";
+          iconeLixeira.style.height = "18px";
+
+          botaoExcluir.addEventListener("click", async (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            await excluirPost(post.id, postElement);
+          });
+
           mainImagensUser.appendChild(postElement);
         });
+
+        atualizarVisibilidadeBotoesExcluir();
       }
     } catch (erro) {
       console.error("Erro ao carregar usuário:", erro.message);
     }
+  }
+
+  const botaoEditarPerfil = document.getElementById("editarUserPerfil");
+  if (botaoEditarPerfil) {
+    botaoEditarPerfil.addEventListener("click", function () {
+      modoEdicaoPosts = !modoEdicaoPosts;
+      atualizarVisibilidadeBotoesExcluir();
+    });
   }
 
   carregarUsuario();
