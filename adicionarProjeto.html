@@ -25,6 +25,15 @@
 </script>
 
 <body id="todo">
+
+  <!-- Mensagens de Aviso -->
+
+  <div class="LimiteImagem" id="LimiteImagem">
+    <p>Limite de tamanho de imagem excedido!</p>
+
+  </div>
+
+
   <div id="barra-acessibilidade" class="divativacaobarradeacessibilidade">
     <button id="botaobarra" onclick="ativarbarra()" class="botaoativacaobarra">
       <img src="img/barra/icon.svg" alt="símbolo da onu" />
@@ -73,9 +82,6 @@
 
   </div>
 
-
-
-
   <form id="enviararquivodopost" enctype="multipart/form-data">
     <div class="adcProjeto" id="adcProjeto" style="display: flex">
       <div class="containerAdcProjeto">
@@ -102,108 +108,7 @@
             </div>
             <!-- <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.6rem;" src="img/design1.webp" alt=""> -->
           </div>
-
-          <script>
-            const inputImagem = document.getElementById("enviarImg");
-            const textoaddfoto = document.getElementById("textoaddfoto");
-            const containerfoto = document.getElementById("botaoAdcImgg");
-            const containerinputs = document.getElementById("containerinputs");
-            let galeryContainer = null;
-            let arquivosArmazenados = []; // Array para armazenar os files selecionados
-
-            inputImagem.addEventListener("change", function () {
-              const arquivo = this.files[0];
-              if (arquivo) {
-                // Verificar limite de 5 imagens
-                if (arquivosArmazenados.length >= 5) {
-                  abrirnotificacaopost("Limite máximo de 5 imagens atingido!");
-                  this.value = "";
-                  return;
-                }
-                
-                // Criar container de galeria na primeira vez
-                if (!galeryContainer) {
-                  galeryContainer = document.createElement("div");
-                  galeryContainer.className = "galeria-imagens";
-                  containerinputs.classList.add("com-galeria");
-                  containerfoto.appendChild(galeryContainer);
-                }
-                
-                // Armazenar o arquivo
-                arquivosArmazenados.push(arquivo);
-                
-                // Processar arquivo único
-                const leitor = new FileReader();
-                leitor.onload = function (e) {
-                  const containerImg = document.createElement("div");
-                  containerImg.className = "container-imagem";
-                  containerImg.dataset.index = arquivosArmazenados.length - 1;
-                  
-                  const img = document.createElement("img");
-                  img.src = e.target.result;
-                  
-                  const btnRemover = document.createElement("button");
-                  btnRemover.type = "button";
-                  btnRemover.className = "btn-remover-imagem";
-                  btnRemover.innerHTML = "✕";
-                  btnRemover.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const index = containerImg.dataset.index;
-                    arquivosArmazenados.splice(index, 1);
-                    containerImg.remove();
-                    
-                    // Habilitar botão se removeu imagem
-                    const labelAdcImg = document.querySelector('.labelAdcImg');
-                    if (arquivosArmazenados.length < 5) {
-                      labelAdcImg.style.opacity = "1";
-                      labelAdcImg.style.pointerEvents = "auto";
-                      labelAdcImg.style.cursor = "pointer";
-                    }
-                    
-                    if (galeryContainer.children.length === 0) {
-                      galeryContainer.remove();
-                      galeryContainer = null;
-                      containerinputs.classList.remove("com-galeria");
-                      inputImagem.value = "";
-                      arquivosArmazenados = [];
-                    }
-                  });
-                  
-                  containerImg.appendChild(img);
-                  containerImg.appendChild(btnRemover);
-                  galeryContainer.appendChild(containerImg);
-                };
-                leitor.readAsDataURL(arquivo);
-                
-                // Limpar input para permitir selecionar o mesmo arquivo novamente
-                this.value = "";
-                
-                // Desabilitar/habilitar botão baseado no número de imagens
-                const labelAdcImg = document.querySelector('.labelAdcImg');
-                if (arquivosArmazenados.length >= 5) {
-                  labelAdcImg.style.opacity = "0.5";
-                  labelAdcImg.style.pointerEvents = "none";
-                  labelAdcImg.style.cursor = "not-allowed";
-                } else {
-                  labelAdcImg.style.opacity = "1";
-                  labelAdcImg.style.pointerEvents = "auto";
-                  labelAdcImg.style.cursor = "pointer";
-                }
-              }
-            });
-            
-            // Expor o array globalmente para acesso em outros scripts
-            Object.defineProperty(window, 'arquivosArmazenados', {
-              get: function() {
-                return arquivosArmazenados;
-              },
-              set: function(value) {
-                arquivosArmazenados = value;
-              }
-            });
-
-          </script>
-
+    >
           <div class="txt-area-and-button">
             <button type="submit">Inserir</button>
             <textarea name="text-new-post" id="text-new-post" placeholder="descrição"

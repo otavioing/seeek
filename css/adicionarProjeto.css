@@ -125,6 +125,21 @@ a {
 
 /* ----------------------------------------- */
 
+.LimiteImagem {
+  display: none;              
+  position: fixed;            
+  top: 50%;                   
+  left: 50%;                  
+  transform: translate(-50%, -50%); 
+  background: var(--cinzaBase);
+  color: var(--azulBasee);
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 99;             
+}
 .adcProjeto {
     width: 100%;
     background-color: var(--cinzaE8EAF0);
