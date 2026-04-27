@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Planos - Seek</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/planos.css" />
   <link rel="icon" href="img/logoSeekk.svg" type="image/svg+xml">
   <link rel="shortcut icon" href="img/logoSeekk.svg" type="image/svg+xml">
 
@@ -22,48 +23,108 @@
 </script>
 
 <body>
+
+ <header class="inicio" id="header">
+    <script src="script/criar_header.js" defer></script>
+    <script src="script/conexao_api/barra_pesquisa.js" defer></script>
+  </header>
+
 <main> 
 
-</main>
+  <div class="TopoMain">
+
+    <div class="TopoMain-Texto">
+    <h1>Escolha o plano ideal para você</h1>
+    <p>Desfrute de uma experiência sem interrupções com nossos planos  <b>flexíveis e acessíveis.</b></p>
+    </div>
+
+    <div class="PlanoMTA"> 
+       <input type="radio" id="mensal" name="plano" checked>
+      <label for="mensal">Plano Mensal</label>
+
+      <input type="radio" id="trimestral" name="plano">
+      <label for="trimestral">Plano Trimestral</label>
+
+      <input type="radio" id="anual" name="plano">
+      <label for="anual">Plano Anual</label>
+    </div>
+  </div>
+
+  <div class="PaiPlanos">
 <div class="PlanoGratuito">
+      <div class="img-container">
+        <img src="img/banner1.jpg" alt="Banner 1">
+      </div>
+      <span class="badge">Gratuito</span>
       <h2>Plano Gratuito</h2>
-      <div class="price"><del>R$ 34,99</del> R$ 24,49 / mês</div>
-      <div class="details">
-        
+      <div class="preco"><del>R$ 00,00</del> R$ 00,00 / mês</div>
+      <div class="detalhes">
+        <p>Vantagem A</p>
+        <p>Vantagem B</p>
+        <p>Vantagem C</p> 
       </div>
-      <button> </button>
+      <button>Obter Plano</button>
     </div>
 
     <div class="PlanoPago">
+       <div class="img-container">
+        <img src="img/banner1.jpg" alt="Banner 1">
+      </div>
       <h2>Plano Pago</h2>
-      <div class="price"><del>R$ 53,92</del> R$ 37,74 / mês</div>
-      <div class="details">
+      <div class="preco"><del>R$ 53,92</del> R$ 37,74 / mês</div>
+      <div class="detalhes">  
+       <p>Vantagem A</p>
+       <p>Vantagem B</p>
+       <p>Vantagem C</p>
         
       </div>
-      <button> </button>
+      <button>Obter Plano</button>
     </div>
 
     <div class="PlanoPago">
+       <div class="img-container">
+        <img src="img/banner1.jpg" alt="Banner 1">
+      </div>
       <span class="badge">Mais vendido</span>
       <h2>Plano Pago +</h2>
-      <div class="price"><del>R$ 76,18</del> R$ 53,32 / mês</div>
-      <div class="details">
-        Recomendado para 16 jogadores<br>
-        Processamento avançado<br>
-        RAM ilimitada
+      <div class="preco"><del>R$ 76,18</del> R$ 53,32 / mês</div>
+      <div class="detalhes">
+       <p>Vantagem A</p>
+       <p>Vantagem B</p>
+       <p>Vantagem C</p>
       </div>
-      <button> </button>
+      <button>Obter Plano</button>
     </div>
 
     <div class="PlanoPago">
-      <h2>Plano Pago Premium</h2>
-      <div class="price"><del>R$ 119,88</del> R$ 83,91 / mês</div>
-      <div class="details">
-        i9-13900 / Ryzen 7950X<br>
-        Recomendado p/ muitos jogadores<br>
-        Processamento extremo<br>
-        RAM ilimitada
+       <div class="img-container">
+        <img src="img/banner1.jpg" alt="Banner 1">
       </div>
-      <button> </button>
+      <h2>Plano Pago Premium</h2>
+      <div class="preco"><del>R$ 119,88</del> R$ 83,91 / mês</div>
+      <div class="detalhes">
+       <p>Vantagem A</p>
+       <p>Vantagem B</p>
+       <p>Vantagem C</p>
+      </div>
+      <button>Obter Plano</button>
     </div>
+  </div>
+    </main>
+
+ <footer id="footer">
+    <script src="script/criar_footer.js" defer></script>
+  </footer>
+
+  <script src="script/ambiente.js"></script>
+  <script src="script/index.js"></script>
+  <script src="script/conexao_api/carregar_posts_index.js"></script>
+  <script src="script/lfy.js"></script>
+  <script src="script/caixa_completar_cad.js"></script>
+  <script src="script/script.js"></script>
+  <script src="script/user_logado.js"></script>
+  <script src="script/acessibilidade.js"></script>
+  <script src="script/tema.js"></script>
+  <script src="script/traducao.js"></script>
+  <script src="script/verificar_token.js"></script>
 </body>
