@@ -1,7 +1,7 @@
 function criarheader() {
     const header = document.getElementById('header');
     header.innerHTML = `
-    <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
+     <button aria-label="botão menu de hamburguer" class="botaoMenu" id="botaoMenu">
       <span class="linha1"></span>
       <span class="linha2"></span>
       <span class="linha3"></span>
@@ -109,6 +109,11 @@ function criarheader() {
       <div id="divconfiguracoes" class="divmenuperfil">
         <a class="Conf" onclick="abrirnotificacao()">Configurações</a>
       </div>
+
+      <div class="divmenuperfil">
+        <a href="planos.html">Planos</a>
+      </div>
+
       <div class="botaomodoescuro">
         <label for=""><img src="img/lua.png" alt="Lua" /></label>
         <div class="checkbox-con">

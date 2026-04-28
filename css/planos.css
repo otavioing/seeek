@@ -72,6 +72,25 @@ a {
     text-decoration: none;
     color: var(--brancoBase);
 }
+/*-------------------------------- Modo Escuro --------------------------------*/
+
+.modoEscuro {
+    color: white;
+    background-color: var(--ModoEscuroBase);
+}
+
+.modoEscuro .PlanoMTA, .modoEscuro .PlanoGratuito, .modoEscuro .PlanoPago {
+  background-color: var(--ModoEscuroFilt);
+  color: white;
+}
+
+.modoEscuro .TopoMain-Texto h1, .modoEscuro .PlanoGratuito h2, .modoEscuro .PlanoPago h2{
+  color: var(--ModoEscuroFontV);
+}
+
+.modoEscuro .preco b {
+  color: white;
+}
 /*-------------------------------------------------------------------------------------- Explorar CSS --------------------------------*/
 
 .PaiPlanos {
@@ -85,7 +104,7 @@ a {
 
 .TopoMain-Texto{
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     display: block;
     text-align:center;
 }
@@ -167,7 +186,7 @@ a {
 
 /* Preços */
 .preco {
-  font-size: 16px;
+  font-size: 1.2rem;
   margin: 10px 0;
   color: #333;
 }
@@ -179,10 +198,12 @@ a {
 
 
 .detalhes {
-  font-size: 14px;
-  color: #555;
-  margin: 10px 0 20px;
-  line-height: 1.4;
+  margin: 1.5rem;
+}
+
+.detalhes p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -203,11 +224,10 @@ button:hover {
   background: #0056b3;
 }
 
-/* Badge (Mais vendido) */
-.badge {
-  background: #ff9800;
+.faixa {
+  background: var(--roxobase);
   color: #fff;
-  padding: 5px 12px;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 12px;
   font-weight: bold;
