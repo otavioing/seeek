@@ -603,7 +603,7 @@ function aplicarIdioma() {
       cursosHeader: "Cursos",
       vagasHeader: "Vagas",
       sobreNosHeader: "Sobre Nós",
-      tendenciaMigalha: "Tendências",
+      tendenciaMigalha: "Em Alta",
       PersonalizarFiltro: "Personalizar a Galeria",
       Perfil: "Meu Perfil",
       PerfilConfiguracoes: "Configurações",
