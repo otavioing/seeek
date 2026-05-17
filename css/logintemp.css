@@ -224,6 +224,7 @@ body{
 }
 
 .formLogin{
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -237,6 +238,38 @@ body{
     outline: 0 !important;
     box-sizing: border-box;
     padding: 12px 15px;
+}
+
+.inputSenha {
+  display: flex;
+  width: 100%;
+}
+
+.modalInputSenha{
+  flex: 1; 
+  border-radius: 20px 0 0 20px; 
+  border: 1px solid #c0c0c0;
+  border-right: none; 
+  outline: 0 !important;
+  box-sizing: border-box;
+  padding: 12px 15px;
+}
+
+.VerSenha {
+  width: 50px; 
+  border-radius: 0 20px 20px 0; 
+  border: 1px solid #c0c0c0;
+  border-left: none; 
+  background-color: light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4));
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.VerSenha img {
+  width: 20px;  
+  height: 20px;
 }
 
 .sign-up-container{
@@ -357,8 +390,6 @@ input:disabled{
 
 .sign-up-link{
     border: none;
-    border-right: 1px solid #747474;
-    padding-right: 0.5rem;
     font-size: 0.75rem;
     text-decoration: underline;
     font-weight: 800;

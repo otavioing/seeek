@@ -247,3 +247,30 @@ pswRepeat.addEventListener("keyup", checkPasswordMatch);
 
 
 // --------------------------- Fim da validação de formulário de login e cadastro --------------------------- //
+
+// Mostrar o formulário de cadastro
+function mostrarCadastro() {
+  document.getElementById('login-box').style.display = 'none';
+  document.getElementById('cadastro-box').style.display = 'block';
+}
+
+// Mostrar o formulário de login
+function mostrarLogin() {
+  document.getElementById('cadastro-box').style.display = 'none';
+  document.getElementById('login-box').style.display = 'block';
+}
+
+function VerSenha(idCampo, botao) {
+  const campo = document.getElementById(idCampo);
+  const img = botao.querySelector("img");
+
+  if (campo.type === "password") {
+    campo.type = "text";
+    img.src = "img/icones/OcultarSenha.png";
+    img.alt = "Ocultar Senha";
+  } else {
+    campo.type = "password";
+    img.src = "img/icones/VerSenha.png";
+    img.alt = "Ver Senha";
+  }
+}
