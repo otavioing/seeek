@@ -9,14 +9,26 @@ document.addEventListener("DOMContentLoaded", function () {
   let galeryContainer = null;
   let arquivosArmazenados = [];
 
-  function mostrarErroAlta() {
+  function mostrarErroAlta(width, height) {
+    const mensagem = divLimiteAlta.querySelector("p");
+    mensagem.textContent = "Limite de resolução de imagem, muito Alta!";
+    if (typeof width === "number" && typeof height === "number") {
+      mensagem.textContent += ` (${width}x${height})`;
+    }
+
     divLimiteAlta.style.display = "block";
     setTimeout(() => {
       divLimiteAlta.style.display = "none";
     }, 3000);
   }
 
-  function mostrarErroBaixa() {
+  function mostrarErroBaixa(width, height) {
+    const mensagem = divLimiteBaixa.querySelector("p");
+    mensagem.textContent = "Limite de resolução de imagem, muito baixa!";
+    if (typeof width === "number" && typeof height === "number") {
+      mensagem.textContent += ` (${width}x${height})`;
+    }
+
     divLimiteBaixa.style.display = "block";
     setTimeout(() => {
       divLimiteBaixa.style.display = "none";
@@ -38,14 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
         imgTemp.onload = function () {
           // Verificar resolução mínima (400x400)
           if (imgTemp.width < 400 || imgTemp.height < 400) {
-            mostrarErroBaixa();
+            mostrarErroBaixa(imgTemp.width, imgTemp.height);
             inputImagem.value = "";
             return;
           }
 
           // Verificar resolução máxima HD (1280x720)
           if (imgTemp.width > 1280 || imgTemp.height > 720) {
-            mostrarErroAlta();
+            mostrarErroAlta(imgTemp.width, imgTemp.height);
             inputImagem.value = "";
             return;
           }
