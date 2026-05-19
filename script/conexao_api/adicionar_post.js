@@ -93,6 +93,7 @@ form.addEventListener('submit', async (e) => {
       abrirnotificacaopost("Post criado com Sucesso");
       form.reset();
       window.onbeforeunload = null;
+      window.location.href = "index.html";
     } else {
       alert("Erro ao adicionar projeto: " + data.message);
     }
